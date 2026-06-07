@@ -54,21 +54,21 @@ body {
 
 .site-mark-wrap {
   display: grid;
-  width: clamp(5.5rem, 14vw, 7.5rem);
+  width: clamp(6.25rem, 16vw, 8.75rem);
   aspect-ratio: 1;
   place-items: center;
   margin-bottom: 1.25rem;
-  background: var(--unlam-green);
-  border: 3px solid rgba(243, 195, 0, 0.72);
+  background: #ffffff;
+  border: 1px solid rgba(0, 107, 63, 0.16);
   border-radius: 50%;
-  box-shadow: 0 10px 26px rgba(0, 79, 48, 0.16);
+  box-shadow: 0 12px 32px rgba(0, 79, 48, 0.12);
 }
 
 .site-mark {
   display: block;
-  width: 72%;
+  width: 78%;
   height: auto;
-  filter: contrast(1.12) brightness(1.08);
+  filter: contrast(1.18) saturate(1.15);
 }
 
 .main-content h1 {
