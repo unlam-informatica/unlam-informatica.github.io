@@ -1,0 +1,46 @@
+title: Ingeniería en Informática — UNLaM
+description: Sitio padre con acceso directo a las materias publicadas en GitHub Pages.
+
+remote_theme: just-the-docs/just-the-docs
+
+url: https://unlam-informatica.github.io
+baseurl: ""
+favicon_ico: "/assets/favicon/favicon.ico"
+
+color_scheme: light
+
+search_enabled: true
+heading_anchors: true
+
+callouts_level: quiet
+callouts:
+  note:
+    title: Nota
+    color: blue
+  important:
+    title: Importante
+    color: yellow
+  warning:
+    title: Atención
+    color: red
+  enunciado:
+    title: Enunciado
+    color: amber
+  resolucion:
+    title: Resolución
+    color: teal
+
+aux_links:
+  "GitHub":
+    - "https://github.com/unlam-informatica"
+
+exclude:
+  - CLAUDE.md
+
+mermaid:
+  # Diagramas embebidos en bloques ```mermaid (cargado desde CDN por el tema).
+  version: "10.6.1"
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
