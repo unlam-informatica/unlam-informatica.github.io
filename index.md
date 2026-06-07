@@ -5,11 +5,15 @@ nav_order: 1
 nav_exclude: true
 ---
 
-<img class="site-mark" src="{{ '/assets/favicon/favicon-512x512.png' | relative_url }}" alt="UNLaM">
+<header class="site-hero">
+	<span class="site-mark-wrap">
+		<img class="site-mark" src="{{ '/assets/favicon/favicon-512x512.png' | relative_url }}" alt="UNLaM">
+	</span>
 
-# Ingeniería en Informática — UNLaM
+	<h1>Ingeniería en Informática — UNLaM</h1>
 
-Acceso directo a los sitios de materias publicados en GitHub Pages.
+	<p>Acceso directo a los sitios de materias publicados en GitHub Pages.</p>
+</header>
 
 <p class="site-disclaimer">Este sitio no es oficial de la Universidad Nacional de La Matanza.</p>
 
@@ -22,7 +26,6 @@ Acceso directo a los sitios de materias publicados en GitHub Pages.
 
 <a class="subject-card" href="https://unlam-informatica.github.io/analisis-matematico-i/">
 	<span class="subject-card-title">Análisis Matemático I</span>
-	<span class="subject-card-text">Apuntes, prácticas y material de apoyo de la materia.</span>
 </a>
 
 </div>
@@ -35,7 +38,6 @@ Acceso directo a los sitios de materias publicados en GitHub Pages.
 
 <a class="subject-card" href="https://unlam-informatica.github.io/bbdd-aplicadas/">
 	<span class="subject-card-title">BBDD Aplicadas</span>
-	<span class="subject-card-text">Material de bases de datos con acceso directo al sitio de la materia.</span>
 </a>
 
 </div>
@@ -48,7 +50,6 @@ Acceso directo a los sitios de materias publicados en GitHub Pages.
 
 <a class="subject-card" href="https://unlam-informatica.github.io/diseno-de-software">
 	<span class="subject-card-title">Diseño de Software</span>
-	<span class="subject-card-text">Recursos organizados para seguir la cursada y la teoría.</span>
 </a>
 
 </div>
