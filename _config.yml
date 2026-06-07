@@ -9,8 +9,9 @@ favicon_ico: "/assets/favicon/favicon.ico"
 
 color_scheme: light
 
-search_enabled: true
-heading_anchors: true
+nav_enabled: false
+search_enabled: false
+heading_anchors: false
 
 callouts_level: quiet
 callouts:
@@ -30,12 +31,9 @@ callouts:
     title: Resolución
     color: teal
 
-aux_links:
-  "GitHub":
-    - "https://github.com/unlam-informatica"
-
 exclude:
   - CLAUDE.md
+  - AGENTS.md
 
 mermaid:
   # Diagramas embebidos en bloques ```mermaid (cargado desde CDN por el tema).

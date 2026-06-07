@@ -51,8 +51,7 @@ _config.yml                         # Config Jekyll/just-the-docs
 index.md                            # Home con tarjetas de materias
 README.md                           # Descripción del portal
 _sass/custom/*.scss                 # Overrides de estilo del tema
-_includes/head_custom.html          # Inyección del TOC lateral propio
-assets/js/page-toc.js               # TOC de página
+_includes/head_custom.html          # Include reservado para personalizaciones del head
 assets/favicon/                     # Favicons del sitio
 ```
 
@@ -69,8 +68,9 @@ Antes de implementar cambios ad hoc sobre **layout, estilos, navegación, compon
 
 ## Navegación
 
-- El **home** vive en `index.md` y usa `layout: home`.
+- El **home** vive en `index.md` y usa `layout: minimal` para no mostrar sidebars.
 - Mantener `nav_order: 1` para el home.
+- Mantener `nav_enabled: false`, `search_enabled: false` y `AGENTS.md` dentro de `exclude` en `_config.yml`.
 - Este portal debería tener muy pocas páginas. Evitar crear secciones internas salvo que agreguen valor real al índice de materias.
 - Si se agregan páginas nuevas, usar frontmatter compatible con Just the Docs y mantener títulos en español.
 

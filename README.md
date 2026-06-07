@@ -1,12 +1,8 @@
 # Ingeniería en Informática — UNLaM
 
-Sitio padre de la carrera Ingeniería en Informática de la UNLaM.
+Portal comunitario no oficial vinculado a la carrera Ingeniería en Informática de la UNLaM.
 
-Centraliza accesos a los sitios de materias publicados en GitHub Pages dentro de la organización [`unlam-informatica`](https://github.com/unlam-informatica).
-
-- Sitio publicado: <https://unlam-informatica.github.io/>
-- Tema: [just-the-docs](https://just-the-docs.com/)
-- Plataforma: GitHub Pages + Jekyll
+No pertenece a la Universidad Nacional de La Matanza ni representa comunicación institucional. Su objetivo es centralizar accesos a sitios de materias publicados en GitHub Pages dentro de la organización [`unlam-informatica`](https://github.com/unlam-informatica).
 
 ## Objetivo
 
@@ -19,8 +15,7 @@ Cada materia mantiene sus apuntes, prácticas y recursos en su repositorio corre
 - **`index.md`** — página principal con las tarjetas de materias disponibles.
 - **`_config.yml`** — configuración de Jekyll, GitHub Pages y just-the-docs.
 - **`_sass/custom/`** — estilos propios del sitio.
-- **`_includes/head_custom.html`** — carga del JavaScript del TOC lateral.
-- **`assets/js/page-toc.js`** — generación del TOC de página.
+- **`_includes/head_custom.html`** — include reservado para personalizaciones del `<head>`.
 - **`assets/favicon/`** — favicons del sitio.
 
 ## Agregar una materia
@@ -62,4 +57,3 @@ http://localhost:4000/
 El sitio se publica con GitHub Pages desde la rama `main`.
 
 Al hacer push a `main`, GitHub Pages construye el sitio desde la raíz del repositorio.
-

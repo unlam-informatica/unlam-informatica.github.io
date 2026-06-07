@@ -1,16 +1,17 @@
 ---
-layout: home
+layout: minimal
 title: Ingeniería en Informática
 nav_order: 1
+nav_exclude: true
 ---
+
+<img class="site-mark" src="{{ '/assets/favicon/favicon-512x512.png' | relative_url }}" alt="UNLaM">
 
 # Ingeniería en Informática — UNLaM
 
-Sitio padre para entrar de forma rápida a cada materia publicada en GitHub Pages.
+Acceso directo a los sitios de materias publicados en GitHub Pages.
 
----
-
-## Materias disponibles
+<p class="site-disclaimer">Este sitio no es oficial de la Universidad Nacional de La Matanza.</p>
 
 <div class="subject-grid">
 
@@ -33,9 +34,3 @@ Sitio padre para entrar de forma rápida a cada materia publicada en GitHub Page
 </a>
 
 </div>
-
----
-
-## Cómo usar este sitio
-
-Elegí la materia que quieras consultar y entrá directamente al sitio correspondiente. Esta portada centraliza los accesos para que no tengas que recordar cada URL.
