@@ -82,6 +82,19 @@ body {
   font-weight: 700;
 }
 
+.main-content > .plan-reference {
+  max-width: 760px;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.plan-reference a {
+  color: var(--unlam-green-dark);
+  font-weight: 700;
+  text-decoration-color: rgba(0, 107, 63, 0.35);
+  text-underline-offset: 0.18em;
+}
+
 .main-content h1::after {
   display: block;
   width: 5rem;
@@ -92,11 +105,33 @@ body {
   content: "";
 }
 
+.subject-year {
+  margin-top: clamp(2.25rem, 5vw, 3.5rem);
+}
+
+.subject-year h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  color: var(--unlam-green-dark);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.subject-year h2::after {
+  flex: 1;
+  height: 1px;
+  background: var(--unlam-border);
+  content: "";
+}
+
 .subject-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1rem;
-  margin: clamp(2.25rem, 6vw, 4rem) 0 0;
+  margin: 1rem 0 0;
 }
 
 .subject-card {
@@ -134,14 +169,6 @@ body {
   border-color: rgba(0, 107, 63, 0.38);
   box-shadow: 0 18px 38px rgba(0, 79, 48, 0.14);
   transform: translateY(-2px);
-}
-
-.subject-card-kicker {
-  color: var(--unlam-green);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .subject-card-title {
