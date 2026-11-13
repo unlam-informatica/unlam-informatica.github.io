@@ -3,9 +3,13 @@ title: Ingeniería en Informática — UNLaM
 description: Apuntes personales, teoría y ejercicios organizados por año y materia.
 template: splash
 hero:
+  layout: banner
   tagline: Apuntes personales de la carrera. Teoría, guías y ejercicios en un solo lugar.
 ---
 import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { ContainerSection } from 'lucode-starlight/components';
+
+<ContainerSection>
 
 :::note[Sitio personal de apuntes]
 Este sitio no es oficial de la Universidad Nacional de La Matanza. El material acompaña el estudio y no reemplaza las indicaciones de cada cátedra.
@@ -30,3 +34,5 @@ Materias agrupadas por año según el [Plan de estudios 2023 de Ingeniería Info
 <CardGrid>
 <LinkCard title="Diseño de Software" description="Teoría, patrones, diagramas y casos de práctica." href="/diseno-de-software/" />
 </CardGrid>
+
+</ContainerSection>

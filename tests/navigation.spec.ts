@@ -2,16 +2,19 @@ import { test, expect } from '@playwright/test';
 
 test('portada por año y navegación contextual', async ({ page, isMobile }, testInfo) => {
   await page.goto('/');
-  await page.screenshot({ path: testInfo.outputPath('portada.png'), fullPage: true });
+  await page.screenshot({ path: testInfo.outputPath('portada.png'), fullPage: true, animations: 'disabled' });
+  await testInfo.attach('Portada Lucode', { path: testInfo.outputPath('portada.png'), contentType: 'image/png' });
   for (const name of ['1er año','2do año','3er año']) await expect(page.getByRole('heading', { name, exact: true })).toBeVisible();
   await expect(page.getByText('Este sitio no es oficial', { exact: false })).toBeVisible();
-  await page.locator('main a[href="/analisis-matematico-i/"]').first().click();
+  await page.locator('.sl-markdown-content a[href="/analisis-matematico-i/"]').first().click();
   await expect(page).toHaveURL(/analisis-matematico-i\/$/);
-  await page.locator('main a[href="/analisis-matematico-i/unidad-1/"]').first().click();
+  await page.locator('.sl-markdown-content a[href="/analisis-matematico-i/unidad-1/"]').first().click();
   await expect(page).toHaveURL(/unidad-1\/$/);
   if (isMobile) {
-    await page.getByRole('button', { name: 'Menú', exact: true }).click();
-    await expect(page.locator('#starlight__sidebar')).toBeVisible();
+    await page.getByRole('button', { name: 'Toggle Menu', exact: true }).click();
+    await expect(page.locator('#drawer')).toBeVisible();
+    await page.locator('#drawer a[href="/bbdd-aplicadas/"]').first().click();
+    await expect(page).toHaveURL(/bbdd-aplicadas\/$/);
   }
 });
 
@@ -52,8 +55,25 @@ test('todos los diagramas Mermaid se renderizan', async ({ page }) => {
     const count = (readFileSync(file,'utf8').match(/class="mermaid"/g) || []).length;
     if (!count) continue;
     await page.goto('/'+file.slice(5).replace(/index\.html$/, ''));
-    await expect(page.locator('.mermaid[data-processed="true"] svg')).toHaveCount(count, { timeout: 30000 });
+    // Mermaid renders sequentially; 31 diagrams can exceed 30s on shared CI runners.
+    const renderTimeout = Math.max(30000, count * 3000);
+    await expect(page.locator('.mermaid[data-processed="true"] svg'), file).toHaveCount(count, { timeout: renderTimeout });
     await expect.soft(page.getByText('Syntax error in text', { exact: false }), file).toHaveCount(0, { timeout: 500 });
   }
   expect(errors).toEqual([]);
+});
+
+test('Lucode conserva el aviso y permite alternar tema claro y oscuro', async ({ page }, testInfo) => {
+  await page.goto('/analisis-matematico-i/unidad-1/practica/ejercicio-1/');
+  await expect(page.locator('.disclaimer')).toBeVisible();
+  await expect(page.locator('[data-slot="docs"]')).toBeVisible();
+  const before = await page.locator('html').getAttribute('data-theme');
+  await page.locator('starlight-theme-lucode-select button').click();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', before === 'dark' ? 'light' : 'dark');
+  await page.reload();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', before === 'dark' ? 'light' : 'dark');
+  await expect(page.locator('.katex').first()).toBeVisible();
+  await page.screenshot({ path: testInfo.outputPath('apunte-tema-alternativo.png'), animations: 'disabled' });
+  await testInfo.attach('Apunte Lucode', { path: testInfo.outputPath('apunte-tema-alternativo.png'), contentType: 'image/png' });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBeTruthy();
 });

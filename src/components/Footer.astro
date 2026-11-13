@@ -1,8 +1,9 @@
 ---
-import DefaultFooter from '@astrojs/starlight/components/Footer.astro';
+import LucodeFooter from 'lucode-starlight/components/overrides/Footer.astro';
+const isDoc = Astro.locals.starlightRoute.entry.data.template === 'doc';
 ---
-<p class="disclaimer">Sitio personal de apuntes. No es un sitio oficial de la Universidad Nacional de La Matanza (UNLaM).</p>
-<DefaultFooter><slot /></DefaultFooter>
+{isDoc && <p class="disclaimer">Sitio personal de apuntes. No es un sitio oficial de la Universidad Nacional de La Matanza (UNLaM).</p>}
+<LucodeFooter><slot /></LucodeFooter>
 <script>
   // Local bundle; no CDN or external rendering service is needed.
   if (document.querySelector('.mermaid')) {

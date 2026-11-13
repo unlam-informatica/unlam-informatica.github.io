@@ -8,7 +8,8 @@ Destino: https://unlam-informatica.github.io/
 - 2do año: Bases de Datos Aplicadas.
 - 3er año: Diseño de Software.
 
-Astro Starlight genera un sitio estático con búsqueda global Pagefind, navegación
+Astro Starlight con el tema [Lucode](https://lucas-labs.github.io/lucode-starlight-theme/)
+genera un sitio estático con búsqueda global Pagefind, navegación
 contextual, modo claro/oscuro y menú móvil. No requiere backend ni servicios pagos.
 
 ## Desarrollo
@@ -25,7 +26,7 @@ npm run test:browser
 ```
 
 La documentación está en `src/content/docs/`; los recursos se conservan bajo
-`public/`. La portada usa tarjetas nativas de Starlight. Mermaid se sirve localmente
+`public/`. La portada usa tarjetas nativas de Starlight y el contenedor de Lucode. Mermaid se sirve localmente
 y KaTeX genera las fórmulas en el build.
 
 Ver [arquitectura, migración y transición](migration/README.md),
@@ -39,3 +40,15 @@ ejecutar sobre `main`. Pages del portal ya está preparado para GitHub Actions.
 Después del primer
 despliegue hay que retirar las publicaciones anteriores de materias que comparten
 prefijos; consultar la guía de producción. Sus archivos e historial se conservan.
+
+## Tema visual
+
+[Lucode Starlight](https://lucas-labs.github.io/lucode-starlight-theme/) se integra
+como plugin en `astro.config.mjs`. Se usa su apariencia predeterminada, navegación
+superior por materia, portada `banner` y modos claro/oscuro. El esquema de contenido
+extiende `ExtendDocsSchema`, como indica la documentación del tema.
+
+El footer local delega su aspecto y paginación al componente de Lucode. Solo agrega
+el aviso de sitio no oficial en los apuntes y conserva la carga local de Mermaid;
+el aviso de la portada se configura mediante `footerText`. Los estilos propios
+siguen limitados a contener contenido académico ancho y presentar ese aviso.

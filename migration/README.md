@@ -2,7 +2,7 @@
 
 ## Arquitectura
 
-Astro 7 y Starlight 0.42 generan HTML estático para el dominio raíz de GitHub Pages.
+Astro 7 y Starlight 0.42, con el tema Lucode integrado mediante su plugin, generan HTML estático para el dominio raíz de GitHub Pages.
 `src/content/docs/` contiene las tres materias en Markdown. La portada MDX usa
 `CardGrid` y `LinkCard` nativos, agrupados según los años del portal anterior.
 
@@ -14,8 +14,7 @@ KaTeX se ejecuta en el build mediante remark-math/rehype-katex, con CSS y fuente
 locales. Los diagramas siguen editándose como cercos Mermaid y se renderizan con
 un bundle local cargado solo en páginas que contienen diagramas. Starlight no
 incluye renderizador Mermaid: esa extensión y el aviso no oficial del footer son
-las personalizaciones funcionales. El footer delega el resto en el componente
-nativo. El CSS solo contiene desbordes de fórmulas y diagramas.
+las personalizaciones funcionales. El footer delega su presentación y paginación en el componente de Lucode. El CSS solo contiene desbordes de fórmulas y diagramas.
 
 ## Procedencia y conservación
 
