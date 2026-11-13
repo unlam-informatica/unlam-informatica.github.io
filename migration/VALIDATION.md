@@ -36,3 +36,7 @@ internas verificadas sin errores; matriz de 245 entradas y 50 recursos conservad
 Las 12 pruebas Playwright pasan en escritorio y móvil, incluyendo cambio de tema,
 persistencia al recargar, navegación, búsqueda, fórmulas, todos los diagramas y
 redirecciones. Capturas de portada y apunte en modo oscuro revisadas visualmente.
+La comprobación exhaustiva de Mermaid ajusta su plazo al número de diagramas por
+página: la unidad de patrones contiene 31 y su renderizado secuencial superó el
+límite fijo de 30 segundos en el runner compartido. Se siguen exigiendo todos los
+SVG y ausencia de errores; las demás pruebas conservan sus tiempos originales.

@@ -55,7 +55,9 @@ test('todos los diagramas Mermaid se renderizan', async ({ page }) => {
     const count = (readFileSync(file,'utf8').match(/class="mermaid"/g) || []).length;
     if (!count) continue;
     await page.goto('/'+file.slice(5).replace(/index\.html$/, ''));
-    await expect(page.locator('.mermaid[data-processed="true"] svg')).toHaveCount(count, { timeout: 30000 });
+    // Mermaid renders sequentially; 31 diagrams can exceed 30s on shared CI runners.
+    const renderTimeout = Math.max(30000, count * 3000);
+    await expect(page.locator('.mermaid[data-processed="true"] svg'), file).toHaveCount(count, { timeout: renderTimeout });
     await expect.soft(page.getByText('Syntax error in text', { exact: false }), file).toHaveCount(0, { timeout: 500 });
   }
   expect(errors).toEqual([]);
