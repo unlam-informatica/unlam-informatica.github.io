@@ -7,7 +7,7 @@ El portal Jekyll enlazaba tres sitios separados. Esta migración reúne sus apun
 - Starlight nativo para tarjetas, sidebar, índice contextual, menú móvil, temas, búsqueda Pagefind y asides.
 - Fórmulas con KaTeX durante build; Mermaid local bajo demanda. Se retiran configuración, estilos e includes Jekyll.
 - Matriz de 245 rutas de páginas/recursos y aliases estáticos para URLs `.html`, conservando consultas y fragmentos.
-- GitHub Actions valida PRs y prepara despliegue Pages **manual, exclusivamente desde main**. No se ejecutó ningún deploy ni se cambiaron ajustes remotos de Pages.
+- GitHub Actions valida PRs y prepara despliegue Pages **manual, exclusivamente desde main**. No se ejecutó ningún deploy. Como preparación posterior, Pages del portal se cambió a GitHub Actions antes del merge; su HTML publicado se verificó idéntico.
 - Se actualizan README y AGENTS.md al nuevo alcance. Importador reproducible que solo lee clones de las materias.
 
 ## Validaciones ejecutadas
@@ -30,7 +30,7 @@ El portal Jekyll enlazaba tres sitios separados. Esta migración reúne sus apun
 ## Riesgos y transición pendiente
 
 - Los Pages de los repositorios de materias todavía pueden tener prioridad sobre los mismos prefijos del sitio raíz. Antes de producción hace falta coordinar su configuración de publicación en una acción posterior autorizada. **No se modificó ninguno de esos repositorios.**
-- Cambiar la fuente Pages del portal a GitHub Actions y ejecutar el workflow manual solo después de aprobar la transición. No hacer merge ni desplegar como parte de este PR draft.
+- Pages del portal ya está configurado en GitHub Actions. Tras el merge por el responsable, ejecutar el despliegue manual y recién después desactivar los Pages anteriores de materias. Ver `migration/PRODUCCION.md`. No se hizo merge ni se ejecutó despliegue.
 - Fragmentos externos históricos Kramdown no conocidos no tienen garantía exhaustiva; todos los fragmentos de enlaces internos sí se comprobaron. Las URLs externas no se verificaron por red.
 - Redirecciones estáticas con meta refresh/script: GitHub Pages no ofrece 301 configurables. La normalización de directorios sin barra final depende del host.
 - npm audit informa 5 avisos bajos en la cadena KaTeX/Mermaid/remark; sin avisos moderados, altos ni críticos. Mermaid produce advertencia de bundle grande, cargado solo en páginas con diagramas.
@@ -40,3 +40,7 @@ Documentación detallada: `migration/README.md`, `migration/compatibility.md`, `
 
 La importación verifica automáticamente los 942 bloques de código contra los originales;
 solo permite la adaptación documentada de horarios en Mermaid.
+
+Guía operativa y comandos de verificación/reversión: `migration/PRODUCCION.md`. Estado anterior y preparación realizada: `migration/pages-before-cutover.json` y `migration/pages-preparation.json`.
+
+El verificador público `scripts/verify-production.mjs` se ensayó contra el build local con normalización de directorios: 357 comprobaciones sin errores. No se ejecutó el despliegue del portal nuevo.

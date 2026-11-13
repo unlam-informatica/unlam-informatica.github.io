@@ -29,11 +29,13 @@ La documentación está en `src/content/docs/`; los recursos se conservan bajo
 y KaTeX genera las fórmulas en el build.
 
 Ver [arquitectura, migración y transición](migration/README.md),
+[guía de producción](migration/PRODUCCION.md),
 [matriz de URLs](migration/compatibility.md) e [informe de validación](migration/validation.json).
 
 ## Publicación controlada
 
 Los PR ejecutan validaciones sin desplegar. `Deploy portal (manual)` solo se puede
-ejecutar sobre `main`. Antes del primer despliegue hay que configurar Pages para
-GitHub Actions y resolver los sitios de proyecto que comparten prefijos; consultar
-el plan de transición. Esta migración no publica ni modifica los repositorios de materias.
+ejecutar sobre `main`. Pages del portal ya está preparado para GitHub Actions.
+Después del primer
+despliegue hay que retirar las publicaciones anteriores de materias que comparten
+prefijos; consultar la guía de producción. Sus archivos e historial se conservan.

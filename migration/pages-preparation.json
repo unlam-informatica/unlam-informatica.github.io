@@ -1,0 +1,13 @@
+{
+  "recordedAt": "2026-11-13T03:29:24.873209+00:00",
+  "repository": "unlam-informatica/unlam-informatica.github.io",
+  "buildTypeBefore": "legacy",
+  "buildTypeAfter": "workflow",
+  "httpBefore": 200,
+  "httpAfter": 200,
+  "htmlSha256Before": "997d739c2cbb45e5e243be08a8dc100848c94f49fb0cd1832eade402228b5ad5",
+  "htmlSha256After": "997d739c2cbb45e5e243be08a8dc100848c94f49fb0cd1832eade402228b5ad5",
+  "subjectPagesChanged": false,
+  "deploymentTriggered": false,
+  "prMerged": false
+}

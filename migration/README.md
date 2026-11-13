@@ -89,21 +89,16 @@ Los reportes de navegador se generan en `playwright-report/` y CI los adjunta.
 
 ## Despliegue y transición pendiente
 
-1. Revisar este PR draft y sus validaciones; no tiene despliegue automático.
-2. Antes de publicar, confirmar cómo GitHub Pages enruta los sitios de proyecto
-   `analisis-matematico-i`, `bbdd-aplicadas` y `diseno-de-software`. Si siguen activos,
-   pueden tener prioridad sobre esos mismos prefijos del sitio de organización.
-   La transición requiere coordinar su publicación/configuración de Pages en una
-   acción posterior autorizada; esta migración no cambia esos repositorios.
-3. Tras aprobar y hacer merge por separado, cambiar la fuente de Pages del portal
-   de rama/Jekyll a **GitHub Actions**. Conservar la publicación actual hasta entonces.
-4. Ejecutar manualmente `Deploy portal (manual)` sobre `main` y revisar el artefacto.
-   El job rechaza cualquier otra rama. Se recomienda protección del environment
-   `github-pages` con aprobación de despliegue.
-5. Verificar en el dominio real las rutas de la matriz, búsqueda y recursos. Para
-   revertir, republicar el commit anterior y restaurar la fuente Pages anterior.
+La fuente de Pages del portal principal ya está configurada en **GitHub Actions**,
+antes del merge. Se verificó que el HTML publicado sigue idéntico al anterior.
+Los sitios de materias continúan publicados hasta que el portal nuevo esté listo.
+No se ejecutó deploy ni se hizo merge.
 
-No se cambió la configuración remota de Pages, no se ejecutó deploy ni se hizo merge.
+Ver la [guía operativa de producción](PRODUCCION.md) para el orden exacto:
+revisión/merge por el responsable → despliegue manual desde main → retiro de Pages
+de materias → verificación pública de rutas/recursos y revisión en navegador.
+La configuración anterior está en `pages-before-cutover.json`; el cambio ya
+realizado y su comprobación están en `pages-preparation.json`.
 
 ## Riesgos registrados
 

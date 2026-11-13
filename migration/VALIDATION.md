@@ -20,3 +20,13 @@ Markdown y condiciones necesarias para la transición de GitHub Pages.
 
 La importación verifica automáticamente los 942 bloques de código contra los originales;
 solo permite la adaptación documentada de horarios en Mermaid.
+
+Preparación de producción: se cambió únicamente la fuente de Pages del portal
+principal a GitHub Actions. HTTP 200 y SHA-256 del HTML idénticos antes y después;
+registro en `pages-preparation.json`. Las publicaciones de materias se conservaron.
+
+`node scripts/verify-production.mjs http://127.0.0.1:4322`: **357 comprobaciones
+exitosas**, contra el build local servido con `python3 -m http.server` (redirección
+de directorios como Pages). Comprueba rutas antiguas y canónicas, generador
+Starlight, canonical, bytes de recursos y módulo Pagefind. No es una validación
+del nuevo portal en producción: su despliegue sigue pendiente.
