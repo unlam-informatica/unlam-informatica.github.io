@@ -4,6 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import YAML from 'yaml';
+import { navigationPath } from './navigation.mjs';
 const root = process.argv[2];
 if (!root) throw Error('Usage: node scripts/import-sources.mjs /path/to/clones');
 const subjects = ['analisis-matematico-i', 'bbdd-aplicadas', 'diseno-de-software'];
@@ -105,6 +106,7 @@ for (const [i, subject] of subjects.entries()) {
   provenance.push({ repository: 'unlam-informatica/'+subject, commit: execFileSync('git',['-C',dir,'rev-parse','HEAD'], {encoding:'utf8'}).trim(), pages: docs.length });
 }
 save('migration/sources.json', JSON.stringify({ repositories: provenance, pages, assets },null,2)+'\n');
+for (const entry of matrix) if (entry.kind === 'page') entry.navigation = navigationPath(entry.canonical);
 save('migration/compatibility.json', JSON.stringify(matrix,null,2)+'\n');
-save('migration/compatibility.md', '# Matriz de compatibilidad\n\nLas rutas sin barra final se sirven mediante la normalización de directorios de GitHub Pages. Las rutas `.html` tienen redirección estática conservando query y fragmento.\n\n| Ruta anterior | Ruta unificada | Tipo |\n|---|---|---|\n'+matrix.map(r => `| \`${r.old}\` | \`${r.canonical}\` | ${r.kind} |`).join('\n')+'\n');
+save('migration/compatibility.md', '# Matriz de compatibilidad\n\nLas rutas anteriores y canónicas se conservan. La navegación usa archivos `index.html` explícitos para evitar los 404 de directorio retenidos por la caché de GitHub Pages. Las rutas `.html` antiguas redirigen al archivo de navegación conservando query y fragmento durante el build. Las rutas sin barra final siguen dependiendo de la normalización del host.\n\n| Ruta anterior | Ruta canónica | Navegación | Tipo |\n|---|---|---|---|\n'+matrix.map(r => `| \`${r.old}\` | \`${r.canonical}\` | \`${r.navigation || r.canonical}\` | ${r.kind} |`).join('\n')+'\n');
 console.log(provenance);

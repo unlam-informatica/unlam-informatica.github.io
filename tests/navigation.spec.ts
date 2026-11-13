@@ -6,15 +6,15 @@ test('portada por año y navegación contextual', async ({ page, isMobile }, tes
   await testInfo.attach('Portada Lucode', { path: testInfo.outputPath('portada.png'), contentType: 'image/png' });
   for (const name of ['1er año','2do año','3er año']) await expect(page.getByRole('heading', { name, exact: true })).toBeVisible();
   await expect(page.getByText('Este sitio no es oficial', { exact: false })).toBeVisible();
-  await page.locator('.sl-markdown-content a[href="/analisis-matematico-i/"]').first().click();
-  await expect(page).toHaveURL(/analisis-matematico-i\/$/);
-  await page.locator('.sl-markdown-content a[href="/analisis-matematico-i/unidad-1/"]').first().click();
-  await expect(page).toHaveURL(/unidad-1\/$/);
+  await page.locator('.sl-markdown-content a[href="/analisis-matematico-i/index.html"]').first().click();
+  await expect(page).toHaveURL(/analisis-matematico-i\/index\.html$/);
+  await page.locator('.sl-markdown-content a[href="/analisis-matematico-i/unidad-1/index.html"]').first().click();
+  await expect(page).toHaveURL(/unidad-1\/index\.html$/);
   if (isMobile) {
     await page.getByRole('button', { name: 'Toggle Menu', exact: true }).click();
     await expect(page.locator('#drawer')).toBeVisible();
-    await page.locator('#drawer a[href="/bbdd-aplicadas/"]').first().click();
-    await expect(page).toHaveURL(/bbdd-aplicadas\/$/);
+    await page.locator('#drawer a[href="/bbdd-aplicadas/index.html"]').first().click();
+    await expect(page).toHaveURL(/bbdd-aplicadas\/index\.html$/);
   }
 });
 
@@ -28,19 +28,23 @@ test('fórmulas, diagramas y desborde móvil', async ({ page }) => {
 });
 
 test('búsqueda global', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', { name: 'Buscar', exact: true }).click();
-  const input = page.locator('.pagefind-ui__search-input');
   for (const [term, subject] of [['derivada', 'analisis-matematico-i'], ['transacciones', 'bbdd-aplicadas'], ['patrones', 'diseno-de-software']]) {
+    await page.goto('/');
+    await page.getByRole('button', { name: 'Buscar', exact: true }).click();
+    const input = page.locator('.pagefind-ui__search-input');
     await input.fill(term);
     await expect(page.locator('.pagefind-ui__result').first()).toBeVisible();
     await expect(page.locator('.pagefind-ui__result-link').first()).toHaveAttribute('href', new RegExp(subject));
+    await expect(page.locator('.pagefind-ui__result-link').first()).toHaveAttribute('href', /\/index\.html(?:#.*)?$/);
+    await page.locator('.pagefind-ui__result-link').first().click();
+    await expect(page.locator('h1').first()).not.toHaveText('404');
+    await expect(page.locator('meta[name="generator"][content^="Starlight"]')).toHaveCount(1);
   }
 });
 
 test('redirecciones conservan fragmentos y consultas', async ({ page }) => {
   await page.goto('/diseno-de-software/diagramas.html?origen=legacy#uml');
-  await expect(page).toHaveURL('/diseno-de-software/diagramas/?origen=legacy#uml');
+  await expect(page).toHaveURL('/diseno-de-software/diagramas/index.html?origen=legacy#uml');
 });
 
 test('todos los diagramas Mermaid se renderizan', async ({ page }) => {

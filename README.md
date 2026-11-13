@@ -12,6 +12,11 @@ Astro Starlight con el tema [Lucode](https://lucas-labs.github.io/lucode-starlig
 genera un sitio estático con búsqueda global Pagefind, navegación
 contextual, modo claro/oscuro y menú móvil. No requiere backend ni servicios pagos.
 
+La navegación enlaza los archivos `index.html` de cada apunte para evitar respuestas
+404 de directorio retenidas por la caché de GitHub Pages. Se conservan las URLs
+canónicas con barra final y las rutas históricas. Búsqueda, tarjetas y menús usan
+el mismo destino; no hay que modificar los enlaces de los Markdown académicos.
+
 ## Desarrollo
 
 Node.js 22.23.4+ y npm. Las versiones resueltas están fijadas en `package-lock.json`.

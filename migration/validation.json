@@ -1,7 +1,8 @@
 {
   "pages": 195,
+  "reachableFromHomepage": 195,
   "renderedHtml": 212,
-  "internalLinksAndResources": 47938,
+  "internalLinksAndResources": 47939,
   "compatibilityEntries": 245,
   "assets": 50,
   "errors": []

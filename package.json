@@ -10,6 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "validate": "node scripts/validate.mjs",
+    "verify:production": "node scripts/verify-production.mjs",
     "test:browser": "playwright test"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",
-    "cheerio": "^1.1.2"
+    "cheerio": "^1.1.2",
+    "pagefind": "^1.6.0"
   }
 }

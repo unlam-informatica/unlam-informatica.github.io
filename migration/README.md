@@ -64,6 +64,27 @@ query y fragmento. GitHub Pages no permite respuestas 301 configurables; por eso
 se usan redirecciones estáticas. Las URLs de directorio sin barra final dependen
 de la normalización del host. Las imágenes/descargas mantienen sus rutas y bytes.
 
+La navegación publicada usa los archivos `index.html` explícitos, manteniendo las
+URLs canónicas anteriores en los metadatos. `scripts/navigation-integration.mjs`
+procesa los enlaces renderizados al terminar el build, incluidas tarjetas MDX,
+menús de Lucode, sidebar, paginación, contenido y redirecciones históricas. El campo
+`navigation` de la matriz registra esos destinos. Los Markdown originales no se
+reescriben ni se reimportan para modificar la navegación. Se agregó un enlace al
+script SQL ya existente desde su práctica de Window Functions y se actualizó su
+hash migrado en `sources.json`; el hash original y los bytes del script se conservan.
+
+El incidente del 13 de noviembre de 2026 devolvía 200 sin compresión y 404 con
+`Accept-Encoding: gzip` para la misma URL de BBDD. Los archivos `index.html`
+respondían correctamente: el 404 estaba retenido en una variante de la caché de
+GitHub Pages, fuera del repositorio. Cambiar enlaces a archivos evita esa entrada
+de caché; no purga la caché del proveedor ni garantiza las URLs antiguas mientras
+esa respuesta siga retenida.
+
+Se conserva el buscador nativo de Lucode/Starlight. Como el indexador de Starlight
+no expone `keepIndexUrl`, se desactiva solo ese paso y la integración construye una
+única vez el índice con la API de Pagefind y `keepIndexUrl: true`. Las búsquedas y
+sus subresultados enlazan así los mismos archivos que la navegación.
+
 El chequeo comprueba archivos de salida y fragmentos de enlaces internos. Las
 URLs externas no se validan por red. No se garantiza cada fragmento externo
 histórico generado por Kramdown: Starlight usa otro generador de IDs. Los enlaces
@@ -84,6 +105,15 @@ compatibilidad y errores KaTeX. Playwright prueba escritorio y viewport iPhone 1
 con Chromium: portada, navegación, menú móvil, búsqueda de las tres materias,
 fórmulas, desborde horizontal, redirecciones y todos los diagramas Mermaid.
 La emulación móvil no sustituye una revisión en hardware real con Safari.
+
+La validación comprueba también que las 195 páginas son alcanzables desde la
+portada. Playwright recorre esos enlaces por HTTP y prueba tarjetas, unidades,
+paginación, sidebar, menú, búsqueda, redirecciones y descargas mientras simula 404 en los
+directorios de las tres materias. Las pruebas no dependen de que la caché pública
+se haya renovado.
+
+Los títulos largos de apuntes pueden ocupar varias líneas en sidebar y
+paginación, para conservar el área de lectura y pulsación en escritorio y móvil.
 Los reportes de navegador se generan en `playwright-report/` y CI los adjunta.
 
 ## Despliegue y transición pendiente

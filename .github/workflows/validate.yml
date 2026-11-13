@@ -2,7 +2,7 @@ name: Validate portal
 on:
   pull_request:
   push:
-    branches: [feat/unified-starlight-portal, main]
+    branches: [feat/unified-starlight-portal, 'fix/**', main]
 permissions:
   contents: read
 jobs:

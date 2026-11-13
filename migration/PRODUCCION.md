@@ -90,6 +90,23 @@ Desde el checkout del portal, con dependencias instaladas:
 node scripts/verify-production.mjs
 ```
 
+El verificador comprueba cada página con `Accept-Encoding: identity` y `gzip` e
+incluye los destinos `index.html` registrados en la matriz. Informa `x-cache`,
+`age` y el nodo de caché al fallar, para detectar respuestas diferentes como el
+404 de BBDD del 13 de noviembre de 2026. Una respuesta 200 sin compresión no basta
+para dar una ruta por verificada.
+
+Para verificar solo los destinos usados por el portal, recursos y búsqueda,
+sin incluir las direcciones antiguas que puedan seguir retenidas en caché:
+
+```sh
+npm run verify:production -- --navigation-only
+```
+
+El modo predeterminado sigue siendo estricto e incluye las rutas antiguas y
+canónicas. Los cambios en una rama no alteran producción: requieren revisión,
+merge autorizado y despliegue manual desde `main`.
+
 El comando solo lee el sitio público. Recorre las rutas antiguas y canónicas de la
 matriz, comprueba que las páginas canónicas sirven Starlight, sus enlaces canonical,
 los hashes SHA-256 de los recursos originales y la disponibilidad del módulo de
