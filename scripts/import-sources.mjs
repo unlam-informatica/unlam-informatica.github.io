@@ -72,13 +72,20 @@ for (const [i, subject] of subjects.entries()) {
       });
       return block.replace(/\{:\s*[^}]+\}/g, '');
     }).join('');
-    // MathJax accepted same-line display delimiters; remark-math requires separate lines.
-    body = body.replace(/\$\$([\s\S]*?)\$\$/g, (_, math) => '\n\n$$\n'+math.trim()+'\n$$\n\n');
-    body = body.replaceAll('$\\$20$', '$\\text{\\char36}20$');
-    if (subject === 'bbdd-aplicadas' && d.rel === 'unidad-2/teoria/unidad-2.md') body = body.replace('**El problema sin aislamiento**', '<a id="el-problema-sin-aislamiento"></a>\n\n**El problema sin aislamiento**');
-    // The first academic H1 becomes Starlight's page title; retain its wording.
+    // Only prose is eligible for math/title normalization. Code is academic content.
     let title = d.data.title;
-    body = body.replace(/^# ([^\n]+)\n/m, (_, t) => { title = t; return ''; });
+    let foundTitle = false;
+    body = body.split(/(^```[^\n]*\n[\s\S]*?^```[^\n]*$)/gm).map((block, n) => {
+      if (n % 2) return block;
+      block = block.replace(/\$\$([\s\S]*?)\$\$/g, (_, math) => '\n\n$$\n'+math.trim()+'\n$$\n\n');
+      block = block.replaceAll('$\\$20$', '$\\text{\\char36}20$');
+      if (!foundTitle) block = block.replace(/^# ([^\n]+)\n/m, (_, t) => { title = t; foundTitle = true; return ''; });
+      return block;
+    }).join('');
+    if (subject === 'bbdd-aplicadas' && d.rel === 'unidad-2/teoria/unidad-2.md') body = body.replace('**El problema sin aislamiento**', '<a id="el-problema-sin-aislamiento"></a>\n\n**El problema sin aislamiento**');
+    const fences = text => [...text.matchAll(/^```[^\n]*\n[\s\S]*?^```/gm)].map(m => m[0]);
+    const before = fences(d.body), after = fences(body);
+    if (before.length !== after.length || before.some((code, n) => code !== after[n] && !(code.startsWith('```mermaid') && code.includes('\ntimeline\n') && code.replace(/(\d{2}):(\d{2})/g, '$1h$2') === after[n]))) throw Error('Academic code changed: '+subject+'/'+d.rel);
     const front = { title, slug: d.canonical.slice(1,-1), sidebar: { order: d.data.nav_order ?? 100 } };
     if (d.rel === 'index.md') front.sidebar.label = titles[i];
     const output = 'src/content/docs/'+subject+'/'+d.rel;

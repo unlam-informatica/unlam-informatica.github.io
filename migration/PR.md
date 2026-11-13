@@ -37,3 +37,6 @@ El portal Jekyll enlazaba tres sitios separados. Esta migración reúne sus apun
 - Móvil probado por emulación Chromium; Safari/hardware real y verificación final sobre el dominio quedan pendientes de la transición.
 
 Documentación detallada: `migration/README.md`, `migration/compatibility.md`, `migration/validation.json` y `migration/VALIDATION.md`.
+
+La importación verifica automáticamente los 942 bloques de código contra los originales;
+solo permite la adaptación documentada de horarios en Mermaid.

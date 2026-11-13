@@ -1,5 +1,5 @@
 ---
-title: mongod.conf
+title: Formatos de intercambio
 slug: bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio
 sidebar:
   order: 5
@@ -359,6 +359,7 @@ YAML es un formato de serialización de datos diseñado para ser fácil de leer 
 **Ejemplo — configuración de MongoDB**:
 
 ```yaml
+# mongod.conf
 
 storage:
   dbPath: C:\Program Files\MongoDB\Server\4.4\data

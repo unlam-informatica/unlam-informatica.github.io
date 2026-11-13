@@ -17,3 +17,6 @@ No se ejecutó despliegue ni se validó el enrutamiento sobre producción.
 
 Ver `README.md` de este directorio para problemas detectados, adaptaciones del
 Markdown y condiciones necesarias para la transición de GitHub Pages.
+
+La importación verifica automáticamente los 942 bloques de código contra los originales;
+solo permite la adaptación documentada de horarios en Mermaid.

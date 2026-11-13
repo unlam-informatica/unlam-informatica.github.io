@@ -344,22 +344,10 @@ db.pedidos.aggregate([
           input: "$items",
           as: "item",
           in: {
-            nombre: "
-
-$$
-item.nombre",
-            cantidad: "
-$$
-
-item.cantidad",
-            precio_unitario: "
-
-$$
-item.precio_unitario",
-            subtotal: { $multiply: ["
-$$
-
-item.cantidad", "$$item.precio_unitario"] }
+            nombre: "$$item.nombre",
+            cantidad: "$$item.cantidad",
+            precio_unitario: "$$item.precio_unitario",
+            subtotal: { $multiply: ["$$item.cantidad", "$$item.precio_unitario"] }
           }
         }
       }

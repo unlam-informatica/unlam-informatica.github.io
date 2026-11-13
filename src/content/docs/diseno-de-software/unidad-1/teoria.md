@@ -1,5 +1,5 @@
 ---
-title: Las operaciones están relacionadas con la responsabilidad de representar
+title: Teoría
 slug: diseno-de-software/unidad-1/teoria
 sidebar:
   order: 1
@@ -379,6 +379,7 @@ Clase Venta:
     calcularTotal()
     finalizar()
 
+# Las operaciones están relacionadas con la responsabilidad de representar
 # y completar una venta.
 ```
 

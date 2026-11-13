@@ -812,7 +812,7 @@
       "source": "bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio.md",
       "originalSha256": "5f4ae253ca6417cb4905c9b95f4aac55d083db830ab7a6cafc9cbce1872cdc02",
-      "migratedSha256": "8cfbe4ba7e787edfc52c3467980fab964e3378669e553e4e773077927b591325",
+      "migratedSha256": "feb68396fdb4402fd23791134a40297deda17443c81e49544acf98dbe22097e0",
       "canonical": "/bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio/"
     },
     {
@@ -945,7 +945,7 @@
       "source": "bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online.md",
       "originalSha256": "a7a14a984fa2c7d8d95ff8b616cd18745faf82a9a00423df3a27226254117ff8",
-      "migratedSha256": "b8ba0d5e4782884c2991a0fd2fdb7f0b99193c2263e6869d4495eafbba33d771",
+      "migratedSha256": "b9b011c69d16eeb1207ace741920ebac87439de94efb2e4d782ad9a8b872cd49",
       "canonical": "/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online/"
     },
     {
@@ -1267,7 +1267,7 @@
       "source": "diseno-de-software/unidad-1/teoria.md",
       "output": "src/content/docs/diseno-de-software/unidad-1/teoria.md",
       "originalSha256": "4b6c31e559e60e8d9a937f1cddc49f8c3bee997c9a430f8a2df6db471455551d",
-      "migratedSha256": "4ba1af4b7bab0949a379275a5895e06063816e898bed644507a8497ec99efc72",
+      "migratedSha256": "6e3913a7ff7bd5cbff1faf52d7c976eac7020fbcfc538cc653cf8fab99100fb8",
       "canonical": "/diseno-de-software/unidad-1/teoria/"
     },
     {

@@ -13,7 +13,7 @@ contextual, modo claro/oscuro y menú móvil. No requiere backend ni servicios p
 
 ## Desarrollo
 
-Node.js 22.12+ y npm. Las versiones resueltas están fijadas en `package-lock.json`.
+Node.js 22.23.4+ y npm. Las versiones resueltas están fijadas en `package-lock.json`.
 
 ```sh
 npm ci
