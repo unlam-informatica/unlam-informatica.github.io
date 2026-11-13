@@ -30,3 +30,9 @@ exitosas**, contra el build local servido con `python3 -m http.server` (redirecc
 de directorios como Pages). Comprueba rutas antiguas y canónicas, generador
 Starlight, canonical, bytes de recursos y módulo Pagefind. No es una validación
 del nuevo portal en producción: su despliegue sigue pendiente.
+
+Tema Lucode: build de producción exitoso, 195 rutas únicas y 47.938 referencias
+internas verificadas sin errores; matriz de 245 entradas y 50 recursos conservados.
+Las 12 pruebas Playwright pasan en escritorio y móvil, incluyendo cambio de tema,
+persistencia al recargar, navegación, búsqueda, fórmulas, todos los diagramas y
+redirecciones. Capturas de portada y apunte en modo oscuro revisadas visualmente.

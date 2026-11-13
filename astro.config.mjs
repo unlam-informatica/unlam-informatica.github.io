@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import lucode from 'lucode-starlight';
 import { unified } from '@astrojs/markdown-remark';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -10,7 +11,18 @@ export default defineConfig({
   trailingSlash: 'always',
   markdown: { processor: unified({ remarkPlugins: [remarkMath, mathCompat, mermaidBlocks], rehypePlugins: [[rehypeKatex, { strict: false }]] }) },
   integrations: [starlight({
-    title: 'Apuntes de Informática — UNLaM',
+    title: 'Apuntes UNLaM',
+    plugins: [lucode({
+      navLinks: [
+        { label: 'Inicio', link: '/' },
+        { label: 'Análisis I', link: '/analisis-matematico-i/' },
+        { label: 'BBDD', link: '/bbdd-aplicadas/' },
+        { label: 'Diseño', link: '/diseno-de-software/' },
+      ],
+      footerText: 'Sitio personal de apuntes. No es un sitio oficial de la Universidad Nacional de La Matanza (UNLaM).',
+      // The Footer wrapper composes Lucode's footer with the notice and local Mermaid loader.
+      warnOverrides: false,
+    })],
     defaultLocale: 'root', locales: { root: { label: 'Español', lang: 'es' } },
     favicon: '/assets/favicon/favicon.ico',
     social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/unlam-informatica/unlam-informatica.github.io' }],
