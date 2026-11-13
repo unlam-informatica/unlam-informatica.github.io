@@ -1,0 +1,14 @@
+---
+import DefaultFooter from '@astrojs/starlight/components/Footer.astro';
+---
+<p class="disclaimer">Sitio personal de apuntes. No es un sitio oficial de la Universidad Nacional de La Matanza (UNLaM).</p>
+<DefaultFooter><slot /></DefaultFooter>
+<script>
+  // Local bundle; no CDN or external rendering service is needed.
+  if (document.querySelector('.mermaid')) {
+    import('mermaid').then(async ({ default: mermaid }) => {
+      mermaid.initialize({ startOnLoad: false, securityLevel: 'strict', theme: 'neutral' });
+      await mermaid.run({ querySelector: '.mermaid' });
+    }).catch(console.error);
+  }
+</script>

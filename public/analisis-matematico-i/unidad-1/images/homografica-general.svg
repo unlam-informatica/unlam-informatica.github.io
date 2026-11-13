@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Función homográfica general</title>
+  <desc id="desc">Gráfico de una función homográfica con asíntotas vertical y horizontal, centro y dos ramas tipo hipérbola.</desc>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+    <style>
+      .axis { stroke:#374151; stroke-width:2.2; marker-end:url(#arrow); }
+      .grid { stroke:#e5e7eb; stroke-width:1; }
+      .dash { stroke:#ef4444; stroke-width:2.2; stroke-dasharray:8 8; }
+      .curve { fill:none; stroke:#2563eb; stroke-width:3.5; }
+      .label { font-family: Arial, Helvetica, sans-serif; font-size: 18px; fill:#111827; }
+      .small { font-size: 16px; fill:#374151; }
+      .accent { fill:#ef4444; }
+      .center { fill:#111827; }
+    </style>
+  </defs>
+
+  <!-- Grid -->
+  <g opacity="1">
+    <line class="grid" x1="50" y1="60" x2="50" y2="470"/>
+    <line class="grid" x1="150" y1="60" x2="150" y2="470"/>
+    <line class="grid" x1="250" y1="60" x2="250" y2="470"/>
+    <line class="grid" x1="350" y1="60" x2="350" y2="470"/>
+    <line class="grid" x1="450" y1="60" x2="450" y2="470"/>
+    <line class="grid" x1="550" y1="60" x2="550" y2="470"/>
+    <line class="grid" x1="650" y1="60" x2="650" y2="470"/>
+    <line class="grid" x1="750" y1="60" x2="750" y2="470"/>
+    <line class="grid" x1="850" y1="60" x2="850" y2="470"/>
+    <line class="grid" x1="50" y1="70" x2="850" y2="70"/>
+    <line class="grid" x1="50" y1="150" x2="850" y2="150"/>
+    <line class="grid" x1="50" y1="230" x2="850" y2="230"/>
+    <line class="grid" x1="50" y1="310" x2="850" y2="310"/>
+    <line class="grid" x1="50" y1="390" x2="850" y2="390"/>
+    <line class="grid" x1="50" y1="470" x2="850" y2="470"/>
+  </g>
+
+  <!-- Axes -->
+  <line class="axis" x1="50" y1="260" x2="850" y2="260"/>
+  <line class="axis" x1="450" y1="470" x2="450" y2="60"/>
+
+  <!-- Asymptotes -->
+  <line class="dash" x1="450" y1="60" x2="450" y2="470"/>
+  <line class="dash" x1="50" y1="260" x2="850" y2="260"/>
+
+  <!-- Curve: y = 1/(x-h) + k style branches -->
+  <path class="curve" d="M 480 120 C 525 95, 585 90, 650 110 C 710 128, 760 165, 815 245"/>
+  <path class="curve" d="M 420 400 C 375 430, 315 435, 245 420 C 190 408, 135 372, 85 285"/>
+
+  <!-- Center -->
+  <circle class="center" cx="450" cy="260" r="5.5"/>
+  <text class="label" x="463" y="252">(h, k)</text>
+
+  <!-- Labels -->
+  <text class="label accent" x="460" y="84">Asíntota vertical: x = h</text>
+  <text class="label accent" x="640" y="244">Asíntota horizontal: y = k</text>
+  <text class="label" x="560" y="140">Rama 1</text>
+  <text class="label" x="155" y="385">Rama 2</text>
+  <text class="label small" x="58" y="248">O</text>
+  <text class="label small" x="829" y="249">x</text>
+  <text class="label small" x="458" y="78">y</text>
+  <text class="label small" x="98" y="100">Función homográfica</text>
+  <text class="label small" x="98" y="124">Centro: intersección de las asíntotas</text>
+</svg>

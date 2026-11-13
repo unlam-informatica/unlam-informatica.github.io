@@ -1,0 +1,5 @@
+/* Contain wide academic content without causing horizontal page scrolling. */
+.sl-markdown-content .katex-display,
+.sl-markdown-content .mermaid { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+.sl-markdown-content .mermaid svg { height: auto; }
+.disclaimer { font-size: var(--sl-text-sm); color: var(--sl-color-gray-2); }
