@@ -1,59 +1,41 @@
-# Ingeniería en Informática — UNLaM
+# Apuntes de Informática — UNLaM
 
-Portal comunitario no oficial vinculado a la carrera Ingeniería en Informática de la UNLaM.
+Portal personal de apuntes, teoría y ejercicios. **No es un sitio oficial de la Universidad Nacional de La Matanza.**
 
-No pertenece a la Universidad Nacional de La Matanza ni representa comunicación institucional. Su objetivo es centralizar accesos a sitios de materias publicados en GitHub Pages dentro de la organización [`unlam-informatica`](https://github.com/unlam-informatica).
+Destino: https://unlam-informatica.github.io/
 
-## Objetivo
+- 1er año: Análisis Matemático I.
+- 2do año: Bases de Datos Aplicadas.
+- 3er año: Diseño de Software.
 
-Este repositorio no contiene el material completo de las materias. Funciona como índice principal para entrar rápidamente al sitio propio de cada materia.
+Astro Starlight genera un sitio estático con búsqueda global Pagefind, navegación
+contextual, modo claro/oscuro y menú móvil. No requiere backend ni servicios pagos.
 
-Cada materia mantiene sus apuntes, prácticas y recursos en su repositorio correspondiente.
+## Desarrollo
 
-## Estructura
+Node.js 22.23.4+ y npm. Las versiones resueltas están fijadas en `package-lock.json`.
 
-- **`index.md`** — página principal con las tarjetas de materias disponibles.
-- **`_config.yml`** — configuración de Jekyll, GitHub Pages y just-the-docs.
-- **`_sass/custom/`** — estilos propios del sitio.
-- **`_includes/head_custom.html`** — include reservado para personalizaciones del `<head>`.
-- **`assets/favicon/`** — favicons del sitio.
-
-## Agregar una materia
-
-Editar `index.md` y agregar una tarjeta dentro de `.subject-grid`:
-
-```html
-<a class="subject-card" href="https://unlam-informatica.github.io/nombre-del-sitio/">
-	<span class="subject-card-kicker">1er año</span>
-	<span class="subject-card-title">Nombre de la materia</span>
-	<span class="subject-card-text">Descripción breve del material disponible.</span>
-</a>
+```sh
+npm ci
+npm run dev -- --foreground
+npm run build
+npm run validate
+npx playwright install chromium
+npm run test:browser
 ```
 
-Usar URLs absolutas al sitio GitHub Pages de la materia y mantener descripciones breves.
+La documentación está en `src/content/docs/`; los recursos se conservan bajo
+`public/`. La portada usa tarjetas nativas de Starlight. Mermaid se sirve localmente
+y KaTeX genera las fórmulas en el build.
 
-## Desarrollo local
+Ver [arquitectura, migración y transición](migration/README.md),
+[guía de producción](migration/PRODUCCION.md),
+[matriz de URLs](migration/compatibility.md) e [informe de validación](migration/validation.json).
 
-Instalar dependencias:
+## Publicación controlada
 
-```bash
-bundle install
-```
-
-Levantar el sitio:
-
-```bash
-bundle exec jekyll serve
-```
-
-URL local:
-
-```text
-http://localhost:4000/
-```
-
-## Publicación
-
-El sitio se publica con GitHub Pages desde la rama `main`.
-
-Al hacer push a `main`, GitHub Pages construye el sitio desde la raíz del repositorio.
+Los PR ejecutan validaciones sin desplegar. `Deploy portal (manual)` solo se puede
+ejecutar sobre `main`. Pages del portal ya está preparado para GitHub Actions.
+Después del primer
+despliegue hay que retirar las publicaciones anteriores de materias que comparten
+prefijos; consultar la guía de producción. Sus archivos e historial se conservan.

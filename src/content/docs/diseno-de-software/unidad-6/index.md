@@ -1,0 +1,26 @@
+---
+title: Unidad 6 — Interfaz Hombre-Computadora
+slug: diseno-de-software/unidad-6
+sidebar:
+  order: 7
+---
+
+
+Diseño de la **interacción entre el usuario y el sistema**: la distinción entre **UX y UI**, los **principios de las interfaces**, el **diseño de contenidos** y de componentes (menús, íconos, tablas), el **proceso de diseño centrado en el usuario** y casos como el **comercio electrónico**.
+
+## Temas
+
+- Interfaz Hombre-Computadora. UX vs UI.
+- Principios de las interfaces de usuario.
+- Simplicidad de acceso y diseño de contenidos.
+- Diseño de componentes: menús, íconos, tablas.
+- Proceso de diseño de interfaces.
+- Diseño centrado en el usuario.
+- Interfaces entre procesos, seguridad y control de tráfico. Comercio electrónico.
+
+## Bibliografía
+
+- **Principal:** Larman, *UML y patrones* — separación de responsabilidades entre UI, controladores, dominio y servicios.
+- **Principal:** GoF, *Design Patterns* — MVC, Observer, Command, Strategy y otros patrones útiles en interfaces.
+- **Consulta:** Pressman & Maxim, *Software Engineering* (9.ª), diseño de la interfaz de usuario.
+- **Consulta:** Sommerville, *Software Engineering* (10.ª), aspectos de usabilidad e interacción.

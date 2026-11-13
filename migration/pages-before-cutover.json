@@ -1,0 +1,69 @@
+{
+  "recordedAt": "2026-11-13T03:26:52.940185+00:00",
+  "repositories": [
+    {
+      "repository": "unlam-informatica/unlam-informatica.github.io",
+      "mainCommit": "5aeef77bbb1088e3ecb3845adac5618c77796b83",
+      "pages": {
+        "html_url": "https://unlam-informatica.github.io/",
+        "build_type": "legacy",
+        "source": {
+          "branch": "main",
+          "path": "/"
+        },
+        "status": "built",
+        "cname": null,
+        "https_enforced": true,
+        "public": true
+      }
+    },
+    {
+      "repository": "unlam-informatica/analisis-matematico-i",
+      "mainCommit": "c260d21445d511f39f9e2ef5794fcb61ea0b6b92",
+      "pages": {
+        "html_url": "https://unlam-informatica.github.io/analisis-matematico-i/",
+        "build_type": "legacy",
+        "source": {
+          "branch": "main",
+          "path": "/"
+        },
+        "status": "built",
+        "cname": null,
+        "https_enforced": true,
+        "public": true
+      }
+    },
+    {
+      "repository": "unlam-informatica/bbdd-aplicadas",
+      "mainCommit": "482723684cb95b8219103574941032dcfc73430f",
+      "pages": {
+        "html_url": "https://unlam-informatica.github.io/bbdd-aplicadas/",
+        "build_type": "legacy",
+        "source": {
+          "branch": "main",
+          "path": "/"
+        },
+        "status": "built",
+        "cname": null,
+        "https_enforced": true,
+        "public": true
+      }
+    },
+    {
+      "repository": "unlam-informatica/diseno-de-software",
+      "mainCommit": "cb4038b5715881278a391205032f9d93e823db5f",
+      "pages": {
+        "html_url": "https://unlam-informatica.github.io/diseno-de-software/",
+        "build_type": "legacy",
+        "source": {
+          "branch": "main",
+          "path": "/"
+        },
+        "status": "built",
+        "cname": null,
+        "https_enforced": true,
+        "public": true
+      }
+    }
+  ]
+}
