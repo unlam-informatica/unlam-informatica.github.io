@@ -3,6 +3,7 @@ import { test, expect } from '@playwright/test';
 test('portada por año y navegación contextual', async ({ page, isMobile }, testInfo) => {
   await page.goto('/');
   await page.screenshot({ path: testInfo.outputPath('portada.png'), fullPage: true, animations: 'disabled' });
+  await testInfo.attach('Portada Lucode', { path: testInfo.outputPath('portada.png'), contentType: 'image/png' });
   for (const name of ['1er año','2do año','3er año']) await expect(page.getByRole('heading', { name, exact: true })).toBeVisible();
   await expect(page.getByText('Este sitio no es oficial', { exact: false })).toBeVisible();
   await page.locator('.sl-markdown-content a[href="/analisis-matematico-i/"]').first().click();
@@ -71,5 +72,6 @@ test('Lucode conserva el aviso y permite alternar tema claro y oscuro', async ({
   await expect(page.locator('html')).toHaveAttribute('data-theme', before === 'dark' ? 'light' : 'dark');
   await expect(page.locator('.katex').first()).toBeVisible();
   await page.screenshot({ path: testInfo.outputPath('apunte-tema-alternativo.png'), animations: 'disabled' });
+  await testInfo.attach('Apunte Lucode', { path: testInfo.outputPath('apunte-tema-alternativo.png'), contentType: 'image/png' });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBeTruthy();
 });
