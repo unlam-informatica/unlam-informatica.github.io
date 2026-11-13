@@ -3,517 +3,603 @@
     "source": "index.md",
     "old": "/",
     "canonical": "/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/"
   },
   {
     "source": "analisis-matematico-i/geogebra/basico.md",
     "old": "/analisis-matematico-i/geogebra/basico",
     "canonical": "/analisis-matematico-i/geogebra/basico/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/geogebra/basico/index.html"
   },
   {
     "source": "analisis-matematico-i/geogebra/derivada.md",
     "old": "/analisis-matematico-i/geogebra/derivada",
     "canonical": "/analisis-matematico-i/geogebra/derivada/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/geogebra/derivada/index.html"
   },
   {
     "source": "analisis-matematico-i/geogebra/funciones.md",
     "old": "/analisis-matematico-i/geogebra/funciones",
     "canonical": "/analisis-matematico-i/geogebra/funciones/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/geogebra/funciones/index.html"
   },
   {
     "source": "analisis-matematico-i/geogebra/index.md",
     "old": "/analisis-matematico-i/geogebra/",
     "canonical": "/analisis-matematico-i/geogebra/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/geogebra/index.html"
   },
   {
     "source": "analisis-matematico-i/geogebra/limites-continuidad.md",
     "old": "/analisis-matematico-i/geogebra/limites-continuidad",
     "canonical": "/analisis-matematico-i/geogebra/limites-continuidad/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/geogebra/limites-continuidad/index.html"
   },
   {
     "source": "analisis-matematico-i/geogebra/taylor.md",
     "old": "/analisis-matematico-i/geogebra/taylor",
     "canonical": "/analisis-matematico-i/geogebra/taylor/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/geogebra/taylor/index.html"
   },
   {
     "source": "analisis-matematico-i/index.md",
     "old": "/analisis-matematico-i/index.html",
     "canonical": "/analisis-matematico-i/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/index.md",
     "old": "/analisis-matematico-i/unidad-1/",
     "canonical": "/analisis-matematico-i/unidad-1/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/adicionales.md",
     "old": "/analisis-matematico-i/unidad-1/practica/adicionales",
     "canonical": "/analisis-matematico-i/unidad-1/practica/adicionales/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/adicionales/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-1.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-1",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-1/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-1/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-10.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-10",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-10/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-10/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-11.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-11",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-11/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-11/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-12.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-12",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-12/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-12/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-13.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-13",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-13/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-13/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-14.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-14",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-14/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-14/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-15.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-15",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-15/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-15/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-16.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-16",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-16/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-16/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-17.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-17",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-17/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-17/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-18.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-18",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-18/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-18/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-19.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-19",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-19/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-19/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-2.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-2",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-2/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-2/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-20.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-20",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-20/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-20/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-21.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-21",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-21/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-21/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-22.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-22",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-22/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-22/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-23.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-23",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-23/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-23/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-24.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-24",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-24/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-24/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-25.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-25",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-25/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-25/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-26.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-26",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-26/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-26/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-27.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-27",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-27/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-27/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-28.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-28",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-28/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-28/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-29.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-29",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-29/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-29/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-3.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-3",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-3/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-3/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-30.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-30",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-30/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-30/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-31.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-31",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-31/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-31/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-32.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-32",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-32/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-32/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-4.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-4",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-4/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-4/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-5.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-5",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-5/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-5/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-6.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-6",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-6/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-6/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-7.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-7",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-7/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-7/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-8.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-8",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-8/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-8/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/ejercicio-9.md",
     "old": "/analisis-matematico-i/unidad-1/practica/ejercicio-9",
     "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/practica/practica-1.md",
     "old": "/analisis-matematico-i/unidad-1/practica/practica-1",
     "canonical": "/analisis-matematico-i/unidad-1/practica/practica-1/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/practica/practica-1/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-1/teoria/unidad-1.md",
     "old": "/analisis-matematico-i/unidad-1/teoria/unidad-1",
     "canonical": "/analisis-matematico-i/unidad-1/teoria/unidad-1/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-1/teoria/unidad-1/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/index.md",
     "old": "/analisis-matematico-i/unidad-2/",
     "canonical": "/analisis-matematico-i/unidad-2/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/adicionales.md",
     "old": "/analisis-matematico-i/unidad-2/practica/adicionales",
     "canonical": "/analisis-matematico-i/unidad-2/practica/adicionales/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/adicionales/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-1.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-1",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-1/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-1/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-10.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-10",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-10/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-10/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-11.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-11",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-11/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-11/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-12.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-12",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-12/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-12/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-13.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-13",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-13/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-13/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-14.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-14",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-14/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-14/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-15.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-15",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-15/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-15/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-16.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-16",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-16/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-16/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-17.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-17",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-17/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-17/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-18.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-18",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-18/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-18/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-19.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-19",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-19/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-19/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-2.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-2",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-2/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-2/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-20.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-20",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-20/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-20/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-21.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-21",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-21/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-21/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-22.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-22",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-22/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-22/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-24.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-24",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-24/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-24/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-25.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-25",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-25/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-25/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-26.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-26",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-26/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-26/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-27.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-27",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-27/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-27/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-28.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-28",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-28/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-28/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-29.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-29",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-29/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-29/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-3.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-3",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-3/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-3/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-30.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-30",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-30/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-30/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-31.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-31",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-31/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-31/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-32.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-32",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-32/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-32/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-33.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-33",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-33/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-33/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-4.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-4",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-4/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-4/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-5.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-5",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-5/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-5/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-6.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-6",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-6/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-6/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-7.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-7",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-7/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-7/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-8.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-8",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-8/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-8/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/ejercicio-9.md",
     "old": "/analisis-matematico-i/unidad-2/practica/ejercicio-9",
     "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-9/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/ejercicio-9/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/practica/practica-2.md",
     "old": "/analisis-matematico-i/unidad-2/practica/practica-2",
     "canonical": "/analisis-matematico-i/unidad-2/practica/practica-2/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/practica/practica-2/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-2/teoria/unidad-2.md",
     "old": "/analisis-matematico-i/unidad-2/teoria/unidad-2",
     "canonical": "/analisis-matematico-i/unidad-2/teoria/unidad-2/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-2/teoria/unidad-2/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-3/index.md",
     "old": "/analisis-matematico-i/unidad-3/",
     "canonical": "/analisis-matematico-i/unidad-3/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-3/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-3/practica/practica-3.md",
     "old": "/analisis-matematico-i/unidad-3/practica/practica-3",
     "canonical": "/analisis-matematico-i/unidad-3/practica/practica-3/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-3/practica/practica-3/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-3/teoria/unidad-3.md",
     "old": "/analisis-matematico-i/unidad-3/teoria/unidad-3",
     "canonical": "/analisis-matematico-i/unidad-3/teoria/unidad-3/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-3/teoria/unidad-3/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-4/index.md",
     "old": "/analisis-matematico-i/unidad-4/",
     "canonical": "/analisis-matematico-i/unidad-4/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-4/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-4/practica/practica-4.md",
     "old": "/analisis-matematico-i/unidad-4/practica/practica-4",
     "canonical": "/analisis-matematico-i/unidad-4/practica/practica-4/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-4/practica/practica-4/index.html"
   },
   {
     "source": "analisis-matematico-i/unidad-4/teoria/unidad-4.md",
     "old": "/analisis-matematico-i/unidad-4/teoria/unidad-4",
     "canonical": "/analisis-matematico-i/unidad-4/teoria/unidad-4/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/analisis-matematico-i/unidad-4/teoria/unidad-4/index.html"
   },
   {
     "source": "analisis-matematico-i/assets/favicon/favicon-16x16.png",
@@ -591,511 +677,596 @@
     "source": "bbdd-aplicadas/index.md",
     "old": "/bbdd-aplicadas/index.html",
     "canonical": "/bbdd-aplicadas/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/index.md",
     "old": "/bbdd-aplicadas/unidad-1/index.html",
     "canonical": "/bbdd-aplicadas/unidad-1/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/nav-practica.md",
     "old": "/bbdd-aplicadas/unidad-1/practica/",
     "canonical": "/bbdd-aplicadas/unidad-1/practica/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/practica/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/nav-teoria.md",
     "old": "/bbdd-aplicadas/unidad-1/teoria/",
     "canonical": "/bbdd-aplicadas/unidad-1/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/practica/pivot.md",
     "old": "/bbdd-aplicadas/unidad-1/practica/pivot/",
     "canonical": "/bbdd-aplicadas/unidad-1/practica/pivot/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/practica/pivot/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/practica/tp1.md",
     "old": "/bbdd-aplicadas/unidad-1/practica/tp1/",
     "canonical": "/bbdd-aplicadas/unidad-1/practica/tp1/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/practica/tp1/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/practica/window-functions.md",
     "old": "/bbdd-aplicadas/unidad-1/practica/window-functions/",
     "canonical": "/bbdd-aplicadas/unidad-1/practica/window-functions/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/practica/window-functions/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/teoria/cte.md",
     "old": "/bbdd-aplicadas/unidad-1/teoria/cte/",
     "canonical": "/bbdd-aplicadas/unidad-1/teoria/cte/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/teoria/cte/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/teoria/indice-cluster.md",
     "old": "/bbdd-aplicadas/unidad-1/teoria/indice-cluster/",
     "canonical": "/bbdd-aplicadas/unidad-1/teoria/indice-cluster/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/teoria/indice-cluster/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/teoria/pivot.md",
     "old": "/bbdd-aplicadas/unidad-1/teoria/pivot/",
     "canonical": "/bbdd-aplicadas/unidad-1/teoria/pivot/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/teoria/pivot/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/teoria/repaso-sql.md",
     "old": "/bbdd-aplicadas/unidad-1/teoria/repaso-sql/",
     "canonical": "/bbdd-aplicadas/unidad-1/teoria/repaso-sql/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/teoria/repaso-sql/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/teoria/sql-dinamico.md",
     "old": "/bbdd-aplicadas/unidad-1/teoria/sql-dinamico/",
     "canonical": "/bbdd-aplicadas/unidad-1/teoria/sql-dinamico/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/teoria/sql-dinamico/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/teoria/unidad-1.md",
     "old": "/bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/",
     "canonical": "/bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/teoria/window-functions.md",
     "old": "/bbdd-aplicadas/unidad-1/teoria/window-functions/",
     "canonical": "/bbdd-aplicadas/unidad-1/teoria/window-functions/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/teoria/window-functions/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/index.md",
     "old": "/bbdd-aplicadas/unidad-2/index.html",
     "canonical": "/bbdd-aplicadas/unidad-2/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/nav-practica.md",
     "old": "/bbdd-aplicadas/unidad-2/practica/",
     "canonical": "/bbdd-aplicadas/unidad-2/practica/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/practica/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/nav-teoria.md",
     "old": "/bbdd-aplicadas/unidad-2/teoria/",
     "canonical": "/bbdd-aplicadas/unidad-2/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/practica/importacion-archivos.md",
     "old": "/bbdd-aplicadas/unidad-2/practica/importacion-archivos/",
     "canonical": "/bbdd-aplicadas/unidad-2/practica/importacion-archivos/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/practica/importacion-archivos/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/practica/practica-apis.md",
     "old": "/bbdd-aplicadas/unidad-2/practica/apis/",
     "canonical": "/bbdd-aplicadas/unidad-2/practica/apis/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/practica/apis/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/practica/practica-bd-en-memoria.md",
     "old": "/bbdd-aplicadas/unidad-2/practica/bd-en-memoria/",
     "canonical": "/bbdd-aplicadas/unidad-2/practica/bd-en-memoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/practica/bd-en-memoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/practica/practica-json.md",
     "old": "/bbdd-aplicadas/unidad-2/practica/json/",
     "canonical": "/bbdd-aplicadas/unidad-2/practica/json/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/practica/json/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/practica/practica-transacciones.md",
     "old": "/bbdd-aplicadas/unidad-2/practica/transacciones/",
     "canonical": "/bbdd-aplicadas/unidad-2/practica/transacciones/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/practica/transacciones/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/practica/practica-xml.md",
     "old": "/bbdd-aplicadas/unidad-2/practica/xml/",
     "canonical": "/bbdd-aplicadas/unidad-2/practica/xml/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/practica/xml/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/practica/tp2.md",
     "old": "/bbdd-aplicadas/unidad-2/practica/tp2/",
     "canonical": "/bbdd-aplicadas/unidad-2/practica/tp2/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/practica/tp2/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/teoria/apis-desde-sql.md",
     "old": "/bbdd-aplicadas/unidad-2/teoria/apis-desde-sql/",
     "canonical": "/bbdd-aplicadas/unidad-2/teoria/apis-desde-sql/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/apis-desde-sql/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/teoria/bd-en-memoria.md",
     "old": "/bbdd-aplicadas/unidad-2/teoria/bd-en-memoria/",
     "canonical": "/bbdd-aplicadas/unidad-2/teoria/bd-en-memoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/bd-en-memoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/teoria/collation.md",
     "old": "/bbdd-aplicadas/unidad-2/teoria/collation/",
     "canonical": "/bbdd-aplicadas/unidad-2/teoria/collation/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/collation/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/teoria/formatos-conectividad.md",
     "old": "/bbdd-aplicadas/unidad-2/teoria/formatos-conectividad/",
     "canonical": "/bbdd-aplicadas/unidad-2/teoria/formatos-conectividad/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/formatos-conectividad/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio.md",
     "old": "/bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio/",
     "canonical": "/bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos.md",
     "old": "/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos/",
     "canonical": "/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/teoria/json-en-sql.md",
     "old": "/bbdd-aplicadas/unidad-2/teoria/json-en-sql/",
     "canonical": "/bbdd-aplicadas/unidad-2/teoria/json-en-sql/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/json-en-sql/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/teoria/unidad-2.md",
     "old": "/bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/",
     "canonical": "/bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/teoria/xml-en-sql.md",
     "old": "/bbdd-aplicadas/unidad-2/teoria/xml-en-sql/",
     "canonical": "/bbdd-aplicadas/unidad-2/teoria/xml-en-sql/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/xml-en-sql/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-3/index.md",
     "old": "/bbdd-aplicadas/unidad-3/index.html",
     "canonical": "/bbdd-aplicadas/unidad-3/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-3/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-3/nav-practica.md",
     "old": "/bbdd-aplicadas/unidad-3/practica/",
     "canonical": "/bbdd-aplicadas/unidad-3/practica/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-3/practica/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-3/nav-teoria.md",
     "old": "/bbdd-aplicadas/unidad-3/teoria/",
     "canonical": "/bbdd-aplicadas/unidad-3/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-3/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento.md",
     "old": "/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/",
     "canonical": "/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-3/practica/laboratorio-tcl.md",
     "old": "/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/",
     "canonical": "/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-3/teoria/indices-optimizacion.md",
     "old": "/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/",
     "canonical": "/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-3/teoria/indices-y-planes.md",
     "old": "/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/",
     "canonical": "/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento.md",
     "old": "/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento/",
     "canonical": "/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia.md",
     "old": "/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/",
     "canonical": "/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-3/teoria/unidad-3.md",
     "old": "/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/",
     "canonical": "/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/index.md",
     "old": "/bbdd-aplicadas/unidad-4/index.html",
     "canonical": "/bbdd-aplicadas/unidad-4/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/nav-practica.md",
     "old": "/bbdd-aplicadas/unidad-4/practica/",
     "canonical": "/bbdd-aplicadas/unidad-4/practica/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/practica/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/nav-teoria.md",
     "old": "/bbdd-aplicadas/unidad-4/teoria/",
     "canonical": "/bbdd-aplicadas/unidad-4/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/practica/integrador-peliculas.md",
     "old": "/bbdd-aplicadas/unidad-4/practica/integrador-peliculas/",
     "canonical": "/bbdd-aplicadas/unidad-4/practica/integrador-peliculas/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/practica/integrador-peliculas/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online.md",
     "old": "/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online/",
     "canonical": "/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/practica/practica.md",
     "old": "/bbdd-aplicadas/unidad-4/practica/ejercicios/",
     "canonical": "/bbdd-aplicadas/unidad-4/practica/ejercicios/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/practica/ejercicios/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd.md",
     "old": "/bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd/",
     "canonical": "/bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/teoria/guia-parcial.md",
     "old": "/bbdd-aplicadas/unidad-4/teoria/guia-parcial/",
     "canonical": "/bbdd-aplicadas/unidad-4/teoria/guia-parcial/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/guia-parcial/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb.md",
     "old": "/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb/",
     "canonical": "/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion.md",
     "old": "/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/",
     "canonical": "/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/teoria/mongodb-compass.md",
     "old": "/bbdd-aplicadas/unidad-4/teoria/mongodb-compass/",
     "canonical": "/bbdd-aplicadas/unidad-4/teoria/mongodb-compass/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/mongodb-compass/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/teoria/mongodb-crud.md",
     "old": "/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/",
     "canonical": "/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion.md",
     "old": "/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion/",
     "canonical": "/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/teoria/nosql-conceptos.md",
     "old": "/bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/",
     "canonical": "/bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/teoria/unidad-4.md",
     "old": "/bbdd-aplicadas/unidad-4/teoria/apunte-completo/",
     "canonical": "/bbdd-aplicadas/unidad-4/teoria/apunte-completo/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/apunte-completo/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/index.md",
     "old": "/bbdd-aplicadas/unidad-5/index.html",
     "canonical": "/bbdd-aplicadas/unidad-5/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/nav-practica.md",
     "old": "/bbdd-aplicadas/unidad-5/practica/",
     "canonical": "/bbdd-aplicadas/unidad-5/practica/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/practica/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/nav-teoria.md",
     "old": "/bbdd-aplicadas/unidad-5/teoria/",
     "canonical": "/bbdd-aplicadas/unidad-5/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/practica/laboratorio-backup.md",
     "old": "/bbdd-aplicadas/unidad-5/practica/laboratorio-backup/",
     "canonical": "/bbdd-aplicadas/unidad-5/practica/laboratorio-backup/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/practica/laboratorio-backup/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion.md",
     "old": "/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion/",
     "canonical": "/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad.md",
     "old": "/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/",
     "canonical": "/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad.md",
     "old": "/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad/",
     "canonical": "/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/teoria/backup-restauracion.md",
     "old": "/bbdd-aplicadas/unidad-5/teoria/backup-restauracion/",
     "canonical": "/bbdd-aplicadas/unidad-5/teoria/backup-restauracion/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/teoria/backup-restauracion/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/teoria/cifrado.md",
     "old": "/bbdd-aplicadas/unidad-5/teoria/cifrado/",
     "canonical": "/bbdd-aplicadas/unidad-5/teoria/cifrado/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/teoria/cifrado/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/teoria/guia-parcial.md",
     "old": "/bbdd-aplicadas/unidad-5/teoria/guia-parcial/",
     "canonical": "/bbdd-aplicadas/unidad-5/teoria/guia-parcial/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/teoria/guia-parcial/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/teoria/inyeccion-sql.md",
     "old": "/bbdd-aplicadas/unidad-5/teoria/inyeccion-sql/",
     "canonical": "/bbdd-aplicadas/unidad-5/teoria/inyeccion-sql/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/teoria/inyeccion-sql/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/teoria/log-recuperacion.md",
     "old": "/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/",
     "canonical": "/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/teoria/seguridad-permisos.md",
     "old": "/bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/",
     "canonical": "/bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/teoria/unidad-5.md",
     "old": "/bbdd-aplicadas/unidad-5/teoria/apunte-completo/",
     "canonical": "/bbdd-aplicadas/unidad-5/teoria/apunte-completo/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/teoria/apunte-completo/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/index.md",
     "old": "/bbdd-aplicadas/unidad-6/index.html",
     "canonical": "/bbdd-aplicadas/unidad-6/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/nav-practica.md",
     "old": "/bbdd-aplicadas/unidad-6/practica/",
     "canonical": "/bbdd-aplicadas/unidad-6/practica/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/practica/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/nav-teoria.md",
     "old": "/bbdd-aplicadas/unidad-6/teoria/",
     "canonical": "/bbdd-aplicadas/unidad-6/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/practica/casos-integradores.md",
     "old": "/bbdd-aplicadas/unidad-6/practica/casos-integradores/",
     "canonical": "/bbdd-aplicadas/unidad-6/practica/casos-integradores/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/practica/casos-integradores/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/practica/laboratorio-calidad.md",
     "old": "/bbdd-aplicadas/unidad-6/practica/laboratorio-calidad/",
     "canonical": "/bbdd-aplicadas/unidad-6/practica/laboratorio-calidad/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/practica/laboratorio-calidad/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/practica/laboratorio-privacidad.md",
     "old": "/bbdd-aplicadas/unidad-6/practica/laboratorio-privacidad/",
     "canonical": "/bbdd-aplicadas/unidad-6/practica/laboratorio-privacidad/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/practica/laboratorio-privacidad/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/teoria/gdpr.md",
     "old": "/bbdd-aplicadas/unidad-6/teoria/gdpr/",
     "canonical": "/bbdd-aplicadas/unidad-6/teoria/gdpr/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/teoria/gdpr/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/teoria/gobierno-privacidad.md",
     "old": "/bbdd-aplicadas/unidad-6/teoria/gobierno-privacidad/",
     "canonical": "/bbdd-aplicadas/unidad-6/teoria/gobierno-privacidad/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/teoria/gobierno-privacidad/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/teoria/guia-parcial.md",
     "old": "/bbdd-aplicadas/unidad-6/teoria/guia-parcial/",
     "canonical": "/bbdd-aplicadas/unidad-6/teoria/guia-parcial/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/teoria/guia-parcial/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/teoria/iso-25012.md",
     "old": "/bbdd-aplicadas/unidad-6/teoria/iso-25012/",
     "canonical": "/bbdd-aplicadas/unidad-6/teoria/iso-25012/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/teoria/iso-25012/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/teoria/ley-25326.md",
     "old": "/bbdd-aplicadas/unidad-6/teoria/ley-25326/",
     "canonical": "/bbdd-aplicadas/unidad-6/teoria/ley-25326/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/teoria/ley-25326/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/teoria/medicion-calidad.md",
     "old": "/bbdd-aplicadas/unidad-6/teoria/medicion-calidad/",
     "canonical": "/bbdd-aplicadas/unidad-6/teoria/medicion-calidad/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/teoria/medicion-calidad/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/teoria/unidad-6.md",
     "old": "/bbdd-aplicadas/unidad-6/teoria/apunte-completo/",
     "canonical": "/bbdd-aplicadas/unidad-6/teoria/apunte-completo/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/teoria/apunte-completo/index.html"
   },
   {
     "source": "bbdd-aplicadas/assets/favicon/favicon-16x16.png",
@@ -1275,145 +1446,169 @@
     "source": "diseno-de-software/diagramas.md",
     "old": "/diseno-de-software/diagramas.html",
     "canonical": "/diseno-de-software/diagramas/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/diagramas/index.html"
   },
   {
     "source": "diseno-de-software/index.md",
     "old": "/diseno-de-software/index.html",
     "canonical": "/diseno-de-software/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/index.html"
   },
   {
     "source": "diseno-de-software/practicas/index.md",
     "old": "/diseno-de-software/practicas/index.html",
     "canonical": "/diseno-de-software/practicas/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/practicas/index.html"
   },
   {
     "source": "diseno-de-software/practicas/metodologia.md",
     "old": "/diseno-de-software/practicas/metodologia.html",
     "canonical": "/diseno-de-software/practicas/metodologia/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/practicas/metodologia/index.html"
   },
   {
     "source": "diseno-de-software/practicas/practica-1.md",
     "old": "/diseno-de-software/practicas/practica-1.html",
     "canonical": "/diseno-de-software/practicas/practica-1/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/practicas/practica-1/index.html"
   },
   {
     "source": "diseno-de-software/practicas/practica-2.md",
     "old": "/diseno-de-software/practicas/practica-2.html",
     "canonical": "/diseno-de-software/practicas/practica-2/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/practicas/practica-2/index.html"
   },
   {
     "source": "diseno-de-software/unidad-1/index.md",
     "old": "/diseno-de-software/unidad-1/index.html",
     "canonical": "/diseno-de-software/unidad-1/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-1/index.html"
   },
   {
     "source": "diseno-de-software/unidad-1/resumen.md",
     "old": "/diseno-de-software/unidad-1/resumen.html",
     "canonical": "/diseno-de-software/unidad-1/resumen/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-1/resumen/index.html"
   },
   {
     "source": "diseno-de-software/unidad-1/teoria.md",
     "old": "/diseno-de-software/unidad-1/teoria.html",
     "canonical": "/diseno-de-software/unidad-1/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-1/teoria/index.html"
   },
   {
     "source": "diseno-de-software/unidad-2/index.md",
     "old": "/diseno-de-software/unidad-2/index.html",
     "canonical": "/diseno-de-software/unidad-2/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-2/index.html"
   },
   {
     "source": "diseno-de-software/unidad-2/resumen.md",
     "old": "/diseno-de-software/unidad-2/resumen.html",
     "canonical": "/diseno-de-software/unidad-2/resumen/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-2/resumen/index.html"
   },
   {
     "source": "diseno-de-software/unidad-2/teoria.md",
     "old": "/diseno-de-software/unidad-2/teoria.html",
     "canonical": "/diseno-de-software/unidad-2/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-2/teoria/index.html"
   },
   {
     "source": "diseno-de-software/unidad-3/index.md",
     "old": "/diseno-de-software/unidad-3/index.html",
     "canonical": "/diseno-de-software/unidad-3/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-3/index.html"
   },
   {
     "source": "diseno-de-software/unidad-3/resumen.md",
     "old": "/diseno-de-software/unidad-3/resumen.html",
     "canonical": "/diseno-de-software/unidad-3/resumen/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-3/resumen/index.html"
   },
   {
     "source": "diseno-de-software/unidad-3/teoria.md",
     "old": "/diseno-de-software/unidad-3/teoria.html",
     "canonical": "/diseno-de-software/unidad-3/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-3/teoria/index.html"
   },
   {
     "source": "diseno-de-software/unidad-4/index.md",
     "old": "/diseno-de-software/unidad-4/index.html",
     "canonical": "/diseno-de-software/unidad-4/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-4/index.html"
   },
   {
     "source": "diseno-de-software/unidad-4/resumen.md",
     "old": "/diseno-de-software/unidad-4/resumen.html",
     "canonical": "/diseno-de-software/unidad-4/resumen/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-4/resumen/index.html"
   },
   {
     "source": "diseno-de-software/unidad-4/teoria.md",
     "old": "/diseno-de-software/unidad-4/teoria.html",
     "canonical": "/diseno-de-software/unidad-4/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-4/teoria/index.html"
   },
   {
     "source": "diseno-de-software/unidad-5/index.md",
     "old": "/diseno-de-software/unidad-5/index.html",
     "canonical": "/diseno-de-software/unidad-5/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-5/index.html"
   },
   {
     "source": "diseno-de-software/unidad-5/resumen.md",
     "old": "/diseno-de-software/unidad-5/resumen.html",
     "canonical": "/diseno-de-software/unidad-5/resumen/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-5/resumen/index.html"
   },
   {
     "source": "diseno-de-software/unidad-5/teoria.md",
     "old": "/diseno-de-software/unidad-5/teoria.html",
     "canonical": "/diseno-de-software/unidad-5/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-5/teoria/index.html"
   },
   {
     "source": "diseno-de-software/unidad-6/index.md",
     "old": "/diseno-de-software/unidad-6/index.html",
     "canonical": "/diseno-de-software/unidad-6/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-6/index.html"
   },
   {
     "source": "diseno-de-software/unidad-6/resumen.md",
     "old": "/diseno-de-software/unidad-6/resumen.html",
     "canonical": "/diseno-de-software/unidad-6/resumen/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-6/resumen/index.html"
   },
   {
     "source": "diseno-de-software/unidad-6/teoria.md",
     "old": "/diseno-de-software/unidad-6/teoria.html",
     "canonical": "/diseno-de-software/unidad-6/teoria/",
-    "kind": "page"
+    "kind": "page",
+    "navigation": "/diseno-de-software/unidad-6/teoria/index.html"
   },
   {
     "source": "diseno-de-software/assets/favicon/favicon-16x16.png",

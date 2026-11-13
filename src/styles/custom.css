@@ -3,3 +3,9 @@
 .sl-markdown-content .mermaid { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
 .sl-markdown-content .mermaid svg { height: auto; }
 .disclaimer { font-size: var(--sl-text-sm); color: var(--sl-color-gray-2); }
+
+/* Long academic titles must remain tappable in Lucode's pagination. */
+.pagination-links { flex-wrap: wrap; gap: 0.5rem; }
+.pagination-links a { white-space: normal; overflow-wrap: anywhere; min-width: 0; max-width: 100%; height: auto; min-height: 2rem; }
+.sidebar .entry-link { height: auto; min-height: 1.875rem; }
+.sidebar .entry-link-inner { height: auto; min-height: 1.875rem; padding-block: 0.25rem; }

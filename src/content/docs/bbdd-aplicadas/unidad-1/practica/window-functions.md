@@ -8,6 +8,8 @@ sidebar:
 
 > Ejercicios de la cátedra. Base de datos `PracticaWF`, esquema `wf`.
 
+[Descargar el script SQL de la práctica](/bbdd-aplicadas/unidad-1/practica/window-functions.sql).
+
 ---
 
 ## Setup — Crear base de datos, esquema y tablas
