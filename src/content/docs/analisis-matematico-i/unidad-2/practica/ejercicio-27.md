@@ -3,6 +3,7 @@ title: Ejercicio 27 — Continuidad en $x=a$ a partir de gráficos
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-27
 sidebar:
   order: 27
+  label: Ejercicio 27
 ---
 
 

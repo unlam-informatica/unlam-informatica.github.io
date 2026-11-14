@@ -3,6 +3,7 @@ title: Ejercicio 8 — Calcular los siguientes límites indeterminados
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-8
 sidebar:
   order: 8
+  label: Ejercicio 8
 ---
 
 

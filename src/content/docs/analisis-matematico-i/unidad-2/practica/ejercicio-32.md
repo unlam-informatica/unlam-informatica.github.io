@@ -3,6 +3,7 @@ title: Ejercicio 32 — Constantes para continuidad en $\mathbb{R}$
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-32
 sidebar:
   order: 32
+  label: Ejercicio 32
 ---
 
 

@@ -3,6 +3,7 @@ title: Ejercicio 9* — Pelota en caída libre
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-9
 sidebar:
   order: 9
+  label: Ejercicio 9
 ---
 
 

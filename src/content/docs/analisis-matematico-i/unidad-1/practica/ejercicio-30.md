@@ -3,6 +3,7 @@ title: Ejercicio 30 — Masa de sustancia
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-30
 sidebar:
   order: 30
+  label: Ejercicio 30
 ---
 
 

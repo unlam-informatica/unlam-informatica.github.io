@@ -2,7 +2,8 @@
 title: Práctica 4 — Polinomios de Taylor
 slug: analisis-matematico-i/unidad-4/practica/practica-4
 sidebar:
-  order: 2
+  order: 0
+  label: Guía de práctica
 ---
 
 

@@ -3,6 +3,7 @@ title: Ejercicio 27 — $A(t)=100(1-0{,}9^t)$, $t\in[0,10]$ (mg)
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-27
 sidebar:
   order: 27
+  label: Ejercicio 27
 ---
 
 

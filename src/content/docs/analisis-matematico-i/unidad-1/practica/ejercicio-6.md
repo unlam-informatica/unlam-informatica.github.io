@@ -3,6 +3,7 @@ title: Ejercicio 6 — Caja sin tapa
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-6
 sidebar:
   order: 6
+  label: Ejercicio 6
 ---
 
 

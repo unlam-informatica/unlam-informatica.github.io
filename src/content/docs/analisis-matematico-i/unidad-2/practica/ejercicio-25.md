@@ -3,6 +3,7 @@ title: Ejercicio 25 — Asíntotas con parámetros
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-25
 sidebar:
   order: 25
+  label: Ejercicio 25
 ---
 
 

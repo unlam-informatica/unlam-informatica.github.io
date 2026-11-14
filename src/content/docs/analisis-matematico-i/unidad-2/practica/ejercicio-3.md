@@ -3,6 +3,7 @@ title: Ejercicio 3 — Funciones por tramos
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-3
 sidebar:
   order: 3
+  label: Ejercicio 3
 ---
 
 

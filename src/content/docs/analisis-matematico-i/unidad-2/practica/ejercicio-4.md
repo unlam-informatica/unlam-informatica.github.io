@@ -3,6 +3,7 @@ title: Ejercicio 4 — Lectura de gráficos
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-4
 sidebar:
   order: 4
+  label: Ejercicio 4
 ---
 
 

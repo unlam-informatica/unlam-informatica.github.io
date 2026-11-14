@@ -3,6 +3,7 @@ title: Ejercicio 29 — Parámetros para continuidad
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-29
 sidebar:
   order: 29
+  label: Ejercicio 29
 ---
 
 

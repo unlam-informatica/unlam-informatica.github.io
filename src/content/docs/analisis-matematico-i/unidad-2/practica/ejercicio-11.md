@@ -3,6 +3,7 @@ title: Ejercicio 11 * — $a$ para cociente de infinitésimos
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-11
 sidebar:
   order: 11
+  label: Ejercicio 11
 ---
 
 

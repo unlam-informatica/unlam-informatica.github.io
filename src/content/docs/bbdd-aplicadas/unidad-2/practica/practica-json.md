@@ -3,6 +3,7 @@ title: Práctica — JSON en SQL Server
 slug: bbdd-aplicadas/unidad-2/practica/json
 sidebar:
   order: 4
+  label: JSON en SQL Server
 ---
 
 

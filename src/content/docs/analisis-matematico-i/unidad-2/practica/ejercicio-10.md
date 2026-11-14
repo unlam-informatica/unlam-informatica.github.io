@@ -3,6 +3,7 @@ title: Ejercicio 10 — Existencia de $a$ para que el límite sea finito
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-10
 sidebar:
   order: 10
+  label: Ejercicio 10
 ---
 
 

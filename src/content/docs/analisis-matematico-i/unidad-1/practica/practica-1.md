@@ -2,7 +2,8 @@
 title: Práctica 1 — Funciones
 slug: analisis-matematico-i/unidad-1/practica/practica-1
 sidebar:
-  order: 2
+  order: 0
+  label: Guía de práctica
 ---
 
 

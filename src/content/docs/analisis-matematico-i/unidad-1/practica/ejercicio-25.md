@@ -4,6 +4,7 @@ title: Ejercicio 25 — Presión arterial
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-25
 sidebar:
   order: 25
+  label: Ejercicio 25
 ---
 
 

@@ -3,6 +3,7 @@ title: Práctica — PIVOT
 slug: bbdd-aplicadas/unidad-1/practica/pivot
 sidebar:
   order: 3
+  label: PIVOT
 ---
 
 

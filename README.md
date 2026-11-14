@@ -17,6 +17,11 @@ La navegación enlaza los archivos `index.html` de cada apunte para evitar respu
 canónicas con barra final y las rutas históricas. Búsqueda, tarjetas y menús usan
 el mismo destino; no hay que modificar los enlaces de los Markdown académicos.
 
+Los menús usan nombres legibles y unidades en orden numérico. Cada unidad de BBDD
+contiene solo las carpetas `teoria/` y `practica/`, con una presentación e índices
+de apuntes en cada sección. El menú móvil también permite abrir los grupos
+anidados de las tres materias; las rutas anteriores de BBDD se conservan.
+
 ## Desarrollo
 
 Node.js 22.23.4+ y npm. Las versiones resueltas están fijadas en `package-lock.json`.

@@ -3,6 +3,7 @@ title: Ejercicio 8 — Concentración de un calmante
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-8
 sidebar:
   order: 8
+  label: Ejercicio 8
 ---
 
 

@@ -3,6 +3,7 @@ title: Ejercicio 5 — Coeficientes para existencia del límite
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-5
 sidebar:
   order: 5
+  label: Ejercicio 5
 ---
 
 

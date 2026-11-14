@@ -3,6 +3,7 @@ title: Ejercicio 17* — ¿Existe $f(x)=C\cdot a^x$ por $(-1,6)$ y $(3,\tfrac38)
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-17
 sidebar:
   order: 17
+  label: Ejercicio 17
 ---
 
 

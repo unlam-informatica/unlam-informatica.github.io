@@ -42,7 +42,7 @@
       "source": "analisis-matematico-i/geogebra/index.md",
       "output": "src/content/docs/analisis-matematico-i/geogebra/index.md",
       "originalSha256": "1cbb4f23044f8858051a0fc0ac83ac434f4d10eb9fe71ffe9e0ead094620488f",
-      "migratedSha256": "3141a30df27bfa62f1a857dcfb57bf5add8ba50798a197a86eeeb119d1f13c87",
+      "migratedSha256": "bdd66743d6978cb272121d8610e8690c3510ce0af1e295937c2107b611e3d15e",
       "canonical": "/analisis-matematico-i/geogebra/"
     },
     {
@@ -84,231 +84,231 @@
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-1.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-1.md",
       "originalSha256": "99eb3cf2f9bb59f255e069feeecb597f04ce1e5e7af3502f1e4484c8d3352d74",
-      "migratedSha256": "a252ae3208dd04d48f1de3612afaa2ab6b9ccc0253df069770700bfa8651cf37",
+      "migratedSha256": "fede432b00a80cd814c7ceba1103061454e75cd1bfa0978a07e513870374694d",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-1/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-10.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-10.md",
       "originalSha256": "ace9cf7746c725d8b27bab653b74dc86de835c0e489b6d36144bee739f7c8b85",
-      "migratedSha256": "fcc03367dc3c93151394bee06b69109945c3f419fef964341f8d1d6db368d9fa",
+      "migratedSha256": "97d5b3088ab98e6a9a1438f12280b3a59cb384b984422658c08964649ef425f5",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-10/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-11.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-11.md",
       "originalSha256": "4b05ca9fd3ad229354c3e6dcfc2154e2fb32307ef7d9bda38ce8efb40c7872fa",
-      "migratedSha256": "388b09db2cc75daa054bfb8250d831c7b0bb4a4025ee8f7eb2750ac0dae9730a",
+      "migratedSha256": "d4ec87a2766dab14f7c512a4268d7a10796d10857ca90b0dd8973bbd160ed88b",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-11/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-12.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-12.md",
       "originalSha256": "1f2737c555ac27a2e4c267d446b1a5d8e8f52f70a5533ee1c0e1310b66e12d1d",
-      "migratedSha256": "01684a5892456f62e6389178375cba657e50c3cedd95fe5e496e85fadd7f60a0",
+      "migratedSha256": "98817680d48eeb01bb915c24bbde412e0bc5ba1bad41ff8412fba519d0763f67",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-12/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-13.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-13.md",
       "originalSha256": "39b8fd9b8fa2a8d3f6caa88a6fd1fbcb9eda54332aebc5e36191df56d4c43aa1",
-      "migratedSha256": "04f2af8ebad83e364d82de451b8ec14afff2863889ca5922a97f3cb53981acf0",
+      "migratedSha256": "a7fbd61a42db8fc777359c283b813306777e6e6e53adb636ada1e4c3f1b69423",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-13/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-14.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-14.md",
       "originalSha256": "0d3a1a78789bfc9806b82b7793e68247222c5b95cfcbde100eb3ab6065f60cd9",
-      "migratedSha256": "8c8ec4fd4c1a4b734b9f263539500de0c2a9f0e5223442cd9249643deff3ef91",
+      "migratedSha256": "8b1547517a6b0cb0d8588b8216d7fefabb892eff71ca36fe69c4a22c747e6dde",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-14/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-15.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-15.md",
       "originalSha256": "52cbdefb80b54d52e444979522c405327d37da66f27f228599dbf0aa39a62d75",
-      "migratedSha256": "0bbdf61dcd4e43b62134cbb0652ddc9b30cf9379ab541d93ea5ef88a0d23377b",
+      "migratedSha256": "793078552c9dfd0d667a6cdba14e70cfd4a8cd7d9ad4f1966297c84ac3ce414e",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-15/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-16.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-16.md",
       "originalSha256": "f59f30eedfeb0a45558e66df41d4292f5531ca5987b13918c0ede08089827220",
-      "migratedSha256": "e55557fc5b710832372e7888ab8c284893ab30d80d5135350354faf234e1ccfd",
+      "migratedSha256": "0b5e05e950adb1d23050ed3cdd63c9d5542c3f303fe32a1963087340ab1d0c31",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-16/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-17.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-17.md",
       "originalSha256": "32c8e7c41fffc8000989f097431099b1ae570d8df416aaf3af5c4916ae69bf09",
-      "migratedSha256": "6ddc45afd45f85178b45b042a4e66945371880bc3edf0490c6615ec1cb7355f2",
+      "migratedSha256": "f6669e616d7f0a84f4538ca3cabf04ba8fe00d6971827e49a566a815b6703b95",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-17/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-18.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-18.md",
       "originalSha256": "9e40adfc2303637eca5a529e6e624f31454e3cfdee9ad7d67fcff3e9f98c1114",
-      "migratedSha256": "d3fb2a9dcbe706ef8a1ee53f8b6535d9bd46b41e6658f868cc472d6e6b708660",
+      "migratedSha256": "dc0704dae105f463ad80e33770ed1c5edbe0e4cb0033d23b62184c70852d1ca4",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-18/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-19.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-19.md",
       "originalSha256": "3435420476dde78a0de8a5267099b6a5998d265bfd049977650e032ecf68be2b",
-      "migratedSha256": "e6a1d610639e3478505ea831fdab840887e89c84109c10855447ad0b0e623364",
+      "migratedSha256": "ebfa1a250fc5839016be3e065b08073e97e514ba51a68b15753cfd16a708cb8b",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-19/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-2.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-2.md",
       "originalSha256": "f3f54660d6934ed4653503f1d3f3b2348f77f89b9498fec3c55866fd5d890a2f",
-      "migratedSha256": "9a1a3ed42ab042055a1b1ffc6830ca0e03aaccf69d5d190702fe99c84bedb23a",
+      "migratedSha256": "648a1d07b81175c0fd5eceae72f6fce51591248627ba864b31286f8cc6a92f37",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-2/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-20.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-20.md",
       "originalSha256": "d31c85fcdfd8ee2b8943873daeb391539f03f094f90005e1e797a6e6a44f4569",
-      "migratedSha256": "612987b81db739d6043ed6782b53faff24ee2cb5b642994263b4a58958f99fe5",
+      "migratedSha256": "f0ebe6056845ae6b4e0393d60bc279c06c18a34e2cb13f95b1bb861d02b17ace",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-20/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-21.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-21.md",
       "originalSha256": "99d7af4b4f8fee96fcb48284cdf7f5090183d87b8afa7245079b7904f3c32c13",
-      "migratedSha256": "86440a78af4600cfb754e2d2207f37ef2410f7d4d5d0087b34f36577d37f94ae",
+      "migratedSha256": "41bcd1d21eeda5617822b615e2af0c9806ad7a361e9e69792d4224e9da356f0e",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-21/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-22.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-22.md",
       "originalSha256": "17362cae3e36ea0ef7d3ffee43bd0981319bebfa7161be3dc35706db3f16fcd6",
-      "migratedSha256": "e20759eef09891e73c5e02be1b5b32026acfc991d5eb7170e2c10827705646ce",
+      "migratedSha256": "6797ecb3cf59ec6d0cb112d124e8bb5127a1ccab13ce88bf38947afe38357c95",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-22/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-23.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-23.md",
       "originalSha256": "61f2465ab6afda15805277f8442e06ff0782ed55d7431e482747aab920611ab0",
-      "migratedSha256": "31b07bcabeb1e961860961fcbff31133e2dfc24d32dea5b3e6ce7c46aa5c1fc3",
+      "migratedSha256": "fe1e0f3f0f5585389b6c765f97c7113f89e63aac0470745a38bbd3127c01bb8a",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-23/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-24.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-24.md",
       "originalSha256": "a60427af2d44ab3629307f2d8ddff6bbc7b44e32d2759bdc0748f404ae1e854d",
-      "migratedSha256": "58efc3cb543ddbc5d99fa9b579b9727b87f992b22b023c37d04d307fce2bc1f7",
+      "migratedSha256": "f2b022da0bedce0fd1cbc57f848e000beb2a5fa32fddbec82b4b27a3e455f7d8",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-24/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-25.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-25.md",
       "originalSha256": "e80484ace12508099646632d20537acaeb4b603935d79053a5b8a937bdab1ecb",
-      "migratedSha256": "9e1840657db47dc99782c943e7ea958efb9b3de94165675555f650980860d0d4",
+      "migratedSha256": "948c2f4401922c22b3d86853f19d9510a1f75ef3988c8d30a237b936ff52c9fa",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-25/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-26.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-26.md",
       "originalSha256": "404b9ae1f9aea90d5b7c4c77db2f4fb6dd8cf66c45477ec9da30329874e09cbc",
-      "migratedSha256": "49bc4a7ea39d4bc93e24f8ee6e42b298cde94508c97ad055fcdfa2c7584aa4f5",
+      "migratedSha256": "0d434a9fa7bd3d01314535b446211ad55e6b81c063035a139566a751d7b83901",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-26/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-27.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-27.md",
       "originalSha256": "47bb0ee6d6df1eacb10015914676c822f8ddc520bdd2be073af64be3b5789ab9",
-      "migratedSha256": "8203f0a022868548dc93ff4de78a8f03762832c3eba0a7c8111e008acd0dc514",
+      "migratedSha256": "e15797f2b43294ab21d412b949868fec721a2631e15cefec0fcb253c04938f15",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-27/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-28.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-28.md",
       "originalSha256": "f6c050e0510fa1f673f6fd12f9199bb9625c7cb03fa6225a53693859f9585228",
-      "migratedSha256": "20947c1d516591c272966e6a6d54d6fffe15912cc108265b92456709b322bbaa",
+      "migratedSha256": "db1d8c7af03e635320938b07bad26c6b5f0069bb4f79e8437cad12ffc0af8b99",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-28/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-29.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-29.md",
       "originalSha256": "e508fa74a4dca7d7536ac062e449873ea61f3cd51d69048c4d4f6fd054b39641",
-      "migratedSha256": "a96e418d653df43427aaa6dee8aabaf51920d959937ed85cc0059f919432b615",
+      "migratedSha256": "36f3ae4658d914e84545403610a1b55bf4fbaf3a74927201ca8004edd6cdc454",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-29/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-3.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-3.md",
       "originalSha256": "1fade62076c1e3eb35606389cebbff66c40496f26149b1a5c541fdda7991ca59",
-      "migratedSha256": "72e9dd4e2eea3fd40a4b9d4d4265142d43e0796158cd580d499cfdbd8a0c6377",
+      "migratedSha256": "561361cd8526c291eaf659c03ddfed6ce8ce177433e5b4fddc20d8316596c1f0",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-3/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-30.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-30.md",
       "originalSha256": "3979b5382fc89ae0bea38cc5f8435d9e4ecf70a1d3ff9e82b3bded4447cbfd1f",
-      "migratedSha256": "5b1bb765d896e549478ef26bf088f2350ff3ef033510994e0ff1c2254274bd69",
+      "migratedSha256": "8e838113371f4787030f51e92d13298bacf06f7e8df35a83036b3204c59bfc13",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-30/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-31.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-31.md",
       "originalSha256": "c834b26202abb67106f5e43e8ce4ffeedc7ad1fefd011d3bd0fd81f982ff0664",
-      "migratedSha256": "c8c5498e7c4ddf5e133cb480b618e07b9b8b08ee9e270f464fce8496174a0e1c",
+      "migratedSha256": "2477286351a12cf0de3e72bd8042f1de368ff2e1f6cc9ef5113ae5c484641574",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-31/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-32.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-32.md",
       "originalSha256": "331dca2639f087ffd77c56e83150c57e5b39d2cea974675d69f64f3e07a8fc29",
-      "migratedSha256": "47c446284fbce5e0400fdf0fd0f191158d31f536ac12dec63d35190afc63c0e5",
+      "migratedSha256": "dd143ef9d83695c1162e4babb1df50c587d0d936e461e4e405be9b88c8000cf3",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-32/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-4.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-4.md",
       "originalSha256": "679278b53559481591f2cceb78f6ba37dcc7036b49cbe821b2c336b986a7c686",
-      "migratedSha256": "01dea5eb7c75414be648aea89206f1e3751da8b566a23923d94337a7a4c66274",
+      "migratedSha256": "dd9c6c3fed9070d18ea59d56e6c894bb3d09a32ebdd1aa4a7610d65ec2be9104",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-4/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-5.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-5.md",
       "originalSha256": "9318eec69cd900e94ea6e8024045e2bf969da06f9f625c0696b1e984d23645f7",
-      "migratedSha256": "755d6ce3ba46fa5b13af988011c6b19cb8e4fe3e32f7e711d0989a6a7e55eb49",
+      "migratedSha256": "47e45566c84bf469ff1c83a2b1639610fccbec161279d15fd489c7a262c752f5",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-5/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-6.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-6.md",
       "originalSha256": "3ece3af2bd9fb84b72d26b31b515b890116d2b3b8dec59bcbd08a63f2e890c6c",
-      "migratedSha256": "c0cf2009c1b84b5a6db315739204ab1fb596e4198f95ae9c5f1385a8d38536b9",
+      "migratedSha256": "9cfc0a35aaaefbdeca08c3f01358eab82a5bad4f2a197174c7d97e20d4500756",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-6/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-7.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-7.md",
       "originalSha256": "60dd2e840c6f1ab8612ff0ecd904afedd14100eaef2e3166ba0337e165f615f6",
-      "migratedSha256": "10aa34299492d46e53d6fc2ff32c9d85dfc23cb94207f79632fb1c44a5fdb927",
+      "migratedSha256": "b16e897d86144d52db7704c63bda9677ac756b049e413678e5bba857783202bc",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-7/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-8.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-8.md",
       "originalSha256": "93cec313be9263c32c08198b1a8976e4d8458c34d76b8094475ef37d0663a054",
-      "migratedSha256": "cf4feeb84065e4e24d34ab36132df498f446488ac794bae4458f362cf9b0867e",
+      "migratedSha256": "410caa77f6a833aa08e1e98bbf5246fc445e44932c31855e2d1bf611568db35c",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-8/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/ejercicio-9.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-9.md",
       "originalSha256": "324b15f2e026912178852e5e47bf979cece7cc392b069bf53f66add96098bd0e",
-      "migratedSha256": "c03c8898f9a655b3c13f989d982d6894632f1e0c5405c612e0362e9fcaa3b318",
+      "migratedSha256": "c0a0f760cf426975ae313e56b1e3aedfbbfbfd9d48f3b2e9913f4f4f7453d1b6",
       "canonical": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/"
     },
     {
       "source": "analisis-matematico-i/unidad-1/practica/practica-1.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/practica-1.md",
       "originalSha256": "b1cb87222135b298a2d05f8869747c89a03056ff8d4c50e2f02d9b27ecce1a45",
-      "migratedSha256": "b568e57a178a05073791eda92dc203c0614421aab9e44cebdab7aefb09a58ed9",
+      "migratedSha256": "9f3a007e4eae93abce64fdae5cc2c8b20e99a3930bb3f40ec600836070f2dd27",
       "canonical": "/analisis-matematico-i/unidad-1/practica/practica-1/"
     },
     {
@@ -336,70 +336,70 @@
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-1.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-1.md",
       "originalSha256": "13cc8e1ef470c50826916113a12109236ffae52029ce58442aa298df1c00a01b",
-      "migratedSha256": "9dc1a9e7125a6bbc96e676a68a94c071736bc9d29da0ff0db92860900c1b7749",
+      "migratedSha256": "1cab8f0cfe375807373733690f1409c754ae44a736e18126fe5e94d82715ace3",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-1/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-10.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-10.md",
       "originalSha256": "62b252008d5a2a259283743db2980f70ad4cdef31fe442659b08e752a55363d9",
-      "migratedSha256": "54cb13916f5902d7a5335e5f76bfb26b2eb473178d39fd86630d5e16fc6c5e24",
+      "migratedSha256": "6343adf146f743a99d7df89e2e2ba2cf5a670c1784ef00326cfc529e584e3002",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-10/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-11.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-11.md",
       "originalSha256": "0581bde0a574fa2478a02b599fbe09343204fb5630f6d3d6eb1dd42a71906058",
-      "migratedSha256": "99c5f6ceb8d3a57a1e0e7aa80ba56e2772360ca0d5080bf4f2989f211846b0ea",
+      "migratedSha256": "218d7598a8591266156ca067b5427eb91d3e8ddb38fd63c347166005185069cf",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-11/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-12.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-12.md",
       "originalSha256": "960370621eb0ca06ba2b3e91d414e29cc57879fa7c3d2cb284bf70ff17c3b00a",
-      "migratedSha256": "8d366f92d66ca3da897d1a60b3a61d52c2e710ed6ce9d60fa3c4fd4e25860c09",
+      "migratedSha256": "82c27d4b24f7d592da1864ff66f76810588575e654151eec91082b3dd095d025",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-12/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-13.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-13.md",
       "originalSha256": "f32124e55342787e14237e145e1565210736cf991d6f9e37efeb3ee3ece59798",
-      "migratedSha256": "f643d120c12cfa6bb9e1ad74f0a2fb68060acf678d345c24fea85a12dabc1406",
+      "migratedSha256": "312a459bd238943b44488e26277cd29e497f268414df2dc21208dfe919855d64",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-13/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-14.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-14.md",
       "originalSha256": "924e37115c0d3b352a0663ca81b421f5b4865479e17a8d7fbbb41d1de15f8390",
-      "migratedSha256": "df943afcc93261af58557b8775345df2c63bbfa082388734191ede25253c5f03",
+      "migratedSha256": "4a78dbbdd019b8f5a8e5c5e2127b90fcbe548f751f982ce43831c57e8177ed1e",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-14/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-15.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-15.md",
       "originalSha256": "c0ab570011df31ed84be4a6704853975fff0d91580b9b10519f649ee2e5ac0c3",
-      "migratedSha256": "a0b7c9033da1060097053e924a09c1504d3f0dee6effefe5ecdf5be18794cdd9",
+      "migratedSha256": "45e6a8c5fe941897a7049df04492b63e17d33fa4ada6b1189f622784072085f9",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-15/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-16.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-16.md",
       "originalSha256": "da9e5b17d0b6f08a4e284c8b2ab556cf99b3a77a07bf2901e60378dc53032026",
-      "migratedSha256": "1dcfd340b8473408e153814ea9db5e91f368ecfd35bc5fb699b1f700eb76cadc",
+      "migratedSha256": "168b11c4a2194b84b341b29d5a84883fd8c36c0d839eb7c427a0a437703e2897",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-16/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-17.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-17.md",
       "originalSha256": "91882b89e955da0b9043cd00b69bb24dffa39108d0d6d1fe77cf04fa4352f6d8",
-      "migratedSha256": "f428820e4a106d38883c6259b7d465c64406199af40a0e78dc896f0c57e2ea5d",
+      "migratedSha256": "2c635d94903dcace228f72bb74718e8fd412a10c12c888a08b0016a42b776dd5",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-17/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-18.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-18.md",
       "originalSha256": "893c0f9083ae5eb200ea3787e1867a167417a884d14da6d598862b13cb9d5cae",
-      "migratedSha256": "710d89059aa58771a087937c14d7733fd61d3b24a1189b31a0564ecd6b7c216c",
+      "migratedSha256": "b0519467af9cf965dd405654f1513aeae3adcfb469c8e551960e9190f3ad9b6e",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-18/"
     },
     {
@@ -413,21 +413,21 @@
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-2.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-2.md",
       "originalSha256": "959b04f6cb58bd20bdabfe9ec5b83b338f2227fd42781bd1e3711351f9313093",
-      "migratedSha256": "8e1a1ac28018bede187268e517b7a3501909b72b3723a196a43fb278733e27f2",
+      "migratedSha256": "068c0d84066f0a525eee3295003473af081c53a12122530c4e061df5a978822b",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-2/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-20.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-20.md",
       "originalSha256": "67317bdbc2dff93ad1a2c09c730034425f4c1a3e6b00db15462712bc4fdc939f",
-      "migratedSha256": "78073d40e8f52c3ae7dd0ae7df375a0be1c7217fbb67b902be739156c2222633",
+      "migratedSha256": "33340c152d7f1513e4a79eefcb6d26f9a301c42b41c1e81fbc663e3369b82e19",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-20/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-21.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-21.md",
       "originalSha256": "d0c0adce2f0445ceb06ac8e60d4ab1cab635667927042560ba50148be30d8f42",
-      "migratedSha256": "60d241cefbee031441dd7d3cadf13103f63062015bf58ba35b8e083dcaa262af",
+      "migratedSha256": "331f40cb4ed01d8e99f064e92569c9c611d2e3e1b16386284259f8fedf681828",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-21/"
     },
     {
@@ -441,126 +441,126 @@
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-24.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-24.md",
       "originalSha256": "8c976b583c7c996ed2d0276e7f2ef3eeca8eeb4d795b8f13ac521335b755d683",
-      "migratedSha256": "7e2d60f458c87612522535c7d7a060f8db77624ab44bfdfd66bfdcd9ad4768b2",
+      "migratedSha256": "2a155fb7f4e794d6d8e75a3c653b9f3c85be5447ed372daeea169cd0c285f146",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-24/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-25.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-25.md",
       "originalSha256": "36effb527bb3a3c6cd3384e2c4369e169991a04b2de4805d0073a06a35764955",
-      "migratedSha256": "796cd3b5be1ec5128770984ea2557b380e8304c756637fd82d2bfa2e9e5c151e",
+      "migratedSha256": "15349a41415aeeca0b1e53f272f05d78c0ca89c89f75d1ebefc3169fb85a35bf",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-25/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-26.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-26.md",
       "originalSha256": "7919f7f1184c1ab26bfd3dfc941aaf65e408cbdb21575bf89b495d4ce32067e8",
-      "migratedSha256": "c2739fe01475f6f34983486e1bfc1865135fe7d2f3052424f2f2a9b267627031",
+      "migratedSha256": "0c3b8016a466cf5b36bd99a3d1cfb8cee8b6cb1d975a0393563de61b1f0e318b",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-26/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-27.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-27.md",
       "originalSha256": "4e57864c83f9bfd224e48bf38d006e1866aac417b5d1aa392a21451ccf0f8a4b",
-      "migratedSha256": "57bf88699e35537ceca1b9487bba52d8db5ee60e2c6038836439b7e2eb1d3fc9",
+      "migratedSha256": "e85c505a61a1479a17b3d375f93a30cf63e62b1e3382dc783c4efa05c3082394",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-27/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-28.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-28.md",
       "originalSha256": "f25073720ce4322fbe819b57b15477234cd05afdeebe656ec2d729d8b5538b45",
-      "migratedSha256": "c650e246d75ec38c638fbd10f6599dda971bc5e2a3bcd0949f80252bbcb0d1a2",
+      "migratedSha256": "779c3a11c2e2435233ae23bf4a0a61a49b79213c44e3cae5a2546a0d860425ea",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-28/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-29.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-29.md",
       "originalSha256": "7e7efd302f411926ca7e4872328ab8b55c5c2437c89bdafbf61aa9cc4c8d20c3",
-      "migratedSha256": "ba090fd05587b15e8ae023f36c9aa0d6a25f1acebd27d590a8d9497632ec0317",
+      "migratedSha256": "482a1e93fea2a65c8e18efe3270f53d1efc420c173b81282cc409e2e8a29dbce",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-29/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-3.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-3.md",
       "originalSha256": "897087027a41fbbacfabae57ccf8eebe4b18c3c4119ba08e84ab57cfd74ddb39",
-      "migratedSha256": "cb5d3659595fc47e5b28aa3cec4f2aedcc282b6f53329b2bc62721bc6a8fae5e",
+      "migratedSha256": "a2ea7ddcb1cee3b33379baaa35c3a9411a1b3283f4972986c6e869093ecaba88",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-3/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-30.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-30.md",
       "originalSha256": "353cda688941439268a89d3df4bdde6521de472a7fb383cfd307d2902bc04b99",
-      "migratedSha256": "476f3140cc4e798b0a881e4fc4d582cfde81f81d629ab299f6abcd91c740c1c2",
+      "migratedSha256": "176625b1140bcfd1e1cac5baa21d49ebe931961cf2d2265bd2ad6ceeee34ff59",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-30/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-31.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-31.md",
       "originalSha256": "f77cb12b75b5621482f184d3f4b1e76f85d76d51ce41ca9e863be856af733f6e",
-      "migratedSha256": "6f2c6304290502cd7160f1e3b25a67cc59d98553c28b16a50aa37c072f58cf35",
+      "migratedSha256": "4f2f09f7fce2f4528ad86fdd65e33f5b468d47c87dd0d025b064a4396f33be59",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-31/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-32.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-32.md",
       "originalSha256": "060126bc7692d819e72c0e3fd780faf0506f878bc8e5f95e30fc574f69d62496",
-      "migratedSha256": "071595d1dfae3d0d357e8cd88520acfac535781a2afbdb22251c085fc4899e08",
+      "migratedSha256": "3fa61fe4347895419c7bcad34879a15b6e30d3f432f364c8639678be526c07c1",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-32/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-33.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-33.md",
       "originalSha256": "1423cc6e14809ec0614cbd427d56ac299f3a18113fba60074bf82cf4359f8b85",
-      "migratedSha256": "8ceb344596db719faca48ec0372c4805db312c3b5c41baf68d4a149ed607f834",
+      "migratedSha256": "e27c2e30dcc0a34218684486ba9775da4c9e84b08ff9f8c53449753f004c8e92",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-33/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-4.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-4.md",
       "originalSha256": "b72292cb2838b0f00696111dd6ceebc76f7c9728b3a7cfe28c03195c1581e306",
-      "migratedSha256": "52dbd8eaba136b00978efe7aeb38f6ac17300bdd1668d370cae66b1570a87043",
+      "migratedSha256": "f5704927289600073be0d4cebf6aa7ed1f0a780e5fbe308dbed95a93061f9ecb",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-4/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-5.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-5.md",
       "originalSha256": "a8b1545320222243a9a0f7abe7933ca66bcd421eebda31b05ae7362c98144c12",
-      "migratedSha256": "07b736f120da6b28738450dd1e7f822212a511d39b9674f6fa2d0536ec33eb84",
+      "migratedSha256": "657c5c9ce7ffff35ff87de5c0bb045f4835412c4f46d32c975c22b69d4ab5bf3",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-5/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-6.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-6.md",
       "originalSha256": "6127b6a828409d9b004bad071605f2252267a2b230608762c41a367f3e4ced9a",
-      "migratedSha256": "165963ca476c8d88f1043560ff29b24acab1e3522d8666f07da66c61f03858a1",
+      "migratedSha256": "d8b15559d0f352115a299afc9e0ea1e934f3913ff8dc17c84daf0c293a6a2b8a",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-6/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-7.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-7.md",
       "originalSha256": "471fc43c967d9201351ce0d30bf46977500d86a52340136191e81710c7957ecb",
-      "migratedSha256": "f803cf3e71bb696230b1cebb91b3f479d752952225cbac49e4447300044396b5",
+      "migratedSha256": "2129e4a2d473274fd9cea13f8c9e3ee022a80d227b9aeef5ef5f7ebbcd92489f",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-7/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-8.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-8.md",
       "originalSha256": "18e548e84feccc3efb7d658716b2f3bd346b35c7e873840ac377d58e31cc7d1b",
-      "migratedSha256": "4e9e3290159e0ba7efffebcf823ae74f2f1c0a78b55c1a4cd723cbf9aa982aa4",
+      "migratedSha256": "2e8c5a95a517accdf56d1d88f4f85d27ef50e1362db640bcb81981781fc4f88d",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-8/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/ejercicio-9.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-9.md",
       "originalSha256": "5a02334d45b0ba3a9e1361e71612e7dc2a03a401b0ce778f2503952f1c7c02d7",
-      "migratedSha256": "66dd9fcd1145bba489cff7ea178edff053cc711af444e391810187803bc07cde",
+      "migratedSha256": "d12693c6e067495cbc22bc80306439f91c23c9f667341be73a75d19851d52e40",
       "canonical": "/analisis-matematico-i/unidad-2/practica/ejercicio-9/"
     },
     {
       "source": "analisis-matematico-i/unidad-2/practica/practica-2.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/practica-2.md",
       "originalSha256": "906a2f3adb0bf4c23bc1a9817675c78c5206d6fba51acd4f9f3f6045acb16691",
-      "migratedSha256": "b530a20ff6eb8a07bbf82910d7bf665a95126604ab3bc65423d9f4ece7711cd8",
+      "migratedSha256": "297bb19f62174749f672aa3b88460993426864cd919e0443a2266f7eab6316cf",
       "canonical": "/analisis-matematico-i/unidad-2/practica/practica-2/"
     },
     {
@@ -581,7 +581,7 @@
       "source": "analisis-matematico-i/unidad-3/practica/practica-3.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-3/practica/practica-3.md",
       "originalSha256": "8468ad0827e8b232dca2d8c414eb48c05f705e3b9c75196cb61ed5a262095c09",
-      "migratedSha256": "47a1e580fe3a9b06f82cc06c4e0a322576c4d2aff394c179a3c4137d69de116b",
+      "migratedSha256": "e24c55a6484490c7549ebf408cb17dd969a2d3dfba23e2028c2c5051b5f2b8a3",
       "canonical": "/analisis-matematico-i/unidad-3/practica/practica-3/"
     },
     {
@@ -602,7 +602,7 @@
       "source": "analisis-matematico-i/unidad-4/practica/practica-4.md",
       "output": "src/content/docs/analisis-matematico-i/unidad-4/practica/practica-4.md",
       "originalSha256": "5f6bb852985ef945d3b80685ee57e2cb5f1dc9fcf5523089ed3f07df08883d0c",
-      "migratedSha256": "db84c44c8f54cd2b27ba8b75995612dd4cf5282330c3898d2d421c3adc22626e",
+      "migratedSha256": "141c28c3d1a74383ece7432298bd0a84aa311e245a40832c0b4fe0a200e9b006",
       "canonical": "/analisis-matematico-i/unidad-4/practica/practica-4/"
     },
     {
@@ -621,30 +621,40 @@
     },
     {
       "source": "bbdd-aplicadas/unidad-1/index.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-1/index.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/index.md",
       "originalSha256": "34454bf7dafe1baf64a29d0d0bb32ff76b35a372ed27b43a9f1bcbd532f4606f",
-      "migratedSha256": "85f3e3f1c8ba6b67eb671d84d41698af99b87ccafeae2580a3f2c8ce0c62b079",
-      "canonical": "/bbdd-aplicadas/unidad-1/"
+      "migratedSha256": "ad9be04a5f4ce1df436a606578ab9a5084e9d42baf8996ca75f78d6ba73d1e78",
+      "canonical": "/bbdd-aplicadas/unidad-1/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-1/index.md",
+      "previousCanonical": "/bbdd-aplicadas/unidad-1/",
+      "additionalOutputs": [
+        {
+          "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/index.md",
+          "migratedSha256": "edc94102589c5e5e9b1c817155f79f8888ad82646e322a38c244cb711d8bd07b"
+        }
+      ]
     },
     {
       "source": "bbdd-aplicadas/unidad-1/nav-practica.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-1/nav-practica.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/index.md",
       "originalSha256": "236ebf140155f89729a6e08e651ffd16cacb79b7229bcd547ba734253753bbb7",
-      "migratedSha256": "b351670ab17de6ec4ea381aab79de2542ff2be9f78218213b53fed2fa5117873",
-      "canonical": "/bbdd-aplicadas/unidad-1/practica/"
+      "migratedSha256": "edc94102589c5e5e9b1c817155f79f8888ad82646e322a38c244cb711d8bd07b",
+      "canonical": "/bbdd-aplicadas/unidad-1/practica/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-1/nav-practica.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-1/nav-teoria.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-1/nav-teoria.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/index.md",
       "originalSha256": "19bf28ff9a15ce7b9d67106a617b545ce48b35fd813207b2c4b9bf3ba7ab7817",
-      "migratedSha256": "24808ee8a1c6c40b296dba7fa8a2d7c4fcab80785f972d7c3511963a040e5da6",
-      "canonical": "/bbdd-aplicadas/unidad-1/teoria/"
+      "migratedSha256": "ad9be04a5f4ce1df436a606578ab9a5084e9d42baf8996ca75f78d6ba73d1e78",
+      "canonical": "/bbdd-aplicadas/unidad-1/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-1/nav-teoria.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-1/practica/pivot.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/pivot.md",
       "originalSha256": "63851fd5ea3c8dde58ab88bd18712a33190b156536b183bcfff74d2028343c6f",
-      "migratedSha256": "8ea4e7ab00ed72b65714f0f2ce6006903127a2f93372c1ce3a2d2f923d6fa729",
+      "migratedSha256": "da6dfd1afe480a3ce253e2ce562ae8c8641591f5cb434728d9104cc60f38de24",
       "canonical": "/bbdd-aplicadas/unidad-1/practica/pivot/"
     },
     {
@@ -658,7 +668,7 @@
       "source": "bbdd-aplicadas/unidad-1/practica/window-functions.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/window-functions.md",
       "originalSha256": "1ff61c549ea543a0e5ccc2df0bcbd880e12db995474534a56c522cc90ae8676d",
-      "migratedSha256": "dabf188d405da1b6bf92ee9f3eb8eaa0d3552a5816e857f5e1a7429d8e4a6fdf",
+      "migratedSha256": "8c86991f4b7182c8c77a23664a758e99e551e49f250a357ca7548e7a77b10f2f",
       "canonical": "/bbdd-aplicadas/unidad-1/practica/window-functions/"
     },
     {
@@ -712,72 +722,82 @@
     },
     {
       "source": "bbdd-aplicadas/unidad-2/index.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-2/index.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/index.md",
       "originalSha256": "7bbc7b6e953dd52c8a1b2462f83e2dec07d81cd8652d82a289bfc0c47b688927",
-      "migratedSha256": "f4d0230ecb73625e6fb9c6f5cf1c9ada0d7a579dde31a2630feb108b5f086c17",
-      "canonical": "/bbdd-aplicadas/unidad-2/"
+      "migratedSha256": "115c5971e28f8ff24277b1f425856b16015350b94e7aa7733f6566e062a23300",
+      "canonical": "/bbdd-aplicadas/unidad-2/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-2/index.md",
+      "previousCanonical": "/bbdd-aplicadas/unidad-2/",
+      "additionalOutputs": [
+        {
+          "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/index.md",
+          "migratedSha256": "b7fc1d5f7953f27baabc6541b0dc0b73be620025162a0223b5d0d78060b68633"
+        }
+      ]
     },
     {
       "source": "bbdd-aplicadas/unidad-2/nav-practica.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-2/nav-practica.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/index.md",
       "originalSha256": "ad4824aca521208af18ff0f662742fdd7141bb9462393758a6ec077b4e895305",
-      "migratedSha256": "e64e050b6645a74c92e0e95b9921b05784a910999ea818e3b3cfd4e9f14b5aa8",
-      "canonical": "/bbdd-aplicadas/unidad-2/practica/"
+      "migratedSha256": "b7fc1d5f7953f27baabc6541b0dc0b73be620025162a0223b5d0d78060b68633",
+      "canonical": "/bbdd-aplicadas/unidad-2/practica/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-2/nav-practica.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-2/nav-teoria.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-2/nav-teoria.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/index.md",
       "originalSha256": "7406a1ca9d43356328e8d77bf68014388fc92cb3c1da6e05cf6e0899178490b7",
-      "migratedSha256": "862d847de04e9cbfdab842fc42235e1327b3c1b673640e1139bcc6b38a6cfbd5",
-      "canonical": "/bbdd-aplicadas/unidad-2/teoria/"
+      "migratedSha256": "115c5971e28f8ff24277b1f425856b16015350b94e7aa7733f6566e062a23300",
+      "canonical": "/bbdd-aplicadas/unidad-2/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-2/nav-teoria.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-2/practica/importacion-archivos.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/importacion-archivos.md",
       "originalSha256": "bb88f433bb979be1e3a31df62928a062df1f3d37535ba50e529803b80830e20c",
-      "migratedSha256": "8109d2249520db14f6b6db91aecabfee9b77ac2b487a0f9d72cf0acf9173aa98",
+      "migratedSha256": "4e57e91d591d4ad97ced504765bb1f4a041af8999a8ede02e61d9da045e718c0",
       "canonical": "/bbdd-aplicadas/unidad-2/practica/importacion-archivos/"
     },
     {
       "source": "bbdd-aplicadas/unidad-2/practica/practica-apis.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-apis.md",
       "originalSha256": "281c1abfae9b93bb011a443c17ef1e1170a6c08b0c03554dad1d12c430743ee3",
-      "migratedSha256": "b4bd6b950912a7c1b29085f3687fec194a9db766a5fbe1c0b7deaafd1c9d1e2f",
+      "migratedSha256": "04a333f90c9fb4d0c66217b9a5add16cfcee169d37890e68604ade319d05bb8b",
       "canonical": "/bbdd-aplicadas/unidad-2/practica/apis/"
     },
     {
       "source": "bbdd-aplicadas/unidad-2/practica/practica-bd-en-memoria.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-bd-en-memoria.md",
       "originalSha256": "0d924540e95e4721b4ab4441566212f17e625c494501a7285b610ce6629113b2",
-      "migratedSha256": "9a1ea52506071ece93fbdf250e23caa3cf123ed7af73cf59d023703d24958bf7",
+      "migratedSha256": "7bc5addd4aed402a6c4728bfb646ce65184bea5116c88dec06eebc83b1f10326",
       "canonical": "/bbdd-aplicadas/unidad-2/practica/bd-en-memoria/"
     },
     {
       "source": "bbdd-aplicadas/unidad-2/practica/practica-json.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-json.md",
       "originalSha256": "2565a12b0094ec31e04a6df190913df2a30057aaeb1fb1925ad434421f896231",
-      "migratedSha256": "6bcf443ccd385ba499a675269f3f55895d8627ffbd40500b636ab33f8d62a524",
+      "migratedSha256": "df817cf3a2e223799a028ee0f98eeb8c8e864920f7e689d8822df4c28f4a4753",
       "canonical": "/bbdd-aplicadas/unidad-2/practica/json/"
     },
     {
       "source": "bbdd-aplicadas/unidad-2/practica/practica-transacciones.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-transacciones.md",
       "originalSha256": "fa5e63ec60d6f10f2c4087097e13ff7879559b8b81d7b1b42ea41c2a8d87601b",
-      "migratedSha256": "0b61868008a45fd2a0dec1b80c77e0920aa909b68f725fd2ea97fcc9117b4c6a",
+      "migratedSha256": "68c884d500387087c4bd0cf29017acc07430bb6c3310dad9180b75df134c153d",
       "canonical": "/bbdd-aplicadas/unidad-2/practica/transacciones/"
     },
     {
       "source": "bbdd-aplicadas/unidad-2/practica/practica-xml.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-xml.md",
       "originalSha256": "51e41fa5b05f810fc25f21bd0ea09f8d2ae7310224405f68d837b759daea0f0d",
-      "migratedSha256": "2f71fa2332ac8365f403ec31e769e2db2a47e49457873f9419b5ff48f5afb5b2",
+      "migratedSha256": "f8d989674f14582fe8264926932f3052d1fd71268369c7b5850b34b98e3934b2",
       "canonical": "/bbdd-aplicadas/unidad-2/practica/xml/"
     },
     {
       "source": "bbdd-aplicadas/unidad-2/practica/tp2.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/tp2.md",
       "originalSha256": "2d3ac2dd7a0f7f9ff9915e518d52f907caaa756c6abacda4616425eb0e666f1d",
-      "migratedSha256": "18d076ab9f9c31e385af098d6d32857997372a14656124d5e6565cc5941dd2d9",
+      "migratedSha256": "7c3a16932e5e7f0f0503f3f77cb550dd23d85a07a41b57f468c68edb17385850",
       "canonical": "/bbdd-aplicadas/unidad-2/practica/tp2/"
     },
     {
@@ -845,24 +865,34 @@
     },
     {
       "source": "bbdd-aplicadas/unidad-3/index.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-3/index.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/index.md",
       "originalSha256": "a6e7e9b3cc6ede8b63e57c68d6386a003df6ca1a20754bb53bcf617ff54ea763",
-      "migratedSha256": "785354923810753b609cfe30a37367e572fdb881bcf3e2ea9deaed667e3605b2",
-      "canonical": "/bbdd-aplicadas/unidad-3/"
+      "migratedSha256": "94cacf563fefa773e1dce62c68a91a48520d36ff018ac4471f03fc538e61d8ab",
+      "canonical": "/bbdd-aplicadas/unidad-3/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-3/index.md",
+      "previousCanonical": "/bbdd-aplicadas/unidad-3/",
+      "additionalOutputs": [
+        {
+          "output": "src/content/docs/bbdd-aplicadas/unidad-3/practica/index.md",
+          "migratedSha256": "a7b5043bea88143cf01323be6ad61774a74e0858c970be5c59543b2087aa8638"
+        }
+      ]
     },
     {
       "source": "bbdd-aplicadas/unidad-3/nav-practica.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-3/nav-practica.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/practica/index.md",
       "originalSha256": "f4c78afd06d0725cf4a1c1fcf0277cace0e86ec3e2bef26b62318edfb3089dca",
-      "migratedSha256": "d570714992d521b81957be6dd12035d73f94693e4f0d8cbbfa3f4c99f64bf27a",
-      "canonical": "/bbdd-aplicadas/unidad-3/practica/"
+      "migratedSha256": "a7b5043bea88143cf01323be6ad61774a74e0858c970be5c59543b2087aa8638",
+      "canonical": "/bbdd-aplicadas/unidad-3/practica/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-3/nav-practica.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-3/nav-teoria.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-3/nav-teoria.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/index.md",
       "originalSha256": "7c46a73ef35923f3bf9103c2cb72184d87dc25861baef07bf79e3f6961f6c997",
-      "migratedSha256": "9d9358645071a7baf06b36b61629d2dfe04ccbfe4418bfc7f0c8ab60d0eb5b04",
-      "canonical": "/bbdd-aplicadas/unidad-3/teoria/"
+      "migratedSha256": "94cacf563fefa773e1dce62c68a91a48520d36ff018ac4471f03fc538e61d8ab",
+      "canonical": "/bbdd-aplicadas/unidad-3/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-3/nav-teoria.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento.md",
@@ -915,24 +945,34 @@
     },
     {
       "source": "bbdd-aplicadas/unidad-4/index.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-4/index.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/index.md",
       "originalSha256": "be5a09a98fb19f2d32e365281ac5b4b0123a25123b2f7bf613b2b233aad9b9db",
-      "migratedSha256": "4079ee0333398f6d98c40f87f0e895fe683c460442626f17fd372f6a5bd836c7",
-      "canonical": "/bbdd-aplicadas/unidad-4/"
+      "migratedSha256": "d9a42044ce5b275e26f2ed3e508ff9d02a71430f4fe5a429397e137678f260bc",
+      "canonical": "/bbdd-aplicadas/unidad-4/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-4/index.md",
+      "previousCanonical": "/bbdd-aplicadas/unidad-4/",
+      "additionalOutputs": [
+        {
+          "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/index.md",
+          "migratedSha256": "80697f297a190350ba8c36ea5f50a5b1940a110e9a8099342dec52e497493b90"
+        }
+      ]
     },
     {
       "source": "bbdd-aplicadas/unidad-4/nav-practica.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-4/nav-practica.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/index.md",
       "originalSha256": "e7e1eea6ec8451b3509c9c736a8f7cbc0efeb9519df67d9c168e21dafc2d1ab1",
-      "migratedSha256": "659e42fb3798c30481d916219da448f78d8b0eab62c428770bc0cc18923d3d00",
-      "canonical": "/bbdd-aplicadas/unidad-4/practica/"
+      "migratedSha256": "80697f297a190350ba8c36ea5f50a5b1940a110e9a8099342dec52e497493b90",
+      "canonical": "/bbdd-aplicadas/unidad-4/practica/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-4/nav-practica.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-4/nav-teoria.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-4/nav-teoria.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/index.md",
       "originalSha256": "e9d82a06cf2eac809988482c3f34864f1b76641aef977cf3ba8e9c85efd4598f",
-      "migratedSha256": "9cb2f5baca78a7b5d441d8a30df63616e364815723376553f59eec6bc780bfd3",
-      "canonical": "/bbdd-aplicadas/unidad-4/teoria/"
+      "migratedSha256": "d9a42044ce5b275e26f2ed3e508ff9d02a71430f4fe5a429397e137678f260bc",
+      "canonical": "/bbdd-aplicadas/unidad-4/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-4/nav-teoria.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-4/practica/integrador-peliculas.md",
@@ -945,14 +985,14 @@
       "source": "bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online.md",
       "originalSha256": "a7a14a984fa2c7d8d95ff8b616cd18745faf82a9a00423df3a27226254117ff8",
-      "migratedSha256": "b9b011c69d16eeb1207ace741920ebac87439de94efb2e4d782ad9a8b872cd49",
+      "migratedSha256": "d39de296dbb7234e7b4081701e28878273fddcb3bdfdd7b7f29886fd2a7d405a",
       "canonical": "/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online/"
     },
     {
       "source": "bbdd-aplicadas/unidad-4/practica/practica.md",
       "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/practica.md",
       "originalSha256": "518e958747ab724192a452989974f691f9ca0460e9342c59b753c77a19176ba3",
-      "migratedSha256": "3f9a051aea35a1840a26d62f46f02a90de6b315b4f0c27d4bca63a27ebf98b1b",
+      "migratedSha256": "ba11a9150be6546991b0aa64869221add296bf0c16e00e8792eab1cb29d5c8b5",
       "canonical": "/bbdd-aplicadas/unidad-4/practica/ejercicios/"
     },
     {
@@ -1020,24 +1060,34 @@
     },
     {
       "source": "bbdd-aplicadas/unidad-5/index.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-5/index.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/index.md",
       "originalSha256": "5c9929283c64fb3db2de5a20053b70dfd5a75d9563d91850e68839e5cddf03d2",
-      "migratedSha256": "29bec00cbf38700d8583a06a29237aff470b603993cd3f912947505a57bcf607",
-      "canonical": "/bbdd-aplicadas/unidad-5/"
+      "migratedSha256": "adc5fbcd325b3e156c9872407fbece964d5ef92d583a764ad0945c46594620ea",
+      "canonical": "/bbdd-aplicadas/unidad-5/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-5/index.md",
+      "previousCanonical": "/bbdd-aplicadas/unidad-5/",
+      "additionalOutputs": [
+        {
+          "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/index.md",
+          "migratedSha256": "539f7967c16985779c01e5f648e7dad57726845db21893d704b1cdec51b6d470"
+        }
+      ]
     },
     {
       "source": "bbdd-aplicadas/unidad-5/nav-practica.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-5/nav-practica.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/index.md",
       "originalSha256": "ec88b5aaee5522ea733f864ee8e2d06f235f178a9e973750f5da75452f0439a1",
-      "migratedSha256": "0fc35ef7979c00a741dee13e7889ef81beaf48fb8c4c012c80fb4be9ea74a590",
-      "canonical": "/bbdd-aplicadas/unidad-5/practica/"
+      "migratedSha256": "539f7967c16985779c01e5f648e7dad57726845db21893d704b1cdec51b6d470",
+      "canonical": "/bbdd-aplicadas/unidad-5/practica/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-5/nav-practica.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-5/nav-teoria.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-5/nav-teoria.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/index.md",
       "originalSha256": "cc2484fb8e6175142041ab839b05d565de593d3f710e7dbb33ab1886641746e3",
-      "migratedSha256": "4cfb7a0ff2988391ae13e9ed22da4d21cd8489bbc641c6c11543f232ef141adc",
-      "canonical": "/bbdd-aplicadas/unidad-5/teoria/"
+      "migratedSha256": "adc5fbcd325b3e156c9872407fbece964d5ef92d583a764ad0945c46594620ea",
+      "canonical": "/bbdd-aplicadas/unidad-5/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-5/nav-teoria.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-5/practica/laboratorio-backup.md",
@@ -1118,24 +1168,34 @@
     },
     {
       "source": "bbdd-aplicadas/unidad-6/index.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-6/index.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/index.md",
       "originalSha256": "e180a7785740454870de96648fced48bed38f82c3ed0cea0058c8134cb6495f4",
-      "migratedSha256": "d5800080e2f773d58663d398d030b7992f45cd35a69cf90eb9d37a6e34b5a8bb",
-      "canonical": "/bbdd-aplicadas/unidad-6/"
+      "migratedSha256": "4e30b24a0f1a83695ececdf55a2c08c2452c5003272a849ae0453479ca5be450",
+      "canonical": "/bbdd-aplicadas/unidad-6/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-6/index.md",
+      "previousCanonical": "/bbdd-aplicadas/unidad-6/",
+      "additionalOutputs": [
+        {
+          "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/index.md",
+          "migratedSha256": "0b39539c2e7bf4e528399e08bc7e2d9842ac816c0438f2ee0dd636bcc9192e13"
+        }
+      ]
     },
     {
       "source": "bbdd-aplicadas/unidad-6/nav-practica.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-6/nav-practica.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/index.md",
       "originalSha256": "12783cf2505db2a5b67275210fcc9416aa933915afa299bd6796961013b757f6",
-      "migratedSha256": "df5fffdad047acd62e84baf334da87fe069136cd23dd6f77ec5f05c359f0e024",
-      "canonical": "/bbdd-aplicadas/unidad-6/practica/"
+      "migratedSha256": "0b39539c2e7bf4e528399e08bc7e2d9842ac816c0438f2ee0dd636bcc9192e13",
+      "canonical": "/bbdd-aplicadas/unidad-6/practica/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-6/nav-practica.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-6/nav-teoria.md",
-      "output": "src/content/docs/bbdd-aplicadas/unidad-6/nav-teoria.md",
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/index.md",
       "originalSha256": "2de9a48fcef3611eda58e326422e718c4e754d9c415c704bf83748d5ab76115a",
-      "migratedSha256": "6e5c87372ac9194c166eb7d83b1deabb5c9231e467c0d1e6244ec09243b383d5",
-      "canonical": "/bbdd-aplicadas/unidad-6/teoria/"
+      "migratedSha256": "4e30b24a0f1a83695ececdf55a2c08c2452c5003272a849ae0453479ca5be450",
+      "canonical": "/bbdd-aplicadas/unidad-6/teoria/",
+      "previousOutput": "src/content/docs/bbdd-aplicadas/unidad-6/nav-teoria.md"
     },
     {
       "source": "bbdd-aplicadas/unidad-6/practica/casos-integradores.md",

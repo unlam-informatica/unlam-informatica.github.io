@@ -3,6 +3,7 @@ title: Ejercicio 7* — Límites con módulo
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-7
 sidebar:
   order: 7
+  label: Ejercicio 7
 ---
 
 

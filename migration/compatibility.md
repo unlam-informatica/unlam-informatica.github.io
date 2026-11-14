@@ -103,7 +103,7 @@ Las rutas anteriores y canónicas se conservan. La navegación usa archivos `ind
 | `/analisis-matematico-i/unidad-1/practica/3.png` | `/analisis-matematico-i/unidad-1/practica/3.png` | `/analisis-matematico-i/unidad-1/practica/3.png` | asset |
 | `/analisis-matematico-i/unidad-2/practica/1b.png` | `/analisis-matematico-i/unidad-2/practica/1b.png` | `/analisis-matematico-i/unidad-2/practica/1b.png` | asset |
 | `/bbdd-aplicadas/index.html` | `/bbdd-aplicadas/` | `/bbdd-aplicadas/index.html` | page |
-| `/bbdd-aplicadas/unidad-1/index.html` | `/bbdd-aplicadas/unidad-1/` | `/bbdd-aplicadas/unidad-1/index.html` | page |
+| `/bbdd-aplicadas/unidad-1/index.html` | `/bbdd-aplicadas/unidad-1/teoria/` | `/bbdd-aplicadas/unidad-1/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-1/practica/` | `/bbdd-aplicadas/unidad-1/practica/` | `/bbdd-aplicadas/unidad-1/practica/index.html` | page |
 | `/bbdd-aplicadas/unidad-1/teoria/` | `/bbdd-aplicadas/unidad-1/teoria/` | `/bbdd-aplicadas/unidad-1/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-1/practica/pivot/` | `/bbdd-aplicadas/unidad-1/practica/pivot/` | `/bbdd-aplicadas/unidad-1/practica/pivot/index.html` | page |
@@ -116,7 +116,7 @@ Las rutas anteriores y canónicas se conservan. La navegación usa archivos `ind
 | `/bbdd-aplicadas/unidad-1/teoria/sql-dinamico/` | `/bbdd-aplicadas/unidad-1/teoria/sql-dinamico/` | `/bbdd-aplicadas/unidad-1/teoria/sql-dinamico/index.html` | page |
 | `/bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/` | `/bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/` | `/bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/index.html` | page |
 | `/bbdd-aplicadas/unidad-1/teoria/window-functions/` | `/bbdd-aplicadas/unidad-1/teoria/window-functions/` | `/bbdd-aplicadas/unidad-1/teoria/window-functions/index.html` | page |
-| `/bbdd-aplicadas/unidad-2/index.html` | `/bbdd-aplicadas/unidad-2/` | `/bbdd-aplicadas/unidad-2/index.html` | page |
+| `/bbdd-aplicadas/unidad-2/index.html` | `/bbdd-aplicadas/unidad-2/teoria/` | `/bbdd-aplicadas/unidad-2/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-2/practica/` | `/bbdd-aplicadas/unidad-2/practica/` | `/bbdd-aplicadas/unidad-2/practica/index.html` | page |
 | `/bbdd-aplicadas/unidad-2/teoria/` | `/bbdd-aplicadas/unidad-2/teoria/` | `/bbdd-aplicadas/unidad-2/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-2/practica/importacion-archivos/` | `/bbdd-aplicadas/unidad-2/practica/importacion-archivos/` | `/bbdd-aplicadas/unidad-2/practica/importacion-archivos/index.html` | page |
@@ -135,7 +135,7 @@ Las rutas anteriores y canónicas se conservan. La navegación usa archivos `ind
 | `/bbdd-aplicadas/unidad-2/teoria/json-en-sql/` | `/bbdd-aplicadas/unidad-2/teoria/json-en-sql/` | `/bbdd-aplicadas/unidad-2/teoria/json-en-sql/index.html` | page |
 | `/bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/` | `/bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/` | `/bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/index.html` | page |
 | `/bbdd-aplicadas/unidad-2/teoria/xml-en-sql/` | `/bbdd-aplicadas/unidad-2/teoria/xml-en-sql/` | `/bbdd-aplicadas/unidad-2/teoria/xml-en-sql/index.html` | page |
-| `/bbdd-aplicadas/unidad-3/index.html` | `/bbdd-aplicadas/unidad-3/` | `/bbdd-aplicadas/unidad-3/index.html` | page |
+| `/bbdd-aplicadas/unidad-3/index.html` | `/bbdd-aplicadas/unidad-3/teoria/` | `/bbdd-aplicadas/unidad-3/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-3/practica/` | `/bbdd-aplicadas/unidad-3/practica/` | `/bbdd-aplicadas/unidad-3/practica/index.html` | page |
 | `/bbdd-aplicadas/unidad-3/teoria/` | `/bbdd-aplicadas/unidad-3/teoria/` | `/bbdd-aplicadas/unidad-3/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/` | `/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/` | `/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/index.html` | page |
@@ -145,7 +145,7 @@ Las rutas anteriores y canónicas se conservan. La navegación usa archivos `ind
 | `/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento/` | `/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento/` | `/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento/index.html` | page |
 | `/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/` | `/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/` | `/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/index.html` | page |
 | `/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/` | `/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/` | `/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/index.html` | page |
-| `/bbdd-aplicadas/unidad-4/index.html` | `/bbdd-aplicadas/unidad-4/` | `/bbdd-aplicadas/unidad-4/index.html` | page |
+| `/bbdd-aplicadas/unidad-4/index.html` | `/bbdd-aplicadas/unidad-4/teoria/` | `/bbdd-aplicadas/unidad-4/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-4/practica/` | `/bbdd-aplicadas/unidad-4/practica/` | `/bbdd-aplicadas/unidad-4/practica/index.html` | page |
 | `/bbdd-aplicadas/unidad-4/teoria/` | `/bbdd-aplicadas/unidad-4/teoria/` | `/bbdd-aplicadas/unidad-4/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-4/practica/integrador-peliculas/` | `/bbdd-aplicadas/unidad-4/practica/integrador-peliculas/` | `/bbdd-aplicadas/unidad-4/practica/integrador-peliculas/index.html` | page |
@@ -160,7 +160,7 @@ Las rutas anteriores y canónicas se conservan. La navegación usa archivos `ind
 | `/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion/` | `/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion/` | `/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion/index.html` | page |
 | `/bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/` | `/bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/` | `/bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/index.html` | page |
 | `/bbdd-aplicadas/unidad-4/teoria/apunte-completo/` | `/bbdd-aplicadas/unidad-4/teoria/apunte-completo/` | `/bbdd-aplicadas/unidad-4/teoria/apunte-completo/index.html` | page |
-| `/bbdd-aplicadas/unidad-5/index.html` | `/bbdd-aplicadas/unidad-5/` | `/bbdd-aplicadas/unidad-5/index.html` | page |
+| `/bbdd-aplicadas/unidad-5/index.html` | `/bbdd-aplicadas/unidad-5/teoria/` | `/bbdd-aplicadas/unidad-5/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-5/practica/` | `/bbdd-aplicadas/unidad-5/practica/` | `/bbdd-aplicadas/unidad-5/practica/index.html` | page |
 | `/bbdd-aplicadas/unidad-5/teoria/` | `/bbdd-aplicadas/unidad-5/teoria/` | `/bbdd-aplicadas/unidad-5/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-5/practica/laboratorio-backup/` | `/bbdd-aplicadas/unidad-5/practica/laboratorio-backup/` | `/bbdd-aplicadas/unidad-5/practica/laboratorio-backup/index.html` | page |
@@ -174,7 +174,7 @@ Las rutas anteriores y canónicas se conservan. La navegación usa archivos `ind
 | `/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/` | `/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/` | `/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/index.html` | page |
 | `/bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/` | `/bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/` | `/bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/index.html` | page |
 | `/bbdd-aplicadas/unidad-5/teoria/apunte-completo/` | `/bbdd-aplicadas/unidad-5/teoria/apunte-completo/` | `/bbdd-aplicadas/unidad-5/teoria/apunte-completo/index.html` | page |
-| `/bbdd-aplicadas/unidad-6/index.html` | `/bbdd-aplicadas/unidad-6/` | `/bbdd-aplicadas/unidad-6/index.html` | page |
+| `/bbdd-aplicadas/unidad-6/index.html` | `/bbdd-aplicadas/unidad-6/teoria/` | `/bbdd-aplicadas/unidad-6/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-6/practica/` | `/bbdd-aplicadas/unidad-6/practica/` | `/bbdd-aplicadas/unidad-6/practica/index.html` | page |
 | `/bbdd-aplicadas/unidad-6/teoria/` | `/bbdd-aplicadas/unidad-6/teoria/` | `/bbdd-aplicadas/unidad-6/teoria/index.html` | page |
 | `/bbdd-aplicadas/unidad-6/practica/casos-integradores/` | `/bbdd-aplicadas/unidad-6/practica/casos-integradores/` | `/bbdd-aplicadas/unidad-6/practica/casos-integradores/index.html` | page |
@@ -249,3 +249,9 @@ Las rutas anteriores y canónicas se conservan. La navegación usa archivos `ind
 | `/diseno-de-software/assets/favicon/site.webmanifest` | `/diseno-de-software/assets/favicon/site.webmanifest` | `/diseno-de-software/assets/favicon/site.webmanifest` | asset |
 | `/diseno-de-software/assets/img/costo-modularidad.svg` | `/diseno-de-software/assets/img/costo-modularidad.svg` | `/diseno-de-software/assets/img/costo-modularidad.svg` | asset |
 | `/diseno-de-software/assets/img/rup.svg` | `/diseno-de-software/assets/img/rup.svg` | `/diseno-de-software/assets/img/rup.svg` | asset |
+| `/bbdd-aplicadas/unidad-1/` | `/bbdd-aplicadas/unidad-1/teoria/` | `/bbdd-aplicadas/unidad-1/teoria/index.html` | page |
+| `/bbdd-aplicadas/unidad-2/` | `/bbdd-aplicadas/unidad-2/teoria/` | `/bbdd-aplicadas/unidad-2/teoria/index.html` | page |
+| `/bbdd-aplicadas/unidad-3/` | `/bbdd-aplicadas/unidad-3/teoria/` | `/bbdd-aplicadas/unidad-3/teoria/index.html` | page |
+| `/bbdd-aplicadas/unidad-4/` | `/bbdd-aplicadas/unidad-4/teoria/` | `/bbdd-aplicadas/unidad-4/teoria/index.html` | page |
+| `/bbdd-aplicadas/unidad-5/` | `/bbdd-aplicadas/unidad-5/teoria/` | `/bbdd-aplicadas/unidad-5/teoria/index.html` | page |
+| `/bbdd-aplicadas/unidad-6/` | `/bbdd-aplicadas/unidad-6/teoria/` | `/bbdd-aplicadas/unidad-6/teoria/index.html` | page |

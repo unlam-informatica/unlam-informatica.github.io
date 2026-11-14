@@ -683,9 +683,9 @@
   {
     "source": "bbdd-aplicadas/unidad-1/index.md",
     "old": "/bbdd-aplicadas/unidad-1/index.html",
-    "canonical": "/bbdd-aplicadas/unidad-1/",
+    "canonical": "/bbdd-aplicadas/unidad-1/teoria/",
     "kind": "page",
-    "navigation": "/bbdd-aplicadas/unidad-1/index.html"
+    "navigation": "/bbdd-aplicadas/unidad-1/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-1/nav-practica.md",
@@ -774,9 +774,9 @@
   {
     "source": "bbdd-aplicadas/unidad-2/index.md",
     "old": "/bbdd-aplicadas/unidad-2/index.html",
-    "canonical": "/bbdd-aplicadas/unidad-2/",
+    "canonical": "/bbdd-aplicadas/unidad-2/teoria/",
     "kind": "page",
-    "navigation": "/bbdd-aplicadas/unidad-2/index.html"
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-2/nav-practica.md",
@@ -907,9 +907,9 @@
   {
     "source": "bbdd-aplicadas/unidad-3/index.md",
     "old": "/bbdd-aplicadas/unidad-3/index.html",
-    "canonical": "/bbdd-aplicadas/unidad-3/",
+    "canonical": "/bbdd-aplicadas/unidad-3/teoria/",
     "kind": "page",
-    "navigation": "/bbdd-aplicadas/unidad-3/index.html"
+    "navigation": "/bbdd-aplicadas/unidad-3/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-3/nav-practica.md",
@@ -977,9 +977,9 @@
   {
     "source": "bbdd-aplicadas/unidad-4/index.md",
     "old": "/bbdd-aplicadas/unidad-4/index.html",
-    "canonical": "/bbdd-aplicadas/unidad-4/",
+    "canonical": "/bbdd-aplicadas/unidad-4/teoria/",
     "kind": "page",
-    "navigation": "/bbdd-aplicadas/unidad-4/index.html"
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-4/nav-practica.md",
@@ -1082,9 +1082,9 @@
   {
     "source": "bbdd-aplicadas/unidad-5/index.md",
     "old": "/bbdd-aplicadas/unidad-5/index.html",
-    "canonical": "/bbdd-aplicadas/unidad-5/",
+    "canonical": "/bbdd-aplicadas/unidad-5/teoria/",
     "kind": "page",
-    "navigation": "/bbdd-aplicadas/unidad-5/index.html"
+    "navigation": "/bbdd-aplicadas/unidad-5/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-5/nav-practica.md",
@@ -1180,9 +1180,9 @@
   {
     "source": "bbdd-aplicadas/unidad-6/index.md",
     "old": "/bbdd-aplicadas/unidad-6/index.html",
-    "canonical": "/bbdd-aplicadas/unidad-6/",
+    "canonical": "/bbdd-aplicadas/unidad-6/teoria/",
     "kind": "page",
-    "navigation": "/bbdd-aplicadas/unidad-6/index.html"
+    "navigation": "/bbdd-aplicadas/unidad-6/teoria/index.html"
   },
   {
     "source": "bbdd-aplicadas/unidad-6/nav-practica.md",
@@ -1663,5 +1663,47 @@
     "old": "/diseno-de-software/assets/img/rup.svg",
     "canonical": "/diseno-de-software/assets/img/rup.svg",
     "kind": "asset"
+  },
+  {
+    "source": "bbdd-aplicadas/unidad-1/index.md",
+    "old": "/bbdd-aplicadas/unidad-1/",
+    "canonical": "/bbdd-aplicadas/unidad-1/teoria/",
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-1/teoria/index.html"
+  },
+  {
+    "source": "bbdd-aplicadas/unidad-2/index.md",
+    "old": "/bbdd-aplicadas/unidad-2/",
+    "canonical": "/bbdd-aplicadas/unidad-2/teoria/",
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-2/teoria/index.html"
+  },
+  {
+    "source": "bbdd-aplicadas/unidad-3/index.md",
+    "old": "/bbdd-aplicadas/unidad-3/",
+    "canonical": "/bbdd-aplicadas/unidad-3/teoria/",
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-3/teoria/index.html"
+  },
+  {
+    "source": "bbdd-aplicadas/unidad-4/index.md",
+    "old": "/bbdd-aplicadas/unidad-4/",
+    "canonical": "/bbdd-aplicadas/unidad-4/teoria/",
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-4/teoria/index.html"
+  },
+  {
+    "source": "bbdd-aplicadas/unidad-5/index.md",
+    "old": "/bbdd-aplicadas/unidad-5/",
+    "canonical": "/bbdd-aplicadas/unidad-5/teoria/",
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-5/teoria/index.html"
+  },
+  {
+    "source": "bbdd-aplicadas/unidad-6/index.md",
+    "old": "/bbdd-aplicadas/unidad-6/",
+    "canonical": "/bbdd-aplicadas/unidad-6/teoria/",
+    "kind": "page",
+    "navigation": "/bbdd-aplicadas/unidad-6/teoria/index.html"
   }
 ]

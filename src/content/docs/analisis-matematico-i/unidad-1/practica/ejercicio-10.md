@@ -3,6 +3,7 @@ title: Ejercicio 10 — Dominio, imagen, intersecciones, positividad/negatividad
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-10
 sidebar:
   order: 10
+  label: Ejercicio 10
 ---
 
 

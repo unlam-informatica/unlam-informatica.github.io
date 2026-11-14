@@ -6,7 +6,7 @@ import { join } from 'node:path';
 const subjects = ['analisis-matematico-i', 'bbdd-aplicadas', 'diseno-de-software'];
 const walk = (dir: string): string[] => readdirSync(dir, { withFileTypes: true }).flatMap(entry =>
   entry.isDirectory() ? walk(join(dir, entry.name)) : [join(dir, entry.name)]);
-const destinations = new Set(walk('dist').filter(file => file.endsWith('/index.html'))
+const destinations = new Set(walk('dist').filter(file => file.endsWith('/index.html') && load(readFileSync(file, 'utf8'))('[data-pagefind-body]').length)
   .map(file => file === 'dist/index.html' ? '/' : '/' + file.slice(5)));
 
 test('todas las páginas se alcanzan siguiendo enlaces desde la portada', async ({ request, baseURL }) => {
@@ -39,11 +39,12 @@ test.describe('navegación con 404 de directorio en caché', () => {
 
   test('tarjetas, unidades, paginación y menú funcionan en las tres materias', async ({ page, isMobile }) => {
     for (const subject of subjects) {
+      const unitPath = `/${subject}/unidad-1/${subject === 'bbdd-aplicadas' ? 'teoria/' : ''}index.html`;
       await page.goto('/');
       await page.locator(`.sl-markdown-content a[href="/${subject}/index.html"]`).first().click();
       await expect(page).toHaveURL(`/${subject}/index.html`);
-      await page.locator(`.sl-markdown-content a[href="/${subject}/unidad-1/index.html"]`).first().click();
-      await expect(page).toHaveURL(`/${subject}/unidad-1/index.html`);
+      await page.locator(`.sl-markdown-content a[href="${unitPath}"]`).first().click();
+      await expect(page).toHaveURL(unitPath);
       await expect(page.locator('meta[name="generator"][content^="Starlight"]')).toHaveCount(1);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBeTruthy();
       const next = page.locator('a[rel="next"]');
@@ -54,15 +55,15 @@ test.describe('navegación con 404 de directorio en caché', () => {
       if (!isMobile) {
         const current = page.locator('.sidebar a[aria-current="page"]');
         await expect(current).toHaveAttribute('href', nextHref!);
-        const groups = page.locator('.sidebar details').filter({ has: page.locator(`a[href="/${subject}/unidad-1/index.html"]`) });
+        const groups = page.locator('.sidebar details').filter({ has: page.locator(`a[href="${unitPath}"]`) });
         for (const group of await groups.all()) {
           if (await group.getAttribute('open') === null) await group.locator(':scope > summary').click();
         }
-        await page.locator(`.sidebar a[href="/${subject}/unidad-1/index.html"]`).click();
-        await expect(page).toHaveURL(`/${subject}/unidad-1/index.html`);
+        await page.locator(`.sidebar a[href="${unitPath}"]`).click();
+        await expect(page).toHaveURL(unitPath);
       }
       if (isMobile) {
-        await page.getByRole('button', { name: 'Toggle Menu', exact: true }).click();
+        await page.getByRole('button', { name: 'Menú de materias', exact: true }).click();
         await page.locator('#drawer a[href="/"]').first().click();
       } else {
         await page.locator('.nav-bar a[href="/"]').click();

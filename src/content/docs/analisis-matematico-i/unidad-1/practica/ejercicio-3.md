@@ -3,6 +3,7 @@ title: Ejercicio 3 — Vaciado de un tanque
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-3
 sidebar:
   order: 3
+  label: Ejercicio 3
 ---
 
 

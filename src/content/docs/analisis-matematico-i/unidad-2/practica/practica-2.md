@@ -2,7 +2,8 @@
 title: Práctica 2 — Límite funcional y Continuidad
 slug: analisis-matematico-i/unidad-2/practica/practica-2
 sidebar:
-  order: 2
+  order: 0
+  label: Guía de práctica
 ---
 
 

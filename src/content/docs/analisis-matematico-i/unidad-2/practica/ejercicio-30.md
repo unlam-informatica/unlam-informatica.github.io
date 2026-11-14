@@ -3,6 +3,7 @@ title: Ejercicio 30 — Construcción de ejemplos
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-30
 sidebar:
   order: 30
+  label: Ejercicio 30
 ---
 
 

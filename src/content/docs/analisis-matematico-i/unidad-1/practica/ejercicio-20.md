@@ -3,6 +3,7 @@ title: Ejercicio 20 — Transformaciones de $\ln x$ y $e^x$
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-20
 sidebar:
   order: 20
+  label: Ejercicio 20
 ---
 
 

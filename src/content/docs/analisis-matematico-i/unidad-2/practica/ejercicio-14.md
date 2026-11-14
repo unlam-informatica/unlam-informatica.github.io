@@ -3,6 +3,7 @@ title: Ejercicio 14 — Límites trigonométricos
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-14
 sidebar:
   order: 14
+  label: Ejercicio 14
 ---
 
 

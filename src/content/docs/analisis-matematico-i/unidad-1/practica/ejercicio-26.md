@@ -3,6 +3,7 @@ title: Ejercicio 26 — Función inversa
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-26
 sidebar:
   order: 26
+  label: Ejercicio 26
 ---
 
 

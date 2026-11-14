@@ -1,0 +1,30 @@
+---
+import SidebarSublist from '@astrojs/starlight/components/SidebarSublist.astro';
+const { sidebar } = Astro.locals.starlightRoute;
+const courseGroups = sidebar.filter(entry => entry.type !== 'link' || entry.href !== '/');
+---
+
+<!-- Lucode's drawer only renders direct links. Reuse Starlight's recursive tree
+     inside that drawer so units and their sections are also available on mobile. -->
+<template id="mobile-course-sidebar">
+  <nav aria-label="Materias y unidades" data-pagefind-ignore="all">
+    <SidebarSublist sublist={courseGroups} />
+  </nav>
+</template>
+
+<script>
+  const template = document.querySelector<HTMLTemplateElement>('#mobile-course-sidebar');
+  const destination = document.querySelector('#drawer .links-docs');
+  if (template && destination) {
+    destination.replaceChildren(template.content);
+    template.remove();
+  }
+  const menuLabel = document.querySelector('button[popovertarget="drawer"] .sr-only');
+  if (menuLabel) menuLabel.textContent = 'Menú de materias';
+</script>
+
+<style is:global>
+  #drawer .body { height: calc(100% - 1.5rem); }
+  #drawer .links-docs { padding-block: 1rem; }
+  #drawer .links-docs a { min-height: 2rem; }
+</style>

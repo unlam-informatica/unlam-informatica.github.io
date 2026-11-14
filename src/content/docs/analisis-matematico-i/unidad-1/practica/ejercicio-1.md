@@ -3,6 +3,7 @@ title: Ejercicio 1 — Graficar, indicar dominio e imagen
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-1
 sidebar:
   order: 1
+  label: Ejercicio 1
 ---
 
 

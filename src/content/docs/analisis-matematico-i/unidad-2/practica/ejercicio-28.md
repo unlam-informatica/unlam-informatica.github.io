@@ -3,6 +3,7 @@ title: "Ejercicio 28 — Discontinuidades: tipo y redefinición"
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-28
 sidebar:
   order: 28
+  label: Ejercicio 28
 ---
 
 

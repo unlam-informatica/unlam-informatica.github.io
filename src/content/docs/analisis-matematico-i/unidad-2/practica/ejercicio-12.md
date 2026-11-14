@@ -3,6 +3,7 @@ title: Ejercicio 12 * — Costo $C(x)=5000+10x+0{,}05x^2$
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-12
 sidebar:
   order: 12
+  label: Ejercicio 12
 ---
 
 

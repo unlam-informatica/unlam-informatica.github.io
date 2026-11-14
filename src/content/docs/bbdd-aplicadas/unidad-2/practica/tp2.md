@@ -3,6 +3,7 @@ title: Práctica — Conceptos básicos de SQL
 slug: bbdd-aplicadas/unidad-2/practica/tp2
 sidebar:
   order: 1
+  label: Conceptos básicos de SQL
 ---
 
 [← Unidad 2](/bbdd-aplicadas/unidad-2/)

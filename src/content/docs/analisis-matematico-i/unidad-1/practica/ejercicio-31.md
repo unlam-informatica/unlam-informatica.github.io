@@ -3,6 +3,7 @@ title: Ejercicio 31* — Marea $y=5+4{,}9\cos\!\left(\tfrac\pi6 t\right)$
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-31
 sidebar:
   order: 31
+  label: Ejercicio 31
 ---
 
 

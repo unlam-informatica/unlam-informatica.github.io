@@ -3,6 +3,7 @@ title: Ejercicio 26 — Rumor $N(t)=5000(1-2^{-0{,}01t})$
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-26
 sidebar:
   order: 26
+  label: Ejercicio 26
 ---
 
 

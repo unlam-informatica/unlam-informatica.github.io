@@ -2,7 +2,8 @@
 title: Práctica 3 — Derivada
 slug: analisis-matematico-i/unidad-3/practica/practica-3
 sidebar:
-  order: 2
+  order: 0
+  label: Guía de práctica
 ---
 
 

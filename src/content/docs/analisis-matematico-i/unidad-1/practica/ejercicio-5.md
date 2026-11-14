@@ -3,6 +3,7 @@ title: Ejercicio 5* — Canaleta de desagüe
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-5
 sidebar:
   order: 5
+  label: Ejercicio 5
 ---
 
 

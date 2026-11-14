@@ -3,6 +3,7 @@ title: Laboratorio Práctico — tienda\_online
 slug: bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online
 sidebar:
   order: 2
+  label: Laboratorio — Tienda online
 ---
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/)

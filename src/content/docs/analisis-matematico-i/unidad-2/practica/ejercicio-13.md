@@ -3,6 +3,7 @@ title: Ejercicio 13 — Gas $V(P)=\dfrac{30}{P}$, $V:[1,12]\to[2{,}5;30]$
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-13
 sidebar:
   order: 13
+  label: Ejercicio 13
 ---
 
 

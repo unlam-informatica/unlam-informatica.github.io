@@ -3,6 +3,7 @@ title: Ejercicio 31 — Salto en la discontinuidad
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-31
 sidebar:
   order: 31
+  label: Ejercicio 31
 ---
 
 
