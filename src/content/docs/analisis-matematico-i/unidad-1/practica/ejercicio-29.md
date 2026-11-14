@@ -3,6 +3,7 @@ title: Ejercicio 29 — Gas (proporcionalidad inversa)
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-29
 sidebar:
   order: 29
+  label: Ejercicio 29
 ---
 
 

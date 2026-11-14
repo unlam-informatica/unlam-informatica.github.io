@@ -3,6 +3,7 @@ title: Ejercicio 28 — Resorte lineal $L(P)$
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-28
 sidebar:
   order: 28
+  label: Ejercicio 28
 ---
 
 

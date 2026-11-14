@@ -3,6 +3,7 @@ title: Ejercicio 17 — Límites laterales con exponenciales/logaritmos
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-17
 sidebar:
   order: 17
+  label: Ejercicio 17
 ---
 
 

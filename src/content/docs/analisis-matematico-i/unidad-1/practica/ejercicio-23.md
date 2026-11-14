@@ -3,6 +3,7 @@ title: Ejercicio 23 — Transformaciones de $\operatorname{sen}x$
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-23
 sidebar:
   order: 23
+  label: Ejercicio 23
 ---
 
 

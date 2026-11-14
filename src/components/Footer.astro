@@ -1,9 +1,11 @@
 ---
 import LucodeFooter from 'lucode-starlight/components/overrides/Footer.astro';
+import MobileSidebar from './MobileSidebar.astro';
 const isDoc = Astro.locals.starlightRoute.entry.data.template === 'doc';
 ---
 {isDoc && <p class="disclaimer">Sitio personal de apuntes. No es un sitio oficial de la Universidad Nacional de La Matanza (UNLaM).</p>}
 <LucodeFooter><slot /></LucodeFooter>
+<MobileSidebar />
 <script>
   // Local bundle; no CDN or external rendering service is needed.
   if (document.querySelector('.mermaid')) {

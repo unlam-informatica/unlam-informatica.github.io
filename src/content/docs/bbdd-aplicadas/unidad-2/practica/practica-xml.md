@@ -3,6 +3,7 @@ title: Práctica — XML en SQL Server
 slug: bbdd-aplicadas/unidad-2/practica/xml
 sidebar:
   order: 5
+  label: XML en SQL Server
 ---
 
 

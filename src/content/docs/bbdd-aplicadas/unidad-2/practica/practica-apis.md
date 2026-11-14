@@ -3,6 +3,7 @@ title: Práctica — APIs desde SQL Server
 slug: bbdd-aplicadas/unidad-2/practica/apis
 sidebar:
   order: 7
+  label: APIs desde SQL Server
 ---
 
 

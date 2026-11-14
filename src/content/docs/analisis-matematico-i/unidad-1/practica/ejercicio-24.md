@@ -3,6 +3,7 @@ title: Ejercicio 24* — Profundidad sinusoidal
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-24
 sidebar:
   order: 24
+  label: Ejercicio 24
 ---
 
 

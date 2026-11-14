@@ -3,6 +3,7 @@ title: Ejercicio 33 — Verdadero / Falso (justificar)
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-33
 sidebar:
   order: 33
+  label: Ejercicio 33
 ---
 
 

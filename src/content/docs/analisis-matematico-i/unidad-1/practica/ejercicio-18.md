@@ -3,6 +3,7 @@ title: Ejercicio 18* — Presión atmosférica
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-18
 sidebar:
   order: 18
+  label: Ejercicio 18
 ---
 
 

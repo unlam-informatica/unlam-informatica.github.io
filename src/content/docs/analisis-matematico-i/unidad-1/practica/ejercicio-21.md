@@ -3,6 +3,7 @@ title: Ejercicio 21 — Decibeles
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-21
 sidebar:
   order: 21
+  label: Ejercicio 21
 ---
 
 

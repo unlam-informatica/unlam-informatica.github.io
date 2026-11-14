@@ -14,6 +14,7 @@ export default function navigationIntegration() {
         const matrix = JSON.parse(await fs.readFile(new URL('migration/compatibility.json', config.root), 'utf8'));
         const files = (await fs.readdir(dir, { recursive: true })).filter(file => file.endsWith('.html'));
         const routes = new Map();
+        const searchPages = [];
         for (const file of files.filter(file => file.endsWith('index.html'))) {
           const canonical = '/' + file.slice(0, -'index.html'.length);
           routes.set(canonical, navigationPath(canonical));
@@ -45,10 +46,19 @@ export default function navigationIntegration() {
             const canonical = $('link[rel="canonical"]').attr('href');
             const destination = navigationHref(canonical, base, routes);
             refresh.attr('content', '0;url=' + destination);
-            $('script').text(`location.replace(${JSON.stringify(destination)}+location.search+location.hash)`);
+            let script = $('script').first();
+            if (!script.length) script = $('<script>').appendTo('body');
+            script.text(`location.replace(${JSON.stringify(destination)}+location.search+location.hash)`);
+            $('html').attr('lang', 'es');
+            $('title').text('Página trasladada');
+            $('a').first().text('Continuar al apunte');
+            $('html').attr('data-pagefind-ignore', 'all');
             changed = true;
           }
           if (changed) await fs.writeFile(location, $.html());
+          if (file.endsWith('index.html') && $('[data-pagefind-body]').length) {
+            searchPages.push({ url: '/' + file, content: changed ? $.html() : html });
+          }
         }
         // Starlight's search UI is retained. Its built-in indexer does not expose
         // keepIndexUrl, so build the index once here with Pagefind's native option.
@@ -58,9 +68,11 @@ export default function navigationIntegration() {
         };
         try {
           const { index } = check(await pagefind.createIndex({ keepIndexUrl: true }));
-          const { page_count } = check(await index.addDirectory({ path: fileURLToPath(dir), glob: '**/index.html' }));
+          // Index real notes only; unit directory redirects must not appear as
+          // duplicate search results after their content has been consolidated.
+          for (const page of searchPages) check(await index.addHTMLFile(page));
           check(await index.writeFiles({ outputPath: fileURLToPath(new URL('pagefind/', dir)) }));
-          logger.info(`Navigation prepared; ${page_count} pages indexed with explicit index.html URLs.`);
+          logger.info(`Navigation prepared; ${searchPages.length} pages indexed with explicit index.html URLs.`);
         } finally {
           await pagefind.close();
         }

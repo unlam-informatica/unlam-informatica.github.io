@@ -3,6 +3,7 @@ title: Ejercicio 21 — Bacterias $P(t)=\dfrac{4}{2+8e^{-2t}}$ (millones)
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-21
 sidebar:
   order: 21
+  label: Ejercicio 21
 ---
 
 

@@ -3,6 +3,7 @@ title: Ejercicio 6* — Suma y diferencia de límites
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-6
 sidebar:
   order: 6
+  label: Ejercicio 6
 ---
 
 

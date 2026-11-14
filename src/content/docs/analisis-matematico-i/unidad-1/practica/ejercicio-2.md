@@ -3,6 +3,7 @@ title: Ejercicio 2 — Celsius y Fahrenheit
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-2
 sidebar:
   order: 2
+  label: Ejercicio 2
 ---
 
 

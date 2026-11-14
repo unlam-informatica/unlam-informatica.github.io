@@ -70,10 +70,16 @@ for (const entry of matrix) {
   if (legacy && legacy.$('meta[http-equiv="refresh"]').length) {
    const refresh = legacy.$('meta[http-equiv="refresh"]').attr('content');
    if (refresh !== '0;url=' + entry.navigation) errors.push(`Unsafe legacy redirect ${entry.old}`);
+   if (!legacy.$('script').text().includes('location.search+location.hash')) errors.push(`Legacy redirect loses query/fragment ${entry.old}`);
   }
  }
 }
 const provenance = JSON.parse(fs.readFileSync('migration/sources.json'));
+for (const page of provenance.pages) {
+ for (const output of [page, ...(page.additionalOutputs || [])]) {
+  if (!fs.existsSync(output.output) || createHash('sha256').update(fs.readFileSync(output.output)).digest('hex') !== output.migratedSha256) errors.push(`Migrated page hash mismatch ${output.output}`);
+ }
+}
 for (const a of provenance.assets) {
  if (createHash('sha256').update(fs.readFileSync(a.output)).digest('hex') !== a.sha256 || createHash('sha256').update(fs.readFileSync('dist/'+a.output.slice(7))).digest('hex') !== a.sha256) errors.push(`Asset changed ${a.output}`);
 }

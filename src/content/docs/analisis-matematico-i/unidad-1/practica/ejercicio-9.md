@@ -3,6 +3,7 @@ title: Ejercicio 9 — Dominio natural
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-9
 sidebar:
   order: 9
+  label: Ejercicio 9
 ---
 
 

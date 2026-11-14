@@ -3,6 +3,7 @@ title: Ejercicio 20 — Repaso
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-20
 sidebar:
   order: 20
+  label: Ejercicio 20
 ---
 
 

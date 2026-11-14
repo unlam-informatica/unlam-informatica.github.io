@@ -3,6 +3,7 @@ title: Ejercicio 19* — Población de aves
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-19
 sidebar:
   order: 19
+  label: Ejercicio 19
 ---
 
 

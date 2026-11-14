@@ -3,6 +3,7 @@ title: Práctica — Window Functions
 slug: bbdd-aplicadas/unidad-1/practica/window-functions
 sidebar:
   order: 2
+  label: Window Functions
 ---
 
 

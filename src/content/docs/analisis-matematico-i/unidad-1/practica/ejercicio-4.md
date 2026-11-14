@@ -3,6 +3,7 @@ title: Ejercicio 4 — Resorte
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-4
 sidebar:
   order: 4
+  label: Ejercicio 4
 ---
 
 

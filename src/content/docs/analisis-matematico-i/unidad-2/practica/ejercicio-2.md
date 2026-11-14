@@ -3,6 +3,7 @@ title: Ejercicio 2 — Límites inmediatos
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-2
 sidebar:
   order: 2
+  label: Ejercicio 2
 ---
 
 

@@ -3,6 +3,7 @@ title: Práctica — Importación de archivos
 slug: bbdd-aplicadas/unidad-2/practica/importacion-archivos
 sidebar:
   order: 2
+  label: Importación de archivos
 ---
 
 

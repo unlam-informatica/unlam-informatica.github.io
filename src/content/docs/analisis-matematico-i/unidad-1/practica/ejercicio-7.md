@@ -3,6 +3,7 @@ title: Ejercicio 7 — Fórmula y dominio
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-7
 sidebar:
   order: 7
+  label: Ejercicio 7
 ---
 
 

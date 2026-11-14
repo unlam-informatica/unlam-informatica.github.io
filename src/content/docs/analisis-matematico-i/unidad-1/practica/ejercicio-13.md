@@ -3,6 +3,7 @@ title: Ejercicio 13 — Paridad
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-13
 sidebar:
   order: 13
+  label: Ejercicio 13
 ---
 
 

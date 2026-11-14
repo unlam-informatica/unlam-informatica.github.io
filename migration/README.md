@@ -106,7 +106,7 @@ con Chromium: portada, navegación, menú móvil, búsqueda de las tres materias
 fórmulas, desborde horizontal, redirecciones y todos los diagramas Mermaid.
 La emulación móvil no sustituye una revisión en hardware real con Safari.
 
-La validación comprueba también que las 195 páginas son alcanzables desde la
+La validación comprueba también que todas las páginas son alcanzables desde la
 portada. Playwright recorre esos enlaces por HTTP y prueba tarjetas, unidades,
 paginación, sidebar, menú, búsqueda, redirecciones y descargas mientras simula 404 en los
 directorios de las tres materias. Las pruebas no dependen de que la caché pública
@@ -115,6 +115,38 @@ se haya renovado.
 Los títulos largos de apuntes pueden ocupar varias líneas en sidebar y
 paginación, para conservar el área de lectura y pulsación en escritorio y móvil.
 Los reportes de navegador se generan en `playwright-report/` y CI los adjunta.
+
+## Organización de unidades y menús
+
+`src/config/sidebar.mjs` define los grupos nativos de Starlight con etiquetas
+explícitas: «Unidad 1», «Teoría», «Práctica» y «GeoGebra», en orden numérico.
+La generación automática se limita a los apuntes de cada sección. Las guías de
+práctica aparecen antes de los ejercicios; sus etiquetas se simplifican en el
+frontmatter para evitar fórmulas TeX o títulos extensos dentro del menú. El texto
+académico y los títulos de las páginas se conservan.
+
+Cada unidad de BBDD contiene solo `teoria/` y `practica/`. Sus antiguos
+`nav-teoria.md` y `nav-practica.md` pasan al `index.md` de la sección respectiva.
+El resumen, los resultados de aprendizaje y las tablas del índice de unidad se
+integran en esas dos presentaciones, con títulos de enlaces legibles. Hay 189
+páginas de contenido; las seis páginas de unidad redundantes son ahora
+redirecciones de compatibilidad hacia su presentación de Teoría. Los enlaces a
+ejercicios y laboratorios se encuentran también en la presentación de Práctica.
+
+La matriz conserva tanto `/bbdd-aplicadas/unidad-N/` como su `index.html`. Astro
+genera las redirecciones y la integración de navegación conserva consulta y ancla
+en el HTML publicado. `previousOutput`, `previousCanonical` y `additionalOutputs`
+en `sources.json` documentan el traslado y reparto del contenido, sin alterar los
+hashes de los originales. La validación comprueba los hashes de los archivos
+migrados, además de los recursos.
+
+El drawer de Lucode solo muestra enlaces directos. `MobileSidebar.astro` reutiliza
+el árbol recursivo nativo de Starlight dentro de ese mismo drawer, para navegar
+por materias, unidades y secciones en móvil, incluso desde la portada. El código
+académico y la apariencia general de Lucode se mantienen. Las pruebas abren Teoría
+y Práctica de las seis unidades en escritorio y móvil y comprueban las rutas
+anteriores contra los archivos de redirección que servirá GitHub Pages. El índice
+de búsqueda incluye solo páginas de contenido, excluyendo esas redirecciones.
 
 ## Despliegue y transición pendiente
 

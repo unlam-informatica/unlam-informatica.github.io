@@ -3,6 +3,7 @@ title: Práctica — Unidad 4 NoSQL / MongoDB
 slug: bbdd-aplicadas/unidad-4/practica/ejercicios
 sidebar:
   order: 1
+  label: Unidad 4 NoSQL / MongoDB
 ---
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/)

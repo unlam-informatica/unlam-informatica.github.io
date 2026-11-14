@@ -3,6 +3,7 @@ title: Ejercicio 12* — Beneficio de una empresa
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-12
 sidebar:
   order: 12
+  label: Ejercicio 12
 ---
 
 

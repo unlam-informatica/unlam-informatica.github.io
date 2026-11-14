@@ -3,6 +3,7 @@ title: Ejercicio 32 — Verdadero o Falso (justificar)
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-32
 sidebar:
   order: 32
+  label: Ejercicio 32
 ---
 
 

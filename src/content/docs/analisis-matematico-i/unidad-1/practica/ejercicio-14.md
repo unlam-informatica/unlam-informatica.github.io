@@ -3,6 +3,7 @@ title: Ejercicio 14 — Efecto de transformaciones
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-14
 sidebar:
   order: 14
+  label: Ejercicio 14
 ---
 
 

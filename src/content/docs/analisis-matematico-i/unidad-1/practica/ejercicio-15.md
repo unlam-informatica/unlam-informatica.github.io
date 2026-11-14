@@ -3,6 +3,7 @@ title: Ejercicio 15 — Reflexiones
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-15
 sidebar:
   order: 15
+  label: Ejercicio 15
 ---
 
 

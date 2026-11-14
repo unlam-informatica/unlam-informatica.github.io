@@ -3,6 +3,7 @@ title: Ejercicio 22* — Efecto sobre $f(x)=\operatorname{sen}x$
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-22
 sidebar:
   order: 22
+  label: Ejercicio 22
 ---
 
 

@@ -11,7 +11,7 @@ test('portada por año y navegación contextual', async ({ page, isMobile }, tes
   await page.locator('.sl-markdown-content a[href="/analisis-matematico-i/unidad-1/index.html"]').first().click();
   await expect(page).toHaveURL(/unidad-1\/index\.html$/);
   if (isMobile) {
-    await page.getByRole('button', { name: 'Toggle Menu', exact: true }).click();
+    await page.getByRole('button', { name: 'Menú de materias', exact: true }).click();
     await expect(page.locator('#drawer')).toBeVisible();
     await page.locator('#drawer a[href="/bbdd-aplicadas/index.html"]').first().click();
     await expect(page).toHaveURL(/bbdd-aplicadas\/index\.html$/);

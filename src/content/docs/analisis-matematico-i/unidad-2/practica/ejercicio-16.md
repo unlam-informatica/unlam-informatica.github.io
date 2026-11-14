@@ -3,6 +3,7 @@ title: Ejercicio 16 — Indeterminados en el infinito
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-16
 sidebar:
   order: 16
+  label: Ejercicio 16
 ---
 
 

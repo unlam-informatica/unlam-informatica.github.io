@@ -2,7 +2,8 @@
 title: GeoGebra — Guía práctica
 slug: analisis-matematico-i/geogebra
 sidebar:
-  order: 6
+  order: 0
+  label: Presentación
 ---
 
 

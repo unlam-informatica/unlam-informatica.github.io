@@ -3,6 +3,7 @@ title: Ejercicio 11 — Funciones por tramos
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-11
 sidebar:
   order: 11
+  label: Ejercicio 11
 ---
 
 

@@ -3,6 +3,7 @@ title: Ejercicio 24 — Asíntotas (AV, AH, AO)
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-24
 sidebar:
   order: 24
+  label: Ejercicio 24
 ---
 
 

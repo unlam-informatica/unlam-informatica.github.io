@@ -3,6 +3,7 @@ title: Ejercicio 16 — Graficar con transformaciones; dominio, imagen, ceros
 slug: analisis-matematico-i/unidad-1/practica/ejercicio-16
 sidebar:
   order: 16
+  label: Ejercicio 16
 ---
 
 

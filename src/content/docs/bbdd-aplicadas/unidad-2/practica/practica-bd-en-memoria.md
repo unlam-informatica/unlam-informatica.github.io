@@ -3,6 +3,7 @@ title: Práctica — BD en memoria (In-Memory OLTP)
 slug: bbdd-aplicadas/unidad-2/practica/bd-en-memoria
 sidebar:
   order: 6
+  label: BD en memoria (In-Memory OLTP)
 ---
 
 

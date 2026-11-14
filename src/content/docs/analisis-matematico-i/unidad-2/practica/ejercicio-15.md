@@ -3,6 +3,7 @@ title: Ejercicio 15 — Límites inmediatos en el infinito
 slug: analisis-matematico-i/unidad-2/practica/ejercicio-15
 sidebar:
   order: 15
+  label: Ejercicio 15
 ---
 
 
