@@ -5,3 +5,14 @@ playwright-report/
 test-results/
 .DS_Store
 node_modules
+
+# Pipeline académico: las fuentes de cátedra y sus derivados son privados.
+academic-sources/*/raw/
+academic-sources/*/processed/
+# Entornos, cachés y artefactos locales de Python.
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+*.log
