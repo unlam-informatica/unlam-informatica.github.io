@@ -279,22 +279,28 @@ Por ejemplo, $P(3,1)=(4,2)$ y $v-P(v)=(-1,-1)\in N$. Todos los puntos de la rect
 
 ## Autoevaluación
 
+1. Hallar el núcleo y la imagen de $T:P_2[\mathbb{R}]\to\mathbb{R}$, $T(p)=p(1)$.
+
 <details>
-<summary>1. Hallar el núcleo y la imagen de $T:P_2[\mathbb{R}]\to\mathbb{R}$, $T(p)=p(1)$.</summary>
+<summary>Respuesta</summary>
 
 $\operatorname{Nu}(T)=\{p:\ p(1)=0\}$, que son los múltiplos de $(x-1)$ en $P_2[\mathbb{R}]$: base $\{x-1,\ x^2-1\}$ (se obtiene de $a+b+c=0$, con $a=-b-c$). $\operatorname{Im}(T)=\mathbb{R}$, porque $T(t)=t$ para el polinomio constante $t$.
 
 </details>
 
+2. Si $T(v_1)=w$ y $T(v_2)=w$ con $v_1\neq v_2$, ¿qué se puede decir del núcleo?
+
 <details>
-<summary>2. Si $T(v_1)=w$ y $T(v_2)=w$ con $v_1\neq v_2$, ¿qué se puede decir del núcleo?</summary>
+<summary>Respuesta</summary>
 
 Que no es trivial: $T(v_1-v_2)=w-w=0_W$ con $v_1-v_2\neq 0_V$.
 
 </details>
 
+3. ¿Puede la imagen de una TL de $\mathbb{R}^3$ en $\mathbb{R}^3$ ser el plano $x+y+z=1$?
+
 <details>
-<summary>3. ¿Puede la imagen de una TL de $\mathbb{R}^3$ en $\mathbb{R}^3$ ser el plano $x+y+z=1$?</summary>
+<summary>Respuesta</summary>
 
 No: ese plano no pasa por el origen, así que no es subespacio, y la imagen siempre lo es.
 

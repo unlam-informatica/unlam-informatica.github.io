@@ -209,22 +209,28 @@ La fórmula es $T(x_1,x_2,x_3,x_4)=(x_3,x_4,0,0)$. Su imagen es $\operatorname{g
 
 ## Autoevaluación
 
+1. ¿Cuántas TL $T:\mathbb{R}^2\to\mathbb{R}^2$ cumplen $T(1,1)=(2,0)$?
+
 <details>
-<summary>1. ¿Cuántas TL $T:\mathbb{R}^2\to\mathbb{R}^2$ cumplen $T(1,1)=(2,0)$?</summary>
+<summary>Respuesta</summary>
 
 Infinitas: $\{(1,1)\}$ no es base de $\mathbb{R}^2$. Hay que elegir $T(0,1)$ libremente y queda determinada $T(1,0)=(2,0)-T(0,1)$.
 
 </details>
 
+2. ¿Existe $T:\mathbb{R}^2\to\mathbb{R}^2$ con $T(1,2)=(1,0)$, $T(2,4)=(0,1)$?
+
 <details>
-<summary>2. ¿Existe $T:\mathbb{R}^2\to\mathbb{R}^2$ con $T(1,2)=(1,0)$, $T(2,4)=(0,1)$?</summary>
+<summary>Respuesta</summary>
 
 No: $(2,4)=2(1,2)$ obligaría a $T(2,4)=2(1,0)=(2,0)\neq(0,1)$.
 
 </details>
 
+3. Si $T,S:V\to W$ coinciden sobre un conjunto generador de $V$, ¿qué se concluye?
+
 <details>
-<summary>3. Si $T,S:V\to W$ coinciden sobre un conjunto generador de $V$, ¿qué se concluye?</summary>
+<summary>Respuesta</summary>
 
 Que $T=S$: el conjunto contiene una base y las dos TL coinciden sobre ella (corolario del teorema).
 

@@ -230,22 +230,28 @@ y el polinomio es $(3u-2v)\cdot1+(v-u)(1+x)=(2u-v)+(v-u)\,x$. **Comprobación:**
 
 ## Autoevaluación
 
+1. Si $T:\mathbb{R}^4\to\mathbb{R}^2$ y $S:\mathbb{R}^2\to\mathbb{R}^4$, ¿puede $S\circ T$ ser automorfismo de $\mathbb{R}^4$?
+
 <details>
-<summary>1. Si $T:\mathbb{R}^4\to\mathbb{R}^2$ y $S:\mathbb{R}^2\to\mathbb{R}^4$, ¿puede $S\circ T$ ser automorfismo de $\mathbb{R}^4$?</summary>
+<summary>Respuesta</summary>
 
 No: $\operatorname{rango}(M(S\circ T))\le\dim\mathbb{R}^2=2<4$.
 
 </details>
 
+2. $M(T)_B$ tiene determinante 3 y $M(S)_B$ tiene determinante 2 ($T,S$ endomorfismos). ¿Qué vale $\det M(S\circ T)_B$ y cuánto $\det M(T^{-1})_B$?
+
 <details>
-<summary>2. $M(T)_B$ tiene determinante 3 y $M(S)_B$ tiene determinante 2 ($T,S$ endomorfismos). ¿Qué vale $\det M(S\circ T)_B$ y cuánto $\det M(T^{-1})_B$?</summary>
+<summary>Respuesta</summary>
 
 $\det\big(M(S)_BM(T)_B\big)=2\cdot3=6$; $\det M(T^{-1})_B=\det\big(M(T)_B^{-1}\big)=\tfrac13$.
 
 </details>
 
+3. Si $S\circ T$ es isomorfismo, ¿es $T$ mono? ¿Es $S$ epi?
+
 <details>
-<summary>3. Si $S\circ T$ es isomorfismo, ¿es $T$ mono? ¿Es $S$ epi?</summary>
+<summary>Respuesta</summary>
 
 Sí a las dos: $\operatorname{Nu}(T)\subseteq\operatorname{Nu}(S\circ T)=\{0\}$ y $U=\operatorname{Im}(S\circ T)\subseteq\operatorname{Im}(S)$.
 

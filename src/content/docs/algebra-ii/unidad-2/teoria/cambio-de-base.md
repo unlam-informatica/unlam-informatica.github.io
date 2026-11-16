@@ -194,22 +194,28 @@ $$
 
 ## Autoevaluación
 
+1. Si $M(T)_B=\begin{pmatrix}2&0\\0&3\end{pmatrix}$ y $B=\{(1,1),(1,-1)\}$, ¿cuánto vale $T(2,0)$?
+
 <details>
-<summary>1. Si $M(T)_B=\begin{pmatrix}2&0\\0&3\end{pmatrix}$ y $B=\{(1,1),(1,-1)\}$, ¿cuánto vale $T(2,0)$?</summary>
+<summary>Respuesta</summary>
 
 $(2,0)=(1,1)+(1,-1)$, así que $T(2,0)=2(1,1)+3(1,-1)=(5,-1)$.
 
 </details>
 
+2. ¿Cuánto vale $M(T)_{B_1B_1'}$ si $B_1=B$ y $B_1'=B'$?
+
 <details>
-<summary>2. ¿Cuánto vale $M(T)_{B_1B_1'}$ si $B_1=B$ y $B_1'=B'$?</summary>
+<summary>Respuesta</summary>
 
 Es la misma matriz $M(T)_{BB'}$: las dos matrices de cambio son la identidad.
 
 </details>
 
+3. Si $M(T)_E$ tiene determinante 5 y $M(T)_B$ es la matriz del mismo endomorfismo en otra base, ¿cuánto vale $\det M(T)_B$?
+
 <details>
-<summary>3. Si $M(T)_E$ tiene determinante 5 y $M(T)_B$ es la matriz del mismo endomorfismo en otra base, ¿cuánto vale $\det M(T)_B$?</summary>
+<summary>Respuesta</summary>
 
 También 5: $\det(C^{-1}MC)=\det(C)^{-1}\det(M)\det(C)=\det M$.
 

@@ -322,22 +322,28 @@ que lleva $(3,1,1)$ a $(1,2,1)$: primero $(3,1)\mapsto(-1,3)$ por la rotación, 
 
 ## Autoevaluación
 
+1. ¿Es lineal $T:\mathbb{R}^{2\times 2}\to\mathbb{R}$, $T(A)=a_{11}a_{22}$?
+
 <details>
-<summary>1. ¿Es lineal $T:\mathbb{R}^{2\times 2}\to\mathbb{R}$, $T(A)=a_{11}a_{22}$?</summary>
+<summary>Respuesta</summary>
 
 No. Con $A=B=I$: $T(I+I)=2\cdot 2=4$ y $T(I)+T(I)=2$. Falla la aditividad aunque $T(0)=0$.
 
 </details>
 
+2. Sea $T:\mathbb{R}^2\to\mathbb{R}^3$ lineal con $T(1,0)=(1,1,0)$ y $T(0,1)=(0,2,-1)$. Calcular $T(3,-2)$.
+
 <details>
-<summary>2. Sea $T:\mathbb{R}^2\to\mathbb{R}^3$ lineal con $T(1,0)=(1,1,0)$ y $T(0,1)=(0,2,-1)$. Calcular $T(3,-2)$.</summary>
+<summary>Respuesta</summary>
 
 Por la propiedad 4, $T(3,-2)=3T(1,0)-2T(0,1)=(3,3,0)-(0,4,-2)=(3,-1,2)$.
 
 </details>
 
+3. ¿Puede una TL $T:\mathbb{R}^2\to\mathbb{R}^2$ cumplir $T(1,1)=(2,0)$ y $T(2,2)=(3,1)$?
+
 <details>
-<summary>3. ¿Puede una TL $T:\mathbb{R}^2\to\mathbb{R}^2$ cumplir $T(1,1)=(2,0)$ y $T(2,2)=(3,1)$?</summary>
+<summary>Respuesta</summary>
 
 No: por homogeneidad, $T(2,2)=2T(1,1)=(4,0)\neq(3,1)$.
 

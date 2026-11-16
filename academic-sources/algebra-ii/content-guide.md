@@ -134,6 +134,9 @@ sidebar:
 - **No poner fórmulas con `|` dentro de tablas Markdown** (rompe la tabla). En tablas, fórmulas simples.
 - Sistemas: `\begin{cases} ... \end{cases}`. Alineación: `\begin{aligned} ... \end{aligned}`.
 - Los `$` literales (precios) se escriben `\$`.
+- **KaTeX no procesa el interior de etiquetas HTML**: nada de `$...$` dentro de `<summary>`,
+  `<figcaption>`, `<text>`, `<title>` o `<desc>`. Las preguntas con fórmulas van como párrafo antes de
+  `<details>`; los textos de figuras usan Unicode y `<sub>`/`<sup>` (⟨u, v⟩, u<sub>1</sub>, S<sup>⊥</sup>).
 
 ## 6. Estructura de una lección
 

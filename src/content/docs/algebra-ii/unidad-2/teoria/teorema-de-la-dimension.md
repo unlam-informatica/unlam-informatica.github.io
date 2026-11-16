@@ -178,22 +178,28 @@ Entre las columnas de $H$ están las tres canónicas de $\mathbb{Z}_2^3$ (column
 
 ## Autoevaluación
 
+1. $T:\mathbb{R}^4\to\mathbb{R}^2$ es lineal y no es nula. ¿Qué valores puede tomar $\dim\operatorname{Nu}(T)$?
+
 <details>
-<summary>1. $T:\mathbb{R}^4\to\mathbb{R}^2$ es lineal y no es nula. ¿Qué valores puede tomar $\dim\operatorname{Nu}(T)$?</summary>
+<summary>Respuesta</summary>
 
 $\dim\operatorname{Im}(T)\in\{1,2\}$ (no es $0$ porque $T$ no es nula, y no supera $2$). Luego $\dim\operatorname{Nu}(T)=4-\dim\operatorname{Im}(T)\in\{2,3\}$.
 
 </details>
 
+2. ¿Existe una TL $T:\mathbb{R}^3\to\mathbb{R}^3$ con $\operatorname{Nu}(T)=\operatorname{Im}(T)$?
+
 <details>
-<summary>2. ¿Existe una TL $T:\mathbb{R}^3\to\mathbb{R}^3$ con $\operatorname{Nu}(T)=\operatorname{Im}(T)$?</summary>
+<summary>Respuesta</summary>
 
 No: sería $3=2\dim\operatorname{Nu}(T)$, imposible con dimensiones enteras.
 
 </details>
 
+3. Sea $D:P_3[\mathbb{R}]\to P_3[\mathbb{R}]$ la derivación. Calcular $\dim\operatorname{Im}(D)$ usando el núcleo.
+
 <details>
-<summary>3. Sea $D:P_3[\mathbb{R}]\to P_3[\mathbb{R}]$ la derivación. Calcular $\dim\operatorname{Im}(D)$ usando el núcleo.</summary>
+<summary>Respuesta</summary>
 
 $\operatorname{Nu}(D)$ son los polinomios constantes, de dimensión 1. Entonces $\dim\operatorname{Im}(D)=4-1=3$ (y, en efecto, $\operatorname{Im}(D)=P_2[\mathbb{R}]$).
 

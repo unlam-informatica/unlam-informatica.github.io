@@ -210,22 +210,28 @@ $$
 
 ## Autoevaluación
 
+1. ¿Existe un monomorfismo $T:\mathbb{R}^4\to\mathbb{R}^3$? ¿Y un epimorfismo?
+
 <details>
-<summary>1. ¿Existe un monomorfismo $T:\mathbb{R}^4\to\mathbb{R}^3$? ¿Y un epimorfismo?</summary>
+<summary>Respuesta</summary>
 
 Mono no: exigiría $4=\dim\operatorname{Im}(T)\le 3$. Epi sí: por ejemplo $T(x_1,x_2,x_3,x_4)=(x_1,x_2,x_3)$; su núcleo es $\operatorname{gen}\{e_4\}$ y $4=1+3$.
 
 </details>
 
+2. Si $T:V\to V$ cumple $T(T(v))=0_V$ para todo $v$ y $V\neq\{0\}$, ¿puede ser automorfismo?
+
 <details>
-<summary>2. Si $T:V\to V$ cumple $T(T(v))=0_V$ para todo $v$ y $V\neq\{0\}$, ¿puede ser automorfismo?</summary>
+<summary>Respuesta</summary>
 
 No. Si lo fuera, sería mono, y $T(T(v))=0$ implicaría $T(v)=0$ y luego $v=0$ para todo $v$, o sea $V=\{0\}$.
 
 </details>
 
+3. ¿Son isomorfos $\mathbb{R}^{2\times 3}$ y $P_5[\mathbb{R}]$?
+
 <details>
-<summary>3. ¿Son isomorfos $\mathbb{R}^{2\times 3}$ y $P_5[\mathbb{R}]$?</summary>
+<summary>Respuesta</summary>
 
 Sí: ambos tienen dimensión 6. Un isomorfismo es $\begin{pmatrix}a&b&c\\d&e&f\end{pmatrix}\mapsto a+bx+cx^2+dx^3+ex^4+fx^5$.
 

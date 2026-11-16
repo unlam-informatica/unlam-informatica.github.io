@@ -45,7 +45,7 @@ Entonces $\langle w_2,w_1\rangle=\langle v_2,w_1\rangle-\langle v_2,w_1\rangle=0
 <text class="math" x="-42" y="-76">w₂</text>
 <text class="small" x="52" y="-4">proy</text>
 </svg>
-<figcaption>Con $v_1=(3,1)$ y $v_2=(1,3)$: se toma $w_1=v_1$, se proyecta $v_2$ sobre $w_1$ (el punto marcado, $(9/5,3/5)$) y se resta. Lo que queda, $w_2=v_2-\operatorname{proy}=(-4/5,12/5)$, es perpendicular a $w_1$; la segunda flecha punteada es $w_2$ trasladada a la punta de la proyección.</figcaption>
+<figcaption>Con v<sub>1</sub> = (3, 1) y v<sub>2</sub> = (1, 3): se toma w<sub>1</sub> = v<sub>1</sub>, se proyecta v<sub>2</sub> sobre w<sub>1</sub> (el punto marcado, (9/5, 3/5)) y se resta. Lo que queda, w<sub>2</sub> = v<sub>2</sub> − proy = (−4/5, 12/5), es perpendicular a w<sub>1</sub>; la segunda flecha punteada es w<sub>2</sub> trasladada a la punta de la proyección.</figcaption>
 </figure>
 
 ## El método y su demostración

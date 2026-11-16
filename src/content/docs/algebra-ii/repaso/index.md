@@ -110,7 +110,7 @@ Si dudaste, repasá [R.3 Sistemas lineales](/algebra-ii/repaso/sistemas-lineales
 
 En $\mathbb{Z}_2$ no: sumando las tres ecuaciones, el lado izquierdo es $2x+2y+2z=0$ (porque $1+1=0$) y el derecho es $1+1+1=1$, así que se llega a $0=1$. En $\mathbb{R}$ sí, y es única: $x=y=z=\frac12$. El mismo sistema puede cambiar de clasificación al cambiar el cuerpo.
 
-Si dudaste, repasá [R.3 Sistemas lineales](/algebra-ii/repaso/sistemas-lineales/#sistemas-sobre-ℤ₂).
+Si dudaste, repasá [R.3 Sistemas lineales](/algebra-ii/repaso/sistemas-lineales/#sistemas-sobre-ℤ).
 
 </details>
 

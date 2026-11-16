@@ -113,3 +113,9 @@ def test_la_palabra_todo_no_es_un_marcador_provisional():
     from content_pipeline.qa import PLACEHOLDER_RE
     assert not PLACEHOLDER_RE.search("Todo subespacio contiene al nulo y todos sus elementos.")
     assert PLACEHOLDER_RE.search("TODO: revisar") and PLACEHOLDER_RE.search("Página En Construcción")
+
+
+def test_formulas_dentro_de_html():
+    assert any("summary" in i for i in math_syntax_issues("<details>\n<summary>¿Es $x$ cero?</summary>\n\nSí.\n\n</details>"))
+    assert any("figcaption" in i for i in math_syntax_issues("<figcaption>El vector $v$.</figcaption>"))
+    assert math_syntax_issues("<summary>Resolución</summary>\n\nSea $x$.") == []

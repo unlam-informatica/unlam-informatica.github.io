@@ -34,6 +34,7 @@ PLACEHOLDER_RE = re.compile(
     r"pendiente de (?:redactar|completar|escribir)|contenido provisional)|\[\s*\.\.\.\s*\]"
 )
 STATEMENT_RE = re.compile(r"^:::note\[Enunciado\]", re.M)
+HTML_MATH_RE = re.compile(r"<(summary|figcaption|text|title|desc)\b[^>]*>(?:(?!</\1>).)*?(?<!\\)\$(?:(?!</\1>).)*?</\1>", re.S)
 SOLUTION_RE = re.compile(r"^<summary>\s*Resoluci[oó]n|^:::tip\[Resoluci[oó]n", re.M)
 LEVELS = ("inicial", "intermedio", "avanzado")
 VERIFICATIONS = ("sympy", "razonamiento")
@@ -97,6 +98,8 @@ def math_syntax_issues(body: str) -> list[str]:
             issues.append(f"línea {number}: '$$' debe ir en una línea propia")
     if in_block:
         issues.append("bloque '$$' sin cerrar")
+    for match in HTML_MATH_RE.finditer(text):
+        issues.append(f"fórmula dentro de <{match.group(1)}> (KaTeX no la procesa)")
     for paragraph in re.split(r"\n\s*\n", text):
         if paragraph.strip() == "$$" or paragraph.strip().startswith("$$"):
             continue

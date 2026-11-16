@@ -99,7 +99,7 @@ La fórmula tiene una lectura geométrica: el término $\dfrac{\langle v,u_i\ran
 <text class="small" x="88" y="-40">3u₁</text>
 <text class="small" x="-48" y="-58">2u₂</text>
 </svg>
-<figcaption>En la base ortogonal $u_1=(2,1)$, $u_2=(-1,2)$ el vector $v=(4,7)$ se descompone como $3u_1+2u_2$. Los dos sumandos son perpendiculares y forman con $v$ un rectángulo; cada coordenada es el cociente $\langle v,u_i\rangle/\langle u_i,u_i\rangle$.</figcaption>
+<figcaption>En la base ortogonal u<sub>1</sub> = (2, 1), u<sub>2</sub> = (−1, 2) el vector v = (4, 7) se descompone como 3u<sub>1</sub> + 2u<sub>2</sub>. Los dos sumandos son perpendiculares y forman con v un rectángulo; cada coordenada es el cociente ⟨v, u<sub>i</sub>⟩ / ⟨u<sub>i</sub>, u<sub>i</sub>⟩.</figcaption>
 </figure>
 
 ### Consecuencias: producto y norma en coordenadas

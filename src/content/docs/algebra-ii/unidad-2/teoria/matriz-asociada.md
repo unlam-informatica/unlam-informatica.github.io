@@ -243,22 +243,28 @@ Sea $M=M(T)_{BB'}\in K^{m\times n}$, con $n=\dim V$ y $m=\dim W$.
 
 ## Autoevaluación
 
+1. Si $T:P_3[\mathbb{R}]\to\mathbb{R}^{2\times 2}$, ¿de qué tamaño es cualquier $M(T)_{BB'}$?
+
 <details>
-<summary>1. Si $T:P_3[\mathbb{R}]\to\mathbb{R}^{2\times 2}$, ¿de qué tamaño es cualquier $M(T)_{BB'}$?</summary>
+<summary>Respuesta</summary>
 
 $\dim\mathbb{R}^{2\times2}=4$ filas y $\dim P_3[\mathbb{R}]=4$ columnas: es $4\times4$.
 
 </details>
 
+2. $M(T)_{BB'}$ es de $3\times 5$ y tiene rango 3. ¿Qué se puede decir de $T$?
+
 <details>
-<summary>2. $M(T)_{BB'}$ es de $3\times 5$ y tiene rango 3. ¿Qué se puede decir de $T$?</summary>
+<summary>Respuesta</summary>
 
 $T:V\to W$ con $\dim V=5$ y $\dim W=3$. Como $\operatorname{rango}(M)=3=\dim W$, es epimorfismo; $\dim\operatorname{Nu}(T)=5-3=2$, así que no es mono.
 
 </details>
 
+3. Si $M(T)_B=I$ para una base $B$, ¿quién es $T$?
+
 <details>
-<summary>3. Si $M(T)_B=I$ para una base $B$, ¿quién es $T$?</summary>
+<summary>Respuesta</summary>
 
 La identidad: $T(b_j)=b_j$ para todo $j$ de la base, y por el teorema fundamental $T=\operatorname{id}_V$.
 

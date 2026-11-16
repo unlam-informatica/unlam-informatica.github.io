@@ -108,7 +108,7 @@ El método no se limita a rectas. Lo único que se exige es que el modelo sea **
 <text class="small" x="-8" y="-118" text-anchor="end">6</text>
 <text class="math" x="150" y="-84">y = 0,6 + 1,2x</text>
 </svg>
-<figcaption>Los cinco puntos del Ejemplo 1 y la recta de cuadrados mínimos $y=0{,}6+1{,}2x$. Los segmentos son los residuos verticales; la recta minimiza la suma de sus cuadrados, $\tfrac85$, y la suma (con signo) de los residuos es cero. Escala: $1$ unidad en $x$ son $40$ y $1$ unidad en $y$ son $20$ unidades del dibujo.</figcaption>
+<figcaption>Los cinco puntos del Ejemplo 1 y la recta de cuadrados mínimos y = 0,6 + 1,2x. Los segmentos son los residuos verticales; la recta minimiza la suma de sus cuadrados, 8/5, y la suma (con signo) de los residuos es cero. Escala: 1 unidad en x son 40 y 1 unidad en y son 20 unidades del dibujo.</figcaption>
 </figure>
 
 ## Ejemplos

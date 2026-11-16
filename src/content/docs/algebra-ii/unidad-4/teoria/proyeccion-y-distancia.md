@@ -66,7 +66,7 @@ Algunas consecuencias inmediatas:
 <text class="math" x="58" y="-4">p</text>
 <text class="math" x="48" y="-60">r</text>
 </svg>
-<figcaption>Proyección de $v=(1,3)$ sobre la recta $L=\operatorname{gen}\{(3,1)\}$. El vector $p=\operatorname{proy}_L(v)=(9/5,3/5)$ está sobre $L$ y el vector $r=v-p=(-4/5,12/5)$ es perpendicular a $L$. La longitud de $r$ es la distancia de $v$ a $L$.</figcaption>
+<figcaption>Proyección de v = (1, 3) sobre la recta L = gen{(3, 1)}. El vector p = proy<sub>L</sub>(v) = (9/5, 3/5) está sobre L y el vector r = v − p = (−4/5, 12/5) es perpendicular a L. La longitud de r es la distancia de v a L.</figcaption>
 </figure>
 
 ### La fórmula exige una base ortogonal
@@ -197,7 +197,7 @@ Ambos caminos coinciden. La distancia es $d(v,S)=\lVert(2,2,2)\rVert=\sqrt{12}=2
 <text class="math" x="64" y="2">p</text>
 <text class="math" x="64" y="-28">q</text>
 </svg>
-<figcaption>Dibujo en perspectiva del Ejemplo 3: $v=p+q$, con $p=(3,-1,-2)=2a+b$ en el plano $S:\ x+y+z=0$ y $q=(2,2,2)$ sobre la recta normal $S^\perp$. En una perspectiva los ángulos no se conservan: lo que se ve es la estructura (el plano, su normal y la descomposición), no las medidas.</figcaption>
+<figcaption>Dibujo en perspectiva del Ejemplo 3: v = p + q, con p = (3, −1, −2) = 2a + b en el plano S: x + y + z = 0 y q = (2, 2, 2) sobre la recta normal S<sup>⊥</sup>. En una perspectiva los ángulos no se conservan: lo que se ve es la estructura (el plano, su normal y la descomposición), no las medidas.</figcaption>
 </figure>
 
 ### Ejemplo 4 · Proyección con un producto no usual, por tres métodos
