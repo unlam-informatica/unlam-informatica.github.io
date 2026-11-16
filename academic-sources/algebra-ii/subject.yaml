@@ -1,0 +1,171 @@
+# Reglas de clasificación de las fuentes de Álgebra y Geometría Analítica II (3645).
+# `match` usa comodines sobre la ruta relativa a raw/, sin distinguir mayúsculas ni acentos;
+# `*` también cruza carpetas. Las reglas se aplican en orden: las posteriores pisan a las anteriores.
+# Licencias: ninguna fuente local se redistribuye; el catálogo solo registra procedencia.
+id: algebra-ii
+id_prefix: algebra-ii
+name: Álgebra y Geometría Analítica II
+code: "3645"
+program: programa/661_3645_AlgebrayGeometriaAnaliticaII.pdf
+
+defaults:
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+
+rules:
+  # Programa oficial descargado del sitio del DIIT (público, pero se enlaza en lugar de copiarse).
+  - match: "programa/*"
+    doc_type: programa
+    source: DIIT-UNLaM (sitio oficial)
+    version: "2023"
+    license: publico-enlazable
+    units: [u1, u2, u3, u4]
+
+  # Material de cátedra organizado por tema.
+  - match: "1 - espacios vectoriales*"
+    doc_type: guia-estudio
+    source: Cátedra AyGA II (UNLaM)
+    units: [u1]
+  - match: "2 - coordenadas*"
+    doc_type: guia-estudio
+    source: Cátedra AyGA II (UNLaM)
+    units: [u1]
+  - match: "3 - transformacion lineal*"
+    doc_type: guia-estudio
+    source: Cátedra AyGA II (UNLaM)
+    units: [u2]
+  - match: "4 - transformacion lineal*"
+    doc_type: guia-estudio
+    source: Cátedra AyGA II (UNLaM)
+    units: [u2]
+  - match: ["*resuelt*", "*autoevaluacion*"]
+    doc_type: resolucion
+  - match: "*apunte*"
+    doc_type: apunte
+  - match: "1 - espacios vectoriales*/otros apuntes/*"
+    doc_type: apunte-externo
+    source: Apunte externo a la cátedra (autoría en el documento)
+    units: [u1]
+  - match: "*/otros apuntes/espacios vectoriales y aplicaciones lineales.pdf"
+    units: [u1, u2]
+  - match: "*/otros apuntes/identidades trigonometricas.pdf"
+    doc_type: fuera-de-programa
+    units: []
+    extraction: skip
+  - match: "*.mp4"
+    doc_type: clase-grabada
+    source: Cátedra AyGA II (UNLaM), clase grabada
+    extraction: asr
+
+  # Guía oficial de actividades y respuestas (edición para Informática).
+  - match: "guia de actividades.pdf"
+    doc_type: guia-practica
+    source: Cátedra AyGA II (UNLaM), coord. M. Falsetti
+    units: [u1, u2, u3, u4]
+  - match: "guia de actividades - respuestas.pdf"
+    doc_type: respuestas
+    source: Cátedra AyGA II (UNLaM), coord. M. Falsetti
+    units: [u1, u2, u3, u4]
+  - match: "documento sin titulo.docx"
+    doc_type: nota-personal
+    source: Nota personal (lista de temas y texto generado por IA; no es fuente académica)
+    units: [u1, u2]
+    extraction: text
+
+  # Bibliografía: solo portada, créditos e índice (obras con derechos de autor).
+  - match: ["bibliografia/*", "other sources/libros/*"]
+    doc_type: bibliografia
+    source: Editorial (ver ficha del libro)
+    license: copyright-editorial
+    units: []
+    extraction: front-matter
+
+  # Material histórico de otros cuatrimestres (planes anteriores incluidos).
+  - match: "other sources/1er parcial/*"
+    doc_type: parcial
+    source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+    units: [u1, u2]
+  - match: "other sources/1er parcial/parcialito-1.pdf"
+    units: [u3]
+  - match: "other sources/2do parcial/*"
+    doc_type: parcial
+    source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+    units: [u3, u4]
+  - match: "other sources/finales/*"
+    doc_type: final
+    source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+    units: [u1, u2, u3, u4]
+  - match: "other sources/tps/*"
+    doc_type: trabajo-practico
+    source: Cátedra AyGA II (UNLaM), cuatrimestres anteriores
+    units: [u1, u2, u3]
+  - match: "other sources/tps/parcialito-2*"
+    doc_type: parcial
+    units: [u4]
+  - match: "other sources/tps/*.jpg"
+    units: [u1]
+  - match: "other sources/practcompleta2016.pdf"
+    doc_type: guia-practica
+    source: Cátedra AyGA II (UNLaM), guía 2016 (plan anterior)
+    version: "2016"
+    units: [u1, u2, u3, u4]
+  - match: "other sources/apuntes/*"
+    doc_type: apunte
+    source: Cátedra AyGA II (UNLaM), apuntes de años anteriores
+  - match: "other sources/apuntes/transformaciones lineales.pdf"
+    units: [u2]
+  - match: "other sources/apuntes/apunte---cambio-de-coordenadas*"
+    units: [u1, u2]
+  - match: "other sources/apuntes/autovalores*"
+    units: [u3]
+  - match: "other sources/apuntes/diagonalizacion*"
+    units: [u3]
+    notes: "Diagonalización ortogonal de simétricas: fuera del programa 2023 como tema propio."
+  - match: "other sources/apuntes/espacios-euclideos.pdf"
+    units: [u4]
+  - match: ["other sources/apuntes/conicas*", "other sources/apuntes/3.4.*"]
+    doc_type: fuera-de-programa
+    units: []
+    extraction: skip
+  - match: "other sources/practicas/*"
+    doc_type: resolucion
+    source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  - match: "other sources/practicas/*subespacio*"
+    units: [u1]
+  - match: "other sources/practicas/*tl1*"
+    units: [u2]
+  - match: ["other sources/practicas/*autovalores*", "other sources/practicas/*diagonalizacion*"]
+    units: [u3]
+  - match: ["other sources/practicas/*gram-schmidt*", "other sources/practicas/*proyeccion*", "other sources/practicas/*ortogonalizacion*", "other sources/practicas/*aproximacion*"]
+    units: [u4]
+  - match: "other sources/practicas/ejercicios-semanales-22.pdf"
+    units: [u1, u2, u3, u4]
+  - match: ["other sources/practicas/*conicas*", "other sources/practicas/*transformaciones-ortogonales*"]
+    doc_type: fuera-de-programa
+    units: []
+    extraction: skip
+  - match: "other sources/edas/*"
+    doc_type: resolucion-alumno
+    source: Resoluciones manuscritas de alumnos (imágenes; contienen errores)
+  - match: "other sources/edas/eda1.docx"
+    units: [u2]
+  - match: "other sources/edas/eda2.docx"
+    units: [u2, u3]
+  - match: "other sources/edas/eda3.docx"
+    units: [u4]
+  - match: "other sources/*.jpg"
+    extraction: full
+
+qa:
+  forbidden:
+    - pattern: "\\\\ker\\b|\\\\operatorname\\{Ker\\}"
+      message: "Usar \\operatorname{Nu}(T) para el núcleo"
+    - pattern: "\\\\operatorname\\{span\\}|\\\\text\\{span\\}"
+      message: "Usar \\operatorname{gen}\\{...\\}"
+    - pattern: "\\\\det\\(A ?- ?\\\\lambda I\\)"
+      message: "El polinomio característico de la cátedra es det(λI − A); aclarar si se usa det(A − λI)"
+    - pattern: "P_\\{[^}]*\\\\leftarrow"
+      message: "Notación de libro (P_{B'←B}); permitida solo en avisos de equivalencia"
+    - pattern: "A\\^T\\b|\\^\\{T\\}"
+      message: "La transpuesta se escribe A^t"
