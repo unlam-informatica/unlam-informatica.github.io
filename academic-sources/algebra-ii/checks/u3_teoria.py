@@ -240,6 +240,22 @@ def _():
     require(es_autovector(B.T, (1, 1), 3), "(1,1) sí es autovector de B^t")
 
 
+@check("U3.T03.E5", "Los autovalores no son aditivos", page=T03)
+def _():
+    A = sp.Matrix([[0, 1], [0, 0]])
+    B = sp.Matrix([[0, 0], [1, 0]])
+    require(raices(A) == {0: 2} and raices(B) == {0: 2}, "autovalor 0 en ambas")
+    same(cp(A + B), lam**2 - 1, "p_{A+B}")
+    require(raices(A * B) == {1: 1, 0: 1}, "autovalores de AB")
+    R = sp.Matrix([[0, -1], [1, 0]])
+    same(R**2, -sp.eye(2), "R^2 = -I tiene autovalor real -1")
+    require(not [r for r in raices(R) if r.is_real], "R sin autovalores reales")
+    # Autoevaluación: autovalores 1, 2, 5 -> det(A^2+I) = 2*5*26; A=[[2,1],[0,3]] filas de suma 3, traza 5
+    same(2 * 5 * 26, 260, "det(A^2+I)")
+    M = sp.Matrix([[2, 1], [0, 3]])
+    require(all(sum(M.row(i)) == 3 for i in range(2)) and M.trace() == 5, "autoevaluación 2")
+
+
 # ---------------------------------------------------------------------------
 # 3.4 Matrices semejantes
 # ---------------------------------------------------------------------------
@@ -301,6 +317,23 @@ def _():
         same(B**k, Bk, f"B^{k}")
         same(A**k, sp.Matrix([[1 - k, k], [-k, 1 + k]]), f"A^{k}")
         same(C * Bk * C.inv(), A**k, f"A^{k} = C B^{k} C^-1")
+
+
+@check("U3.T04.E5", "I y N no son semejantes", page=T04)
+def _():
+    N = sp.Matrix([[1, 1], [0, 1]])
+    same(cp(N), cp(sp.eye(2)), "mismo polinomio")
+    same(N.trace(), 2, "traza")
+    same(N.det(), 1, "det")
+    same((sp.eye(2) - N).rank(), 1, "m_g(1) de N es 1")
+    a, b, c, d = sp.symbols("a b c d")
+    Cg = sp.Matrix([[a, b], [c, d]])
+    ecuaciones = list(sp.eye(2) * Cg - Cg * N)
+    sol = sp.solve(ecuaciones, [a, c], dict=True)
+    require(sol == [{a: 0, c: 0}], f"IC = CN fuerza a=c=0: {sol}")
+    same(Cg.subs({a: 0, c: 0}).det(), 0, "C no inversible")
+    # Autoevaluación: tr y det de semejantes
+    same((sp.Integer(6)) ** 2, 36, "det(B^2)")
 
 
 # ---------------------------------------------------------------------------
@@ -454,6 +487,32 @@ def _():
     N = sp.Matrix([[1, 1], [0, 1]])
     for k in range(0, 10):
         same(N**k, sp.Matrix([[1, k], [0, 1]]), f"N^{k}")
+
+
+@check("U3.T06.E6", "Exponenciación binaria de matrices", page=T06)
+def _():
+    def mat_mul(A, B):
+        n, m, p = len(A), len(B), len(B[0])
+        return [[sum(A[i][t] * B[t][j] for t in range(m)) for j in range(p)] for i in range(n)]
+
+    def mat_pow(A, k):
+        resultado = [[int(i == j) for j in range(len(A))] for i in range(len(A))]
+        while k > 0:
+            if k & 1:
+                resultado = mat_mul(resultado, A)
+            A = mat_mul(A, A)
+            k >>= 1
+        return resultado
+
+    A = [[4, -2], [1, 1]]
+    require(mat_pow(A, 10) == [[117074, -116050], [58025, -57001]], "A^10")
+    for k in range(0, 15):
+        same(sp.Matrix(mat_pow(A, k)), sp.Matrix(A) ** k, f"A^{k}")
+    require(mat_pow([[1, 1], [1, 0]], 90)[0][1] == 2880067194370816120, "F_90")
+    # autoevaluación: A^5 y A^-2 de autovalores 2, -1, 1/2; 1000 en binario
+    require([x**5 for x in (2, -1, sp.Rational(1, 2))] == [32, -1, sp.Rational(1, 32)], "A^5")
+    require([x**-2 for x in (2, -1, sp.Rational(1, 2))] == [sp.Rational(1, 4), 1, 4], "A^-2")
+    require(bin(1000) == "0b1111101000" and bin(1000).count("1") == 6, "1000 en binario")
 
 
 # ---------------------------------------------------------------------------
@@ -667,3 +726,47 @@ def _():
     require(es_regular(S) is None, "S no es regular")
     I2 = sp.eye(2)
     require(len((I2 - I2).nullspace()) == 2, "I: autoespacio de 1 de dimensión 2")
+
+
+@check("U3.T07.E7", "Fibonacci iterativo con enteros exactos", page=T07)
+def _():
+    def fib_iterativo(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+
+    same(fib_iterativo(30), 832040, "F_30")
+    same(fib_iterativo(90), 2880067194370816120, "F_90")
+    same(fib_iterativo(31), 1346269, "F_31")
+    require(abs(sp.Rational(1346269, 832040) - (1 + sp.sqrt(5)) / 2) < sp.Rational(1, 10**11), "F_31/F_30 ≈ φ")
+    require(abs(sp.N((1 + sp.sqrt(5)) / 2) ** 10 / sp.sqrt(5) - 55) < sp.Rational(1, 100), "φ^10/√5 ≈ 55")
+    # L(n) = 2 F_{n+1} − 1 para n = 30, 50
+    same(2 * fib_iterativo(31) - 1, 2692537, "L(30)")
+    same(2 * fib_iterativo(51) - 1, 40730022147, "L(50)")
+    # autoevaluación 1: λ² − 5λ + 6 y λ² − 6λ + 9
+    same(sp.factor(lam**2 - 5 * lam + 6), (lam - 2) * (lam - 3), "raíces 2 y 3")
+    same(sp.factor(lam**2 - 6 * lam + 9), (lam - 3) ** 2, "raíz doble 3")
+
+
+@check("U3.T08.E5", "Estado absorbente: converge sin ser regular", page=T08)
+def _():
+    r = sp.Rational
+    P = sp.Matrix([[1, r(1, 2)], [0, r(1, 2)]])
+    require(raices(P) == {1: 1, r(1, 2): 1}, "autovalores 1 y 1/2")
+    for k in range(1, 10):
+        same(P**k, sp.Matrix([[1, 1 - r(1, 2**k)], [0, r(1, 2**k)]]), f"P^{k}")
+        require((P**k)[1, 0] == 0, "entrada (2,1) nula: no regular")
+    same(estacionario(P), columna(1, 0), "estacionario (1,0)")
+    # PageRank: aproximación de x_20 y polinomio característico (texto de 3.8)
+    h = r(1, 2)
+    PR = sp.Matrix([[0, 0, 1, 1], [h, 0, 0, 0], [h, h, 0, 0], [0, h, 0, 0]])
+    x20 = PR**20 * columna(*[r(1, 4)] * 4)
+    aprox = [r(4001, 10000), r(2000, 10000), r(2999, 10000), r(1000, 10000)]
+    require(all(abs(x20[i] - aprox[i]) < r(1, 5000) for i in range(4)), "x_20 ≈ (0,4001; 0,2000; 0,2999; 0,1000)")
+    # Autoevaluación: [[0.5,0.2],[0.5,0.8]] y [[0.9,0.4],[0.1,0.6]]
+    for Q in (sp.Matrix([[r(1, 2), r(1, 5)], [r(1, 2), r(4, 5)]]), sp.Matrix([[r(9, 10), r(2, 5)], [r(1, 10), r(3, 5)]])):
+        require(all(x >= 0 for x in Q) and all(sum(Q.col(j)) == 1 for j in range(2)), "estocástica")
+    same(estacionario(sp.Matrix([[r(9, 10), r(2, 5)], [r(1, 10), r(3, 5)]])), columna(r(4, 5), r(1, 5)), "estacionario 4:1")
+    S3 = sp.Matrix([[r(8, 10), r(3, 10), r(5, 10)], [r(1, 10), r(6, 10), 0], [r(1, 10), r(1, 10), r(5, 10)]])
+    same((sp.eye(3) - S3).det(), 0, "det(I-P)=0")
