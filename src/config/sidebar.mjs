@@ -42,6 +42,34 @@ export const sidebar = [
     ],
   },
   {
+    label: '3er año · Álgebra II',
+    collapsed: true,
+    items: [
+      { slug: 'algebra-ii', label: 'Presentación' },
+      { slug: 'algebra-ii/programa', label: 'Programa' },
+      { slug: 'algebra-ii/como-estudiar', label: 'Cómo estudiar' },
+      { slug: 'algebra-ii/notacion', label: 'Notación' },
+      { slug: 'algebra-ii/laboratorio', label: 'Laboratorio interactivo' },
+      notes('Repaso de Álgebra I', 'algebra-ii/repaso'),
+      ...[
+        'Espacios vectoriales',
+        'Transformaciones lineales',
+        'Autovalores y autovectores',
+        'Espacios con producto interno',
+      ].map((title, index) => ({
+        label: `Unidad ${index + 1} · ${title}`,
+        collapsed: true,
+        items: [
+          { slug: `algebra-ii/unidad-${index + 1}`, label: 'Presentación' },
+          notes('Teoría', `algebra-ii/unidad-${index + 1}/teoria`),
+          notes('Práctica', `algebra-ii/unidad-${index + 1}/practica`),
+        ],
+      })),
+      notes('Integradores y simulacros', 'algebra-ii/integradores'),
+      { slug: 'algebra-ii/bibliografia', label: 'Bibliografía' },
+    ],
+  },
+  {
     label: '3er año · Diseño de Software',
     collapsed: true,
     items: [

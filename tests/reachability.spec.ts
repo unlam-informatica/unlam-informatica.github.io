@@ -3,7 +3,7 @@ import { load } from 'cheerio';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const subjects = ['analisis-matematico-i', 'bbdd-aplicadas', 'diseno-de-software'];
+const subjects = ['analisis-matematico-i', 'bbdd-aplicadas', 'diseno-de-software', 'algebra-ii'];
 const walk = (dir: string): string[] => readdirSync(dir, { withFileTypes: true }).flatMap(entry =>
   entry.isDirectory() ? walk(join(dir, entry.name)) : [join(dir, entry.name)]);
 const destinations = new Set(walk('dist').filter(file => file.endsWith('/index.html') && load(readFileSync(file, 'utf8'))('[data-pagefind-body]').length)
@@ -37,7 +37,7 @@ test.describe('navegación con 404 de directorio en caché', () => {
       route => route.fulfill({ status: 404, contentType: 'text/html', body: '<h1>404</h1>' }));
   });
 
-  test('tarjetas, unidades, paginación y menú funcionan en las tres materias', async ({ page, isMobile }) => {
+  test('tarjetas, unidades, paginación y menú funcionan en las cuatro materias', async ({ page, isMobile }) => {
     for (const subject of subjects) {
       const unitPath = `/${subject}/unidad-1/${subject === 'bbdd-aplicadas' ? 'teoria/' : ''}index.html`;
       await page.goto('/');
@@ -73,7 +73,7 @@ test.describe('navegación con 404 de directorio en caché', () => {
   });
 
   test('búsqueda y redirecciones históricas evitan los directorios', async ({ page }) => {
-    for (const term of ['derivada', 'transacciones', 'patrones']) {
+    for (const term of ['derivada', 'transacciones', 'patrones', 'autovalores']) {
       await page.goto('/');
       await page.getByRole('button', { name: 'Buscar', exact: true }).click();
       await page.locator('.pagefind-ui__search-input').fill(term);

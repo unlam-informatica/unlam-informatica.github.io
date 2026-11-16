@@ -1,0 +1,57 @@
+---
+title: Laboratorio de transformaciones del plano
+description: Herramienta interactiva para ver cómo una matriz 2×2 transforma el plano, con actividades sobre núcleo, determinante, autovectores y diagonalización.
+slug: algebra-ii/laboratorio
+sidebar:
+  order: 5
+  label: Laboratorio interactivo
+---
+import TransformacionPlano from '../../../components/algebra/TransformacionPlano.astro';
+
+Una matriz $A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ define la transformación lineal
+$T(x)=Ax$ del plano en sí mismo. Como $T$ queda determinada por las imágenes de una base
+([teorema fundamental](/algebra-ii/unidad-2/teoria/teorema-fundamental/)), alcanza con mirar dónde van
+$e_1=(1,0)$ y $e_2=(0,1)$: son las columnas de $A$. Todo lo demás —la grilla deformada, el
+paralelogramo, las direcciones que no giran— es consecuencia de esas dos columnas.
+
+Modificá las entradas de la matriz o elegí un ejemplo. Debajo de la figura se informan el
+determinante, la traza, los autovalores reales y si la matriz es inversible.
+
+<TransformacionPlano id="lab-principal" a={2} b={1} c={1} d={2} />
+
+## Actividades
+
+Cada actividad se resuelve con la herramienta y después **se justifica con la teoría**: lo que se ve
+en la figura es un indicio, no una demostración.
+
+1. **Columnas e imágenes.** Con $A=\begin{pmatrix}1&2\\0&1\end{pmatrix}$, predecí dónde quedan $e_1$, $e_2$
+   y el punto $(1,1)$ antes de cargarla. ¿Por qué las líneas de la grilla siguen siendo paralelas y
+   equiespaciadas? (Ver [2.1](/algebra-ii/unidad-2/teoria/definicion-y-ejemplos/).)
+2. **Determinante nulo.** Elegí "Determinante nulo". El plano se aplasta sobre una recta: esa recta
+   es $\operatorname{Im}(T)=\operatorname{col}(A)$. Hallá a mano $\operatorname{Nu}(T)$ y comprobá que
+   $\dim\operatorname{Nu}(T)+\dim\operatorname{Im}(T)=2$ ([2.3](/algebra-ii/unidad-2/teoria/teorema-de-la-dimension/)).
+   ¿Qué autovalor tiene siempre una matriz no inversible?
+3. **Área y orientación.** Con $A=\operatorname{diag}(2,\tfrac12)$ el cuadrado se estira y se achata,
+   pero el área del paralelogramo sigue siendo 1. Probá con la simetría respecto de $y=x$: el
+   determinante es $-1$. Explicá qué significa el signo.
+4. **Sin autovalores reales.** Elegí "Rotación de 90°". No aparece ninguna recta verde: ninguna
+   dirección queda fija. Comprobá a mano que $p(\lambda)=\lambda^2+1$ no tiene raíces reales
+   ([3.1](/algebra-ii/unidad-3/teoria/autovalores-y-autovectores/)).
+5. **Autovectores de una simétrica.** Con la matriz simétrica inicial, las dos rectas verdes son
+   perpendiculares. Cambiá $b$ y $c$ manteniéndolos iguales y verificá que siguen siéndolo. Después
+   rompé la simetría ($b\neq c$) y observá qué pasa con el ángulo entre las rectas.
+6. **Una sola dirección.** Elegí la cizalla $\begin{pmatrix}1&1\\0&1\end{pmatrix}$. Tiene el autovalor 1
+   con multiplicidad algebraica 2, pero una sola recta de autovectores. Concluí que no es
+   diagonalizable usando $m_g(1)<m_a(1)$ ([3.5](/algebra-ii/unidad-3/teoria/diagonalizacion/)).
+7. **Diagonalizar es cambiar de base.** Con $A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$, en la base de
+   autovectores $B=\{(1,1),(1,-1)\}$ la transformación solo estira: por 3 en la primera dirección y
+   por 1 en la segunda. Escribí $A=CDC^{-1}$ y relacionalo con la fórmula de
+   [cambio de base](/algebra-ii/unidad-2/teoria/cambio-de-base/) $M(T)_E=C_{BE}\,M(T)_B\,C_{EB}$.
+
+:::tip[Para comprobar las respuestas]
+1: $Ae_1=(1,0)$, $Ae_2=(2,1)$, $A(1,1)=(3,1)$. 2: con $A=\begin{pmatrix}1&2\\0.5&1\end{pmatrix}$,
+$\operatorname{Nu}(T)=\operatorname{gen}\{(2,-1)\}$ e $\operatorname{Im}(T)=\operatorname{gen}\{(2,1)\}$; toda matriz no
+inversible tiene el autovalor 0. 3: el signo negativo indica que se invierte la orientación (un giro
+antihorario pasa a ser horario). 5: los autovectores de autovalores distintos de una matriz simétrica
+son ortogonales. 7: $C=\begin{pmatrix}1&1\\1&-1\end{pmatrix}$, $D=\operatorname{diag}(3,1)$.
+:::

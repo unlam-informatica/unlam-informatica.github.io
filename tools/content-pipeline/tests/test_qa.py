@@ -107,3 +107,9 @@ def test_marcadores_de_comprobacion_en_ejemplos(tmp_path):
     missing = [f for f in report["findings"] if f["code"] == "sin-comprobacion"]
     assert [m["message"] for m in missing] == ["El ejemplo marca U1.T01.E2 pero no hay comprobación aprobada"]
     assert report["example_checks"] == 2
+
+
+def test_la_palabra_todo_no_es_un_marcador_provisional():
+    from content_pipeline.qa import PLACEHOLDER_RE
+    assert not PLACEHOLDER_RE.search("Todo subespacio contiene al nulo y todos sus elementos.")
+    assert PLACEHOLDER_RE.search("TODO: revisar") and PLACEHOLDER_RE.search("Página En Construcción")

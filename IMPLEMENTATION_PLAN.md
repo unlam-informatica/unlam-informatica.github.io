@@ -55,6 +55,22 @@ Documento de seguimiento. Rama de trabajo: `feat/algebra-ii-pipeline`.
    pueden instalar Docling, SymPy, PyYAML ni pytest.
 2. Sin `ffmpeg` no se pueden transcribir los MP4.
 
+## Estado al corte por límite de uso
+
+- Escritos y sin commit: páginas generales (`index`, `programa`, `como-estudiar`, `notacion`,
+  `bibliografia`), `integradores/` (índice y dos simulacros verificados con `fractions`),
+  `checks/simulacros.py`, laboratorio interactivo (`src/components/algebra/TransformacionPlano.astro`,
+  `laboratorio.mdx`), tests de Playwright ampliados, job `pipeline` en CI, corrección de `qa.py`
+  (la palabra "todo" no es un marcador provisional).
+- **Último build falló** con un error de YAML de frontmatter (`yaml/compose/composer.js`): revisar el
+  log, probablemente un archivo a medio escribir por un agente. Pendiente además verificar si las
+  fórmulas con llaves funcionan en `laboratorio.mdx`; si no, pasar la página a `.md` sin el componente
+  o escapar las fórmulas.
+- Agentes de teoría (repaso, U1 parte 1 y 2, U2, U3, U4) seguían escribiendo al momento del corte.
+- Faltan: prácticas de las cuatro unidades (≥ 24 ejercicios cada una), enlaces desde U2/U3 al
+  laboratorio, completar `exercises` y estados en `curriculum-map.yaml`, y todo lo que depende del
+  bloqueo 1.
+
 ## Próxima acción exacta
 
 1. Al resolverse el bloqueo 1: en `tools/content-pipeline/`,

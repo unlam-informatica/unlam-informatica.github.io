@@ -25,6 +25,7 @@ export default defineConfig({
         { label: 'Inicio', link: '/' },
         { label: 'Análisis Matemático I', link: '/analisis-matematico-i/' },
         { label: 'BBDD Aplicadas', link: '/bbdd-aplicadas/' },
+        { label: 'Álgebra II', link: '/algebra-ii/' },
         { label: 'Diseño', link: '/diseno-de-software/' },
       ],
       footerText: 'Sitio personal de apuntes. No es un sitio oficial de la Universidad Nacional de La Matanza (UNLaM).',

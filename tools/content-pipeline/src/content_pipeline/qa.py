@@ -28,10 +28,10 @@ FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n", re.S)
 EXERCISE_RE = re.compile(r"<!--\s*ejercicio:\s*([^|>]+?)\s*((?:\|[^>]*)?)-->")
 CHECK_MARKER_RE = re.compile(r"<!--\s*check:\s*([^\s>]+)\s*-->")
 LINK_RE = re.compile(r"\]\((/[^)\s#]*)(#[^)\s]*)?\)|href=\"(/[^\"#]*)(#[^\"]*)?\"")
+# Los marcadores se buscan solo en mayúsculas: "todo" es una palabra común en español.
 PLACEHOLDER_RE = re.compile(
-    r"\b(TODO|TBD|FIXME|XXX)\b|lorem ipsum|en construcci[oó]n|pr[oó]ximamente|"
-    r"pendiente de (redactar|completar|escribir)|contenido provisional|\[\s*\.\.\.\s*\]",
-    re.IGNORECASE,
+    r"\b(?:TODO|TBD|FIXME|XXX)\b|(?i:lorem ipsum|en construcci[oó]n|pr[oó]ximamente|"
+    r"pendiente de (?:redactar|completar|escribir)|contenido provisional)|\[\s*\.\.\.\s*\]"
 )
 STATEMENT_RE = re.compile(r"^:::note\[Enunciado\]", re.M)
 SOLUTION_RE = re.compile(r"^<summary>\s*Resoluci[oó]n|^:::tip\[Resoluci[oó]n", re.M)
