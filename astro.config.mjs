@@ -36,7 +36,7 @@ export default defineConfig({
     favicon: '/assets/favicon/favicon.ico',
     social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/unlam-informatica/unlam-informatica.github.io' }],
     customCss: ['katex/dist/katex.min.css', './src/styles/custom.css'],
-    components: { Footer: './src/components/Footer.astro', Search: 'lucode-starlight/components/overrides/Search.astro' },
+    components: { Header: './src/components/Header.astro', Footer: './src/components/Footer.astro', Search: 'lucode-starlight/components/overrides/Search.astro' },
     sidebar,
   }), navigationIntegration()],
 });
