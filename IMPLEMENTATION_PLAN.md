@@ -67,5 +67,5 @@ Documento de seguimiento. Rama: `feat/algebra-ii-pipeline`. Última actualizaci�
    de años anteriores y el mapa de Nakos y Joyner sin relevar).
 4. Lay (5.ª ed.) no está disponible localmente: se cita sin secciones ni páginas. Poole se citó con la
    3.ª ed. (el programa pide la 4.ª).
-5. El job `pipeline` de CI no se ejecutó todavía en GitHub Actions.
+5. CI en GitHub Actions (PR #8): jobs `validate` y `pipeline` aprobados.
 6. Merge y despliegue: fuera del alcance autorizado.
