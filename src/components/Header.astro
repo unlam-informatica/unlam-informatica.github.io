@@ -3,6 +3,7 @@
 // Atajos: ⌘. / Ctrl+. (menú izquierdo) y ⌘⇧. / Ctrl+Shift+. (índice derecho).
 import LucodeHeader from 'lucode-starlight/components/overrides/Header.astro';
 import SidebarToggle from './SidebarToggle.astro';
+import YearMenu from './YearMenu.astro';
 const { hasSidebar, toc } = Astro.locals.starlightRoute;
 ---
 
@@ -17,6 +18,7 @@ const { hasSidebar, toc } = Astro.locals.starlightRoute;
 
 {hasSidebar && <SidebarToggle side="left" />}
 <LucodeHeader><slot /></LucodeHeader>
+<YearMenu />
 {toc && <SidebarToggle side="right" />}
 
 <script>
@@ -64,3 +66,14 @@ const { hasSidebar, toc } = Astro.locals.starlightRoute;
 		toggle(side);
 	});
 </script>
+
+<style is:global>
+	/* El header de Lucode es una fila flex. Los menús por año se ubican después de la
+	   navegación (título e Inicio) y antes del buscador, sin modificar su marcado. */
+	[data-slot='layout'] > header .container > .sidebar-toggle--left { order: 0; }
+	[data-slot='layout'] > header .container > .show-modal { order: 1; }
+	[data-slot='layout'] > header .container > .site-title-wrapper { order: 2; }
+	[data-slot='layout'] > header .container > .year-menu { order: 3; }
+	[data-slot='layout'] > header .container > .header-right { order: 4; }
+	[data-slot='layout'] > header .container > .sidebar-toggle--right { order: 5; }
+</style>
