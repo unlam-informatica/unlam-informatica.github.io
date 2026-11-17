@@ -273,7 +273,8 @@ def render_markdown(document: dict[str, Any], output: EngineOutput) -> str:
 
 
 def run_extract(paths: SubjectPaths, engine: Engine, ids: list[str] | None = None, force: bool = False,
-                profile: str | None = None, limit: int | None = None) -> dict[str, Any]:
+                profile: str | None = None, limit: int | None = None,
+                formulas: bool = True) -> dict[str, Any]:
     """Convierte los documentos pendientes. Un fallo individual nunca detiene el lote."""
     log = get_logger()
     catalog = load_catalog(paths)
@@ -290,6 +291,8 @@ def run_extract(paths: SubjectPaths, engine: Engine, ids: list[str] | None = Non
         if ids and doc_id not in ids:
             continue
         name, options = resolve_profile(document, profile)
+        if not formulas and options.get("formulas"):
+            options = {**options, "formulas": False}  # pasada rápida: sin el modelo de fórmulas
         if name == "skip":
             document["status"] = "omitido"
             counts["skipped"] += 1

@@ -29,9 +29,10 @@ summary:
     respuestas: 1
     trabajo-practico: 2
   by_status:
-    inventariado: 67
+    ausente: 10
+    normalizado: 57
     omitido: 5
-  needs_review: 0
+  needs_review: 10
 documents:
 - id: algebra-ii-ec261e8579b5
   original_name: 1 - Subespacios 1.mp4
@@ -50,8 +51,9 @@ documents:
   distribution: privado
   extraction: asr
   notes: null
-  status: inventariado
-  needs_review: []
+  status: ausente
+  needs_review:
+  - archivo-ausente
 - id: algebra-ii-7b9b2b632461
   original_name: 2 - Subespacios 2.mp4
   path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/2 - Subespacios 2.mp4
@@ -69,8 +71,9 @@ documents:
   distribution: privado
   extraction: asr
   notes: null
-  status: inventariado
-  needs_review: []
+  status: ausente
+  needs_review:
+  - archivo-ausente
 - id: algebra-ii-b15f226b3ec2
   original_name: 3 - Coordenadas.mp4
   path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/3 - Coordenadas.mp4
@@ -88,8 +91,9 @@ documents:
   distribution: privado
   extraction: asr
   notes: null
-  status: inventariado
-  needs_review: []
+  status: ausente
+  needs_review:
+  - archivo-ausente
 - id: algebra-ii-8c2ee16002d5
   original_name: 4 - Matriz de cambio de coordenadas.mp4
   path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/4 - Matriz de cambio de coordenadas.mp4
@@ -108,8 +112,9 @@ documents:
   distribution: privado
   extraction: asr
   notes: null
-  status: inventariado
-  needs_review: []
+  status: ausente
+  needs_review:
+  - archivo-ausente
 - id: algebra-ii-751ea62f0bea
   original_name: Ejercicio resuelto y autoevaluación subespacios.pdf
   path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/Ejercicio resuelto y autoevaluación subespacios.pdf
@@ -128,7 +133,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-3a087f2de219
   original_name: Guía de estudio espacios verctoriales - Resuelta.pdf
@@ -148,7 +153,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-12476a35fa0d
   original_name: Guía de estudio espacios verctoriales.pdf
@@ -167,7 +172,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-14ade83daf16
   original_name: Espacios vectoriales 1.pdf
@@ -186,7 +191,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-b0920ccca7ff
   original_name: Espacios vectoriales 2.pdf
@@ -205,7 +210,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-cf565f8b1f83
   original_name: Espacios vectoriales y aplicaciones lineales.pdf
@@ -226,7 +231,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-59a0041c473d
   original_name: Identidades trigonométricas.pdf
@@ -263,7 +268,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-e351622dab4e
   original_name: Guía de cambio de coordenadas - resuelta.pdf
@@ -282,7 +287,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-2858e5aaab9f
   original_name: Guía de cambio de coordenadas.pdf
@@ -301,7 +306,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-44a730a65bad
   original_name: Apunte Transformaciones Lineales.pdf
@@ -321,7 +326,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-40184f3ebd05
   original_name: Ejercicio resuelto y autoevaluación.pdf
@@ -341,7 +346,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-67329943c6c2
   original_name: Guía de estudio 3.pdf
@@ -361,7 +366,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-b8220dcae2b1
   original_name: Ejercicio-resuelto-TL1.pdf
@@ -381,7 +386,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-5e52f785dade
   original_name: Transformaciones lineales.mp4
@@ -400,8 +405,9 @@ documents:
   distribution: privado
   extraction: asr
   notes: null
-  status: inventariado
-  needs_review: []
+  status: ausente
+  needs_review:
+  - archivo-ausente
 - id: algebra-ii-ea9559207cfb
   original_name: Algebra lineal una introduccion moderna - Poole.pdf
   path: Bibliografía/Algebra lineal una introduccion moderna - Poole.pdf
@@ -418,7 +424,7 @@ documents:
   distribution: privado
   extraction: front-matter
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-f37cce053aba
   original_name: Algebra y geometría - Pearson - 3ra ed.pdf
@@ -436,7 +442,7 @@ documents:
   distribution: privado
   extraction: front-matter
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-d782fa3cbab6
   original_name: Algebra y geometría-Eugenio Hernández.pdf
@@ -454,7 +460,7 @@ documents:
   distribution: privado
   extraction: front-matter
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-4996ef9e3689
   original_name: Álgebra Lineal - George Nakos.pdf
@@ -472,7 +478,7 @@ documents:
   distribution: privado
   extraction: front-matter
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-b7e177ca526c
   original_name: Álgebra lineal - Una propuesta de enseñanza para carreras de Ingeniería.pdf
@@ -490,7 +496,7 @@ documents:
   distribution: privado
   extraction: front-matter
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-89943f459968
   original_name: Álgebra lineal para estudiantes de ingeniería y ciencias - Juan Carlos Del Valle Sotelo.pdf
@@ -509,7 +515,7 @@ documents:
   distribution: privado
   extraction: front-matter
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-43f0e7b0aa3b
   original_name: Documento sin título.docx
@@ -529,7 +535,7 @@ documents:
   distribution: privado
   extraction: text
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-94bc33dbd907
   original_name: Guía de actividades - Respuestas.pdf
@@ -551,7 +557,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-702da4e9f8b4
   original_name: Guía de actividades.pdf
@@ -573,7 +579,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-4995bc76e1c8
   original_name: 10363503_10204378054517762_2015083660081892552_n.jpg
@@ -593,7 +599,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-0fb9e9b61c2e
   original_name: 10635775_10203150978555347_8421748454593444194_n.jpg
@@ -613,7 +619,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-52db1b29a7b0
   original_name: 1er-Parcial-2013---Resuelto-2.pdf
@@ -633,7 +639,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-2d6153e85790
   original_name: 1er-Parcial-2013---Resuelto.pdf
@@ -653,7 +659,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-c63115d6c0e3
   original_name: 4.1. 1er Parcial Resuelto 27-05-08.pdf
@@ -673,7 +679,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-826bdc680bb0
   original_name: I_P-Viernes-noche-1er-Cuat-2016.pdf
@@ -693,7 +699,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-de5e3eb311ac
   original_name: Parcialito-1.pdf
@@ -712,7 +718,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-adb37c908dd3
   original_name: Recuperatorio-1er-Parcial-2015-1---Resuelto.pdf
@@ -732,7 +738,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-476da85bcd1d
   original_name: 2do-Parcial-modelo-Viernes---1.pdf
@@ -752,7 +758,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-0b9c7c5f1339
   original_name: 2do-Parcial-modelo-Viernes.pdf
@@ -772,7 +778,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-bd383b40c54b
   original_name: 2do-Parcial.pdf
@@ -792,7 +798,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-4597419d5053
   original_name: 36456309_1448771781890109_4673518334715625472_n.jpg
@@ -812,7 +818,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-73d17de4f2d2
   original_name: EDA1.docx
@@ -831,8 +837,9 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
-  needs_review: []
+  status: ausente
+  needs_review:
+  - archivo-ausente
 - id: algebra-ii-aa0c3832e0eb
   original_name: EDA2.docx
   path: Other sources/EDAS/EDA2.docx
@@ -851,8 +858,9 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
-  needs_review: []
+  status: ausente
+  needs_review:
+  - archivo-ausente
 - id: algebra-ii-80ad6d53a2a7
   original_name: EDA3.docx
   path: Other sources/EDAS/EDA3.docx
@@ -870,8 +878,9 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
-  needs_review: []
+  status: ausente
+  needs_review:
+  - archivo-ausente
 - id: algebra-ii-5be94264089e
   original_name: PractCompleta2016.pdf
   path: Other sources/PractCompleta2016.pdf
@@ -892,7 +901,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-ce39eaceaffd
   original_name: 3.4. Apunte - Sistemas de Ecuaciones Diferenciales Lineales.pdf
@@ -930,7 +939,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-ab296aadfcc3
   original_name: Autovalores-y-Autovectores.pdf
@@ -949,7 +958,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-3314a2722ef2
   original_name: CONICAS---APLICACION-DE-DIAGONALIZACION-DE-MATRICES-SIMETRICAS.pdf
@@ -986,7 +995,7 @@ documents:
   distribution: privado
   extraction: full
   notes: 'Diagonalización ortogonal de simétricas: fuera del programa 2023 como tema propio.'
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-b2e3215075a4
   original_name: Espacios-euclideos.pdf
@@ -1005,7 +1014,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-a9074f6b1f36
   original_name: transformaciones lineales.pdf
@@ -1024,7 +1033,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-a4a6bb15b355
   original_name: 2020Octubre_6.pdf
@@ -1046,7 +1055,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-059dab40b83c
   original_name: 37985276_1796121953769726_4577863344244916224_n.jpg
@@ -1068,7 +1077,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-b650853bf54c
   original_name: Final-Curso-verano-2015 (1).pdf
@@ -1091,7 +1100,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-b82897a13da3
   original_name: Álgebra Lineal - David Poole - 3ed.pdf
@@ -1109,8 +1118,9 @@ documents:
   distribution: privado
   extraction: front-matter
   notes: null
-  status: inventariado
-  needs_review: []
+  status: ausente
+  needs_review:
+  - archivo-ausente
 - id: algebra-ii-c856d0724216
   original_name: Álgebra y Geometría - Eugenio Hernandez.pdf
   path: Other sources/libros/Álgebra y Geometría - Eugenio Hernandez.pdf
@@ -1127,8 +1137,9 @@ documents:
   distribution: privado
   extraction: front-matter
   notes: null
-  status: inventariado
-  needs_review: []
+  status: ausente
+  needs_review:
+  - archivo-ausente
 - id: algebra-ii-7e898fd7227e
   original_name: 1.2.-Ejercicios-Resueltos---Gram-Schmidt,-Complemento-Ortogonal,-Proyeccion-Ortogonal-y-Distancia.pdf
   path: Other sources/practicas/1.2.-Ejercicios-Resueltos---Gram-Schmidt,-Complemento-Ortogonal,-Proyeccion-Ortogonal-y-Distancia.pdf
@@ -1146,7 +1157,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-9fc8e4a3c0e3
   original_name: 1.3.-Ejercicios-Resueltos---Proyeccion-Ortogonal-y-Distancia.pdf
@@ -1165,7 +1176,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-3537229d9a61
   original_name: 1.4.-Ejercicios-Resueltos---Diagonalizacion-Matrices-Simetricas.pdf
@@ -1184,7 +1195,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-42f0b7686cce
   original_name: 1.5.-Ejercicios-Resueltos---Transformaciones-Ortogonales.pdf
@@ -1222,7 +1233,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-ed43289dfa20
   original_name: 3.3. Ejercicios Resueltos - Conicas.pdf
@@ -1259,7 +1270,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-e485836e9fdc
   original_name: Ej_Adic-Autovalores.pdf
@@ -1278,7 +1289,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-665b6b471cfd
   original_name: Ejercicio-Ortogonalizacion-de-una-base-de-polinomios1.pdf
@@ -1297,7 +1308,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-5e8275ffcd3a
   original_name: Ejercicios-10-y-11---autovalores-y-autovectores1.pdf
@@ -1316,7 +1327,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-d9e95051c721
   original_name: Ejercicios-resueltos-de-Autovalores-y-Autovectores1.pdf
@@ -1335,7 +1346,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-5211ff51722d
   original_name: Ejercicios-semanales-22.pdf
@@ -1357,7 +1368,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-e0e72df7a019
   original_name: 12115826_10201740037698223_48592622896654449_n.jpg
@@ -1376,7 +1387,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-1e84700eb618
   original_name: Parcialito-2-VF.pdf
@@ -1395,7 +1406,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-cdd52dc1c10a
   original_name: TP---Turno-Miercoles-Tarde---Miercoles-Noche-y-Viernes-noche---2do-cuatr-2017.pdf
@@ -1416,7 +1427,7 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []
 - id: algebra-ii-37d9461d8128
   original_name: 661_3645_AlgebrayGeometriaAnaliticaII.pdf
@@ -1438,5 +1449,5 @@ documents:
   distribution: privado
   extraction: full
   notes: null
-  status: inventariado
+  status: normalizado
   needs_review: []

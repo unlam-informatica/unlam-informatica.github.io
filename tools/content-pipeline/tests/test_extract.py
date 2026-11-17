@@ -61,6 +61,16 @@ def test_un_error_no_detiene_el_lote(subject):
     assert retry["converted"] == 1 and retry["cached"] == 1
 
 
+def test_pasada_sin_formulas_conserva_perfiles(subject):
+    run_inventory(subject)
+    engine = FakeEngine()
+    run_extract(subject, engine, formulas=False)
+    from content_pipeline.extract import load_manifest
+    records = load_manifest(subject)["documents"].values()
+    assert all(not r["options"].get("formulas") for r in records if r["profile"] == "full")
+    assert run_extract(subject, engine)["converted"] == 2  # con fórmulas, la clave de caché cambia
+
+
 def test_perfiles(subject):
     assert resolve_profile({"format": "pdf", "extraction": "front-matter"})[1]["max_pages"] == 30
     assert resolve_profile({"format": "video", "extraction": "full"})[0] == "asr"

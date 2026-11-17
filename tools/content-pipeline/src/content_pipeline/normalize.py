@@ -277,6 +277,13 @@ def normalize_markdown(markdown: str) -> tuple[str, list[Section], dict[str, Any
     return text, sections, report
 
 
+def _promote(document: dict[str, Any]) -> None:
+    if document.get("status") in ("extraido", "inventariado"):
+        document["status"] = "normalizado"
+    elif document.get("status") == "extraido-parcial":
+        document["status"] = "normalizado-parcial"
+
+
 def run_normalize(paths: SubjectPaths, ids: list[str] | None = None, force: bool = False) -> dict[str, int]:
     log = get_logger()
     catalog = load_catalog(paths)
@@ -297,6 +304,7 @@ def run_normalize(paths: SubjectPaths, ids: list[str] | None = None, force: bool
         target = paths.normalized / f"{doc_id}.md"
         if not force and target.exists() and index_path.exists() and read_json(index_path).get("input_key") == key:
             counts["cached"] += 1
+            _promote(document)
             continue
         text, sections, report = normalize_markdown(markdown)
         atomic_write(target, text)
@@ -310,10 +318,7 @@ def run_normalize(paths: SubjectPaths, ids: list[str] | None = None, force: bool
             "report": report,
             "sections": [asdict(section) for section in sections],
         })
-        if document.get("status") in ("extraido", "inventariado"):
-            document["status"] = "normalizado"
-        elif document.get("status") == "extraido-parcial":
-            document["status"] = "normalizado-parcial"
+        _promote(document)
         counts["normalized"] += 1
         log.info("normalizado", extra={"id": doc_id, "sections": len(sections), "flags": report["flags"]})
     save_catalog(paths, catalog)

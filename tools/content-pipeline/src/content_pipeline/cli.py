@@ -39,7 +39,7 @@ def cmd_extract(args, paths):
     from .extract import run_extract
 
     _print(run_extract(paths, _engine(args), ids=_split(args.ids), force=args.force, profile=args.profile,
-                       limit=args.limit))
+                       limit=args.limit, formulas=not args.no_formulas))
     return 0
 
 
@@ -189,6 +189,8 @@ def build_parser() -> argparse.ArgumentParser:
             sub.add_argument("--limit", type=int, help="Procesar como máximo N documentos nuevos")
         if name == "extract":
             sub.add_argument("--profile", help="Forzar perfil: full | text | front-matter | asr | skip")
+            sub.add_argument("--no-formulas", action="store_true",
+                             help="Respetar el perfil de cada documento pero sin reconocimiento de fórmulas")
         if name in ("extract", "normalize", "verify-math"):
             sub.add_argument("--ids", help="Lista de identificadores separados por comas")
         if name in ("extract", "normalize", "run"):

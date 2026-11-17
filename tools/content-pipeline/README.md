@@ -82,7 +82,7 @@ cp-run qa        --subject algebra-ii                 # controla src/content/doc
 | Comando | Opciones propias |
 |---|---|
 | `inventory` | `--reclassify`: reaplica `subject.yaml` aunque el catálogo tenga correcciones manuales. |
-| `extract` | `--ids a,b` · `--profile full\|text\|front-matter\|asr\|skip` · `--force` · `--limit N` · `--device auto\|cpu\|mps\|cuda` · `--artifacts-path DIR` |
+| `extract` | `--ids a,b` · `--profile full\|text\|front-matter\|asr\|skip` · `--no-formulas` · `--force` · `--limit N` · `--device auto\|cpu\|mps\|cuda` · `--artifacts-path DIR` |
 | `normalize` | `--ids a,b` · `--force` |
 | `package` | `--unit ID` · `--topic ID` · `--budget CARACTERES` (por defecto 24000) |
 | `validate` | `--strict` (sale con 1 si hay errores) · `--docs-root DIR` |
