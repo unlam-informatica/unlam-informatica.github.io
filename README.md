@@ -17,10 +17,13 @@ La navegación enlaza los archivos `index.html` de cada apunte para evitar respu
 canónicas con barra final y las rutas históricas. Búsqueda, tarjetas y menús usan
 el mismo destino; no hay que modificar los enlaces de los Markdown académicos.
 
-Los menús usan nombres legibles y unidades en orden numérico. Cada unidad de BBDD
-contiene solo las carpetas `teoria/` y `practica/`, con una presentación e índices
-de apuntes en cada sección. El menú móvil también permite abrir los grupos
-anidados de las tres materias; las rutas anteriores de BBDD se conservan.
+El header tiene un menú desplegable por año de la carrera con sus materias. El menú
+lateral lista todas las materias en orden alfabético, colapsadas salvo la de la página
+actual, con sus unidades en orden numérico. Ambos salen de la lista `subjects` de
+`src/config/sidebar.mjs`: para sumar una materia alcanza con agregarla ahí con su año.
+Cada unidad de BBDD contiene solo las carpetas `teoria/` y `practica/`, con una
+presentación e índices de apuntes en cada sección. El menú móvil también permite abrir
+los grupos anidados de todas las materias; las rutas anteriores de BBDD se conservan.
 
 ## Desarrollo
 
@@ -71,8 +74,8 @@ La preferencia se recuerda en el navegador. Ver `src/components/Header.astro`.
 ## Tema visual
 
 [Lucode Starlight](https://lucas-labs.github.io/lucode-starlight-theme/) se integra
-como plugin en `astro.config.mjs`. Se usa su apariencia predeterminada, navegación
-superior por materia, portada `banner` y modos claro/oscuro. El esquema de contenido
+como plugin en `astro.config.mjs`. Se usa su apariencia predeterminada, menús por año en
+la navegación superior, portada `banner` y modos claro/oscuro. El esquema de contenido
 extiende `ExtendDocsSchema`, como indica la documentación del tema.
 
 El footer local delega su aspecto y paginación al componente de Lucode. Solo agrega
