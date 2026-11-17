@@ -1,0 +1,15 @@
+---
+// Renderiza con KaTeX, en el build, el LaTeX que el texto de los títulos trae entre ⟦ ⟧
+// (ver scripts/rehype-heading-math.mjs). Recibe como contenido HTML ya renderizado.
+import katex from 'katex';
+
+const decode = (text: string) => text
+  .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/&amp;/g, '&')
+  // Astro escapa cada `{` del texto de los títulos como `${` (rehype-collect-headings).
+  .replace(/\$\{/g, '{');
+const html = await Astro.slots.render('default');
+const rendered = html.replace(/⟦([^⟧]+)⟧/g, (_, tex: string) =>
+  katex.renderToString(decode(tex), { throwOnError: false, strict: false }));
+---
+
+<Fragment set:html={rendered} />

@@ -58,3 +58,5 @@
   :root[data-sidebar-right='hidden'] .container-main[data-slot='docs'] { grid-template-columns: minmax(0, 1fr); }
   :root[data-sidebar-right='hidden'] .container-main[data-slot='docs'] > .toc { display: none; }
 }
+/* Fórmulas de los títulos dentro del índice: del mismo tamaño que el texto. */
+starlight-toc .katex { font-size: 1em; }

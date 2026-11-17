@@ -49,3 +49,23 @@ test('en pantallas angostas los botones no aparecen y el atajo no cambia nada', 
   await page.keyboard.press('ControlOrMeta+Period');
   expect(await page.evaluate(() => document.documentElement.dataset.sidebarLeft)).toBeUndefined();
 });
+
+test('el índice muestra las fórmulas de los títulos renderizadas', async ({ page, isMobile }) => {
+  test.skip(isMobile, 'El índice lateral solo se muestra en pantallas anchas.');
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto(page_);
+  const toc = page.locator('starlight-toc');
+  const item = toc.locator('a[href^="#ejemplo-4"]');
+  await expect(item.locator('.katex')).toBeVisible();
+  // La parte visual de KaTeX muestra la fórmula, no su código (la anotación LaTeX es solo para accesibilidad).
+  await expect(item.locator('.katex-html')).toHaveText(/^P\s*2\S*\[R\]$/);
+  await expect(item.locator('.katex-error')).toHaveCount(0);
+  await expect(toc).not.toContainText('⟦');
+  // El título conserva su fórmula y la copia oculta no se ve.
+  const heading = page.locator('h3[id^="ejemplo-4"]');
+  await expect(heading.locator('.katex')).toBeVisible();
+  await expect(heading.locator('.heading-math-source')).toBeHidden();
+  // El resaltado de la sección actual sigue funcionando.
+  await item.click();
+  await expect(item).toHaveAttribute('aria-current', 'true');
+});

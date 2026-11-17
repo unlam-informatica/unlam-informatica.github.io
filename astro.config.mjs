@@ -6,6 +6,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import mathCompat from './scripts/remark-math-compat.mjs';
 import mermaidBlocks from './scripts/remark-mermaid.mjs';
+import headingMath from './scripts/rehype-heading-math.mjs';
 import navigationIntegration from './scripts/navigation-integration.mjs';
 import { sidebar } from './src/config/sidebar.mjs';
 export default defineConfig({
@@ -15,7 +16,7 @@ export default defineConfig({
     const unit = `/bbdd-aplicadas/unidad-${index + 1}/`;
     return [unit, unit + 'teoria/'];
   })),
-  markdown: { processor: unified({ remarkPlugins: [remarkMath, mathCompat, mermaidBlocks], rehypePlugins: [[rehypeKatex, { strict: false }]] }) },
+  markdown: { processor: unified({ remarkPlugins: [remarkMath, mathCompat, mermaidBlocks], rehypePlugins: [[rehypeKatex, { strict: false }], headingMath] }) },
   integrations: [starlight({
     title: 'Apuntes UNLaM',
     // The navigation integration indexes with Pagefind's keepIndexUrl option.
@@ -36,7 +37,7 @@ export default defineConfig({
     favicon: '/assets/favicon/favicon.ico',
     social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/unlam-informatica/unlam-informatica.github.io' }],
     customCss: ['katex/dist/katex.min.css', './src/styles/custom.css'],
-    components: { Header: './src/components/Header.astro', Footer: './src/components/Footer.astro', Search: 'lucode-starlight/components/overrides/Search.astro' },
+    components: { Header: './src/components/Header.astro', PageSidebar: './src/components/PageSidebar.astro', Footer: './src/components/Footer.astro', Search: 'lucode-starlight/components/overrides/Search.astro' },
     sidebar,
   }), navigationIntegration()],
 });

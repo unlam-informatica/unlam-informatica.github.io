@@ -1,0 +1,8 @@
+---
+// Barra derecha de Lucode (índice de la página) con las fórmulas de los títulos
+// renderizadas con KaTeX. Se envuelve PageSidebar porque importa su índice directamente.
+import LucodePageSidebar from 'lucode-starlight/components/overrides/PageSidebar.astro';
+import HeadingMath from './HeadingMath.astro';
+---
+
+<HeadingMath><LucodePageSidebar /></HeadingMath>
