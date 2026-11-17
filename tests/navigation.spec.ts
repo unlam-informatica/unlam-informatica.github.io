@@ -126,3 +126,16 @@ test('el header tiene un menú por año con sus materias en orden alfabético', 
   await expect(page).toHaveURL('/diseno-de-software/index.html');
   await expect(page.getByRole('button', { name: '3er año', exact: true })).toHaveClass(/active/);
 });
+
+test('la columna de lectura es más ancha sin desbordar ni pisar el índice', async ({ page, isMobile }) => {
+  test.skip(isMobile, 'En móvil la columna ocupa todo el ancho.');
+  for (const [width, expected] of [[1440, 736], [1280, 664], [1024, 688]] as const) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/algebra-ii/unidad-1/teoria/subespacios/');
+    const content = await page.locator('.sl-markdown-content').boundingBox();
+    expect(Math.round(content!.width)).toBe(expected);
+    const toc = page.locator('[data-slot="docs"] > .toc');
+    if (await toc.isVisible()) expect(content!.x + content!.width).toBeLessThanOrEqual((await toc.boundingBox())!.x);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBeTruthy();
+  }
+});
