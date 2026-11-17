@@ -48,3 +48,15 @@
 .math-figure text { fill: currentColor; font-size: 13px; font-family: KaTeX_Main, 'Times New Roman', serif; }
 .math-figure text.math { font-style: italic; }
 .math-figure text.small { font-size: 10px; }
+
+/* Barras laterales ocultables (src/components/Header.astro): el contenido queda centrado. */
+@media (min-width: 1024px) {
+  :root[data-sidebar-left='hidden'] .container-wrapper-main { grid-template-columns: minmax(0, 1fr); }
+  :root[data-sidebar-left='hidden'] .container-wrapper-main > .aside { display: none; }
+}
+@media (min-width: 1280px) {
+  :root[data-sidebar-right='hidden'] .container-main[data-slot='docs'] { grid-template-columns: minmax(0, 1fr); }
+  :root[data-sidebar-right='hidden'] .container-main[data-slot='docs'] > .toc { display: none; }
+}
+/* Fórmulas de los títulos dentro del índice: del mismo tamaño que el texto. */
+starlight-toc .katex { font-size: 1em; }

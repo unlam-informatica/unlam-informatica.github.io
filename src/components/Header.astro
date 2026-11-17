@@ -1,0 +1,66 @@
+---
+// Envuelve el header de Lucode y agrega los botones para ocultar las barras laterales.
+// Atajos: ⌘. / Ctrl+. (menú izquierdo) y ⌘⇧. / Ctrl+Shift+. (índice derecho).
+import LucodeHeader from 'lucode-starlight/components/overrides/Header.astro';
+import SidebarToggle from './SidebarToggle.astro';
+const { hasSidebar, toc } = Astro.locals.starlightRoute;
+---
+
+<script is:inline>
+	// Antes de pintar el contenido, para que una barra oculta no aparezca un instante.
+	try {
+		for (const side of ['left', 'right']) {
+			if (localStorage.getItem('sidebar-' + side) === 'hidden') document.documentElement.dataset['sidebar' + (side === 'left' ? 'Left' : 'Right')] = 'hidden';
+		}
+	} catch {}
+</script>
+
+{hasSidebar && <SidebarToggle side="left" />}
+<LucodeHeader><slot /></LucodeHeader>
+{toc && <SidebarToggle side="right" />}
+
+<script>
+	type Side = 'left' | 'right';
+	const attribute = (side: Side) => (side === 'left' ? 'sidebarLeft' : 'sidebarRight');
+	const isHidden = (side: Side) => document.documentElement.dataset[attribute(side)] === 'hidden';
+
+	function render(side: Side) {
+		const hidden = isHidden(side);
+		for (const button of document.querySelectorAll<HTMLButtonElement>(`[data-sidebar-toggle="${side}"]`)) {
+			const action = hidden ? 'Mostrar' : 'Ocultar';
+			button.setAttribute('aria-pressed', String(hidden));
+			button.title = `${action} ${button.dataset.label} (${button.dataset.shortcut})`;
+			const text = button.querySelector('.sr-only');
+			if (text) text.textContent = `${action} ${button.dataset.label}`;
+		}
+	}
+
+	function toggle(side: Side) {
+		const hidden = !isHidden(side);
+		if (hidden) document.documentElement.dataset[attribute(side)] = 'hidden';
+		else delete document.documentElement.dataset[attribute(side)];
+		try {
+			if (hidden) localStorage.setItem(`sidebar-${side}`, 'hidden');
+			else localStorage.removeItem(`sidebar-${side}`);
+		} catch {
+			// Sin almacenamiento (navegación privada): el cambio vale solo para esta página.
+		}
+		render(side);
+	}
+
+	for (const button of document.querySelectorAll<HTMLButtonElement>('[data-sidebar-toggle]')) {
+		button.addEventListener('click', () => toggle(button.dataset.sidebarToggle as Side));
+	}
+	(['left', 'right'] as Side[]).forEach(render);
+
+	document.addEventListener('keydown', event => {
+		// `code` y no `key`: con Shift, el punto es ">" o ":" según la distribución del teclado.
+		if (event.code !== 'Period' || !(event.metaKey || event.ctrlKey) || event.altKey) return;
+		const side: Side = event.shiftKey ? 'right' : 'left';
+		// Solo si la barra existe y su botón está visible (en móvil se usa el menú desplegable).
+		const button = document.querySelector<HTMLElement>(`[data-sidebar-toggle="${side}"]`);
+		if (!button || button.offsetParent === null) return;
+		event.preventDefault();
+		toggle(side);
+	});
+</script>

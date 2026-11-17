@@ -62,6 +62,12 @@ contenido. Los documentos originales (`academic-sources/*/raw/`) y sus derivados
 [su documentación](tools/content-pipeline/README.md); la configuración y la matriz curricular de
 Álgebra II están en `academic-sources/algebra-ii/`.
 
+## Lectura sin barras laterales
+
+En escritorio, los botones del header ocultan el menú de la izquierda y el índice de la derecha
+para dejar solo el contenido. Atajos: `⌘.` / `Ctrl+.` (menú) y `⌘⇧.` / `Ctrl+Shift+.` (índice).
+La preferencia se recuerda en el navegador. Ver `src/components/Header.astro`.
+
 ## Tema visual
 
 [Lucode Starlight](https://lucas-labs.github.io/lucode-starlight-theme/) se integra

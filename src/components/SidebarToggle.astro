@@ -1,0 +1,83 @@
+---
+// Botón para ocultar o mostrar una barra lateral en escritorio. El estado vive en
+// <html data-sidebar-left|right="hidden"> y se recuerda por navegador (localStorage).
+interface Props { side: 'left' | 'right' }
+const { side } = Astro.props;
+const label = side === 'left' ? 'el menú de la materia' : 'el índice de la página';
+const shortcut = side === 'left' ? '⌘. / Ctrl+.' : '⌘⇧. / Ctrl+Shift+.';
+const keys = side === 'left' ? 'Meta+Period Control+Period' : 'Meta+Shift+Period Control+Shift+Period';
+---
+
+<button
+	type="button"
+	class={`sidebar-toggle sidebar-toggle--${side}`}
+	data-sidebar-toggle={side}
+	aria-pressed="false"
+	aria-keyshortcuts={keys}
+	data-label={label}
+	data-shortcut={shortcut}
+	title={`Ocultar ${label} (${shortcut})`}
+>
+	<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<rect x="3" y="4" width="18" height="16" rx="2" />
+		{side === 'left' ? <path d="M9 4v16" /> : <path d="M15 4v16" />}
+	</svg>
+	<span class="sr-only">{`Ocultar ${label}`}</span>
+</button>
+
+<style>
+	.sidebar-toggle {
+		all: unset;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		width: 2rem;
+		height: 2rem;
+		flex-shrink: 0;
+		border-radius: calc(var(--radius) - 2px);
+		cursor: pointer;
+		color: color-mix(in oklab, var(--foreground) 76%, var(--muted-foreground));
+		transition: color 0.15s, background-color 0.15s;
+	}
+	.sidebar-toggle:hover {
+		color: var(--accent-foreground);
+		background-color: color-mix(in oklab, var(--accent) 80%, transparent);
+	}
+	.sidebar-toggle:focus-visible {
+		outline: 2px solid var(--sl-color-text-accent);
+		outline-offset: 2px;
+	}
+	.sidebar-toggle[aria-pressed='true'] {
+		color: var(--sl-color-text-accent);
+	}
+	.sidebar-toggle svg {
+		width: 1rem;
+		height: 1rem;
+		pointer-events: none;
+	}
+	.sidebar-toggle--left {
+		margin-right: calc(var(--spacing) * 3);
+	}
+	.sidebar-toggle--right {
+		margin-left: calc(var(--spacing) * 2);
+	}
+	/* Solo donde existe la barra correspondiente: menú desde 1024 px, índice desde 1280 px. */
+	@media (min-width: 1024px) {
+		.sidebar-toggle--left {
+			display: inline-flex;
+		}
+	}
+	@media (min-width: 1280px) {
+		.sidebar-toggle--right {
+			display: inline-flex;
+		}
+	}
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+	}
+</style>
