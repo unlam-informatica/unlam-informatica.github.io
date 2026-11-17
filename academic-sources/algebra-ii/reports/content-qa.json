@@ -1,0 +1,132 @@
+{
+  "subject": "algebra-ii",
+  "pages": 69,
+  "exercises": 154,
+  "exercises_sympy": 143,
+  "exercises_reasoning": 11,
+  "example_checks": 185,
+  "units": {
+    "repaso": {
+      "exercises": 20,
+      "levels": {
+        "inicial": 10,
+        "intermedio": 10
+      },
+      "sympy": 20,
+      "razonamiento": 0
+    },
+    "u1": {
+      "exercises": 30,
+      "levels": {
+        "intermedio": 12,
+        "avanzado": 10,
+        "inicial": 8
+      },
+      "sympy": 27,
+      "razonamiento": 3
+    },
+    "u2": {
+      "exercises": 32,
+      "levels": {
+        "avanzado": 14,
+        "inicial": 8,
+        "intermedio": 10
+      },
+      "sympy": 29,
+      "razonamiento": 3
+    },
+    "u3": {
+      "exercises": 31,
+      "levels": {
+        "avanzado": 13,
+        "inicial": 8,
+        "intermedio": 10
+      },
+      "sympy": 28,
+      "razonamiento": 3
+    },
+    "u4": {
+      "exercises": 32,
+      "levels": {
+        "avanzado": 12,
+        "inicial": 8,
+        "intermedio": 12
+      },
+      "sympy": 30,
+      "razonamiento": 2
+    },
+    "integradores": {
+      "exercises": 9,
+      "levels": {
+        "intermedio": 5,
+        "avanzado": 4
+      },
+      "sympy": 9,
+      "razonamiento": 0
+    }
+  },
+  "errors": 0,
+  "warnings": 10,
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "notacion",
+      "message": "Usar \\operatorname{Nu}(T) para el núcleo",
+      "where": "algebra-ii/notacion.md"
+    },
+    {
+      "severity": "warning",
+      "code": "notacion",
+      "message": "El polinomio característico de la cátedra es det(λI − A); aclarar si se usa det(A − λI)",
+      "where": "algebra-ii/notacion.md"
+    },
+    {
+      "severity": "warning",
+      "code": "notacion",
+      "message": "Notación de libro (P_{B'←B}); permitida solo en avisos de equivalencia",
+      "where": "algebra-ii/notacion.md"
+    },
+    {
+      "severity": "warning",
+      "code": "notacion",
+      "message": "Notación de libro (P_{B'←B}); permitida solo en avisos de equivalencia",
+      "where": "algebra-ii/unidad-1/index.md"
+    },
+    {
+      "severity": "warning",
+      "code": "notacion",
+      "message": "Notación de libro (P_{B'←B}); permitida solo en avisos de equivalencia",
+      "where": "algebra-ii/unidad-1/teoria/cambio-de-coordenadas.md"
+    },
+    {
+      "severity": "warning",
+      "code": "notacion",
+      "message": "Notación de libro (P_{B'←B}); permitida solo en avisos de equivalencia",
+      "where": "algebra-ii/unidad-2/index.md"
+    },
+    {
+      "severity": "warning",
+      "code": "notacion",
+      "message": "Notación de libro (P_{B'←B}); permitida solo en avisos de equivalencia",
+      "where": "algebra-ii/unidad-2/teoria/cambio-de-base.md"
+    },
+    {
+      "severity": "warning",
+      "code": "notacion",
+      "message": "Notación de libro (P_{B'←B}); permitida solo en avisos de equivalencia",
+      "where": "algebra-ii/unidad-2/teoria/matriz-asociada.md"
+    },
+    {
+      "severity": "warning",
+      "code": "notacion",
+      "message": "Notación de libro (P_{B'←B}); permitida solo en avisos de equivalencia",
+      "where": "algebra-ii/unidad-3/teoria/matrices-semejantes.md"
+    },
+    {
+      "severity": "warning",
+      "code": "notacion",
+      "message": "El polinomio característico de la cátedra es det(λI − A); aclarar si se usa det(A − λI)",
+      "where": "algebra-ii/unidad-3/teoria/polinomio-caracteristico.md"
+    }
+  ]
+}

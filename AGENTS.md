@@ -11,7 +11,9 @@ Recursos descargables e imágenes en `public/{materia}/`, con rutas conservadas.
 ## Edición
 
 - Preservar contenido académico, fórmulas, código y bibliografía.
-- Mantener los prefijos `analisis-matematico-i`, `bbdd-aplicadas` y `diseno-de-software`.
+- Mantener los prefijos `analisis-matematico-i`, `bbdd-aplicadas`, `diseno-de-software` y `algebra-ii`.
+- Álgebra II sigue `academic-sources/algebra-ii/content-guide.md` (notación de cátedra, ejercicios con
+  `<!-- ejercicio: … -->` y comprobaciones SymPy en `academic-sources/algebra-ii/checks/`).
 - Preferir componentes, navegación, búsqueda y configuración nativos de Starlight.
 - Consultar https://starlight.astro.build/ y https://lucas-labs.github.io/lucode-starlight-theme/ antes de personalizar comportamientos.
 - Callouts nativos: `:::note`, `:::tip`, `:::caution`, `:::danger` con título en español.
@@ -28,6 +30,7 @@ npm run build
 npm run validate
 npx playwright install chromium
 npm run test:browser
+# Pipeline académico (tools/content-pipeline): pytest, content-pipeline verify-math y qa.
 ```
 
 `migration/` registra procedencia, hashes y compatibilidad. Al cambiar una ruta,

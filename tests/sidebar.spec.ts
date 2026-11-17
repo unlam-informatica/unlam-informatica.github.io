@@ -76,3 +76,24 @@ test('Análisis y Diseño tienen unidades legibles y en orden', async ({ page })
     await expect(units).toHaveText(Array.from({ length: count }, (_, index) => `Unidad ${index + 1}`));
   }
 });
+
+test('Álgebra II tiene repaso, cuatro unidades con teoría y práctica, y simulacros', async ({ page }) => {
+  await page.goto('/algebra-ii/index.html');
+  const subject = page.locator('.sidebar .container-sidebar-entry').filter({
+    has: page.getByRole('heading', { name: '3er año · Álgebra II', exact: true, includeHidden: true }),
+  });
+  const groups = subject.locator(':scope > .container-group-link > details > summary');
+  await expect(groups).toHaveText([
+    'Repaso de Álgebra I',
+    'Unidad 1 · Espacios vectoriales',
+    'Unidad 2 · Transformaciones lineales',
+    'Unidad 3 · Autovalores y autovectores',
+    'Unidad 4 · Espacios con producto interno',
+    'Integradores y simulacros',
+  ]);
+  for (let number = 1; number <= 4; number++) {
+    const unit = subject.locator(':scope > .container-group-link > details').nth(number);
+    await expect(unit.locator(':scope > .container-group-link > a')).toHaveCount(1);
+    await expect(unit.locator(':scope > .container-group-link > details > summary')).toHaveText(['Teoría', 'Práctica']);
+  }
+});

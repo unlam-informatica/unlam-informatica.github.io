@@ -1,0 +1,2645 @@
+{
+  "sympy_version": "1.14.0",
+  "python_version": "3.12.16",
+  "sources": {
+    "repaso.py": "a165ea6c2f0ab5f276ff29b77fe66bd149a2b3a9d8db688adec6de4c2629d8f3",
+    "simulacros.py": "9b87ed845f656b5309a9f5fe3b6c84fd13a5fe44fef0b65515da18271f48f091",
+    "u1_practica.py": "5f9abf2dcc4b56ded7d23ea63ba1748f10a52684311c69c11a7ca05f6afcb14e",
+    "u1_teoria.py": "6b1c65944a69f8accc5f5f8a7b8421faabe6f105b7f47d66dd837ef913ce3a42",
+    "u2_practica.py": "a16f41a03275d4f5d32d054c4e531155f9c72449b1f028b8bd161119e9bc1bb4",
+    "u2_teoria.py": "309c64b7fe182daef6fe9bc01ca55b4cdc7f6b48ef70cbc3078ba9e634574f95",
+    "u3_practica.py": "91ba03e5ddbc6068e2142177a822329354ddf48e6340416929de6cf1cd5194ac",
+    "u3_teoria.py": "9edc47d790cccf21a9599a1e8b3e7c22e821c819e38bc2f4751ae0f04785f6d7",
+    "u4_practica.py": "c51e3f7351d2e6a9b69e33c5a173ec1f571fc0acbd6378f52e7dc59d31691126",
+    "u4_teoria.py": "58572239c32ed3a1a665642e04c98f21da64504c0a2412419b99b0afa38a6cb4"
+  },
+  "total": 328,
+  "passed": 328,
+  "failed": 0,
+  "results": [
+    {
+      "id": "R.01",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/vectores-y-matrices/",
+      "description": "Operaciones y ángulo en R^3",
+      "detail": null
+    },
+    {
+      "id": "R.02",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/vectores-y-matrices/",
+      "description": "Producto, transpuesta y traza",
+      "detail": null
+    },
+    {
+      "id": "R.03",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/vectores-y-matrices/",
+      "description": "Inversa de una 3x3 por Gauss-Jordan",
+      "detail": null
+    },
+    {
+      "id": "R.04",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/vectores-y-matrices/",
+      "description": "Producto de simétricas: contraejemplo y equivalencia",
+      "detail": null
+    },
+    {
+      "id": "R.05",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/determinantes/",
+      "description": "Cofactores y propiedades del determinante",
+      "detail": null
+    },
+    {
+      "id": "R.06",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/determinantes/",
+      "description": "Determinante 4x4 por triangulación",
+      "detail": null
+    },
+    {
+      "id": "R.07",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/determinantes/",
+      "description": "Matriz tridiagonal con parámetro",
+      "detail": null
+    },
+    {
+      "id": "R.08",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/determinantes/",
+      "description": "Verdadero o falso sobre determinantes",
+      "detail": null
+    },
+    {
+      "id": "R.09",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/sistemas-lineales/",
+      "description": "Sistema compatible determinado 3x3",
+      "detail": null
+    },
+    {
+      "id": "R.10",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/sistemas-lineales/",
+      "description": "Solución general de un homogéneo",
+      "detail": null
+    },
+    {
+      "id": "R.11",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/sistemas-lineales/",
+      "description": "Clasificación de x+y+kz=1, x+ky+z=1, kx+y+z=1",
+      "detail": null
+    },
+    {
+      "id": "R.12",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/sistemas-lineales/",
+      "description": "Sistema en Z2: todas las soluciones",
+      "detail": null
+    },
+    {
+      "id": "R.13",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/polinomios/",
+      "description": "Factorizar un polinomio de grado 3",
+      "detail": null
+    },
+    {
+      "id": "R.14",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/polinomios/",
+      "description": "Teorema del resto con parámetro",
+      "detail": null
+    },
+    {
+      "id": "R.15",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/polinomios/",
+      "description": "Raíces y multiplicidades",
+      "detail": null
+    },
+    {
+      "id": "R.16",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/polinomios/",
+      "description": "Raíz fraccionaria y factor irreducible",
+      "detail": null
+    },
+    {
+      "id": "R.17",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/rectas-y-planos/",
+      "description": "Plano por un punto con normal dado",
+      "detail": null
+    },
+    {
+      "id": "R.18",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/rectas-y-planos/",
+      "description": "Producto vectorial y plano por el origen",
+      "detail": null
+    },
+    {
+      "id": "R.19",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/rectas-y-planos/",
+      "description": "Posición relativa de rectas y un plano",
+      "detail": null
+    },
+    {
+      "id": "R.20",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/rectas-y-planos/",
+      "description": "Subespacio o no: plano por el origen y plano afín",
+      "detail": null
+    },
+    {
+      "id": "R.T00.E1",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/",
+      "description": "Autodiagnóstico 1: AB y BA no coinciden",
+      "detail": null
+    },
+    {
+      "id": "R.T00.E2",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/",
+      "description": "Autodiagnóstico 2: inversa de una 2x2",
+      "detail": null
+    },
+    {
+      "id": "R.T00.E3",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/",
+      "description": "Autodiagnóstico 3: det A y det(2A)",
+      "detail": null
+    },
+    {
+      "id": "R.T00.E4",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/",
+      "description": "Autodiagnóstico 4: inversibilidad con parámetro",
+      "detail": null
+    },
+    {
+      "id": "R.T00.E5",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/",
+      "description": "Autodiagnóstico 5: clasificación de x+y=2, 2x+2y=k",
+      "detail": null
+    },
+    {
+      "id": "R.T00.E6",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/",
+      "description": "Autodiagnóstico 6: sistema cíclico en Z2 y en R",
+      "detail": null
+    },
+    {
+      "id": "R.T00.E7",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/",
+      "description": "Autodiagnóstico 7: raíces de λ³-3λ²+2λ",
+      "detail": null
+    },
+    {
+      "id": "R.T00.E8",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/",
+      "description": "Autodiagnóstico 8: plano gen{(1,0,1),(0,1,1)}",
+      "detail": null
+    },
+    {
+      "id": "R.T01.E1",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/vectores-y-matrices/",
+      "description": "Operaciones, producto escalar, norma y ángulo en R^3",
+      "detail": null
+    },
+    {
+      "id": "R.T01.E2",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/vectores-y-matrices/",
+      "description": "Producto de matrices, combinación de columnas y no conmutatividad",
+      "detail": null
+    },
+    {
+      "id": "R.T01.E3",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/vectores-y-matrices/",
+      "description": "Inversa por Gauss-Jordan de una 3x3",
+      "detail": null
+    },
+    {
+      "id": "R.T02.E1",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/determinantes/",
+      "description": "Determinante 3x3 por cofactores y por Sarrus",
+      "detail": null
+    },
+    {
+      "id": "R.T02.E2",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/determinantes/",
+      "description": "Determinante 4x4 por triangulación",
+      "detail": null
+    },
+    {
+      "id": "R.T02.E3",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/determinantes/",
+      "description": "Determinante de A_k = (k-1)^2 (k+2)",
+      "detail": null
+    },
+    {
+      "id": "R.T03.E1",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/sistemas-lineales/",
+      "description": "Eliminación gaussiana con variables libres",
+      "detail": null
+    },
+    {
+      "id": "R.T03.E2",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/sistemas-lineales/",
+      "description": "Clasificación según dos parámetros",
+      "detail": null
+    },
+    {
+      "id": "R.T03.E3",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/sistemas-lineales/",
+      "description": "Matriz ampliada múltiple",
+      "detail": null
+    },
+    {
+      "id": "R.T03.E4",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/sistemas-lineales/",
+      "description": "Sistema en Z2 con variables libres",
+      "detail": null
+    },
+    {
+      "id": "R.T04.E1",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/polinomios/",
+      "description": "Ruffini, teorema del resto y factorización",
+      "detail": null
+    },
+    {
+      "id": "R.T04.E2",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/polinomios/",
+      "description": "Raíz doble y raíces fraccionarias",
+      "detail": null
+    },
+    {
+      "id": "R.T04.E3",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/polinomios/",
+      "description": "Factor irreducible y polinomio característico sin expandir",
+      "detail": null
+    },
+    {
+      "id": "R.T05.E1",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/rectas-y-planos/",
+      "description": "Recta por dos puntos en R^3",
+      "detail": null
+    },
+    {
+      "id": "R.T05.E2",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/rectas-y-planos/",
+      "description": "Plano por tres puntos",
+      "detail": null
+    },
+    {
+      "id": "R.T05.E3",
+      "status": "passed",
+      "module": "repaso.py",
+      "page": "/algebra-ii/repaso/rectas-y-planos/",
+      "description": "De generadores a ecuación y de ecuación a generadores",
+      "detail": null
+    },
+    {
+      "id": "S1.1",
+      "status": "passed",
+      "module": "simulacros.py",
+      "page": "/algebra-ii/integradores/simulacro-1/",
+      "description": "Subespacio p(1)=2p(0), base y cambio de coordenadas",
+      "detail": null
+    },
+    {
+      "id": "S1.2",
+      "status": "passed",
+      "module": "simulacros.py",
+      "page": "/algebra-ii/integradores/simulacro-1/",
+      "description": "Código (6,3): generadora, codificación, síndrome y error doble",
+      "detail": null
+    },
+    {
+      "id": "S1.3",
+      "status": "passed",
+      "module": "simulacros.py",
+      "page": "/algebra-ii/integradores/simulacro-1/",
+      "description": "TL con núcleo e imagen prescritos, matriz, composición",
+      "detail": null
+    },
+    {
+      "id": "S1.4",
+      "status": "passed",
+      "module": "simulacros.py",
+      "page": "/algebra-ii/integradores/simulacro-1/",
+      "description": "Bases abstractas, inversa, Z2 y rango",
+      "detail": null
+    },
+    {
+      "id": "S2.1",
+      "status": "passed",
+      "module": "simulacros.py",
+      "page": "/algebra-ii/integradores/simulacro-2/",
+      "description": "Simetría respecto de y = 2x",
+      "detail": null
+    },
+    {
+      "id": "S2.2",
+      "status": "passed",
+      "module": "simulacros.py",
+      "page": "/algebra-ii/integradores/simulacro-2/",
+      "description": "Diagonalización con parámetro",
+      "detail": null
+    },
+    {
+      "id": "S2.3",
+      "status": "passed",
+      "module": "simulacros.py",
+      "page": "/algebra-ii/integradores/simulacro-2/",
+      "description": "Recurrencia a_{n+2} = a_{n+1} + 6 a_n",
+      "detail": null
+    },
+    {
+      "id": "S2.4",
+      "status": "passed",
+      "module": "simulacros.py",
+      "page": "/algebra-ii/integradores/simulacro-2/",
+      "description": "Producto interno no usual, Gram-Schmidt, complemento y proyección",
+      "detail": null
+    },
+    {
+      "id": "S2.5",
+      "status": "passed",
+      "module": "simulacros.py",
+      "page": "/algebra-ii/integradores/simulacro-2/",
+      "description": "Código (6,3): dual, distancia mínima, intersección y síndrome",
+      "detail": null
+    },
+    {
+      "id": "U1.01",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-inicial/",
+      "description": "Aritmética en Z2 y Z5; Z4 no es cuerpo",
+      "detail": null
+    },
+    {
+      "id": "U1.02",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-inicial/",
+      "description": "Subespacios de R^3: plano, plano afín y unión de planos",
+      "detail": null
+    },
+    {
+      "id": "U1.03",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-inicial/",
+      "description": "Pertenencia al generado, ecuación del plano y parámetro",
+      "detail": null
+    },
+    {
+      "id": "U1.04",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-inicial/",
+      "description": "La misma terna: LI en R^3 y LD en Z2^3",
+      "detail": null
+    },
+    {
+      "id": "U1.05",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-inicial/",
+      "description": "Cuatro afirmaciones V/F (subespacios y conteos en Z2)",
+      "detail": null
+    },
+    {
+      "id": "U1.06",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-inicial/",
+      "description": "fil, col, nul de una matriz 3x4 y rango-nulidad",
+      "detail": null
+    },
+    {
+      "id": "U1.07",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-inicial/",
+      "description": "Coordenadas, orden de la base y tamaño de [v]_B",
+      "detail": null
+    },
+    {
+      "id": "U1.08",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-inicial/",
+      "description": "Código de paridad (5,4)",
+      "detail": null
+    },
+    {
+      "id": "U1.09",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-intermedio/",
+      "description": "Subespacio de R^{2x2} con dos condiciones",
+      "detail": null
+    },
+    {
+      "id": "U1.10",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-intermedio/",
+      "description": "Generadores y ecuaciones en R^4; intersección",
+      "detail": null
+    },
+    {
+      "id": "U1.11",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-intermedio/",
+      "description": "Tres contraejemplos",
+      "detail": null
+    },
+    {
+      "id": "U1.12",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-intermedio/",
+      "description": "Base de P_2[R] con parámetro k",
+      "detail": null
+    },
+    {
+      "id": "U1.13",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-intermedio/",
+      "description": "Extensión a una base en R^4 y en Z2^4",
+      "detail": null
+    },
+    {
+      "id": "U1.14",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-intermedio/",
+      "description": "Cambio de coordenadas entre dos bases de R^3",
+      "detail": null
+    },
+    {
+      "id": "U1.15",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-intermedio/",
+      "description": "Cambio de coordenadas en P_2[R]",
+      "detail": null
+    },
+    {
+      "id": "U1.16",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-intermedio/",
+      "description": "Subespacio de Z2^4 y los mismos vectores en R^4",
+      "detail": null
+    },
+    {
+      "id": "U1.18",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-intermedio/",
+      "description": "Hamming (7,4): codificar, corregir y fallar con dos errores",
+      "detail": null
+    },
+    {
+      "id": "U1.19",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-avanzado/",
+      "description": "Base abstracta {u+v, v+w, w+u}: sobre R sí, sobre Z2 no",
+      "detail": null
+    },
+    {
+      "id": "U1.20",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-avanzado/",
+      "description": "Recuperar B desde C_BB' y B'",
+      "detail": null
+    },
+    {
+      "id": "U1.21",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-avanzado/",
+      "description": "Cadena de tres bases en P_1[R]",
+      "detail": null
+    },
+    {
+      "id": "U1.23",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-avanzado/",
+      "description": "Código acortado de Hamming (6,3), d=3",
+      "detail": null
+    },
+    {
+      "id": "U1.24",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/nivel-avanzado/",
+      "description": "Rango y subespacios de A_k = [[1,1,k],[1,k,1],[k,1,1]]",
+      "detail": null
+    },
+    {
+      "id": "U1.26",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/guia-integradora/",
+      "description": "Problema 1: S = {p in P_2: p(2) = p(0)}, bases y cambio",
+      "detail": null
+    },
+    {
+      "id": "U1.27",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/guia-integradora/",
+      "description": "Problema 2: A_k = [[1,1,0,1],[0,1,1,k],[1,2,1,3]]",
+      "detail": null
+    },
+    {
+      "id": "U1.28",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/guia-integradora/",
+      "description": "Problema 3: código (5,2) sobre Z2",
+      "detail": null
+    },
+    {
+      "id": "U1.29",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/guia-integradora/",
+      "description": "Problema 4: bases abstractas w1=v1+v2+v3, w2=v2+v3, w3=v3 y B_k",
+      "detail": null
+    },
+    {
+      "id": "U1.30",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/algebra-ii/unidad-1/practica/guia-integradora/",
+      "description": "Problema 5: cuatro vectores sobre Z2 y sobre R",
+      "detail": null
+    },
+    {
+      "id": "U1.T01.E1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/cuerpos-y-z2/",
+      "description": "Sistema 3x3 resuelto en Z2 y en R; sistema 2x2 incompatible en Z2",
+      "detail": null
+    },
+    {
+      "id": "U1.T01.E2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/cuerpos-y-z2/",
+      "description": "Inversos en Z5 y la ecuación 3x+4=1; Z3 y Z7 de la autoevaluación",
+      "detail": null
+    },
+    {
+      "id": "U1.T01.E3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/cuerpos-y-z2/",
+      "description": "Tabla del producto de Z4 y los axiomas que fallan; Z_n es cuerpo sii n primo",
+      "detail": null
+    },
+    {
+      "id": "U1.T02.E1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/espacios-vectoriales/",
+      "description": "Bloque de paridad en Z2^4 y recuperación de d2",
+      "detail": null
+    },
+    {
+      "id": "U1.T02.E2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/espacios-vectoriales/",
+      "description": "R con x⊕y=x+y-1 y λ⊙x=λx-λ+1 es espacio vectorial; (3⊙5)⊕((-2)⊙4)=7",
+      "detail": null
+    },
+    {
+      "id": "U1.T02.E3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/espacios-vectoriales/",
+      "description": "λ⊙(x,y)=(λx,y) rompe solo el axioma 10; con (λx,0) falla el 7",
+      "detail": null
+    },
+    {
+      "id": "U1.T02.E4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/espacios-vectoriales/",
+      "description": "2p-q en P_2[R] y el conjunto de polinomios de grado exactamente 2",
+      "detail": null
+    },
+    {
+      "id": "U1.T03.E1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/subespacios/",
+      "description": "S: x-2y=0 es subespacio y L: x-2y=-4 no lo es",
+      "detail": null
+    },
+    {
+      "id": "U1.T03.E2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/subespacios/",
+      "description": "Plano 2x-y+3z=0 de R^3: cierre y pertenencias",
+      "detail": null
+    },
+    {
+      "id": "U1.T03.E3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/subespacios/",
+      "description": "Matrices simétricas y de traza nula en R^{2x2}",
+      "detail": null
+    },
+    {
+      "id": "U1.T03.E4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/subespacios/",
+      "description": "S={p en P2: p(-1)=p(2)}: forma genérica, base {1, x^2-x}, pertenencias",
+      "detail": null
+    },
+    {
+      "id": "U1.T03.E5",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/subespacios/",
+      "description": "S={a+b+c=0} en Z2^3: elementos, subespacio; T={a+b+c=1} no lo es",
+      "detail": null
+    },
+    {
+      "id": "U1.T03.E6",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/subespacios/",
+      "description": "Subespacios de Z2^2 (5) y de Z2^3 (16 = 1+7+7+1)",
+      "detail": null
+    },
+    {
+      "id": "U1.T03.E7",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/subespacios/",
+      "description": "Tres conjuntos que no son subespacios: xy=0, det=0, x>=0",
+      "detail": null
+    },
+    {
+      "id": "U1.T04.E1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/combinaciones-lineales/",
+      "description": "Pertenencia a gen{v1,v2,v3} en R^3 por escalonamiento y ecuación del plano",
+      "detail": null
+    },
+    {
+      "id": "U1.T04.E2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/combinaciones-lineales/",
+      "description": "De generadores a ecuaciones implícitas (dos métodos) y de ecuaciones a generadores, en R^4",
+      "detail": null
+    },
+    {
+      "id": "U1.T04.E3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/combinaciones-lineales/",
+      "description": "Igualdad de generados en P2: gen{1+x, x+x^2} = gen{1+2x+x^2, 1-x^2}; 1+x^2 no pertenece",
+      "detail": null
+    },
+    {
+      "id": "U1.T04.E4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/combinaciones-lineales/",
+      "description": "Z2^4: gen{g1,g2,g3} tiene 4 elementos aunque haya 8 combinaciones; ecuaciones",
+      "detail": null
+    },
+    {
+      "id": "U1.T05.E1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/independencia-lineal/",
+      "description": "El mismo conjunto {(1,1,0),(0,1,1),(1,0,1)}: LI en R^3 y LD en Z2^3",
+      "detail": null
+    },
+    {
+      "id": "U1.T05.E2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/independencia-lineal/",
+      "description": "Vandermonde: {(1,1,1),(1,2,4),(1,k,k^2)} es LD sii k=1 o k=2",
+      "detail": null
+    },
+    {
+      "id": "U1.T05.E3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/independencia-lineal/",
+      "description": "{u,v,w} LI implica {u+v,u-v,w} LI sobre R y LD sobre Z2",
+      "detail": null
+    },
+    {
+      "id": "U1.T05.E4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/independencia-lineal/",
+      "description": "Independencia de matrices 2x2 por coordenadas y relación A3=2A1+A2",
+      "detail": null
+    },
+    {
+      "id": "U1.T06.E1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/subespacios-de-una-matriz/",
+      "description": "fil, col y nul de una matriz real 3x4; compatibilidad de Ax=b",
+      "detail": null
+    },
+    {
+      "id": "U1.T06.E2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/subespacios-de-una-matriz/",
+      "description": "La misma matriz 4x4 sobre R (inversible) y sobre Z2 (rango 3)",
+      "detail": null
+    },
+    {
+      "id": "U1.T07.E1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/base-y-dimension/",
+      "description": "Extensión de {v1,v2} a una base de R^4 por filas y por columnas",
+      "detail": null
+    },
+    {
+      "id": "U1.T07.E2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/base-y-dimension/",
+      "description": "Base de gen{w1..w5} en R^4 por columnas pivote y ecuación del subespacio",
+      "detail": null
+    },
+    {
+      "id": "U1.T07.E3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/base-y-dimension/",
+      "description": "Simétricas, traza nula y su intersección en R^{2x2}: bases y extensión",
+      "detail": null
+    },
+    {
+      "id": "U1.T07.E4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/base-y-dimension/",
+      "description": "W={p en P2: p(1)=0}: base {x-1, x^2-1}, q=1+x-2x^2 y extensión con 1",
+      "detail": null
+    },
+    {
+      "id": "U1.T07.E5",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/base-y-dimension/",
+      "description": "Subespacio de Z2^5 definido por dos ecuaciones: base y sus 8 elementos",
+      "detail": null
+    },
+    {
+      "id": "U1.T08.E1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/coordenadas/",
+      "description": "Coordenadas en la base {(2,1),(-1,2)} de R^2",
+      "detail": null
+    },
+    {
+      "id": "U1.T08.E2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/coordenadas/",
+      "description": "Coordenadas dentro del plano x-y-z=0 de R^3",
+      "detail": null
+    },
+    {
+      "id": "U1.T08.E3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/coordenadas/",
+      "description": "Coordenadas de 3-x+2x^2 en la base {1, 1+x, 1+x+x^2}",
+      "detail": null
+    },
+    {
+      "id": "U1.T08.E4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/coordenadas/",
+      "description": "Coordenadas de [[3,1],[1,2]] en la base de simétricas {M1,M2,M3}",
+      "detail": null
+    },
+    {
+      "id": "U1.T08.E5",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/coordenadas/",
+      "description": "Coordenadas de (1,0,1) en la base {(1,1,0),(0,1,1),(1,1,1)} de Z2^3",
+      "detail": null
+    },
+    {
+      "id": "U1.T08.E6",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/coordenadas/",
+      "description": "Independencia y pertenencia en P2 por coordenadas: p3=p1+p2, q=2p1+p2, r no pertenece",
+      "detail": null
+    },
+    {
+      "id": "U1.T09.E1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/cambio-de-coordenadas/",
+      "description": "C_BB' entre dos bases de R^3 por los dos métodos y [v]_B'",
+      "detail": null
+    },
+    {
+      "id": "U1.T09.E2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/cambio-de-coordenadas/",
+      "description": "Polinomios: C_BE, C_EB para B={1,1+x,(1+x)^2} y [p]_B de 2-3x+x^2",
+      "detail": null
+    },
+    {
+      "id": "U1.T09.E3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/cambio-de-coordenadas/",
+      "description": "Base abstracta B'={v1+v2, v2-v3, v1+2v3}: C_B'B, C_BB' y [u]_B'",
+      "detail": null
+    },
+    {
+      "id": "U1.T09.E4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/cambio-de-coordenadas/",
+      "description": "Recuperar B' a partir de C_BB' en R^2 y [v]_B'",
+      "detail": null
+    },
+    {
+      "id": "U1.T09.E5",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/cambio-de-coordenadas/",
+      "description": "Base adaptada a un plano de R^3: C_BE, C_EB y ecuaciones en coordenadas",
+      "detail": null
+    },
+    {
+      "id": "U1.T10.E1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/codigos-lineales/",
+      "description": "Código de paridad (4,3): G, H, ocho palabras, d=2, detecta un error",
+      "detail": null
+    },
+    {
+      "id": "U1.T10.E2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/codigos-lineales/",
+      "description": "Repetición (5,1): d=5, detecta 4 y corrige 2; con tres errores falla",
+      "detail": null
+    },
+    {
+      "id": "U1.T10.E3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/codigos-lineales/",
+      "description": "Código (6,3) con d=3: de H a G, enumeración, distancia mínima y corrección de un error",
+      "detail": null
+    },
+    {
+      "id": "U1.T10.E4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/algebra-ii/unidad-1/teoria/codigos-lineales/",
+      "description": "Hamming (7,4): H, dimensión, base, G, codificación, corrección y falla con dos errores",
+      "detail": null
+    },
+    {
+      "id": "U2.01",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-inicial/",
+      "description": "Linealidad y no linealidad de cinco funciones",
+      "detail": null
+    },
+    {
+      "id": "U2.02",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-inicial/",
+      "description": "Núcleo, imagen y preimagen de una TL de R^3 en R^3",
+      "detail": null
+    },
+    {
+      "id": "U2.03",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-inicial/",
+      "description": "Núcleo e imagen de T: P2 -> R^2, T(p) = (p(0), p(1) - p'(1))",
+      "detail": null
+    },
+    {
+      "id": "U2.04",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-inicial/",
+      "description": "Núcleo e imagen de T(A) = A - A^t en R^{2x2}",
+      "detail": null
+    },
+    {
+      "id": "U2.05",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-inicial/",
+      "description": "De la fórmula a la matriz y preimágenes de T(x,y,z) = (2x - y + z, x + 3z)",
+      "detail": null
+    },
+    {
+      "id": "U2.06",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-inicial/",
+      "description": "Existencia de TL según dimensiones; ejemplo con núcleo gen{I}",
+      "detail": null
+    },
+    {
+      "id": "U2.08",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-inicial/",
+      "description": "Gráficos 2D: reflexión y cizalladura",
+      "detail": null
+    },
+    {
+      "id": "U2.09",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-intermedio/",
+      "description": "Teorema fundamental: construcción de T con tres imágenes dadas",
+      "detail": null
+    },
+    {
+      "id": "U2.10",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-intermedio/",
+      "description": "Teorema fundamental con datos linealmente dependientes y un parámetro",
+      "detail": null
+    },
+    {
+      "id": "U2.11",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-intermedio/",
+      "description": "TL con núcleo e imagen prescritos",
+      "detail": null
+    },
+    {
+      "id": "U2.12",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-intermedio/",
+      "description": "Matriz asociada en bases no canónicas, de R^3 en R^2",
+      "detail": null
+    },
+    {
+      "id": "U2.13",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-intermedio/",
+      "description": "Diferencia finita en P2 con una base no canónica",
+      "detail": null
+    },
+    {
+      "id": "U2.14",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-intermedio/",
+      "description": "Cambio de base con tres factores de R^2 en R^3",
+      "detail": null
+    },
+    {
+      "id": "U2.15",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-intermedio/",
+      "description": "Composición de S: R^2 -> R^3 y U: R^3 -> R^2",
+      "detail": null
+    },
+    {
+      "id": "U2.16",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-intermedio/",
+      "description": "TL inversible en P2: T(p) = p + p'",
+      "detail": null
+    },
+    {
+      "id": "U2.17",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-intermedio/",
+      "description": "Codificación a -> aG sobre Z_2 como TL",
+      "detail": null
+    },
+    {
+      "id": "U2.18",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-intermedio/",
+      "description": "T(A) = AB - BA en R^{2x2} desde su matriz",
+      "detail": null
+    },
+    {
+      "id": "U2.21",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-avanzado/",
+      "description": "Contraejemplo: S o T biyectiva sin S inyectiva ni T sobreyectiva",
+      "detail": null
+    },
+    {
+      "id": "U2.22",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-avanzado/",
+      "description": "Contraejemplos sobre núcleo e imagen de una suma",
+      "detail": null
+    },
+    {
+      "id": "U2.23",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-avanzado/",
+      "description": "Proyección T o T = T: ejemplo en R^2",
+      "detail": null
+    },
+    {
+      "id": "U2.24",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-avanzado/",
+      "description": "Verdadero o falso sobre TL de R^2 y R^3",
+      "detail": null
+    },
+    {
+      "id": "U2.25",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-avanzado/",
+      "description": "Familia T_k de TL de R^3: núcleo, imagen y clasificación según k",
+      "detail": null
+    },
+    {
+      "id": "U2.26",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-avanzado/",
+      "description": "Matriz asociada con bases abstractas: núcleo, imagen y cambio de bases",
+      "detail": null
+    },
+    {
+      "id": "U2.27",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/nivel-avanzado/",
+      "description": "Reflexión respecto de una recta en una base adaptada",
+      "detail": null
+    },
+    {
+      "id": "U2.28",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/guia-integradora/",
+      "description": "Problema 1: TL de R^3 en P2 definida sobre una base",
+      "detail": null
+    },
+    {
+      "id": "U2.29",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/guia-integradora/",
+      "description": "Problema 2: endomorfismo de R^2 con parámetro dado por M(T)_B",
+      "detail": null
+    },
+    {
+      "id": "U2.30",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/guia-integradora/",
+      "description": "Problema 3: codificación y detección de errores con TL sobre Z_2",
+      "detail": null
+    },
+    {
+      "id": "U2.31",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/guia-integradora/",
+      "description": "Problema 4: transformaciones con T o T = 0",
+      "detail": null
+    },
+    {
+      "id": "U2.32",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/algebra-ii/unidad-2/practica/guia-integradora/",
+      "description": "Problema 5: gráficos 2D con coordenadas homogéneas",
+      "detail": null
+    },
+    {
+      "id": "U2.T01.E1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/definicion-y-ejemplos/",
+      "description": "Linealidad de T(x,y,z)=(x-2y+z, 3y-z) y su forma matricial",
+      "detail": null
+    },
+    {
+      "id": "U2.T01.E2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/definicion-y-ejemplos/",
+      "description": "F(x,y)=(x+y, xy) fija el origen y no es lineal",
+      "detail": null
+    },
+    {
+      "id": "U2.T01.E3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/definicion-y-ejemplos/",
+      "description": "Rotación con cos=4/5, sen=3/5: imagen del cuadrado unidad",
+      "detail": null
+    },
+    {
+      "id": "U2.T01.E4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/definicion-y-ejemplos/",
+      "description": "T(p)=(p(1), p'(0)) en P_2[R] es lineal; T(2-x+3x^2)=(4,-1)",
+      "detail": null
+    },
+    {
+      "id": "U2.T01.E5",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/definicion-y-ejemplos/",
+      "description": "Codificación a -> aG en Z2 con G de 2x5",
+      "detail": null
+    },
+    {
+      "id": "U2.T01.E6",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/definicion-y-ejemplos/",
+      "description": "Contraejemplos: traslación, norma, determinante y x^2",
+      "detail": null
+    },
+    {
+      "id": "U2.T01.E7",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/definicion-y-ejemplos/",
+      "description": "Cizalla de la grilla y traslación en coordenadas homogéneas",
+      "detail": null
+    },
+    {
+      "id": "U2.T02.E1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/nucleo-e-imagen/",
+      "description": "Núcleo e imagen de una TL de R^4 en R^3",
+      "detail": null
+    },
+    {
+      "id": "U2.T02.E2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/nucleo-e-imagen/",
+      "description": "T(p)=[[p(0),p(1)],[p(1),p(2)]]: núcleo nulo e imagen = simétricas",
+      "detail": null
+    },
+    {
+      "id": "U2.T02.E3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/nucleo-e-imagen/",
+      "description": "T: R^{2x2} -> P_2[R] con núcleo y imagen de dimensión 2",
+      "detail": null
+    },
+    {
+      "id": "U2.T02.E4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/nucleo-e-imagen/",
+      "description": "Preimágenes por la TL de U2.T02.E1",
+      "detail": null
+    },
+    {
+      "id": "U2.T02.E5",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/nucleo-e-imagen/",
+      "description": "Proyección P(x,y)=(2x-2y, x-y): núcleo, imagen y figura",
+      "detail": null
+    },
+    {
+      "id": "U2.T03.E1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/teorema-de-la-dimension/",
+      "description": "T: P_3 -> R^3, T(p)=(p(1), p(-1), p'(0)): epimorfismo con núcleo gen{x^2-1}",
+      "detail": null
+    },
+    {
+      "id": "U2.T03.E2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/teorema-de-la-dimension/",
+      "description": "T(A)=A-A^t en R^{2x2}: núcleo simétricas, imagen antisimétricas",
+      "detail": null
+    },
+    {
+      "id": "U2.T03.E3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/teorema-de-la-dimension/",
+      "description": "No existe T: R^3 -> R^4 con T(1,2,0)=2T(0,1,1) e Im de dimensión >= 3",
+      "detail": null
+    },
+    {
+      "id": "U2.T03.E4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/teorema-de-la-dimension/",
+      "description": "Matriz de control del código de Hamming (7,4): rango 3, núcleo de dimensión 4",
+      "detail": null
+    },
+    {
+      "id": "U2.T04.E1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/clasificacion/",
+      "description": "T(x,y,z)=(x+y, y+z, x+2y+z): ni mono ni epi",
+      "detail": null
+    },
+    {
+      "id": "U2.T04.E2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/clasificacion/",
+      "description": "T_k(A)=A+kA^t es automorfismo de R^{2x2} si y solo si k != 1, -1",
+      "detail": null
+    },
+    {
+      "id": "U2.T04.E3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/clasificacion/",
+      "description": "La codificación con G de rango 2 es monomorfismo de Z2^2 en Z2^5",
+      "detail": null
+    },
+    {
+      "id": "U2.T04.E4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/clasificacion/",
+      "description": "Coordenadas en P_2[R] como isomorfismo con R^3",
+      "detail": null
+    },
+    {
+      "id": "U2.T05.E1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/teorema-fundamental/",
+      "description": "TL de R^2 en R^3 fijada sobre B={(1,2),(1,3)}: dos métodos",
+      "detail": null
+    },
+    {
+      "id": "U2.T05.E2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/teorema-fundamental/",
+      "description": "Datos LD compatibles: existen infinitas TL",
+      "detail": null
+    },
+    {
+      "id": "U2.T05.E3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/teorema-fundamental/",
+      "description": "Datos LD incompatibles: no existe la TL",
+      "detail": null
+    },
+    {
+      "id": "U2.T05.E4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/teorema-fundamental/",
+      "description": "TL de R^3 en P_2[R] con núcleo e imagen prescritos",
+      "detail": null
+    },
+    {
+      "id": "U2.T05.E5",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/teorema-fundamental/",
+      "description": "Endomorfismo de R^4 con Nu(T) = Im(T)",
+      "detail": null
+    },
+    {
+      "id": "U2.T06.E1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/matriz-asociada/",
+      "description": "Matriz en bases canónicas de T(x,y,z)=(x+2y-z, y+z)",
+      "detail": null
+    },
+    {
+      "id": "U2.T06.E2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/matriz-asociada/",
+      "description": "M(T)_{BB'} con bases no canónicas y matriz ampliada múltiple",
+      "detail": null
+    },
+    {
+      "id": "U2.T06.E3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/matriz-asociada/",
+      "description": "Núcleo e imagen desde M(T)_{BB'}: coordenadas versus vectores",
+      "detail": null
+    },
+    {
+      "id": "U2.T06.E4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/matriz-asociada/",
+      "description": "Endomorfismo T(p)=(x+1)p'-p de P_2[R] en bases B y B'",
+      "detail": null
+    },
+    {
+      "id": "U2.T06.E5",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/matriz-asociada/",
+      "description": "De la matriz M(T)_{BB'} a la fórmula explícita",
+      "detail": null
+    },
+    {
+      "id": "U2.T07.E1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/cambio-de-base/",
+      "description": "M(T)_{BB'} = C_{E'B'} M(T)_{EE'} C_{BE} (verificación por dos caminos)",
+      "detail": null
+    },
+    {
+      "id": "U2.T07.E2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/cambio-de-base/",
+      "description": "Simetría respecto de la recta gen{(1,2)}",
+      "detail": null
+    },
+    {
+      "id": "U2.T07.E3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/cambio-de-base/",
+      "description": "Proyección ortogonal sobre el plano x+y-z=0 mediante base adaptada",
+      "detail": null
+    },
+    {
+      "id": "U2.T07.E4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/cambio-de-base/",
+      "description": "Endomorfismo de P_2[R]: M(T)_B = C_{EB} M(T)_E C_{BE}",
+      "detail": null
+    },
+    {
+      "id": "U2.T08.E1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/composicion-e-inversa/",
+      "description": "Composición de rotaciones con cos=4/5, sen=3/5",
+      "detail": null
+    },
+    {
+      "id": "U2.T08.E2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/composicion-e-inversa/",
+      "description": "S∘T no es isomorfismo y T∘S sí (T: R^3->R^2, S: R^2->R^3)",
+      "detail": null
+    },
+    {
+      "id": "U2.T08.E3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/composicion-e-inversa/",
+      "description": "Inversa de T(p)=(p(0), p(1), p(-1)) y preimagen de (2,3,5)",
+      "detail": null
+    },
+    {
+      "id": "U2.T08.E4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/algebra-ii/unidad-2/teoria/composicion-e-inversa/",
+      "description": "M(T^{-1})_{B'B} = (M(T)_{BB'})^{-1} para T: P_1[R] -> R^2",
+      "detail": null
+    },
+    {
+      "id": "U3.01",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-inicial/",
+      "description": "Autovectores por definición y determinante de I-A",
+      "detail": null
+    },
+    {
+      "id": "U3.02",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-inicial/",
+      "description": "Proyección ortogonal sobre una recta",
+      "detail": null
+    },
+    {
+      "id": "U3.03",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-inicial/",
+      "description": "Autovalores y autoespacios 2x2",
+      "detail": null
+    },
+    {
+      "id": "U3.04",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-inicial/",
+      "description": "Multiplicidades en una 3x3 no diagonalizable",
+      "detail": null
+    },
+    {
+      "id": "U3.05",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-inicial/",
+      "description": "Matrices sin autovalores reales",
+      "detail": null
+    },
+    {
+      "id": "U3.06",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-inicial/",
+      "description": "V/F: autovectores y suma de matrices",
+      "detail": null
+    },
+    {
+      "id": "U3.07",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-inicial/",
+      "description": "Propiedades en una matriz triangular",
+      "detail": null
+    },
+    {
+      "id": "U3.08",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-inicial/",
+      "description": "Matriz de rango 1: E_0 y diagonalización",
+      "detail": null
+    },
+    {
+      "id": "U3.09",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-intermedio/",
+      "description": "Diagonalización 3x3 con autovalores 1, 2, -3",
+      "detail": null
+    },
+    {
+      "id": "U3.10",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-intermedio/",
+      "description": "Autovalor doble con m_g = m_a",
+      "detail": null
+    },
+    {
+      "id": "U3.11",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-intermedio/",
+      "description": "Diagonalizabilidad según el parámetro a",
+      "detail": null
+    },
+    {
+      "id": "U3.12",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-intermedio/",
+      "description": "V/F sobre diagonalización",
+      "detail": null
+    },
+    {
+      "id": "U3.13",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-intermedio/",
+      "description": "Contraejemplos de semejanza",
+      "detail": null
+    },
+    {
+      "id": "U3.14",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-intermedio/",
+      "description": "Semejanza explícita de dos matrices 2x2",
+      "detail": null
+    },
+    {
+      "id": "U3.15",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-intermedio/",
+      "description": "Fórmula de A^k y potencias negativas",
+      "detail": null
+    },
+    {
+      "id": "U3.16",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-intermedio/",
+      "description": "Inversibilidad de A^k - I y de A^2 + A - 2I",
+      "detail": null
+    },
+    {
+      "id": "U3.17",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-intermedio/",
+      "description": "Embaldosado de 2xn: a_{n+1} = a_n + 2 a_{n-1}",
+      "detail": null
+    },
+    {
+      "id": "U3.18",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-intermedio/",
+      "description": "Cadena de Markov del estado de un hilo",
+      "detail": null
+    },
+    {
+      "id": "U3.21",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-avanzado/",
+      "description": "Dos parámetros: diagonalizable si y solo si a = 0",
+      "detail": null
+    },
+    {
+      "id": "U3.22",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-avanzado/",
+      "description": "Contraejemplo: diagonalizables con suma y producto no diagonalizables",
+      "detail": null
+    },
+    {
+      "id": "U3.23",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-avanzado/",
+      "description": "Recurrencia con raíz doble: T(n) = (n+2) 2^(n-1)",
+      "detail": null
+    },
+    {
+      "id": "U3.24",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-avanzado/",
+      "description": "Navegación en un sitio de tres páginas",
+      "detail": null
+    },
+    {
+      "id": "U3.26",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/nivel-avanzado/",
+      "description": "Cadena de dos estados con parámetro a",
+      "detail": null
+    },
+    {
+      "id": "U3.27",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/guia-integradora/",
+      "description": "Problema con parámetro k: A_k y potencias",
+      "detail": null
+    },
+    {
+      "id": "U3.28",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/guia-integradora/",
+      "description": "Operador T(p) = (x+1) p' en R_2[x]",
+      "detail": null
+    },
+    {
+      "id": "U3.29",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/guia-integradora/",
+      "description": "Recurrencia a_{n+1} = 2a_n + 3a_{n-1}",
+      "detail": null
+    },
+    {
+      "id": "U3.30",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/guia-integradora/",
+      "description": "Cadena de Markov de usuarios de una aplicación",
+      "detail": null
+    },
+    {
+      "id": "U3.31",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/algebra-ii/unidad-3/practica/guia-integradora/",
+      "description": "Traza, determinante y autovector: matriz 3x3 defectuosa",
+      "detail": null
+    },
+    {
+      "id": "U3.T01.E1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/autovalores-y-autovectores/",
+      "description": "Verificar autovectores y autovalores de una 2x2",
+      "detail": null
+    },
+    {
+      "id": "U3.T01.E2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/autovalores-y-autovectores/",
+      "description": "Transposición en R^{2x2}: autovalores 1 y -1",
+      "detail": null
+    },
+    {
+      "id": "U3.T01.E3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/autovalores-y-autovectores/",
+      "description": "Autovalor 0 de una matriz no inversible",
+      "detail": null
+    },
+    {
+      "id": "U3.T01.E4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/autovalores-y-autovectores/",
+      "description": "Parámetro para que v=(1,1,-1) sea autovector",
+      "detail": null
+    },
+    {
+      "id": "U3.T01.F1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/autovalores-y-autovectores/",
+      "description": "Figura: direcciones invariantes de A=[[2,1],[1,2]]",
+      "detail": null
+    },
+    {
+      "id": "U3.T02.E1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/polinomio-caracteristico/",
+      "description": "Autovalores y autoespacios de una 2x2",
+      "detail": null
+    },
+    {
+      "id": "U3.T02.E2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/polinomio-caracteristico/",
+      "description": "3x3 con Ruffini: autovalores -1, 1, 3",
+      "detail": null
+    },
+    {
+      "id": "U3.T02.E3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/polinomio-caracteristico/",
+      "description": "Autovalor doble con m_g = 1",
+      "detail": null
+    },
+    {
+      "id": "U3.T02.E4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/polinomio-caracteristico/",
+      "description": "2x2 sin autovalores reales",
+      "detail": null
+    },
+    {
+      "id": "U3.T02.E5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/polinomio-caracteristico/",
+      "description": "Triangular: autovalores en la diagonal y m_g < m_a",
+      "detail": null
+    },
+    {
+      "id": "U3.T03.E1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/propiedades/",
+      "description": "Filas de suma constante, traza y determinante",
+      "detail": null
+    },
+    {
+      "id": "U3.T03.E2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/propiedades/",
+      "description": "Autovalores de A^-1, A^3 y A^2 - 3A",
+      "detail": null
+    },
+    {
+      "id": "U3.T03.E3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/propiedades/",
+      "description": "A y A^t: mismo polinomio, distintos autoespacios",
+      "detail": null
+    },
+    {
+      "id": "U3.T03.E4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/propiedades/",
+      "description": "Columnas de suma constante",
+      "detail": null
+    },
+    {
+      "id": "U3.T03.E5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/propiedades/",
+      "description": "Los autovalores no son aditivos",
+      "detail": null
+    },
+    {
+      "id": "U3.T04.E1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/matrices-semejantes/",
+      "description": "Construir A = CBC^{-1} y comparar invariantes",
+      "detail": null
+    },
+    {
+      "id": "U3.T04.E2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/matrices-semejantes/",
+      "description": "Decidir semejanza",
+      "detail": null
+    },
+    {
+      "id": "U3.T04.E3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/matrices-semejantes/",
+      "description": "Matriz de un endomorfismo en dos bases",
+      "detail": null
+    },
+    {
+      "id": "U3.T04.E4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/matrices-semejantes/",
+      "description": "Potencias vía semejanza con B = [[1,1],[0,1]]",
+      "detail": null
+    },
+    {
+      "id": "U3.T04.E5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/matrices-semejantes/",
+      "description": "I y N no son semejantes",
+      "detail": null
+    },
+    {
+      "id": "U3.T05.E1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/diagonalizacion/",
+      "description": "Diagonalizar una 2x2",
+      "detail": null
+    },
+    {
+      "id": "U3.T05.E2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/diagonalizacion/",
+      "description": "3x3 diagonalizable con autovalor doble",
+      "detail": null
+    },
+    {
+      "id": "U3.T05.E3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/diagonalizacion/",
+      "description": "3x3 no diagonalizable",
+      "detail": null
+    },
+    {
+      "id": "U3.T05.E4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/diagonalizacion/",
+      "description": "Diagonalizabilidad según un parámetro",
+      "detail": null
+    },
+    {
+      "id": "U3.T05.E5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/diagonalizacion/",
+      "description": "Simétrica 2x2",
+      "detail": null
+    },
+    {
+      "id": "U3.T06.E1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/potencias/",
+      "description": "Fórmula de A^k y A^10",
+      "detail": null
+    },
+    {
+      "id": "U3.T06.E2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/potencias/",
+      "description": "Potencias negativas",
+      "detail": null
+    },
+    {
+      "id": "U3.T06.E3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/potencias/",
+      "description": "Inversibilidad de polinomios en A",
+      "detail": null
+    },
+    {
+      "id": "U3.T06.E4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/potencias/",
+      "description": "Límite de A^k",
+      "detail": null
+    },
+    {
+      "id": "U3.T06.E5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/potencias/",
+      "description": "Rotación: A^2 + I = 0 sin autovalores reales",
+      "detail": null
+    },
+    {
+      "id": "U3.T06.E6",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/potencias/",
+      "description": "Exponenciación binaria de matrices",
+      "detail": null
+    },
+    {
+      "id": "U3.T07.E1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/relaciones-de-recurrencia/",
+      "description": "a_{n+1} = a_n + 6 a_{n-1}",
+      "detail": null
+    },
+    {
+      "id": "U3.T07.E2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/relaciones-de-recurrencia/",
+      "description": "Fibonacci: fórmula de Binet y número áureo",
+      "detail": null
+    },
+    {
+      "id": "U3.T07.E3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/relaciones-de-recurrencia/",
+      "description": "Raíz doble: a_{n+1} = 4a_n − 4a_{n−1}",
+      "detail": null
+    },
+    {
+      "id": "U3.T07.E4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/relaciones-de-recurrencia/",
+      "description": "Teselados con cuadrados y dominós de dos colores",
+      "detail": null
+    },
+    {
+      "id": "U3.T07.E5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/relaciones-de-recurrencia/",
+      "description": "Cadenas binarias sin dos unos consecutivos",
+      "detail": null
+    },
+    {
+      "id": "U3.T07.E6",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/relaciones-de-recurrencia/",
+      "description": "Llamadas de la recursión ingenua de Fibonacci",
+      "detail": null
+    },
+    {
+      "id": "U3.T07.E7",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/relaciones-de-recurrencia/",
+      "description": "Fibonacci iterativo con enteros exactos",
+      "detail": null
+    },
+    {
+      "id": "U3.T08.E1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/cadenas-de-markov/",
+      "description": "Usuarios gratuitos y suscriptores",
+      "detail": null
+    },
+    {
+      "id": "U3.T08.E2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/cadenas-de-markov/",
+      "description": "Servidor activo/saturado/caído",
+      "detail": null
+    },
+    {
+      "id": "U3.T08.E3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/cadenas-de-markov/",
+      "description": "Mini PageRank con cuatro páginas",
+      "detail": null
+    },
+    {
+      "id": "U3.T08.E4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/cadenas-de-markov/",
+      "description": "Cadenas no regulares",
+      "detail": null
+    },
+    {
+      "id": "U3.T08.E5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/algebra-ii/unidad-3/teoria/cadenas-de-markov/",
+      "description": "Estado absorbente: converge sin ser regular",
+      "detail": null
+    },
+    {
+      "id": "U4.01",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-inicial/",
+      "description": "Cinco fórmulas en R^2: cuáles son producto interno",
+      "detail": null
+    },
+    {
+      "id": "U4.02",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-inicial/",
+      "description": "Norma, distancia y ángulo con el producto x1y1+x2y2+2x3y3",
+      "detail": null
+    },
+    {
+      "id": "U4.03",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-inicial/",
+      "description": "Producto de la traza en R^{2x2}: ortogonalidad, Pitágoras, coseno y parámetro",
+      "detail": null
+    },
+    {
+      "id": "U4.04",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-inicial/",
+      "description": "Producto por evaluación en P_2 con nodos -1, 0, 1",
+      "detail": null
+    },
+    {
+      "id": "U4.05",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-inicial/",
+      "description": "Coordenadas en una base ortogonal de R^3",
+      "detail": null
+    },
+    {
+      "id": "U4.06",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-inicial/",
+      "description": "Complemento ortogonal en R^4 y pertenencia de w",
+      "detail": null
+    },
+    {
+      "id": "U4.07",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-inicial/",
+      "description": "Proyección sobre un plano de R^3 con base ortogonal",
+      "detail": null
+    },
+    {
+      "id": "U4.08",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-inicial/",
+      "description": "Producto punto en Z_2^n: ortogonalidad y conteo",
+      "detail": null
+    },
+    {
+      "id": "U4.09",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Producto con parámetro k: positividad solo si |k| < 2",
+      "detail": null
+    },
+    {
+      "id": "U4.10",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Verdadero/falso: cuatro afirmaciones sobre ortogonalidad",
+      "detail": null
+    },
+    {
+      "id": "U4.11",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Gram-Schmidt en R^3 usual",
+      "detail": null
+    },
+    {
+      "id": "U4.12",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Gram-Schmidt en P_2 con evaluación en 0, 1, 2",
+      "detail": null
+    },
+    {
+      "id": "U4.13",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Complemento ortogonal en R^{2x2} con la traza",
+      "detail": null
+    },
+    {
+      "id": "U4.14",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Complemento con un producto ponderado y con el usual",
+      "detail": null
+    },
+    {
+      "id": "U4.15",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Proyección sobre x + y - 2z = 0 por tres métodos",
+      "detail": null
+    },
+    {
+      "id": "U4.16",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Tres contraejemplos: fórmula sin base ortogonal, complemento y transitividad",
+      "detail": null
+    },
+    {
+      "id": "U4.17",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Recta de cuadrados mínimos con tiempos de respuesta",
+      "detail": null
+    },
+    {
+      "id": "U4.18",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Similitud coseno entre una consulta y tres documentos",
+      "detail": null
+    },
+    {
+      "id": "U4.19",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Dual de un código (5,2) en Z_2^5",
+      "detail": null
+    },
+    {
+      "id": "U4.20",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-intermedio/",
+      "description": "Código (7,3): distancia mínima, detección y corrección",
+      "detail": null
+    },
+    {
+      "id": "U4.21",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-avanzado/",
+      "description": "Verdadero/falso: S ∩ S^perp, Z_2, proyección y norma",
+      "detail": null
+    },
+    {
+      "id": "U4.22",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-avanzado/",
+      "description": "Contraejemplos: evaluación en dos nodos, diagonal positiva, ortogonalidad",
+      "detail": null
+    },
+    {
+      "id": "U4.25",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-avanzado/",
+      "description": "Mejor aproximación de x^2 en P_1 con evaluación en 0, 1, 2",
+      "detail": null
+    },
+    {
+      "id": "U4.26",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-avanzado/",
+      "description": "Parábola y recta de cuadrados mínimos para el tiempo de un algoritmo",
+      "detail": null
+    },
+    {
+      "id": "U4.27",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/nivel-avanzado/",
+      "description": "Código (6,3) por matriz de control: G, distancia y síndromes",
+      "detail": null
+    },
+    {
+      "id": "U4.28",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/guia-integradora/",
+      "description": "Producto x^t M y en R^3: Gram-Schmidt, complemento, proyección",
+      "detail": null
+    },
+    {
+      "id": "U4.29",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/guia-integradora/",
+      "description": "Subespacio de matrices con la traza: Gram-Schmidt, complemento, proyección",
+      "detail": null
+    },
+    {
+      "id": "U4.30",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/guia-integradora/",
+      "description": "Producto por evaluación con parámetro a: positividad, Gram-Schmidt, aproximación",
+      "detail": null
+    },
+    {
+      "id": "U4.31",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/guia-integradora/",
+      "description": "Recta y parábola de cuadrados mínimos con variable centrada; A^t A inversible",
+      "detail": null
+    },
+    {
+      "id": "U4.32",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/algebra-ii/unidad-4/practica/guia-integradora/",
+      "description": "Código autodual (6,3), subcódigo (6,2), dual y decodificación",
+      "detail": null
+    },
+    {
+      "id": "U4.T01.E1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/producto-interno/",
+      "description": "Producto u^t M v en R^2: criterio 2x2 y completar cuadrados",
+      "detail": null
+    },
+    {
+      "id": "U4.T01.E2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/producto-interno/",
+      "description": "Suma de productos de formas lineales en R^2",
+      "detail": null
+    },
+    {
+      "id": "U4.T01.E3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/producto-interno/",
+      "description": "Producto tr(A^t B) en R^{2x2}",
+      "detail": null
+    },
+    {
+      "id": "U4.T01.E4",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/producto-interno/",
+      "description": "Producto por evaluación en P_2: tres nodos sí, dos no",
+      "detail": null
+    },
+    {
+      "id": "U4.T01.E5",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/producto-interno/",
+      "description": "Matriz de Gram del producto por evaluación en P_2",
+      "detail": null
+    },
+    {
+      "id": "U4.T02.E1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/norma-distancia-angulo/",
+      "description": "Norma, distancia y ángulo con el producto usual en R^3",
+      "detail": null
+    },
+    {
+      "id": "U4.T02.E2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/norma-distancia-angulo/",
+      "description": "Los canónicos con un producto no usual",
+      "detail": null
+    },
+    {
+      "id": "U4.T02.E3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/norma-distancia-angulo/",
+      "description": "Ángulo y Pitágoras en P_2 con producto por evaluación",
+      "detail": null
+    },
+    {
+      "id": "U4.T02.E4",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/norma-distancia-angulo/",
+      "description": "Similitud coseno entre documentos",
+      "detail": null
+    },
+    {
+      "id": "U4.T03.E1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/ortogonalidad/",
+      "description": "Coordenadas en una base ortogonal de R^2",
+      "detail": null
+    },
+    {
+      "id": "U4.T03.E2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/ortogonalidad/",
+      "description": "Base ortogonal y ortonormal de R^3, coordenadas y Q^tQ = I",
+      "detail": null
+    },
+    {
+      "id": "U4.T03.E3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/ortogonalidad/",
+      "description": "Base ortogonal para un producto no usual en R^2",
+      "detail": null
+    },
+    {
+      "id": "U4.T04.E1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/gram-schmidt/",
+      "description": "Gram-Schmidt de tres vectores de R^4 (producto usual)",
+      "detail": null
+    },
+    {
+      "id": "U4.T04.E2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/gram-schmidt/",
+      "description": "Base ortogonal de un plano con producto ponderado",
+      "detail": null
+    },
+    {
+      "id": "U4.T04.E3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/gram-schmidt/",
+      "description": "Gram-Schmidt en P_2 con producto por evaluación",
+      "detail": null
+    },
+    {
+      "id": "U4.T04.E4",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/gram-schmidt/",
+      "description": "Gram-Schmidt detecta dependencia lineal",
+      "detail": null
+    },
+    {
+      "id": "U4.T04.E5",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/gram-schmidt/",
+      "description": "Completar una base ortogonal de R^4",
+      "detail": null
+    },
+    {
+      "id": "U4.T05.E1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/complemento-ortogonal/",
+      "description": "Complementos de una recta y de un plano en R^3",
+      "detail": null
+    },
+    {
+      "id": "U4.T05.E2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/complemento-ortogonal/",
+      "description": "Complemento ortogonal en R^4 como espacio nulo",
+      "detail": null
+    },
+    {
+      "id": "U4.T05.E3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/complemento-ortogonal/",
+      "description": "Complemento ortogonal en R^{2x2} con la traza",
+      "detail": null
+    },
+    {
+      "id": "U4.T05.E4",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/complemento-ortogonal/",
+      "description": "Complemento ortogonal con un producto no usual en R^3",
+      "detail": null
+    },
+    {
+      "id": "U4.T06.E1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/proyeccion-y-distancia/",
+      "description": "Proyección sobre una recta de R^2",
+      "detail": null
+    },
+    {
+      "id": "U4.T06.E2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/proyeccion-y-distancia/",
+      "description": "La fórmula con una base no ortogonal falla",
+      "detail": null
+    },
+    {
+      "id": "U4.T06.E3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/proyeccion-y-distancia/",
+      "description": "Proyección sobre un plano de R^3 por dos caminos",
+      "detail": null
+    },
+    {
+      "id": "U4.T06.E4",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/proyeccion-y-distancia/",
+      "description": "Proyección con producto no usual por tres métodos",
+      "detail": null
+    },
+    {
+      "id": "U4.T06.E5",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/proyeccion-y-distancia/",
+      "description": "Mejor aproximación de x^2 por polinomios de grado <= 1",
+      "detail": null
+    },
+    {
+      "id": "U4.T07.E1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/cuadrados-minimos/",
+      "description": "Recta de cuadrados mínimos con cinco puntos",
+      "detail": null
+    },
+    {
+      "id": "U4.T07.E2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/cuadrados-minimos/",
+      "description": "Parábola de cuadrados mínimos",
+      "detail": null
+    },
+    {
+      "id": "U4.T07.E3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/cuadrados-minimos/",
+      "description": "Ajuste exponencial linealizado con log en base 2",
+      "detail": null
+    },
+    {
+      "id": "U4.T07.E4",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/cuadrados-minimos/",
+      "description": "Tiempo de ejecución: modelo cuadrático vs. lineal",
+      "detail": null
+    },
+    {
+      "id": "U4.T08.E1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/codigos-y-z2/",
+      "description": "Producto punto en Z_2^n y vectores autoortogonales",
+      "detail": null
+    },
+    {
+      "id": "U4.T08.E2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/codigos-y-z2/",
+      "description": "Código dual de un código (5,2) y su intersección",
+      "detail": null
+    },
+    {
+      "id": "U4.T08.E3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/codigos-y-z2/",
+      "description": "Código de doble repetición de longitud 4: autodual",
+      "detail": null
+    },
+    {
+      "id": "U4.T08.E4",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/codigos-y-z2/",
+      "description": "Decodificación por síndrome de un código (5,2)",
+      "detail": null
+    },
+    {
+      "id": "U4.T08.E5",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/codigos-y-z2/",
+      "description": "El código de Hamming (7,4) tiene distancia mínima 3",
+      "detail": null
+    },
+    {
+      "id": "U4.T08.E6",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/algebra-ii/unidad-4/teoria/codigos-y-z2/",
+      "description": "Hamming extendido (8,4): autodual, d = 4, corrige 1 y detecta 2",
+      "detail": null
+    }
+  ]
+}

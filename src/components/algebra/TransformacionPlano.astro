@@ -1,0 +1,157 @@
+---
+// Laboratorio interactivo: una matriz 2×2 actuando sobre el plano. Sin dependencias:
+// SVG + JavaScript del navegador. Los colores salen de las clases de .math-figure.
+interface Props { id: string; a?: number; b?: number; c?: number; d?: number }
+const { id, a = 2, b = 1, c = 1, d = 2 } = Astro.props;
+const presets = [
+  ['Simétrica (autovalores 3 y 1)', '2,1,1,2'],
+  ['Rotación de 90°', '0,-1,1,0'],
+  ['Simetría respecto de y = x', '0,1,1,0'],
+  ['Proyección sobre el eje x', '1,0,0,0'],
+  ['Cizalla (autovalor doble, no diagonalizable)', '1,1,0,1'],
+  ['Escala no uniforme', '2,0,0,0.5'],
+  ['Determinante nulo', '1,2,0.5,1'],
+];
+const grid = Array.from({ length: 9 }, (_, i) => i - 4);
+---
+<figure class="math-figure transform-lab" id={id} data-matrix={`${a},${b},${c},${d}`}>
+  <div class="lab-controls">
+    <fieldset>
+      <legend>Matriz <var>A</var></legend>
+      <div class="lab-matrix">
+        {['a', 'b', 'c', 'd'].map((name, index) => (
+          <label>
+            <span class="sr-only">{`Entrada ${['(1,1)', '(1,2)', '(2,1)', '(2,2)'][index]}`}</span>
+            <input type="number" step="0.5" min="-4" max="4" data-entry={name} value={[a, b, c, d][index]} />
+          </label>
+        ))}
+      </div>
+    </fieldset>
+    <label class="lab-preset">
+      Ejemplos
+      <select data-preset>
+        <option value="">Elegir…</option>
+        {presets.map(([label, value]) => <option value={value}>{label}</option>)}
+      </select>
+    </label>
+  </div>
+  <svg viewBox="-200 -200 400 400" role="img" aria-labelledby={`${id}-t ${id}-d`} xmlns="http://www.w3.org/2000/svg">
+    <title id={`${id}-t`}>Imagen del plano por la matriz A</title>
+    <desc id={`${id}-d`}>Grilla original tenue, grilla transformada, imagen del cuadrado unidad y de los vectores canónicos, y rectas de autovectores reales.</desc>
+    <defs>
+      <marker id={`${id}-ha`} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head-a" d="M0 0 10 5 0 10z" /></marker>
+      <marker id={`${id}-hb`} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head-b" d="M0 0 10 5 0 10z" /></marker>
+    </defs>
+    <g transform="scale(1,-1)">
+      {grid.map(k => <line class="grid" x1={k * 40} y1="-200" x2={k * 40} y2="200" />)}
+      {grid.map(k => <line class="grid" x1="-200" y1={k * 40} x2="200" y2={k * 40} />)}
+      <line class="axis" x1="-200" y1="0" x2="200" y2="0" />
+      <line class="axis" x1="0" y1="-200" x2="0" y2="200" />
+      <g data-layer="grid" />
+      <polygon class="region-a" data-layer="square" points="0,0 40,0 40,40 0,40" />
+      <g data-layer="eigen" />
+      <line class="vec-a" data-layer="e1" x1="0" y1="0" x2="40" y2="0" marker-end={`url(#${id}-ha)`} />
+      <line class="vec-b" data-layer="e2" x1="0" y1="0" x2="0" y2="40" marker-end={`url(#${id}-hb)`} />
+    </g>
+  </svg>
+  <figcaption>
+    En azul, <var>A</var>e<sub>1</sub> (primera columna); en naranja, <var>A</var>e<sub>2</sub> (segunda columna);
+    el paralelogramo es la imagen del cuadrado unidad y su área con signo es det <var>A</var>. En verde, las
+    rectas de autovectores reales.
+  </figcaption>
+  <output class="lab-summary" aria-live="polite" data-summary></output>
+</figure>
+
+<script>
+  const SCALE = 40;
+  const fmt = (x: number) => (Math.abs(x) < 1e-9 ? '0' : Number(x.toFixed(3)).toString().replace('.', ','));
+  const ns = 'http://www.w3.org/2000/svg';
+
+  function draw(root: HTMLElement) {
+    const read = (name: string) => Number((root.querySelector(`[data-entry="${name}"]`) as HTMLInputElement).value) || 0;
+    const [a, b, c, d] = ['a', 'b', 'c', 'd'].map(read);
+    const map = (x: number, y: number) => [(a * x + b * y) * SCALE, (c * x + d * y) * SCALE];
+    const layer = (name: string) => root.querySelector(`[data-layer="${name}"]`)!;
+
+    const gridLayer = layer('grid');
+    gridLayer.replaceChildren();
+    for (let k = -4; k <= 4; k++) {
+      for (const [p, q] of [[[k, -4], [k, 4]], [[-4, k], [4, k]]]) {
+        const [x1, y1] = map(p[0], p[1]);
+        const [x2, y2] = map(q[0], q[1]);
+        const line = document.createElementNS(ns, 'line');
+        line.setAttribute('class', 'guide');
+        Object.entries({ x1, y1, x2, y2 }).forEach(([key, value]) => line.setAttribute(key, String(value)));
+        gridLayer.append(line);
+      }
+    }
+    const corners = [[0, 0], [1, 0], [1, 1], [0, 1]].map(([x, y]) => map(x, y).join(','));
+    layer('square').setAttribute('points', corners.join(' '));
+    const [e1x, e1y] = map(1, 0);
+    const [e2x, e2y] = map(0, 1);
+    layer('e1').setAttribute('x2', String(e1x));
+    layer('e1').setAttribute('y2', String(e1y));
+    layer('e2').setAttribute('x2', String(e2x));
+    layer('e2').setAttribute('y2', String(e2y));
+
+    const trace = a + d;
+    const det = a * d - b * c;
+    const disc = (a - d) ** 2 + 4 * b * c;
+    const eigenLayer = layer('eigen');
+    eigenLayer.replaceChildren();
+    const lines: string[] = [];
+    let text: string;
+    if (disc < -1e-12) {
+      text = 'no tiene autovalores reales: ninguna recta por el origen queda fija';
+    } else {
+      const root1 = (trace + Math.sqrt(Math.max(disc, 0))) / 2;
+      const root2 = (trace - Math.sqrt(Math.max(disc, 0))) / 2;
+      const values = Math.abs(root1 - root2) < 1e-9 ? [root1] : [root1, root2];
+      for (const lambda of values) {
+        const nullity = [a - lambda, b, c, d - lambda].every(v => Math.abs(v) < 1e-9) ? 2 : 1;
+        if (nullity === 2) { lines.push('todas'); continue; }
+        const v = Math.abs(b) > 1e-9 || Math.abs(a - lambda) > 1e-9 ? [b, lambda - a] : [lambda - d, c];
+        const norm = Math.hypot(v[0], v[1]);
+        const line = document.createElementNS(ns, 'line');
+        line.setAttribute('class', 'line-c');
+        const [ux, uy] = [v[0] / norm * 260, v[1] / norm * 260];
+        Object.entries({ x1: -ux, y1: -uy, x2: ux, y2: uy }).forEach(([key, value]) => line.setAttribute(key, String(value)));
+        eigenLayer.append(line);
+        lines.push(`(${fmt(v[0])}, ${fmt(v[1])})`);
+      }
+      text = values.length === 1
+        ? `autovalor doble ${fmt(values[0])}; ${lines[0] === 'todas' ? 'todo vector no nulo es autovector (A es múltiplo de I)' : `una sola recta de autovectores, dirección ${lines[0]}: no es diagonalizable`}`
+        : `autovalores ${fmt(values[0])} y ${fmt(values[1])}, con autovectores ${lines.join(' y ')}`;
+    }
+    const kind = Math.abs(det) < 1e-9
+      ? 'no es inversible: el plano se aplasta sobre una recta o un punto, y el núcleo no es trivial'
+      : `es inversible (isomorfismo)${det < 0 ? ' e invierte la orientación' : ''}`;
+    root.querySelector('[data-summary]')!.textContent =
+      `det A = ${fmt(det)}, tr A = ${fmt(trace)}. A ${kind}; ${text}.`;
+  }
+
+  for (const root of document.querySelectorAll<HTMLElement>('.transform-lab')) {
+    root.querySelectorAll('input').forEach(input => input.addEventListener('input', () => draw(root)));
+    root.querySelector<HTMLSelectElement>('[data-preset]')!.addEventListener('change', event => {
+      const value = (event.target as HTMLSelectElement).value;
+      if (!value) return;
+      value.split(',').forEach((entry, index) => {
+        (root.querySelectorAll('input')[index] as HTMLInputElement).value = entry;
+      });
+      draw(root);
+    });
+    draw(root);
+  }
+</script>
+
+<style>
+  .transform-lab .lab-controls { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: end; margin-bottom: 0.75rem; }
+  .transform-lab fieldset { border: 1px solid var(--sl-color-gray-5); border-radius: 0.5rem; padding: 0.25rem 0.75rem 0.5rem; }
+  .transform-lab legend { font-size: var(--sl-text-sm); padding-inline: 0.25rem; }
+  .transform-lab .lab-matrix { display: grid; grid-template-columns: repeat(2, 4.5rem); gap: 0.4rem; }
+  .transform-lab input, .transform-lab select { width: 100%; padding: 0.25rem 0.4rem; border: 1px solid var(--sl-color-gray-4); border-radius: 0.25rem; background: var(--sl-color-black); color: var(--sl-color-white); font: inherit; }
+  .transform-lab .lab-preset { display: grid; gap: 0.25rem; font-size: var(--sl-text-sm); max-width: 18rem; }
+  .transform-lab svg { overflow: hidden; }
+  .transform-lab .lab-summary { display: block; margin-top: 0.75rem; font-size: var(--sl-text-sm); }
+  .transform-lab .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>

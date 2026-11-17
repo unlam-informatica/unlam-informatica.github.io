@@ -9,3 +9,42 @@
 .pagination-links a { white-space: normal; overflow-wrap: anywhere; min-width: 0; max-width: 100%; height: auto; min-height: 2rem; }
 .sidebar .entry-link { height: auto; min-height: 1.875rem; }
 .sidebar .entry-link-inner { height: auto; min-height: 1.875rem; padding-block: 0.25rem; }
+
+/* Figuras matemáticas en SVG en línea (Álgebra II). Los colores salen de tokens
+   con variante clara y oscura; las figuras no fijan colores propios. */
+:root {
+  --math-a: #7fb2ff;
+  --math-b: #ffab70;
+  --math-c: #7ddc9a;
+  --math-d: #d4a6ff;
+  --math-fill-a: rgb(127 178 255 / 0.18);
+  --math-fill-b: rgb(255 171 112 / 0.18);
+}
+:root[data-theme='light'] {
+  --math-a: #1f5fbf;
+  --math-b: #c2541a;
+  --math-c: #1d7a3a;
+  --math-d: #7a3bb5;
+  --math-fill-a: rgb(31 95 191 / 0.12);
+  --math-fill-b: rgb(194 84 26 / 0.12);
+}
+.math-figure { margin-block: 1.5rem; text-align: center; }
+.math-figure svg { display: block; width: 100%; max-width: 32rem; height: auto; margin-inline: auto; overflow: visible; color: var(--sl-color-white); }
+.math-figure figcaption { margin-top: 0.5rem; font-size: var(--sl-text-sm); color: var(--sl-color-gray-2); }
+.math-figure .grid { stroke: var(--sl-color-gray-5); stroke-width: 0.5; }
+.math-figure .axis { stroke: var(--sl-color-gray-3); stroke-width: 1; }
+.math-figure .guide { stroke: var(--sl-color-gray-3); stroke-width: 1; stroke-dasharray: 4 3; fill: none; }
+.math-figure .vec-a, .math-figure .line-a { stroke: var(--math-a); stroke-width: 2.25; fill: none; }
+.math-figure .vec-b, .math-figure .line-b { stroke: var(--math-b); stroke-width: 2.25; fill: none; }
+.math-figure .vec-c, .math-figure .line-c { stroke: var(--math-c); stroke-width: 2.25; fill: none; }
+.math-figure .vec-d, .math-figure .line-d { stroke: var(--math-d); stroke-width: 2.25; fill: none; }
+.math-figure .head-a, .math-figure .dot-a { fill: var(--math-a); }
+.math-figure .head-b, .math-figure .dot-b { fill: var(--math-b); }
+.math-figure .head-c, .math-figure .dot-c { fill: var(--math-c); }
+.math-figure .head-d, .math-figure .dot-d { fill: var(--math-d); }
+.math-figure .head-muted, .math-figure .dot-muted { fill: var(--sl-color-gray-3); }
+.math-figure .region-a { fill: var(--math-fill-a); stroke: var(--math-a); stroke-width: 1; }
+.math-figure .region-b { fill: var(--math-fill-b); stroke: var(--math-b); stroke-width: 1; }
+.math-figure text { fill: currentColor; font-size: 13px; font-family: KaTeX_Main, 'Times New Roman', serif; }
+.math-figure text.math { font-style: italic; }
+.math-figure text.small { font-size: 10px; }

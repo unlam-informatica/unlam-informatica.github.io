@@ -5,6 +5,7 @@ test('portada por año y navegación contextual', async ({ page, isMobile }, tes
   await page.screenshot({ path: testInfo.outputPath('portada.png'), fullPage: true, animations: 'disabled' });
   await testInfo.attach('Portada Lucode', { path: testInfo.outputPath('portada.png'), contentType: 'image/png' });
   for (const name of ['1er año','2do año','3er año']) await expect(page.getByRole('heading', { name, exact: true })).toBeVisible();
+  await expect(page.locator('.sl-markdown-content a[href="/algebra-ii/index.html"]')).toBeVisible();
   await expect(page.getByText('Este sitio no es oficial', { exact: false })).toBeVisible();
   await page.locator('.sl-markdown-content a[href="/analisis-matematico-i/index.html"]').first().click();
   await expect(page).toHaveURL(/analisis-matematico-i\/index\.html$/);
@@ -28,7 +29,7 @@ test('fórmulas, diagramas y desborde móvil', async ({ page }) => {
 });
 
 test('búsqueda global', async ({ page }) => {
-  for (const [term, subject] of [['derivada', 'analisis-matematico-i'], ['transacciones', 'bbdd-aplicadas'], ['patrones', 'diseno-de-software']]) {
+  for (const [term, subject] of [['derivada', 'analisis-matematico-i'], ['transacciones', 'bbdd-aplicadas'], ['patrones', 'diseno-de-software'], ['autovalores', 'algebra-ii']]) {
     await page.goto('/');
     await page.getByRole('button', { name: 'Buscar', exact: true }).click();
     const input = page.locator('.pagefind-ui__search-input');
@@ -79,5 +80,26 @@ test('Lucode conserva el aviso y permite alternar tema claro y oscuro', async ({
   await expect(page.locator('.katex').first()).toBeVisible();
   await page.screenshot({ path: testInfo.outputPath('apunte-tema-alternativo.png'), animations: 'disabled' });
   await testInfo.attach('Apunte Lucode', { path: testInfo.outputPath('apunte-tema-alternativo.png'), contentType: 'image/png' });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBeTruthy();
+});
+
+test('Álgebra II: fórmulas, figuras, resoluciones plegadas y tema oscuro', async ({ page }) => {
+  await page.goto('/algebra-ii/unidad-1/practica/nivel-inicial/');
+  await expect(page.locator('.katex').first()).toBeVisible();
+  const solution = page.locator('.sl-markdown-content details').first();
+  await expect(solution.locator('summary')).toHaveText(/Resolución/);
+  await expect(solution.locator('.katex').first()).toBeHidden();
+  await solution.locator('summary').click();
+  await expect(solution.locator('.katex').first()).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBeTruthy();
+  await page.goto('/algebra-ii/unidad-4/teoria/proyeccion-y-distancia/');
+  const figure = page.locator('.math-figure svg').first();
+  await expect(figure).toBeVisible();
+  await expect(figure).toHaveAttribute('role', 'img');
+  // Los trazos usan los tokens del tema: el color cambia al alternar claro y oscuro.
+  const stroke = () => figure.locator('[class*="vec-"], [class*="line-"]').first().evaluate(e => getComputedStyle(e).stroke);
+  const before = await stroke();
+  await page.locator('starlight-theme-lucode-select button').click();
+  await expect.poll(stroke).not.toBe(before);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBeTruthy();
 });

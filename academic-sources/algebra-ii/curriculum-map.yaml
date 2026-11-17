@@ -1,0 +1,560 @@
+# Matriz de cobertura curricular — Álgebra y Geometría Analítica II (3645), programa 2023.
+# Fuente de verdad del avance: `content-pipeline validate` y `content-pipeline qa` la controlan.
+# sources: identificadores del catálogo (algebra-ii-<sha256[:12]>) y páginas del PDF [desde, hasta].
+# production: pendiente | en-redaccion | redactado | revisado
+# validation: pendiente | verificado (cuentas con SymPy y enunciados revisados) | revisado | con-observaciones
+subject: algebra-ii
+program:
+  code: "3645"
+  year: 2023
+  document: algebra-ii-37d9461d8128
+  url: https://ingenieria.unlam.edu.ar/descargas/661_3645_AlgebrayGeometriaAnaliticaII.pdf
+
+minimums:
+  exercises_per_unit: 15
+  levels_per_unit: 3
+
+bibliography:
+  - id: poole3
+    citation: "Poole, D. (2011). Álgebra lineal. Una introducción moderna (3.ª ed.). Cengage Learning. [El programa pide la 4.ª ed., 2017]"
+    doc: algebra-ii-ea9559207cfb
+  - id: lay5
+    citation: "Lay, D. C. (2016). Álgebra lineal y sus aplicaciones (5.ª ed.). Pearson. [No disponible localmente: sin localizadores]"
+  - id: nakos
+    citation: "Nakos, G. y Joyner, D. (1999). Álgebra lineal con aplicaciones. International Thomson Editores."
+    doc: algebra-ii-4996ef9e3689
+  - id: hernandez3
+    citation: "Hernández, E., Vázquez, M. J. y Zurro, M. Á. (2012). Álgebra lineal y Geometría (3.ª ed.). Pearson."
+    doc: algebra-ii-f37cce053aba
+
+units:
+  - id: repaso
+    title: Repaso de Álgebra I
+    exercise_prefix: "R."
+    minimum: false
+    topics:
+      - id: r-vectores-matrices
+        title: Vectores y matrices
+        program_text: "Conocimientos necesarios: vectores y matrices; cálculo vectorial y matricial."
+        objectives: [Operar con vectores y matrices, calcular inversas y reconocer propiedades del producto]
+        keywords: [matriz, producto, inversa, transpuesta]
+        page: /algebra-ii/repaso/vectores-y-matrices/
+        exercises: [R.01, R.02, R.03, R.04, R.05, R.06, R.07, R.08, R.12]
+        production: redactado
+        validation: verificado
+      - id: r-determinantes
+        title: Determinantes
+        program_text: "Conocimientos necesarios: cálculo matricial."
+        objectives: [Calcular determinantes y usarlos para decidir inversibilidad, incluso con parámetros]
+        keywords: [determinante, cofactor]
+        page: /algebra-ii/repaso/determinantes/
+        exercises: [R.06, R.08, R.11]
+        production: redactado
+        validation: verificado
+      - id: r-sistemas
+        title: Sistemas lineales y eliminación gaussiana
+        program_text: "Conocimientos necesarios: resolución de sistemas de ecuaciones."
+        objectives: [Resolver y clasificar sistemas por eliminación gaussiana, incluidos los homogéneos y con parámetros]
+        keywords: [sistema, gauss, escalonada, compatible]
+        page: /algebra-ii/repaso/sistemas-lineales/
+        exercises: [R.09, R.10, R.11, R.12]
+        production: redactado
+        validation: verificado
+      - id: r-polinomios
+        title: Polinomios
+        program_text: "Conocimientos necesarios: factorización de polinomios."
+        objectives: [Hallar raíces y factorizar polinomios de grado 2 y 3 con Ruffini y el criterio de Gauss]
+        keywords: [polinomio, raíz, Ruffini, factorización]
+        page: /algebra-ii/repaso/polinomios/
+        exercises: [R.13, R.14, R.15, R.16]
+        production: redactado
+        validation: verificado
+      - id: r-rectas-planos
+        title: Rectas y planos
+        program_text: "Geometría analítica de Álgebra I usada en las interpretaciones geométricas."
+        objectives: [Pasar entre ecuaciones vectoriales, paramétricas e implícitas de rectas y planos]
+        keywords: [recta, plano, normal, paramétrica]
+        page: /algebra-ii/repaso/rectas-y-planos/
+        exercises: [R.17, R.18, R.19, R.20]
+        production: redactado
+        validation: verificado
+
+  - id: u1
+    title: Espacios vectoriales
+    exercise_prefix: "U1."
+    topics:
+      - id: u1-cuerpos-z2
+        title: Cuerpos y Z2
+        program_text: "Estructura de cuerpo; ejemplificación con R^n y Z_2^n (semana 1)."
+        objectives: [Reconocer la estructura de cuerpo, Operar en Z2 y explicar por qué Z4 no es cuerpo]
+        keywords: [cuerpo, Z2, módulo 2, campo]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [4, 5]}
+          - {doc: algebra-ii-37d9461d8128, pages: [3, 4]}
+        bibliography: ["poole3:§1.1 p. 13–16"]
+        page: /algebra-ii/unidad-1/teoria/cuerpos-y-z2/
+        exercises: [U1.01]
+        production: redactado
+        validation: verificado
+      - id: u1-espacios
+        title: Espacios vectoriales y propiedades
+        program_text: "Espacios vectoriales. Propiedades de la suma y del producto. Propiedades de espacios vectoriales."
+        objectives: [Verificar axiomas de espacio vectorial, Demostrar propiedades elementales]
+        keywords: [espacio vectorial, axioma, vector nulo, opuesto]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [5, 6]}
+          - algebra-ii-14ade83daf16
+        bibliography: ["poole3:§6.1 p. 447"]
+        page: /algebra-ii/unidad-1/teoria/espacios-vectoriales/
+        exercises: [U1.05, U1.11]
+        production: redactado
+        validation: verificado
+      - id: u1-subespacios
+        title: Subespacios
+        program_text: "Subespacios."
+        objectives: [Probar que un conjunto es subespacio con el criterio de tres condiciones, Dar contraejemplos]
+        keywords: [subespacio, cerrado, condición]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [6, 8]}
+          - algebra-ii-751ea62f0bea
+          - algebra-ii-12476a35fa0d
+        bibliography: ["poole3:§6.1 p. 447"]
+        page: /algebra-ii/unidad-1/teoria/subespacios/
+        exercises: [U1.02, U1.05, U1.09, U1.11, U1.16, U1.17, U1.25, U1.30]
+        production: redactado
+        validation: verificado
+      - id: u1-combinaciones
+        title: Combinación lineal, generadores y ecuaciones de un subespacio
+        program_text: "Combinación lineal de vectores. Conjunto de vectores generadores de un subespacio. Ecuaciones que determinan a los elementos de un subespacio vectorial."
+        objectives: [Decidir pertenencia a un generado, Pasar de generadores a ecuaciones y viceversa]
+        keywords: [combinación lineal, generado, generador, ecuación implícita]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [7, 8]}
+        bibliography: ["poole3:§2.3 p. 94"]
+        page: /algebra-ii/unidad-1/teoria/combinaciones-lineales/
+        exercises: [U1.03, U1.04, U1.10]
+        production: redactado
+        validation: verificado
+      - id: u1-independencia
+        title: Independencia lineal
+        program_text: "Independencia y dependencia lineal de vectores. Definición y propiedades. Interpretación geométrica en el plano y el espacio."
+        objectives: [Decidir independencia lineal en R y en Z2, Interpretar la dependencia geométricamente]
+        keywords: [independencia, dependencia, linealmente independiente]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [11, 13]}
+        bibliography: ["poole3:§2.3 p. 94", "poole3:§6.2 p. 461"]
+        page: /algebra-ii/unidad-1/teoria/independencia-lineal/
+        exercises: [U1.04, U1.22]
+        production: redactado
+        validation: verificado
+      - id: u1-matriz-rango
+        title: Subespacios asociados a una matriz y rango
+        program_text: "Rango de una matriz. Subespacios asociados a matrices (rango y nulidad)."
+        objectives: [Hallar bases de fil, col y nul, Aplicar rango–nulidad sobre R y sobre Z2]
+        keywords: [rango, espacio fila, espacio columna, espacio nulo, nulidad]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [8, 10]}
+          - {doc: algebra-ii-702da4e9f8b4, pages: [14, 15]}
+        bibliography: ["poole3:§3.5 p. 197"]
+        page: /algebra-ii/unidad-1/teoria/subespacios-de-una-matriz/
+        exercises: [U1.06, U1.11, U1.24, U1.27, U1.30]
+        production: redactado
+        validation: verificado
+      - id: u1-base-dimension
+        title: Base y dimensión
+        program_text: "Base de un espacio vectorial o subespacio. Dimensión. Extensión de un conjunto LI a una base."
+        objectives: [Hallar base y dimensión, Extender un conjunto LI a una base, Contar elementos de subespacios de Z2^n]
+        keywords: [base, dimensión, extender, canónica]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [13, 15]}
+          - algebra-ii-3a087f2de219
+        bibliography: ["poole3:§3.5 p. 197", "poole3:§6.2 p. 461"]
+        page: /algebra-ii/unidad-1/teoria/base-y-dimension/
+        exercises: [U1.05, U1.07, U1.09, U1.10, U1.12, U1.13, U1.16, U1.19, U1.20, U1.26, U1.29]
+        production: redactado
+        validation: verificado
+      - id: u1-coordenadas
+        title: Coordenadas
+        program_text: "Coordenadas de un vector en una base. Unicidad de las coordenadas de un vector en una base."
+        objectives: [Calcular coordenadas, Demostrar su unicidad, Distinguir un vector de sus coordenadas]
+        keywords: [coordenadas, base ordenada, unicidad]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [34, 35]}
+        bibliography: ["poole3:§6.3 p. 481"]
+        page: /algebra-ii/unidad-1/teoria/coordenadas/
+        exercises: [U1.07]
+        production: redactado
+        validation: verificado
+      - id: u1-cambio-coordenadas
+        title: Cambio de base y matriz de cambio de coordenadas
+        program_text: "Cambio de base. Matriz de cambio de coordenadas."
+        objectives: [Construir C_BB', Encadenar cambios entre tres bases, Recuperar una base desde una matriz de cambio]
+        keywords: [cambio de coordenadas, cambio de base, matriz de cambio]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [35, 46]}
+          - algebra-ii-2858e5aaab9f
+          - algebra-ii-e351622dab4e
+          - algebra-ii-6b583b7ef9ac
+        bibliography: ["poole3:§6.3 p. 481"]
+        page: /algebra-ii/unidad-1/teoria/cambio-de-coordenadas/
+        exercises: [U1.14, U1.15, U1.19, U1.20, U1.21, U1.26, U1.29]
+        production: redactado
+        validation: verificado
+      - id: u1-codigos
+        title: Códigos lineales, matriz de paridad y detección de errores
+        program_text: "Aplicación: espacios de n-uplas y matrices reales y Z_2^n; teoría de codificación; matriz de paridad; códigos (n,k); detección de errores. Aplicación a códigos de Hamming (primer parcial)."
+        objectives: [Codificar con G, Decidir pertenencia con H, Corregir un error con el síndrome en Hamming (7 4)]
+        keywords: [código, Hamming, paridad, palabra código, síndrome]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [32, 33]}
+          - {doc: algebra-ii-37d9461d8128, pages: [3, 4]}
+        bibliography: ["poole3:§1.4 p. 53–59", "poole3:§3.7 p. 251–255", "poole3:§6.7 p. 543", "nakos"]
+        page: /algebra-ii/unidad-1/teoria/codigos-lineales/
+        exercises: [U1.08, U1.18, U1.23, U1.25, U1.28]
+        production: redactado
+        validation: verificado
+
+  - id: u2
+    title: Transformaciones lineales
+    exercise_prefix: "U2."
+    topics:
+      - id: u2-definicion
+        title: Definición y propiedades
+        program_text: "Transformaciones lineales. Definición y propiedades."
+        objectives: [Decidir si una función es lineal, Usar T(0)=0 como filtro]
+        keywords: [transformación lineal, linealidad]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [47, 49]}
+          - algebra-ii-44a730a65bad
+          - algebra-ii-a9074f6b1f36
+        bibliography: ["poole3:§3.6 p. 217", "poole3:§6.4 p. 490"]
+        page: /algebra-ii/unidad-2/teoria/definicion-y-ejemplos/
+        exercises: [U2.01, U2.19, U2.32]
+        production: redactado
+        validation: verificado
+      - id: u2-nucleo-imagen
+        title: Núcleo e imagen
+        program_text: "Núcleo e imagen de una transformación lineal."
+        objectives: [Hallar bases de Nu(T) e Im(T)]
+        keywords: [núcleo, imagen]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [47, 48]}
+          - algebra-ii-67329943c6c2
+        bibliography: ["poole3:§6.5 p. 499"]
+        page: /algebra-ii/unidad-2/teoria/nucleo-e-imagen/
+        exercises: [U2.02, U2.03, U2.04, U2.05, U2.06, U2.07, U2.09, U2.10, U2.11, U2.13, U2.17, U2.18, U2.21, U2.22, U2.23, U2.24, U2.25, U2.26, U2.28, U2.29, U2.30, U2.31]
+        production: redactado
+        validation: verificado
+      - id: u2-dimension
+        title: Teorema de la dimensión
+        program_text: "Teorema de la dimensión."
+        objectives: [Demostrar y aplicar dim V = dim Nu(T) + dim Im(T)]
+        keywords: [teorema de la dimensión]
+        sources:
+          - algebra-ii-44a730a65bad
+          - algebra-ii-a9074f6b1f36
+          - {doc: algebra-ii-702da4e9f8b4, pages: [57, 57]}
+        bibliography: ["poole3:§6.5 p. 499"]
+        page: /algebra-ii/unidad-2/teoria/teorema-de-la-dimension/
+        exercises: [U2.03, U2.07]
+        production: redactado
+        validation: verificado
+      - id: u2-clasificacion
+        title: Monomorfismo, epimorfismo e isomorfismo
+        program_text: "Clasificación: Monomorfismo. Epimorfismo. Isomorfismo."
+        objectives: [Clasificar una TL por su núcleo e imagen, Deducir imposibilidades por dimensiones]
+        keywords: [monomorfismo, epimorfismo, isomorfismo]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [47, 48]}
+          - algebra-ii-40184f3ebd05
+        bibliography: ["poole3:§6.5 p. 499"]
+        page: /algebra-ii/unidad-2/teoria/clasificacion/
+        exercises: [U2.02, U2.03, U2.06, U2.12, U2.16, U2.20, U2.25, U2.29]
+        production: redactado
+        validation: verificado
+      - id: u2-fundamental
+        title: Teorema fundamental de las transformaciones lineales
+        program_text: "Teorema Fundamental de las transformaciones lineales."
+        objectives: [Construir una TL con imágenes prescritas, Decidir existencia y unicidad con datos LD]
+        keywords: [teorema fundamental, existencia, unicidad]
+        sources:
+          - algebra-ii-40184f3ebd05
+          - algebra-ii-b8220dcae2b1
+          - {doc: algebra-ii-702da4e9f8b4, pages: [54, 56]}
+        bibliography: ["poole3:§6.4 p. 490"]
+        page: /algebra-ii/unidad-2/teoria/teorema-fundamental/
+        exercises: [U2.09, U2.10, U2.11, U2.28]
+        production: redactado
+        validation: verificado
+      - id: u2-matriz
+        title: Matriz representativa
+        program_text: "Matriz representativa de una Transformación Lineal."
+        objectives: [Construir M(T)_BB' y usarla para calcular imágenes, núcleo e imagen]
+        keywords: [matriz asociada, matriz representativa]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [49, 52]}
+          - algebra-ii-6b583b7ef9ac
+        bibliography: ["poole3:§6.6 p. 515"]
+        page: /algebra-ii/unidad-2/teoria/matriz-asociada/
+        exercises: [U2.12, U2.14, U2.26, U2.27]
+        production: redactado
+        validation: verificado
+      - id: u2-cambio-base
+        title: Cambio de base y matrices asociadas
+        program_text: "Representación matricial de transformaciones lineales. Cambio de coordenadas (semanas 6–7)."
+        objectives: [Cambiar las bases de una matriz asociada con el producto de tres matrices]
+        keywords: [cambio de base, matriz asociada]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [56, 60]}
+          - algebra-ii-6b583b7ef9ac
+        bibliography: ["poole3:§6.6 p. 515"]
+        page: /algebra-ii/unidad-2/teoria/cambio-de-base/
+        exercises: [U2.14, U2.27]
+        production: redactado
+        validation: verificado
+      - id: u2-composicion-inversa
+        title: Composición e inversa
+        program_text: "Composición de transformaciones lineales. Matriz de la composición. Inversa de una transformación lineal. Matriz de la transformación inversa."
+        objectives: [Calcular la matriz de una composición, Hallar la inversa de un isomorfismo y su matriz]
+        keywords: [composición, inversa]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [49, 49]}
+        bibliography: ["poole3:§6.6 p. 515"]
+        page: /algebra-ii/unidad-2/teoria/composicion-e-inversa/
+        exercises: [U2.08, U2.13, U2.15, U2.16, U2.20, U2.21, U2.28, U2.32]
+        production: redactado
+        validation: verificado
+
+  - id: u3
+    title: Autovalores y autovectores
+    exercise_prefix: "U3."
+    topics:
+      - id: u3-definicion
+        title: Autovalores y autovectores
+        program_text: "Autovalores y autovectores de una matriz cuadrada de coeficientes reales: definición."
+        objectives: [Reconocer autovectores geométricamente y por definición]
+        keywords: [autovalor, autovector]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [67, 69]}
+          - algebra-ii-ab296aadfcc3
+        bibliography: ["poole3:§4.1 p. 265"]
+        page: /algebra-ii/unidad-3/teoria/autovalores-y-autovectores/
+        exercises: [U3.01, U3.02, U3.04, U3.05, U3.06, U3.07, U3.09, U3.12, U3.19, U3.25, U3.26, U3.28, U3.30, U3.31]
+        production: redactado
+        validation: verificado
+      - id: u3-polinomio
+        title: Polinomio característico y multiplicidades
+        program_text: "Cálculo de autovalores y autovectores (semana 9)."
+        objectives: [Calcular autovalores y autoespacios, Distinguir multiplicidad algebraica y geométrica]
+        keywords: [polinomio característico, autoespacio, multiplicidad]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [67, 69]}
+          - algebra-ii-ab296aadfcc3
+          - algebra-ii-d9e95051c721
+        bibliography: ["poole3:§4.3 p. 303"]
+        page: /algebra-ii/unidad-3/teoria/polinomio-caracteristico/
+        exercises: [U3.03, U3.04, U3.08, U3.10, U3.11, U3.27]
+        production: redactado
+        validation: verificado
+      - id: u3-propiedades
+        title: Propiedades de autovalores y autovectores
+        program_text: "Autovalores y autovectores: propiedades (guía, actividad 4)."
+        objectives: [Demostrar propiedades de autovalores de potencias e inversas]
+        keywords: [propiedad, autovalor, inversa, potencia]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [69, 69]}
+          - algebra-ii-5e8275ffcd3a
+        bibliography: ["poole3:§4.3 p. 303"]
+        page: /algebra-ii/unidad-3/teoria/propiedades/
+        exercises: [U3.02, U3.03, U3.05, U3.07, U3.08, U3.09, U3.14, U3.25, U3.26, U3.31]
+        production: redactado
+        validation: verificado
+      - id: u3-semejantes
+        title: Matrices semejantes
+        program_text: "Matrices semejantes."
+        objectives: [Reconocer invariantes de semejanza y dar contraejemplos]
+        keywords: [semejante, semejanza]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [70, 70]}
+        bibliography: ["poole3:§4.4 p. 312"]
+        page: /algebra-ii/unidad-3/teoria/matrices-semejantes/
+        exercises: [U3.13, U3.14]
+        production: redactado
+        validation: verificado
+      - id: u3-diagonalizacion
+        title: Diagonalización
+        program_text: "Diagonalización de matrices."
+        objectives: [Decidir si una matriz es diagonalizable y diagonalizarla, incluso con parámetros]
+        keywords: [diagonalizable, diagonalización]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [70, 78]}
+          - algebra-ii-e485836e9fdc
+        bibliography: ["poole3:§4.4 p. 312"]
+        page: /algebra-ii/unidad-3/teoria/diagonalizacion/
+        exercises: [U3.11, U3.12, U3.19, U3.20, U3.21, U3.22, U3.23, U3.27]
+        production: redactado
+        validation: verificado
+      - id: u3-potencias
+        title: Potencias de matrices
+        program_text: "Diagonalización de matrices. Aplicación (semana 10)."
+        objectives: [Calcular potencias con A^k = C D^k C^-1 y decidir inversibilidad de p(A)]
+        keywords: [potencia, A^k]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [71, 76]}
+        bibliography: ["poole3:§4.4 p. 312"]
+        page: /algebra-ii/unidad-3/teoria/potencias/
+        exercises: [U3.15, U3.16, U3.20, U3.23, U3.29]
+        production: redactado
+        validation: verificado
+      - id: u3-recurrencias
+        title: Relaciones de recurrencia lineal
+        program_text: "Aplicación a relaciones de recurrencia lineal. TP: el caso de la sucesión de Fibonacci."
+        objectives: [Resolver recurrencias lineales de orden 2 por diagonalización]
+        keywords: [recurrencia, Fibonacci, número áureo]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [83, 83]}
+        bibliography: ["poole3:§4.6 p. 346–351", "poole3:§6.0 p. 445"]
+        page: /algebra-ii/unidad-3/teoria/relaciones-de-recurrencia/
+        exercises: [U3.17, U3.23, U3.29]
+        production: redactado
+        validation: verificado
+      - id: u3-markov
+        title: Cadenas de Markov
+        program_text: "Aplicación a cadenas de Markov."
+        objectives: [Modelar con matrices de transición, Calcular el estado estacionario]
+        keywords: [Markov, transición, estacionario, estocástica]
+        sources: []
+        bibliography: ["poole3:§3.7 p. 236", "poole3:§4.6 p. 336"]
+        page: /algebra-ii/unidad-3/teoria/cadenas-de-markov/
+        exercises: [U3.18, U3.24, U3.30]
+        production: redactado
+        validation: verificado
+
+  - id: u4
+    title: Espacios con producto interno
+    exercise_prefix: "U4."
+    topics:
+      - id: u4-producto-interno
+        title: Producto interno y espacio euclídeo
+        program_text: "Definición de espacio euclídeo."
+        objectives: [Verificar si una función es producto interno, Trabajar con productos no usuales]
+        keywords: [producto interno, espacio euclídeo]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [84, 85]}
+          - algebra-ii-b2e3215075a4
+        bibliography: ["poole3:§7.1 p. 554"]
+        page: /algebra-ii/unidad-4/teoria/producto-interno/
+        exercises: [U4.01, U4.03, U4.04, U4.09, U4.22, U4.28, U4.30]
+        production: redactado
+        validation: verificado
+      - id: u4-norma-distancia
+        title: Norma, distancia y ángulo
+        program_text: "Distancia por producto interno."
+        objectives: [Calcular normas, distancias y ángulos, Demostrar Cauchy-Schwarz]
+        keywords: [norma, distancia, ángulo, Cauchy-Schwarz]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [85, 86]}
+        bibliography: ["poole3:§7.1 p. 554", "poole3:§7.2 p. 575"]
+        page: /algebra-ii/unidad-4/teoria/norma-distancia-angulo/
+        exercises: [U4.02, U4.18, U4.23, U4.28]
+        production: redactado
+        validation: verificado
+      - id: u4-ortogonalidad
+        title: Ortogonalidad y bases ortonormales
+        program_text: "Ortogonalidad. Bases ortonormales."
+        objectives: [Usar bases ortogonales para calcular coordenadas]
+        keywords: [ortogonal, ortonormal]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [85, 86]}
+        bibliography: ["poole3:§5.1 p. 379"]
+        page: /algebra-ii/unidad-4/teoria/ortogonalidad/
+        exercises: [U4.05, U4.10]
+        production: redactado
+        validation: verificado
+      - id: u4-gram-schmidt
+        title: Método de Gram-Schmidt
+        program_text: "Método de Gram Schmidt."
+        objectives: [Ortogonalizar y ortonormalizar bases con productos usuales y no usuales]
+        keywords: [Gram-Schmidt, ortogonalización]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [86, 87]}
+          - {doc: algebra-ii-702da4e9f8b4, pages: [92, 95]}
+          - algebra-ii-7e898fd7227e
+          - algebra-ii-665b6b471cfd
+        bibliography: ["poole3:§5.3 p. 399"]
+        page: /algebra-ii/unidad-4/teoria/gram-schmidt/
+        exercises: [U4.11, U4.12, U4.29]
+        production: redactado
+        validation: verificado
+      - id: u4-complemento
+        title: Complemento ortogonal
+        program_text: "Complemento Ortogonal."
+        objectives: [Hallar S⊥ y usar dim S + dim S⊥ = n]
+        keywords: [complemento ortogonal]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [87, 88]}
+        bibliography: ["poole3:§5.2 p. 389"]
+        page: /algebra-ii/unidad-4/teoria/complemento-ortogonal/
+        exercises: [U4.06, U4.13, U4.14, U4.29]
+        production: redactado
+        validation: verificado
+      - id: u4-proyeccion
+        title: Proyecciones ortogonales y distancia a un subespacio
+        program_text: "Proyecciones ortogonales. Proyección ortogonal. Distancia a un subespacio."
+        objectives: [Proyectar por tres métodos, Calcular la distancia de un vector a un subespacio]
+        keywords: [proyección, distancia a un subespacio, mejor aproximación]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [89, 92]}
+          - algebra-ii-9fc8e4a3c0e3
+        bibliography: ["poole3:§5.2 p. 389", "poole3:§7.3 p. 591"]
+        page: /algebra-ii/unidad-4/teoria/proyeccion-y-distancia/
+        exercises: [U4.07, U4.15, U4.16, U4.21, U4.25]
+        production: redactado
+        validation: verificado
+      - id: u4-cuadrados-minimos
+        title: Cuadrados mínimos
+        program_text: "Aplicación: Aproximación de datos experimentales por cuadrados mínimos."
+        objectives: [Plantear y resolver ecuaciones normales, Ajustar rectas y parábolas]
+        keywords: [cuadrados mínimos, mínimos cuadrados, ecuaciones normales, ajuste]
+        sources:
+          - {doc: algebra-ii-702da4e9f8b4, pages: [101, 103]}
+        bibliography: ["poole3:§7.3 p. 591–613"]
+        page: /algebra-ii/unidad-4/teoria/cuadrados-minimos/
+        exercises: [U4.17, U4.26, U4.31]
+        production: redactado
+        validation: verificado
+      - id: u4-codigos
+        title: Producto en Z2^n, códigos duales y autoduales, distancia de Hamming
+        program_text: "Aplicación a teoría de códigos: Producto interno en Z_2^n, códigos autoduales. Distancia de Hamming, detección de errores en transmisión de códigos. TP: código de Hamming y detección de errores."
+        objectives: [Hallar el código dual, Reconocer códigos autoduales, Relacionar distancia mínima con detección y corrección]
+        keywords: [Hamming, dual, autodual, distancia mínima, Z2]
+        sources:
+          - {doc: algebra-ii-37d9461d8128, pages: [4, 4]}
+          - {doc: algebra-ii-702da4e9f8b4, pages: [32, 33]}
+        bibliography: ["poole3:§5.5 p. 419–425", "poole3:§7.2 p. 576–578", "poole3:§7.5 p. 640–645", "nakos"]
+        page: /algebra-ii/unidad-4/teoria/codigos-y-z2/
+        exercises: [U4.08, U4.19, U4.20, U4.24, U4.27, U4.32]
+        production: redactado
+        validation: verificado
+
+  - id: integradores
+    title: Integradores y simulacros
+    exercise_prefix: "S"
+    minimum: false
+    topics:
+      - id: simulacro-1
+        title: Simulacro del primer parcial
+        program_text: "Primer parcial: espacios vectoriales sobre R y Z2, base, dimensión, cambio de coordenadas, rango y nulidad, transformaciones lineales, códigos de Hamming."
+        objectives: [Integrar las unidades 1 y 2 en un examen de dos horas]
+        page: /algebra-ii/integradores/simulacro-1/
+        exercises: [S1.1, S1.2, S1.3, S1.4]
+        production: redactado
+        validation: verificado
+      - id: simulacro-2
+        title: Simulacro del segundo parcial
+        program_text: "Segundo parcial integrador: TL y cambio de coordenadas, autovalores, diagonalización, producto interno, ortogonalización, proyección, recurrencias y corrección de errores."
+        objectives: [Integrar las unidades 2 a 4 en un examen de tres horas]
+        page: /algebra-ii/integradores/simulacro-2/
+        exercises: [S2.1, S2.2, S2.3, S2.4, S2.5]
+        production: redactado
+        validation: verificado

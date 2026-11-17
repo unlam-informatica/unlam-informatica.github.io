@@ -6,7 +6,7 @@ Destino: https://unlam-informatica.github.io/
 
 - 1er año: Análisis Matemático I.
 - 2do año: Bases de Datos Aplicadas.
-- 3er año: Diseño de Software.
+- 3er año: Álgebra y Geometría Analítica II y Diseño de Software.
 
 Astro Starlight con el tema [Lucode](https://lucas-labs.github.io/lucode-starlight-theme/)
 genera un sitio estático con búsqueda global Pagefind, navegación
@@ -50,6 +50,17 @@ ejecutar sobre `main`. Pages del portal ya está preparado para GitHub Actions.
 Después del primer
 despliegue hay que retirar las publicaciones anteriores de materias que comparten
 prefijos; consultar la guía de producción. Sus archivos e historial se conservan.
+
+## Pipeline académico
+
+`tools/content-pipeline/` es una herramienta local en Python, independiente del build, que
+inventaría el material de cátedra de una materia (hashes, duplicados, procedencia), lo extrae con
+Docling a Markdown y JSON trazables, prepara paquetes de contexto por tema, valida los resultados,
+verifica con SymPy las cuentas de los ejemplos y ejercicios publicados y controla la calidad del
+contenido. Los documentos originales (`academic-sources/*/raw/`) y sus derivados
+(`academic-sources/*/processed/`) son privados y no se versionan. Ver
+[su documentación](tools/content-pipeline/README.md); la configuración y la matriz curricular de
+Álgebra II están en `academic-sources/algebra-ii/`.
 
 ## Tema visual
 
