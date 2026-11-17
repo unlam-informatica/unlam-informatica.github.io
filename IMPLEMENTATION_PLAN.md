@@ -1,7 +1,6 @@
 # Plan de implementación — Pipeline académico y Álgebra II
 
-Documento de seguimiento. Rama de trabajo: `feat/algebra-ii-pipeline`.
-Última actualización: 2026-11-16 (sesión 1, segunda parte).
+Documento de seguimiento. Rama: `feat/algebra-ii-pipeline`. Última actualización: 2026-11-17.
 
 ## Objetivos
 
@@ -12,68 +11,61 @@ Documento de seguimiento. Rama de trabajo: `feat/algebra-ii-pipeline`.
 
 ## Estado por fase
 
-| Fase | Estado | Detalle |
-|------|--------|---------|
-| 1. Auditoría | Hecha | Repo, tests, validaciones, fuentes y programa revisados. |
-| 2. Pipeline | Código y tests escritos; **sin ejecutar** | Falta instalar dependencias (bloqueo 1) para correr pytest. |
-| 3. Procesamiento | Bloqueada | Docling no se puede instalar (bloqueo 1). Lectura directa de fuentes en digestos privados como alternativa. |
-| 4. Diseño de Álgebra II | Hecha | `content-guide.md`, `curriculum-map.yaml`, `subject.yaml`, estructura de slugs y navegación. |
-| 5. Generación académica | En curso | Páginas generales escritas; teoría de repaso y unidades 1–4 en redacción; práctica y simulacros pendientes. |
-| 6. Integración web | En curso | Sidebar, navegación superior, portada y estilos de figuras listos; tests de navegador pendientes. |
-| 7. Auditoría final | No iniciada | |
+| Fase | Estado |
+|------|--------|
+| 1. Auditoría | Hecha |
+| 2. Pipeline | Hecha: 53 tests rápidos y 1 de integración con Docling pasan |
+| 3. Procesamiento | Hecha con limitaciones (ver abajo): 57 documentos extraídos y normalizados, 41 paquetes |
+| 4. Diseño | Hecha: `content-guide.md`, `curriculum-map.yaml`, `subject.yaml` |
+| 5. Generación académica | Hecha: 69 páginas, 154 ejercicios, 2 simulacros |
+| 6. Integración web | Hecha: sidebar, navegación superior, portada (3er año), laboratorio interactivo |
+| 7. Auditoría final | Hecha: build, validate, Playwright, SymPy y QA en verde |
 
-## Archivos principales
+## Resultados verificados (2026-11-17)
 
-- Pipeline: `tools/content-pipeline/` (`src/content_pipeline/{config,io_utils,logging_utils,ingest,extract,normalize,package,validate,mathcheck,qa,cli}.py`, `tests/`, `README.md`).
-- Materia: `academic-sources/algebra-ii/{subject.yaml,curriculum-map.yaml,content-guide.md,checks/}`.
-- Sitio: `src/content/docs/algebra-ii/`, `src/config/sidebar.mjs`, `astro.config.mjs`,
-  `src/content/docs/index.mdx`, `src/styles/custom.css`.
-- CI: job `pipeline` en `.github/workflows/validate.yml` (pytest rápido, verify-math, qa).
+- `npm run build`: 259 páginas. `npm run validate`: 258 páginas de contenido alcanzables desde la
+  portada, 149 097 enlaces y recursos revisados, 0 errores.
+- `npm run test:browser`: 32/32 (escritorio y móvil).
+- `pytest -m "not integration"`: 53/53. `pytest -m integration` (Docling 2.150.1): 1/1.
+- `content-pipeline verify-math --subject algebra-ii`: 328/328 comprobaciones (SymPy 1.14).
+- `content-pipeline qa --subject algebra-ii`: 69 páginas, 154 ejercicios, 0 errores; 10 advertencias
+  de notación, todas en avisos de equivalencia con la notación de los libros (permitidos).
+- `content-pipeline validate --subject algebra-ii`: 0 errores; 547 advertencias, casi todas fórmulas
+  no decodificadas por la pasada sin el modelo de fórmulas.
+- Revisión de los 108 enunciados de teoremas, propiedades, lemas y corolarios: sin observaciones.
 
-## Hallazgos verificados
+## Contenido
 
-- **Programa vigente:** 2023 (PDF del DIIT, modificado el 30/10/2023; es el único de la ficha oficial).
-- **Ubicación:** 3er año, 1er cuatrimestre (Plan 2023), correlativa 3627.
-- **Fuentes:** 64 PDF, 4 DOCX, 5 JPG, 6 MP4 (431 MB). Duplicados exactos: 6 pares (ver catálogo
-  cuando se genere). Los tres `EDA*.docx` son fotos de resoluciones manuscritas de alumnos.
-- **Huecos de las fuentes de cátedra:** cadenas de Markov, producto en ℤ₂ⁿ y códigos autoduales no
-  aparecen en ninguna guía; se redactan desde la bibliografía (Poole 3.ª ed.).
-- **Bibliografía local:** Poole 3.ª ed. (el programa pide la 4.ª); Lay no está disponible.
+| Sección | Páginas | Ejercicios |
+|---|---|---|
+| Generales (presentación, programa, cómo estudiar, notación, laboratorio, bibliografía) | 6 | — |
+| Repaso de Álgebra I | 6 | 20 |
+| Unidad 1 (10 lecciones + presentación + 4 de práctica) | 15 | 30 |
+| Unidad 2 (8 + 1 + 4) | 13 | 32 |
+| Unidad 3 (8 + 1 + 4) | 13 | 31 |
+| Unidad 4 (8 + 1 + 4) | 13 | 32 |
+| Integradores y simulacros | 3 | 9 |
 
 ## Decisiones
 
-- Docling como extra opcional `extract`; CI instala solo PyYAML, SymPy y pytest.
-- Notación de la cátedra en todo el sitio, con equivalencias de libros en `/algebra-ii/notacion/`.
-- Resoluciones plegadas con `<details>` (probado: KaTeX y avisos renderizan dentro).
-- Figuras en SVG en línea con colores por clase (`.math-figure` en `custom.css`), claro y oscuro.
-- Producción paralela por agentes con propiedad exclusiva de archivos; checks SymPy por archivo.
+- Programa 2023 (único publicado por el DIIT); materia de 3er año, 1er cuatrimestre.
+- Notación de la cátedra con tabla de equivalencias con Poole y Lay.
+- Resoluciones plegadas con `<details>`; fórmulas nunca dentro de etiquetas HTML.
+- Figuras SVG en línea con colores por tokens de tema; un componente interactivo sin dependencias.
+- Docling como extra opcional; CI corre los tests rápidos, `verify-math` y `qa`.
+- Producción con subagentes: primero Opus, luego Sonnet (por indicación del responsable), con
+  archivos exclusivos por agente e integración y revisión centralizadas.
 
-## Bloqueos
+## Limitaciones y pendientes reales
 
-1. **PyPI inaccesible.** El DNS del proveedor resuelve `files.pythonhosted.org` a `127.9.9.9`
-   (walled garden). El responsable eligió corregir la red; no se esquivó el bloqueo. Sin esto no se
-   pueden instalar Docling, SymPy, PyYAML ni pytest.
-2. Sin `ffmpeg` no se pueden transcribir los MP4.
-
-## Estado al corte por límite de uso
-
-- Escritos y sin commit: páginas generales (`index`, `programa`, `como-estudiar`, `notacion`,
-  `bibliografia`), `integradores/` (índice y dos simulacros verificados con `fractions`),
-  `checks/simulacros.py`, laboratorio interactivo (`src/components/algebra/TransformacionPlano.astro`,
-  `laboratorio.mdx`), tests de Playwright ampliados, job `pipeline` en CI, corrección de `qa.py`
-  (la palabra "todo" no es un marcador provisional).
-- **Último build falló** con un error de YAML de frontmatter (`yaml/compose/composer.js`): revisar el
-  log, probablemente un archivo a medio escribir por un agente. Pendiente además verificar si las
-  fórmulas con llaves funcionan en `laboratorio.mdx`; si no, pasar la página a `.md` sin el componente
-  o escapar las fórmulas.
-- Agentes de teoría (repaso, U1 parte 1 y 2, U2, U3, U4) seguían escribiendo al momento del corte.
-- Faltan: prácticas de las cuatro unidades (≥ 24 ejercicios cada una), enlaces desde U2/U3 al
-  laboratorio, completar `exercises` y estados en `curriculum-map.yaml`, y todo lo que depende del
-  bloqueo 1.
-
-## Próxima acción exacta
-
-1. Al resolverse el bloqueo 1: en `tools/content-pipeline/`,
-   `python3 -m venv .venv && .venv/bin/pip install -e ".[dev,extract]"`, correr pytest,
-   `content-pipeline run --subject algebra-ii`, revisar catálogo y paquetes.
-2. Integrar la teoría de los agentes, lanzar prácticas y simulacros, `verify-math`, `qa`, build y tests.
+1. **Reconocimiento de fórmulas de Docling**: en esta máquina tarda más de 10 minutos para 22 páginas;
+   el corpus se procesó con `--no-formulas`. Para los documentos clave: `content-pipeline extract
+   --subject algebra-ii --ids <id>` sin la opción.
+2. **Clases grabadas**: los MP4 fueron quitados de `raw/` (quedan registrados como ausentes); su
+   transcripción requiere `ffmpeg` y el extra `asr`.
+3. Los digestos privados de "otras fuentes" y de bibliografía quedaron parciales (prácticas resueltas
+   de años anteriores y el mapa de Nakos y Joyner sin relevar).
+4. Lay (5.ª ed.) no está disponible localmente: se cita sin secciones ni páginas. Poole se citó con la
+   3.ª ed. (el programa pide la 4.ª).
+5. El job `pipeline` de CI no se ejecutó todavía en GitHub Actions.
+6. Merge y despliegue: fuera del alcance autorizado.
