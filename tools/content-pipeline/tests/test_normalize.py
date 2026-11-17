@@ -1,4 +1,5 @@
 import json
+import re
 
 from conftest import FakeEngine
 
@@ -24,7 +25,7 @@ def test_no_borra_titulos_repetidos_en_el_cuerpo():
     body = "Encabezado\n\nA\n\nB\n\nC\n\nEjercicio {i}\n\nD\n\nE\n\nF\n\nPie"
     text, _, _ = normalize_markdown(pages(*[body.format(i=i) for i in range(1, 5)]))
     assert "Encabezado" not in text and "Pie" not in text
-    assert text.count("### Ejercicio") == 4
+    assert len(re.findall(r"(?m)^#+ Ejercicio \d", text)) == 4
 
 
 def test_jerarquia_de_titulos_sin_saltos():
@@ -36,8 +37,8 @@ def test_jerarquia_de_titulos_sin_saltos():
 def test_titulos_implicitos_y_tipos():
     text, sections, report = normalize_markdown(pages("**Ejercicio 3.** Hallar una base.", "Resolución\n\nTexto"))
     assert report["pseudo_headings"] == 1
-    assert "### Ejercicio 3" in text
-    assert sections[1].kind == "enunciado"
+    assert re.search(r"(?m)^#+ Ejercicio 3$", text)
+    assert sections[0].kind == "enunciado"
     assert classify_title("2. Resolución del ejercicio") == "resolucion"
     assert classify_title("Teorema de la dimensión") == "teoria"
 

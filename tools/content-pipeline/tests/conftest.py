@@ -109,14 +109,14 @@ def subject(tmp_path: Path):
     raw = root / "raw"
     (raw / "teoria").mkdir(parents=True)
     (raw / "practicas").mkdir()
-    (raw / "otros").mkdir()
+    (raw / "otros" / "copias").mkdir(parents=True)
     (root / "subject.yaml").write_text(SUBJECT_YAML, encoding="utf-8")
     (raw / "teoria" / "espacios.md").write_text(
         "# Espacios vectoriales\n\nUn subespacio es cerrado por la suma.\n---page---\n"
         "## Base y dimensión\n\nUna base es un conjunto generador linealmente independiente.\n",
         encoding="utf-8")
     copy = (raw / "teoria" / "espacios.md").read_bytes()
-    (raw / "otros" / "espacios (copia).md").write_bytes(copy)
+    (raw / "otros" / "copias" / "espacios (copia).md").write_bytes(copy)
     (raw / "practicas" / "guia.pdf").write_bytes(minimal_pdf(["Ejercicio 1 base de R3", "Resolucion del ejercicio 1"]))
     (raw / "practicas" / "notas.txt").write_text("formato no compatible", encoding="utf-8")
     (raw / "clase.mp4").write_bytes(b"\x00\x00\x00\x18ftypmp42")

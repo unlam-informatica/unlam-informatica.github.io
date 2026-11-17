@@ -41,7 +41,7 @@ def test_cambio_del_original_invalida_la_cache(subject):
     engine = FakeEngine()
     run_extract(subject, engine)
     (subject.raw / "teoria/espacios.md").write_text("# Otro contenido\n", encoding="utf-8")
-    (subject.raw / "otros/espacios (copia).md").unlink()
+    (subject.raw / "otros/copias/espacios (copia).md").unlink()
     run_inventory(subject)
     counts = run_extract(subject, engine)
     assert counts["converted"] == 1 and counts["cached"] == 1

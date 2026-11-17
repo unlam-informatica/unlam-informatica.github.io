@@ -19,7 +19,7 @@ def test_rref_y_rango_en_z2():
 def test_codigo_de_hamming_7_4():
     code = gf_nullspace(HAMMING_H, 2)
     assert len(code) == 4
-    assert all(row == [0, 0, 0] for row in gf_matmul(HAMMING_H, sp.Matrix(code).T, 2))
+    assert all(value == 0 for row in gf_matmul(HAMMING_H, sp.Matrix(code).T, 2) for value in row)
     words = gf_span(code, 2)
     assert len(words) == 16
     assert min_distance(words) == 3
@@ -64,3 +64,11 @@ def test_identificadores_repetidos(tmp_path):
     (checks / "b.py").write_text(body, encoding="utf-8")
     with pytest.raises(ValueError, match="repetida"):
         run_checks(checks)
+
+
+def test_same_compara_listas():
+    same([sp.Rational(1, 2), 2], [0.5, 2])
+    with pytest.raises(CheckFailure):
+        same([1, 2], [1, 3], "lista")
+    with pytest.raises(CheckFailure):
+        same([1, 2], [1, 2, 3], "lista")

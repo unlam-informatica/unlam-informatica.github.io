@@ -511,7 +511,7 @@ def _():
     require(mat_pow([[1, 1], [1, 0]], 90)[0][1] == 2880067194370816120, "F_90")
     # autoevaluación: A^5 y A^-2 de autovalores 2, -1, 1/2; 1000 en binario
     require([x**5 for x in (2, -1, sp.Rational(1, 2))] == [32, -1, sp.Rational(1, 32)], "A^5")
-    require([x**-2 for x in (2, -1, sp.Rational(1, 2))] == [sp.Rational(1, 4), 1, 4], "A^-2")
+    require([sp.Rational(x) ** -2 for x in (2, -1, sp.Rational(1, 2))] == [sp.Rational(1, 4), 1, 4], "A^-2")
     require(bin(1000) == "0b1111101000" and bin(1000).count("1") == 6, "1000 en binario")
 
 

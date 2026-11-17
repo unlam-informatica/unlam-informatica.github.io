@@ -33,7 +33,7 @@ Tamaño: **tiene tantas columnas como $\dim V$ y tantas filas como $\dim W$**, e
 - Si $B$ y $B'$ son las bases canónicas de $K^n$ y $K^m$, $M(T)_{EE'}$ es la matriz habitual con columnas $T(e_j)$. En particular $M(T_A)_{EE'}=A$.
 
 :::caution[Notación de los libros]
-Poole y Lay escriben la matriz de $T$ respecto de $B$ (salida) y $C$ (llegada) como $[T]_{C\leftarrow B}$, con los subíndices en orden inverso. En este curso, $M(T)_{BB'}$ lleva primero la base de salida y después la de llegada, y es **la misma matriz**. Lo mismo ocurre con el cambio de coordenadas: $C_{BB'}$ es $P_{B'\leftarrow B}$ en los libros. La tabla completa está en [notación](/algebra-ii/notacion/).
+Poole escribe la matriz de $T$ respecto de $B$ (salida) y $C$ (llegada) como $[T]_{C\leftarrow B}$, con los subíndices en orden inverso. En este curso, $M(T)_{BB'}$ lleva primero la base de salida y después la de llegada, y es **la misma matriz**. Lo mismo ocurre con el cambio de coordenadas: $C_{BB'}$ es $P_{B'\leftarrow B}$ en los libros. La tabla completa está en [notación](/algebra-ii/notacion/).
 :::
 
 ## La identidad fundamental

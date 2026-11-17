@@ -47,7 +47,7 @@ flowchart LR
 La regla mnemotécnica es que los subíndices contiguos se "encadenan": $C_{B'B_1'}\,M(T)_{BB'}\,C_{B_1B}$ tiene $B_1\to B\to B'\to B_1'$ y el resultado es $B_1\to B_1'$. El producto de matrices de cambio de base es la regla $C_{BB''}=C_{B'B''}C_{BB'}$ de la unidad anterior.
 
 :::caution[Notación de los libros]
-Poole y Lay escriben el cambio de base como $P_{B'\leftarrow B}$ y la matriz de la TL como $[T]_{B'\leftarrow B}$, con los subíndices en el orden contrario al nuestro. En esa notación la fórmula se lee $[T]_{B_1'\leftarrow B_1}=P_{B_1'\leftarrow B'}\,[T]_{B'\leftarrow B}\,P_{B\leftarrow B_1}$, que es **exactamente la misma igualdad** que la de arriba. Ver [notación](/algebra-ii/notacion/).
+Poole y Lay escriben el cambio de base como $P_{B'\leftarrow B}$, y Poole escribe la matriz de la TL como $[T]_{B'\leftarrow B}$, con los subíndices en el orden contrario al nuestro. En esa notación la fórmula se lee $[T]_{B_1'\leftarrow B_1}=P_{B_1'\leftarrow B'}\,[T]_{B'\leftarrow B}\,P_{B\leftarrow B_1}$, que es **exactamente la misma igualdad** que la de arriba. Ver [notación](/algebra-ii/notacion/).
 :::
 
 ### El caso habitual: desde la matriz canónica

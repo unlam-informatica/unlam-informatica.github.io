@@ -162,8 +162,13 @@ def _():
     formula = 2 * 3**n - (-2) ** n
     require(all(formula.subs(n, k) == seq[k] for k in range(len(seq))), "término general")
     require(seq[2] == 14 and seq[3] == 62, "a2 y a3")
-    ratio = sp.limit((2 * 3 ** (n + 1) - (-2) ** (n + 1)) / (2 * 3**n - (-2) ** n), n, sp.oo)
-    same(ratio, 3, "límite del cociente")
+    # Dividiendo por 3^n: a_{n+1}/a_n = (6 + 2 r^n)/(2 - r^n) con r = -2/3, y |r| < 1, así que tiende a 6/2.
+    r = sp.Rational(-2, 3)
+    for k in range(len(seq) - 1):
+        same(sp.Rational(seq[k + 1], seq[k]), (6 + 2 * r**k) / (2 - r**k), f"cociente para n={k}")
+    t = sp.symbols("t")
+    same(sp.limit((6 + 2 * t) / (2 - t), t, 0), 3, "límite cuando r^n → 0")
+    require(abs(r) < 1, "|r| < 1")
 
 
 @check("S2.4", "Producto interno no usual, Gram-Schmidt, complemento y proyección", page=S2)

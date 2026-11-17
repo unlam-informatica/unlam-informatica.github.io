@@ -31,7 +31,7 @@ def test_duplicados_por_hash(subject):
     assert summary["unique_documents"] == 3
     assert summary["duplicate_files"] == 1
     entry = by_path(catalog, "teoria/espacios.md")
-    assert entry["duplicate_paths"] == ["otros/espacios (copia).md"]
+    assert entry["duplicate_paths"] == ["otros/copias/espacios (copia).md"]
     assert catalog["summary"]["duplicate_files"] == 1
 
 

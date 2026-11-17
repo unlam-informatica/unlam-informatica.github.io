@@ -8,7 +8,7 @@ pytest.importorskip("docling")
 pytestmark = pytest.mark.integration
 
 from content_pipeline.extract import DoclingEngine, run_extract  # noqa: E402
-from content_pipeline.ingest import run_inventory  # noqa: E402
+from content_pipeline.ingest import load_catalog, run_inventory  # noqa: E402
 from content_pipeline.normalize import run_normalize  # noqa: E402
 
 
@@ -35,7 +35,8 @@ def test_docling_convierte_pdf_docx_y_conserva_paginas(subject):
     (subject.raw / "practicas" / "guia.pdf").write_bytes(minimal_pdf(["Ejercicio 1 base", "Ejercicio 2 rango"]))
     run_inventory(subject)
     engine = DoclingEngine(device="cpu")
-    counts = run_extract(subject, engine, profile="text")
+    ids = [d["id"] for d in load_catalog(subject)["documents"] if d["format"] in ("pdf", "docx")]
+    counts = run_extract(subject, engine, ids=ids, profile="text")
     assert counts["failed"] == 0, json.loads(subject.manifest.read_text())
     run_normalize(subject)
     text = "\n".join(p.read_text(encoding="utf-8") for p in subject.markdown.glob("*.md"))

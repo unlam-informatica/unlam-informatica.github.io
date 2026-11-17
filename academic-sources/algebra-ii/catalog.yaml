@@ -1,0 +1,1442 @@
+# Catálogo de procedencia generado por `content-pipeline inventory`.
+# Una entrada por contenido único (SHA-256). Las rutas son relativas a raw/.
+# Los campos de clasificación pueden corregirse a mano: la ingesta no los pisa.
+schema_version: 1
+subject: algebra-ii
+summary:
+  documents: 72
+  duplicate_files: 7
+  total_bytes: 416680216
+  by_format:
+    docx: 4
+    image: 5
+    pdf: 58
+    video: 5
+  by_type:
+    apunte: 6
+    apunte-externo: 4
+    bibliografia: 8
+    clase-grabada: 5
+    final: 3
+    fuera-de-programa: 5
+    guia-estudio: 3
+    guia-practica: 2
+    nota-personal: 1
+    parcial: 13
+    programa: 1
+    resolucion: 15
+    resolucion-alumno: 3
+    respuestas: 1
+    trabajo-practico: 2
+  by_status:
+    inventariado: 67
+    omitido: 5
+  needs_review: 0
+documents:
+- id: algebra-ii-ec261e8579b5
+  original_name: 1 - Subespacios 1.mp4
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/1 - Subespacios 1.mp4
+  duplicate_paths: []
+  format: video
+  size_bytes: 23497251
+  sha256: ec261e8579b58092b9b3840dcb80b62e481edfc5cfff7531c9148f7eb165f554
+  doc_type: clase-grabada
+  units:
+  - u1
+  topics: []
+  source: Cátedra AyGA II (UNLaM), clase grabada
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: asr
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-7b9b2b632461
+  original_name: 2 - Subespacios 2.mp4
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/2 - Subespacios 2.mp4
+  duplicate_paths: []
+  format: video
+  size_bytes: 25116328
+  sha256: 7b9b2b63246135493accde9ef92695c4d5e6a9efb7b9d4b350289fbdebce9cd8
+  doc_type: clase-grabada
+  units:
+  - u1
+  topics: []
+  source: Cátedra AyGA II (UNLaM), clase grabada
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: asr
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-b15f226b3ec2
+  original_name: 3 - Coordenadas.mp4
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/3 - Coordenadas.mp4
+  duplicate_paths: []
+  format: video
+  size_bytes: 37455384
+  sha256: b15f226b3ec2b3d39bb546bc7e0817b0c9c9465e825c282f58648d2e1193a9e5
+  doc_type: clase-grabada
+  units:
+  - u1
+  topics: []
+  source: Cátedra AyGA II (UNLaM), clase grabada
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: asr
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-8c2ee16002d5
+  original_name: 4 - Matriz de cambio de coordenadas.mp4
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/4 - Matriz de cambio de coordenadas.mp4
+  duplicate_paths:
+  - 2 - Coordenadas y cambio de coordenadas/Matriz de cambio de coordenadas.mp4
+  format: video
+  size_bytes: 34200460
+  sha256: 8c2ee16002d56e58db91f35a9d4dd4f2218c8b296bf911d43facc96b51a3664c
+  doc_type: clase-grabada
+  units:
+  - u1
+  topics: []
+  source: Cátedra AyGA II (UNLaM), clase grabada
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: asr
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-751ea62f0bea
+  original_name: Ejercicio resuelto y autoevaluación subespacios.pdf
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/Ejercicio resuelto y autoevaluación subespacios.pdf
+  duplicate_paths:
+  - 2 - Coordenadas y cambio de coordenadas/SUBESPACIOS-y-COORDENADAS-(RESUELTO)1.pdf
+  format: pdf
+  size_bytes: 230545
+  sha256: 751ea62f0bea32d8a533ff331f34043cb3b884a3a214c5e96c32d59f633da4b1
+  doc_type: resolucion
+  units:
+  - u1
+  topics: []
+  source: Cátedra AyGA II (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-3a087f2de219
+  original_name: Guía de estudio espacios verctoriales - Resuelta.pdf
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/Guía de estudio espacios verctoriales
+    - Resuelta.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 145090
+  sha256: 3a087f2de2197f5e6ee04ff517f1678e77759b11a78ffdc2894f7d50bc9283ec
+  doc_type: resolucion
+  units:
+  - u1
+  topics: []
+  source: Cátedra AyGA II (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-12476a35fa0d
+  original_name: Guía de estudio espacios verctoriales.pdf
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/Guía de estudio espacios verctoriales.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 375202
+  sha256: 12476a35fa0d81fa6a743aa84570898a0475bdea1ec7e19543af3d3f7de567ab
+  doc_type: guia-estudio
+  units:
+  - u1
+  topics: []
+  source: Cátedra AyGA II (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-14ade83daf16
+  original_name: Espacios vectoriales 1.pdf
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/Otros apuntes/Espacios vectoriales 1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 682656
+  sha256: 14ade83daf161b701811222f74a8a763eddf0bbaf319af530b3dc71843147e1d
+  doc_type: apunte-externo
+  units:
+  - u1
+  topics: []
+  source: Apunte externo a la cátedra (autoría en el documento)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-b0920ccca7ff
+  original_name: Espacios vectoriales 2.pdf
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/Otros apuntes/Espacios vectoriales 2.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 104943
+  sha256: b0920ccca7ffd5e5cb055970f447f308a7ce9a933dd3c54a9999769abef1029c
+  doc_type: apunte-externo
+  units:
+  - u1
+  topics: []
+  source: Apunte externo a la cátedra (autoría en el documento)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-cf565f8b1f83
+  original_name: Espacios vectoriales y aplicaciones lineales.pdf
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/Otros apuntes/Espacios vectoriales y aplicaciones
+    lineales.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 330621
+  sha256: cf565f8b1f83c62fa528d8a993ad0b36b708dfdd7f199fa09faa0e94ab7df52f
+  doc_type: apunte-externo
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Apunte externo a la cátedra (autoría en el documento)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-59a0041c473d
+  original_name: Identidades trigonométricas.pdf
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/Otros apuntes/Identidades trigonométricas.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 79576
+  sha256: 59a0041c473de9c6591caea5444a5bd448d20c0c918cf46d0baeb85d5d301d42
+  doc_type: fuera-de-programa
+  units: []
+  topics: []
+  source: Apunte externo a la cátedra (autoría en el documento)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: skip
+  notes: null
+  status: omitido
+  needs_review: []
+- id: algebra-ii-2ba3d8b7bea2
+  original_name: Subespacios vectoriales.pdf
+  path: 1 - Espacios Vectoriales, Subespacios, Base y dimensión/Otros apuntes/Subespacios vectoriales.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 435302
+  sha256: 2ba3d8b7bea2a9884e7ba187834432245607c4c9b0e2b394d0d25a4450031a3b
+  doc_type: apunte-externo
+  units:
+  - u1
+  topics: []
+  source: Apunte externo a la cátedra (autoría en el documento)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-e351622dab4e
+  original_name: Guía de cambio de coordenadas - resuelta.pdf
+  path: 2 - Coordenadas y cambio de coordenadas/Guía de cambio de coordenadas - resuelta.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 167128
+  sha256: e351622dab4e41a8727f3132152bc494213b241daadd5601089e47d63e32daa8
+  doc_type: resolucion
+  units:
+  - u1
+  topics: []
+  source: Cátedra AyGA II (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-2858e5aaab9f
+  original_name: Guía de cambio de coordenadas.pdf
+  path: 2 - Coordenadas y cambio de coordenadas/Guía de cambio de coordenadas.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 371808
+  sha256: 2858e5aaab9fe508851c99a5fb58e273be0235f126ecf238ec21e78834e46d20
+  doc_type: guia-estudio
+  units:
+  - u1
+  topics: []
+  source: Cátedra AyGA II (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-44a730a65bad
+  original_name: Apunte Transformaciones Lineales.pdf
+  path: 3 - Transformacion lineal/Apunte Transformaciones Lineales.pdf
+  duplicate_paths:
+  - 4 - Transformacion lineal teorema fundamental/APUNTE-TRANSFORMACIONES-LINEALES1.pdf
+  format: pdf
+  size_bytes: 97418
+  sha256: 44a730a65bad767bf587e4f2b3970144562464fdeecabd3736916c174a3f4e4b
+  doc_type: apunte
+  units:
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-40184f3ebd05
+  original_name: Ejercicio resuelto y autoevaluación.pdf
+  path: 3 - Transformacion lineal/Ejercicio resuelto y autoevaluación.pdf
+  duplicate_paths:
+  - 4 - Transformacion lineal teorema fundamental/TRANSFORMACIONES-LINEALES-EJRESUELTO-Y-AUTOEVALUACION1.pdf
+  format: pdf
+  size_bytes: 276945
+  sha256: 40184f3ebd053f602bf528b792e331e11ecdf1803ace65ecfadaf5689d8e9d14
+  doc_type: resolucion
+  units:
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-67329943c6c2
+  original_name: Guía de estudio 3.pdf
+  path: 3 - Transformacion lineal/Guía de estudio 3.pdf
+  duplicate_paths:
+  - 4 - Transformacion lineal teorema fundamental/Guias-de-estudio-N---311.pdf
+  format: pdf
+  size_bytes: 380026
+  sha256: 67329943c6c245a97b189e86c0b8a9d1b4934bcf1cc26be6df1409911ce9257b
+  doc_type: guia-estudio
+  units:
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-b8220dcae2b1
+  original_name: Ejercicio-resuelto-TL1.pdf
+  path: 4 - Transformacion lineal teorema fundamental/Ejercicio-resuelto-TL1.pdf
+  duplicate_paths:
+  - Other sources/practicas/Ejercicio-resuelto-TL1.pdf
+  format: pdf
+  size_bytes: 85232
+  sha256: b8220dcae2b12e797beec1452c5736f59369efdff2872b31f0acdffa1332c6d2
+  doc_type: resolucion
+  units:
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-5e52f785dade
+  original_name: Transformaciones lineales.mp4
+  path: 4 - Transformacion lineal teorema fundamental/Transformaciones lineales.mp4
+  duplicate_paths: []
+  format: video
+  size_bytes: 109833666
+  sha256: 5e52f785dade41fec7f515cd9d9cd0c8eea75225474012ff28fa5b55ae6643c0
+  doc_type: clase-grabada
+  units:
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM), clase grabada
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: asr
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-ea9559207cfb
+  original_name: Algebra lineal una introduccion moderna - Poole.pdf
+  path: Bibliografía/Algebra lineal una introduccion moderna - Poole.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 23555644
+  sha256: ea9559207cfb45d4d6eaed016206a6f6c73f6beb643425601e98e63cd70a3349
+  doc_type: bibliografia
+  units: []
+  topics: []
+  source: Editorial (ver ficha del libro)
+  version: null
+  license: copyright-editorial
+  distribution: privado
+  extraction: front-matter
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-f37cce053aba
+  original_name: Algebra y geometría - Pearson - 3ra ed.pdf
+  path: Bibliografía/Algebra y geometría - Pearson - 3ra ed.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 5874232
+  sha256: f37cce053abafeeebbeb9ab565d74bb19ff79dce3d686f5b59112295321d4e7a
+  doc_type: bibliografia
+  units: []
+  topics: []
+  source: Editorial (ver ficha del libro)
+  version: null
+  license: copyright-editorial
+  distribution: privado
+  extraction: front-matter
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-d782fa3cbab6
+  original_name: Algebra y geometría-Eugenio Hernández.pdf
+  path: Bibliografía/Algebra y geometría-Eugenio Hernández.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 15479994
+  sha256: d782fa3cbab6d4077d6c94799d36aa3c3a91f38e08f0f715110f125b5154b912
+  doc_type: bibliografia
+  units: []
+  topics: []
+  source: Editorial (ver ficha del libro)
+  version: null
+  license: copyright-editorial
+  distribution: privado
+  extraction: front-matter
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-4996ef9e3689
+  original_name: Álgebra Lineal - George Nakos.pdf
+  path: Bibliografía/Álgebra Lineal - George Nakos.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 54988941
+  sha256: 4996ef9e36896635a4030806d73acfab89819403b1ccbf119d8fcea12b7fe5a2
+  doc_type: bibliografia
+  units: []
+  topics: []
+  source: Editorial (ver ficha del libro)
+  version: null
+  license: copyright-editorial
+  distribution: privado
+  extraction: front-matter
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-b7e177ca526c
+  original_name: Álgebra lineal - Una propuesta de enseñanza para carreras de Ingeniería.pdf
+  path: Bibliografía/Álgebra lineal - Una propuesta de enseñanza para carreras de Ingeniería.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 2937583
+  sha256: b7e177ca526ca0ae300a4944152a99036ddc70ee871d13ee1a07d2ab05696983
+  doc_type: bibliografia
+  units: []
+  topics: []
+  source: Editorial (ver ficha del libro)
+  version: null
+  license: copyright-editorial
+  distribution: privado
+  extraction: front-matter
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-89943f459968
+  original_name: Álgebra lineal para estudiantes de ingeniería y ciencias - Juan Carlos Del Valle Sotelo.pdf
+  path: Bibliografía/Álgebra lineal para estudiantes de ingeniería y ciencias - Juan Carlos Del Valle
+    Sotelo.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 14246889
+  sha256: 89943f4599688d6ad834c02c17264dcf12a8f16b561b501a55de61533b53b739
+  doc_type: bibliografia
+  units: []
+  topics: []
+  source: Editorial (ver ficha del libro)
+  version: null
+  license: copyright-editorial
+  distribution: privado
+  extraction: front-matter
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-43f0e7b0aa3b
+  original_name: Documento sin título.docx
+  path: Documento sin título.docx
+  duplicate_paths: []
+  format: docx
+  size_bytes: 12885
+  sha256: 43f0e7b0aa3bc2ac60389bee8ea2178702460b374c8ee87e729e55773351905d
+  doc_type: nota-personal
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Nota personal (lista de temas y texto generado por IA; no es fuente académica)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: text
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-94bc33dbd907
+  original_name: Guía de actividades - Respuestas.pdf
+  path: Guía de actividades - Respuestas.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 370063
+  sha256: 94bc33dbd907b03901708a0b40d8c5214de846c2d7c0d0e95c8c624623084d51
+  doc_type: respuestas
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), coord. M. Falsetti
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-702da4e9f8b4
+  original_name: Guía de actividades.pdf
+  path: Guía de actividades.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 1655176
+  sha256: 702da4e9f8b4aaab0f938b072e884a953fe91b26b7aa8e4848102b76f8457751
+  doc_type: guia-practica
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), coord. M. Falsetti
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-4995bc76e1c8
+  original_name: 10363503_10204378054517762_2015083660081892552_n.jpg
+  path: Other sources/1er parcial/10363503_10204378054517762_2015083660081892552_n.jpg
+  duplicate_paths: []
+  format: image
+  size_bytes: 222957
+  sha256: 4995bc76e1c81128fae060b6f489364e65f848a24d9148433d65631f6773e9b0
+  doc_type: parcial
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-0fb9e9b61c2e
+  original_name: 10635775_10203150978555347_8421748454593444194_n.jpg
+  path: Other sources/1er parcial/10635775_10203150978555347_8421748454593444194_n.jpg
+  duplicate_paths: []
+  format: image
+  size_bytes: 71361
+  sha256: 0fb9e9b61c2e5b42d7ef169d86146c51bf9e71d4c66d5fee432e38f480a19b3a
+  doc_type: parcial
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-52db1b29a7b0
+  original_name: 1er-Parcial-2013---Resuelto-2.pdf
+  path: Other sources/1er parcial/1er-Parcial-2013---Resuelto-2.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 340420
+  sha256: 52db1b29a7b00d793fc894e488264dcf3c1a6d107e2811aa58f2b5aea929f93a
+  doc_type: parcial
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-2d6153e85790
+  original_name: 1er-Parcial-2013---Resuelto.pdf
+  path: Other sources/1er parcial/1er-Parcial-2013---Resuelto.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 304102
+  sha256: 2d6153e85790c83929f579b98e32bba655e0d36753cd803c114370ea843de5d6
+  doc_type: parcial
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-c63115d6c0e3
+  original_name: 4.1. 1er Parcial Resuelto 27-05-08.pdf
+  path: Other sources/1er parcial/4.1. 1er Parcial Resuelto 27-05-08.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 75616
+  sha256: c63115d6c0e32db9d0099fad920db1ff6f400f24a997ec6d3bcac2089b805e18
+  doc_type: parcial
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-826bdc680bb0
+  original_name: I_P-Viernes-noche-1er-Cuat-2016.pdf
+  path: Other sources/1er parcial/I_P-Viernes-noche-1er-Cuat-2016.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 125769
+  sha256: 826bdc680bb01797df5edf234b9fb25ba59b059e6857a061ed62df2b591631a6
+  doc_type: parcial
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-de5e3eb311ac
+  original_name: Parcialito-1.pdf
+  path: Other sources/1er parcial/Parcialito-1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 91117
+  sha256: de5e3eb311accd562398ecd6c7ce49925dd61713a553d5e4b080af3ffaba0288
+  doc_type: parcial
+  units:
+  - u3
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-adb37c908dd3
+  original_name: Recuperatorio-1er-Parcial-2015-1---Resuelto.pdf
+  path: Other sources/1er parcial/Recuperatorio-1er-Parcial-2015-1---Resuelto.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 327174
+  sha256: adb37c908dd38c678d97ac8e39ed454027e6fe6f724ee7486a1d282c036b66a8
+  doc_type: parcial
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-476da85bcd1d
+  original_name: 2do-Parcial-modelo-Viernes---1.pdf
+  path: Other sources/2do parcial/2do-Parcial-modelo-Viernes---1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 122040
+  sha256: 476da85bcd1db1a93e762cab828acda081522efd6c02ba2803147b4902914167
+  doc_type: parcial
+  units:
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-0b9c7c5f1339
+  original_name: 2do-Parcial-modelo-Viernes.pdf
+  path: Other sources/2do parcial/2do-Parcial-modelo-Viernes.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 122562
+  sha256: 0b9c7c5f133953990429664d3dbded668576dbec986b50e3a235a9768bf34f53
+  doc_type: parcial
+  units:
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-bd383b40c54b
+  original_name: 2do-Parcial.pdf
+  path: Other sources/2do parcial/2do-Parcial.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 111221
+  sha256: bd383b40c54bca53510b866cb6ba44ad861de78bc419c311ccf2cc9c1e45e0cb
+  doc_type: parcial
+  units:
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-4597419d5053
+  original_name: 36456309_1448771781890109_4673518334715625472_n.jpg
+  path: Other sources/2do parcial/36456309_1448771781890109_4673518334715625472_n.jpg
+  duplicate_paths: []
+  format: image
+  size_bytes: 61343
+  sha256: 4597419d5053ac5ae88db8d8eb3455738bbae95aca083af02abaa6de0a481f51
+  doc_type: parcial
+  units:
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-73d17de4f2d2
+  original_name: EDA1.docx
+  path: Other sources/EDAS/EDA1.docx
+  duplicate_paths: []
+  format: docx
+  size_bytes: 8572183
+  sha256: 73d17de4f2d29075da347b043333841404960ed9ed59d3fc6b432ae30b0f1605
+  doc_type: resolucion-alumno
+  units:
+  - u2
+  topics: []
+  source: Resoluciones manuscritas de alumnos (imágenes; contienen errores)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-aa0c3832e0eb
+  original_name: EDA2.docx
+  path: Other sources/EDAS/EDA2.docx
+  duplicate_paths: []
+  format: docx
+  size_bytes: 6236621
+  sha256: aa0c3832e0ebb97ced4f2aaa3ecedb26d7876f24e3b53a1fd7a5b8bfa261f71f
+  doc_type: resolucion-alumno
+  units:
+  - u2
+  - u3
+  topics: []
+  source: Resoluciones manuscritas de alumnos (imágenes; contienen errores)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-80ad6d53a2a7
+  original_name: EDA3.docx
+  path: Other sources/EDAS/EDA3.docx
+  duplicate_paths: []
+  format: docx
+  size_bytes: 9653961
+  sha256: 80ad6d53a2a79dfec4325e413f5b1ab7b988a5a68e88a1492d32c5f813cde96d
+  doc_type: resolucion-alumno
+  units:
+  - u4
+  topics: []
+  source: Resoluciones manuscritas de alumnos (imágenes; contienen errores)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-5be94264089e
+  original_name: PractCompleta2016.pdf
+  path: Other sources/PractCompleta2016.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 310339
+  sha256: 5be94264089e84aca790f825b78cd08337435bc51fb6e013e77b94075d2677d9
+  doc_type: guia-practica
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), guía 2016 (plan anterior)
+  version: '2016'
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-ce39eaceaffd
+  original_name: 3.4. Apunte - Sistemas de Ecuaciones Diferenciales Lineales.pdf
+  path: Other sources/apuntes/3.4. Apunte - Sistemas de Ecuaciones Diferenciales Lineales.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 479250
+  sha256: ce39eaceaffd4e512e61012cd779bc778a01176ce3aa7a65accf8744bda64bfa
+  doc_type: fuera-de-programa
+  units: []
+  topics: []
+  source: Cátedra AyGA II (UNLaM), apuntes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: skip
+  notes: null
+  status: omitido
+  needs_review: []
+- id: algebra-ii-6b583b7ef9ac
+  original_name: Apunte---cambio-de-coordenadas---aplic.-a-TL.pdf
+  path: Other sources/apuntes/Apunte---cambio-de-coordenadas---aplic.-a-TL.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 58133
+  sha256: 6b583b7ef9ac3c921306be8250e83cc0099587df698ee47b7db6dc660f053d71
+  doc_type: apunte
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM), apuntes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-ab296aadfcc3
+  original_name: Autovalores-y-Autovectores.pdf
+  path: Other sources/apuntes/Autovalores-y-Autovectores.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 72672
+  sha256: ab296aadfcc3d48aa3fb0bdad9d6cefce9dc3f2282cfa4be9b52e2207a62d41a
+  doc_type: apunte
+  units:
+  - u3
+  topics: []
+  source: Cátedra AyGA II (UNLaM), apuntes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-3314a2722ef2
+  original_name: CONICAS---APLICACION-DE-DIAGONALIZACION-DE-MATRICES-SIMETRICAS.pdf
+  path: Other sources/apuntes/CONICAS---APLICACION-DE-DIAGONALIZACION-DE-MATRICES-SIMETRICAS.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 129868
+  sha256: 3314a2722ef2001e4d3d4cdd4935c1efb546ce2cc6ce1dcfc4dd623b0533964e
+  doc_type: fuera-de-programa
+  units: []
+  topics: []
+  source: Cátedra AyGA II (UNLaM), apuntes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: skip
+  notes: null
+  status: omitido
+  needs_review: []
+- id: algebra-ii-2699b2ad8a07
+  original_name: DIAGONALIZACION-DE-MATRICES-SIMETRICAS.pdf
+  path: Other sources/apuntes/DIAGONALIZACION-DE-MATRICES-SIMETRICAS.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 132718
+  sha256: 2699b2ad8a07bc3860255eb8dd0aad59c878caf8aa3084ce7c6bc94182ab7f27
+  doc_type: apunte
+  units:
+  - u3
+  topics: []
+  source: Cátedra AyGA II (UNLaM), apuntes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: 'Diagonalización ortogonal de simétricas: fuera del programa 2023 como tema propio.'
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-b2e3215075a4
+  original_name: Espacios-euclideos.pdf
+  path: Other sources/apuntes/Espacios-euclideos.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 215232
+  sha256: b2e3215075a44ea4a3962333024260b017c7bd41cfb0434aef41cc76dd46a92a
+  doc_type: apunte
+  units:
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), apuntes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-a9074f6b1f36
+  original_name: transformaciones lineales.pdf
+  path: Other sources/apuntes/transformaciones lineales.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 38008
+  sha256: a9074f6b1f36b95b1579ed3ab29af1a5cc3e3a3a3c647fb9fcad5e38989c0249
+  doc_type: apunte
+  units:
+  - u2
+  topics: []
+  source: Cátedra AyGA II (UNLaM), apuntes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-a4a6bb15b355
+  original_name: 2020Octubre_6.pdf
+  path: Other sources/finales/2020Octubre_6.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 148507
+  sha256: a4a6bb15b355d28003eab8cb68efd066944a344990c7f05659b5c1fc22fcc686
+  doc_type: final
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-059dab40b83c
+  original_name: 37985276_1796121953769726_4577863344244916224_n.jpg
+  path: Other sources/finales/37985276_1796121953769726_4577863344244916224_n.jpg
+  duplicate_paths: []
+  format: image
+  size_bytes: 103807
+  sha256: 059dab40b83c26ec321b33f96b88a58978122cf3bf19168f99dce8ab76114072
+  doc_type: final
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-b650853bf54c
+  original_name: Final-Curso-verano-2015 (1).pdf
+  path: Other sources/finales/Final-Curso-verano-2015 (1).pdf
+  duplicate_paths:
+  - Other sources/finales/Final-Curso-verano-2015.pdf
+  format: pdf
+  size_bytes: 104077
+  sha256: b650853bf54c11a4a64ecfd95cd2446ac7bf72d0c0d1302b469e2cffc9f0840b
+  doc_type: final
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), exámenes de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-b82897a13da3
+  original_name: Álgebra Lineal - David Poole - 3ed.pdf
+  path: Other sources/libros/Álgebra Lineal - David Poole - 3ed.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 25092093
+  sha256: b82897a13da3c745ac1ebd6c56429950135a0703bbefda94bb147ee97c24723e
+  doc_type: bibliografia
+  units: []
+  topics: []
+  source: Editorial (ver ficha del libro)
+  version: null
+  license: copyright-editorial
+  distribution: privado
+  extraction: front-matter
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-c856d0724216
+  original_name: Álgebra y Geometría - Eugenio Hernandez.pdf
+  path: Other sources/libros/Álgebra y Geometría - Eugenio Hernandez.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 8526844
+  sha256: c856d07242161346931bf4f135836381b81c8f44f7b59a10ca0e8062f0cde336
+  doc_type: bibliografia
+  units: []
+  topics: []
+  source: Editorial (ver ficha del libro)
+  version: null
+  license: copyright-editorial
+  distribution: privado
+  extraction: front-matter
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-7e898fd7227e
+  original_name: 1.2.-Ejercicios-Resueltos---Gram-Schmidt,-Complemento-Ortogonal,-Proyeccion-Ortogonal-y-Distancia.pdf
+  path: Other sources/practicas/1.2.-Ejercicios-Resueltos---Gram-Schmidt,-Complemento-Ortogonal,-Proyeccion-Ortogonal-y-Distancia.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 54151
+  sha256: 7e898fd7227e541d0db164d7396a1fd0cac1cf9b4aa533b2df17e148b1be1254
+  doc_type: resolucion
+  units:
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-9fc8e4a3c0e3
+  original_name: 1.3.-Ejercicios-Resueltos---Proyeccion-Ortogonal-y-Distancia.pdf
+  path: Other sources/practicas/1.3.-Ejercicios-Resueltos---Proyeccion-Ortogonal-y-Distancia.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 86108
+  sha256: 9fc8e4a3c0e307f48aa000863995ee5a90ea04738d7161cc157980449b610e5d
+  doc_type: resolucion
+  units:
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-3537229d9a61
+  original_name: 1.4.-Ejercicios-Resueltos---Diagonalizacion-Matrices-Simetricas.pdf
+  path: Other sources/practicas/1.4.-Ejercicios-Resueltos---Diagonalizacion-Matrices-Simetricas.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 144487
+  sha256: 3537229d9a61423b8fa004645567675a6abc3d3900991247f4489703c61c4b92
+  doc_type: resolucion
+  units:
+  - u3
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-42f0b7686cce
+  original_name: 1.5.-Ejercicios-Resueltos---Transformaciones-Ortogonales.pdf
+  path: Other sources/practicas/1.5.-Ejercicios-Resueltos---Transformaciones-Ortogonales.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 120834
+  sha256: 42f0b7686cce0c59cd2805dda305eba0b1d0f446aedb6b235f9a7bb76ba63b0f
+  doc_type: fuera-de-programa
+  units: []
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: skip
+  notes: null
+  status: omitido
+  needs_review: []
+- id: algebra-ii-01517b0b9d41
+  original_name: 3.2. Ejercicios Resueltos - Aproximacion de Funciones por Proyecciones Ortogonales.pdf
+  path: Other sources/practicas/3.2. Ejercicios Resueltos - Aproximacion de Funciones por Proyecciones
+    Ortogonales.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 137481
+  sha256: 01517b0b9d4157634d9203c07395ddd89732fd4de301d3b2c27ecabed83d914a
+  doc_type: resolucion
+  units:
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-ed43289dfa20
+  original_name: 3.3. Ejercicios Resueltos - Conicas.pdf
+  path: Other sources/practicas/3.3. Ejercicios Resueltos - Conicas.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 67055
+  sha256: ed43289dfa2054b1f8e21c0ad155aa2382153816212cf1fa27c6cf1a74fad209
+  doc_type: fuera-de-programa
+  units: []
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: skip
+  notes: null
+  status: omitido
+  needs_review: []
+- id: algebra-ii-cec030cea8a7
+  original_name: EJERCICIO-SUBESPACIO-RESUELTO1.pdf
+  path: Other sources/practicas/EJERCICIO-SUBESPACIO-RESUELTO1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 217204
+  sha256: cec030cea8a78a039dd8d897fdfd2ab0150cf262ccb813bfebe377bfd5be5309
+  doc_type: resolucion
+  units:
+  - u1
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-e485836e9fdc
+  original_name: Ej_Adic-Autovalores.pdf
+  path: Other sources/practicas/Ej_Adic-Autovalores.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 137307
+  sha256: e485836e9fdcaf6fe96acd704a6e9a51bae6ed72206f98dce62fae687711c24d
+  doc_type: resolucion
+  units:
+  - u3
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-665b6b471cfd
+  original_name: Ejercicio-Ortogonalizacion-de-una-base-de-polinomios1.pdf
+  path: Other sources/practicas/Ejercicio-Ortogonalizacion-de-una-base-de-polinomios1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 17173
+  sha256: 665b6b471cfdecf9d028df9022a9716652a3b9086372ab910015efdaa94e2299
+  doc_type: resolucion
+  units:
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-5e8275ffcd3a
+  original_name: Ejercicios-10-y-11---autovalores-y-autovectores1.pdf
+  path: Other sources/practicas/Ejercicios-10-y-11---autovalores-y-autovectores1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 55287
+  sha256: 5e8275ffcd3a4811ae796298be499c182aeb975125ff4b5f95071a038fd0e42a
+  doc_type: resolucion
+  units:
+  - u3
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-d9e95051c721
+  original_name: Ejercicios-resueltos-de-Autovalores-y-Autovectores1.pdf
+  path: Other sources/practicas/Ejercicios-resueltos-de-Autovalores-y-Autovectores1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 39350
+  sha256: d9e95051c72155af8b6a31b0b5fe3af288a8402b3cacd184a6fc89125a162504
+  doc_type: resolucion
+  units:
+  - u3
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-5211ff51722d
+  original_name: Ejercicios-semanales-22.pdf
+  path: Other sources/practicas/Ejercicios-semanales-22.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 118726
+  sha256: 5211ff51722d7f4d45249a29e2b4f3220719d71b27abfc827d845d85a7a403cc
+  doc_type: resolucion
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), ejercicios resueltos de años anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-e0e72df7a019
+  original_name: 12115826_10201740037698223_48592622896654449_n.jpg
+  path: Other sources/tps/12115826_10201740037698223_48592622896654449_n.jpg
+  duplicate_paths: []
+  format: image
+  size_bytes: 56701
+  sha256: e0e72df7a0199b1f1d14a073c5c15c1dba0434a06409a4b4d0aaa98f9755a58d
+  doc_type: trabajo-practico
+  units:
+  - u1
+  topics: []
+  source: Cátedra AyGA II (UNLaM), cuatrimestres anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-1e84700eb618
+  original_name: Parcialito-2-VF.pdf
+  path: Other sources/tps/Parcialito-2-VF.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 89173
+  sha256: 1e84700eb61826e728776c2ff1371f6ee20e7328ef4500fe61671a9a8ad74e25
+  doc_type: parcial
+  units:
+  - u4
+  topics: []
+  source: Cátedra AyGA II (UNLaM), cuatrimestres anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-cdd52dc1c10a
+  original_name: TP---Turno-Miercoles-Tarde---Miercoles-Noche-y-Viernes-noche---2do-cuatr-2017.pdf
+  path: Other sources/tps/TP---Turno-Miercoles-Tarde---Miercoles-Noche-y-Viernes-noche---2do-cuatr-2017.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 185706
+  sha256: cdd52dc1c10a26ae767f01ee3f11d59efed560407572854084ca5c8a4fa5e063
+  doc_type: trabajo-practico
+  units:
+  - u1
+  - u2
+  - u3
+  topics: []
+  source: Cátedra AyGA II (UNLaM), cuatrimestres anteriores
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []
+- id: algebra-ii-37d9461d8128
+  original_name: 661_3645_AlgebrayGeometriaAnaliticaII.pdf
+  path: programa/661_3645_AlgebrayGeometriaAnaliticaII.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 316490
+  sha256: 37d9461d81288001bccd6aae3290470e535013a857e36314d6f49fdec711050c
+  doc_type: programa
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: DIIT-UNLaM (sitio oficial)
+  version: '2023'
+  license: publico-enlazable
+  distribution: privado
+  extraction: full
+  notes: null
+  status: inventariado
+  needs_review: []

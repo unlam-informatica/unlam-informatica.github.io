@@ -92,4 +92,4 @@ Los ejercicios típicos combinan: construir una TL con datos dados (a veces con 
 - E. Hernández, M. J. Vázquez y M. Á. Zurro, *Álgebra lineal y Geometría*, 3.ª ed., Pearson, 2012: capítulo 5, aplicaciones lineales (bibliografía complementaria).
 - Los códigos de la lección 2.1 y de la unidad siguiente se complementan con Nakos y Joyner, *Álgebra lineal con aplicaciones* (Thomson, 1999).
 
-Poole y Lay escriben $[T]_{B'\leftarrow B}$ y $P_{B'\leftarrow B}$, con los subíndices en orden inverso al nuestro ($M(T)_{BB'}$, $C_{BB'}$); Poole llama "kernel" al núcleo y "rango" a la imagen. La tabla de equivalencias completa está en [notación](/algebra-ii/notacion/).
+Poole escribe $[T]_{B'\leftarrow B}$ y $P_{B'\leftarrow B}$ (Lay usa la misma notación para el cambio de coordenadas), con los subíndices en orden inverso al nuestro ($M(T)_{BB'}$, $C_{BB'}$); Poole llama "kernel" al núcleo y "rango" a la imagen. La tabla de equivalencias completa está en [notación](/algebra-ii/notacion/).

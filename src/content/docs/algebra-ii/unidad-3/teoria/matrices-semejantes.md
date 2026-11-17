@@ -136,7 +136,7 @@ Esta es la razón por la cual los invariantes lo son: determinante, traza, autov
 pueden definir directamente para el endomorfismo $T$, sin elegir ninguna base.
 
 :::caution[Notación de los libros]
-Poole y Lay escriben $P_{B'\leftarrow B}$ para lo que acá es $C_{BB'}$ y $[T]_{B'\leftarrow B}$ para
+Poole y Lay escriben $P_{B'\leftarrow B}$ para lo que acá es $C_{BB'}$, y Poole escribe $[T]_{B'\leftarrow B}$ para
 $M(T)_{BB'}$ (subíndices en orden inverso). Poole llama $P$ a la matriz que acá es $C$. La
 equivalencia completa está en la página de [notación](/algebra-ii/notacion/).
 :::

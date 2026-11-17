@@ -295,7 +295,8 @@ def run_extract(paths: SubjectPaths, engine: Engine, ids: list[str] | None = Non
             counts["skipped"] += 1
             continue
         source = paths.raw / document["path"]
-        if not source.is_file():
+        # Una entrada "ausente" es una versión anterior: su ruta puede tener hoy otro contenido.
+        if document.get("status") == "ausente" or not source.is_file():
             counts["missing"] += 1
             log.warning("documento ausente en raw/", extra={"id": doc_id, "path": document["path"]})
             continue

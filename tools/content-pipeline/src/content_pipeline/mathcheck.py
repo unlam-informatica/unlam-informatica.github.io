@@ -62,6 +62,11 @@ def same(actual: Any, expected: Any, what: str = "valor") -> None:
     """Igualdad simbólica exacta para escalares, expresiones o matrices de SymPy."""
     import sympy
 
+    if isinstance(actual, (list, tuple)) and isinstance(expected, (list, tuple)):
+        require(len(actual) == len(expected), f"{what}: longitud {len(actual)} ≠ {len(expected)}")
+        for index, (a, b) in enumerate(zip(actual, expected)):
+            same(a, b, f"{what}[{index}]")
+        return
     if isinstance(actual, sympy.MatrixBase) or isinstance(expected, sympy.MatrixBase):
         actual_m, expected_m = sympy.Matrix(actual), sympy.Matrix(expected)
         require(actual_m.shape == expected_m.shape, f"{what}: forma {actual_m.shape} ≠ {expected_m.shape}")
