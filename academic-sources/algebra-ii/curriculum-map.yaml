@@ -39,7 +39,8 @@ units:
         objectives: [Operar con vectores y matrices, calcular inversas y reconocer propiedades del producto]
         keywords: [matriz, producto, inversa, transpuesta]
         page: /algebra-ii/repaso/vectores-y-matrices/
-        production: en-redaccion
+        exercises: [R.01, R.02, R.03, R.04, R.05, R.06, R.07, R.08, R.12]
+        production: redactado
         validation: pendiente
       - id: r-determinantes
         title: Determinantes
@@ -47,7 +48,8 @@ units:
         objectives: [Calcular determinantes y usarlos para decidir inversibilidad, incluso con parámetros]
         keywords: [determinante, cofactor]
         page: /algebra-ii/repaso/determinantes/
-        production: en-redaccion
+        exercises: [R.06, R.08, R.11]
+        production: redactado
         validation: pendiente
       - id: r-sistemas
         title: Sistemas lineales y eliminación gaussiana
@@ -55,7 +57,8 @@ units:
         objectives: [Resolver y clasificar sistemas por eliminación gaussiana, incluidos los homogéneos y con parámetros]
         keywords: [sistema, gauss, escalonada, compatible]
         page: /algebra-ii/repaso/sistemas-lineales/
-        production: en-redaccion
+        exercises: [R.09, R.10, R.11, R.12]
+        production: redactado
         validation: pendiente
       - id: r-polinomios
         title: Polinomios
@@ -63,7 +66,8 @@ units:
         objectives: [Hallar raíces y factorizar polinomios de grado 2 y 3 con Ruffini y el criterio de Gauss]
         keywords: [polinomio, raíz, Ruffini, factorización]
         page: /algebra-ii/repaso/polinomios/
-        production: en-redaccion
+        exercises: [R.13, R.14, R.15, R.16]
+        production: redactado
         validation: pendiente
       - id: r-rectas-planos
         title: Rectas y planos
@@ -71,7 +75,8 @@ units:
         objectives: [Pasar entre ecuaciones vectoriales, paramétricas e implícitas de rectas y planos]
         keywords: [recta, plano, normal, paramétrica]
         page: /algebra-ii/repaso/rectas-y-planos/
-        production: en-redaccion
+        exercises: [R.17, R.18, R.19, R.20]
+        production: redactado
         validation: pendiente
 
   - id: u1
@@ -88,7 +93,8 @@ units:
           - {doc: algebra-ii-37d9461d8128, pages: [3, 4]}
         bibliography: ["poole3:§1.1 p. 13–16"]
         page: /algebra-ii/unidad-1/teoria/cuerpos-y-z2/
-        production: en-redaccion
+        exercises: [U1.01]
+        production: redactado
         validation: pendiente
       - id: u1-espacios
         title: Espacios vectoriales y propiedades
@@ -100,7 +106,8 @@ units:
           - algebra-ii-14ade83daf16
         bibliography: ["poole3:§6.1 p. 447"]
         page: /algebra-ii/unidad-1/teoria/espacios-vectoriales/
-        production: en-redaccion
+        exercises: [U1.05, U1.11]
+        production: redactado
         validation: pendiente
       - id: u1-subespacios
         title: Subespacios
@@ -113,7 +120,8 @@ units:
           - algebra-ii-12476a35fa0d
         bibliography: ["poole3:§6.1 p. 447"]
         page: /algebra-ii/unidad-1/teoria/subespacios/
-        production: en-redaccion
+        exercises: [U1.02, U1.05, U1.09, U1.11, U1.16, U1.17, U1.25, U1.30]
+        production: redactado
         validation: pendiente
       - id: u1-combinaciones
         title: Combinación lineal, generadores y ecuaciones de un subespacio
@@ -124,7 +132,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [7, 8]}
         bibliography: ["poole3:§2.3 p. 94"]
         page: /algebra-ii/unidad-1/teoria/combinaciones-lineales/
-        production: en-redaccion
+        exercises: [U1.03, U1.04, U1.10]
+        production: redactado
         validation: pendiente
       - id: u1-independencia
         title: Independencia lineal
@@ -135,7 +144,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [11, 13]}
         bibliography: ["poole3:§2.3 p. 94", "poole3:§6.2 p. 461"]
         page: /algebra-ii/unidad-1/teoria/independencia-lineal/
-        production: en-redaccion
+        exercises: [U1.04, U1.22]
+        production: redactado
         validation: pendiente
       - id: u1-matriz-rango
         title: Subespacios asociados a una matriz y rango
@@ -147,7 +157,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [14, 15]}
         bibliography: ["poole3:§3.5 p. 197"]
         page: /algebra-ii/unidad-1/teoria/subespacios-de-una-matriz/
-        production: en-redaccion
+        exercises: [U1.06, U1.11, U1.24, U1.27, U1.30]
+        production: redactado
         validation: pendiente
       - id: u1-base-dimension
         title: Base y dimensión
@@ -159,7 +170,8 @@ units:
           - algebra-ii-3a087f2de219
         bibliography: ["poole3:§3.5 p. 197", "poole3:§6.2 p. 461"]
         page: /algebra-ii/unidad-1/teoria/base-y-dimension/
-        production: en-redaccion
+        exercises: [U1.05, U1.07, U1.09, U1.10, U1.12, U1.13, U1.16, U1.19, U1.20, U1.26, U1.29]
+        production: redactado
         validation: pendiente
       - id: u1-coordenadas
         title: Coordenadas
@@ -170,7 +182,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [34, 35]}
         bibliography: ["poole3:§6.3 p. 481"]
         page: /algebra-ii/unidad-1/teoria/coordenadas/
-        production: en-redaccion
+        exercises: [U1.07]
+        production: redactado
         validation: pendiente
       - id: u1-cambio-coordenadas
         title: Cambio de base y matriz de cambio de coordenadas
@@ -184,7 +197,8 @@ units:
           - algebra-ii-6b583b7ef9ac
         bibliography: ["poole3:§6.3 p. 481"]
         page: /algebra-ii/unidad-1/teoria/cambio-de-coordenadas/
-        production: en-redaccion
+        exercises: [U1.14, U1.15, U1.19, U1.20, U1.21, U1.26, U1.29]
+        production: redactado
         validation: pendiente
       - id: u1-codigos
         title: Códigos lineales, matriz de paridad y detección de errores
@@ -196,7 +210,8 @@ units:
           - {doc: algebra-ii-37d9461d8128, pages: [3, 4]}
         bibliography: ["poole3:§1.4 p. 53–59", "poole3:§3.7 p. 251–255", "poole3:§6.7 p. 543", "nakos"]
         page: /algebra-ii/unidad-1/teoria/codigos-lineales/
-        production: en-redaccion
+        exercises: [U1.08, U1.18, U1.23, U1.25, U1.28]
+        production: redactado
         validation: pendiente
 
   - id: u2
@@ -214,7 +229,8 @@ units:
           - algebra-ii-a9074f6b1f36
         bibliography: ["poole3:§3.6 p. 217", "poole3:§6.4 p. 490"]
         page: /algebra-ii/unidad-2/teoria/definicion-y-ejemplos/
-        production: en-redaccion
+        exercises: [U2.01, U2.19, U2.32]
+        production: redactado
         validation: pendiente
       - id: u2-nucleo-imagen
         title: Núcleo e imagen
@@ -226,7 +242,8 @@ units:
           - algebra-ii-67329943c6c2
         bibliography: ["poole3:§6.5 p. 499"]
         page: /algebra-ii/unidad-2/teoria/nucleo-e-imagen/
-        production: en-redaccion
+        exercises: [U2.02, U2.03, U2.04, U2.05, U2.06, U2.07, U2.09, U2.10, U2.11, U2.13, U2.17, U2.18, U2.21, U2.22, U2.23, U2.24, U2.25, U2.26, U2.28, U2.29, U2.30, U2.31]
+        production: redactado
         validation: pendiente
       - id: u2-dimension
         title: Teorema de la dimensión
@@ -239,7 +256,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [57, 57]}
         bibliography: ["poole3:§6.5 p. 499"]
         page: /algebra-ii/unidad-2/teoria/teorema-de-la-dimension/
-        production: en-redaccion
+        exercises: [U2.03, U2.07]
+        production: redactado
         validation: pendiente
       - id: u2-clasificacion
         title: Monomorfismo, epimorfismo e isomorfismo
@@ -251,7 +269,8 @@ units:
           - algebra-ii-40184f3ebd05
         bibliography: ["poole3:§6.5 p. 499"]
         page: /algebra-ii/unidad-2/teoria/clasificacion/
-        production: en-redaccion
+        exercises: [U2.02, U2.03, U2.06, U2.12, U2.16, U2.20, U2.25, U2.29]
+        production: redactado
         validation: pendiente
       - id: u2-fundamental
         title: Teorema fundamental de las transformaciones lineales
@@ -264,7 +283,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [54, 56]}
         bibliography: ["poole3:§6.4 p. 490"]
         page: /algebra-ii/unidad-2/teoria/teorema-fundamental/
-        production: en-redaccion
+        exercises: [U2.09, U2.10, U2.11, U2.28]
+        production: redactado
         validation: pendiente
       - id: u2-matriz
         title: Matriz representativa
@@ -276,7 +296,8 @@ units:
           - algebra-ii-6b583b7ef9ac
         bibliography: ["poole3:§6.6 p. 515"]
         page: /algebra-ii/unidad-2/teoria/matriz-asociada/
-        production: en-redaccion
+        exercises: [U2.12, U2.14, U2.26, U2.27]
+        production: redactado
         validation: pendiente
       - id: u2-cambio-base
         title: Cambio de base y matrices asociadas
@@ -288,7 +309,8 @@ units:
           - algebra-ii-6b583b7ef9ac
         bibliography: ["poole3:§6.6 p. 515"]
         page: /algebra-ii/unidad-2/teoria/cambio-de-base/
-        production: en-redaccion
+        exercises: [U2.14, U2.27]
+        production: redactado
         validation: pendiente
       - id: u2-composicion-inversa
         title: Composición e inversa
@@ -299,7 +321,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [49, 49]}
         bibliography: ["poole3:§6.6 p. 515"]
         page: /algebra-ii/unidad-2/teoria/composicion-e-inversa/
-        production: en-redaccion
+        exercises: [U2.08, U2.13, U2.15, U2.16, U2.20, U2.21, U2.28, U2.32]
+        production: redactado
         validation: pendiente
 
   - id: u3
@@ -316,7 +339,8 @@ units:
           - algebra-ii-ab296aadfcc3
         bibliography: ["poole3:§4.1 p. 265"]
         page: /algebra-ii/unidad-3/teoria/autovalores-y-autovectores/
-        production: en-redaccion
+        exercises: [U3.01, U3.02, U3.04, U3.05, U3.06, U3.07, U3.09, U3.12, U3.19, U3.25, U3.26, U3.28, U3.30, U3.31]
+        production: redactado
         validation: pendiente
       - id: u3-polinomio
         title: Polinomio característico y multiplicidades
@@ -329,7 +353,8 @@ units:
           - algebra-ii-d9e95051c721
         bibliography: ["poole3:§4.3 p. 303"]
         page: /algebra-ii/unidad-3/teoria/polinomio-caracteristico/
-        production: en-redaccion
+        exercises: [U3.03, U3.04, U3.08, U3.10, U3.11, U3.27]
+        production: redactado
         validation: pendiente
       - id: u3-propiedades
         title: Propiedades de autovalores y autovectores
@@ -341,7 +366,8 @@ units:
           - algebra-ii-5e8275ffcd3a
         bibliography: ["poole3:§4.3 p. 303"]
         page: /algebra-ii/unidad-3/teoria/propiedades/
-        production: en-redaccion
+        exercises: [U3.02, U3.03, U3.05, U3.07, U3.08, U3.09, U3.14, U3.25, U3.26, U3.31]
+        production: redactado
         validation: pendiente
       - id: u3-semejantes
         title: Matrices semejantes
@@ -352,7 +378,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [70, 70]}
         bibliography: ["poole3:§4.4 p. 312"]
         page: /algebra-ii/unidad-3/teoria/matrices-semejantes/
-        production: en-redaccion
+        exercises: [U3.13, U3.14]
+        production: redactado
         validation: pendiente
       - id: u3-diagonalizacion
         title: Diagonalización
@@ -364,7 +391,8 @@ units:
           - algebra-ii-e485836e9fdc
         bibliography: ["poole3:§4.4 p. 312"]
         page: /algebra-ii/unidad-3/teoria/diagonalizacion/
-        production: en-redaccion
+        exercises: [U3.11, U3.12, U3.19, U3.20, U3.21, U3.22, U3.23, U3.27]
+        production: redactado
         validation: pendiente
       - id: u3-potencias
         title: Potencias de matrices
@@ -375,7 +403,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [71, 76]}
         bibliography: ["poole3:§4.4 p. 312"]
         page: /algebra-ii/unidad-3/teoria/potencias/
-        production: en-redaccion
+        exercises: [U3.15, U3.16, U3.20, U3.23, U3.29]
+        production: redactado
         validation: pendiente
       - id: u3-recurrencias
         title: Relaciones de recurrencia lineal
@@ -386,7 +415,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [83, 83]}
         bibliography: ["poole3:§4.6 p. 346–351", "poole3:§6.0 p. 445"]
         page: /algebra-ii/unidad-3/teoria/relaciones-de-recurrencia/
-        production: en-redaccion
+        exercises: [U3.17, U3.23, U3.29]
+        production: redactado
         validation: pendiente
       - id: u3-markov
         title: Cadenas de Markov
@@ -396,7 +426,8 @@ units:
         sources: []
         bibliography: ["poole3:§3.7 p. 236", "poole3:§4.6 p. 336"]
         page: /algebra-ii/unidad-3/teoria/cadenas-de-markov/
-        production: en-redaccion
+        exercises: [U3.18, U3.24, U3.30]
+        production: redactado
         validation: pendiente
 
   - id: u4
@@ -413,7 +444,8 @@ units:
           - algebra-ii-b2e3215075a4
         bibliography: ["poole3:§7.1 p. 554"]
         page: /algebra-ii/unidad-4/teoria/producto-interno/
-        production: en-redaccion
+        exercises: [U4.01, U4.03, U4.04, U4.09, U4.22, U4.28, U4.30]
+        production: redactado
         validation: pendiente
       - id: u4-norma-distancia
         title: Norma, distancia y ángulo
@@ -424,7 +456,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [85, 86]}
         bibliography: ["poole3:§7.1 p. 554", "poole3:§7.2 p. 575"]
         page: /algebra-ii/unidad-4/teoria/norma-distancia-angulo/
-        production: en-redaccion
+        exercises: [U4.02, U4.18, U4.23, U4.28]
+        production: redactado
         validation: pendiente
       - id: u4-ortogonalidad
         title: Ortogonalidad y bases ortonormales
@@ -435,7 +468,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [85, 86]}
         bibliography: ["poole3:§5.1 p. 379"]
         page: /algebra-ii/unidad-4/teoria/ortogonalidad/
-        production: en-redaccion
+        exercises: [U4.05, U4.10]
+        production: redactado
         validation: pendiente
       - id: u4-gram-schmidt
         title: Método de Gram-Schmidt
@@ -449,7 +483,8 @@ units:
           - algebra-ii-665b6b471cfd
         bibliography: ["poole3:§5.3 p. 399"]
         page: /algebra-ii/unidad-4/teoria/gram-schmidt/
-        production: en-redaccion
+        exercises: [U4.11, U4.12, U4.29]
+        production: redactado
         validation: pendiente
       - id: u4-complemento
         title: Complemento ortogonal
@@ -460,7 +495,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [87, 88]}
         bibliography: ["poole3:§5.2 p. 389"]
         page: /algebra-ii/unidad-4/teoria/complemento-ortogonal/
-        production: en-redaccion
+        exercises: [U4.06, U4.13, U4.14, U4.29]
+        production: redactado
         validation: pendiente
       - id: u4-proyeccion
         title: Proyecciones ortogonales y distancia a un subespacio
@@ -472,7 +508,8 @@ units:
           - algebra-ii-9fc8e4a3c0e3
         bibliography: ["poole3:§5.2 p. 389", "poole3:§7.3 p. 591"]
         page: /algebra-ii/unidad-4/teoria/proyeccion-y-distancia/
-        production: en-redaccion
+        exercises: [U4.07, U4.15, U4.16, U4.21, U4.25]
+        production: redactado
         validation: pendiente
       - id: u4-cuadrados-minimos
         title: Cuadrados mínimos
@@ -483,7 +520,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [101, 103]}
         bibliography: ["poole3:§7.3 p. 591–613"]
         page: /algebra-ii/unidad-4/teoria/cuadrados-minimos/
-        production: en-redaccion
+        exercises: [U4.17, U4.26, U4.31]
+        production: redactado
         validation: pendiente
       - id: u4-codigos
         title: Producto en Z2^n, códigos duales y autoduales, distancia de Hamming
@@ -495,7 +533,8 @@ units:
           - {doc: algebra-ii-702da4e9f8b4, pages: [32, 33]}
         bibliography: ["poole3:§5.5 p. 419–425", "poole3:§7.2 p. 576–578", "poole3:§7.5 p. 640–645", "nakos"]
         page: /algebra-ii/unidad-4/teoria/codigos-y-z2/
-        production: en-redaccion
+        exercises: [U4.08, U4.19, U4.20, U4.24, U4.27, U4.32]
+        production: redactado
         validation: pendiente
 
   - id: integradores
@@ -508,12 +547,14 @@ units:
         program_text: "Primer parcial: espacios vectoriales sobre R y Z2, base, dimensión, cambio de coordenadas, rango y nulidad, transformaciones lineales, códigos de Hamming."
         objectives: [Integrar las unidades 1 y 2 en un examen de dos horas]
         page: /algebra-ii/integradores/simulacro-1/
-        production: pendiente
+        exercises: [S1.1, S1.2, S1.3, S1.4]
+        production: redactado
         validation: pendiente
       - id: simulacro-2
         title: Simulacro del segundo parcial
         program_text: "Segundo parcial integrador: TL y cambio de coordenadas, autovalores, diagonalización, producto interno, ortogonalización, proyección, recurrencias y corrección de errores."
         objectives: [Integrar las unidades 2 a 4 en un examen de tres horas]
         page: /algebra-ii/integradores/simulacro-2/
-        production: pendiente
+        exercises: [S2.1, S2.2, S2.3, S2.4, S2.5]
+        production: redactado
         validation: pendiente
