@@ -22,13 +22,8 @@ export default defineConfig({
     // The navigation integration indexes with Pagefind's keepIndexUrl option.
     pagefind: false,
     plugins: [lucode({
-      navLinks: [
-        { label: 'Inicio', link: '/' },
-        { label: 'Análisis Matemático I', link: '/analisis-matematico-i/' },
-        { label: 'BBDD Aplicadas', link: '/bbdd-aplicadas/' },
-        { label: 'Álgebra II', link: '/algebra-ii/' },
-        { label: 'Diseño', link: '/diseno-de-software/' },
-      ],
+      // Las materias se eligen desde los menús por año (src/components/YearMenu.astro).
+      navLinks: [{ label: 'Inicio', link: '/' }],
       footerText: 'Sitio personal de apuntes. No es un sitio oficial de la Universidad Nacional de La Matanza (UNLaM).',
       // The Footer wrapper composes Lucode's footer with the notice and local Mermaid loader.
       warnOverrides: false,

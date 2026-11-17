@@ -14,6 +14,8 @@ test('portada por año y navegación contextual', async ({ page, isMobile }, tes
   if (isMobile) {
     await page.getByRole('button', { name: 'Menú de materias', exact: true }).click();
     await expect(page.locator('#drawer')).toBeVisible();
+    // Las materias del panel están colapsadas: se abre la materia y se elige su presentación.
+    await page.locator('#drawer summary', { hasText: /^\s*Bases de Datos Aplicadas\s*$/ }).click();
     await page.locator('#drawer a[href="/bbdd-aplicadas/index.html"]').first().click();
     await expect(page).toHaveURL(/bbdd-aplicadas\/index\.html$/);
   }
@@ -102,4 +104,25 @@ test('Álgebra II: fórmulas, figuras, resoluciones plegadas y tema oscuro', asy
   await page.locator('starlight-theme-lucode-select button').click();
   await expect.poll(stroke).not.toBe(before);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBeTruthy();
+});
+
+test('el header tiene un menú por año con sus materias en orden alfabético', async ({ page, isMobile }) => {
+  test.skip(isMobile, 'En móvil las materias se eligen desde el panel lateral.');
+  await page.goto('/');
+  const triggers = page.locator('.year-menu-trigger');
+  await expect(triggers).toHaveText(['1er año', '2do año', '3er año']);
+  await expect(page.locator('.nav-bar a')).toHaveText(['Inicio']);
+  const third = page.getByRole('button', { name: '3er año', exact: true });
+  await third.click();
+  await expect(third).toHaveAttribute('aria-expanded', 'true');
+  const panel = page.locator('#year-menu-3');
+  await expect(panel).toBeVisible();
+  await expect(panel.locator('a')).toHaveText(['Álgebra y Geometría Analítica II', 'Diseño de Software']);
+  await page.keyboard.press('Escape');
+  await expect(panel).toBeHidden();
+  await expect(third).toHaveAttribute('aria-expanded', 'false');
+  await third.click();
+  await panel.getByRole('link', { name: 'Diseño de Software' }).click();
+  await expect(page).toHaveURL('/diseno-de-software/index.html');
+  await expect(page.getByRole('button', { name: '3er año', exact: true })).toHaveClass(/active/);
 });

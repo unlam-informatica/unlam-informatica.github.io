@@ -60,3 +60,8 @@
 }
 /* Fórmulas de los títulos dentro del índice: del mismo tamaño que el texto. */
 starlight-toc .katex { font-size: 1em; }
+/* Títulos de grupo largos: dos líneas sin superponerse con el grupo siguiente. */
+.sidebar .entry-group > .entry-group-summary,
+#drawer .entry-group > .entry-group-summary { height: auto; min-height: 1.875rem; padding-block: 0.25rem; }
+.sidebar .entry-group > .entry-group-summary .entry-link-inner,
+#drawer .entry-group > .entry-group-summary .entry-link-inner { height: auto; white-space: normal; overflow-wrap: anywhere; }

@@ -8,6 +8,16 @@ async function openParents(scope: Locator, page: Page, href: string) {
   }
 }
 
+// Grupo de una materia dentro del encabezado «Materias»: materia → unidades.
+function subjectGroup(page: Page, name: string) {
+  const subjectsEntry = page.locator('.sidebar .container-sidebar-entry').filter({
+    has: page.getByRole('heading', { name: 'Materias', exact: true, includeHidden: true }),
+  });
+  return subjectsEntry.locator(':scope > .container-group-link > details').filter({
+    has: page.locator(':scope > summary', { hasText: new RegExp(`^\\s*${name}\\s*$`) }),
+  });
+}
+
 test('las seis unidades de BBDD solo contienen Teoría y Práctica', async ({ page }) => {
   for (let number = 1; number <= 6; number++) {
     const entries = readdirSync(`src/content/docs/bbdd-aplicadas/unidad-${number}`, { withFileTypes: true });
@@ -15,9 +25,7 @@ test('las seis unidades de BBDD solo contienen Teoría y Práctica', async ({ pa
     expect(entries.map(entry => entry.name).sort()).toEqual(['practica', 'teoria']);
   }
   await page.goto('/bbdd-aplicadas/index.html');
-  const subject = page.locator('.sidebar .container-sidebar-entry').filter({
-    has: page.getByRole('heading', { name: '2do año · BBDD Aplicadas', exact: true, includeHidden: true }),
-  });
+  const subject = subjectGroup(page, 'Bases de Datos Aplicadas');
   const units = subject.locator(':scope > .container-group-link > details');
   await expect(units).toHaveCount(6);
   for (let index = 0; index < 6; index++) {
@@ -68,10 +76,8 @@ test('las rutas anteriores de las unidades redirigen conservando consulta y ancl
 
 test('Análisis y Diseño tienen unidades legibles y en orden', async ({ page }) => {
   await page.goto('/analisis-matematico-i/index.html');
-  for (const [name, count] of [['1er año · Análisis Matemático I', 4], ['3er año · Diseño de Software', 6]] as const) {
-    const subject = page.locator('.sidebar .container-sidebar-entry').filter({
-      has: page.getByRole('heading', { name, exact: true, includeHidden: true }),
-    });
+  for (const [name, count] of [['Análisis Matemático I', 4], ['Diseño de Software', 6]] as const) {
+    const subject = subjectGroup(page, name);
     const units = subject.locator(':scope > .container-group-link > details > summary').filter({ hasText: /^Unidad / });
     await expect(units).toHaveText(Array.from({ length: count }, (_, index) => `Unidad ${index + 1}`));
   }
@@ -79,9 +85,7 @@ test('Análisis y Diseño tienen unidades legibles y en orden', async ({ page })
 
 test('Álgebra II tiene repaso, cuatro unidades con teoría y práctica, y simulacros', async ({ page }) => {
   await page.goto('/algebra-ii/index.html');
-  const subject = page.locator('.sidebar .container-sidebar-entry').filter({
-    has: page.getByRole('heading', { name: '3er año · Álgebra II', exact: true, includeHidden: true }),
-  });
+  const subject = subjectGroup(page, 'Álgebra y Geometría Analítica II');
   const groups = subject.locator(':scope > .container-group-link > details > summary');
   await expect(groups).toHaveText([
     'Repaso de Álgebra I',
@@ -96,4 +100,31 @@ test('Álgebra II tiene repaso, cuatro unidades con teoría y práctica, y simul
     await expect(unit.locator(':scope > .container-group-link > a')).toHaveCount(1);
     await expect(unit.locator(':scope > .container-group-link > details > summary')).toHaveText(['Teoría', 'Práctica']);
   }
+});
+
+test('el menú lateral lista todas las materias en orden alfabético, colapsadas salvo la actual', async ({ page }) => {
+  await page.goto('/bbdd-aplicadas/index.html');
+  await expect(page.locator('.sidebar .container-sidebar-entry > .entry-title')).toHaveText(['Materias']);
+  const subjects = page.locator('.sidebar .container-sidebar-entry > .container-group-link > details');
+  const names = (await subjects.locator(':scope > summary').allTextContents()).map(text => text.trim());
+  expect(names).toEqual(['Álgebra y Geometría Analítica II', 'Análisis Matemático I', 'Bases de Datos Aplicadas', 'Diseño de Software']);
+  expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' })));
+  const open = await subjects.evaluateAll(groups => groups.filter(group => (group as HTMLDetailsElement).open)
+    .map(group => group.querySelector(':scope > summary')!.textContent!.trim()));
+  expect(open).toEqual(['Bases de Datos Aplicadas']);
+});
+
+test('los títulos largos del menú no se superponen', async ({ page, isMobile }) => {
+  test.skip(isMobile, 'El menú lateral fijo solo existe en escritorio.');
+  await page.goto('/algebra-ii/como-estudiar/index.html');
+  const summaries = await page.locator('.sidebar details[open] > summary').evaluateAll(nodes => nodes
+    .filter(node => (node as HTMLElement).checkVisibility())
+    .map(node => { const box = node.getBoundingClientRect(); const label = node.querySelector('.entry-link-inner')!.getBoundingClientRect(); return { top: box.top, bottom: box.bottom, labelBottom: label.bottom }; }));
+  expect(summaries.length).toBeGreaterThan(0);
+  for (const box of summaries) expect(box.labelBottom).toBeLessThanOrEqual(box.bottom + 0.5);
+  const all = await page.locator('.sidebar .entry-group > summary, .sidebar a.entry-link').evaluateAll(nodes => nodes
+    .filter(node => (node as HTMLElement).checkVisibility())
+    .map(node => node.getBoundingClientRect()).map(box => [box.top, box.bottom])
+    .sort((a, b) => a[0] - b[0]));
+  for (let index = 1; index < all.length; index++) expect(all[index][0]).toBeGreaterThanOrEqual(all[index - 1][1] - 0.5);
 });
