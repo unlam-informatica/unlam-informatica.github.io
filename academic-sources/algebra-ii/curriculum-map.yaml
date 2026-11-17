@@ -2,7 +2,7 @@
 # Fuente de verdad del avance: `content-pipeline validate` y `content-pipeline qa` la controlan.
 # sources: identificadores del catálogo (algebra-ii-<sha256[:12]>) y páginas del PDF [desde, hasta].
 # production: pendiente | en-redaccion | redactado | revisado
-# validation: pendiente | verificado | revisado | con-observaciones
+# validation: pendiente | verificado (cuentas con SymPy y enunciados revisados) | revisado | con-observaciones
 subject: algebra-ii
 program:
   code: "3645"
@@ -41,7 +41,7 @@ units:
         page: /algebra-ii/repaso/vectores-y-matrices/
         exercises: [R.01, R.02, R.03, R.04, R.05, R.06, R.07, R.08, R.12]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: r-determinantes
         title: Determinantes
         program_text: "Conocimientos necesarios: cálculo matricial."
@@ -50,7 +50,7 @@ units:
         page: /algebra-ii/repaso/determinantes/
         exercises: [R.06, R.08, R.11]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: r-sistemas
         title: Sistemas lineales y eliminación gaussiana
         program_text: "Conocimientos necesarios: resolución de sistemas de ecuaciones."
@@ -59,7 +59,7 @@ units:
         page: /algebra-ii/repaso/sistemas-lineales/
         exercises: [R.09, R.10, R.11, R.12]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: r-polinomios
         title: Polinomios
         program_text: "Conocimientos necesarios: factorización de polinomios."
@@ -68,7 +68,7 @@ units:
         page: /algebra-ii/repaso/polinomios/
         exercises: [R.13, R.14, R.15, R.16]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: r-rectas-planos
         title: Rectas y planos
         program_text: "Geometría analítica de Álgebra I usada en las interpretaciones geométricas."
@@ -77,7 +77,7 @@ units:
         page: /algebra-ii/repaso/rectas-y-planos/
         exercises: [R.17, R.18, R.19, R.20]
         production: redactado
-        validation: pendiente
+        validation: verificado
 
   - id: u1
     title: Espacios vectoriales
@@ -95,7 +95,7 @@ units:
         page: /algebra-ii/unidad-1/teoria/cuerpos-y-z2/
         exercises: [U1.01]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u1-espacios
         title: Espacios vectoriales y propiedades
         program_text: "Espacios vectoriales. Propiedades de la suma y del producto. Propiedades de espacios vectoriales."
@@ -108,7 +108,7 @@ units:
         page: /algebra-ii/unidad-1/teoria/espacios-vectoriales/
         exercises: [U1.05, U1.11]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u1-subespacios
         title: Subespacios
         program_text: "Subespacios."
@@ -122,7 +122,7 @@ units:
         page: /algebra-ii/unidad-1/teoria/subespacios/
         exercises: [U1.02, U1.05, U1.09, U1.11, U1.16, U1.17, U1.25, U1.30]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u1-combinaciones
         title: Combinación lineal, generadores y ecuaciones de un subespacio
         program_text: "Combinación lineal de vectores. Conjunto de vectores generadores de un subespacio. Ecuaciones que determinan a los elementos de un subespacio vectorial."
@@ -134,7 +134,7 @@ units:
         page: /algebra-ii/unidad-1/teoria/combinaciones-lineales/
         exercises: [U1.03, U1.04, U1.10]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u1-independencia
         title: Independencia lineal
         program_text: "Independencia y dependencia lineal de vectores. Definición y propiedades. Interpretación geométrica en el plano y el espacio."
@@ -146,7 +146,7 @@ units:
         page: /algebra-ii/unidad-1/teoria/independencia-lineal/
         exercises: [U1.04, U1.22]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u1-matriz-rango
         title: Subespacios asociados a una matriz y rango
         program_text: "Rango de una matriz. Subespacios asociados a matrices (rango y nulidad)."
@@ -159,7 +159,7 @@ units:
         page: /algebra-ii/unidad-1/teoria/subespacios-de-una-matriz/
         exercises: [U1.06, U1.11, U1.24, U1.27, U1.30]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u1-base-dimension
         title: Base y dimensión
         program_text: "Base de un espacio vectorial o subespacio. Dimensión. Extensión de un conjunto LI a una base."
@@ -172,7 +172,7 @@ units:
         page: /algebra-ii/unidad-1/teoria/base-y-dimension/
         exercises: [U1.05, U1.07, U1.09, U1.10, U1.12, U1.13, U1.16, U1.19, U1.20, U1.26, U1.29]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u1-coordenadas
         title: Coordenadas
         program_text: "Coordenadas de un vector en una base. Unicidad de las coordenadas de un vector en una base."
@@ -184,7 +184,7 @@ units:
         page: /algebra-ii/unidad-1/teoria/coordenadas/
         exercises: [U1.07]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u1-cambio-coordenadas
         title: Cambio de base y matriz de cambio de coordenadas
         program_text: "Cambio de base. Matriz de cambio de coordenadas."
@@ -199,7 +199,7 @@ units:
         page: /algebra-ii/unidad-1/teoria/cambio-de-coordenadas/
         exercises: [U1.14, U1.15, U1.19, U1.20, U1.21, U1.26, U1.29]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u1-codigos
         title: Códigos lineales, matriz de paridad y detección de errores
         program_text: "Aplicación: espacios de n-uplas y matrices reales y Z_2^n; teoría de codificación; matriz de paridad; códigos (n,k); detección de errores. Aplicación a códigos de Hamming (primer parcial)."
@@ -212,7 +212,7 @@ units:
         page: /algebra-ii/unidad-1/teoria/codigos-lineales/
         exercises: [U1.08, U1.18, U1.23, U1.25, U1.28]
         production: redactado
-        validation: pendiente
+        validation: verificado
 
   - id: u2
     title: Transformaciones lineales
@@ -231,7 +231,7 @@ units:
         page: /algebra-ii/unidad-2/teoria/definicion-y-ejemplos/
         exercises: [U2.01, U2.19, U2.32]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u2-nucleo-imagen
         title: Núcleo e imagen
         program_text: "Núcleo e imagen de una transformación lineal."
@@ -244,7 +244,7 @@ units:
         page: /algebra-ii/unidad-2/teoria/nucleo-e-imagen/
         exercises: [U2.02, U2.03, U2.04, U2.05, U2.06, U2.07, U2.09, U2.10, U2.11, U2.13, U2.17, U2.18, U2.21, U2.22, U2.23, U2.24, U2.25, U2.26, U2.28, U2.29, U2.30, U2.31]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u2-dimension
         title: Teorema de la dimensión
         program_text: "Teorema de la dimensión."
@@ -258,7 +258,7 @@ units:
         page: /algebra-ii/unidad-2/teoria/teorema-de-la-dimension/
         exercises: [U2.03, U2.07]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u2-clasificacion
         title: Monomorfismo, epimorfismo e isomorfismo
         program_text: "Clasificación: Monomorfismo. Epimorfismo. Isomorfismo."
@@ -271,7 +271,7 @@ units:
         page: /algebra-ii/unidad-2/teoria/clasificacion/
         exercises: [U2.02, U2.03, U2.06, U2.12, U2.16, U2.20, U2.25, U2.29]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u2-fundamental
         title: Teorema fundamental de las transformaciones lineales
         program_text: "Teorema Fundamental de las transformaciones lineales."
@@ -285,7 +285,7 @@ units:
         page: /algebra-ii/unidad-2/teoria/teorema-fundamental/
         exercises: [U2.09, U2.10, U2.11, U2.28]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u2-matriz
         title: Matriz representativa
         program_text: "Matriz representativa de una Transformación Lineal."
@@ -298,7 +298,7 @@ units:
         page: /algebra-ii/unidad-2/teoria/matriz-asociada/
         exercises: [U2.12, U2.14, U2.26, U2.27]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u2-cambio-base
         title: Cambio de base y matrices asociadas
         program_text: "Representación matricial de transformaciones lineales. Cambio de coordenadas (semanas 6–7)."
@@ -311,7 +311,7 @@ units:
         page: /algebra-ii/unidad-2/teoria/cambio-de-base/
         exercises: [U2.14, U2.27]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u2-composicion-inversa
         title: Composición e inversa
         program_text: "Composición de transformaciones lineales. Matriz de la composición. Inversa de una transformación lineal. Matriz de la transformación inversa."
@@ -323,7 +323,7 @@ units:
         page: /algebra-ii/unidad-2/teoria/composicion-e-inversa/
         exercises: [U2.08, U2.13, U2.15, U2.16, U2.20, U2.21, U2.28, U2.32]
         production: redactado
-        validation: pendiente
+        validation: verificado
 
   - id: u3
     title: Autovalores y autovectores
@@ -341,7 +341,7 @@ units:
         page: /algebra-ii/unidad-3/teoria/autovalores-y-autovectores/
         exercises: [U3.01, U3.02, U3.04, U3.05, U3.06, U3.07, U3.09, U3.12, U3.19, U3.25, U3.26, U3.28, U3.30, U3.31]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u3-polinomio
         title: Polinomio característico y multiplicidades
         program_text: "Cálculo de autovalores y autovectores (semana 9)."
@@ -355,7 +355,7 @@ units:
         page: /algebra-ii/unidad-3/teoria/polinomio-caracteristico/
         exercises: [U3.03, U3.04, U3.08, U3.10, U3.11, U3.27]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u3-propiedades
         title: Propiedades de autovalores y autovectores
         program_text: "Autovalores y autovectores: propiedades (guía, actividad 4)."
@@ -368,7 +368,7 @@ units:
         page: /algebra-ii/unidad-3/teoria/propiedades/
         exercises: [U3.02, U3.03, U3.05, U3.07, U3.08, U3.09, U3.14, U3.25, U3.26, U3.31]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u3-semejantes
         title: Matrices semejantes
         program_text: "Matrices semejantes."
@@ -380,7 +380,7 @@ units:
         page: /algebra-ii/unidad-3/teoria/matrices-semejantes/
         exercises: [U3.13, U3.14]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u3-diagonalizacion
         title: Diagonalización
         program_text: "Diagonalización de matrices."
@@ -393,7 +393,7 @@ units:
         page: /algebra-ii/unidad-3/teoria/diagonalizacion/
         exercises: [U3.11, U3.12, U3.19, U3.20, U3.21, U3.22, U3.23, U3.27]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u3-potencias
         title: Potencias de matrices
         program_text: "Diagonalización de matrices. Aplicación (semana 10)."
@@ -405,7 +405,7 @@ units:
         page: /algebra-ii/unidad-3/teoria/potencias/
         exercises: [U3.15, U3.16, U3.20, U3.23, U3.29]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u3-recurrencias
         title: Relaciones de recurrencia lineal
         program_text: "Aplicación a relaciones de recurrencia lineal. TP: el caso de la sucesión de Fibonacci."
@@ -417,7 +417,7 @@ units:
         page: /algebra-ii/unidad-3/teoria/relaciones-de-recurrencia/
         exercises: [U3.17, U3.23, U3.29]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u3-markov
         title: Cadenas de Markov
         program_text: "Aplicación a cadenas de Markov."
@@ -428,7 +428,7 @@ units:
         page: /algebra-ii/unidad-3/teoria/cadenas-de-markov/
         exercises: [U3.18, U3.24, U3.30]
         production: redactado
-        validation: pendiente
+        validation: verificado
 
   - id: u4
     title: Espacios con producto interno
@@ -446,7 +446,7 @@ units:
         page: /algebra-ii/unidad-4/teoria/producto-interno/
         exercises: [U4.01, U4.03, U4.04, U4.09, U4.22, U4.28, U4.30]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u4-norma-distancia
         title: Norma, distancia y ángulo
         program_text: "Distancia por producto interno."
@@ -458,7 +458,7 @@ units:
         page: /algebra-ii/unidad-4/teoria/norma-distancia-angulo/
         exercises: [U4.02, U4.18, U4.23, U4.28]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u4-ortogonalidad
         title: Ortogonalidad y bases ortonormales
         program_text: "Ortogonalidad. Bases ortonormales."
@@ -470,7 +470,7 @@ units:
         page: /algebra-ii/unidad-4/teoria/ortogonalidad/
         exercises: [U4.05, U4.10]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u4-gram-schmidt
         title: Método de Gram-Schmidt
         program_text: "Método de Gram Schmidt."
@@ -485,7 +485,7 @@ units:
         page: /algebra-ii/unidad-4/teoria/gram-schmidt/
         exercises: [U4.11, U4.12, U4.29]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u4-complemento
         title: Complemento ortogonal
         program_text: "Complemento Ortogonal."
@@ -497,7 +497,7 @@ units:
         page: /algebra-ii/unidad-4/teoria/complemento-ortogonal/
         exercises: [U4.06, U4.13, U4.14, U4.29]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u4-proyeccion
         title: Proyecciones ortogonales y distancia a un subespacio
         program_text: "Proyecciones ortogonales. Proyección ortogonal. Distancia a un subespacio."
@@ -510,7 +510,7 @@ units:
         page: /algebra-ii/unidad-4/teoria/proyeccion-y-distancia/
         exercises: [U4.07, U4.15, U4.16, U4.21, U4.25]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u4-cuadrados-minimos
         title: Cuadrados mínimos
         program_text: "Aplicación: Aproximación de datos experimentales por cuadrados mínimos."
@@ -522,7 +522,7 @@ units:
         page: /algebra-ii/unidad-4/teoria/cuadrados-minimos/
         exercises: [U4.17, U4.26, U4.31]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: u4-codigos
         title: Producto en Z2^n, códigos duales y autoduales, distancia de Hamming
         program_text: "Aplicación a teoría de códigos: Producto interno en Z_2^n, códigos autoduales. Distancia de Hamming, detección de errores en transmisión de códigos. TP: código de Hamming y detección de errores."
@@ -535,7 +535,7 @@ units:
         page: /algebra-ii/unidad-4/teoria/codigos-y-z2/
         exercises: [U4.08, U4.19, U4.20, U4.24, U4.27, U4.32]
         production: redactado
-        validation: pendiente
+        validation: verificado
 
   - id: integradores
     title: Integradores y simulacros
@@ -549,7 +549,7 @@ units:
         page: /algebra-ii/integradores/simulacro-1/
         exercises: [S1.1, S1.2, S1.3, S1.4]
         production: redactado
-        validation: pendiente
+        validation: verificado
       - id: simulacro-2
         title: Simulacro del segundo parcial
         program_text: "Segundo parcial integrador: TL y cambio de coordenadas, autovalores, diagonalización, producto interno, ortogonalización, proyección, recurrencias y corrección de errores."
@@ -557,4 +557,4 @@ units:
         page: /algebra-ii/integradores/simulacro-2/
         exercises: [S2.1, S2.2, S2.3, S2.4, S2.5]
         production: redactado
-        validation: pendiente
+        validation: verificado
