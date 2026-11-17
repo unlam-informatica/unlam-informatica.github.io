@@ -65,3 +65,8 @@ starlight-toc .katex { font-size: 1em; }
 #drawer .entry-group > .entry-group-summary { height: auto; min-height: 1.875rem; padding-block: 0.25rem; }
 .sidebar .entry-group > .entry-group-summary .entry-link-inner,
 #drawer .entry-group > .entry-group-summary .entry-link-inner { height: auto; white-space: normal; overflow-wrap: anywhere; }
+
+/* Columna de lectura: Lucode la limita a 40rem (640 px). 46rem (736 px) da más aire a
+   fórmulas, tablas y figuras sin pasar de unos 100 caracteres por línea; en pantallas
+   medianas la columna sigue siendo fluida y ocupa solo el espacio disponible. */
+:root { --content-max-width: 46rem; }
