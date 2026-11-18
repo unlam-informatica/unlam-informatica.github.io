@@ -1,0 +1,2 @@
+Anulado (1 %)|Clustered Index Scan|[PK_Pedido]|134
+Entregado (90 %)|Clustered Index Scan|[PK_Pedido]|134

@@ -1,0 +1,9 @@
+SELECT UsuarioId, Nombre, Rol FROM seguridad.UsuarioDemo WHERE Rol = 'usuario' AND Nombre = 'leia';
+1|leia|usuario
+SELECT UsuarioId, Nombre, Rol FROM seguridad.UsuarioDemo WHERE Rol = 'usuario' AND Nombre = '' OR Rol = 'admin'--';
+3|palpatine|admin
+0
+3|palpatine|admin
+1|leia|usuario
+2|luke|usuario
+50001|Columna no permitida.

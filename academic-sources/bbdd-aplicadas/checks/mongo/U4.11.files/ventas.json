@@ -1,0 +1,761 @@
+[
+  {
+    "idVenta": 1,
+    "fecha": {
+      "$date": "2025-01-17T00:00:00Z"
+    },
+    "sucursal": "Norte",
+    "idVendedor": 6,
+    "medioPago": "transferencia",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Haedo"
+    },
+    "articulos": [
+      {
+        "codigo": "PIN-04",
+        "descripcion": "Latex interior 10 L",
+        "categoria": "pintura",
+        "cantidad": 2,
+        "precioUnitario": 31900.0
+      },
+      {
+        "codigo": "CAN-08",
+        "descripcion": "Canilla monocomando",
+        "categoria": "plomeria",
+        "cantidad": 4,
+        "precioUnitario": 21700.0
+      }
+    ],
+    "total": 150600.0
+  },
+  {
+    "idVenta": 2,
+    "fecha": {
+      "$date": "2025-01-28T00:00:00Z"
+    },
+    "sucursal": "Sur",
+    "idVendedor": 5,
+    "medioPago": "credito",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Moron"
+    },
+    "articulos": [
+      {
+        "codigo": "LLA-07",
+        "descripcion": "Llave termica bipolar",
+        "categoria": "electricidad",
+        "cantidad": 3,
+        "precioUnitario": 8900.0
+      },
+      {
+        "codigo": "TAL-01",
+        "descripcion": "Taladro percutor 650 W",
+        "categoria": "herramientas",
+        "cantidad": 1,
+        "precioUnitario": 48500.0
+      },
+      {
+        "codigo": "ROD-05",
+        "descripcion": "Rodillo antigota",
+        "categoria": "pintura",
+        "cantidad": 5,
+        "precioUnitario": 4300.0
+      }
+    ],
+    "total": 96700.0
+  },
+  {
+    "idVenta": 3,
+    "fecha": {
+      "$date": "2025-02-08T00:00:00Z"
+    },
+    "sucursal": "Centro",
+    "idVendedor": 4,
+    "medioPago": "debito",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "San Justo"
+    },
+    "articulos": [
+      {
+        "codigo": "SIL-10",
+        "descripcion": "Silicona neutra",
+        "categoria": "plomeria",
+        "cantidad": 6,
+        "precioUnitario": 3100.0
+      }
+    ],
+    "total": 18600.0,
+    "etiquetas": [
+      "promo",
+      "web"
+    ]
+  },
+  {
+    "idVenta": 4,
+    "fecha": {
+      "$date": "2025-02-19T00:00:00Z"
+    },
+    "sucursal": "Norte",
+    "idVendedor": 3,
+    "medioPago": "efectivo",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Castelar"
+    },
+    "articulos": [
+      {
+        "codigo": "DES-03",
+        "descripcion": "Juego de destornilladores",
+        "categoria": "herramientas",
+        "cantidad": 1,
+        "precioUnitario": 9800.0
+      },
+      {
+        "codigo": "LLA-07",
+        "descripcion": "Llave termica bipolar",
+        "categoria": "electricidad",
+        "cantidad": 3,
+        "precioUnitario": 8900.0
+      }
+    ],
+    "total": 36500.0,
+    "descuento": 5.0
+  },
+  {
+    "idVenta": 5,
+    "fecha": {
+      "$date": "2025-03-02T00:00:00Z"
+    },
+    "sucursal": "Sur",
+    "idVendedor": 2,
+    "medioPago": "transferencia",
+    "cliente": {
+      "tipo": "empresa",
+      "localidad": "Ramos Mejia"
+    },
+    "articulos": [
+      {
+        "codigo": "CAB-06",
+        "descripcion": "Cable unipolar 2,5 mm (rollo)",
+        "categoria": "electricidad",
+        "cantidad": 2,
+        "precioUnitario": 27400.0
+      },
+      {
+        "codigo": "SIL-10",
+        "descripcion": "Silicona neutra",
+        "categoria": "plomeria",
+        "cantidad": 6,
+        "precioUnitario": 3100.0
+      },
+      {
+        "codigo": "PIN-04",
+        "descripcion": "Latex interior 10 L",
+        "categoria": "pintura",
+        "cantidad": 2,
+        "precioUnitario": 31900.0
+      }
+    ],
+    "total": 137200.0
+  },
+  {
+    "idVenta": 6,
+    "fecha": {
+      "$date": "2025-03-13T00:00:00Z"
+    },
+    "sucursal": "Centro",
+    "idVendedor": 1,
+    "medioPago": "credito",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Haedo"
+    },
+    "articulos": [
+      {
+        "codigo": "CIN-09",
+        "descripcion": "Cinta teflon",
+        "categoria": "plomeria",
+        "cantidad": 5,
+        "precioUnitario": 650.0
+      }
+    ],
+    "total": 3250.0,
+    "etiquetas": [
+      "mayorista"
+    ]
+  },
+  {
+    "idVenta": 7,
+    "fecha": {
+      "$date": "2025-03-24T00:00:00Z"
+    },
+    "sucursal": "Norte",
+    "idVendedor": 6,
+    "medioPago": "debito",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Moron"
+    },
+    "articulos": [
+      {
+        "codigo": "MAR-02",
+        "descripcion": "Martillo carpintero",
+        "categoria": "herramientas",
+        "cantidad": 4,
+        "precioUnitario": 6200.0
+      },
+      {
+        "codigo": "CAB-06",
+        "descripcion": "Cable unipolar 2,5 mm (rollo)",
+        "categoria": "electricidad",
+        "cantidad": 2,
+        "precioUnitario": 27400.0
+      }
+    ],
+    "total": 79600.0,
+    "etiquetas": [
+      "web"
+    ]
+  },
+  {
+    "idVenta": 8,
+    "fecha": {
+      "$date": "2025-04-04T00:00:00Z"
+    },
+    "sucursal": "Sur",
+    "idVendedor": 5,
+    "medioPago": "efectivo",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "San Justo"
+    },
+    "articulos": [
+      {
+        "codigo": "ROD-05",
+        "descripcion": "Rodillo antigota",
+        "categoria": "pintura",
+        "cantidad": 3,
+        "precioUnitario": 4300.0
+      },
+      {
+        "codigo": "CIN-09",
+        "descripcion": "Cinta teflon",
+        "categoria": "plomeria",
+        "cantidad": 5,
+        "precioUnitario": 650.0
+      },
+      {
+        "codigo": "DES-03",
+        "descripcion": "Juego de destornilladores",
+        "categoria": "herramientas",
+        "cantidad": 1,
+        "precioUnitario": 9800.0
+      }
+    ],
+    "total": 25950.0,
+    "descuento": 10.0
+  },
+  {
+    "idVenta": 9,
+    "fecha": {
+      "$date": "2025-04-15T00:00:00Z"
+    },
+    "sucursal": "Centro",
+    "idVendedor": 4,
+    "medioPago": "transferencia",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Castelar"
+    },
+    "articulos": [
+      {
+        "codigo": "CAN-08",
+        "descripcion": "Canilla monocomando",
+        "categoria": "plomeria",
+        "cantidad": 2,
+        "precioUnitario": 21700.0
+      }
+    ],
+    "total": 43400.0,
+    "etiquetas": [
+      "promo",
+      "web"
+    ]
+  },
+  {
+    "idVenta": 10,
+    "fecha": {
+      "$date": "2025-04-26T00:00:00Z"
+    },
+    "sucursal": "Norte",
+    "idVendedor": 3,
+    "medioPago": "credito",
+    "cliente": {
+      "tipo": "empresa",
+      "localidad": "Ramos Mejia"
+    },
+    "articulos": [
+      {
+        "codigo": "TAL-01",
+        "descripcion": "Taladro percutor 650 W",
+        "categoria": "herramientas",
+        "cantidad": 3,
+        "precioUnitario": 48500.0
+      },
+      {
+        "codigo": "ROD-05",
+        "descripcion": "Rodillo antigota",
+        "categoria": "pintura",
+        "cantidad": 3,
+        "precioUnitario": 4300.0
+      }
+    ],
+    "total": 158400.0
+  },
+  {
+    "idVenta": 11,
+    "fecha": {
+      "$date": "2025-05-07T00:00:00Z"
+    },
+    "sucursal": "Sur",
+    "idVendedor": 2,
+    "medioPago": "debito",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Haedo"
+    },
+    "articulos": [
+      {
+        "codigo": "PIN-04",
+        "descripcion": "Latex interior 10 L",
+        "categoria": "pintura",
+        "cantidad": 4,
+        "precioUnitario": 31900.0
+      },
+      {
+        "codigo": "CAN-08",
+        "descripcion": "Canilla monocomando",
+        "categoria": "plomeria",
+        "cantidad": 2,
+        "precioUnitario": 21700.0
+      },
+      {
+        "codigo": "MAR-02",
+        "descripcion": "Martillo carpintero",
+        "categoria": "herramientas",
+        "cantidad": 4,
+        "precioUnitario": 6200.0
+      }
+    ],
+    "total": 195800.0
+  },
+  {
+    "idVenta": 12,
+    "fecha": {
+      "$date": "2025-05-18T00:00:00Z"
+    },
+    "sucursal": "Centro",
+    "idVendedor": 1,
+    "medioPago": "efectivo",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Moron"
+    },
+    "articulos": [
+      {
+        "codigo": "LLA-07",
+        "descripcion": "Llave termica bipolar",
+        "categoria": "electricidad",
+        "cantidad": 1,
+        "precioUnitario": 8900.0
+      }
+    ],
+    "total": 8900.0,
+    "descuento": 5.0,
+    "etiquetas": [
+      "mayorista"
+    ]
+  },
+  {
+    "idVenta": 13,
+    "fecha": {
+      "$date": "2025-05-29T00:00:00Z"
+    },
+    "sucursal": "Norte",
+    "idVendedor": 6,
+    "medioPago": "transferencia",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "San Justo"
+    },
+    "articulos": [
+      {
+        "codigo": "SIL-10",
+        "descripcion": "Silicona neutra",
+        "categoria": "plomeria",
+        "cantidad": 4,
+        "precioUnitario": 3100.0
+      },
+      {
+        "codigo": "PIN-04",
+        "descripcion": "Latex interior 10 L",
+        "categoria": "pintura",
+        "cantidad": 4,
+        "precioUnitario": 31900.0
+      }
+    ],
+    "total": 140000.0
+  },
+  {
+    "idVenta": 14,
+    "fecha": {
+      "$date": "2025-06-09T00:00:00Z"
+    },
+    "sucursal": "Sur",
+    "idVendedor": 5,
+    "medioPago": "credito",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Castelar"
+    },
+    "articulos": [
+      {
+        "codigo": "DES-03",
+        "descripcion": "Juego de destornilladores",
+        "categoria": "herramientas",
+        "cantidad": 3,
+        "precioUnitario": 9800.0
+      },
+      {
+        "codigo": "LLA-07",
+        "descripcion": "Llave termica bipolar",
+        "categoria": "electricidad",
+        "cantidad": 1,
+        "precioUnitario": 8900.0
+      },
+      {
+        "codigo": "TAL-01",
+        "descripcion": "Taladro percutor 650 W",
+        "categoria": "herramientas",
+        "cantidad": 3,
+        "precioUnitario": 48500.0
+      }
+    ],
+    "total": 183800.0,
+    "etiquetas": [
+      "web"
+    ]
+  },
+  {
+    "idVenta": 15,
+    "fecha": {
+      "$date": "2025-06-20T00:00:00Z"
+    },
+    "sucursal": "Centro",
+    "idVendedor": 4,
+    "medioPago": "debito",
+    "cliente": {
+      "tipo": "empresa",
+      "localidad": "Ramos Mejia"
+    },
+    "articulos": [
+      {
+        "codigo": "CAB-06",
+        "descripcion": "Cable unipolar 2,5 mm (rollo)",
+        "categoria": "electricidad",
+        "cantidad": 4,
+        "precioUnitario": 27400.0
+      }
+    ],
+    "total": 109600.0,
+    "etiquetas": [
+      "promo",
+      "web"
+    ]
+  },
+  {
+    "idVenta": 16,
+    "fecha": {
+      "$date": "2025-07-01T00:00:00Z"
+    },
+    "sucursal": "Norte",
+    "idVendedor": 3,
+    "medioPago": "efectivo",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Haedo"
+    },
+    "articulos": [
+      {
+        "codigo": "CIN-09",
+        "descripcion": "Cinta teflon",
+        "categoria": "plomeria",
+        "cantidad": 3,
+        "precioUnitario": 650.0
+      },
+      {
+        "codigo": "DES-03",
+        "descripcion": "Juego de destornilladores",
+        "categoria": "herramientas",
+        "cantidad": 3,
+        "precioUnitario": 9800.0
+      }
+    ],
+    "total": 31350.0,
+    "descuento": 10.0
+  },
+  {
+    "idVenta": 17,
+    "fecha": {
+      "$date": "2025-07-12T00:00:00Z"
+    },
+    "sucursal": "Sur",
+    "idVendedor": 2,
+    "medioPago": "transferencia",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Moron"
+    },
+    "articulos": [
+      {
+        "codigo": "MAR-02",
+        "descripcion": "Martillo carpintero",
+        "categoria": "herramientas",
+        "cantidad": 2,
+        "precioUnitario": 6200.0
+      },
+      {
+        "codigo": "CAB-06",
+        "descripcion": "Cable unipolar 2,5 mm (rollo)",
+        "categoria": "electricidad",
+        "cantidad": 4,
+        "precioUnitario": 27400.0
+      },
+      {
+        "codigo": "SIL-10",
+        "descripcion": "Silicona neutra",
+        "categoria": "plomeria",
+        "cantidad": 4,
+        "precioUnitario": 3100.0
+      }
+    ],
+    "total": 134400.0
+  },
+  {
+    "idVenta": 18,
+    "fecha": {
+      "$date": "2025-07-23T00:00:00Z"
+    },
+    "sucursal": "Centro",
+    "idVendedor": 1,
+    "medioPago": "credito",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "San Justo"
+    },
+    "articulos": [
+      {
+        "codigo": "ROD-05",
+        "descripcion": "Rodillo antigota",
+        "categoria": "pintura",
+        "cantidad": 5,
+        "precioUnitario": 4300.0
+      }
+    ],
+    "total": 21500.0,
+    "etiquetas": [
+      "mayorista"
+    ]
+  },
+  {
+    "idVenta": 19,
+    "fecha": {
+      "$date": "2025-08-03T00:00:00Z"
+    },
+    "sucursal": "Norte",
+    "idVendedor": 6,
+    "medioPago": "debito",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Castelar"
+    },
+    "articulos": [
+      {
+        "codigo": "CAN-08",
+        "descripcion": "Canilla monocomando",
+        "categoria": "plomeria",
+        "cantidad": 4,
+        "precioUnitario": 21700.0
+      },
+      {
+        "codigo": "MAR-02",
+        "descripcion": "Martillo carpintero",
+        "categoria": "herramientas",
+        "cantidad": 2,
+        "precioUnitario": 6200.0
+      }
+    ],
+    "total": 99200.0
+  },
+  {
+    "idVenta": 20,
+    "fecha": {
+      "$date": "2025-08-14T00:00:00Z"
+    },
+    "sucursal": "Sur",
+    "idVendedor": 5,
+    "medioPago": "efectivo",
+    "cliente": {
+      "tipo": "empresa",
+      "localidad": "Ramos Mejia"
+    },
+    "articulos": [
+      {
+        "codigo": "TAL-01",
+        "descripcion": "Taladro percutor 650 W",
+        "categoria": "herramientas",
+        "cantidad": 1,
+        "precioUnitario": 48500.0
+      },
+      {
+        "codigo": "ROD-05",
+        "descripcion": "Rodillo antigota",
+        "categoria": "pintura",
+        "cantidad": 5,
+        "precioUnitario": 4300.0
+      },
+      {
+        "codigo": "CIN-09",
+        "descripcion": "Cinta teflon",
+        "categoria": "plomeria",
+        "cantidad": 3,
+        "precioUnitario": 650.0
+      }
+    ],
+    "total": 71950.0,
+    "descuento": 5.0
+  },
+  {
+    "idVenta": 21,
+    "fecha": {
+      "$date": "2025-08-25T00:00:00Z"
+    },
+    "sucursal": "Centro",
+    "idVendedor": 4,
+    "medioPago": "transferencia",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Haedo"
+    },
+    "articulos": [
+      {
+        "codigo": "PIN-04",
+        "descripcion": "Latex interior 10 L",
+        "categoria": "pintura",
+        "cantidad": 2,
+        "precioUnitario": 31900.0
+      }
+    ],
+    "total": 63800.0,
+    "etiquetas": [
+      "web"
+    ]
+  },
+  {
+    "idVenta": 22,
+    "fecha": {
+      "$date": "2025-09-05T00:00:00Z"
+    },
+    "sucursal": "Norte",
+    "idVendedor": 3,
+    "medioPago": "credito",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Moron"
+    },
+    "articulos": [
+      {
+        "codigo": "LLA-07",
+        "descripcion": "Llave termica bipolar",
+        "categoria": "electricidad",
+        "cantidad": 3,
+        "precioUnitario": 8900.0
+      },
+      {
+        "codigo": "TAL-01",
+        "descripcion": "Taladro percutor 650 W",
+        "categoria": "herramientas",
+        "cantidad": 1,
+        "precioUnitario": 48500.0
+      }
+    ],
+    "total": 75200.0
+  },
+  {
+    "idVenta": 23,
+    "fecha": {
+      "$date": "2025-09-16T00:00:00Z"
+    },
+    "sucursal": "Sur",
+    "idVendedor": 2,
+    "medioPago": "debito",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "San Justo"
+    },
+    "articulos": [
+      {
+        "codigo": "SIL-10",
+        "descripcion": "Silicona neutra",
+        "categoria": "plomeria",
+        "cantidad": 6,
+        "precioUnitario": 3100.0
+      },
+      {
+        "codigo": "PIN-04",
+        "descripcion": "Latex interior 10 L",
+        "categoria": "pintura",
+        "cantidad": 2,
+        "precioUnitario": 31900.0
+      },
+      {
+        "codigo": "CAN-08",
+        "descripcion": "Canilla monocomando",
+        "categoria": "plomeria",
+        "cantidad": 4,
+        "precioUnitario": 21700.0
+      }
+    ],
+    "total": 169200.0
+  },
+  {
+    "idVenta": 24,
+    "fecha": {
+      "$date": "2025-09-27T00:00:00Z"
+    },
+    "sucursal": "Centro",
+    "idVendedor": 1,
+    "medioPago": "efectivo",
+    "cliente": {
+      "tipo": "consumidor",
+      "localidad": "Castelar"
+    },
+    "articulos": [
+      {
+        "codigo": "DES-03",
+        "descripcion": "Juego de destornilladores",
+        "categoria": "herramientas",
+        "cantidad": 1,
+        "precioUnitario": 9800.0
+      }
+    ],
+    "total": 9800.0,
+    "descuento": 10.0,
+    "etiquetas": [
+      "mayorista"
+    ]
+  }
+]

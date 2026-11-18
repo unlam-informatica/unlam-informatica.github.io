@@ -1,0 +1,8 @@
+upsert 1: encontradas 0, insertadas 1
+upsert 2: encontradas 1, insertadas 0, modificadas 0
+insertados 1, encontrados 1, modificados 1, upsert 1, borrados 1
+{"sucursal":"Centro","codigo":"MAR-02","cantidad":10}
+{"sucursal":"Centro","codigo":"TAL-01","cantidad":3}
+{"sucursal":"Norte","codigo":"MAR-02","cantidad":6}
+{"sucursal":"Sur","codigo":"CAN-08","cantidad":9}
+{"sucursal":"Sur","codigo":"TAL-01","cantidad":0,"minimo":3}

@@ -1,0 +1,3162 @@
+# Matriz de cobertura curricular — Bases de Datos Aplicada (3641).
+# Referencia PROVISIONAL: programa analítico 2024 (bbdd-aplicadas-3d9721081e14). El programa público 2023
+# se registra en program.historical; sus esquemas de evaluación no se mezclan.
+# sources: fuentes de cátedra con páginas del PDF. student_sources: material de alumnos (no verificado).
+# exam_refs: exámenes reconstruidos que evalúan el tema. portal_pages: páginas actuales (URL conservadas).
+# audit: resultado de reports/content-audit.md (coverage, quality, confidence, action).
+# production: pendiente | en-redaccion | redactado | revisado
+# validation: pendiente | verificado | revisado | con-observaciones
+subject: bbdd-aplicadas
+program:
+  code: '3641'
+  year: 2024
+  status: provisional
+  document: bbdd-aplicadas-3d9721081e14
+  signed: '2024-08-07'
+  evaluation:
+    parciales:
+    - week: 9
+      units:
+      - u1
+      - u2
+      - u3
+      - u4
+    tp_integrador:
+      week: 13
+      notes: Entregas acumulativas con coloquio; código en repositorio.
+    recuperatorio:
+      week: 15
+    final: Todas las unidades (u1–u6).
+  historical:
+    year: 2023
+    url: https://ingenieria.unlam.edu.ar/descargas/656_3641-BasesdeDatosAplicada.pdf
+    created: '2023-09-04'
+    evaluation:
+      parciales:
+      - week: 7
+        units:
+        - u1
+        - u2
+        - u3
+      - week: 13
+        units:
+        - u4
+        - u5
+        - u6
+      notes: Recuperatorio no integrador; un TP grupal obligatorio por parcial.
+    differences:
+    - u1 (2023) incluía 'Formatos de intercambio (XML, JSON, YAML, CSV, etc.)'; en 2024 pasan a u2.
+    - u2 (2024) agrega 'Qué es una API'.
+    - 'Títulos: 2023 ''Bases de datos transaccionales'' (u2, u3) y ''no transaccionales'' (u4); 2024 ''relacionales''
+      y ''no relacionales''.'
+    - 'u3, u4 (incluidos Data Mining y KDD), u5 y u6: mismo contenido; solo cambia el título de u3 y u4.'
+    - 'Evaluación: 2023 dos parciales (u1–u3, u4–u6); 2024 un parcial (u1–u4) y TP integrador.'
+    - Contenidos mínimos idénticos (incluyen KDD y Data Warehousing).
+decisions:
+- id: D1
+  date: '2026-11-17'
+  text: Programa 2024 (3641) como referencia principal provisional; 2023 como antecedente. No inventar una actualización
+    2025/2026.
+- id: D2
+  date: '2026-11-17'
+  text: No incorporar nuevas reproducciones de enunciados de cátedra sin autorización; auditar los publicados y
+    proponer reemplazos originales.
+- id: D3
+  date: '2026-11-17'
+  text: Unidad 6 sustentada en fuentes primarias oficiales (InfoLEG, EUR-Lex, información pública de ISO/IEC 25012).
+    Sin material protegido ni atribuciones no verificadas.
+- id: D4
+  date: '2026-11-17'
+  text: POO limitado a correspondencia objeto-relacional/documental, ORM y ODM. KDD con las cinco etapas de Fayyad.
+- id: D5
+  date: '2026-11-17'
+  text: Reubicar contenidos fuera de unidad; conservar complementarios útiles rotulados; no eliminar contenido correcto
+    sin justificar.
+- id: D6
+  date: '2026-11-17'
+  text: Pruebas reproducibles con SQL Server 2022 y MongoDB 7; registrar por separado ejecutados, revisados sin
+    ejecución y pendientes.
+- id: D7
+  date: '2026-11-17'
+  text: QA distingue operadores MongoDB de fórmulas; SQL propio en singular + PascalCase; mínimos por unidad con
+    resoluciones completas, sin relleno.
+- id: D8
+  date: '2026-11-17'
+  text: Retirada de los PDF públicos como corrección de seguridad independiente, sin desplegar sin autorización;
+    la titular debe rotar la credencial expuesta.
+minimums:
+  exercises_per_unit: 6
+  levels_per_unit: 2
+  notes: Piso global; cada unidad declara minimum_exercises y minimum_per_level. Solo cuentan ejercicios con resolución
+    completa (content-guide §8).
+bibliography:
+- id: elmasri5
+  citation: Elmasri, R. y Navathe, S. B. (2007). Fundamentos de Sistemas de Bases de Datos (5.ª ed.). Pearson. [No
+    disponible localmente]
+- id: silberschatz4
+  citation: Silberschatz, A., Korth, H. F. y Sudarshan, S. (2002). Fundamentos de bases de datos (4.ª ed.). McGraw-Hill.
+    [No disponible localmente]
+- id: gilscarbo
+  citation: Gils Carbó, A. M. (2001). Régimen legal de las bases de datos y hábeas data. La Ley. [Complementaria;
+    no disponible localmente]
+- id: mslearn-dw
+  citation: Microsoft Learn. Examine components of a modern data warehouse.
+  url: https://learn.microsoft.com/en-us/training/modules/examine-components-of-modern-data-warehouse/
+- id: mslearn-adls
+  citation: Microsoft Learn. Introduction to Azure Data Lake Storage.
+  url: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-data-lake-storage/
+- id: mongodb-intro
+  citation: MongoDB University. Introduction to MongoDB (learning path).
+  url: https://learn.mongodb.com/learning-paths/introduction-to-mongodb
+- id: fayyad1996
+  citation: Fayyad, U., Piatetsky-Shapiro, G. y Smyth, P. (1996). From Data Mining to Knowledge Discovery in Databases.
+    AI Magazine, 17(3), 37-54.
+- id: ley25326
+  citation: Ley 25.326 de Protección de los Datos Personales (sancionada el 4 de octubre de 2000). InfoLEG.
+  url: https://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/texact.htm
+  verified: true
+- id: decreto1558
+  citation: Decreto 1558/2001, reglamentación de la Ley 25.326 (29/11/2001). InfoLEG.
+  url: https://servicios.infoleg.gob.ar/infolegInternet/anexos/70000-74999/70368/norma.htm
+  verified: true
+- id: rgpd
+  citation: Reglamento (UE) 2016/679 (Reglamento general de protección de datos). EUR-Lex, versión en español.
+  url: https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32016R0679
+  verified: false
+  notes: 'EUR-Lex no responde a clientes automatizados: confirmar a mano.'
+- id: iso25012
+  citation: 'ISO/IEC 25012:2008. Software engineering — SQuaRE — Data quality model. Ficha pública en iso.org (la
+    norma es paga: no se reproduce).'
+  url: https://www.iso.org/standard/35736.html
+  verified: false
+  notes: 'iso.org bloquea clientes automatizados (403): confirmar a mano la ficha y su estado.'
+- id: iso25000-resumen
+  citation: 'ISO 25000 (portal divulgativo). ISO/IEC 25012: resumen público del modelo de calidad de datos.'
+  url: https://iso25000.com/index.php/normas-iso-25000/iso-25012
+  verified: true
+  notes: 'Fuente secundaria pública: lista las 15 características en tres grupos (5 inherentes, 7 inherentes y dependientes
+    del sistema, 3 dependientes del sistema).'
+units:
+- id: u1
+  title: Conceptos básicos
+  exercise_prefix: U1.
+  minimum_exercises: 15
+  minimum_per_level: 3
+  topics:
+  - id: u1-bd-conceptos
+    title: Qué es una base de datos y su clasificación
+    program_text: Qué es una base de datos. Por qué necesitamos bases de datos. Clasificación de bases de datos
+      en transaccionales y no transaccionales.
+    objectives:
+    - Definir base de datos y DBMS y justificar su uso frente a archivos
+    - Clasificar bases de datos en transaccionales y no transaccionales con ejemplos
+    keywords:
+    - base de datos
+    - DBMS
+    - SGBD
+    - transaccional
+    - no transaccional
+    - OLTP
+    sources:
+    - doc: bbdd-aplicadas-f740763a4b8b
+      pages:
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 12
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 1
+      - 2
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 1
+      - 3
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/
+    exercises: []
+    production: redactado
+    validation: revisado
+    audit:
+      coverage: parcial
+      quality: alta
+      confidence: alta
+      action: ampliar
+    stage: E3
+    validation_notes: 'Tema conceptual sin código ejecutable: revisado contra las fuentes.'
+    verified_checks: 0
+  - id: u1-motores-licencias
+    title: Motores modernos y modelos de licenciamiento
+    program_text: Motores de bases de datos modernos. Modelos de licenciamiento pago vs código abierto.
+    objectives:
+    - Comparar motores relacionales y no relacionales de uso actual
+    - Distinguir licencias comerciales, ediciones gratuitas y código abierto
+    keywords:
+    - motor
+    - licencia
+    - open source
+    - código abierto
+    - Oracle
+    - PostgreSQL
+    - MySQL
+    - SQL Server
+    - edición
+    sources:
+    - doc: bbdd-aplicadas-f740763a4b8b
+      pages:
+      - 8
+      - 9
+      - 10
+      - 11
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 1
+      - 34
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/
+    exercises: []
+    production: redactado
+    validation: revisado
+    audit:
+      coverage: superficial
+      quality: media
+      confidence: alta
+      action: ampliar
+    stage: E3
+    validation_notes: 'Tema conceptual sin código ejecutable: revisado contra las fuentes.'
+    verified_checks: 0
+  - id: u1-dba
+    title: Tareas del administrador de bases de datos
+    program_text: Tareas del administrador de la base de datos.
+    objectives:
+    - Describir las responsabilidades del DBA y diferenciarlas de las del programador
+    keywords:
+    - DBA
+    - administrador
+    - tareas
+    - programador
+    sources:
+    - doc: bbdd-aplicadas-f740763a4b8b
+      pages:
+      - 13
+      - 14
+    student_sources:
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 1
+      - 3
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 4
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 2
+    exam_refs:
+    - bbdd-aplicadas-047fcb3ca752
+    - bbdd-aplicadas-26e3560d7229
+    page: /bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/
+    exercises: []
+    production: redactado
+    validation: revisado
+    audit:
+      coverage: completo
+      quality: alta
+      confidence: alta
+      action: conservar
+    stage: E3
+    validation_notes: 'Tema conceptual sin código ejecutable: revisado contra las fuentes.'
+    verified_checks: 0
+  - id: u1-despliegue
+    title: Bases de datos embebidas, on premise y cloud
+    program_text: Características y diferencias de las bases de datos embebidas, On Premise y Cloud.
+    objectives:
+    - Comparar despliegues embebidos, on premise y en la nube según costo, control y operación
+    keywords:
+    - embebida
+    - on premise
+    - cloud
+    - nube
+    - DBaaS
+    - SQLite
+    - LocalDB
+    sources:
+    - doc: bbdd-aplicadas-f740763a4b8b
+      pages:
+      - 11
+      - 12
+    - doc: bbdd-aplicadas-d0b0a9b78ca8
+      pages:
+      - 10
+      - 17
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 1
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/
+    exercises: []
+    production: redactado
+    validation: revisado
+    audit:
+      coverage: superficial
+      quality: media
+      confidence: alta
+      action: ampliar
+    stage: E3
+    validation_notes: 'Tema conceptual sin código ejecutable: revisado contra las fuentes.'
+    verified_checks: 0
+  - id: u1-tipos-datos
+    title: Tipos de datos básicos
+    program_text: Tipos de datos básicos.
+    objectives:
+    - Elegir tipos numéricos, de texto y de fecha y hora adecuados en SQL Server
+    keywords:
+    - tipo de dato
+    - int
+    - decimal
+    - varchar
+    - nvarchar
+    - datetime2
+    - date
+    sources:
+    - doc: bbdd-aplicadas-9d5ab3349985
+      pages:
+      - 7
+      - 14
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 2
+      - 4
+      - 8
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 4
+      - 14
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    - /bbdd-aplicadas/unidad-1/practica/tp1/
+    exercises:
+    - U1.04
+    - U1.11
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: alta
+      action: ampliar
+    stage: E3
+    verified_checks: 39
+  - id: u1-ddl-dml-esquemas
+    title: 'Repaso de SQL: DDL, DML y esquemas'
+    program_text: 'Repaso de SQL: DDL, DML. Esquemas.'
+    objectives:
+    - Crear y modificar objetos con DDL dentro de un esquema propio
+    - Manipular datos con INSERT, UPDATE, DELETE y MERGE
+    keywords:
+    - DDL
+    - DML
+    - CREATE
+    - ALTER
+    - DROP
+    - INSERT
+    - UPDATE
+    - DELETE
+    - esquema
+    - schema
+    sources:
+    - doc: bbdd-aplicadas-9d5ab3349985
+      pages:
+      - 4
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+    - doc: bbdd-aplicadas-95d8b07bd5dd
+      pages:
+      - 2
+      - 3
+    student_sources:
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 1
+      - 4
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    - /bbdd-aplicadas/unidad-1/practica/tp1/
+    exercises:
+    - U1.01
+    - U1.05
+    - U1.10
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: completo
+      quality: media
+      confidence: alta
+      action: corregir
+    validation_notes: 'Pendientes de verificación específica: U1.T.RS.R1'
+    stage: E3
+    verified_checks: 39
+  - id: u1-integridad
+    title: Integridad referencial, claves y restricciones
+    program_text: Integridad referencial, claves primarias y foráneas. Actualización y borrado en cascada. Constraints.
+    objectives:
+    - Declarar PK, FK, UNIQUE, CHECK y DEFAULT con nombre
+    - Elegir la acción referencial (CASCADE, SET NULL, NO ACTION) adecuada
+    keywords:
+    - primary key
+    - foreign key
+    - integridad referencial
+    - constraint
+    - CHECK
+    - UNIQUE
+    - CASCADE
+    sources:
+    - doc: bbdd-aplicadas-9d5ab3349985
+      pages:
+      - 5
+      - 6
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 2
+      - 4
+      - 5
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 4
+      - 5
+    exam_refs:
+    - bbdd-aplicadas-04b965384980
+    page: /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    - /bbdd-aplicadas/unidad-1/practica/tp1/
+    exercises:
+    - U1.02
+    - U1.03
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: alta
+      action: corregir
+    stage: E3
+    verified_checks: 39
+  - id: u1-subconsultas
+    title: Subconsultas
+    program_text: Subconsultas en el where, en el from y en el select.
+    objectives:
+    - Escribir subconsultas en WHERE, FROM y SELECT, incluidas las correlacionadas y EXISTS
+    keywords:
+    - subconsulta
+    - subquery
+    - EXISTS
+    - IN
+    - correlacionada
+    - tabla derivada
+    sources:
+    - doc: bbdd-aplicadas-9d5ab3349985
+      pages:
+      - 28
+      - 29
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 2
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    - /bbdd-aplicadas/unidad-1/practica/tp1/
+    exercises:
+    - U1.06
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: superficial
+      quality: media
+      confidence: media
+      action: ampliar
+    stage: E3
+    verified_checks: 39
+  - id: u1-vistas-agregados
+    title: Vistas y funciones de agregado
+    program_text: Vistas. Funciones de agregado.
+    objectives:
+    - Crear vistas y conocer sus límites de actualización
+    - Resumir datos con GROUP BY y HAVING
+    keywords:
+    - vista
+    - view
+    - SCHEMABINDING
+    - GROUP BY
+    - HAVING
+    - COUNT
+    - SUM
+    - AVG
+    sources:
+    - doc: bbdd-aplicadas-9d5ab3349985
+      pages:
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 2
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    - /bbdd-aplicadas/unidad-1/practica/tp1/
+    exercises:
+    - U1.07
+    - U1.08
+    - U1.09
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: alta
+      action: corregir
+    stage: E3
+    verified_checks: 39
+  - id: u1-programabilidad
+    title: Procedimientos almacenados, triggers y funciones
+    program_text: Procedimientos almacenados, triggers y funciones.
+    objectives:
+    - Programar procedimientos con parámetros y manejo de errores
+    - Usar triggers con inserted y deleted
+    - Distinguir funciones escalares y de tabla
+    keywords:
+    - procedimiento almacenado
+    - stored procedure
+    - trigger
+    - función
+    - inserted
+    - deleted
+    sources:
+    - doc: bbdd-aplicadas-9d5ab3349985
+      pages:
+      - 34
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 2
+      - 3
+      - 8
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 4
+      - 10
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    - /bbdd-aplicadas/unidad-1/practica/tp1/
+    exercises:
+    - U1.10
+    - U1.12
+    - U1.13
+    - U1.14
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: alta
+      action: corregir
+    stage: E3
+    verified_checks: 39
+  - id: u1-window
+    title: Window functions
+    program_text: Window functions.
+    objectives:
+    - Usar funciones de ranking, desplazamiento y agregado con OVER, PARTITION BY y marcos
+    keywords:
+    - window function
+    - OVER
+    - PARTITION BY
+    - ROW_NUMBER
+    - RANK
+    - DENSE_RANK
+    - NTILE
+    - LAG
+    - LEAD
+    - ROWS BETWEEN
+    sources:
+    - doc: bbdd-aplicadas-d275f59f2093
+      pages:
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+      - 34
+      - 35
+      - 36
+    - doc: bbdd-aplicadas-9d5ab3349985
+      pages:
+      - 42
+      - 43
+      - 44
+    - doc: bbdd-aplicadas-7d43d771a356
+      pages:
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+    student_sources:
+    - doc: bbdd-aplicadas-df183295a1ee
+      sections:
+      - s001
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+    exam_refs:
+    - bbdd-aplicadas-047fcb3ca752
+    - bbdd-aplicadas-26e3560d7229
+    - bbdd-aplicadas-1fbe6ae48bf7
+    - bbdd-aplicadas-f12df9e4e498
+    - bbdd-aplicadas-93934d98a63e
+    - bbdd-aplicadas-3ab6c47a9bca
+    - bbdd-aplicadas-2547699fc0cd
+    - bbdd-aplicadas-efc42db767fd
+    - bbdd-aplicadas-16575623b695
+    - bbdd-aplicadas-cf1a40d118d4
+    page: /bbdd-aplicadas/unidad-1/teoria/window-functions/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/window-functions/
+    - /bbdd-aplicadas/unidad-1/practica/window-functions/
+    exercises:
+    - U1.21
+    - U1.22
+    - U1.23
+    - U1.24
+    - U1.25
+    - U1.26
+    - U1.27
+    - U1.28
+    - U1.29
+    - U1.30
+    - U1.31
+    - U1.32
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: media
+      confidence: alta
+      action: corregir
+    stage: E3
+    verified_checks: 23
+  - id: u1-cte
+    title: Common table expressions
+    program_text: Common table expressions.
+    objectives:
+    - Estructurar consultas con CTE, incluidas las recursivas
+    keywords:
+    - CTE
+    - WITH
+    - common table expression
+    - recursiva
+    sources:
+    - doc: bbdd-aplicadas-9d5ab3349985
+      pages:
+      - 45
+      - 46
+      - 47
+    - doc: bbdd-aplicadas-95d8b07bd5dd
+      pages:
+      - 3
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 10
+      - 12
+      - 14
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 5
+      - 6
+      - 7
+    exam_refs:
+    - bbdd-aplicadas-1fbe6ae48bf7
+    - bbdd-aplicadas-d8baa3d1630e
+    - bbdd-aplicadas-16575623b695
+    page: /bbdd-aplicadas/unidad-1/teoria/cte/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/cte/
+    - /bbdd-aplicadas/unidad-1/practica/tp1/
+    exercises:
+    - U1.15
+    - U1.16
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: alta
+      confidence: alta
+      action: corregir
+    stage: E3
+    verified_checks: 23
+  - id: u1-pivot
+    title: Pivot
+    program_text: Pivot.
+    objectives:
+    - Transponer filas en columnas con PIVOT estático y dinámico, y revertirlo con UNPIVOT
+    keywords:
+    - PIVOT
+    - UNPIVOT
+    - transposición
+    - pivot dinámico
+    - SQL dinámico
+    sources:
+    - doc: bbdd-aplicadas-9d5ab3349985
+      pages:
+      - 50
+      - 51
+    - doc: bbdd-aplicadas-95d8b07bd5dd
+      pages:
+      - 4
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 15
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 2
+      - 7
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 1
+      - 8
+    exam_refs:
+    - bbdd-aplicadas-047fcb3ca752
+    - bbdd-aplicadas-26e3560d7229
+    - bbdd-aplicadas-6e18af8574d2
+    - bbdd-aplicadas-04b965384980
+    - bbdd-aplicadas-f12df9e4e498
+    - bbdd-aplicadas-93934d98a63e
+    - bbdd-aplicadas-3ab6c47a9bca
+    - bbdd-aplicadas-2547699fc0cd
+    - bbdd-aplicadas-efc42db767fd
+    - bbdd-aplicadas-16575623b695
+    - bbdd-aplicadas-d8baa3d1630e
+    page: /bbdd-aplicadas/unidad-1/teoria/pivot/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/pivot/
+    - /bbdd-aplicadas/unidad-1/teoria/sql-dinamico/
+    - /bbdd-aplicadas/unidad-1/practica/pivot/
+    exercises:
+    - U1.33
+    - U1.34
+    - U1.35
+    - U1.36
+    - U1.37
+    - U1.38
+    - U1.39
+    - U1.40
+    - U1.41
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: media
+      confidence: alta
+      action: corregir
+    stage: E3
+    verified_checks: 27
+  - id: u1-null
+    title: El valor NULL
+    program_text: El valor null.
+    objectives:
+    - Razonar con lógica de tres valores y manejar NULL con IS NULL, COALESCE e ISNULL
+    keywords:
+    - 'NULL'
+    - UNKNOWN
+    - IS NULL
+    - COALESCE
+    - ISNULL
+    - NULLIF
+    sources:
+    - doc: bbdd-aplicadas-9d5ab3349985
+      pages:
+      - 22
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 2
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-1/teoria/repaso-sql/
+    - /bbdd-aplicadas/unidad-1/practica/tp1/
+    exercises:
+    - U1.03
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: media
+      confidence: alta
+      action: corregir
+    stage: E3
+    verified_checks: 39
+- id: u2
+  title: 'Bases de datos relacionales: aspectos básicos'
+  exercise_prefix: U2.
+  minimum_exercises: 12
+  minimum_per_level: 3
+  topics:
+  - id: u2-arquitectura
+    title: Arquitectura de las bases de datos relacionales
+    program_text: Arquitectura de las bases de datos relacionales. Bases de datos populares en el mercado.
+    objectives:
+    - Describir instancia, servicios, archivos de datos y de log, y arquitecturas distribuidas
+    keywords:
+    - arquitectura
+    - instancia
+    - clúster
+    - servicio
+    - archivo de datos
+    - log
+    sources:
+    - doc: bbdd-aplicadas-d0b0a9b78ca8
+      pages:
+      - 9
+      - 10
+      - 16
+      - 17
+    student_sources:
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 2
+      - 8
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/
+    exercises:
+    - U2.47
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: media
+      action: ampliar
+    stage: E4
+    verified_checks: 5
+  - id: u2-bd-sistema
+    title: Bases de datos de usuario y de sistema
+    program_text: Bases de datos de usuario y de sistema.
+    objectives:
+    - Identificar master, model, msdb, tempdb y resource, y su función
+    keywords:
+    - master
+    - model
+    - msdb
+    - tempdb
+    - base de sistema
+    sources:
+    - doc: bbdd-aplicadas-d0b0a9b78ca8
+      pages:
+      - 18
+      - 19
+    student_sources:
+    - doc: bbdd-aplicadas-1a42e094e00e
+      pages:
+      - 1
+      - 10
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 24
+      - 32
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-2/teoria/bases-de-sistema/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-2/teoria/bases-de-sistema/
+    exercises:
+    - U2.48
+    - U2.49
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: ausente
+      quality: sin-evaluar
+      confidence: media
+      action: ampliar
+    stage: E4
+    verified_checks: 6
+  - id: u2-instalacion
+    title: Instalación de un motor de base de datos
+    program_text: Instalación de un motor de base de datos.
+    objectives:
+    - Planificar e instalar una instancia de SQL Server y configurar su acceso
+    keywords:
+    - instalación
+    - instancia
+    - edición
+    - Configuration Manager
+    - SSMS
+    - memoria máxima
+    sources:
+    - doc: bbdd-aplicadas-d0b0a9b78ca8
+      pages:
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+    - doc: bbdd-aplicadas-242399d569be
+      pages:
+      - 2
+    student_sources:
+    - doc: bbdd-aplicadas-1a42e094e00e
+      pages:
+      - 1
+      - 10
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/
+    exercises:
+    - U2.55
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: alta
+      action: ampliar
+    stage: E4
+    verified_checks: 5
+  - id: u2-collation
+    title: Intercalación (collation)
+    program_text: Intercalación (collation).
+    objectives:
+    - Elegir y aplicar collations y resolver conflictos entre bases
+    keywords:
+    - collation
+    - intercalación
+    - COLLATE
+    - CI
+    - AS
+    - database_default
+    sources:
+    - doc: bbdd-aplicadas-d0b0a9b78ca8
+      pages:
+      - 19
+      - 22
+      - 23
+    - doc: bbdd-aplicadas-242399d569be
+      pages:
+      - 2
+      - 3
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 18
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 2
+      - 8
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 9
+    exam_refs:
+    - bbdd-aplicadas-16575623b695
+    page: /bbdd-aplicadas/unidad-2/teoria/collation/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-2/teoria/collation/
+    - /bbdd-aplicadas/unidad-2/practica/tp2/
+    exercises:
+    - U2.01
+    - U2.02
+    - U2.03
+    - U2.07
+    - U2.09
+    - U2.11
+    - U2.15
+    - U2.50
+    - U2.51
+    - U2.52
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: completo
+      quality: alta
+      confidence: alta
+      action: ampliar
+    stage: E4
+    validation_notes: 'Pendientes de verificación específica: U2.15'
+    verified_checks: 23
+  - id: u2-almacenamiento
+    title: Almacenamiento en disco y en memoria
+    program_text: Almacenamiento en disco vs en memoria.
+    objectives:
+    - Comparar tablas basadas en disco y optimizadas para memoria
+    keywords:
+    - memoria
+    - in-memory
+    - MEMORY_OPTIMIZED
+    - disco
+    - filegroup
+    sources:
+    - doc: bbdd-aplicadas-d0b0a9b78ca8
+      pages:
+      - 24
+      - 25
+      - 26
+      - 27
+      - 28
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 18
+      - 19
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 2
+      - 8
+    exam_refs:
+    - bbdd-aplicadas-26e3560d7229
+    - bbdd-aplicadas-04b965384980
+    page: /bbdd-aplicadas/unidad-2/teoria/bd-en-memoria/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-2/teoria/bd-en-memoria/
+    - /bbdd-aplicadas/unidad-2/practica/bd-en-memoria/
+    exercises:
+    - U2.41
+    - U2.42
+    - U2.43
+    - U2.44
+    - U2.45
+    - U2.46
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: media
+      confidence: media
+      action: corregir
+    stage: E4
+    verified_checks: 12
+  - id: u2-conexion-drivers
+    title: Configuración de conexión, drivers, ODBC y JDBC
+    program_text: Configuración de conexión. Concepto de driver o controlador. Qué es y cómo se usan ODBC y JDBC.
+    objectives:
+    - Configurar conexiones locales y remotas
+    - Explicar el papel de un driver y usar ODBC y JDBC
+    keywords:
+    - conexión
+    - driver
+    - controlador
+    - ODBC
+    - JDBC
+    - cadena de conexión
+    - TCP/IP
+    sources:
+    - doc: bbdd-aplicadas-d0b0a9b78ca8
+      pages:
+      - 21
+      - 29
+      - 30
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 19
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 2
+      - 9
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-2/teoria/formatos-conectividad/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-2/teoria/formatos-conectividad/
+    exercises:
+    - U2.53
+    - U2.54
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: media
+      confidence: alta
+      action: corregir
+    stage: E4
+    verified_checks: 1
+  - id: u2-formatos
+    title: Formatos de intercambio
+    program_text: Formatos de intercambio (XML, JSON, YAML, CSV, etc.).
+    objectives:
+    - Reconocer la estructura y los usos de CSV, ancho fijo, XML, JSON y YAML
+    - Leer y generar XML y JSON desde T-SQL
+    keywords:
+    - XML
+    - JSON
+    - YAML
+    - CSV
+    - EDI
+    - OPENJSON
+    - FOR JSON
+    - FOR XML
+    sources:
+    - doc: bbdd-aplicadas-008193c9c082
+      pages:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 20
+      - 21
+      - 22
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 2
+      - 9
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 1
+      - 11
+      - 12
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio/
+    - /bbdd-aplicadas/unidad-2/teoria/json-en-sql/
+    - /bbdd-aplicadas/unidad-2/teoria/xml-en-sql/
+    - /bbdd-aplicadas/unidad-2/practica/json/
+    - /bbdd-aplicadas/unidad-2/practica/xml/
+    exercises:
+    - U2.22
+    - U2.23
+    - U2.24
+    - U2.25
+    - U2.26
+    - U2.27
+    - U2.28
+    - U2.29
+    - U2.30
+    - U2.31
+    - U2.32
+    - U2.33
+    - U2.34
+    - U2.35
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: media
+      confidence: media
+      action: reorganizar
+    stage: E4
+    verified_checks: 44
+  - id: u2-apis
+    title: Qué es una API
+    program_text: Qué es una API.
+    objectives:
+    - Explicar qué es una API REST y consumirla con herramientas de prueba
+    keywords:
+    - API
+    - REST
+    - endpoint
+    - Postman
+    - HTTP
+    sources:
+    - doc: bbdd-aplicadas-008193c9c082
+      pages:
+      - 23
+      - 24
+      - 25
+      - 26
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 19
+      - 22
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 9
+      - 10
+    exam_refs:
+    - bbdd-aplicadas-2547699fc0cd
+    page: /bbdd-aplicadas/unidad-2/teoria/apis-desde-sql/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-2/teoria/apis-desde-sql/
+    - /bbdd-aplicadas/unidad-2/practica/apis/
+    exercises:
+    - U2.36
+    - U2.37
+    - U2.38
+    - U2.39
+    - U2.40
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: completo
+      quality: media
+      confidence: media
+      action: corregir
+    stage: E4
+    validation_notes: 'Pendientes de verificación específica: U2.T.API.R1, U2.T.API.R2, U2.T.API.R3, U2.40'
+    verified_checks: 5
+  - id: u2-importacion
+    title: Importación de datos de múltiples formatos
+    program_text: Importación de datos de múltiples formatos de origen.
+    objectives:
+    - Importar CSV, JSON y XML con BULK INSERT y OPENROWSET usando tablas de staging
+    keywords:
+    - importación
+    - BULK INSERT
+    - OPENROWSET
+    - staging
+    - CSV
+    - JSON
+    sources:
+    - doc: bbdd-aplicadas-242399d569be
+      pages:
+      - 2
+      - 3
+    - doc: bbdd-aplicadas-008193c9c082
+      pages:
+      - 8
+      - 9
+      - 10
+      - 11
+    student_sources:
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 10
+    - doc: bbdd-aplicadas-e694c5563d75
+      sections:
+      - s001
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos/
+    - /bbdd-aplicadas/unidad-2/practica/importacion-archivos/
+    - /bbdd-aplicadas/unidad-2/practica/tp2/
+    exercises:
+    - U2.04
+    - U2.05
+    - U2.06
+    - U2.08
+    - U2.09
+    - U2.10
+    - U2.12
+    - U2.13
+    - U2.14
+    - U2.16
+    - U2.17
+    - U2.18
+    - U2.19
+    - U2.20
+    - U2.21
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: media
+      action: corregir
+    stage: E4
+    validation_notes: 'Pendientes de verificación específica: U2.T.IMP.R1, U2.15'
+    verified_checks: 32
+- id: u3
+  title: 'Bases de datos relacionales: aspectos avanzados'
+  exercise_prefix: U3.
+  minimum_exercises: 12
+  minimum_per_level: 3
+  topics:
+  - id: u3-concurrencia
+    title: Control de concurrencia y niveles de aislamiento
+    program_text: Control de concurrencia.
+    objectives:
+    - Reconocer lecturas sucias, no repetibles y fantasmas
+    - Elegir el nivel de aislamiento adecuado
+    keywords:
+    - concurrencia
+    - aislamiento
+    - isolation level
+    - dirty read
+    - phantom
+    - SNAPSHOT
+    - serializable
+    sources:
+    - doc: bbdd-aplicadas-17c2c97f736b
+      pages:
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+    student_sources:
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 2
+      - 15
+      - 16
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 31
+      - 32
+    - doc: bbdd-aplicadas-42835aeae3f6
+      pages:
+      - 20
+      - 21
+    - doc: bbdd-aplicadas-e694c5563d75
+      pages:
+      - 1
+      - 4
+      - 5
+    exam_refs:
+    - bbdd-aplicadas-04b965384980
+    - bbdd-aplicadas-6e18af8574d2
+    - bbdd-aplicadas-f12df9e4e498
+    - bbdd-aplicadas-efc42db767fd
+    - bbdd-aplicadas-3ab6c47a9bca
+    page: /bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/
+    - /bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/
+    exercises:
+    - U3.11
+    - U3.12
+    - U3.14
+    - U3.15
+    - U3.17
+    - U3.18
+    - U3.20
+    - U3.24
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: completo
+      quality: media
+      confidence: alta
+      action: reorganizar
+    validation_notes: 'Pendientes de verificación específica: U3.T.CC.10, U3.T.CC.11, U3.T.CC.12, U3.T.CC.13, U3.T.CC.14,
+      U3.21, U3.23, U3.24'
+    verified_checks: 18
+    stage: E5
+  - id: u3-tcl
+    title: Transaction Control Language
+    program_text: Transaction Control Language (TCL).
+    objectives:
+    - Controlar transacciones con BEGIN, COMMIT, ROLLBACK, SAVE TRANSACTION, TRY/CATCH y XACT_ABORT
+    keywords:
+    - TCL
+    - BEGIN TRANSACTION
+    - COMMIT
+    - ROLLBACK
+    - SAVE TRANSACTION
+    - XACT_ABORT
+    - '@@TRANCOUNT'
+    sources:
+    - doc: bbdd-aplicadas-17c2c97f736b
+      pages:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 16
+      - 27
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 30
+    - doc: bbdd-aplicadas-42835aeae3f6
+      pages:
+      - 21
+    - doc: bbdd-aplicadas-e694c5563d75
+      pages:
+      - 2
+      - 4
+      - 8
+    exam_refs:
+    - bbdd-aplicadas-04b965384980
+    - bbdd-aplicadas-6e18af8574d2
+    page: /bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/
+    - /bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/
+    exercises:
+    - U3.01
+    - U3.02
+    - U3.03
+    - U3.04
+    - U3.05
+    - U3.06
+    - U3.07
+    - U3.08
+    - U3.09
+    - U3.10
+    - U3.21
+    - U3.22
+    - U3.23
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: completo
+      quality: media
+      confidence: alta
+      action: corregir
+    validation_notes: 'Pendientes de verificación específica: U3.21, U3.22'
+    verified_checks: 22
+    stage: E5
+  - id: u3-bloqueos
+    title: Bloqueos y esperas
+    program_text: Bloqueos y esperas.
+    objectives:
+    - Interpretar bloqueos compartidos y exclusivos, esperas e interbloqueos
+    keywords:
+    - bloqueo
+    - lock
+    - espera
+    - deadlock
+    - interbloqueo
+    sources:
+    - doc: bbdd-aplicadas-17c2c97f736b
+      pages:
+      - 15
+      - 41
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 29
+    - doc: bbdd-aplicadas-e694c5563d75
+      pages:
+      - 1
+      - 2
+      - 3
+      - 7
+      - 8
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/
+    - /bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/
+    exercises:
+    - U3.13
+    - U3.16
+    - U3.25
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: completo
+      quality: media
+      confidence: media
+      action: conservar
+    validation_notes: 'Pendientes de verificación específica: U3.T.CC.15, U3.T.CC.16, U3.22, U3.25'
+    verified_checks: 18
+    stage: E5
+  - id: u3-distribuidas
+    title: Transacciones distribuidas
+    program_text: Transacciones distribuidas.
+    objectives:
+    - Explicar el commit en dos fases y usar BEGIN DISTRIBUTED TRANSACTION con MS DTC
+    keywords:
+    - transacción distribuida
+    - DTC
+    - BEGIN DISTRIBUTED TRANSACTION
+    - linked server
+    - dos fases
+    sources:
+    - doc: bbdd-aplicadas-17c2c97f736b
+      pages:
+      - 27
+      - 28
+      - 29
+      - 30
+      - 44
+    student_sources:
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 2
+      - 16
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 15
+    - doc: bbdd-aplicadas-42835aeae3f6
+      pages:
+      - 3
+      - 21
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/
+    - /bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/
+    exercises:
+    - U3.19
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: alta
+      action: ampliar
+    validation_notes: 'Pendientes de verificación específica: U3.T.CC.17'
+    verified_checks: 18
+    stage: E5
+  - id: u3-monitoreo
+    title: Monitoreo y métricas de performance
+    program_text: Monitoreo y métricas de performance.
+    objectives:
+    - Construir una línea de base y medir con DMVs y Activity Monitor
+    keywords:
+    - monitoreo
+    - métrica
+    - baseline
+    - DMV
+    - Activity Monitor
+    - wait stats
+    sources:
+    - doc: bbdd-aplicadas-17c2c97f736b
+      pages:
+      - 31
+      - 32
+      - 33
+      - 34
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 29
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 33
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 2
+      - 16
+    - doc: bbdd-aplicadas-e694c5563d75
+      pages:
+      - 5
+      - 7
+    exam_refs:
+    - bbdd-aplicadas-26e3560d7229
+    page: /bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento/
+    - /bbdd-aplicadas/unidad-3/practica/rendimiento/
+    exercises:
+    - U3.30
+    - U3.33
+    - U3.35
+    - U3.40
+    - U3.43
+    - U3.44
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: alta
+      action: corregir
+    validation_notes: 'Pendientes de verificación específica: U3.T.MT.05'
+    verified_checks: 27
+    stage: E5
+  - id: u3-plan-ejecucion
+    title: Interpretación del plan de ejecución
+    program_text: Interpretación del plan de ejecución.
+    objectives:
+    - Leer planes estimados y reales e identificar operadores costosos
+    keywords:
+    - plan de ejecución
+    - execution plan
+    - seek
+    - scan
+    - key lookup
+    - optimizador
+    sources:
+    - doc: bbdd-aplicadas-0d2ad822befa
+      pages:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 6
+      - 23
+      - 24
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 27
+      - 29
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 6
+      - 13
+    - doc: bbdd-aplicadas-1a42e094e00e
+      pages:
+      - 11
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 11
+    exam_refs:
+    - bbdd-aplicadas-047fcb3ca752
+    - bbdd-aplicadas-26e3560d7229
+    - bbdd-aplicadas-04b965384980
+    page: /bbdd-aplicadas/unidad-3/teoria/indices-y-planes/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-3/teoria/indices-y-planes/
+    - /bbdd-aplicadas/unidad-3/practica/rendimiento/
+    exercises:
+    - U3.29
+    - U3.32
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: superficial
+      quality: media
+      confidence: alta
+      action: ampliar
+    verified_checks: 34
+    stage: E5
+  - id: u3-indices
+    title: Índices clúster y no clúster
+    program_text: Índices clúster vs no clúster.
+    objectives:
+    - Diseñar índices clúster, no clúster y de cobertura para una consulta dada
+    keywords:
+    - índice
+    - clustered
+    - nonclustered
+    - INCLUDE
+    - cobertura
+    - fill factor
+    - heap
+    sources:
+    - doc: bbdd-aplicadas-0d2ad822befa
+      pages:
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 4
+      - 24
+      - 25
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 28
+      - 29
+    - doc: bbdd-aplicadas-42835aeae3f6
+      pages:
+      - 18
+      - 19
+    - doc: bbdd-aplicadas-e694c5563d75
+      pages:
+      - 1
+      - 2
+      - 4
+      - 5
+      - 7
+      - 8
+    exam_refs:
+    - bbdd-aplicadas-047fcb3ca752
+    - bbdd-aplicadas-04b965384980
+    - bbdd-aplicadas-6e18af8574d2
+    - bbdd-aplicadas-3ab6c47a9bca
+    - bbdd-aplicadas-efc42db767fd
+    - bbdd-aplicadas-f12df9e4e498
+    - bbdd-aplicadas-1fbe6ae48bf7
+    - bbdd-aplicadas-d8baa3d1630e
+    - bbdd-aplicadas-cf1a40d118d4
+    page: /bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/
+    - /bbdd-aplicadas/unidad-3/practica/rendimiento/
+    exercises:
+    - U3.26
+    - U3.27
+    - U3.28
+    - U3.36
+    - U3.37
+    - U3.38
+    - U3.41
+    - U3.42
+    - U3.45
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: alta
+      action: reorganizar
+    verified_checks: 39
+    stage: E5
+  - id: u3-estadisticas
+    title: Estadísticas
+    program_text: Estadísticas.
+    objectives:
+    - Interpretar histogramas y densidad, y mantener estadísticas
+    keywords:
+    - estadísticas
+    - histograma
+    - densidad
+    - UPDATE STATISTICS
+    - DBCC SHOW_STATISTICS
+    sources:
+    - doc: bbdd-aplicadas-0d2ad822befa
+      pages:
+      - 21
+      - 22
+      - 23
+      - 24
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 23
+      - 24
+      - 26
+      - 29
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 14
+    - doc: bbdd-aplicadas-1a42e094e00e
+      pages:
+      - 10
+    - doc: bbdd-aplicadas-e694c5563d75
+      pages:
+      - 1
+      - 6
+      - 7
+      - 8
+    exam_refs:
+    - bbdd-aplicadas-16575623b695
+    page: /bbdd-aplicadas/unidad-3/teoria/indices-y-planes/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-3/teoria/indices-y-planes/
+    - /bbdd-aplicadas/unidad-3/practica/rendimiento/
+    exercises:
+    - U3.31
+    - U3.32
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: media
+      confidence: alta
+      action: corregir
+    verified_checks: 34
+    stage: E5
+  - id: u3-optimizacion
+    title: Optimización de consultas
+    program_text: 'Optimización de consultas: reescritura de sentencias SQL, reconfiguración de tablas e índices.'
+    objectives:
+    - Reescribir consultas para hacerlas sargables y medir la mejora con el plan y las estadísticas de E/S
+    keywords:
+    - optimización
+    - reescritura
+    - sargable
+    - STATISTICS IO
+    - tuning
+    sources:
+    - doc: bbdd-aplicadas-0d2ad822befa
+      pages:
+      - 8
+      - 25
+      - 26
+      - 27
+      - 28
+      - 29
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 4
+      - 19
+      - 24
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 9
+      - 14
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 24
+    - doc: bbdd-aplicadas-e694c5563d75
+      pages:
+      - 5
+      - 6
+      - 7
+    exam_refs:
+    - bbdd-aplicadas-efc42db767fd
+    - bbdd-aplicadas-04b965384980
+    - bbdd-aplicadas-26e3560d7229
+    page: /bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/
+    - /bbdd-aplicadas/unidad-3/practica/rendimiento/
+    exercises:
+    - U3.34
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: superficial
+      quality: media
+      confidence: alta
+      action: ampliar
+    verified_checks: 39
+    stage: E5
+  - id: u3-rowstore-columnstore
+    title: Rowstore y columnstore
+    program_text: Rowstore vs Columnstore.
+    objectives:
+    - Decidir entre almacenamiento por filas y por columnas según la carga
+    keywords:
+    - columnstore
+    - rowstore
+    - batch mode
+    - compresión
+    sources:
+    - doc: bbdd-aplicadas-0d2ad822befa
+      pages:
+      - 30
+      - 31
+    student_sources:
+    - doc: bbdd-aplicadas-68061c008f6a
+      sections:
+      - linea ~1427 (ROWSTORE VS COLUMNSTORE)
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/
+    - /bbdd-aplicadas/unidad-3/practica/rendimiento/
+    exercises:
+    - U3.39
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: superficial
+      quality: media
+      confidence: alta
+      action: ampliar
+    verified_checks: 39
+    stage: E5
+- id: u4
+  title: Bases de datos no relacionales
+  exercise_prefix: U4.
+  minimum_exercises: 15
+  minimum_per_level: 3
+  topics:
+  - id: u4-modelos-datos
+    title: Modelos de datos heterogéneos y tipos de datos
+    program_text: 'Modelos de datos heterogéneos: jerárquicos, texto, grafos. Datos estructurados y no estructurados.'
+    objectives:
+    - Distinguir datos estructurados, semiestructurados y no estructurados
+    - Reconocer modelos jerárquicos, de texto y de grafos
+    keywords:
+    - jerárquico
+    - grafo
+    - texto
+    - estructurado
+    - semiestructurado
+    - no estructurado
+    sources:
+    - doc: bbdd-aplicadas-ed6885ded031
+      pages:
+      - 3
+      - 4
+      - 5
+      - 8
+      - 9
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+    student_sources:
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 5
+      - 7
+      - 20
+      - 25
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 3
+      - 15
+      - 16
+      - 18
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 10
+      - 11
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/
+    exercises:
+    - U4.43
+    - U4.46
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: parcial
+      quality: alta
+      confidence: media
+      action: ampliar
+    verified_checks: 5
+    stage: E6
+  - id: u4-base-acid
+    title: El modelo BASE y sus diferencias con ACID
+    program_text: El modelo BASE. Diferencias con ACID.
+    objectives:
+    - Contrastar ACID y BASE y aplicar el teorema CAP con sus matices
+    keywords:
+    - BASE
+    - ACID
+    - CAP
+    - consistencia eventual
+    - disponibilidad
+    sources:
+    - doc: bbdd-aplicadas-ed6885ded031
+      pages:
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 24
+    student_sources:
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 17
+      - 18
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 22
+      - 23
+      - 24
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 17
+      - 18
+      - 19
+    exam_refs:
+    - bbdd-aplicadas-93934d98a63e
+    - bbdd-aplicadas-efc42db767fd
+    - bbdd-aplicadas-1fbe6ae48bf7
+    - bbdd-aplicadas-cf1a40d118d4
+    - bbdd-aplicadas-8d75a3b284ab
+    - bbdd-aplicadas-d8baa3d1630e
+    - bbdd-aplicadas-6e18af8574d2
+    - bbdd-aplicadas-04b965384980
+    page: /bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/
+    exercises:
+    - U4.41
+    - U4.42
+    - U4.50
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: alta
+      confidence: alta
+      action: conservar
+    verified_checks: 5
+    stage: E6
+  - id: u4-tipos-nosql
+    title: Bases clave-valor, columnares y de documentos
+    program_text: Bases de datos de pares clave-valor, columnares y de documentos.
+    objectives:
+    - Elegir un modelo NoSQL según la carga de trabajo
+    keywords:
+    - clave-valor
+    - columnar
+    - documental
+    - Redis
+    - Cassandra
+    - MongoDB
+    sources:
+    - doc: bbdd-aplicadas-ed6885ded031
+      pages:
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+    student_sources:
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 34
+      - 35
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 17
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 17
+      - 18
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/
+    exercises:
+    - U4.43
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: alta
+      confidence: alta
+      action: conservar
+    verified_checks: 5
+    stage: E6
+  - id: u4-mql-crud
+    title: 'MongoDB Query Language: colecciones y CRUD'
+    program_text: MongoDB Query Language. Clave primaria en MongoDB. Inserción bulk, actualización de colecciones,
+      upsert, remove. Colecciones.
+    objectives:
+    - Operar colecciones con insert, find, update, upsert y delete en mongosh
+    keywords:
+    - MQL
+    - mongosh
+    - colección
+    - _id
+    - ObjectId
+    - insertMany
+    - updateOne
+    - upsert
+    - deleteMany
+    - find
+    sources:
+    - doc: bbdd-aplicadas-4bd543391072
+      pages:
+      - 9
+      - 13
+      - 14
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+    - doc: bbdd-aplicadas-f65cc231b1f0
+      pages:
+      - 5
+      - 7
+      - 8
+      - 9
+      - 10
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+    - doc: bbdd-aplicadas-3df29cd152a2
+      pages:
+      - 1
+      - 2
+    student_sources:
+    - doc: bbdd-aplicadas-19a1548ac204
+      pages:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 12
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 35
+      - 36
+      - 37
+      - 39
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 19
+      - 20
+    exam_refs:
+    - bbdd-aplicadas-6e18af8574d2
+    - bbdd-aplicadas-f12df9e4e498
+    - bbdd-aplicadas-3ab6c47a9bca
+    - bbdd-aplicadas-efc42db767fd
+    - bbdd-aplicadas-93934d98a63e
+    - bbdd-aplicadas-1fbe6ae48bf7
+    - bbdd-aplicadas-cf1a40d118d4
+    - bbdd-aplicadas-2547699fc0cd
+    page: /bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion/
+    - /bbdd-aplicadas/unidad-4/teoria/mongodb-crud/
+    - /bbdd-aplicadas/unidad-4/practica/ejercicios/
+    - /bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online/
+    - /bbdd-aplicadas/unidad-4/practica/integrador-peliculas/
+    exercises:
+    - U4.01
+    - U4.02
+    - U4.03
+    - U4.04
+    - U4.05
+    - U4.06
+    - U4.07
+    - U4.08
+    - U4.09
+    - U4.11
+    - U4.12
+    - U4.14
+    - U4.15
+    - U4.16
+    - U4.17
+    - U4.20
+    - U4.21
+    - U4.22
+    - U4.23
+    - U4.24
+    - U4.26
+    - U4.27
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: alta
+      action: ampliar
+    verified_checks: 40
+    stage: E6
+  - id: u4-estadisticas-indices
+    title: Estadísticas de ejecución e índices en MongoDB
+    program_text: Estadísticas de ejecución. Índices.
+    objectives:
+    - Crear índices y comparar COLLSCAN e IXSCAN con explain('executionStats')
+    keywords:
+    - explain
+    - executionStats
+    - índice
+    - createIndex
+    - IXSCAN
+    - COLLSCAN
+    sources:
+    - doc: bbdd-aplicadas-9eb38199334b
+      pages:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+    - doc: bbdd-aplicadas-4bd543391072
+      pages:
+      - 40
+      - 47
+      - 51
+    - doc: bbdd-aplicadas-f65cc231b1f0
+      pages:
+      - 22
+      - 23
+      - 24
+    student_sources:
+    - doc: bbdd-aplicadas-19a1548ac204
+      sections:
+      - indices (ver pag. 1-12)
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 19
+      - 20
+    exam_refs:
+    - bbdd-aplicadas-8d75a3b284ab
+    - bbdd-aplicadas-efc42db767fd
+    page: /bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/
+    - /bbdd-aplicadas/unidad-4/practica/ejercicios/
+    - /bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online/
+    - /bbdd-aplicadas/unidad-4/practica/integrador-peliculas/
+    exercises:
+    - U4.10
+    - U4.19
+    - U4.25
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: media
+      action: corregir
+    verified_checks: 42
+    stage: E6
+  - id: u4-agregacion
+    title: Agregación
+    program_text: Agregado.
+    objectives:
+    - Construir pipelines de agregación con $match, $group, $lookup y $unwind, y crear vistas
+    keywords:
+    - aggregate
+    - pipeline
+    - $match
+    - $group
+    - $lookup
+    - $unwind
+    - $project
+    - vista
+    sources:
+    - doc: bbdd-aplicadas-9a0d8e90ff05
+      pages:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+    student_sources:
+    - doc: bbdd-aplicadas-19a1548ac204
+      pages:
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 21
+      - 22
+      - 23
+      - 24
+    - doc: bbdd-aplicadas-cd36d917c66c
+      pages:
+      - 20
+      - 21
+    exam_refs:
+    - bbdd-aplicadas-d8baa3d1630e
+    - bbdd-aplicadas-2547699fc0cd
+    - bbdd-aplicadas-8d75a3b284ab
+    - bbdd-aplicadas-93934d98a63e
+    - bbdd-aplicadas-1fbe6ae48bf7
+    - bbdd-aplicadas-047fcb3ca752
+    - bbdd-aplicadas-26e3560d7229
+    page: /bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/
+    - /bbdd-aplicadas/unidad-4/practica/ejercicios/
+    - /bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online/
+    - /bbdd-aplicadas/unidad-4/practica/integrador-peliculas/
+    exercises:
+    - U4.13
+    - U4.18
+    - U4.25
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: media
+      confidence: alta
+      action: corregir
+    verified_checks: 42
+    stage: E6
+  - id: u4-poo
+    title: Relación con la programación orientada a objetos
+    program_text: Relación con POO.
+    objectives:
+    - Explicar el desajuste de impedancia objeto-relacional
+    - Comparar el mapeo objeto-relacional (ORM) y objeto-documental (ODM) con un ejemplo
+    keywords:
+    - POO
+    - objeto
+    - impedancia
+    - ORM
+    - ODM
+    - mapeo
+    - documento embebido
+    - referencia
+    sources: []
+    student_sources: []
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-4/teoria/poo-y-bases/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-4/teoria/poo-y-bases/
+    exercises:
+    - U4.45
+    - U4.49
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: ausente
+      quality: sin-evaluar
+      confidence: baja
+      action: investigar
+    scope: 'D4: correspondencia objeto-relacional (desajuste de impedancia) y objeto-documental; ORM y ODM como
+      capas de mapeo. Sin patrones de diseño ni bases orientadas a objetos.'
+    missing_sources: true
+    verified_checks: 4
+    stage: E6
+  - id: u4-data-lakes
+    title: Data lakes y data warehousing
+    program_text: 'Data Lakes. (Contenidos mínimos: Data Warehousing.)'
+    objectives:
+    - Comparar base operacional, data warehouse y data lake
+    keywords:
+    - data lake
+    - data warehouse
+    - DWH
+    - OLAP
+    - ETL
+    - ELT
+    sources:
+    - doc: bbdd-aplicadas-3d9721081e14
+      pages:
+      - 3
+    - doc: bbdd-aplicadas-ed6885ded031
+      pages:
+      - 8
+      - 9
+    - doc: bbdd-aplicadas-d0b0a9b78ca8
+      pages:
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+    student_sources:
+    - doc: bbdd-aplicadas-3c6cac1c3ff5
+      pages:
+      - 22
+      - 23
+    - doc: bbdd-aplicadas-1a42e094e00e
+      pages:
+      - 9
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 17
+    - doc: bbdd-aplicadas-42835aeae3f6
+      pages:
+      - 13
+    - doc: bbdd-aplicadas-6939322b728b
+      pages:
+      - 9
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd/
+    exercises:
+    - U4.44
+    - U4.48
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: media
+      confidence: media
+      action: conservar
+    verified_checks: 3
+    stage: E6
+  - id: u4-kdd
+    title: Introducción al data mining y KDD
+    program_text: Introducción al Data Mining. Knowledge Discovery in Databases.
+    objectives:
+    - Describir las cinco etapas del proceso KDD de Fayyad et al. (1996) y ubicar la minería de datos como una de
+      ellas
+    keywords:
+    - KDD
+    - data mining
+    - minería de datos
+    - knowledge discovery
+    sources:
+    - doc: bbdd-aplicadas-3d9721081e14
+      pages:
+      - 3
+    - doc: bbdd-aplicadas-ed6885ded031
+      pages:
+      - 10
+    student_sources:
+    - doc: bbdd-aplicadas-e40f44016a23
+      sections:
+      - mencion de mineria de datos; docx sin paginas
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd/
+    exercises:
+    - U4.47
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: superficial
+      quality: media
+      confidence: baja
+      action: investigar
+    scope: 'D4: proceso KDD en cinco etapas (selección, preprocesamiento, transformación, minería de datos, interpretación/evaluación)
+      según Fayyad, Piatetsky-Shapiro y Smyth (1996). No usar variantes de 7 etapas.'
+    bibliography:
+    - fayyad1996
+    verified_checks: 3
+    stage: E6
+- id: u5
+  title: Protección de los datos
+  exercise_prefix: U5.
+  minimum_exercises: 8
+  minimum_per_level: 2
+  topics:
+  - id: u5-minimo-privilegio
+    title: Principio del mínimo privilegio
+    program_text: Principio del mínimo privilegio. Clasificación de usuarios.
+    objectives:
+    - Aplicar el principio del mínimo privilegio y clasificar usuarios
+    keywords:
+    - mínimo privilegio
+    - POLP
+    - superficie de ataque
+    - usuario
+    sources:
+    - doc: bbdd-aplicadas-5db2ce42f603
+      pages:
+      - 3
+      - 4
+      - 5
+      - 6
+      - 8
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 31
+    - doc: bbdd-aplicadas-9a9e789db872
+      sections:
+      - s001
+    - doc: bbdd-aplicadas-e40f44016a23
+      sections:
+      - s001
+    exam_refs:
+    - bbdd-aplicadas-cf1a40d118d4
+    - bbdd-aplicadas-8d75a3b284ab
+    page: /bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/
+    - /bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/
+    exercises:
+    - U5.01
+    - U5.07
+    - U5.08
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: alta
+      confidence: alta
+      action: conservar
+    verified_checks: 15
+    stage: E7
+  - id: u5-autenticacion
+    title: Autenticación y directivas de contraseñas
+    program_text: Autenticación y directivas de contraseñas.
+    objectives:
+    - Configurar autenticación de Windows y de SQL Server y políticas de contraseña
+    keywords:
+    - autenticación
+    - login
+    - CHECK_POLICY
+    - CHECK_EXPIRATION
+    - contraseña
+    sources:
+    - doc: bbdd-aplicadas-5db2ce42f603
+      pages:
+      - 8
+      - 9
+      - 11
+      - 12
+      - 13
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 31
+      - 32
+    - doc: bbdd-aplicadas-9a9e789db872
+      sections:
+      - s001
+    - doc: bbdd-aplicadas-e40f44016a23
+      sections:
+      - s001
+    exam_refs:
+    - bbdd-aplicadas-8d75a3b284ab
+    page: /bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/
+    - /bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/
+    exercises:
+    - U5.02
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: parcial
+      quality: media
+      confidence: alta
+      action: ampliar
+    validation_notes: 'Pendientes de verificación específica: U5.T.SEG.R1, U5.LS.R1'
+    verified_checks: 15
+    stage: E7
+  - id: u5-permisos-dcl
+    title: Estructura de permisos y DCL
+    program_text: Estructura de permisos. Data Control Language (DCL).
+    objectives:
+    - Resolver combinaciones de GRANT, DENY y REVOKE sobre usuarios y roles
+    keywords:
+    - DCL
+    - GRANT
+    - DENY
+    - REVOKE
+    - permiso
+    - securable
+    - principal
+    sources:
+    - doc: bbdd-aplicadas-5db2ce42f603
+      pages:
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 31
+      - 32
+    - doc: bbdd-aplicadas-9a9e789db872
+      sections:
+      - s001
+    exam_refs:
+    - bbdd-aplicadas-d8baa3d1630e
+    - bbdd-aplicadas-cf1a40d118d4
+    - bbdd-aplicadas-8d75a3b284ab
+    page: /bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/
+    - /bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/
+    exercises:
+    - U5.03
+    - U5.04
+    - U5.05
+    - U5.06
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: alta
+      confidence: alta
+      action: conservar
+    verified_checks: 15
+    stage: E7
+  - id: u5-propietarios-roles
+    title: Propietarios y roles
+    program_text: Configuración mediante propietarios y roles.
+    objectives:
+    - Usar roles fijos y definidos por el usuario, propietarios y encadenamiento de propiedad
+    keywords:
+    - rol
+    - propietario
+    - owner
+    - ALTER AUTHORIZATION
+    - ownership chaining
+    sources:
+    - doc: bbdd-aplicadas-5db2ce42f603
+      pages:
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 23
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 31
+      - 32
+    - doc: bbdd-aplicadas-9a9e789db872
+      sections:
+      - s001
+    exam_refs:
+    - bbdd-aplicadas-d8baa3d1630e
+    page: /bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-5/teoria/seguridad-permisos/
+    - /bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/
+    exercises:
+    - U5.03
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: alta
+      confidence: alta
+      action: conservar
+    verified_checks: 15
+    stage: E7
+  - id: u5-alta-disponibilidad
+    title: Alta disponibilidad y réplicas
+    program_text: Alta disponibilidad. Réplicas de bases de datos.
+    objectives:
+    - Comparar grupos de disponibilidad, replicación y log shipping según RPO y RTO
+    keywords:
+    - alta disponibilidad
+    - Always On
+    - availability group
+    - réplica
+    - replicación
+    - log shipping
+    sources:
+    - doc: bbdd-aplicadas-5db2ce42f603
+      pages:
+      - 49
+      - 50
+      - 51
+      - 52
+      - 53
+      - 54
+      - 55
+      - 56
+      - 57
+      - 58
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 34
+    - doc: bbdd-aplicadas-9a9e789db872
+      sections:
+      - s001
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad/
+    exercises: []
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: completo
+      quality: media
+      confidence: alta
+      action: corregir
+    validation_notes: 'Pendientes de verificación específica: U5.T.HA.03'
+    verified_checks: 2
+    stage: E7
+  - id: u5-backups
+    title: 'Backups: clasificación, metodología y buenas prácticas'
+    program_text: 'Backups: Clasificación, metodología y buenas prácticas.'
+    objectives:
+    - Diseñar una estrategia de respaldo completa, diferencial y de log
+    keywords:
+    - backup
+    - respaldo
+    - completo
+    - diferencial
+    - log
+    - copy-only
+    - 3-2-1
+    sources:
+    - doc: bbdd-aplicadas-5db2ce42f603
+      pages:
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+      - 45
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 33
+    - doc: bbdd-aplicadas-9a9e789db872
+      sections:
+      - s001
+    exam_refs:
+    - bbdd-aplicadas-8d75a3b284ab
+    page: /bbdd-aplicadas/unidad-5/teoria/backup-restauracion/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-5/teoria/backup-restauracion/
+    - /bbdd-aplicadas/unidad-5/practica/laboratorio-backup/
+    exercises:
+    - U5.22
+    - U5.24
+    - U5.25
+    - U5.26
+    - U5.28
+    - U5.31
+    - U5.33
+    - U5.35
+    - U5.36
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: completo
+      quality: alta
+      confidence: alta
+      action: conservar
+    validation_notes: 'Pendientes de verificación específica: U5.T.BK.12'
+    verified_checks: 22
+    stage: E7
+  - id: u5-recuperacion
+    title: Recuperación
+    program_text: Recuperación.
+    objectives:
+    - Restaurar a un punto en el tiempo según el modelo de recuperación
+    keywords:
+    - recuperación
+    - RESTORE
+    - NORECOVERY
+    - STOPAT
+    - modelo de recuperación
+    - tail-log
+    sources:
+    - doc: bbdd-aplicadas-5db2ce42f603
+      pages:
+      - 24
+      - 25
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+      - 34
+      - 46
+      - 47
+      - 48
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 32
+      - 33
+    - doc: bbdd-aplicadas-9a9e789db872
+      sections:
+      - s001
+    exam_refs:
+    - bbdd-aplicadas-8d75a3b284ab
+    page: /bbdd-aplicadas/unidad-5/teoria/log-recuperacion/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-5/teoria/log-recuperacion/
+    - /bbdd-aplicadas/unidad-5/teoria/backup-restauracion/
+    - /bbdd-aplicadas/unidad-5/practica/laboratorio-backup/
+    exercises:
+    - U5.21
+    - U5.23
+    - U5.26
+    - U5.27
+    - U5.29
+    - U5.30
+    - U5.32
+    - U5.34
+    - U5.37
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: alta
+      confidence: alta
+      action: conservar
+    verified_checks: 29
+    stage: E7
+  - id: u5-cifrado
+    title: Encriptación en tránsito y en almacenamiento
+    program_text: Encriptación en tránsito y en almacenamiento.
+    objectives:
+    - Proteger datos en reposo con TDE y cifrado de columnas, y en tránsito con TLS
+    keywords:
+    - cifrado
+    - encriptación
+    - TDE
+    - TLS
+    - certificado
+    - EncryptByPassPhrase
+    sources:
+    - doc: bbdd-aplicadas-5db2ce42f603
+      pages:
+      - 59
+      - 60
+      - 61
+    student_sources:
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 34
+      - 35
+    - doc: bbdd-aplicadas-9a9e789db872
+      sections:
+      - s001
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-5/teoria/cifrado/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-5/teoria/cifrado/
+    exercises:
+    - U5.10
+    - U5.11
+    - U5.12
+    production: redactado
+    validation: con-observaciones
+    audit:
+      coverage: completo
+      quality: media
+      confidence: media
+      action: corregir
+    validation_notes: 'Pendientes de verificación específica: U5.T.CIF.R1, U5.T.CIF.R2, U5.T.CIF.R3'
+    verified_checks: 5
+    stage: E7
+- id: u6
+  title: Calidad en bases de datos
+  exercise_prefix: U6.
+  minimum_exercises: 6
+  minimum_per_level: 2
+  topics:
+  - id: u6-ley-25326
+    title: Ley 25.326 de protección de datos personales
+    program_text: Ley nacional de protección de datos personales.
+    objectives:
+    - Aplicar principios, derechos y obligaciones de la Ley 25.326 a una base de datos
+    keywords:
+    - Ley 25.326
+    - datos personales
+    - dato sensible
+    - hábeas data
+    - AAIP
+    sources: []
+    student_sources:
+    - doc: bbdd-aplicadas-7034e8ba7365
+      sections:
+      - s001
+    - doc: bbdd-aplicadas-e40f44016a23
+      sections:
+      - s001
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 35
+    exam_refs:
+    - bbdd-aplicadas-cf1a40d118d4
+    - bbdd-aplicadas-8d75a3b284ab
+    page: /bbdd-aplicadas/unidad-6/teoria/ley-25326/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-6/teoria/ley-25326/
+    - /bbdd-aplicadas/unidad-6/practica/laboratorio-privacidad/
+    - /bbdd-aplicadas/unidad-6/practica/casos-integradores/
+    exercises:
+    - U6.01
+    - U6.02
+    - U6.03
+    - U6.04
+    - U6.05
+    - U6.23
+    - U6.26
+    - U6.27
+    - U6.28
+    - U6.30
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: media
+      confidence: baja
+      action: investigar
+    bibliography:
+    - ley25326
+    - decreto1558
+    missing_sources: true
+    source_policy: 'D3: solo fuentes primarias oficiales (ver bibliography); sin material de cátedra.'
+    verified_checks: 8
+    stage: E8
+  - id: u6-gdpr
+    title: General Data Protection Regulation (GDPR)
+    program_text: General Data Protection Regulation (GDPR).
+    objectives:
+    - Determinar cuándo se aplica el GDPR y reconocer sus principios, bases y derechos
+    keywords:
+    - GDPR
+    - RGPD
+    - responsable
+    - encargado
+    - consentimiento
+    sources: []
+    student_sources:
+    - doc: bbdd-aplicadas-7034e8ba7365
+      sections:
+      - s001
+    - doc: bbdd-aplicadas-e40f44016a23
+      sections:
+      - s001
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 35
+    exam_refs: []
+    page: /bbdd-aplicadas/unidad-6/teoria/gdpr/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-6/teoria/gdpr/
+    - /bbdd-aplicadas/unidad-6/practica/laboratorio-privacidad/
+    - /bbdd-aplicadas/unidad-6/practica/casos-integradores/
+    exercises:
+    - U6.06
+    - U6.07
+    - U6.08
+    - U6.09
+    - U6.10
+    - U6.24
+    - U6.25
+    - U6.26
+    - U6.29
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: media
+      confidence: baja
+      action: investigar
+    bibliography:
+    - rgpd
+    missing_sources: true
+    source_policy: 'D3: solo fuentes primarias oficiales (ver bibliography); sin material de cátedra.'
+    verified_checks: 8
+    stage: E8
+  - id: u6-iso-25012
+    title: Modelo de calidad de datos ISO/IEC 25012
+    program_text: Modelo de Calidad de datos (ISO/IEC 25012).
+    objectives:
+    - Clasificar y medir las características de calidad de datos de ISO/IEC 25012
+    keywords:
+    - ISO/IEC 25012
+    - calidad de datos
+    - exactitud
+    - completitud
+    - consistencia
+    sources: []
+    student_sources:
+    - doc: bbdd-aplicadas-7034e8ba7365
+      sections:
+      - s001
+    - doc: bbdd-aplicadas-e40f44016a23
+      sections:
+      - s001
+    - doc: bbdd-aplicadas-3a0d8f223fcf
+      pages:
+      - 35
+    exam_refs:
+    - bbdd-aplicadas-cf1a40d118d4
+    page: /bbdd-aplicadas/unidad-6/teoria/iso-25012/
+    portal_pages:
+    - /bbdd-aplicadas/unidad-6/teoria/iso-25012/
+    - /bbdd-aplicadas/unidad-6/practica/laboratorio-calidad/
+    exercises:
+    - U6.11
+    - U6.12
+    - U6.13
+    - U6.14
+    - U6.15
+    - U6.16
+    - U6.17
+    - U6.18
+    - U6.19
+    - U6.20
+    - U6.21
+    - U6.22
+    production: redactado
+    validation: verificado
+    audit:
+      coverage: completo
+      quality: alta
+      confidence: media
+      action: conservar
+    bibliography:
+    - iso25012
+    - iso25000-resumen
+    missing_sources: true
+    source_policy: 'D3: solo fuentes primarias oficiales (ver bibliography); sin material de cátedra.'
+    verified_checks: 7
+    stage: E8

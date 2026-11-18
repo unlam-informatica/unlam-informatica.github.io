@@ -1,0 +1,6 @@
+tesoreria|usr_tesoreria
+ventas|dbo
+1 vista con propietarios distintos|NO (error 229)
+2 vista tras ALTER AUTHORIZATION|SI (1 filas)
+3 tabla directa|NO (error 229)
+2|3500.00

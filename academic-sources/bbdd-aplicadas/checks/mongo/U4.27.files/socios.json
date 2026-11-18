@@ -1,0 +1,42 @@
+[
+  {
+    "codigo": "S-01",
+    "nombre": "Socio 01",
+    "alta": {
+      "$date": "2023-04-12T00:00:00Z"
+    },
+    "estado": "activo"
+  },
+  {
+    "codigo": "S-02",
+    "nombre": "Socio 02",
+    "alta": {
+      "$date": "2023-09-30T00:00:00Z"
+    },
+    "estado": "activo"
+  },
+  {
+    "codigo": "S-03",
+    "nombre": "Socio 03",
+    "alta": {
+      "$date": "2024-02-18T00:00:00Z"
+    },
+    "estado": "activo"
+  },
+  {
+    "codigo": "S-04",
+    "nombre": "Socio 04",
+    "alta": {
+      "$date": "2024-07-07T00:00:00Z"
+    },
+    "estado": "suspendido"
+  },
+  {
+    "codigo": "S-05",
+    "nombre": "Socio 05",
+    "alta": {
+      "$date": "2025-01-25T00:00:00Z"
+    },
+    "estado": "activo"
+  }
+]

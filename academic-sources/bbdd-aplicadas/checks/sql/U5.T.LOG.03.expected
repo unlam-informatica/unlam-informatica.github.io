@@ -1,0 +1,4 @@
+BACKUP LOG en SIMPLE|rechazado
+BACKUP LOG en FULL sin backup completo previo|rechazado
+BACKUP LOG en FULL con backup completo previo|permitido
+Modelo tras ALTER DATABASE ... BULK_LOGGED|BULK_LOGGED

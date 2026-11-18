@@ -1,0 +1,8 @@
+colecciones y vistas:
+{"name":"pedidosConCliente","type":"view","viewOn":"pedidos"}
+{"_id":102,"estado":"entregado","total":300,"cliente":"Bruno","localidad":"Morón"}
+{"_id":105,"estado":"entregado","total":185,"cliente":"Bruno","localidad":"Morón"}
+pedidos de la vista: 7 (la coleccion tiene 8)
+tras corregir el cliente del pedido 108: 8
+insertar en la vista -> codigo 166
+tras drop de la vista, la base sigue en pie: 8

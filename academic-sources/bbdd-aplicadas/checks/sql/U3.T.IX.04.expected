@@ -1,0 +1,4 @@
+Con índice, pide Importe|Index Seek|[IX_Pedido_ClienteId]|104
+Con índice, pide Importe|Key Lookup|[PK_Pedido]|104
+Con índice, solo cuenta|Index Seek|[IX_Pedido_ClienteId]|2
+Sin índice|Clustered Index Scan|[PK_Pedido]|134

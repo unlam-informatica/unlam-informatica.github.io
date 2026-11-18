@@ -1,0 +1,3 @@
+<row EmpleadoId="1" Nombre="Empleado 01" Cargo="Desarrollo"/><row EmpleadoId="2" Nombre="Empleado 02" Cargo="Operaciones"/><row EmpleadoId="3" Nombre="Empleado 03" Cargo="Contaduria"/>
+<Empleados><Empleado EmpleadoId="1" Nombre="Empleado 01" Cargo="Desarrollo"/><Empleado EmpleadoId="2" Nombre="Empleado 02" Cargo="Operaciones"/><Empleado EmpleadoId="3" Nombre="Empleado 03" Cargo="Contaduria"/></Empleados>
+<Empleados><Empleado><EmpleadoId>1</EmpleadoId><Nombre>Empleado 01</Nombre><Cargo>Desarrollo</Cargo></Empleado><Empleado><EmpleadoId>2</EmpleadoId><Nombre>Empleado 02</Nombre><Cargo>Operaciones</Cargo></Empleado></Empleados>

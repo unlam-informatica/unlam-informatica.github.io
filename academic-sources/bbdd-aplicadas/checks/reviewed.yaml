@@ -1,0 +1,152 @@
+# Pendientes de verificación específica: código revisado sin ejecutar porque el entorno de
+# verificación no lo admite (content-guide §7). NO cuentan como verificados.
+- id: U1.T.RS.R1
+  reason: "CREATE DATABASE ... COLLATE y USE: el verificador ejecuta cada script en una base nueva y no admite crear bases ni cambiar de contexto."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-1/teoria/repaso-sql
+- id: U2.15
+  reason: "Requiere CREATE DATABASE con otra collation y dos sesiones concurrentes (tabla temporal global). Las partes de collation entre bases se ejecutaron a mano en bbdda-mssql y coinciden con la página, pero no forman parte de la verificación automática; la parte de dos sesiones es un guion sin ejecutar."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-2/practica/tp2
+- id: U2.T.IMP.R1
+  reason: "BULK INSERT ... CODEPAGE = '65001' (UTF-8) no es ejecutable en el entorno de verificación: SQL Server 2022 sobre Linux responde con el error 16202 (\"Keyword or statement option 'CODEPAGE' is not supported on the 'Linux' platform\"), y la documentación de Microsoft indica que la opción no se admite en Linux. Requiere SQL Server para Windows. Las alternativas UTF-16 (DATAFILETYPE='widechar'), SINGLE_NCLOB y SINGLE_BLOB hacia una columna con collation UTF8 sí están verificadas (U2.T.IMP.07, 08, 10)."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos
+- id: U2.T.API.R1
+  reason: "sp_configure 'Ole Automation Procedures' y 'show advanced options' modifican la configuración de la instancia (compartida entre verificaciones), y Ole Automation depende de COM de Windows. Lo comprobado en el motor es el estado por defecto (valor 0) y el error 15281 de sp_OACreate (U2.T.API.02)."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-2/teoria/apis-desde-sql
+- id: U2.T.API.R2
+  reason: "Llamadas HTTP (GET y POST) con sp_OACreate/MSXML2.XMLHTTP: requieren red externa, habilitar Ole Automation Procedures y COM de Windows (SQL Server 2022 sobre Linux no los admite). La URL del ejemplo (api.ejemplo.test) es ficticia."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-2/teoria/apis-desde-sql
+- id: U2.T.API.R3
+  reason: "sp_invoke_external_rest_endpoint existe solo en SQL Server 2025, Azure SQL Database/Managed Instance y Fabric (según la documentación de Microsoft) y requiere red hacia un endpoint HTTPS; el entorno de verificación es SQL Server 2022."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-2/teoria/apis-desde-sql
+- id: U2.40
+  reason: "Llamada GET real con Ole Automation Procedures: requiere red externa, una instancia de SQL Server para Windows con la opción habilitada (COM) y modifica la configuración del servidor con sp_configure. El procesamiento de la respuesta guardada sí está verificado (U2.38, U2.39)."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-2/practica/practica-apis
+- id: U4.T.INST.R1
+  reason: "db.createUser() con passwordPrompt() es interactivo y la activación de security.authorization modifica la configuración y requiere reiniciar el servicio mongod del sistema; no es ejecutable en el entorno de verificación (base nueva por script). Los comandos de instalación por sistema operativo (net start, brew, systemctl) y la interfaz de Atlas se muestran como plantillas (<!-- sintaxis -->) y no se verifican."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb
+- id: U3.T.CC.10
+  reason: "Dirty read / READ COMMITTED bloqueado: requiere dos sesiones concurrentes (una mantiene un UPDATE sin confirmar y otra lee). El verificador usa una sola conexión por script. El motor garantiza (documentación de SQL Server) que READ UNCOMMITTED no pide locks S y que READ COMMITTED espera el X de la otra transacción."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento
+- id: U3.T.CC.11
+  reason: "Lectura no repetible y REPEATABLE READ: requiere dos sesiones (una lee dos veces, otra modifica entre ambas lecturas). Una sola conexión no puede intercalar las dos transacciones."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento
+- id: U3.T.CC.12
+  reason: "Fantasma con REPEATABLE READ y bloqueo de rango con SERIALIZABLE: requiere dos sesiones concurrentes (una cuenta dos veces, otra inserta entre ambas). Lo que sí se verificó en una sesión: los locks RangeS-S de SERIALIZABLE (U3.T.CC.02 y U3.17)."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento
+- id: U3.T.CC.13
+  reason: "SNAPSHOT con un escritor sin confirmar: requiere dos sesiones (A modifica sin confirmar y B lee con SNAPSHOT sin esperar). Lo que sí se verificó en una sesión: habilitación, error 3952 y version store (U3.T.CC.03)."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento
+- id: U3.T.CC.14
+  reason: "RCSI con un escritor sin confirmar: requiere dos sesiones concurrentes. Lo que sí se verificó en una sesión: activación de la opción y generación de versiones (U3.14)."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento
+- id: U3.T.CC.15
+  reason: "Bloqueo real y su diagnóstico con sys.dm_exec_requests y sys.dm_tran_locks: requiere tres sesiones (A mantiene un UPDATE abierto, B se bloquea en un SELECT, C consulta las vistas). Con una sola conexión la consulta de bloqueos devuelve 0 filas (U3.T.CC.06)."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia
+- id: U3.T.CC.16
+  reason: "Deadlock con orden de acceso inverso y error 1205: requiere dos sesiones concurrentes y la intervención del monitor de deadlocks. Lo que sí se verificó en una sesión: DEADLOCK_PRIORITY (U3.T.CC.05), el procedimiento de reintento (U3.T.CC.07) y la consulta a system_health (U3.T.CC.08)."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia
+- id: U3.T.CC.17
+  reason: "Transacción distribuida con servidor vinculado: requiere una segunda instancia de SQL Server, un servidor vinculado y MS DTC accesible entre ambas. En el entorno de verificación solo hay una instancia; BEGIN DISTRIBUTED TRANSACTION sobre una sola instancia se verificó en U3.20."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia
+- id: U3.21
+  reason: "Lectura sucia con consecuencias sobre la tarjeta (READ UNCOMMITTED): requiere dos sesiones concurrentes con esperas de 20 s. El estado final (límite -14000) se deduce de la semántica de los locks X y del orden de ejecución."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/practica/laboratorio-tcl
+- id: U3.22
+  reason: "REPEATABLE READ con tres sesiones sobre la misma fila (B y C esperan al S de A) y variante con deadlock de conversión: requiere tres sesiones concurrentes."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/practica/laboratorio-tcl
+- id: U3.23
+  reason: "Fantasma con REPEATABLE READ y SERIALIZABLE sobre el historial de una tarjeta: requiere dos sesiones concurrentes."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/practica/laboratorio-tcl
+- id: U3.24
+  reason: "Conflicto de actualización en SNAPSHOT (error 3960): requiere dos sesiones (B fija su instantánea, A modifica y confirma, B intenta modificar). Una sola conexión no puede intercalarlas."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento
+- id: U3.25
+  reason: "Deadlock con víctima determinada por DEADLOCK_PRIORITY: requiere dos sesiones concurrentes y la intervención del monitor de deadlocks."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento
+- id: U3.T.MT.05
+  reason: "BACKUP DATABASE y BACKUP LOG escriben mensajes con tiempos y velocidades (no deterministas) y archivos en el servidor, por lo que la salida no se puede fijar en un .expected. Se ejecutó a mano en bbdda-mssql: la consulta final de msdb.dbo.backupset devuelve D|sí|FULL y L|sí|FULL, como muestra la página."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: "bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento"
+- id: U5.T.BK.12
+  reason: "Backup cifrado: requiere CREATE MASTER KEY y CREATE CERTIFICATE en master y BACKUP CERTIFICATE a archivos del host (objetos de servidor compartidos por todos los checks del verificador). Sintaxis de BACKUP ... WITH ENCRYPTION conforme a Microsoft Learn; se revisó sin ejecutar para no alterar master."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-5/teoria/backup-restauracion
+- id: U5.T.HA.03
+  reason: "Laboratorio guiado de un grupo de disponibilidad (plan §2 #26): requiere dos instancias en red, WSFC o CLUSTER_TYPE = NONE, endpoints y habilitar Always On con reinicio del servicio. Una instancia aislada solo permite verificar que las vistas están vacías (U5.T.HA.01, aprobado). La consulta de control sobre sys.dm_hadr_* depende de un grupo existente."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad
+- id: U5.LS.R1
+  reason: "CREATE DATABASE LaboratorioU5 y USE: el verificador ejecuta cada script en una base propia y no admite crear bases ni cambiar de contexto. El resto del laboratorio (U5.LS.01) se ejecuta en esa base."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad
+- id: U5.T.SEG.R1
+  reason: "Logins y usuarios de Windows requieren un dominio (sin Active Directory el motor responde el error 15401, comprobado). Los usuarios contenidos requieren CONTAINMENT = PARTIAL y sp_configure 'contained database authentication' (valor 0 por defecto en la instancia), que modifica la configuración compartida."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-5/teoria/seguridad-permisos
+- id: U5.T.CIF.R1
+  reason: "ALTER DATABASE ... SET ENCRYPTION ON cifra también tempdb, que según la documentación de Microsoft queda cifrada hasta reiniciar la instancia (estado compartido que no se puede limpiar). Verificado solo hasta CREATE DATABASE ENCRYPTION KEY con estado 1 (U5.T.CIF.03)."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-5/teoria/cifrado
+- id: U5.T.CIF.R2
+  reason: "BACKUP CERTIFICATE escribe archivos .cer y .pvk en disco (no se pueden eliminar desde T-SQL) y el verificador no tiene rutas de host."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-5/teoria/cifrado
+- id: U5.T.CIF.R3
+  reason: "BACKUP DATABASE ... WITH ENCRYPTION escribe un .bak; hacia /dev/null el motor termina con el error 3013, de modo que no hay forma de ejecutarlo sin dejar un archivo."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-5/teoria/cifrado
+- id: U5.LB.R1
+  reason: "Preparación del laboratorio de backup: USE master y CREATE DATABASE LaboratorioBackup con modelo FULL. El verificador ejecuta cada script en una base nueva y no admite crear bases ni cambiar de contexto; los pasos siguientes del laboratorio se ejecutan de forma equivalente en U5.T.BK.13."
+  reviewer: "claude (coordinación)"
+  date: "2026-11-17"
+  page: bbdd-aplicadas/unidad-5/practica/laboratorio-backup

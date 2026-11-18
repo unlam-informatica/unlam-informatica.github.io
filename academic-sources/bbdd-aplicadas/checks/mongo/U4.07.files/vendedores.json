@@ -1,0 +1,65 @@
+[
+  {
+    "idVendedor": 1,
+    "nombre": "Vendedor 01",
+    "sucursal": "Centro",
+    "zona": "Oeste",
+    "ingreso": {
+      "$date": "2022-03-01T00:00:00Z"
+    }
+  },
+  {
+    "idVendedor": 2,
+    "nombre": "Vendedor 02",
+    "sucursal": "Norte",
+    "zona": "Norte",
+    "ingreso": {
+      "$date": "2023-08-14T00:00:00Z"
+    }
+  },
+  {
+    "idVendedor": 3,
+    "nombre": "Vendedor 03",
+    "sucursal": "Sur",
+    "zona": "Sur",
+    "ingreso": {
+      "$date": "2021-05-20T00:00:00Z"
+    }
+  },
+  {
+    "idVendedor": 4,
+    "nombre": "Vendedor 04",
+    "sucursal": "Centro",
+    "zona": "Oeste",
+    "ingreso": {
+      "$date": "2024-01-08T00:00:00Z"
+    }
+  },
+  {
+    "idVendedor": 5,
+    "nombre": "Vendedor 05",
+    "sucursal": "Norte",
+    "zona": "Norte",
+    "ingreso": {
+      "$date": "2020-11-02T00:00:00Z"
+    }
+  },
+  {
+    "idVendedor": 6,
+    "nombre": "Vendedor 06",
+    "sucursal": "Sur",
+    "zona": "Sur",
+    "ingreso": {
+      "$date": "2024-06-17T00:00:00Z"
+    }
+  },
+  {
+    "idVendedor": 7,
+    "nombre": "Vendedor 07",
+    "sucursal": "Centro",
+    "zona": "Oeste",
+    "ingreso": {
+      "$date": "2025-02-03T00:00:00Z"
+    }
+  }
+]

@@ -1,0 +1,5 @@
+{"_id":101,"dias":118,"meses":4,"vence":{"$date":"2026-04-04T00:00:00Z"},"texto":"05/03/2026","inicioMes":{"$date":"2026-03-01T00:00:00Z"},"anio":2026,"diaSemana":5}
+{"_id":105,"dias":51,"meses":2,"vence":{"$date":"2026-06-10T00:00:00Z"},"texto":"11/05/2026","inicioMes":{"$date":"2026-05-01T00:00:00Z"},"anio":2026,"diaSemana":2}
+{"f":{"$date":"2026-03-05T00:00:00Z"}}
+{"tipoNow":"date","pasado":true}
+{"antiguedadMayorA30Dias":true}

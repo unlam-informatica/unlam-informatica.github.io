@@ -1,0 +1,4 @@
+master|1|SIMPLE
+tempdb|2|SIMPLE
+model|3|FULL
+msdb|4|SIMPLE

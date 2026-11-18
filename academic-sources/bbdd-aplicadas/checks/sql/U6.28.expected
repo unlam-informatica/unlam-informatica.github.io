@@ -1,0 +1,9 @@
+Paciente|Dni|00000001
+Paciente|Email|paciente01@ejemplo.test
+Paciente|Nombre|Paciente Uno
+Paciente|Telefono|11-5550-0101
+Turno|Turno 1 (Cardiologia, 2020-03-10)|Diagnostico ficticio A
+Turno|Turno 2 (Clinica, 2026-05-20)|Diagnostico ficticio B
+Consentimiento|Marketing|otorgado el 2025-04-01
+ContactoMarketing|Email|paciente01@ejemplo.test
+ContactoMarketing|UltimaActividad|2026-04-01

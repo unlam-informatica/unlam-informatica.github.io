@@ -1,0 +1,19 @@
+SELECT UsuarioId, Nombre, Rol
+          FROM seguridad.UsuarioDemo
+          WHERE Nombre = 'leia';
+1|leia|usuario
+SELECT UsuarioId, Nombre, Rol
+          FROM seguridad.UsuarioDemo
+          WHERE Nombre = '' OR 1=1--';
+1|leia|usuario
+2|luke|usuario
+3|palpatine|admin
+1|leia|usuario
+2|luke|usuario
+1|leia|usuario
+2|luke|usuario
+3|palpatine|admin
+3|palpatine|admin
+1|leia|usuario
+2|luke|usuario
+50010|Orden no permitido.

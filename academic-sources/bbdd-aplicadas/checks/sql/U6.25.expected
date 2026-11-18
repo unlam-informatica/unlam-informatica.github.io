@@ -1,0 +1,9 @@
+1|00000001|paciente01@ejemplo.test|11-5550-0101
+2|00000002|paciente02@ejemplo.test|NULL
+3|00000003|paciente03@ejemplo.test|11-5550-0103
+1|XXXX0001|pXXX@XXXX.com|xxxx
+2|XXXX0002|pXXX@XXXX.com|NULL
+3|XXXX0003|pXXX@XXXX.com|xxxx
+Dni|partial(0, "XXXX", 4)
+Email|email()
+Telefono|default()

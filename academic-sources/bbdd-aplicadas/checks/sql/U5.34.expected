@@ -1,0 +1,4 @@
+1 secundaria tras restaurar el full|RESTORING|0|NULL
+2 tras aplicar el log 1 con STANDBY|ONLINE|1|1
+3 tras aplicar el log 2 con STANDBY|ONLINE|1|2
+4 failover manual: RECOVERY|ONLINE|0|2

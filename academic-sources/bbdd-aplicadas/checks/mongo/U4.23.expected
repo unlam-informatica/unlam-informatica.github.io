@@ -1,0 +1,7 @@
+A) peliculas que nunca se prestaron
+{"codigo":"PEL-03","titulo":"El ultimo tren"}
+{"codigo":"PEL-06","titulo":"Taller de sueños"}
+{"codigo":"PEL-08","titulo":"Mapa de sal"}
+{"codigo":"PEL-10","titulo":"Sombras del puerto"}
+B) prestamos cuya pelicula no existe
+{"numero":13,"socioCodigo":"S-04","peliculaCodigo":"PEL-99"}

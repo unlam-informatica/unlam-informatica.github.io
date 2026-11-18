@@ -1,0 +1,192 @@
+[
+  {
+    "codigo": "PEL-01",
+    "titulo": "La ciudad dormida",
+    "anio": 2011,
+    "director": {
+      "nombre": "Director A",
+      "nacionalidad": "Argentina"
+    },
+    "generos": [
+      "drama",
+      "misterio"
+    ],
+    "reparto": [
+      "Actor 1",
+      "Actor 2",
+      "Actor 3"
+    ],
+    "calificacion": 4.5,
+    "copias": 3
+  },
+  {
+    "codigo": "PEL-02",
+    "titulo": "Ruta al sur",
+    "anio": 2015,
+    "director": {
+      "nombre": "Director B",
+      "nacionalidad": "Chile"
+    },
+    "generos": [
+      "aventura",
+      "drama"
+    ],
+    "reparto": [
+      "Actor 2",
+      "Actor 4"
+    ],
+    "calificacion": 4.0,
+    "copias": 2
+  },
+  {
+    "codigo": "PEL-03",
+    "titulo": "El ultimo tren",
+    "anio": 2008,
+    "director": {
+      "nombre": "Director A",
+      "nacionalidad": "Argentina"
+    },
+    "generos": [
+      "drama"
+    ],
+    "reparto": [
+      "Actor 1",
+      "Actor 5"
+    ],
+    "calificacion": null,
+    "copias": 1
+  },
+  {
+    "codigo": "PEL-04",
+    "titulo": "Humo y espejos",
+    "anio": 2019,
+    "director": {
+      "nombre": "Director C",
+      "nacionalidad": "Uruguay"
+    },
+    "generos": [
+      "misterio",
+      "suspenso"
+    ],
+    "reparto": [
+      "Actor 3",
+      "Actor 6"
+    ],
+    "calificacion": 3.5,
+    "copias": 2
+  },
+  {
+    "codigo": "PEL-05",
+    "titulo": "Cielo abierto",
+    "anio": 2021,
+    "director": {
+      "nombre": "Director B",
+      "nacionalidad": "Chile"
+    },
+    "generos": [
+      "aventura",
+      "familiar"
+    ],
+    "reparto": [
+      "Actor 4",
+      "Actor 7",
+      "Actor 8"
+    ],
+    "calificacion": 4.2,
+    "copias": 4
+  },
+  {
+    "codigo": "PEL-06",
+    "titulo": "Taller de sueños",
+    "anio": 2005,
+    "director": {
+      "nombre": "Director D",
+      "nacionalidad": "Espana"
+    },
+    "generos": [
+      "comedia",
+      "familiar"
+    ],
+    "reparto": [
+      "Actor 7",
+      "Actor 9"
+    ],
+    "calificacion": 3.8,
+    "copias": 2
+  },
+  {
+    "codigo": "PEL-07",
+    "titulo": "La ultima funcion",
+    "anio": 2017,
+    "director": {
+      "nombre": "Director C",
+      "nacionalidad": "Uruguay"
+    },
+    "generos": [
+      "comedia",
+      "drama"
+    ],
+    "reparto": [
+      "Actor 2",
+      "Actor 9",
+      "Actor 10"
+    ],
+    "calificacion": 4.1,
+    "copias": 1
+  },
+  {
+    "codigo": "PEL-08",
+    "titulo": "Mapa de sal",
+    "anio": 2013,
+    "director": {
+      "nombre": "Director D",
+      "nacionalidad": "Espana"
+    },
+    "generos": [
+      "suspenso"
+    ],
+    "reparto": [
+      "Actor 5",
+      "Actor 6"
+    ],
+    "copias": 2
+  },
+  {
+    "codigo": "PEL-09",
+    "titulo": "Orbita",
+    "anio": 2023,
+    "director": {
+      "nombre": "Director E",
+      "nacionalidad": "Argentina"
+    },
+    "generos": [
+      "ciencia ficcion",
+      "aventura"
+    ],
+    "reparto": [
+      "Actor 8",
+      "Actor 10"
+    ],
+    "calificacion": 4.7,
+    "copias": 3
+  },
+  {
+    "codigo": "PEL-10",
+    "titulo": "Sombras del puerto",
+    "anio": 2002,
+    "director": {
+      "nombre": "Director A",
+      "nacionalidad": "Argentina"
+    },
+    "generos": [
+      "misterio",
+      "drama"
+    ],
+    "reparto": [
+      "Actor 1",
+      "Actor 6"
+    ],
+    "calificacion": 3.2,
+    "copias": 1
+  }
+]

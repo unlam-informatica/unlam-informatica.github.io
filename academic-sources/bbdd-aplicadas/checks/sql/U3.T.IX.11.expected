@@ -1,0 +1,2 @@
+Función sobre la columna|Index Scan|[IX_Pedido_Fecha]|57
+Rango sobre la columna|Index Seek|[IX_Pedido_Fecha]|6

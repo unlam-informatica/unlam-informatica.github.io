@@ -1,0 +1,7 @@
+rango con Date: [1]
+rango con String: [3]
+tipos: ["date","date","string"]
+fecha como Date: [1,2]
+{"_id":1}
+{"_id":3}
+true

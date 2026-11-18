@@ -1,0 +1,4 @@
+CROSS|6
+SELF|Ana -> Direccion; Beto -> Direccion; Cora -> Ana
+UNION|3
+UNION ALL|4

@@ -1,0 +1,7 @@
+sin permisos|NO|NO|NO
+SELECT sobre ventas.Cliente|SI|NO|NO
+CONTROL sobre ventas.Cliente|SI|NO|NO
+SELECT sobre el esquema ventas|SI|SI|NO
+CONTROL sobre el esquema ventas|SI|SI|NO
+SELECT sobre la base|SI|SI|SI
+CONTROL sobre la base|SI|SI|SI

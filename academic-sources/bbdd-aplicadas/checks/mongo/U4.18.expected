@@ -1,0 +1,1 @@
+{"porEstado":[{"_id":"cancelado","pedidos":1},{"_id":"entregado","pedidos":6},{"_id":"enviado","pedidos":2},{"_id":"pendiente","pedidos":1}],"masVendidos":[{"_id":"P-006","unidades":5},{"_id":"P-001","unidades":4},{"_id":"P-007","unidades":3}],"porTamanio":[{"_id":0,"pedidos":4},{"_id":50000,"pedidos":4},{"_id":150000,"pedidos":2}]}

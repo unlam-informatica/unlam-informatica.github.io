@@ -1,0 +1,5 @@
+Repuesto|0|HEAP|NULL
+Repuesto|2|NONCLUSTERED|PK_Repuesto
+Tecnico|1|CLUSTERED|PK_Tecnico
+Visita|0|HEAP|NULL
+Visita|2|NONCLUSTERED|IX_Visita_OrdenId

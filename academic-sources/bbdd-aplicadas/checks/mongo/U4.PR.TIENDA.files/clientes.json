@@ -1,0 +1,80 @@
+[
+  {
+    "codigo": "C-01",
+    "email": "cliente01@ejemplo.test",
+    "plan": "premium",
+    "ciudad": "Cordoba",
+    "alta": {
+      "$date": "2024-02-10T00:00:00Z"
+    },
+    "preferencias": {
+      "idioma": "es",
+      "newsletter": true
+    }
+  },
+  {
+    "codigo": "C-02",
+    "email": "cliente02@ejemplo.test",
+    "plan": "basico",
+    "ciudad": "Rosario",
+    "alta": {
+      "$date": "2024-05-22T00:00:00Z"
+    },
+    "preferencias": {
+      "idioma": "es",
+      "newsletter": false
+    }
+  },
+  {
+    "codigo": "C-03",
+    "email": "cliente03@ejemplo.test",
+    "plan": "premium",
+    "ciudad": "Buenos Aires",
+    "alta": {
+      "$date": "2023-11-03T00:00:00Z"
+    },
+    "preferencias": {
+      "idioma": "es",
+      "newsletter": true
+    }
+  },
+  {
+    "codigo": "C-04",
+    "email": "cliente04@ejemplo.test",
+    "plan": "basico",
+    "ciudad": "Mendoza",
+    "alta": {
+      "$date": "2025-01-15T00:00:00Z"
+    },
+    "preferencias": {
+      "idioma": "en",
+      "newsletter": true
+    }
+  },
+  {
+    "codigo": "C-05",
+    "email": "cliente05@ejemplo.test",
+    "plan": "basico",
+    "ciudad": "Salta",
+    "alta": {
+      "$date": "2025-03-09T00:00:00Z"
+    },
+    "preferencias": {
+      "idioma": "es",
+      "newsletter": false
+    }
+  },
+  {
+    "codigo": "C-06",
+    "email": "cliente06@ejemplo.test",
+    "plan": "premium",
+    "ciudad": "La Plata",
+    "alta": {
+      "$date": "2024-09-30T00:00:00Z"
+    },
+    "preferencias": {
+      "idioma": "es",
+      "newsletter": true
+    }
+  }
+]

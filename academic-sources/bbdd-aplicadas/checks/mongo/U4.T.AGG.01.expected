@@ -1,0 +1,12 @@
+--- $match + $project
+{"total":110,"pedido":101,"cantidadItems":2}
+{"total":300,"pedido":102,"cantidadItems":1}
+{"total":185,"pedido":105,"cantidadItems":3}
+--- $addFields con expresiones de operador
+{"mes":3,"etiqueta":"Pedido 101 (entregado)","conIva":133.1}
+{"mes":5,"etiqueta":"Pedido 105 (entregado)","conIva":223.85}
+--- $set (sinonimo) y $unset
+{"_id":101,"fecha":{"$date":"2026-03-05T00:00:00Z"},"estado":"entregado","total":120}
+--- $replaceRoot + $mergeObjects
+{"pedido":101,"estado":"entregado","productoId":1,"cantidad":2,"precioUnitario":45}
+{"pedido":101,"estado":"entregado","productoId":2,"cantidad":1,"precioUnitario":20}

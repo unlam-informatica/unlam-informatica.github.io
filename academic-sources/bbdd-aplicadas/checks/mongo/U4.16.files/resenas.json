@@ -1,0 +1,58 @@
+[
+  {
+    "sku": "P-001",
+    "clienteCodigo": "C-01",
+    "calificacion": 5,
+    "titulo": "Buen sonido",
+    "votosUtiles": 12
+  },
+  {
+    "sku": "P-001",
+    "clienteCodigo": "C-03",
+    "calificacion": 4,
+    "titulo": "Cumple lo prometido",
+    "votosUtiles": 3
+  },
+  {
+    "sku": "P-003",
+    "clienteCodigo": "C-03",
+    "calificacion": 5,
+    "titulo": "Imagen excelente",
+    "votosUtiles": 8
+  },
+  {
+    "sku": "P-002",
+    "clienteCodigo": "C-03",
+    "calificacion": 3,
+    "titulo": "Ruidoso",
+    "votosUtiles": 1
+  },
+  {
+    "sku": "P-007",
+    "clienteCodigo": "C-01",
+    "calificacion": 5,
+    "titulo": "Claro y completo",
+    "votosUtiles": 20
+  },
+  {
+    "sku": "P-007",
+    "clienteCodigo": "C-06",
+    "calificacion": 4,
+    "titulo": "Muy util",
+    "votosUtiles": 6
+  },
+  {
+    "sku": "P-006",
+    "clienteCodigo": "C-06",
+    "calificacion": 2,
+    "titulo": "Se calienta",
+    "votosUtiles": 2
+  },
+  {
+    "sku": "P-009",
+    "clienteCodigo": "C-04",
+    "calificacion": 4,
+    "titulo": "Comoda",
+    "votosUtiles": 0
+  }
+]

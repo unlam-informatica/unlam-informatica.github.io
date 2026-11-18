@@ -1,0 +1,2 @@
+Rowstore|Clustered Index Scan|[PK_HechoVenta]|1231
+Con columnstore|Index Scan|[NCCI_HechoVenta]|342

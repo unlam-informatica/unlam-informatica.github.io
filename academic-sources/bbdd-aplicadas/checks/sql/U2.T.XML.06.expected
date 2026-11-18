@@ -1,0 +1,1 @@
+<Clientes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Cliente><ClienteId>1</ClienteId><Ciudad>Rosario</Ciudad></Cliente><Cliente><ClienteId>2</ClienteId><Ciudad xsi:nil="true"/></Cliente></Clientes>

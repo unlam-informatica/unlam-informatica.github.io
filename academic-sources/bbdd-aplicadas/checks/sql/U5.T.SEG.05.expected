@@ -1,0 +1,7 @@
+ventas.Pedido||INSERT
+ventas.Pedido||SELECT
+ventas.Pedido|Importe|SELECT
+ventas.Pedido|PedidoId|SELECT
+1|0|1
+rol_auditoria|usr_ana
+rol_ventas|usr_ana

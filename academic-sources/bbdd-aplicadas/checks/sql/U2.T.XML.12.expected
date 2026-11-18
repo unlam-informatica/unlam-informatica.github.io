@@ -1,0 +1,1 @@
+<Clientes><c ClienteId="1" Nombre="Ferretería Norte"><Pedidos><p><PedidoId>1001</PedidoId><Total>3000.00</Total></p><p><PedidoId>1002</PedidoId><Total>1250.50</Total></p></Pedidos></c></Clientes>

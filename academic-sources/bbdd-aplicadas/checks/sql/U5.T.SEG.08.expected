@@ -1,0 +1,16 @@
+finanzas|usr_fin
+ventas|dbo
+1
+2
+Cannot grant, deny, or revoke permissions to sa, dbo, entity owner, information_schema, sys, or yourself.
+1 vista de dbo sobre tabla de usr_fin|NO (error 229)
+2 procedimiento estatico, propietarios distintos|NO (error 229)
+3 ALTER AUTHORIZATION del esquema finanzas a dbo|ok
+4 vista, mismo propietario|SI (2 filas)
+5 procedimiento estatico, mismo propietario|SI (2 filas)
+6 procedimiento con SQL dinamico, mismo propietario|NO (error 229)
+7 SELECT directo sobre la tabla|NO (error 229)
+8 ALTER AUTHORIZATION a usr_fin|ok
+9 DROP USER del propietario de un esquema|error 15138
+10 DENY SELECT al propietario|ok
+11 el propietario lee su tabla con DENY|SI (2 filas)

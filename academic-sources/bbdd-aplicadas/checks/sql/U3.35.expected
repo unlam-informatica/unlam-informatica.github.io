@@ -1,0 +1,2 @@
+Parámetro VARCHAR|Index Seek|[IX_Orden_Patente]|2
+Parámetro NVARCHAR|Index Scan|[IX_Orden_Patente]|41

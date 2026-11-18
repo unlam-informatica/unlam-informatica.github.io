@@ -1,0 +1,7 @@
+number true
+contactos: 3
+campos distintos: ["nombre+email+activo","nombre+direccion+telefonos","nombre+edad"]
+acknowledged: true, insertedId es ObjectId: true
+errInfo: "edad" "minimum"
+prueba: [{"mensaje":"conexión correcta"}]
+colecciones: true

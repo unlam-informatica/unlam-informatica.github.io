@@ -1,0 +1,5 @@
+1|FK antes de la cuarentena|Error 547
+2|CHECK antes de la cuarentena|Error 547
+3|Pedidos a cuarentena|2 filas
+4|FK después de la cuarentena|OK
+5|CHECK después de la cuarentena|OK

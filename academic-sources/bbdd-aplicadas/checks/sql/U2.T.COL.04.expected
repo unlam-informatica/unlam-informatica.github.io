@@ -1,0 +1,7 @@
+ventas.Cliente.Nombre|Modern_Spanish_CI_AS
+#Excluido.Nombre|SQL_Latin1_General_CP1_CI_AS
+JOIN sin COLLATE|error 468
+UNION sin COLLATE|error 468
+INTERSECT sin COLLATE|error 468
+JOIN con DATABASE_DEFAULT|2 fila(s)
+INTERSECT con DATABASE_DEFAULT|1 fila(s)

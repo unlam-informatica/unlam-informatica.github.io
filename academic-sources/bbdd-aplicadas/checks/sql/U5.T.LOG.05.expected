@@ -1,0 +1,5 @@
+Confirmada|LOP_COMMIT_XACT|1
+Confirmada|LOP_INSERT_ROWS|1
+Revertida|LOP_ABORT_XACT|1
+Revertida|LOP_DELETE_ROWS|1
+Revertida|LOP_INSERT_ROWS|1

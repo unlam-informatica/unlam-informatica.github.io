@@ -1,0 +1,20 @@
+--- $lookup: el resultado es un array
+{"_id":101,"cliente":[{"_id":"c1","nombre":"Ana","localidad":"Ramos Mejía"}]}
+{"_id":108,"cliente":[]}
+--- $unwind sobre el lookup: sin coincidencia el pedido desaparece
+{"_id":101,"cliente":"Ana"}
+--- con preserveNullAndEmptyArrays se conserva (LEFT JOIN)
+{"_id":101,"cliente":"Ana"}
+{"_id":108}
+--- $unwind de items con includeArrayIndex
+{"posicion":0,"pedido":105,"producto":1}
+{"posicion":1,"pedido":105,"producto":7}
+{"posicion":2,"pedido":105,"producto":6}
+--- ventas por categoria: $unwind + $lookup + $group
+{"unidades":10,"ingresos":310,"categoria":"perifericos"}
+{"unidades":1,"ingresos":300,"categoria":"pantallas"}
+{"unidades":1,"ingresos":85,"categoria":"audio"}
+--- $lookup con pipeline y let
+{"nombre":"Ana","entregados":1}
+{"nombre":"Bruno","entregados":2}
+{"nombre":"Carla","entregados":1}

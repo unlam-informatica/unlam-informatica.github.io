@@ -1,0 +1,7 @@
+Anulada|150|1.0
+Abierta|2121|14.1
+Cerrada|12729|84.9
+Abierta|Clustered Index Scan
+Anulada|Clustered Index Scan
+Cerrada|Clustered Index Scan
+Anulada con INCLUDE|Index Seek|[IX_Orden_Estado]

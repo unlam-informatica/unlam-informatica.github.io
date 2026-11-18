@@ -1,0 +1,6 @@
+1|BEGIN TRANSACTION TxExterna|1|NULL
+2|BEGIN TRANSACTION TxInterna|2|NULL
+3|ROLLBACK TRANSACTION TxInterna|2|error 6401
+4|COMMIT de la interna|1|no confirma nada todavía
+5|ROLLBACK TRANSACTION TxExterna|0|revierte las dos
+6|saldos finales|0|cuenta 1 = 5000.00, cuenta 2 = 3200.00

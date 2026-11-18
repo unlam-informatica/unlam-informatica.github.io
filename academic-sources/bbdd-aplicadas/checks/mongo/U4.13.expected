@@ -1,0 +1,8 @@
+{"idVenta":18,"fecha":{"$date":"2025-07-23T00:00:00Z"},"total":21500,"vendedor":"Vendedor 01","zona":"Oeste"}
+{"idVenta":21,"fecha":{"$date":"2025-08-25T00:00:00Z"},"total":63800,"vendedor":"Vendedor 04","zona":"Oeste"}
+{"idVenta":24,"fecha":{"$date":"2025-09-27T00:00:00Z"},"total":9800,"vendedor":"Vendedor 01","zona":"Oeste"}
+{"_id":"Norte","ventas":3,"total":375550}
+{"_id":"Oeste","ventas":3,"total":95100}
+{"_id":"Sur","ventas":3,"total":205750}
+view sobre ventas
+la vista refleja el alta: true

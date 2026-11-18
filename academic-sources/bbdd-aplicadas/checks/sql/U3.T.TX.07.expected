@@ -1,0 +1,8 @@
+1|XACT_STATE() sin transacción|0
+2|ERROR_NUMBER()|547
+3|ERROR_SEVERITY()|16
+4|XACT_STATE() dentro del CATCH|1
+5|@@TRANCOUNT dentro del CATCH|1
+6|@@TRANCOUNT al final|0
+7|saldo de la cuenta 3|800.00
+8|movimientos registrados|0

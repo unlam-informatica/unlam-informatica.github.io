@@ -1,0 +1,4 @@
+duplicado rechazado, codigo 11000
+sin indice: {"etapas":"SORT > COLLSCAN","devueltos":6,"examinados":10}
+con indice: {"etapas":"FETCH > IXSCAN","devueltos":6,"examinados":6}
+TTL: {"clave":{"creadaEn":1},"expireAfterSeconds":1800}

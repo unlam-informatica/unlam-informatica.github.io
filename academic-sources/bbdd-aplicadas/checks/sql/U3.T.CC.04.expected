@@ -1,0 +1,3 @@
+1|en el lote, antes de llamar|REPEATABLE READ
+2|dentro del procedimiento|SERIALIZABLE
+3|en el lote, después de la llamada|REPEATABLE READ

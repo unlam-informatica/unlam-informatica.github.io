@@ -1,0 +1,10 @@
+{"nombre":"string","edad":"int","altura":"double","entero":"int","grande":"double","forzado":"double","visitas":"long","saldo":"decimal","activo":"bool","segundoNombre":"null","hobbies":"array","nacimiento":"date","direccion":"object","ref":"objectId"}
+hex: 507f1f77bcf86cd799439011
+timestamp: 2012-10-17T21:13:27.000Z
+bytes de tiempo (4): 507f1f77
+valor aleatorio (5 bytes): bcf86cd799
+contador (3 bytes): 439011
+longitud hex: 24
+insertedId es ObjectId: true
+creado hace menos de 60 s: true
+_id repetido -> 11000

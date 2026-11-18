@@ -1,0 +1,21 @@
+{"nombre":"Webcam","precio":55}
+{"nombre":"Teclado","precio":45}
+{"nombre":"Mouse","precio":20}
+--- excluir campos
+{"_id":1,"nombre":"Teclado","categoria":"perifericos","precio":45}
+--- pagina 2 de 3 productos por pagina, ordenada por _id
+{"_id":4,"nombre":"Notebook"}
+{"_id":5,"nombre":"Auriculares"}
+{"_id":6,"nombre":"Parlante"}
+--- findOne
+{"nombre":"Auriculares"}
+--- findOne sin resultados: null
+countDocuments(): 8
+countDocuments(filtro): 3
+distinct categoria: ["audio","computadoras","impresion","pantallas","perifericos"]
+distinct etiquetas: ["audio","bluetooth","hdmi","oficina","portatil","usb","video"]
+--- orden por dos campos
+{"nombre":"Parlante","categoria":"audio"}
+{"nombre":"Auriculares","categoria":"audio"}
+{"nombre":"Notebook","categoria":"computadoras"}
+{"nombre":"Impresora","categoria":"impresion"}

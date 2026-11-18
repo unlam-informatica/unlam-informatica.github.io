@@ -1,0 +1,4 @@
+1|ERROR_NUMBER()|547
+2|restricción nombrada en el mensaje|CK_Cuenta_Saldo
+3|XACT_STATE() antes del ROLLBACK|1
+4|saldo de la cuenta 3|800.00

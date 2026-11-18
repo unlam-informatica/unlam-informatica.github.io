@@ -1,0 +1,155 @@
+{
+  "subject": "bbdd-aplicadas",
+  "pages": 82,
+  "exercises": 235,
+  "exercises_sympy": 0,
+  "exercises_reasoning": 43,
+  "exercises_engine": 185,
+  "exercises_reviewed": 7,
+  "exercises_complete": 235,
+  "example_checks": 418,
+  "units": {
+    "u1": {
+      "exercises": 37,
+      "levels": {
+        "inicial": 12,
+        "avanzado": 11,
+        "intermedio": 14
+      },
+      "sympy": 0,
+      "razonamiento": 0,
+      "motor": 37,
+      "revisado": 0,
+      "complete": 37,
+      "incomplete": 0,
+      "complete_levels": {
+        "inicial": 12,
+        "avanzado": 11,
+        "intermedio": 14
+      },
+      "complete_by_verification": {
+        "motor": 37
+      }
+    },
+    "u2": {
+      "exercises": 55,
+      "levels": {
+        "inicial": 18,
+        "intermedio": 20,
+        "avanzado": 17
+      },
+      "sympy": 0,
+      "razonamiento": 3,
+      "motor": 50,
+      "revisado": 2,
+      "complete": 55,
+      "incomplete": 0,
+      "complete_levels": {
+        "inicial": 18,
+        "intermedio": 20,
+        "avanzado": 17
+      },
+      "complete_by_verification": {
+        "motor": 50,
+        "razonamiento": 3,
+        "revisado": 2
+      }
+    },
+    "u3": {
+      "exercises": 45,
+      "levels": {
+        "avanzado": 13,
+        "inicial": 14,
+        "intermedio": 18
+      },
+      "sympy": 0,
+      "razonamiento": 7,
+      "motor": 33,
+      "revisado": 5,
+      "complete": 45,
+      "incomplete": 0,
+      "complete_levels": {
+        "avanzado": 13,
+        "inicial": 14,
+        "intermedio": 18
+      },
+      "complete_by_verification": {
+        "revisado": 5,
+        "razonamiento": 7,
+        "motor": 33
+      }
+    },
+    "u4": {
+      "exercises": 37,
+      "levels": {
+        "inicial": 12,
+        "intermedio": 13,
+        "avanzado": 12
+      },
+      "sympy": 0,
+      "razonamiento": 6,
+      "motor": 31,
+      "revisado": 0,
+      "complete": 37,
+      "incomplete": 0,
+      "complete_levels": {
+        "inicial": 12,
+        "intermedio": 13,
+        "avanzado": 12
+      },
+      "complete_by_verification": {
+        "motor": 31,
+        "razonamiento": 6
+      }
+    },
+    "u5": {
+      "exercises": 31,
+      "levels": {
+        "inicial": 10,
+        "intermedio": 11,
+        "avanzado": 10
+      },
+      "sympy": 0,
+      "razonamiento": 10,
+      "motor": 21,
+      "revisado": 0,
+      "complete": 31,
+      "incomplete": 0,
+      "complete_levels": {
+        "inicial": 10,
+        "intermedio": 11,
+        "avanzado": 10
+      },
+      "complete_by_verification": {
+        "razonamiento": 10,
+        "motor": 21
+      }
+    },
+    "u6": {
+      "exercises": 30,
+      "levels": {
+        "avanzado": 9,
+        "inicial": 9,
+        "intermedio": 12
+      },
+      "sympy": 0,
+      "razonamiento": 17,
+      "motor": 13,
+      "revisado": 0,
+      "complete": 30,
+      "incomplete": 0,
+      "complete_levels": {
+        "avanzado": 9,
+        "inicial": 9,
+        "intermedio": 12
+      },
+      "complete_by_verification": {
+        "motor": 13,
+        "razonamiento": 17
+      }
+    }
+  },
+  "errors": 0,
+  "warnings": 0,
+  "findings": []
+}

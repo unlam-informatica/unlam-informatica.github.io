@@ -1,0 +1,5 @@
+1|10756|Window frame with ROWS or RANGE must have an ORDER BY clause.
+2|4112|The function 'ROW_NUMBER' must have an OVER clause with ORDER BY.
+3|10752|The function 'LAG' may not have a window frame.
+4|4194|RANGE is only supported with UNBOUNDED and CURRENT ROW window frame delimiters.
+5|4108|Windowed functions can only appear in the SELECT or ORDER BY clauses.

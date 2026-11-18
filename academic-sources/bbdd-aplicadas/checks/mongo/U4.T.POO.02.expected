@@ -1,0 +1,6 @@
+{"_id":101,"fecha":{"$date":"2026-03-05T00:00:00Z"},"clienteId":1,"lineas":[{"producto":"Teclado","cantidad":2,"precioUnitario":45},{"producto":"Mouse","cantidad":1,"precioUnitario":20}]}
+--
+{"_id":101,"cliente":"Ana","cantidadLineas":2}
+--
+modificados: 1
+{"lineas":[{"producto":"Teclado","cantidad":2,"precioUnitario":45},{"producto":"Mouse","cantidad":1,"precioUnitario":25}]}

@@ -1,0 +1,5 @@
+documentos: 300
+_id_: usos=0
+categoria_1: usos=2
+stats().count=300, nindexes=2
+tiene totalIndexSize: true

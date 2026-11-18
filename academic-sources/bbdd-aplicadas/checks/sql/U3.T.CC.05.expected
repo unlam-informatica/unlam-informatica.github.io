@@ -1,0 +1,4 @@
+1|@@LOCK_TIMEOUT por defecto|-1
+2|@@LOCK_TIMEOUT tras SET LOCK_TIMEOUT 5000|5000
+3|deadlock_priority tras SET ... LOW|-5
+4|deadlock_priority tras SET ... HIGH|5

@@ -1,0 +1,17 @@
+upsert 1 (inserta): {"acknowledged":true,"insertedId":20,"matchedCount":0,"modifiedCount":0,"upsertedCount":1}
+documento: {"_id":20,"nombre":"Hub USB","precio":25,"stock":0}
+upsert 2 (actualiza): {"acknowledged":true,"insertedId":null,"matchedCount":1,"modifiedCount":1,"upsertedCount":0}
+documento: {"_id":20,"nombre":"Hub USB","precio":30,"stock":0}
+upsert por campo: upsertedCount 1, insertedId es ObjectId: true
+documento: {"nombre":"Cargador","stock":5}
+--- replaceOne reemplaza todo el documento salvo _id
+{"acknowledged":true,"insertedId":null,"matchedCount":1,"modifiedCount":1,"upsertedCount":0}
+{"_id":20,"nombre":"Hub USB 3.0","precio":35}
+--- findOneAndUpdate devuelve el documento
+{"_id":20,"nombre":"Hub USB 3.0","precio":40}
+--- deleteOne / deleteMany
+{"acknowledged":true,"deletedCount":1}
+{"acknowledged":true,"deletedCount":0}
+{"acknowledged":true,"deletedCount":3}
+quedan: 6
+{"acknowledged":true,"deletedCount":0}

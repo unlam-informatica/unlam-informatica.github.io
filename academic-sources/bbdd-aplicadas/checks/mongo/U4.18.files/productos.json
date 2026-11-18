@@ -1,0 +1,174 @@
+[
+  {
+    "sku": "P-001",
+    "nombre": "Auriculares inalambricos",
+    "categoria": "electronica",
+    "precio": {
+      "$numberDecimal": "18990.00"
+    },
+    "stock": 25,
+    "activo": true,
+    "etiquetas": [
+      "audio",
+      "bluetooth",
+      "oferta"
+    ],
+    "especificaciones": {
+      "color": "negro",
+      "autonomiaHoras": 30
+    }
+  },
+  {
+    "sku": "P-002",
+    "nombre": "Teclado mecanico",
+    "categoria": "electronica",
+    "precio": {
+      "$numberDecimal": "32500.50"
+    },
+    "stock": 12,
+    "activo": true,
+    "etiquetas": [
+      "perifericos",
+      "gamer"
+    ],
+    "especificaciones": {
+      "color": "negro",
+      "layout": "ISO"
+    }
+  },
+  {
+    "sku": "P-003",
+    "nombre": "Monitor 24 pulgadas",
+    "categoria": "electronica",
+    "precio": {
+      "$numberDecimal": "189900.00"
+    },
+    "stock": 5,
+    "activo": true,
+    "etiquetas": [
+      "pantallas",
+      "oferta"
+    ],
+    "especificaciones": {
+      "pulgadas": 24,
+      "panel": "IPS"
+    }
+  },
+  {
+    "sku": "P-004",
+    "nombre": "Cafetera de filtro",
+    "categoria": "hogar",
+    "precio": {
+      "$numberDecimal": "45200.00"
+    },
+    "stock": 8,
+    "activo": true,
+    "etiquetas": [
+      "cocina",
+      "oferta"
+    ],
+    "especificaciones": {
+      "capacidadLitros": 1.5
+    }
+  },
+  {
+    "sku": "P-005",
+    "nombre": "Juego de sabanas",
+    "categoria": "hogar",
+    "precio": {
+      "$numberDecimal": "23800.00"
+    },
+    "stock": 0,
+    "activo": false,
+    "etiquetas": [
+      "dormitorio"
+    ],
+    "especificaciones": {
+      "plazas": 2
+    }
+  },
+  {
+    "sku": "P-006",
+    "nombre": "Lampara de escritorio",
+    "categoria": "hogar",
+    "precio": {
+      "$numberDecimal": "12700.90"
+    },
+    "stock": 40,
+    "activo": true,
+    "etiquetas": [
+      "iluminacion",
+      "oficina"
+    ],
+    "especificaciones": {
+      "potenciaW": 9
+    }
+  },
+  {
+    "sku": "P-007",
+    "nombre": "Introduccion a las bases de datos",
+    "categoria": "libros",
+    "precio": {
+      "$numberDecimal": "15400.00"
+    },
+    "stock": 30,
+    "activo": true,
+    "etiquetas": [
+      "informatica",
+      "texto"
+    ],
+    "especificaciones": {
+      "paginas": 420
+    }
+  },
+  {
+    "sku": "P-008",
+    "nombre": "Novela de ciencia ficcion",
+    "categoria": "libros",
+    "precio": {
+      "$numberDecimal": "9900.00"
+    },
+    "stock": 0,
+    "activo": false,
+    "etiquetas": [
+      "ficcion"
+    ],
+    "especificaciones": {
+      "paginas": 310
+    }
+  },
+  {
+    "sku": "P-009",
+    "nombre": "Mochila urbana",
+    "categoria": "accesorios",
+    "precio": {
+      "$numberDecimal": "27600.00"
+    },
+    "stock": 15,
+    "activo": true,
+    "etiquetas": [
+      "viaje",
+      "oficina"
+    ],
+    "especificaciones": {
+      "litros": 20
+    }
+  },
+  {
+    "sku": "P-010",
+    "nombre": "Soporte para notebook",
+    "categoria": "accesorios",
+    "precio": {
+      "$numberDecimal": "14300.00"
+    },
+    "stock": 22,
+    "activo": true,
+    "etiquetas": [
+      "oficina",
+      "perifericos"
+    ],
+    "especificaciones": {
+      "material": "aluminio"
+    }
+  }
+]

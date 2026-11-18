@@ -1,0 +1,6 @@
+{"idVenta":10,"fecha":{"$date":"2025-04-26T00:00:00Z"},"total":158400}
+{"idVenta":1,"fecha":{"$date":"2025-01-17T00:00:00Z"},"total":150600}
+{"idVenta":13,"fecha":{"$date":"2025-05-29T00:00:00Z"},"total":140000}
+{"idVenta":19,"fecha":{"$date":"2025-08-03T00:00:00Z"},"total":99200}
+{"idVenta":7,"fecha":{"$date":"2025-03-24T00:00:00Z"},"total":79600}
+{"idVenta":22,"fecha":{"$date":"2025-09-05T00:00:00Z"},"total":75200}

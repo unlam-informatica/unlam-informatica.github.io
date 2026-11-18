@@ -1,0 +1,5 @@
+ST_Cliente_Provincia_Nombre|0|520|520|520
+ST_Pedido_Pendiente_Importe|1|1800|20000|1800
+0.25|8.5|Provincia
+1.9230769E-3|19.5|Provincia, Nombre
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.

@@ -1,0 +1,7 @@
+codigo|P001|1
+nombre|Cuaderno rayado|1
+precio|1250.50|2
+activo|true|3
+etiquetas|["escolar", "papeleria"]|4
+proveedor|{ "nombre": "Papelera Sur" }|5
+descuento|NULL|0

@@ -1,0 +1,9 @@
+1 GRANT SELECT esquema ventas al rol|SI|SI
+2 DENY SELECT ventas.Cliente al rol|NO|SI
+3 GRANT SELECT ventas.Cliente a ana (el DENY es del rol)|NO|SI
+4 REVOKE SELECT ventas.Cliente al rol (quita el DENY)|SI|SI
+5 DENY SELECT esquema ventas a ana|NO|NO
+6 REVOKE SELECT esquema ventas a ana (quita el DENY)|SI|SI
+7 DENY SELECT ventas.Cliente a un miembro de db_owner|NO|SI
+SELECT real de usr_dueno|NO (error 229)
+SELECT real de ana a Pedido|SI (1 filas)

@@ -1,0 +1,7 @@
+{"_id":"tarjeta","total":1500,"cantidad":2}
+{"_id":"transferencia","total":1300,"cantidad":2}
+--
+{"_id":1,"tipo":"tarjeta","cuotas":3}
+--
+{"_id":2}
+{"_id":4}

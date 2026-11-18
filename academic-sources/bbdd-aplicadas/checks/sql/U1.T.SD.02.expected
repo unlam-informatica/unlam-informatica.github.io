@@ -1,0 +1,8 @@
+SELECT Nombre FROM ventas.Vendedor WHERE Nombre = '' OR '1'='1'
+Ana
+Beto
+Cora
+Dario
+Eva
+Fede
+Gina

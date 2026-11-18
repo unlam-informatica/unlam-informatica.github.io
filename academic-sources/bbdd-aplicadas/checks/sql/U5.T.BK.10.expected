@@ -1,0 +1,7 @@
+FILELISTONLY archivos tipo D|1
+FILELISTONLY archivos tipo L|1
+HEADERONLY BackupType|1
+HEADERONLY HasBackupChecksums|1
+HEADERONLY RecoveryModel|FULL
+VERIFYONLY de un archivo inexistente|rechazada
+VERIFYONLY del archivo|valido

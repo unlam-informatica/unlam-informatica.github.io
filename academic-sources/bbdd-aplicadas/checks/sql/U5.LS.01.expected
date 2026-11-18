@@ -1,0 +1,44 @@
+login_auditor_u5|SQL_LOGIN
+login_supervisor_u5|SQL_LOGIN
+login_vendedor_u5|SQL_LOGIN
+usr_auditor|SQL_USER|dbo
+usr_practicante|SQL_USER|dbo
+usr_supervisor|SQL_USER|dbo
+usr_vendedor|SQL_USER|ventas
+ventas.Pedido|SELECT
+3
+rol_auditores|usr_auditor
+rol_supervisores|usr_supervisor
+rol_vendedores|usr_vendedor
+GRANT|SELECT|OBJECT_OR_COLUMN|rol_auditores|[ventas].[Pedido]
+GRANT|DELETE|SCHEMA|rol_supervisores|ventas
+GRANT|INSERT|SCHEMA|rol_supervisores|ventas
+GRANT|SELECT|SCHEMA|rol_supervisores|ventas
+GRANT|UPDATE|SCHEMA|rol_supervisores|ventas
+GRANT|EXECUTE|OBJECT_OR_COLUMN|rol_vendedores|[operaciones].[RegistrarPedido]
+GRANT|SELECT|OBJECT_OR_COLUMN|rol_vendedores|[ventas].[ClientesVisibles]
+operaciones|dbo
+ventas|dbo
+P1 auditor lee Cliente|NO (error 229)
+P1 vendedor lee Cliente|NO (error 229)
+P2 auditor lee Pedido|SI (2 filas)
+P2 auditor lee Cliente|NO (error 229)
+P2 auditor borra Pedido|NO (error 229)
+P2 supervisor lee Cliente|SI (3 filas)
+P2 supervisor borra Pedido|SI (2 filas)
+P3 vendedor lee ClientesVisibles|SI (2 filas)
+P3 vendedor lee Cliente|NO (error 229)
+P4 vendedor registra un pedido|SI (1 filas)
+P4 vendedor inserta directo|NO (error 229)
+P4 importe negativo|NO (error 50001)
+P5 a REVOKE del rol, queda el permiso de esquema|SI (3 filas)
+P5 b DENY sobre la tabla|NO (error 229)
+P5 c REVOKE del DENY, sigue el esquema|SI (3 filas)
+P5 d REVOKE del esquema: Cliente|NO (error 229)
+P5 d REVOKE del esquema: Pedido|SI (2 filas)
+P7 supervisor delega en el practicante|SI (0 filas)
+P7 practicante lee Pedido|SI (2 filas)
+P7 REVOKE sin CASCADE|error 4611
+P7 REVOKE con CASCADE|ok
+P7 practicante lee Pedido tras CASCADE|NO (error 229)
+0

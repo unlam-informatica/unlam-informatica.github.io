@@ -1,0 +1,24 @@
+{"acknowledged":true,"insertedId":null,"matchedCount":1,"modifiedCount":1,"upsertedCount":0}
+{"nombre":"Teclado","precio":50,"ultimaRevision":{"$date":"2026-07-01T00:00:00Z"}}
+--- $set con el mismo valor: modifiedCount 0
+{"acknowledged":true,"insertedId":null,"matchedCount":1,"modifiedCount":0,"upsertedCount":0}
+--- $unset
+{"nombre":"Teclado"}
+--- $inc con filtro (updateMany) y $mul
+{"acknowledged":true,"insertedId":null,"matchedCount":3,"modifiedCount":3,"upsertedCount":0}
+{"nombre":"Mouse","stock":29}
+{"nombre":"Teclado","stock":11}
+{"nombre":"Webcam","stock":13}
+Notebook x2: 1800
+--- $rename
+campos del _id 2: _id,nombre,categoria,precio,stock,tags
+--- $push, $addToSet, $pull
+push (permite repetir): ["usb","usb"]
+addToSet (ya existe): ["usb","usb"]
+addToSet (nuevo): ["usb","usb","gamer"]
+pull (quita todas las coincidencias): ["gamer"]
+push con each: ["gamer","a","b"]
+--- Sin filtro que coincida
+{"acknowledged":true,"insertedId":null,"matchedCount":0,"modifiedCount":0,"upsertedCount":0}
+--- $set condicional con updateMany
+{"acknowledged":true,"insertedId":null,"matchedCount":3,"modifiedCount":3,"upsertedCount":0}

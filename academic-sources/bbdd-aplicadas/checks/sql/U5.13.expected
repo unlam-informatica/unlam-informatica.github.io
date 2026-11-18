@@ -1,0 +1,6 @@
+SELECT ProductoId, Nombre FROM catalogo.Producto WHERE Publicado = 1 AND Categoria = 'pantallas';
+3|Monitor
+SELECT ProductoId, Nombre FROM catalogo.Producto WHERE Publicado = 1 AND Categoria = 'pantallas' OR Publicado = 0--';
+3|Monitor
+4|Prototipo
+3|Monitor

@@ -1,0 +1,2 @@
+Casos separados|Index Seek|[IX_Pedido_ClienteId]|2
+Parámetro opcional|Index Scan|[IX_Pedido_ClienteId]|37

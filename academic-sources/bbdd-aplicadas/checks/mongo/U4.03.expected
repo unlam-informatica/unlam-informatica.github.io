@@ -1,0 +1,4 @@
+lt 10:                     3
+not gte 10:                21
+sin campo descuento:       18
+con descuento y not gte 10: 3
