@@ -30,6 +30,17 @@ test('fórmulas, diagramas y desborde móvil', async ({ page }) => {
   }
 });
 
+test('extractos de búsqueda con fórmulas en texto plano', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Buscar', exact: true }).click();
+  await page.locator('.pagefind-ui__search-input').fill('inversa');
+  await expect(page.locator('.pagefind-ui__result').first()).toBeVisible();
+  const excerpts = (await page.locator('.pagefind-ui__result-excerpt').allInnerTexts()).join('\n');
+  // KaTeX duplica cada fórmula (MathML, LaTeX y HTML): el índice solo debe tener una copia legible.
+  expect(excerpts).not.toMatch(/\\(begin|frac|neq|left|right|mathbb)\b/);
+  expect(excerpts).not.toMatch(/\^\{|_\{/);
+});
+
 test('búsqueda global', async ({ page }) => {
   for (const [term, subject] of [['derivada', 'analisis-matematico-i'], ['transacciones', 'bbdd-aplicadas'], ['patrones', 'diseno-de-software'], ['autovalores', 'algebra-ii']]) {
     await page.goto('/');
