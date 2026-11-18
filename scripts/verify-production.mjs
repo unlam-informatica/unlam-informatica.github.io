@@ -8,8 +8,11 @@ const navigationOnly = args.includes('--navigation-only');
 const matrix = JSON.parse(fs.readFileSync('migration/compatibility.json', 'utf8'));
 const sources = JSON.parse(fs.readFileSync('migration/sources.json', 'utf8'));
 const hashes = new Map(sources.assets.map(a => ['/' + a.output.slice(7), a.sha256]));
+// Withdrawn assets keep their historical record but must no longer be served.
+const withdrawn = new Set(JSON.parse(fs.readFileSync('migration/withdrawn.json', 'utf8')).assets.map(w => '/' + w.output.slice(7)));
 const checks = new Map();
 for (const entry of matrix) {
+  if (withdrawn.has(entry.old)) { checks.set(entry.old, { ...entry, url: entry.old, kind: 'withdrawn' }); continue; }
   if (!navigationOnly || entry.kind === 'asset') checks.set(entry.old, { ...entry, url: entry.old, canonicalPage: entry.old === entry.canonical && entry.kind === 'page' });
 }
 for (const entry of matrix.filter(e => e.kind === 'page')) {
@@ -20,7 +23,7 @@ checks.set('/pagefind/pagefind.js', { url: '/pagefind/pagefind.js', kind: 'searc
 // The incident only affected the gzip cache. Always check it explicitly alongside
 // identity responses, so a successful curl without compression cannot hide a 404.
 const queue = [...checks.values()].flatMap(entry =>
-  (entry.kind === 'asset' ? ['gzip'] : ['identity', 'gzip']).map(encoding => ({ ...entry, encoding })));
+  (entry.kind === 'asset' || entry.kind === 'withdrawn' ? ['gzip'] : ['identity', 'gzip']).map(encoding => ({ ...entry, encoding })));
 const errors = [];
 let checked = 0;
 await Promise.all(Array.from({ length: 4 }, async () => {
@@ -29,6 +32,11 @@ await Promise.all(Array.from({ length: 4 }, async () => {
     let response;
     try {
       response = await fetch(origin + entry.url, { headers: { 'Accept-Encoding': entry.encoding }, signal: AbortSignal.timeout(30000) });
+      if (entry.kind === 'withdrawn') {
+        if (response.status !== 404) throw Error(`Recurso retirado todavía servido (HTTP ${response.status})`);
+        checked++;
+        continue;
+      }
       if (!response.ok) throw Error(`HTTP ${response.status}`);
       if (entry.kind === 'search' && !response.headers.get('content-type')?.includes('javascript')) throw Error('El módulo de búsqueda no es JavaScript');
       if (entry.kind === 'asset') {

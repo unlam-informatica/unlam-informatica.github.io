@@ -1,0 +1,47 @@
+{
+  "description": "Recursos migrados que se retiraron de la publicación. Su procedencia histórica (origen, salida y SHA-256) sigue registrada en sources.json y compatibility.json; los validadores exigen que estas rutas no se publiquen y el importador no las vuelve a copiar.",
+  "assets": [
+    {
+      "source": "bbdd-aplicadas/unidad-4/inputs/MongoDB-Agregaciones-2026.pdf",
+      "output": "public/bbdd-aplicadas/unidad-4/inputs/MongoDB-Agregaciones-2026.pdf",
+      "sha256": "d38e28a3d86e9cd5489529ee496a50c5f1b9b6bb5faa5a2227de042c6b0458ee",
+      "withdrawn": "2026-11-17",
+      "reason": "Presentación de la cátedra de Bases de Datos Aplicada (Unidad 4, agregaciones, v3.0 2026) sin autorización de redistribución registrada."
+    },
+    {
+      "source": "bbdd-aplicadas/unidad-4/inputs/MongoDB-Indices.pdf",
+      "output": "public/bbdd-aplicadas/unidad-4/inputs/MongoDB-Indices.pdf",
+      "sha256": "9eb38199334b333b96015e192212dc6484fa62543fe184f94545e154a18e65ee",
+      "withdrawn": "2026-11-17",
+      "reason": "Presentación de la cátedra de Bases de Datos Aplicada (Unidad 4, índices, v1.0 2024) sin autorización de redistribución registrada."
+    },
+    {
+      "source": "bbdd-aplicadas/unidad-1/practica/window-functions.sql",
+      "output": "public/bbdd-aplicadas/unidad-1/practica/window-functions.sql",
+      "sha256": "137ec43d1ec2327499763f94d3b63b95018c3754ac4509e58235c73eca94f47b",
+      "withdrawn": "2026-11-18",
+      "reason": "Script con el esquema y los datos de la guía de cátedra de window functions (v1.0, 2024-03): reproducción de material de cátedra sin autorización (decisión D2). La práctica se reemplazó por ejercicios originales y ya no lo enlaza."
+    },
+    {
+      "source": "bbdd-aplicadas/unidad-4/practica/archivos/datosventas_1.json",
+      "output": "public/bbdd-aplicadas/unidad-4/practica/archivos/datosventas_1.json",
+      "sha256": "ee562227aabe04f13df28450c6d4f2ad46e51be16d8a21edd71b86ebe5d284a8",
+      "withdrawn": "2026-11-18",
+      "reason": "Dataset coincidente con el de la guía de cátedra 2 de la Unidad 4: reproducción de material de cátedra sin autorización (decisión D2). Las prácticas usan datos propios y ya no lo usan."
+    },
+    {
+      "source": "bbdd-aplicadas/unidad-4/practica/archivos/cc_info.csv",
+      "output": "public/bbdd-aplicadas/unidad-4/practica/archivos/cc_info.csv",
+      "sha256": "191b717efa83670fc185ad0a017163f3c8f73e9885fbd006da288c96a148d8b7",
+      "withdrawn": "2026-11-18",
+      "reason": "Datos sintéticos con valores con forma de número de tarjeta y procedencia no documentada; ninguna página los usa y su origen no justifica conservarlos públicamente."
+    },
+    {
+      "source": "bbdd-aplicadas/unidad-4/practica/archivos/transactions.csv",
+      "output": "public/bbdd-aplicadas/unidad-4/practica/archivos/transactions.csv",
+      "sha256": "543684c021a086627bcf033b8abe271e008db0916710ea6a20ae95d46a0dabe6",
+      "withdrawn": "2026-11-18",
+      "reason": "Transacciones sintéticas asociadas a cc_info.csv, con procedencia no documentada; ninguna página las usa y su origen no justifica conservarlas públicamente."
+    }
+  ]
+}

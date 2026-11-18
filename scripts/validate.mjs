@@ -58,8 +58,15 @@ for (const [r, {$}] of pages) {
 const reachable = new Set(['/']);
 for (const current of reachable) for (const next of graph.get(current) || []) reachable.add(next);
 for (const r of sourceRoutes) if (!reachable.has(r)) errors.push(`Unreachable from homepage ${r}`);
+// Withdrawn assets keep their provenance in sources.json and compatibility.json, but
+// must not be published again: neither in public/ nor in the build output.
+const withdrawn = new Map(JSON.parse(fs.readFileSync('migration/withdrawn.json')).assets.map(w => ['/'+w.output.slice(7), w]));
+for (const [url, w] of withdrawn) {
+ if (fs.existsSync(w.output) || target(new URL(url, 'https://unlam-informatica.github.io'))) errors.push(`Withdrawn asset still published ${url}`);
+}
 const matrix = JSON.parse(fs.readFileSync('migration/compatibility.json'));
 for (const entry of matrix) {
+ if (withdrawn.has(entry.old)) continue;
  if (!target(new URL(entry.old, 'https://unlam-informatica.github.io'))) errors.push(`Missing legacy path ${entry.old}`);
  if (!target(new URL(entry.canonical, 'https://unlam-informatica.github.io'))) errors.push(`Missing canonical ${entry.canonical}`);
  if (entry.kind === 'page') {
@@ -75,15 +82,31 @@ for (const entry of matrix) {
  }
 }
 const provenance = JSON.parse(fs.readFileSync('migration/sources.json'));
-for (const page of provenance.pages) {
- for (const output of [page, ...(page.additionalOutputs || [])]) {
-  if (!fs.existsSync(output.output) || createHash('sha256').update(fs.readFileSync(output.output)).digest('hex') !== output.migratedSha256) errors.push(`Migrated page hash mismatch ${output.output}`);
- }
+// Deliberate academic revisions after the migration are recorded in migration/revisions.json as a
+// hash chain per output (from -> to). sources.json keeps the migrated hashes untouched; the current
+// file must match the end of its chain, so any unregistered edit still fails.
+const revisions = JSON.parse(fs.readFileSync('migration/revisions.json')).revisions;
+const migratedOutputs = new Map();
+for (const page of provenance.pages) for (const output of [page, ...(page.additionalOutputs || [])]) migratedOutputs.set(output.output, output.migratedSha256);
+const chainHead = new Map(migratedOutputs);
+for (const [i, r] of revisions.entries()) {
+ if (!r.output || !r.from || !r.to || !r.date || !r.stage || !r.reason) { errors.push(`Revision ${i} incomplete`); continue; }
+ if (!migratedOutputs.has(r.output)) { errors.push(`Revision ${i} for unknown migrated output ${r.output}`); continue; }
+ if (chainHead.get(r.output) !== r.from) errors.push(`Revision chain broken at ${i} for ${r.output}`);
+ chainHead.set(r.output, r.to);
+}
+for (const [output, expected] of chainHead) {
+ if (!fs.existsSync(output) || createHash('sha256').update(fs.readFileSync(output)).digest('hex') !== expected) errors.push(`Migrated page hash mismatch ${output}`);
 }
 for (const a of provenance.assets) {
+ const w = withdrawn.get('/'+a.output.slice(7));
+ if (w) { if (w.sha256 !== a.sha256 || w.source !== a.source) errors.push(`Withdrawn asset provenance mismatch ${a.output}`); continue; }
  if (createHash('sha256').update(fs.readFileSync(a.output)).digest('hex') !== a.sha256 || createHash('sha256').update(fs.readFileSync('dist/'+a.output.slice(7))).digest('hex') !== a.sha256) errors.push(`Asset changed ${a.output}`);
 }
-const report = { pages: sourceRoutes.size, reachableFromHomepage: [...sourceRoutes].filter(r => reachable.has(r)).length, renderedHtml: pages.size, internalLinksAndResources: checked, compatibilityEntries: matrix.length, assets: provenance.assets.length, errors: [...new Set(errors)] };
+for (const [url, w] of withdrawn) {
+ if (!provenance.assets.some(a => a.output === w.output) || !matrix.some(e => e.old === url)) errors.push(`Withdrawn asset without historical provenance ${url}`);
+}
+const report = { pages: sourceRoutes.size, reachableFromHomepage: [...sourceRoutes].filter(r => reachable.has(r)).length, renderedHtml: pages.size, internalLinksAndResources: checked, compatibilityEntries: matrix.length, assets: provenance.assets.length - withdrawn.size, withdrawnAssets: withdrawn.size, revisions: revisions.length, errors: [...new Set(errors)] };
 fs.writeFileSync('migration/validation.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));
 if (errors.length) process.exitCode = 1;
