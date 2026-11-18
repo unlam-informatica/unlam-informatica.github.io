@@ -42,6 +42,29 @@ test('las barras laterales se ocultan con botones y atajos, y el estado se recue
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBeTruthy();
 });
 
+test('al ocultar barras laterales la columna de lectura se ensancha un poco', async ({ page, isMobile }) => {
+  test.skip(isMobile, 'En móvil la columna ocupa todo el ancho.');
+  const width = async () => Math.round((await page.locator('.sl-markdown-content').boundingBox())!.width);
+  const noOverflow = () => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto(page_);
+  expect(await width()).toBe(736);
+  await page.locator('[data-sidebar-toggle="left"]').click();
+  expect(await width()).toBe(800);
+  await page.locator('[data-sidebar-toggle="right"]').click();
+  expect(await width()).toBe(832);
+  expect(await noOverflow()).toBeTruthy();
+  await page.locator('[data-sidebar-toggle="left"]').click();
+  expect(await width()).toBe(800);
+  await page.locator('[data-sidebar-toggle="right"]').click();
+  expect(await width()).toBe(736);
+  // Entre 1024 y 1279 px el índice no se oculta con el botón: solo cuenta el menú izquierdo.
+  await page.setViewportSize({ width: 1100, height: 900 });
+  await page.locator('[data-sidebar-toggle="left"]').click();
+  expect(await width()).toBeLessThanOrEqual(800);
+  expect(await noOverflow()).toBeTruthy();
+});
+
 test('en pantallas angostas los botones no aparecen y el atajo no cambia nada', async ({ page }) => {
   await page.setViewportSize({ width: 800, height: 900 });
   await page.goto(page_);

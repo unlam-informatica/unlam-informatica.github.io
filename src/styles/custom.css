@@ -70,6 +70,17 @@ starlight-toc .katex { font-size: 1em; }
    fórmulas, tablas y figuras sin pasar de unos 100 caracteres por línea; en pantallas
    medianas la columna sigue siendo fluida y ocupa solo el espacio disponible. */
 :root { --content-max-width: 46rem; }
+/* Con barras laterales ocultas (src/components/Header.astro) la columna se ensancha un poco:
+   50rem (800 px) con una oculta y 52rem (832 px) con ambas, unos 110 caracteres por línea.
+   Solo cuenta una barra que la página tenga y que se oculte en ese ancho de pantalla
+   (menú desde 1024 px, índice desde 1280 px). */
+@media (min-width: 1024px) {
+  :root[data-sidebar-left='hidden']:has(.container-wrapper-main > .aside) { --content-max-width: 50rem; }
+}
+@media (min-width: 1280px) {
+  :root[data-sidebar-right='hidden']:has([data-slot='docs'] > .toc) { --content-max-width: 50rem; }
+  :root[data-sidebar-left='hidden'][data-sidebar-right='hidden']:has(.container-wrapper-main > .aside):has([data-slot='docs'] > .toc) { --content-max-width: 52rem; }
+}
 
 /* Tabla de tipos de datos (BBDD Aplicadas, repaso de SQL): «Uso típico» es la columna
    que se lee, así que tiene un ancho mínimo para no partirse en muchas líneas. */
