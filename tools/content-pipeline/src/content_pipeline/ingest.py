@@ -7,6 +7,7 @@ sobreviven a nuevas ejecuciones (salvo ``reclassify=True``).
 """
 from __future__ import annotations
 
+import copy
 import fnmatch
 from collections import Counter
 from pathlib import Path
@@ -24,6 +25,7 @@ FORMATS: dict[str, str] = {
     ".pptx": "pptx",
     ".xlsx": "xlsx",
     ".md": "markdown",
+    ".txt": "plaintext",
     ".html": "html",
     ".htm": "html",
     ".jpg": "image",
@@ -102,7 +104,8 @@ def classify(relative_path: str, config: dict[str, Any]) -> dict[str, Any]:
     ``match`` usa comodines de ``fnmatch`` sobre la ruta relativa, sin distinguir
     mayúsculas ni acentos. ``*`` también cruza separadores de carpeta.
     """
-    result = {field: config["defaults"].get(field) for field in CLASSIFICATION_FIELDS}
+    # Copias: los valores por defecto (p. ej. un mapa de extracción) no se comparten entre entradas.
+    result = {field: copy.deepcopy(config["defaults"].get(field)) for field in CLASSIFICATION_FIELDS}
     result["units"] = list(result["units"] or [])
     result["topics"] = list(result["topics"] or [])
     matched = False
@@ -115,7 +118,7 @@ def classify(relative_path: str, config: dict[str, Any]) -> dict[str, Any]:
         for field in CLASSIFICATION_FIELDS:
             if field in rule:
                 value = rule[field]
-                result[field] = list(value) if isinstance(value, list) else value
+                result[field] = copy.deepcopy(value)
     result["_matched"] = matched
     return result
 

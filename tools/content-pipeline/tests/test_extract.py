@@ -87,3 +87,36 @@ def test_limite_y_seleccion_por_id(subject):
     other = FakeEngine()
     run_extract(subject, other, ids=[guide["id"]], force=True)
     assert other.calls == ["guia.pdf"]
+
+
+class _StubDocument:
+    """Documento mínimo con la interfaz de exportación de Docling."""
+
+    pages = {1: None, 2: None}
+
+    def __init__(self):
+        self.calls = []
+
+    def export_to_markdown(self, **kwargs):
+        self.calls.append(kwargs)
+        return f"pagina {kwargs.get('page_no')}"
+
+
+def test_texto_de_figuras_solo_con_picture_text():
+    from content_pipeline.extract import DoclingEngine
+
+    document = _StubDocument()
+    pages = DoclingEngine._pages(document, [])
+    assert [p.page_no for p in pages] == [1, 2]
+    assert all("traverse_pictures" not in call for call in document.calls)
+
+    document = _StubDocument()
+    DoclingEngine._pages(document, [], picture_text=True)
+    assert all(call.get("traverse_pictures") is True for call in document.calls)
+
+
+def test_opciones_de_perfil_extra_se_conservan():
+    name, options = resolve_profile({"id": "x", "format": "pdf",
+                                     "extraction": {"profile": "text", "force_ocr": True, "picture_text": True}})
+    assert name == "text"
+    assert options["force_ocr"] is True and options["picture_text"] is True and options["formulas"] is False

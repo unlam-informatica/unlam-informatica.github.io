@@ -155,6 +155,33 @@ def cmd_qa(args, paths):
     return 1 if report["errors"] else 0
 
 
+def cmd_engines(args, paths):
+    from . import codecheck
+
+    engines = codecheck.load_engines(paths)
+    if args.action == "up":
+        _print(codecheck.engines_up(engines))
+    elif args.action == "status":
+        _print(codecheck.engines_status(engines))
+    else:
+        _print({"eliminados": codecheck.engines_down(engines)})
+    return 0
+
+
+def cmd_verify_code(args, paths):
+    from . import codecheck
+
+    docs_root = Path(args.docs_root) if args.docs_root else find_repo_root(paths.root) / "src/content/docs" / paths.subject
+    report_path = Path(args.report) if args.report else None
+    runner = codecheck.DockerRunner(codecheck.load_engines(paths))
+    report = codecheck.run_verify_code(paths, runner, docs_root=docs_root, ids=_split(args.ids), report_path=report_path)
+    _print({"summary": report["summary"], "engines": report["engines"]})
+    for check in report["checks"]:
+        if check["status"] != "aprobado":
+            print(f"{check['status'].upper()} {check['id']} ({check['engine']}): {check['message']}", file=sys.stderr)
+    return 1 if report["summary"]["failed"] or report["summary"]["errors"] else 0
+
+
 COMMANDS = {
     "inventory": (cmd_inventory, "Inventaria raw/, calcula hashes, detecta duplicados y actualiza catalog.yaml"),
     "extract": (cmd_extract, "Convierte con Docling a Markdown y JSON (con caché por hash)"),
@@ -165,6 +192,8 @@ COMMANDS = {
     "status": (cmd_status, "Muestra el estado de procesamiento de una materia"),
     "verify-math": (cmd_verify_math, "Ejecuta las comprobaciones simbólicas (SymPy) de checks/"),
     "qa": (cmd_qa, "Controla calidad y cobertura del material publicado"),
+    "engines": (cmd_engines, "Crea, consulta o elimina los contenedores SQL Server y MongoDB (up|status|down)"),
+    "verify-code": (cmd_verify_code, "Ejecuta checks/sql y checks/mongo en Docker y detecta código sin verificar"),
 }
 
 
@@ -207,6 +236,12 @@ def build_parser() -> argparse.ArgumentParser:
             sub.add_argument("--checks", help="Carpeta de comprobaciones (por defecto <materia>/checks)")
         if name in ("verify-math", "qa"):
             sub.add_argument("--report", help="Ruta del reporte JSON")
+        if name == "engines":
+            sub.add_argument("action", choices=["up", "status", "down"])
+        if name == "verify-code":
+            sub.add_argument("--ids", help="Lista de identificadores separados por comas")
+            sub.add_argument("--docs-root", help="Carpeta de páginas de la materia (por defecto src/content/docs/<materia>)")
+            sub.add_argument("--report", help="Ruta del reporte JSON (el .md se escribe al lado)")
     return parser
 
 

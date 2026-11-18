@@ -85,3 +85,53 @@ def test_run_normalize_idempotente(subject):
     assert second["cached"] == 2 and second["normalized"] == 0
     index = json.loads(next(subject.index.glob("*.json")).read_text(encoding="utf-8"))
     assert index["sections"] and "report" in index
+
+
+def test_detecta_paginas_ilegibles():
+    normal = "Una canción con acentos correctos: ñandú, también, más. " * 3
+    md = pages(normal, "�" * 30 + " texto " * 5, "Ã©" * 30, "�� corto", normal)
+    _, _, report = normalize_markdown(md)
+    assert report["illegible_pages"] == [2, 3]
+    assert 0 < report["illegible_ratio"] < 1
+    assert isinstance(report["illegible_ratio"], float) and round(report["illegible_ratio"], 3) == report["illegible_ratio"]
+
+
+def test_ilegible_sin_marcas_de_pagina():
+    _, _, report = normalize_markdown("�" * 40 + " " + "a" * 10)
+    assert report["illegible_pages"] == [None]
+    _, _, clean = normalize_markdown("Texto normal y legible sin marcas de página alguna.")
+    assert clean["illegible_pages"] == [] and clean["illegible_ratio"] == 0.0
+
+
+def test_cuenta_bloques_de_codigo_y_tablas():
+    long_line = "SELECT " + "columna, " * 20 + "x FROM t;"
+    code = f"```sql\n{long_line}\n```\n\n```json\n{{\n  \"a\": 1\n}}\n```\n\n```\n| a | b |\n|---|---|\n```"
+    table = "| a | b |\n|---|---|\n| 1 | 2 |\n\ntexto\n\n| solo | filas |\n| x | y |"
+    _, _, report = normalize_markdown(pages(code, table + "\n\n| c |\n| --- |\n| 3 |"))
+    assert report["code_blocks"] == 3
+    assert report["code_blocks_flattened"] == 1
+    assert report["tables"] == 2
+
+
+def test_informe_conserva_texto_normalizado():
+    md = pages("# T\n\n```\n| a |\n|---|\n```")
+    text, _, _ = normalize_markdown(md)
+    assert "| a |" in text and "# T" in text
+
+
+def test_operadores_mongodb_y_montos_no_son_delimitadores_desbalanceados():
+    mongo = 'Usar $match y luego $group con "$producto.precio" y $$NOW; `$set` en línea.'
+    assert "delimitadores-desbalanceados" not in detect_flags(mongo)
+    assert "delimitadores-desbalanceados" not in detect_flags("Cuesta $500 o $ 1.000,50 por mes.")
+    assert "delimitadores-desbalanceados" not in detect_flags("Sea $x$ y $\\alpha$ con $a_1$ y $x+y=2$.")
+    assert "delimitadores-desbalanceados" in detect_flags("Sea $x y $match.")
+    assert "delimitadores-desbalanceados" in detect_flags("Sea $x \\in V un vector")
+
+
+def test_clean_dollars_conserva_formulas_con_digitos():
+    from content_pipeline.textscan import clean_dollars
+    for formula in ("$2x+1$", "$2$", "$1,\\ 0,\\ -2$", "$1,1,2$"):
+        assert clean_dollars(f"Sea {formula}.")[2] == []
+    text, ops, amounts = clean_dollars("Pagó $500 y usa $lookup con $$ROOT")
+    assert ops == ["$$ROOT", "$lookup"] or set(ops) == {"$$ROOT", "$lookup"}
+    assert amounts == ["$500"] and "$" not in text

@@ -47,8 +47,15 @@ def read_yaml(path: Path) -> Any:
         return yaml.safe_load(handle)
 
 
+class _NoAliasDumper(yaml.SafeDumper):
+    """Escribe cada valor completo: un catálogo editable a mano no debe tener anclas (&id001)."""
+
+    def ignore_aliases(self, data: Any) -> bool:
+        return True
+
+
 def write_yaml(path: Path, data: Any, header: str | None = None) -> bool:
-    body = yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=100)
+    body = yaml.dump(data, Dumper=_NoAliasDumper, allow_unicode=True, sort_keys=False, width=100)
     prefix = "".join(f"# {line}\n" for line in header.splitlines()) if header else ""
     return atomic_write(path, prefix + body)
 
