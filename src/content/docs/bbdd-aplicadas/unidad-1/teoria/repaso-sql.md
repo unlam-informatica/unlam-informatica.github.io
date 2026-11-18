@@ -41,19 +41,23 @@ Hay tipos básicos definidos por el estándar ANSI y otros propios de cada motor
 
 ### Numéricos
 
-| Tipo de dato   |              Tamaño |                 Valor mínimo |                Valor máximo | Uso típico                                   |
-| -------------- | ------------------: | ---------------------------: | --------------------------: | -------------------------------------------- |
-| `BIT`          |        1 bit aprox. |                          `0` |                         `1` | Valores booleanos: activo/inactivo, sí/no    |
-| `TINYINT`      |              1 byte |                          `0` |                       `255` | Estados, edades, cantidades muy chicas       |
-| `SMALLINT`     |             2 bytes |                    `-32.768` |                    `32.767` | Cantidades chicas                            |
-| `INT`          |             4 bytes |             `-2.147.483.648` |             `2.147.483.647` | IDs, contadores, cantidades generales        |
-| `BIGINT`       |             8 bytes | `-9.223.372.036.854.775.808` | `9.223.372.036.854.775.807` | IDs enormes, tablas con muchísimos registros |
-| `DECIMAL(p,s)` |        5 a 17 bytes |               Depende de `p` |              Depende de `p` | Importes, porcentajes, valores exactos       |
-| `NUMERIC(p,s)` |        5 a 17 bytes |               Depende de `p` |              Depende de `p` | Igual que `DECIMAL`                          |
-| `SMALLMONEY`   |             4 bytes |              `-214.748,3648` |              `214.748,3647` | Dinero, aunque suele preferirse `DECIMAL`    |
-| `MONEY`        |             8 bytes |  `-922.337.203.685.477,5808` |  `922.337.203.685.477,5807` | Dinero, aunque suele preferirse `DECIMAL`    |
-| `REAL`         |             4 bytes |           aprox. `-3.40E+38` |           aprox. `3.40E+38` | Números aproximados                          |
-| `FLOAT`        | 8 bytes por defecto |          aprox. `-1.79E+308` |          aprox. `1.79E+308` | Cálculos científicos o aproximados           |
+<div class="data-type-table">
+
+| Tipo de dato   |              Tamaño | Uso típico                                   |                 Valor mínimo |                Valor máximo |
+| -------------- | ------------------: | -------------------------------------------- | ---------------------------: | --------------------------: |
+| `BIT`          |        1 bit aprox. | Valores booleanos: activo/inactivo, sí/no    |                          `0` |                         `1` |
+| `TINYINT`      |              1 byte | Estados, edades, cantidades muy chicas       |                          `0` |                       `255` |
+| `SMALLINT`     |             2 bytes | Cantidades chicas                            |                    `-32.768` |                    `32.767` |
+| `INT`          |             4 bytes | IDs, contadores, cantidades generales        |             `-2.147.483.648` |             `2.147.483.647` |
+| `BIGINT`       |             8 bytes | IDs enormes, tablas con muchísimos registros | `-9.223.372.036.854.775.808` | `9.223.372.036.854.775.807` |
+| `DECIMAL(p,s)` |        5 a 17 bytes | Importes, porcentajes, valores exactos       |               Depende de `p` |              Depende de `p` |
+| `NUMERIC(p,s)` |        5 a 17 bytes | Igual que `DECIMAL`                          |               Depende de `p` |              Depende de `p` |
+| `SMALLMONEY`   |             4 bytes | Dinero, aunque suele preferirse `DECIMAL`    |              `-214.748,3648` |              `214.748,3647` |
+| `MONEY`        |             8 bytes | Dinero, aunque suele preferirse `DECIMAL`    |  `-922.337.203.685.477,5808` |  `922.337.203.685.477,5807` |
+| `REAL`         |             4 bytes | Números aproximados                          |           aprox. `-3.40E+38` |           aprox. `3.40E+38` |
+| `FLOAT`        | 8 bytes por defecto | Cálculos científicos o aproximados           |          aprox. `-1.79E+308` |          aprox. `1.79E+308` |
+
+</div>
 
 ### Fecha y hora
 

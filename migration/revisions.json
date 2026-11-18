@@ -1251,6 +1251,14 @@
       "stage": "E9",
       "reason": "Integración: se reemplaza un párrafo de ayuda duplicado entre prácticas de u4 por una referencia (advertencia parrafo-duplicado de qa)",
       "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/repaso-sql.md",
+      "from": "e67bb90858a38984416b62fa4c9990f2a00e47ca75b0c70c74b4f87af3863362",
+      "to": "fd12049bb3b7fea2714347a5e5cb3a2d9e9ed350536d2c3a5188bf96407cad55",
+      "date": "2026-11-18",
+      "stage": "E9",
+      "reason": "Presentación: en la tabla de tipos numéricos, «Uso típico» pasa a la tercera columna, antes de los valores mínimo y máximo, y se le da más ancho; el contenido no cambia"
     }
   ]
 }
