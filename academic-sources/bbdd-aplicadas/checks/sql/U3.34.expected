@@ -1,0 +1,3 @@
+sí
+Con rango|Index Seek|[IX_Orden_FechaIngreso]|3
+Con YEAR y MONTH|Index Scan|[IX_Orden_FechaIngreso]|43

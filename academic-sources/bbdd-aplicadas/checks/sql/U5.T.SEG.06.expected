@@ -1,0 +1,8 @@
+1 supervisor delega SELECT en ana|SI (0 filas)
+2 ana lee Pedido|SI (1 filas)
+3 REVOKE sin CASCADE|error 4611
+4 ana lee Pedido tras el error|SI (1 filas)
+5 REVOKE GRANT OPTION FOR ... CASCADE|ok
+6 ana lee Pedido|NO (error 229)
+7 supervisor lee Pedido|SI (1 filas)
+8 supervisor delega de nuevo|NO (error 15151)

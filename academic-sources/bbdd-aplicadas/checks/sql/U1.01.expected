@@ -1,0 +1,9 @@
+Genero|GeneroId|int|NO
+Genero|Nombre|varchar|NO
+Socio|SocioId|int|NO
+Socio|Codigo|char|NO
+Socio|Nombre|varchar|NO
+Socio|Email|varchar|YES
+Socio|Categoria|varchar|NO
+Socio|FechaAlta|date|NO
+Socio|Activo|bit|NO

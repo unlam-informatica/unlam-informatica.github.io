@@ -1,0 +1,1 @@
+{"porMedioPago":[{"_id":"credito","ventas":6},{"_id":"debito","ventas":6},{"_id":"efectivo","ventas":6},{"_id":"transferencia","ventas":6}],"porRangoDeTotal":[{"_id":0,"ventas":4},{"_id":20000,"ventas":11},{"_id":100000,"ventas":9}],"totalGeneral":[{"ventas":24,"facturado":2064700}]}

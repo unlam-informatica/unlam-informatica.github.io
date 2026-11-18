@@ -1,0 +1,2 @@
+<Empleados><Empleado><EmpleadoId>1</EmpleadoId><Email>e01@ejemplo.test</Email></Empleado><Empleado><EmpleadoId>2</EmpleadoId></Empleado></Empleados>
+<Empleados xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Empleado><EmpleadoId>1</EmpleadoId><Email>e01@ejemplo.test</Email></Empleado><Empleado><EmpleadoId>2</EmpleadoId><Email xsi:nil="true"/></Empleado></Empleados>

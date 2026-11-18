@@ -1,0 +1,81 @@
+CREATE SCHEMA ventas;
+GO
+
+CREATE TABLE ventas.Vendedor (
+    VendedorId   INT           NOT NULL,
+    Nombre       VARCHAR(30)   NOT NULL,
+    Region       VARCHAR(10)   NOT NULL,
+    SupervisorId INT           NULL,
+    Sueldo       DECIMAL(10,2) NOT NULL,
+    CONSTRAINT PK_Vendedor PRIMARY KEY (VendedorId),
+    CONSTRAINT FK_Vendedor_Supervisor FOREIGN KEY (SupervisorId) REFERENCES ventas.Vendedor (VendedorId)
+);
+
+CREATE TABLE ventas.Venta (
+    VentaId    INT           NOT NULL,
+    VendedorId INT           NOT NULL,
+    Fecha      DATE          NOT NULL,
+    Producto   VARCHAR(20)   NOT NULL,
+    Monto      DECIMAL(10,2) NOT NULL,
+    CONSTRAINT PK_Venta PRIMARY KEY (VentaId),
+    CONSTRAINT FK_Venta_Vendedor FOREIGN KEY (VendedorId) REFERENCES ventas.Vendedor (VendedorId)
+);
+
+INSERT INTO ventas.Vendedor (VendedorId, Nombre, Region, SupervisorId, Sueldo)
+VALUES
+    (1, 'Ana',  'Norte', NULL, 5000.00),
+    (2, 'Beto', 'Norte', 1,    3200.00),
+    (3, 'Cora', 'Norte', 1,    3200.00),
+    (4, 'Dario','Sur',   1,    4100.00),
+    (5, 'Eva',  'Sur',   4,    2800.00),
+    (6, 'Fede', 'Sur',   4,    3500.00),
+    (7, 'Gina', 'Sur',   4,    2800.00);
+
+INSERT INTO ventas.Venta (VentaId, VendedorId, Fecha, Producto, Monto)
+VALUES
+    (1,  2, '2025-01-10', 'Teclado',  200.00),
+    (2,  3, '2025-01-15', 'Monitor',  500.00),
+    (3,  2, '2025-01-28', 'Monitor',  500.00),
+    (4,  5, '2025-01-30', 'Teclado',  200.00),
+    (5,  6, '2025-02-05', 'Notebook', 1200.00),
+    (6,  2, '2025-02-12', 'Teclado',  150.00),
+    (7,  3, '2025-02-20', 'Notebook', 1200.00),
+    (8,  5, '2025-02-25', 'Monitor',  500.00),
+    (9,  7, '2025-02-27', 'Teclado',  200.00),
+    (10, 3, '2025-03-03', 'Teclado',  200.00),
+    (11, 6, '2025-03-10', 'Monitor',  500.00),
+    (12, 5, '2025-03-18', 'Notebook', 1200.00),
+    (13, 7, '2025-03-22', 'Monitor',  500.00),
+    (14, 2, '2025-04-02', 'Notebook', 1200.00),
+    (15, 6, '2025-04-15', 'Teclado',  150.00),
+    (16, 4, '2025-04-20', 'Monitor',  500.00);
+GO
+CREATE TABLE #Resultado (Caso VARCHAR(30), Numero INT, Filas INT);
+GO
+
+-- Con el límite por defecto (100 niveles) la recursión de 150 pasos falla
+BEGIN TRY
+    DECLARE @Cantidad INT;
+    WITH Numeros AS (
+        SELECT 1 AS N
+        UNION ALL
+        SELECT N + 1 FROM Numeros WHERE N < 150
+    )
+    SELECT @Cantidad = COUNT(*) FROM Numeros;
+END TRY
+BEGIN CATCH
+    INSERT INTO #Resultado VALUES ('limite por defecto', ERROR_NUMBER(), NULL);
+END CATCH;
+
+-- Con OPTION (MAXRECURSION 200) alcanza
+WITH Numeros AS (
+    SELECT 1 AS N
+    UNION ALL
+    SELECT N + 1 FROM Numeros WHERE N < 150
+)
+INSERT INTO #Resultado
+SELECT 'MAXRECURSION 200', 0, COUNT(*)
+FROM Numeros
+OPTION (MAXRECURSION 200);
+
+SELECT Caso, Numero, Filas FROM #Resultado ORDER BY Caso;

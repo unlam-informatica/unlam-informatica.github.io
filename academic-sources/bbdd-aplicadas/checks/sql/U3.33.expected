@@ -1,0 +1,2 @@
+Antes|Clustered Index Scan|[PK_Orden]|93
+Después|Index Seek|[IX_Orden_ClienteId]|2

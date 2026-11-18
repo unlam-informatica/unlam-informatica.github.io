@@ -1,0 +1,9 @@
+insertedCount: 1
+matchedCount: 4
+modifiedCount: 4
+upsertedCount: 1
+deletedCount: 2
+upsertedIds: {"4":31}
+total: 8
+error 11000, insertados 1
+existe 32: true

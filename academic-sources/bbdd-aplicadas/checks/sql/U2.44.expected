@@ -1,0 +1,3 @@
+Pedido de un cliente inexistente|error 547
+FOREIGN KEY de una tabla en memoria hacia una de disco|error 1750
+Columnas de mem.Cliente tras el ALTER TABLE|3

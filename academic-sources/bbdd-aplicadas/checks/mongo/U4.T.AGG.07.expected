@@ -1,0 +1,10 @@
+--- $setWindowFields: acumulado por cliente
+{"_id":101,"total":110,"acumulado":110}
+{"_id":103,"total":940,"acumulado":1050}
+{"_id":107,"total":210,"acumulado":1260}
+--- $merge: guarda el resultado en otra coleccion
+{"_id":"cancelado","pedidos":1,"total":60}
+{"_id":"entregado","pedidos":5,"total":695}
+{"_id":"pendiente","pedidos":2,"total":1150}
+--- $graphLookup: jerarquia
+{"_id":"notebooks","ancestros":["computadoras","tecnologia"]}

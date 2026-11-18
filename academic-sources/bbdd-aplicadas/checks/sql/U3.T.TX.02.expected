@@ -1,0 +1,4 @@
+1|después de un UPDATE en autocommit|0|OFF
+2|después de un SELECT con IMPLICIT_TRANSACTIONS ON|1|ON
+3|después del COMMIT|0|ON
+4|con IMPLICIT_TRANSACTIONS OFF|0|OFF

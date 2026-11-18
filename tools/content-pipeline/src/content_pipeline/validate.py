@@ -49,6 +49,22 @@ class Findings:
         return sum(1 for item in self.items if item["severity"] == severity)
 
 
+def _check_quality(report: dict[str, Any], findings: Findings, doc: str, path: str) -> None:
+    """Texto ilegible (fuentes sin mapa Unicode, mojibake) y bloques de código sin saltos de línea."""
+    bad = report.get("illegible_pages") or []
+    if bad:
+        total = report.get("pages") or 0
+        severity = "error" if total and len(bad) >= total else "warning"
+        findings.add(severity, "texto-ilegible",
+                     f"Páginas con texto ilegible: {bad} ({report.get('illegible_ratio', 0):.1%} de los caracteres); "
+                     "reextraer con extraction: {profile: text, force_ocr: true}", doc=doc, path=path)
+    flattened = report.get("code_blocks_flattened") or 0
+    if flattened > 0:
+        findings.add("warning", "codigo-sin-saltos",
+                     f"{flattened} de {report.get('code_blocks', 0)} bloques de código en una sola línea: "
+                     "contrastar con el original", doc=doc, path=path)
+
+
 def validate_documents(paths: SubjectPaths, findings: Findings) -> dict[str, Any]:
     catalog = load_catalog(paths)
     manifest = load_manifest(paths)["documents"]
@@ -116,6 +132,7 @@ def validate_documents(paths: SubjectPaths, findings: Findings) -> dict[str, Any
         elif report.get("empty_pages"):
             findings.add("warning", "paginas-vacias", f"Páginas sin texto: {report['empty_pages']}",
                          doc=doc_id, path=path)
+        _check_quality(report, findings, doc_id, path)
         if not report.get("headings") and not report.get("pseudo_headings") and (report.get("pages") or 0) > 2:
             findings.add("warning", "sin-estructura", "No se detectaron títulos ni secciones",
                          doc=doc_id, path=path)
@@ -133,6 +150,19 @@ def validate_documents(paths: SubjectPaths, findings: Findings) -> dict[str, Any
     return dict(stats)
 
 
+SLUG_RE = re.compile(r"^---\n.*?^slug:\s*['\"]?([^'\"\n]+?)['\"]?\s*$.*?^---", re.S | re.M)
+
+
+def _declared_slugs(docs_root: Path) -> set[str]:
+    """Slugs explícitos del frontmatter: una página puede publicarse con una ruta distinta de su archivo."""
+    slugs: set[str] = set()
+    for path in [*docs_root.rglob("*.md"), *docs_root.rglob("*.mdx")]:
+        match = SLUG_RE.match(path.read_text(encoding="utf-8"))
+        if match:
+            slugs.add(match.group(1).strip("/"))
+    return slugs
+
+
 def validate_curriculum(paths: SubjectPaths, findings: Findings, docs_root: Path | None) -> dict[str, Any]:
     if not paths.curriculum.exists():
         findings.add("warning", "sin-matriz", "No existe curriculum-map.yaml")
@@ -141,6 +171,7 @@ def validate_curriculum(paths: SubjectPaths, findings: Findings, docs_root: Path
     catalog = {d["id"]: d for d in load_catalog(paths)["documents"]}
     bibliography = {entry["id"] for entry in curriculum.get("bibliography") or []}
     stats: Counter[str] = Counter()
+    slugs = _declared_slugs(docs_root) if docs_root is not None else set()
     for unit, topic in iter_topics(curriculum):
         topic_id = topic["id"]
         stats["topics"] += 1
@@ -168,7 +199,7 @@ def validate_curriculum(paths: SubjectPaths, findings: Findings, docs_root: Path
             relative = page.strip("/").split("#")[0]
             candidates = [docs_root / f"{relative}.md", docs_root / f"{relative}.mdx",
                           docs_root / relative / "index.md", docs_root / relative / "index.mdx"]
-            if not any(candidate.exists() for candidate in candidates):
+            if relative not in slugs and not any(candidate.exists() for candidate in candidates):
                 severity = "error" if production in ("redactado", "revisado") else "warning"
                 findings.add(severity, "pagina-inexistente", f"No existe {page}", topic=topic_id)
         if production in ("redactado", "revisado") and not topic.get("exercises"):

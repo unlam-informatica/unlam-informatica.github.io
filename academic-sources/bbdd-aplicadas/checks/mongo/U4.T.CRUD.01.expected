@@ -1,0 +1,7 @@
+insertOne: {"acknowledged":true,"insertedId":1}
+insertMany: {"acknowledged":true,"insertedIds":{"0":2,"1":3}}
+ordered:true -> codigo 11000, insertados: 1
+mensaje: E11000 duplicate key error
+socios tras ordered:true -> [1,2,3,4]
+ordered:false -> codigo 11000, insertados: 2, errores: 1
+socios tras ordered:false -> [1,2,3,4,6,7]

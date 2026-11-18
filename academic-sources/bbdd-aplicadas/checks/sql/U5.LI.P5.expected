@@ -1,0 +1,12 @@
+sin-select|estatico|filas 1
+sin-select|dinamico|error 229
+sin-select|select-directo|error 229
+deny-select|estatico|filas 1
+deny-select|dinamico|error 229
+deny-select|select-directo|error 229
+firmado|estatico|filas 1
+firmado|dinamico|filas 1
+firmado|select-directo|error 229
+firmado-con-deny|estatico|filas 1
+firmado-con-deny|dinamico|error 229
+firmado-con-deny|select-directo|error 229

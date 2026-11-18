@@ -1,0 +1,13 @@
+TTL: {"name":"creada_1","key":{"creada":1},"expireAfterSeconds":3600}
+los documentos siguen hasta que corre el proceso de fondo (cada 60 s): 2
+--- texto
+mongodb:
+{"_id":1}
+{"_id":3}
+pipeline etapas (cualquiera de los terminos):
+{"_id":2}
+mongodb sin transacciones:
+{"_id":1}
+frase exacta:
+{"_id":2}
+segundo indice de texto -> IndexOptionsConflict

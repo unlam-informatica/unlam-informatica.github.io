@@ -1,0 +1,1257 @@
+# Catálogo de procedencia generado por `content-pipeline inventory`.
+# Una entrada por contenido único (SHA-256). Las rutas son relativas a raw/.
+# Los campos de clasificación pueden corregirse a mano: la ingesta no los pisa.
+schema_version: 1
+subject: bbdd-aplicadas
+summary:
+  documents: 54
+  duplicate_files: 0
+  total_bytes: 50010438
+  by_format:
+    docx: 5
+    pdf: 42
+    plaintext: 7
+  by_type:
+    apunte-alumno: 10
+    autoevaluacion: 6
+    cronograma: 1
+    enlace-externo: 1
+    final: 3
+    guia-practica: 5
+    instructivo: 1
+    parcial: 10
+    programa: 1
+    recopilacion-examenes: 1
+    resolucion-alumno: 3
+    teoria-catedra: 12
+  by_status:
+    normalizado: 51
+    omitido: 3
+  needs_review: 1
+documents:
+- id: bbdd-aplicadas-6939322b728b
+  original_name: 1. Apunte - Recomendado.pdf
+  path: Apuntes/1. Apunte - Recomendado.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 4085109
+  sha256: 6939322b728b55193674f04abdb14308b374eaff691cf2986d713009dc5ce227
+  doc_type: apunte-alumno
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Apunte de alumno (autoría en el documento; no es material de cátedra)
+  version: 1C2025
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: 'Resumen de terceros (el título de metadatos dice ''no es mío''). Página de Notion impresa y
+    escaneada: requiere OCR; hay código recortado en el margen.'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-e694c5563d75
+  original_name: 10. Apunte.pdf
+  path: Apuntes/10. Apunte.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 210068
+  sha256: e694c5563d75b208274680c8b6c34f7ed97c56641e41fb22119c48cbf1951960
+  doc_type: resolucion-alumno
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  - u5
+  topics: []
+  source: Apunte de alumno (autoría en el documento; no es material de cátedra)
+  version: null
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: 'No es un apunte: preguntas situacionales de práctica para el parcial con respuestas del autor,
+    no validadas.'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-cd36d917c66c
+  original_name: 2. Apunte - Recomendado.pdf
+  path: Apuntes/2. Apunte - Recomendado.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 788534
+  sha256: cd36d917c66c376ec561906e7acaa3e2cc9b8f5c664d3e12c10fca97901e18ae
+  doc_type: apunte-alumno
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Apunte de alumno (autoría en el documento; no es material de cátedra)
+  version: 2C2025
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Rotula la u4 como 'Transacciones y rendimiento', pero su contenido es NoSQL.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-1a42e094e00e
+  original_name: 3. Apunte - Recomendado.pdf
+  path: Apuntes/3. Apunte - Recomendado.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 630347
+  sha256: 1a42e094e00e06047a78f6411bca92d0780db6229b27e9783a72aaddf82999a9
+  doc_type: apunte-alumno
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Apunte de alumno (autoría en el documento; no es material de cátedra)
+  version: 2C2025
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: null
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-3a0d8f223fcf
+  original_name: 4. Apunte.pdf
+  path: Apuntes/4. Apunte.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 4543251
+  sha256: 3a0d8f223fcf2139c3178ceddafc5bf8a1602ab4a0c112ae4f6446879f7008ca
+  doc_type: apunte-alumno
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  - u5
+  - u6
+  topics: []
+  source: Apunte de alumno (autoría en el documento; no es material de cátedra)
+  version: '2025'
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    force_ocr: true
+    picture_text: true
+  notes: 'Clases 1-7 y 10-12 (faltan 8 y 9). La capa de texto está rota (mojibake con pypdfium2; 67 %
+    de U+FFFD con Docling): se fuerza OCR de página completa.'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-e40f44016a23
+  original_name: UNIDAD 4.docx
+  path: Apuntes/5. Apunte/UNIDAD 4.docx
+  duplicate_paths: []
+  format: docx
+  size_bytes: 1538582
+  sha256: e40f44016a23b88ae1e395df79ecdf4f418649aa687df3c1769dd6faa77cdea8
+  doc_type: apunte-alumno
+  units:
+  - u4
+  - u5
+  - u6
+  topics: []
+  source: Apunte de alumno (autoría en el documento; no es material de cátedra)
+  version: 2C2023
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: 'Acumulativo: párrafos 0-94 son u4 (conceptual, sin MQL); 95-305 repiten completo ''UNIDAD 5.docx''
+    (u5); desde el 306, una versión previa de ''Unidad 6.docx'' (u6, 67 de sus 102 párrafos).'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-9a9e789db872
+  original_name: UNIDAD 5.docx
+  path: Apuntes/5. Apunte/UNIDAD 5.docx
+  duplicate_paths: []
+  format: docx
+  size_bytes: 988082
+  sha256: 9a9e789db8723e706438fc5c0d027be299071cbec593c2418cf4aa5af1f38724
+  doc_type: apunte-alumno
+  units:
+  - u5
+  topics: []
+  source: Apunte de alumno (autoría en el documento; no es material de cátedra)
+  version: 2C2023
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: null
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-7034e8ba7365
+  original_name: Unidad 6.docx
+  path: Apuntes/5. Apunte/Unidad 6.docx
+  duplicate_paths: []
+  format: docx
+  size_bytes: 23532
+  sha256: 7034e8ba73659c1ffd32f5b5ab0a39c38a197c3d36201d81544911a9f4dd1f92
+  doc_type: apunte-alumno
+  units:
+  - u6
+  topics: []
+  source: Apunte de alumno (autoría en el documento; no es material de cátedra)
+  version: 2C2023
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Ley 25.326, GDPR, ISO/IEC 25012; cierra con un bloque de DENY y herencia de permisos (u5).
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-68061c008f6a
+  original_name: 6. Apunte.docx
+  path: Apuntes/6. Apunte.docx
+  duplicate_paths: []
+  format: docx
+  size_bytes: 1182423
+  sha256: 68061c008f6a8130d3ee49792fee173db4f703fb63de5d74c148d5d2a6c216e3
+  doc_type: apunte-alumno
+  units:
+  - u1
+  - u2
+  - u3
+  topics: []
+  source: Apunte de alumno (autoría en el documento; no es material de cátedra)
+  version: 2C2023
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: null
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-1eecf7e5a795
+  original_name: 7. Apunte.txt
+  path: Apuntes/7. Apunte.txt
+  duplicate_paths: []
+  format: plaintext
+  size_bytes: 94
+  sha256: 1eecf7e5a7951ec4fc137dd62d642095aec91becbb1f6dd147967effb02d1da7
+  doc_type: enlace-externo
+  units: []
+  topics: []
+  source: Enlace a una página de Notion de autoría desconocida
+  version: null
+  license: privado-alumno
+  distribution: privado
+  extraction: skip
+  notes: Solo contiene una URL de Notion; no se sigue. Si interesa, descargar la página a mano y agregarla
+    a raw/.
+  status: omitido
+  needs_review:
+  - sin-unidad
+- id: bbdd-aplicadas-3c6cac1c3ff5
+  original_name: Base de Datos Aplicada.pdf
+  path: Apuntes/Base de Datos Aplicada.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 3129320
+  sha256: 3c6cac1c3ff5ed8a6c20a70359d63dd667ef5cb1f9bcb1fdeaf688c904a27ebc
+  doc_type: apunte-alumno
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Apunte de alumno (autoría en el documento; no es material de cátedra)
+  version: 1C2026
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: null
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-42835aeae3f6
+  original_name: Bases de Datos Aplicadas.pdf
+  path: Apuntes/Bases de Datos Aplicadas.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 709924
+  sha256: 42835aeae3f62a3c73094f01d90678ac651dae8666d48ed20235bbaa717fc553
+  doc_type: apunte-alumno
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Apunte de alumno (autoría en el documento; no es material de cátedra)
+  version: 1C2026
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: null
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-19a1548ac204
+  original_name: RESOLUCION MONGO.pdf
+  path: Ejercicios Resueltos/Z/RESOLUCION MONGO.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 512189
+  sha256: 19a1548ac204d4b33907e304f8cfb9a9fc86ae23b4f61c99416672a2f7dd4111
+  doc_type: resolucion-alumno
+  units:
+  - u4
+  topics: []
+  source: Resolución de alumno (sin validar por la cátedra)
+  version: null
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Resuelve 'Guia  de Ejercicio 2' (datosventas). El ejercicio 8 enuncia 'Morón' y filtra 'Haedo'.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-df183295a1ee
+  original_name: RESOLUCION WF.pdf
+  path: Ejercicios Resueltos/Z/RESOLUCION WF.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 274189
+  sha256: df183295a1eeef761cb4b2398dd14bce5377b1509a3051441d627be58f2c5633
+  doc_type: resolucion-alumno
+  units:
+  - u1
+  topics: []
+  source: Resolución de alumno (sin validar por la cátedra)
+  version: null
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Resuelve la guía de window functions v1.0 (2024-03).
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-e6cce14f9c07
+  original_name: 1. Formulario.pdf
+  path: Formularios/1. Formulario.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 2664988
+  sha256: e6cce14f9c077fb56c591ce1dd114ddded05a71ff66da2231d451cbf1e60b30c
+  doc_type: autoevaluacion
+  units:
+  - u1
+  topics: []
+  source: Autoevaluación de cátedra (MS Forms), intento de alumno
+  version: null
+  license: privado-alumno
+  distribution: privado
+  extraction: skip
+  notes: Capturas sin responder de la Autoevaluación 1; las mismas preguntas están con texto en 'DB# -
+    Autoevaluación 1.pdf'.
+  status: omitido
+  needs_review: []
+- id: bbdd-aplicadas-febfc3b9f10d
+  original_name: 2. Formulario.pdf
+  path: Formularios/2. Formulario.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 626220
+  sha256: febfc3b9f10d2a83043cf881d413148198e20246a90738c69f2f0b4c7be35239
+  doc_type: autoevaluacion
+  units:
+  - u2
+  topics: []
+  source: Autoevaluación de cátedra (MS Forms), intento de alumno
+  version: null
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    force_ocr: true
+    picture_text: true
+  notes: 'Única copia de la Autoevaluación 2. Capturas escaneadas: requiere OCR; marca la opción correcta.'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-f01ef960c0dd
+  original_name: 3. Formulario.pdf
+  path: Formularios/3. Formulario.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 978531
+  sha256: f01ef960c0dd1fd537fd22e914d73d38279dfc9ad05d6a02f87721b954775207
+  doc_type: autoevaluacion
+  units:
+  - u3
+  topics: []
+  source: Autoevaluación de cátedra (MS Forms), intento de alumno
+  version: null
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    force_ocr: true
+    picture_text: true
+  notes: 'Otro intento de la Autoevaluación 3 (capturas escaneadas: requiere OCR); a diferencia del PDF
+    con texto, muestra la opción elegida y la correcta.'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-9658a314487e
+  original_name: Bases de datos Aplicada - Autoevaluación 3.pdf
+  path: Formularios/Bases de datos Aplicada - Autoevaluación 3.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 827864
+  sha256: 9658a314487edce76d0ee1fd00bdb8464325fa54e640c33be45abbbc953a220c
+  doc_type: autoevaluacion
+  units:
+  - u3
+  topics: []
+  source: Autoevaluación de cátedra (MS Forms), intento de alumno
+  version: 2C2024
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Solo indica correcto/incorrecto por pregunta. Contiene el DNI del alumno.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-b40d8b9596eb
+  original_name: Bases de datos Aplicada - Autoevaluación 4.pdf
+  path: Formularios/Bases de datos Aplicada - Autoevaluación 4.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 313963
+  sha256: b40d8b9596ebb73fca934c341a2822f98a305a2d9b727f89d3b9edae612087e4
+  doc_type: autoevaluacion
+  units:
+  - u4
+  topics: []
+  source: Autoevaluación de cátedra (MS Forms), intento de alumno
+  version: 2C2024
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Solo indica correcto/incorrecto por pregunta. Contiene el DNI del alumno.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-e21e04ace9de
+  original_name: DB# - Autoevaluación 1.pdf
+  path: Formularios/DB# - Autoevaluación 1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 343927
+  sha256: e21e04ace9de0c42fca0e8c25a313099735aad18372b7c25430aa6bdbcce488d
+  doc_type: autoevaluacion
+  units:
+  - u1
+  topics: []
+  source: Autoevaluación de cátedra (MS Forms), intento de alumno
+  version: 2C2024
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Solo indica correcto/incorrecto por pregunta. Contiene el DNI del alumno.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-f740763a4b8b
+  original_name: 1. Unidad 1 - Parte 1.pdf
+  path: Material Teorico/Unidad 1 - Conceptos Basicos/1. Unidad 1 - Parte 1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 488279
+  sha256: f740763a4b8ba087f3a56e4dc562fe5bb9f33ba8c69ab8190265b7a34ff5d45e
+  doc_type: teoria-catedra
+  units:
+  - u1
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: v1.1.0 (2025-03)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: null
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-9d5ab3349985
+  original_name: 2. Unidad 1 - Parte 2.pdf
+  path: Material Teorico/Unidad 1 - Conceptos Basicos/2. Unidad 1 - Parte 2.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 878106
+  sha256: 9d5ab3349985b70b677dd507a142254778982ea2479e9fc5e9b4355638dc1b3c
+  doc_type: teoria-catedra
+  units:
+  - u1
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: v1.0.3 (2024-08)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Repaso SQL completo (DDL/DML a pivot). El pie dice 'parte 1 V1.1'.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-d275f59f2093
+  original_name: 3. Window Functions.pdf
+  path: Material Teorico/Unidad 1 - Conceptos Basicos/3. Window Functions.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 559555
+  sha256: d275f59f209382c22d74f71efc80214ba9a8f7618c73e829cd9fe055ad914806
+  doc_type: teoria-catedra
+  units:
+  - u1
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: v1.0 (2024-03)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: null
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-7d43d771a356
+  original_name: Guia de Ejercicios - Windows Functions.pdf
+  path: Material Teorico/Unidad 1 - Conceptos Basicos/Guia de Ejercicios - Windows Functions.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 611555
+  sha256: 7d43d771a356eb15a18e2bf224d3e8143bc59b0812bc026b408908fc89c361f0
+  doc_type: guia-practica
+  units:
+  - u1
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: v1.0 (2024-03)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: 'Nueve ejercicios con script de carga; el resultado esperado es una imagen. Resolución de alumno:
+    Ejercicios Resueltos/Z/RESOLUCION WF.pdf.'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-95d8b07bd5dd
+  original_name: Guia de Ejercicios.pdf
+  path: Material Teorico/Unidad 1 - Conceptos Basicos/Guia de Ejercicios.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 150934
+  sha256: 95d8b07bd5dd63a8ddc225710506ce51bb59edf5d60b7343250463979238263d
+  doc_type: guia-practica
+  units:
+  - u1
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: 2024-03
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: TP 1, Repaso de SQL (20 consignas, sin resolución).
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-242399d569be
+  original_name: Unidad-2-Guia-Ejercicios.pdf
+  path: Material Teorico/Unidad 2 - Bases de Datos Relacionales/Unidad-2-Guia-Ejercicios.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 167926
+  sha256: 242399d569becc55b31cf5a9961b1d6fdb11c210448f4f8d99d33ed69224af78
+  doc_type: guia-practica
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: 2024-04
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: 'TP 2: collation, importación CSV, temporales globales; también percentiles y CTE (u1). Sin resolución.'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-d0b0a9b78ca8
+  original_name: Unidad-2-parte-1.pdf
+  path: Material Teorico/Unidad 2 - Bases de Datos Relacionales/Unidad-2-parte-1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 979424
+  sha256: d0b0a9b78ca8c24b14abedc75dfaab47fd676ead9c5b258aabb3a0c264560c17
+  doc_type: teoria-catedra
+  units:
+  - u2
+  - u4
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: V1.0.1 (2024)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Las pp. 12-15 tratan DWH y Data Lake, que el programa 2024 ubica en u4.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-008193c9c082
+  original_name: Unidad-2-parte-2.pdf
+  path: Material Teorico/Unidad 2 - Bases de Datos Relacionales/Unidad-2-parte-2.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 1033386
+  sha256: 008193c9c082f57e96823a70935b59789d88cdd12c8a418e5d7a906963a77695
+  doc_type: teoria-catedra
+  units:
+  - u2
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: v1.0 (2024-04)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Formatos de intercambio y APIs. El título de metadatos ('Unidad 1 - parte 3') es residuo de plantilla.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-0d2ad822befa
+  original_name: Unidad-3---Parte-1_2.pdf
+  path: Material Teorico/Unidad 3 - Aspectos Avanzados/Unidad-3---Parte-1_2.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 766827
+  sha256: 0d2ad822befaa2435dd59ccefec03305d6d95cf20542be8aa8e5bd82f3101bcb
+  doc_type: teoria-catedra
+  units:
+  - u3
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: v1.0 (2023-08)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Plan de ejecución, índices, estadísticas, optimización, rowstore/columnstore.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-17c2c97f736b
+  original_name: Unidad-3---Parte-2.pdf
+  path: Material Teorico/Unidad 3 - Aspectos Avanzados/Unidad-3---Parte-2.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 827808
+  sha256: 17c2c97f736be5e38ac8a04fc01d7f660b2459168281105606177705a0d1fe01
+  doc_type: teoria-catedra
+  units:
+  - u3
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: v1.0 (2023-08)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: TCL, concurrencia, bloqueos, distribuidas, monitoreo. Portada 'parte 3', pie 'Unidad 1 - parte
+    3', metadatos 'Unidad 1 - Parte 1'.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-4bd543391072
+  original_name: 1. MongoDB.pdf
+  path: Material Teorico/Unidad 4 - Bases de Datos no Relacionales/1. MongoDB.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 2462431
+  sha256: 4bd54339107232aa9868e5cecbdd3cb0a5d968148cd21fd2de907477e57a26ae
+  doc_type: teoria-catedra
+  units:
+  - u4
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: V2.0 (2025)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: 'Parte 1: introducción, CRUD, find, Compass, Atlas.'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-9a0d8e90ff05
+  original_name: 2. MongoDB.pdf
+  path: Material Teorico/Unidad 4 - Bases de Datos no Relacionales/2. MongoDB.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 1807501
+  sha256: 9a0d8e90ff05f52fc118354fae38f7a49f7d9619bfd66ac6d144cb5ce93fea35
+  doc_type: teoria-catedra
+  units:
+  - u4
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: v3.0 (2025)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: 'Parte 2: agregaciones y vistas. Existe una edición posterior (v3.0 2026) publicada en public/bbdd-aplicadas/unidad-4/inputs/MongoDB-Agregaciones-2026.pdf,
+    fuera de raw/.'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-9eb38199334b
+  original_name: 3. MongoDB.pdf
+  path: Material Teorico/Unidad 4 - Bases de Datos no Relacionales/3. MongoDB.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 372639
+  sha256: 9eb38199334b333b96015e192212dc6484fa62543fe184f94545e154a18e65ee
+  doc_type: teoria-catedra
+  units:
+  - u4
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: v1.0 (2024)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: 'Parte 3: índices. Idéntico (mismo SHA-256) a public/bbdd-aplicadas/unidad-4/inputs/MongoDB-Indices.pdf,
+    que ya se publica.'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-ed6885ded031
+  original_name: 4. MongoDB.pdf
+  path: Material Teorico/Unidad 4 - Bases de Datos no Relacionales/4. MongoDB.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 748072
+  sha256: ed6885ded031089fa0180fede672945947def3f9bd700627d79acf4feed2c6b0
+  doc_type: teoria-catedra
+  units:
+  - u4
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: 2023-07
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: 'No trata MongoDB: apunte teórico NoSQL (ACID, BASE, CAP, modelos clave-valor, documentos, grafos,
+    columnas).'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-3df29cd152a2
+  original_name: Guia  de Ejercicio 2.pdf
+  path: Material Teorico/Unidad 4 - Bases de Datos no Relacionales/Guia  de Ejercicio 2.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 130984
+  sha256: 3df29cd152a2704522b90d8d7ae58bd420573607182b94dd7eef8363bc9c180a
+  doc_type: guia-practica
+  units:
+  - u4
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: 2C2025, com. 02-5600
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: 'TP MongoDB sobre datosventas (25 consignas, sin resolución). Resolución de alumno: Ejercicios
+    Resueltos/Z/RESOLUCION MONGO.pdf. Toca de pasada usuarios de solo lectura (u5).'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-f65cc231b1f0
+  original_name: Guia de Ejercicios.pdf
+  path: Material Teorico/Unidad 4 - Bases de Datos no Relacionales/Guia de Ejercicios.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 2499738
+  sha256: f65cc231b1f019ab08a8dc19a59f16546ff97844d636557dabaa75a9eab3227d
+  doc_type: guia-practica
+  units:
+  - u4
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: 2024-09
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Práctica guiada con comandos mongosh resueltos; solo la 'Práctica adicional' (clima) queda propuesta.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-c88cafb40cb0
+  original_name: Instalación MongoDB.pdf
+  path: Material Teorico/Unidad 4 - Bases de Datos no Relacionales/Instalación MongoDB.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 757760
+  sha256: c88cafb40cb0521291b25c9977c25b68169605952e86213fc32f77ce9245535a
+  doc_type: instructivo
+  units:
+  - u4
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: 2023-08
+  license: privado-catedra
+  distribution: privado
+  extraction: skip
+  notes: 'Contiene una credencial de Atlas en texto plano (p. 6): no extraer ni transcribir sin redactarla.
+    Poco texto; el portal ya tiene instalacion-mongodb.'
+  status: omitido
+  needs_review: []
+- id: bbdd-aplicadas-5db2ce42f603
+  original_name: Unidad-5_1.pdf
+  path: Material Teorico/Unidad 5 - Seguridad en Bases de  Datos/Unidad-5_1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 1611959
+  sha256: 5db2ce42f603b14dea0f4d6a2fa4fc927666e4b2ae4a7054a687bd0d8bc42768
+  doc_type: teoria-catedra
+  units:
+  - u5
+  topics: []
+  source: Cátedra BDA (UNLaM)
+  version: v1.1 (2025-06)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Única presentación de cátedra de u5. Ningún documento de cátedra en raw/ cubre u6.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-d8baa3d1630e
+  original_name: 1. [Final][1C2025][Llamado B][].txt
+  path: Parciales Filtrados/Final/1. [Final][1C2025][Llamado B][].txt
+  duplicate_paths: []
+  format: plaintext
+  size_bytes: 1854
+  sha256: d8baa3d1630e3fa7c4d03012580e3d6893642e02f75edbe1cffd4ef2dee2cc4f
+  doc_type: final
+  units:
+  - u1
+  - u3
+  - u4
+  - u5
+  - u6
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 1C2025, llamado B
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Reconstrucción de memoria de un alumno; no es un enunciado oficial.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-cf1a40d118d4
+  original_name: 2. [Final][2C2025][Llamado C][].txt
+  path: Parciales Filtrados/Final/2. [Final][2C2025][Llamado C][].txt
+  duplicate_paths: []
+  format: plaintext
+  size_bytes: 724
+  sha256: cf1a40d118d4f3559be7870befb957652d7944c97e762f010fb25a0f642c66b4
+  doc_type: final
+  units:
+  - u1
+  - u3
+  - u4
+  - u5
+  - u6
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 2C2025, extraordinario (22/10/2025)
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Reconstrucción de memoria de un alumno. El nombre dice 'Llamado C'; el texto, 'extraordinario'.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-8d75a3b284ab
+  original_name: 3. [Final][2C2025][Llamado A][].txt
+  path: Parciales Filtrados/Final/3. [Final][2C2025][Llamado A][].txt
+  duplicate_paths: []
+  format: plaintext
+  size_bytes: 1079
+  sha256: 8d75a3b284abb4c5f1d2d676dcb12b9a6151d5620a7e4f0874170e965398e940
+  doc_type: final
+  units:
+  - u1
+  - u3
+  - u4
+  - u5
+  - u6
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 2C2025, mesa A (12/12/2025)
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Reconstrucción de memoria de un alumno; no es un enunciado oficial.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-047fcb3ca752
+  original_name: 1. [Parcial][1C2024][5600][Jair][Resuelto][].pdf
+  path: Parciales Filtrados/Parcial/1. [Parcial][1C2024][5600][Jair][Resuelto][].pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 6440624
+  sha256: 047fcb3ca75204168db150cccd967be0584406a62502d8d32b066ed40a341fdb
+  doc_type: parcial
+  units:
+  - u1
+  - u2
+  - u3
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 1C2024, Tema 3 (10/05/2024), com. 5600
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Foto del enunciado impreso con resolución manuscrita de alumno corregida (nota 7). Mismo examen
+    que '4. …' (otro tema). Datos personales visibles.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-1fbe6ae48bf7
+  original_name: 10. [Parcial 1][2C2026][5600][Jair][][].pdf
+  path: Parciales Filtrados/Parcial/10. [Parcial 1][2C2026][5600][Jair][][].pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 233231
+  sha256: 1fbe6ae48bf7ec7689a8210a9a777f2a1f5b3fc7c606e325ff950a9b47b3691a
+  doc_type: parcial
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 2C2026, primer parcial, com. 5600
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Reconstrucción de alumno de la cursada en curso, con errores de transcripción en las consultas.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-26e3560d7229
+  original_name: 2. [Parcial][2C2023][2900][Valeria][Resuelto][].pdf
+  path: Parciales Filtrados/Parcial/2. [Parcial][2C2023][2900][Valeria][Resuelto][].pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 810253
+  sha256: 26e3560d72290c17147dc410075efc35404ea8ff0f2b660d6bbf0660fb5e9f28
+  doc_type: parcial
+  units:
+  - u1
+  - u2
+  - u3
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 2C2023 (26/09/2023), com. 2900
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Foto del enunciado con resolución manuscrita desaprobada; páginas desordenadas (1, 3, 2, 4).
+    El nombre del docente no consta en el documento.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-6e18af8574d2
+  original_name: 3. [Parcial][2C2024][5600][Jair][Resuelto][].pdf
+  path: Parciales Filtrados/Parcial/3. [Parcial][2C2024][5600][Jair][Resuelto][].pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 233141
+  sha256: 6e18af8574d218ded9bc8dd076657a8059c6a56393d8f7ddf04491d31dd4bd26
+  doc_type: parcial
+  units:
+  - u1
+  - u3
+  - u4
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 2C2024, Tema 3 (18/10/2024), com. 5600
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Foto del enunciado con resolución manuscrita con errores marcados. Mismo enunciado que el primer
+    bloque de 'Recopilado/Parciales base de datos.docx'. Datos personales visibles.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-04b965384980
+  original_name: 4. [Parcial][1C2024][5600][Jair][Resuelto][].pdf
+  path: Parciales Filtrados/Parcial/4. [Parcial][1C2024][5600][Jair][Resuelto][].pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 155571
+  sha256: 04b96538498081b2d9dc5bbdfeb883a087488ab005df772514d2fee73245885d
+  doc_type: parcial
+  units:
+  - u1
+  - u3
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 1C2024, Tema 4 (10/05/2024), com. 5600
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Foto de baja resolución con resolución manuscrita (nota 7); falta la consigna 5. Mismo examen
+    que '1. …' (otro tema).
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-f12df9e4e498
+  original_name: 5. [Parcial][2C2025][5600][Jair][][].txt
+  path: Parciales Filtrados/Parcial/5. [Parcial][2C2025][5600][Jair][][].txt
+  duplicate_paths: []
+  format: plaintext
+  size_bytes: 1693
+  sha256: f12df9e4e498a61079e5264ec833f398e227a028a7c409bc702f2e3ef408670f
+  doc_type: parcial
+  units:
+  - u1
+  - u3
+  - u4
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 2C2025, Tema 3, com. 5600
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Reconstrucción de memoria de un alumno; no es un enunciado oficial.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-93934d98a63e
+  original_name: 6. [Parcial][2C2025][2900][Jair][][].txt
+  path: Parciales Filtrados/Parcial/6. [Parcial][2C2025][2900][Jair][][].txt
+  duplicate_paths: []
+  format: plaintext
+  size_bytes: 736
+  sha256: 93934d98a63e77c2b219e8ef1f09f507bbc28df417de9dd446781f8fb1cdf28e
+  doc_type: parcial
+  units:
+  - u1
+  - u3
+  - u4
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 2C2025, Tema 1, com. 2900
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Reconstrucción de memoria de un alumno. El docente del nombre no consta en el texto.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-3ab6c47a9bca
+  original_name: 7. [Parcial][1C2025][5600][Jair][][Recuperatorio].txt
+  path: Parciales Filtrados/Parcial/7. [Parcial][1C2025][5600][Jair][][Recuperatorio].txt
+  duplicate_paths: []
+  format: plaintext
+  size_bytes: 1747
+  sha256: 3ab6c47a9bcae8c84a28631d979906c6bd1da45ed3a40553b960842a0bc1de2a
+  doc_type: parcial
+  units:
+  - u1
+  - u3
+  - u4
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 1C2025, recuperatorio, com. 5600
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Reconstrucción de memoria de un alumno; casi literal en el segundo bloque de 'Recopilado/Parciales
+    base de datos.docx'.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-2547699fc0cd
+  original_name: 8. [Parcial][2C2025][2900][Valeria][][].pdf
+  path: Parciales Filtrados/Parcial/8. [Parcial][2C2025][2900][Valeria][][].pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 51246
+  sha256: 2547699fc0cdd5b0fd3b245301f7c0953673280cf2f4adeda782dcbe800bf99e
+  doc_type: parcial
+  units:
+  - u1
+  - u2
+  - u4
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 2C2025, recuperatorio, com. 2900
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Reconstrucción de alumno. El nombre no indica que es un recuperatorio.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-efc42db767fd
+  original_name: 9. [Parcial][1C2026][][][][].pdf
+  path: Parciales Filtrados/Parcial/9. [Parcial][1C2026][][][][].pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 60881
+  sha256: efc42db767fd50a95ecb13f2d8a452e7d02455300fefe64226dd13c2c113225a
+  doc_type: parcial
+  units:
+  - u1
+  - u3
+  - u4
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: 1C2026
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Reconstrucción de alumno; no consta si es parcial, recuperatorio o simulacro, ni la comisión.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-16575623b695
+  original_name: Parciales base de datos.docx
+  path: Parciales Filtrados/Recopilado/Parciales base de datos.docx
+  duplicate_paths: []
+  format: docx
+  size_bytes: 135754
+  sha256: 16575623b69536de695cab6bac3df9992742c4110c31b823790edf7cd9c4bc22
+  doc_type: recopilacion-examenes
+  units:
+  - u1
+  - u3
+  - u4
+  topics: []
+  source: Examen reconstruido o resuelto por alumnos (no oficial)
+  version: null
+  license: privado-alumno
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: 'Tres bloques con respuestas de alumno: 2C2024 Tema 3 (repite ''Parcial/3. …''), recuperatorio
+    1C2025 com. 5600 (repite ''Parcial/7. ….txt'') y uno sin rótulo. Errores de transcripción (salario
+    60000 por 62000).'
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-6538cbd089bd
+  original_name: Presentación y Cronograma.pdf
+  path: Presentación y Cronograma.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 355285
+  sha256: 6538cbd089bd8d0fd2ff2aa5a7405ae41ac903e148cc9a3e97388b8cb782d5c5
+  doc_type: cronograma
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  - u5
+  - u6
+  topics: []
+  source: Cátedra BDA (UNLaM), presentación de la materia
+  version: v1.32 (2025-08)
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: Normas de cursada y evaluación; el cronograma (p. 17) es una imagen.
+  status: normalizado
+  needs_review: []
+- id: bbdd-aplicadas-3d9721081e14
+  original_name: Programa Analitico.pdf
+  path: Programa Analitico.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 300598
+  sha256: 3d9721081e14cee3383b7188fa14f026b5c2db1b2e5fe6bd89076c1f391e8de6
+  doc_type: programa
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  - u5
+  - u6
+  topics: []
+  source: Cátedra BDA (UNLaM), firmado por J. Hnatiuk el 07/08/2024
+  version: '2024'
+  license: privado-catedra
+  distribution: privado
+  extraction:
+    profile: text
+    picture_text: true
+  notes: null
+  status: normalizado
+  needs_review: []

@@ -1,0 +1,6 @@
+sin índice sobre Saldo|KEY|RangeS-S|4
+sin índice sobre Saldo|OBJECT|IS|1
+sin índice sobre Saldo|PAGE|IS|1
+con IX_Cuenta_Saldo|KEY|RangeS-S|2
+con IX_Cuenta_Saldo|OBJECT|IS|1
+con IX_Cuenta_Saldo|PAGE|IS|1

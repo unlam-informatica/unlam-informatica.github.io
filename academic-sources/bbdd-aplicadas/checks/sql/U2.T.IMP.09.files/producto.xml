@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Productos>
+  <Producto codigo="P001">
+    <Nombre>Cuaderno rayado</Nombre>
+    <Precio>1250.50</Precio>
+    <Stock>40</Stock>
+  </Producto>
+  <Producto codigo="P002">
+    <Nombre>Lápiz de grafito</Nombre>
+    <Precio>300.00</Precio>
+    <Stock>120</Stock>
+  </Producto>
+  <Producto codigo="P003">
+    <Nombre>Resaltador amarillo</Nombre>
+    <Precio>480.25</Precio>
+  </Producto>
+</Productos>

@@ -1,0 +1,7 @@
+Prestamo valido|ok
+Socio inactivo|error 50011
+Libro sin ejemplares|error 50013
+Libro inexistente|error 50012
+Ejemplares del libro 2|1
+Prestamos totales|11
+Filas en la bitacora|4

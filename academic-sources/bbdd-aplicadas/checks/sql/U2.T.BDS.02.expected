@@ -1,0 +1,7 @@
+master|master|ROWS
+master|mastlog|LOG
+model|modeldev|ROWS
+model|modellog|LOG
+msdb|MSDBData|ROWS
+msdb|MSDBLog|LOG
+sí|1

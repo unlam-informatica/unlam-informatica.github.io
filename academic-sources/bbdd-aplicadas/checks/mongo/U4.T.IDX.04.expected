@@ -1,0 +1,24 @@
+--- indice simple y sobre campo embebido
+proveedor.nombre_1
+proveedor.nombre_1 (repetirlo no hace nada)
+["_id_","proveedor.nombre_1"]
+consulta que pide nombre (hay que leer el documento):
+  PROJECTION_SIMPLE > FETCH > IXSCAN | nReturned=50 keysExamined=50 docsExamined=50
+covered query (solo campos del indice, sin _id):
+  PROJECTION_COVERED > IXSCAN | nReturned=50 keysExamined=50 docsExamined=0
+con _id en la proyeccion deja de estar cubierta:
+  PROJECTION_SIMPLE > FETCH > IXSCAN | nReturned=50 keysExamined=50 docsExamined=50
+--- hint
+sin hint el planificador elige uno; con hint se fuerza:
+  FETCH > IXSCAN | nReturned=40 keysExamined=400 docsExamined=400
+  FETCH > IXSCAN | nReturned=40 keysExamined=40 docsExamined=40
+  COLLSCAN | nReturned=50 keysExamined=0 docsExamined=500
+--- getIndexes / dropIndex
+{"name":"_id_","key":{"_id":1}}
+{"name":"categoria_1_precio_1","key":{"categoria":1,"precio":1}}
+{"name":"precio_1","key":{"precio":1}}
+{"nIndexesWas":3,"ok":1}
+dropIndex de un indice que no existe -> IndexNotFound
+dropIndex del _id -> InvalidOptions
+{"nIndexesWas":2,"msg":"non-_id indexes dropped for collection","ok":1}
+"_id_"

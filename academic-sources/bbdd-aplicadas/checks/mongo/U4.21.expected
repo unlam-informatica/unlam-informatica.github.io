@@ -1,0 +1,7 @@
+antes: String
+despues: Date
+devoluciones nulas: 5
+{"numero":1,"fechaPrestamo":{"$date":"2026-02-02T00:00:00Z"}}
+{"numero":2,"fechaPrestamo":{"$date":"2026-02-20T00:00:00Z"}}
+{"numero":3,"fechaPrestamo":{"$date":"2026-02-10T00:00:00Z"}}
+{"numero":12,"fechaPrestamo":{"$date":"2026-02-25T00:00:00Z"}}

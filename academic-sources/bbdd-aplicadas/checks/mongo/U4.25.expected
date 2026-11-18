@@ -1,0 +1,6 @@
+duplicado rechazado, codigo 11000
+indice ixGeneros, multikey true, devueltos 5, examinados 5
+{"numero":5,"socioCodigo":"S-03","fechaPrestamo":"2026-03-03","fechaDevolucion":null,"titulo":"Orbita"}
+{"numero":6,"socioCodigo":"S-03","fechaPrestamo":"2026-03-10","fechaDevolucion":"2026-03-12","titulo":"Ruta al sur"}
+{"numero":12,"socioCodigo":"S-03","fechaPrestamo":"2026-02-25","fechaDevolucion":"2026-02-27","titulo":"Cielo abierto"}
+prestamos: 13, en la vista: 12

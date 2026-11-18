@@ -11,7 +11,7 @@ Ejercicios prácticos de la Unidad 1.
 
 | Apunte | Tema |
 |---------|------|
-| [Trabajo Práctico 1 — Repaso de SQL](/bbdd-aplicadas/unidad-1/practica/tp1/) | TP 1 — Repaso de SQL (20 ejercicios) |
+| [Trabajo Práctico 1 — Repaso de SQL](/bbdd-aplicadas/unidad-1/practica/tp1/) | TP 1 — Repaso de SQL sobre una biblioteca comunal (16 ejercicios propios) |
 | [Práctica — Window Functions](/bbdd-aplicadas/unidad-1/practica/window-functions/) | Ejercicios de window functions |
 | [Práctica — PIVOT](/bbdd-aplicadas/unidad-1/practica/pivot/) | Ejercicios de PIVOT, UNPIVOT y PIVOT dinámico |
 

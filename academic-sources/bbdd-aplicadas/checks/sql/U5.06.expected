@@ -1,0 +1,8 @@
+1 SELECT|SI (1 filas)
+2 INSERT|NO (error 229)
+3 UPDATE|SI (1 filas)
+rol_externos|DENY|INSERT|OBJECT_OR_COLUMN|[ventas].[Pedido]
+rol_reportes|GRANT|SELECT|SCHEMA|ventas
+rol_ventas|GRANT|INSERT|OBJECT_OR_COLUMN|[ventas].[Pedido]
+rol_ventas|GRANT|SELECT|OBJECT_OR_COLUMN|[ventas].[Pedido]
+usr_dario|GRANT|UPDATE|OBJECT_OR_COLUMN|[ventas].[Pedido]

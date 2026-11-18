@@ -1,0 +1,4 @@
+{"idVenta":10,"fecha":{"$date":"2025-04-26T00:00:00Z"},"medioPago":"credito"}
+{"idVenta":11,"fecha":{"$date":"2025-05-07T00:00:00Z"},"medioPago":"debito"}
+{"idVenta":14,"fecha":{"$date":"2025-06-09T00:00:00Z"},"medioPago":"credito"}
+{"idVenta":15,"fecha":{"$date":"2025-06-20T00:00:00Z"},"medioPago":"debito"}

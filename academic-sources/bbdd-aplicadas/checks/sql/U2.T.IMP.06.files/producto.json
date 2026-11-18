@@ -1,0 +1,5 @@
+[
+  {"codigo": "P001", "nombre": "Cuaderno rayado",    "precio": 1250.50, "stock": 40},
+  {"codigo": "P002", "nombre": "Lapicera azul",      "precio": 300.00,  "stock": 120},
+  {"codigo": "P003", "nombre": "Resaltador amarillo", "precio": 480.25,  "stock": null}
+]

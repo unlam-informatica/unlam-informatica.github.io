@@ -1,0 +1,4 @@
+Pedido|1|CLUSTERED|PK_Pedido
+PedidoHeap|0|HEAP|NULL
+Clúster|Clustered Index Seek|[PK_Pedido]|2
+Heap|Table Scan|[PedidoHeap]|101

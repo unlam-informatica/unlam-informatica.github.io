@@ -1,0 +1,3 @@
+Cuota|PK_Cuota|CLUSTERED|1
+Movimiento|CIX_Movimiento_Fecha|CLUSTERED|0
+Movimiento|PK_Movimiento|NONCLUSTERED|1

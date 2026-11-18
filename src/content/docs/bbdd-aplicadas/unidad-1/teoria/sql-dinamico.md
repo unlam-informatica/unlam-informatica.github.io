@@ -5,165 +5,261 @@ sidebar:
   order: 6
 ---
 
-## ¿Qué es SQL dinámico?
+El **SQL dinámico** arma una sentencia como cadena de texto y la ejecuta en tiempo de ejecución. Se usa cuando no se conoce de antemano un nombre de columna o de tabla, o la lista de valores de un [PIVOT](/bbdd-aplicadas/unidad-1/teoria/pivot/). Es potente y peligroso: una cadena armada con datos externos es una puerta para la inyección.
 
-SQL dinámico consiste en construir una sentencia SQL **como una cadena de texto** en tiempo de ejecución y luego ejecutarla. Se usa cuando alguna parte de la consulta no puede determinarse hasta que el código corre: nombres de columnas, tablas, o condiciones que varían según el contexto.
+Los ejemplos usan el esquema `ventas` de la página de [window functions](/bbdd-aplicadas/unidad-1/teoria/window-functions/#esquema-de-ejemplo).
 
-```sql
--- SQL estático: la tabla siempre es la misma
-SELECT * FROM Empleados
+## `EXEC` frente a `sp_executesql`
 
--- SQL dinámico: la tabla se decide en tiempo de ejecución
-DECLARE @tabla NVARCHAR(100) = 'Empleados'
-EXEC('SELECT * FROM ' + @tabla)
-```
-
----
-
-## Dos formas de ejecutarlo
-
-### `EXEC` / `EXECUTE`
-
-La forma más simple. Recibe una cadena y la ejecuta directamente.
-
-```sql
-DECLARE @sql NVARCHAR(MAX)
-SET @sql = 'SELECT * FROM tablaswf.Empleados WHERE Departamento = ''IT'''
-EXEC(@sql)
-GO
-```
-
-> Para incluir comillas simples dentro de la cadena, se duplican: `''''` produce `'`.
-
-### `sp_executesql` (recomendada)
-
-Permite pasar **parámetros con tipo**, lo que evita inyección SQL y habilita la reutilización del plan de ejecución en caché.
-
-```sql
-DECLARE @sql    NVARCHAR(MAX)
-DECLARE @depto  NVARCHAR(50) = 'IT'
-
-SET @sql = N'SELECT * FROM tablaswf.Empleados WHERE Departamento = @depto'
-
-EXEC sp_executesql @sql,
-    N'@depto NVARCHAR(50)',  -- declaración de parámetros
-    @depto = @depto          -- valores
-GO
-```
-
-| | `EXEC` | `sp_executesql` |
+| | `EXEC (@cadena)` | `sp_executesql` |
 |---|---|---|
-| Parámetros tipados | No | Sí |
-| Reutiliza plan de ejecución | No | Sí |
-| Riesgo de SQL injection | Alto si se concatena input del usuario | Bajo con parámetros |
-| Sintaxis | Simple | Más verbosa |
+| Parámetros tipados | No: todo se concatena | Sí, con `OUTPUT` |
+| Valores de datos | Dentro del texto (riesgo de inyección) | Viajan como parámetros |
+| Plan de ejecución | Se cachea por texto exacto: cada valor distinto es otro texto | Un único texto parametrizado reutiliza el plan |
+| Cadena | `VARCHAR` o `NVARCHAR` | Debe ser `NVARCHAR` |
 
----
+La diferencia no es que `EXEC` "no cachee": también cachea planes ad hoc, pero solo si el texto coincide letra por letra. La ventaja de `sp_executesql` es la parametrización.
 
-## Caso de uso principal: PIVOT dinámico
-
-El uso más frecuente en la cátedra es construir un PIVOT cuyas columnas no se conocen de antemano.
-
+<!-- check: U1.T.SD.01 -->
 ```sql
-DECLARE @cols  NVARCHAR(MAX)
-DECLARE @query NVARCHAR(MAX)
+DECLARE @Region VARCHAR(10) = 'Sur';
+DECLARE @Sentencia NVARCHAR(MAX);
 
--- 1. Obtener los valores distintos que se convertirán en columnas
-SELECT @cols = STRING_AGG('[' + Departamento + ']', ', ')
-FROM (SELECT DISTINCT Departamento FROM tablaswf.Empleados) AS t
-GO
+-- EXEC: la cadena se arma por concatenación
+SET @Sentencia = N'SELECT Nombre, Sueldo FROM ventas.Vendedor WHERE Region = ''' + @Region + N''' ORDER BY VendedorId';
+SELECT @Sentencia AS Cadena;
+EXEC (@Sentencia);
 
--- 2. Construir la consulta PIVOT
-SET @query = N'
-    SELECT Nombre, ' + @cols + N'
-    FROM (
-        SELECT Nombre, Departamento, Salario
-        FROM tablaswf.Empleados
-    ) AS origen
-    PIVOT (
-        SUM(Salario)
-        FOR Departamento IN (' + @cols + N')
-    ) AS pv'
-
-EXEC sp_executesql @query
-GO
+-- sp_executesql: el valor viaja como parámetro tipado
+SET @Sentencia = N'SELECT Nombre, Sueldo FROM ventas.Vendedor WHERE Region = @Region ORDER BY VendedorId';
+EXEC sys.sp_executesql @Sentencia, N'@Region VARCHAR(10)', @Region = @Region;
 ```
 
----
+Ambas variantes devuelven lo mismo, pero la primera arma un texto distinto por cada región:
 
-## Otros casos de uso
+| Cadena |
+|---|
+| SELECT Nombre, Sueldo FROM ventas.Vendedor WHERE Region = 'Sur' ORDER BY VendedorId |
 
-**ORDER BY dinámico** — el usuario elige la columna de ordenamiento:
+| Nombre | Sueldo |
+|---|---:|
+| Dario | 4100.00 |
+| Eva | 2800.00 |
+| Fede | 3500.00 |
+| Gina | 2800.00 |
 
+(La tabla se imprime dos veces: una por cada ejecución.)
+
+## Ámbito: el código dinámico no ve tus variables
+
+El texto se ejecuta en un ámbito propio. Las variables del llamador no existen ahí: hay que pasarlas como parámetros de `sp_executesql`.
+
+<!-- check: U1.T.SD.06 -->
 ```sql
-DECLARE @columna NVARCHAR(50) = 'Salario'
-DECLARE @sql     NVARCHAR(MAX)
+DECLARE @Region VARCHAR(10) = 'Sur';
 
-SET @sql = N'SELECT * FROM tablaswf.Empleados ORDER BY ' + QUOTENAME(@columna)
-EXEC sp_executesql @sql
-GO
+-- El código dinámico se ejecuta en su propio ámbito: no ve las variables de quien lo llama
+BEGIN TRY
+    EXEC (N'SELECT COUNT(*) FROM ventas.Vendedor WHERE Region = @Region');
+END TRY
+BEGIN CATCH
+    SELECT ERROR_NUMBER() AS Numero, ERROR_MESSAGE() AS Mensaje;
+END CATCH;
 ```
 
-**Tabla dinámica** — ejecutar la misma lógica sobre tablas distintas:
+| Numero | Mensaje |
+|---:|---|
+| 137 | Must declare the scalar variable "@Region". |
 
+## `OUTPUT`
+
+<!-- check: U1.T.SD.04 -->
 ```sql
-DECLARE @tabla NVARCHAR(128) = 'Empleados'
-DECLARE @sql   NVARCHAR(MAX)
+DECLARE @Region   VARCHAR(10) = 'Sur';
+DECLARE @Cantidad INT;
+DECLARE @Sentencia NVARCHAR(MAX) = N'SELECT @Cantidad = COUNT(*) FROM ventas.Vendedor WHERE Region = @Region';
 
-SET @sql = N'SELECT COUNT(*) FROM tablaswf.' + QUOTENAME(@tabla)
-EXEC sp_executesql @sql
-GO
+EXEC sys.sp_executesql
+    @Sentencia,
+    N'@Region VARCHAR(10), @Cantidad INT OUTPUT',
+    @Region   = @Region,
+    @Cantidad = @Cantidad OUTPUT;
+
+SELECT @Cantidad AS VendedoresSur;
 ```
 
----
+| VendedoresSur |
+|---:|
+| 4 |
 
-## `QUOTENAME` — protección contra inyección en identificadores
+## Inyección SQL
 
-Cuando el valor dinámico es un **nombre de objeto** (tabla, columna, esquema), no se puede parametrizar con `sp_executesql`. En esos casos se usa `QUOTENAME`, que envuelve el valor entre corchetes y escapa los caracteres peligrosos.
+Concatenar una entrada del usuario convierte los datos en código. Con la entrada `' OR '1'='1`, el filtro por nombre devuelve **todos** los vendedores. Con `sp_executesql` la misma entrada es un dato y no coincide con ningún nombre.
 
+<!-- check: U1.T.SD.02 -->
 ```sql
--- Sin QUOTENAME (vulnerable)
-SET @sql = 'SELECT * FROM ' + @tabla           -- riesgo si @tabla = 'x; DROP TABLE x--'
+DECLARE @Entrada   VARCHAR(50) = ''' OR ''1''=''1';
+DECLARE @Sentencia NVARCHAR(MAX);
 
--- Con QUOTENAME (seguro)
-SET @sql = 'SELECT * FROM ' + QUOTENAME(@tabla) -- produce [x; DROP TABLE x--] → error de nombre, no ejecuta
+-- Vulnerable: la entrada se convierte en código
+SET @Sentencia = N'SELECT Nombre FROM ventas.Vendedor WHERE Nombre = ''' + @Entrada + N'''';
+SELECT @Sentencia AS Cadena;
+EXEC (@Sentencia);
+
+-- Seguro: la entrada viaja como dato
+SET @Sentencia = N'SELECT Nombre FROM ventas.Vendedor WHERE Nombre = @Nombre';
+EXEC sys.sp_executesql @Sentencia, N'@Nombre VARCHAR(50)', @Nombre = @Entrada;
 ```
 
-> Regla: para **valores de datos** usá parámetros con `sp_executesql`; para **nombres de objetos** usá `QUOTENAME`.
+| Cadena construida |
+|---|
+| SELECT Nombre FROM ventas.Vendedor WHERE Nombre = '' OR '1'='1' |
 
----
+La versión vulnerable devuelve los 7 nombres (Ana, Beto, Cora, Dario, Eva, Fede, Gina); la parametrizada, ninguna fila. El laboratorio completo, con la corrección, está en [inyección SQL](/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion/).
 
-## Inyección SQL — el riesgo principal
+## `QUOTENAME`: nombres de objetos
 
-La concatenación directa de input externo en una query dinámica permite que un atacante inyecte código arbitrario.
+Un nombre de tabla o columna **no se puede parametrizar**. Se lo valida y se lo protege con `QUOTENAME`, que lo envuelve entre corchetes y duplica los `]` internos. Así, un nombre hostil se convierte en un identificador inexistente, no en código.
 
+<!-- check: U1.T.SD.03 -->
 ```sql
--- Input del usuario: ' OR '1'='1
-DECLARE @nombre NVARCHAR(50) = ''' OR ''1''=''1'
-DECLARE @sql    NVARCHAR(MAX)
+DECLARE @Columna  SYSNAME = N'Sueldo';
+DECLARE @Hostil   SYSNAME = N'Sueldo; DROP TABLE ventas.Venta; --';
+DECLARE @Sentencia NVARCHAR(MAX);
 
--- VULNERABLE: la query resultante devuelve toda la tabla
-SET @sql = 'SELECT * FROM Empleados WHERE Nombre = ''' + @nombre + ''''
-EXEC(@sql)
+SELECT QUOTENAME(@Columna) AS Normal, QUOTENAME(@Hostil) AS Hostil;
 
--- SEGURO: el parámetro se trata como dato, nunca como código
-SET @sql = N'SELECT * FROM Empleados WHERE Nombre = @nombre'
-EXEC sp_executesql @sql, N'@nombre NVARCHAR(50)', @nombre = @nombre
-GO
+-- Uso correcto: ordenar por una columna elegida en tiempo de ejecución
+SET @Sentencia = N'SELECT TOP (3) Nombre, Sueldo FROM ventas.Vendedor ORDER BY ' + QUOTENAME(@Columna) + N' DESC, VendedorId';
+EXEC sys.sp_executesql @Sentencia;
+
+-- El nombre hostil queda como un identificador inexistente: error, no ejecución
+BEGIN TRY
+    SET @Sentencia = N'SELECT Nombre FROM ventas.Vendedor ORDER BY ' + QUOTENAME(@Hostil);
+    EXEC sys.sp_executesql @Sentencia;
+END TRY
+BEGIN CATCH
+    SELECT ERROR_NUMBER() AS Numero, ERROR_MESSAGE() AS Mensaje;
+END CATCH;
+
+SELECT COUNT(*) AS VentasIntactas FROM ventas.Venta;
 ```
 
----
+| Normal | Hostil |
+|---|---|
+| [Sueldo] | [Sueldo; DROP TABLE ventas.Venta; --] |
 
-## Depuración: imprimir la query antes de ejecutarla
+El `ORDER BY` correcto devuelve:
 
-Antes de ejecutar, conviene verificar qué cadena se construyó:
+| Nombre | Sueldo |
+|---|---:|
+| Ana | 5000.00 |
+| Dario | 4100.00 |
+| Fede | 3500.00 |
 
+Y el hostil falla sin ejecutar nada: error 207 (`Invalid column name 'Sueldo; DROP TABLE ventas.Venta; --'`) y las 16 ventas siguen en su lugar.
+
+Regla: valores de datos, parámetros de `sp_executesql`; nombres de objetos, `QUOTENAME` (y, mejor, una lista blanca contra el catálogo).
+
+## Ejemplo: PIVOT dinámico, sin `GO`
+
+Los meses se leen de los datos y se arman como columnas.
+
+:::caution[El `GO` rompe el PIVOT dinámico]
+`GO` no es una sentencia de T-SQL: es un separador de lotes de las herramientas (`sqlcmd`, SSMS). Si se pone entre el `SELECT @Columnas = ...` y el `SET @Consulta = ...`, las variables dejan de existir y el segundo lote falla con el error 137 (`Must declare the scalar variable "@Columnas"`). Todo el armado y el `EXEC sp_executesql` tienen que estar en un único lote.
+:::
+
+<!-- check: U1.T.SD.05 -->
 ```sql
-DECLARE @sql NVARCHAR(MAX)
--- ... construir @sql ...
-PRINT @sql   -- muestra hasta 4000 caracteres en la ventana de mensajes
--- EXEC sp_executesql @sql  -- descomentar cuando esté validada
-GO
+DECLARE @Columnas NVARCHAR(MAX);
+DECLARE @Consulta NVARCHAR(MAX);
+
+-- Sin GO entre los pasos: @Columnas y @Consulta viven en un único lote
+SELECT @Columnas = STRING_AGG(QUOTENAME(Mes), N', ') WITHIN GROUP (ORDER BY Mes)
+FROM (SELECT DISTINCT CONVERT(CHAR(7), Fecha, 126) AS Mes FROM ventas.Venta) AS Meses;
+
+SET @Consulta = N'
+SELECT VendedorId, ' + @Columnas + N'
+FROM (
+    SELECT VendedorId, CONVERT(CHAR(7), Fecha, 126) AS Mes, Monto
+    FROM ventas.Venta
+) AS Origen
+PIVOT (
+    SUM(Monto)
+    FOR Mes IN (' + @Columnas + N')
+) AS Pv
+ORDER BY VendedorId;';
+
+EXEC sys.sp_executesql @Consulta;
 ```
 
-> `PRINT` solo muestra los primeros 4000 caracteres. Para queries más largas usá `SELECT @sql`.
+| VendedorId | 2025-01 | 2025-02 | 2025-03 | 2025-04 |
+|---:|---:|---:|---:|---:|
+| 2 | 700.00 | 150.00 | `NULL` | 1200.00 |
+| 3 | 500.00 | 1200.00 | 200.00 | `NULL` |
+| 4 | `NULL` | `NULL` | `NULL` | 500.00 |
+| 5 | 200.00 | 500.00 | 1200.00 | `NULL` |
+| 6 | `NULL` | 1200.00 | 500.00 | 150.00 |
+| 7 | `NULL` | 200.00 | 500.00 | `NULL` |
+
+## Ejemplo: filas por tabla de un esquema
+
+Se arma un `UNION ALL` con una subconsulta por cada tabla del catálogo.
+
+<!-- check: U1.T.SD.07 -->
+```sql
+DECLARE @Consulta NVARCHAR(MAX);
+
+SELECT @Consulta = STRING_AGG(
+        CAST(N'SELECT ' + QUOTENAME(t.name, '''') + N' AS Tabla, COUNT(*) AS Filas FROM '
+             + QUOTENAME(s.name) + N'.' + QUOTENAME(t.name) AS NVARCHAR(MAX)),
+        N' UNION ALL ')
+FROM sys.tables AS t
+INNER JOIN sys.schemas AS s
+    ON s.schema_id = t.schema_id
+WHERE s.name = N'ventas';
+
+SET @Consulta = N'SELECT Tabla, Filas FROM (' + @Consulta + N') AS Conteo ORDER BY Tabla;';
+EXEC sys.sp_executesql @Consulta;
+```
+
+| Tabla | Filas |
+|---|---:|
+| Vendedor | 7 |
+| Venta | 16 |
+
+## Depuración y permisos
+
+- Mostrar la cadena antes de ejecutarla: `PRINT` muestra hasta 4000 caracteres si es `NVARCHAR` y 8000 si es `VARCHAR`; para cadenas más largas, `SELECT @Consulta`.
+- Permisos: el código dinámico se ejecuta con los permisos de quien lo llama, y el encadenamiento de propietarios no se aplica al texto dinámico. Quien ejecuta un procedimiento que usa SQL dinámico necesita permisos sobre los objetos que toca. Ver [documentación de Microsoft](https://learn.microsoft.com/es-es/sql/relational-databases/security/ownership-and-user-schema-separation).
+
+## Autoevaluación
+
+<details>
+<summary>1. ¿Por qué `sp_executesql` evita la inyección de valores?</summary>
+
+Porque el valor se pasa como parámetro tipado y nunca se interpreta como parte del texto de la consulta.
+</details>
+
+<details>
+<summary>2. ¿Por qué falla un PIVOT dinámico con `GO` entre sus pasos?</summary>
+
+`GO` termina el lote y las variables locales se destruyen; el segundo lote no las ve (error 137).
+</details>
+
+<details>
+<summary>3. ¿Cómo se protege un nombre de columna recibido por parámetro?</summary>
+
+Con `QUOTENAME` y, de preferencia, validándolo contra el catálogo.
+</details>
+
+:::tip[En resumen]
+- Dinámico = cadena + ejecución; usar `sp_executesql` con parámetros para los valores.
+- Nombres de objetos: `QUOTENAME` y lista blanca.
+- El código dinámico no ve las variables del llamador y todo el armado va en un único lote, sin `GO`.
+:::
+
+## Fuentes
+
+- Presentación de cátedra, Unidad 1, SQL dinámico (2024).
+- Microsoft Learn, [sp_executesql](https://learn.microsoft.com/es-es/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql) y [QUOTENAME](https://learn.microsoft.com/es-es/sql/t-sql/functions/quotename-transact-sql).

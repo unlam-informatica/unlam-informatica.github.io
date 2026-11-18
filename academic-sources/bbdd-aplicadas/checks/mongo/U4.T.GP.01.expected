@@ -1,0 +1,2 @@
+{"fecha":{"$date":"2025-03-01T00:00:00Z"},"cliente":{"nombre":"Bruno"},"importe":1500}
+{"fecha":{"$date":"2025-05-02T00:00:00Z"},"cliente":{"nombre":"Eva"},"importe":1100}

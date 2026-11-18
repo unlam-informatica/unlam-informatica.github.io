@@ -1,0 +1,11 @@
+--- unico
+duplicado -> 11000 E11000 duplicate key error
+dos documentos sin email -> 11000
+--- multikey (array)
+FETCH > IXSCAN | isMultiKey=true nReturned=2
+--- sparse: solo documentos que tienen el campo
+recorriendo el indice sparse: [1,3]
+find({ telefono: null }): [2,3]
+--- parcial
+consulta que incluye el filtro del indice: FETCH > IXSCAN
+consulta que NO lo incluye: COLLSCAN

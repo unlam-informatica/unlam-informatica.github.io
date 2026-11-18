@@ -1,0 +1,3 @@
+a) OrdenId|Clustered Index Seek|[PK_Orden]
+b) Estado|Clustered Index Scan|[PK_Orden]
+c) Patente|Clustered Index Scan|[PK_Orden]

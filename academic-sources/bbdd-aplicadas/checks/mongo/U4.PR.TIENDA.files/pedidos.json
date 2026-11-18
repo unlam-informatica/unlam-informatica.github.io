@@ -1,0 +1,311 @@
+[
+  {
+    "numero": "PED-1001",
+    "clienteCodigo": "C-01",
+    "fecha": {
+      "$date": "2025-03-02T00:00:00Z"
+    },
+    "estado": "entregado",
+    "items": [
+      {
+        "sku": "P-001",
+        "cantidad": 1,
+        "precioUnitario": {
+          "$numberDecimal": "18990.00"
+        }
+      },
+      {
+        "sku": "P-006",
+        "cantidad": 2,
+        "precioUnitario": {
+          "$numberDecimal": "12700.90"
+        }
+      }
+    ],
+    "total": {
+      "$numberDecimal": "44391.80"
+    },
+    "envio": {
+      "ciudad": "Cordoba",
+      "costo": {
+        "$numberDecimal": "1500.00"
+      }
+    }
+  },
+  {
+    "numero": "PED-1002",
+    "clienteCodigo": "C-03",
+    "fecha": {
+      "$date": "2025-03-15T00:00:00Z"
+    },
+    "estado": "entregado",
+    "items": [
+      {
+        "sku": "P-003",
+        "cantidad": 1,
+        "precioUnitario": {
+          "$numberDecimal": "189900.00"
+        }
+      }
+    ],
+    "total": {
+      "$numberDecimal": "189900.00"
+    },
+    "envio": {
+      "ciudad": "Buenos Aires",
+      "costo": {
+        "$numberDecimal": "0.00"
+      }
+    }
+  },
+  {
+    "numero": "PED-1003",
+    "clienteCodigo": "C-01",
+    "fecha": {
+      "$date": "2025-04-04T00:00:00Z"
+    },
+    "estado": "entregado",
+    "items": [
+      {
+        "sku": "P-007",
+        "cantidad": 2,
+        "precioUnitario": {
+          "$numberDecimal": "15400.00"
+        }
+      },
+      {
+        "sku": "P-010",
+        "cantidad": 1,
+        "precioUnitario": {
+          "$numberDecimal": "14300.00"
+        }
+      }
+    ],
+    "total": {
+      "$numberDecimal": "45100.00"
+    },
+    "envio": {
+      "ciudad": "Cordoba",
+      "costo": {
+        "$numberDecimal": "1500.00"
+      }
+    }
+  },
+  {
+    "numero": "PED-1004",
+    "clienteCodigo": "C-02",
+    "fecha": {
+      "$date": "2025-04-20T00:00:00Z"
+    },
+    "estado": "cancelado",
+    "items": [
+      {
+        "sku": "P-004",
+        "cantidad": 1,
+        "precioUnitario": {
+          "$numberDecimal": "45200.00"
+        }
+      }
+    ],
+    "total": {
+      "$numberDecimal": "45200.00"
+    },
+    "envio": {
+      "ciudad": "Rosario",
+      "costo": {
+        "$numberDecimal": "1800.00"
+      }
+    }
+  },
+  {
+    "numero": "PED-1005",
+    "clienteCodigo": "C-03",
+    "fecha": {
+      "$date": "2025-05-11T00:00:00Z"
+    },
+    "estado": "entregado",
+    "items": [
+      {
+        "sku": "P-002",
+        "cantidad": 1,
+        "precioUnitario": {
+          "$numberDecimal": "32500.50"
+        }
+      },
+      {
+        "sku": "P-001",
+        "cantidad": 1,
+        "precioUnitario": {
+          "$numberDecimal": "18990.00"
+        }
+      }
+    ],
+    "total": {
+      "$numberDecimal": "51490.50"
+    },
+    "envio": {
+      "ciudad": "Buenos Aires",
+      "costo": {
+        "$numberDecimal": "0.00"
+      }
+    }
+  },
+  {
+    "numero": "PED-1006",
+    "clienteCodigo": "C-04",
+    "fecha": {
+      "$date": "2025-05-28T00:00:00Z"
+    },
+    "estado": "enviado",
+    "items": [
+      {
+        "sku": "P-009",
+        "cantidad": 1,
+        "precioUnitario": {
+          "$numberDecimal": "27600.00"
+        }
+      }
+    ],
+    "total": {
+      "$numberDecimal": "27600.00"
+    },
+    "envio": {
+      "ciudad": "Mendoza",
+      "costo": {
+        "$numberDecimal": "2200.00"
+      }
+    }
+  },
+  {
+    "numero": "PED-1007",
+    "clienteCodigo": "C-06",
+    "fecha": {
+      "$date": "2025-06-09T00:00:00Z"
+    },
+    "estado": "entregado",
+    "items": [
+      {
+        "sku": "P-006",
+        "cantidad": 3,
+        "precioUnitario": {
+          "$numberDecimal": "12700.90"
+        }
+      },
+      {
+        "sku": "P-007",
+        "cantidad": 1,
+        "precioUnitario": {
+          "$numberDecimal": "15400.00"
+        }
+      },
+      {
+        "sku": "P-010",
+        "cantidad": 2,
+        "precioUnitario": {
+          "$numberDecimal": "14300.00"
+        }
+      }
+    ],
+    "total": {
+      "$numberDecimal": "82102.70"
+    },
+    "envio": {
+      "ciudad": "La Plata",
+      "costo": {
+        "$numberDecimal": "900.00"
+      }
+    }
+  },
+  {
+    "numero": "PED-1008",
+    "clienteCodigo": "C-01",
+    "fecha": {
+      "$date": "2025-06-30T00:00:00Z"
+    },
+    "estado": "pendiente",
+    "items": [
+      {
+        "sku": "P-004",
+        "cantidad": 1,
+        "precioUnitario": {
+          "$numberDecimal": "45200.00"
+        }
+      },
+      {
+        "sku": "P-001",
+        "cantidad": 2,
+        "precioUnitario": {
+          "$numberDecimal": "18990.00"
+        }
+      }
+    ],
+    "total": {
+      "$numberDecimal": "83180.00"
+    },
+    "envio": {
+      "ciudad": "Cordoba",
+      "costo": {
+        "$numberDecimal": "1500.00"
+      }
+    }
+  },
+  {
+    "numero": "PED-1009",
+    "clienteCodigo": "C-03",
+    "fecha": {
+      "$date": "2025-07-14T00:00:00Z"
+    },
+    "estado": "enviado",
+    "items": [
+      {
+        "sku": "P-009",
+        "cantidad": 2,
+        "precioUnitario": {
+          "$numberDecimal": "27600.00"
+        }
+      }
+    ],
+    "total": {
+      "$numberDecimal": "55200.00"
+    },
+    "envio": {
+      "ciudad": "Buenos Aires",
+      "costo": {
+        "$numberDecimal": "0.00"
+      }
+    }
+  },
+  {
+    "numero": "PED-1010",
+    "clienteCodigo": "C-06",
+    "fecha": {
+      "$date": "2025-07-21T00:00:00Z"
+    },
+    "estado": "entregado",
+    "items": [
+      {
+        "sku": "P-003",
+        "cantidad": 1,
+        "precioUnitario": {
+          "$numberDecimal": "189900.00"
+        }
+      },
+      {
+        "sku": "P-002",
+        "cantidad": 1,
+        "precioUnitario": {
+          "$numberDecimal": "32500.50"
+        }
+      }
+    ],
+    "total": {
+      "$numberDecimal": "222400.50"
+    },
+    "envio": {
+      "ciudad": "La Plata",
+      "costo": {
+        "$numberDecimal": "900.00"
+      }
+    }
+  }
+]

@@ -20,8 +20,8 @@ def test_inventario_hashes_y_formatos(subject):
     assert guide["sha256"] == expected
     assert guide["id"] == f"demo-{expected[:12]}"
     assert guide["format"] == "pdf"
-    assert summary["files_scanned"] == 4  # .txt omitido y .DS_Store ignorado
-    assert [s["path"] for s in summary["skipped_files"]] == ["practicas/notas.txt"]
+    assert summary["files_scanned"] == 4  # .xyz omitido y .DS_Store ignorado
+    assert [s["path"] for s in summary["skipped_files"]] == ["practicas/notas.xyz"]
     assert not any(".DS_Store" in d["path"] for d in catalog["documents"])
 
 
@@ -109,3 +109,16 @@ def test_errores_de_configuracion(tmp_path):
     (tmp_path / "x" / "subject.yaml").write_text("rules:\n  - doc_type: apunte\n", encoding="utf-8")
     with pytest.raises(PipelineError, match="match"):
         run_inventory(subject_paths("x", tmp_path))
+
+
+def test_mapa_de_extraccion_por_defecto_sin_anclas_ni_objetos_compartidos(subject):
+    (subject.subject_config).write_text(
+        "defaults: {license: x, distribution: privado, extraction: {profile: text, picture_text: true}}\n"
+        "rules:\n  - match: '*'\n    source: demo\n", encoding="utf-8")
+    run_inventory(subject)
+    text = subject.catalog.read_text(encoding="utf-8")
+    assert "&id" not in text and "*id" not in text
+    documents = load_catalog(subject)["documents"]
+    assert all(d["extraction"] == {"profile": "text", "picture_text": True} for d in documents)
+    documents[0]["extraction"]["force_ocr"] = True
+    assert "force_ocr" not in documents[1]["extraction"]

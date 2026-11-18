@@ -1,0 +1,2 @@
+VARCHAR contra VARCHAR|Index Seek|[IX_Pedido_Codigo]|2
+NVARCHAR contra VARCHAR|Index Scan|[IX_Pedido_Codigo]|59

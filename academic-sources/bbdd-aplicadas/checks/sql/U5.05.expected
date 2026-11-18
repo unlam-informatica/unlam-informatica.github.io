@@ -1,0 +1,5 @@
+1 SELECT * FROM ventas.Cliente|NO|NO|NO
+2 SELECT * FROM ventas.Pedido|SI|NO|NO
+3 INSERT en ventas.Pedido|SI|SI|NO
+4 UPDATE ventas.Pedido SET Estado|NO|SI|NO
+5 SELECT * FROM compras.Proveedor|NO|SI|NO

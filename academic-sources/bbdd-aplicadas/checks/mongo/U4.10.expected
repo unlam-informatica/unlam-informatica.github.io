@@ -1,0 +1,2 @@
+sin indice: {"etapas":"SORT > COLLSCAN","indice":null,"devueltos":8,"examinados":24}
+con indice: {"etapas":"FETCH > IXSCAN","indice":"ixSucursalFecha","devueltos":8,"examinados":8}

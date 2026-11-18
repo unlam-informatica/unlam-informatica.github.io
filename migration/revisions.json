@@ -1,0 +1,1256 @@
+{
+  "description": "Revisiones académicas deliberadas de páginas migradas. Cada entrada encadena el hash anterior (from) con el nuevo (to) de una salida registrada en sources.json, que conserva intactos los hashes de la migración. npm run validate exige que cada archivo coincida con el final de su cadena. Se registran con scripts/register-revisions.mjs.",
+  "revisions": [
+    {
+      "output": "src/content/docs/bbdd-aplicadas/index.md",
+      "from": "4f08b8bb3d92c5490b5322dc55e208dfabac86dc8f0c644a65cc84116ef98eee",
+      "to": "bfa1ac116dea2aa37788098067887972bf192da6e63e182b9330381002cd88c8",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/index.md",
+      "from": "ad9be04a5f4ce1df436a606578ab9a5084e9d42baf8996ca75f78d6ba73d1e78",
+      "to": "0cc45fdf68690e62258d010b42b00e8cfe09817830d7f251fd2868ce04d15984",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/index.md",
+      "from": "edc94102589c5e5e9b1c817155f79f8888ad82646e322a38c244cb711d8bd07b",
+      "to": "9dc6fbce1dfaedb4129d7032771ef5aee985a272d6910ee8b89ea6fff570a506",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/pivot.md",
+      "from": "da6dfd1afe480a3ce253e2ce562ae8c8641591f5cb434728d9104cc60f38de24",
+      "to": "cfae79fb74b908b392b28902eda89aaf7f7e11fb7f0bc0cf53c368b79e20f2a5",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/tp1.md",
+      "from": "108b46b5dda352040b0773c8acb32d700458c16745087d10e695894458779877",
+      "to": "e9d050610f5dd5744a90f5b9d2a15972374816318f39f6d6f317d9d673fd8b72",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/window-functions.md",
+      "from": "8c86991f4b7182c8c77a23664a758e99e551e49f250a357ca7548e7a77b10f2f",
+      "to": "f4cdcd95efd78a3975ca09e3883ca4b9991f8d3485ed578d7a5ec8d72a8c1818",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/cte.md",
+      "from": "582f829663e4e403ab132ad7ee98f95d8fd75479321f94d29e2b5a3a5f73439a",
+      "to": "7b9e415585c8e605028aca2c0e5ba411603de18b68451a677b1fb2e0554d23e7",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/pivot.md",
+      "from": "7c292079df4fcfd51d7c1426e6dec77cd0c5a052715cf3ab9a6d963ee2dbfe82",
+      "to": "11347c678f4d756e447b9b1a5d71c6894637cc87c16f699caed8ef81affe80fc",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/repaso-sql.md",
+      "from": "efed6c64a60ab7e1dd2e75932283611e1078dad7e1a0d06b88c76c59c1a1515a",
+      "to": "e67bb90858a38984416b62fa4c9990f2a00e47ca75b0c70c74b4f87af3863362",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/sql-dinamico.md",
+      "from": "dfe6da0f3cbad01c86c137e7c488e7e1c68cde8c7ee616037ed198ea74fb9e9a",
+      "to": "748b733b4bacca0cb9ec140458bd8bb8ff8a00d5d5aa388fcc543a5a97450d9a",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/unidad-1.md",
+      "from": "721f81e9a2877319ce0da2be114727995a10a42ce31c8a93b0ae228eca5faab7",
+      "to": "0390490905f7fb2d3dce5b29f7b180d52ff63cc8402a6fe8faa4c715640c57d8",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/window-functions.md",
+      "from": "5f54c7be9d5ba7ece2ba9f19ffc1c7a78a94174eda44b54e9bcf3d0cf412fb48",
+      "to": "f30194ca2abb9d84aa3a7aadec387cba99e523d3ac7561b1c4cc933e962f2f11",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/index.md",
+      "from": "115c5971e28f8ff24277b1f425856b16015350b94e7aa7733f6566e062a23300",
+      "to": "cc3114d5220d8faec2e877442b0ae70acadc53ac7eba6b106e5b419bbbd3c261",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-transacciones.md",
+      "from": "68c884d500387087c4bd0cf29017acc07430bb6c3310dad9180b75df134c153d",
+      "to": "fec78f634b1e7a6daa3d3848be43ca0e78621d6b0474328daad0400ae17fa087",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/tp2.md",
+      "from": "7c3a16932e5e7f0f0503f3f77cb550dd23d85a07a41b57f468c68edb17385850",
+      "to": "1ff704cd8b139e3797297c4d63e2f8a8c13c3b0423d30665bec27803b60ad5b3",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/apis-desde-sql.md",
+      "from": "d11a5f1e9bc05411c2b9c4c7b0d5049541576527af7adce54f4945ddb5455f7e",
+      "to": "a14d56ec935e513aecd08aff8cf9887faf4c4c1c69d94ef760228da11d2c7105",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/bd-en-memoria.md",
+      "from": "53067045b1b3fd7e98243e2c25d5391f8f9af46fa7a1557654a0278072446e80",
+      "to": "10e1954694d8299316c0765842135999417c8fd17403a0d47b41ae0b9db6d62c",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/collation.md",
+      "from": "b8bab9f572330f562f816abee070bb22ca0d356d818e278b54bbca8e8914ee50",
+      "to": "b44eb79cd2e2b619d14571cd71744031732d9d190278500bae1953a525adb7f4",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio.md",
+      "from": "feb68396fdb4402fd23791134a40297deda17443c81e49544acf98dbe22097e0",
+      "to": "f9b6d31564155bfd5df1b56f5698eca4fa6383c6a56f39dee83375102764a382",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos.md",
+      "from": "38f74e8450d7cdbdd7b777312638af84c67520b1ba1ffa9316759f06d13a9b59",
+      "to": "179481dd3ee8aed5901f59f8b65849665da01cb6a2f61648a4d5c63e5ccdc7cc",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/json-en-sql.md",
+      "from": "02a93802b700c4953dcf576a1f82f400f970889df5c36fea634416a420cbf5a0",
+      "to": "2c39e44e3ceba86acbf8635d078b88bd0812ef8a984378ec2a5524aaeba4746f",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/unidad-2.md",
+      "from": "c78d294c09514dfee7375865658096d21f9726fc7b8101de33414cd00c1104e5",
+      "to": "eb1948bb4e118d2fb1bfb79cd3e3ffa16dba4fefb65361291ad93a1af8ad2e89",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/xml-en-sql.md",
+      "from": "79e3ea950715a2757fd9f496043911425258c912691d3fdeb36ee79764601ab2",
+      "to": "59a33685aaa972b31ef0444789c0860ffe300338b99fd5bb8f3426b677e26e1d",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/index.md",
+      "from": "94cacf563fefa773e1dce62c68a91a48520d36ff018ac4471f03fc538e61d8ab",
+      "to": "e61c0ec55e1c5e4a7a14f1a1c7ebde79d6a36a6bee4be73cec39c1730fcaaea4",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl.md",
+      "from": "107cb548b676f2e8c6ee022d973baaa457d93b638a6cdb1c4d74a4f352b62020",
+      "to": "6a8eae018e42417481763f7cdbb043e1c67e6ce514f69646c07d7c67f6569991",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/indices-y-planes.md",
+      "from": "01816ac820f4773ec0b8682a2a02b1b935fb86426e9f95fe6ad16c13dbb4d37f",
+      "to": "ce19d3923d1245c01b08152b6a5e5b4dd6be5b63da4794954b895cd2344e5e5e",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento.md",
+      "from": "a3a1234784f0f605b444059d621cefb28d5186a676778bcc48e5dd377c474feb",
+      "to": "01b1eecc498c20b0af9545ee417a21fcc598d2f1e5cb8243eb7a07b43e2d8036",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia.md",
+      "from": "7c185db0897e920564a2ec9e1c5bf95b76070cc8f9ed17478ad460c30e1389cf",
+      "to": "a6c03ec53f10a0b8172035ad61e03aa06b778592a07c3bab0447c534914b9715",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/index.md",
+      "from": "d9a42044ce5b275e26f2ed3e508ff9d02a71430f4fe5a429397e137678f260bc",
+      "to": "db6843c3a934f20b0cc45e794d25b996cc722a68f214b74c37aaaadc45069e0b",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/integrador-peliculas.md",
+      "from": "57a56d61fc6c3c61a01b5842f34a162ff4f68a004880c86a598544485ec77f0c",
+      "to": "96775cf8f5303d098bd944d609ce8e7ccd6a19e63d5c6eca6505988f39d9dd65",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online.md",
+      "from": "d39de296dbb7234e7b4081701e28878273fddcb3bdfdd7b7f29886fd2a7d405a",
+      "to": "65a25e3b249e1b54bfb13ef7dd54655d016c712e581b79d1926513632127df0d",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/practica.md",
+      "from": "ba11a9150be6546991b0aa64869221add296bf0c16e00e8792eab1cb29d5c8b5",
+      "to": "c957c649fbd51ad44e05cfdf400f341045ed9d22e74f74425184ce408eb47de5",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd.md",
+      "from": "f65b45d768c8f2b9dfe7ad8dafadce10eddae70aee6bd9083bc522e2f7050aa1",
+      "to": "a5e7be96f5bb0bc6b39d36f6cc51dc2b4b2363d10aec145acc0888e89936fcde",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/guia-parcial.md",
+      "from": "f1aa5b21d448e1fb8802636f2e9615a0f6caf7a88044d32ef83db52b45a8cd36",
+      "to": "1efdbc8132e4397b0a9c056478c3e10a38bd9db25982757b64a76303a6fdadf0",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb.md",
+      "from": "862d8695569206eff9ea744fa47a0975a44350f32db72b97f91c947b13a27d9f",
+      "to": "f95ca7e2dad4674ae2d22b0ae67d9d498ab43efb4edb22e8a307c605f8602991",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion.md",
+      "from": "6bb9ae1148899c1b844dbc10fc536c8e68c1cfb463b3e0a604d04fa117fecab1",
+      "to": "e6fa37c47f5fe41045fffd3766dcabf0b23cc8f4c454059556582712e1e6c019",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-compass.md",
+      "from": "f7001ac14b28a008c74e8347db4c135276424468d8badf9f11ed8a1989366a42",
+      "to": "4dcc71a725b5e22614fd4b82e09e36b3c76271e7e264b8adf920908361613a77",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-crud.md",
+      "from": "dda911b4e089794ab2994f0fba4704d30a28f8494974ab8053cafa4af9390c0d",
+      "to": "9e5ceb2155ca3fa17066229854d00ab7948fc304c6b0762bb61d27d61130cbe0",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion.md",
+      "from": "81537cf05a0ccf023898e4c9d65b665d74adfd16a7f537a787ce90915f5d5957",
+      "to": "f6b741cc8826b5207968458fe089b4babb76f1e14bcf93f40b2b168c62c00bbb",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/nosql-conceptos.md",
+      "from": "a819c0de5966b01b18d166c22dc5cc7f10e495852ed8be1975cabb62cb45129d",
+      "to": "ce8f4c05680c3ce352cc6bdde8878249112d07df8c4b6e30753f3670d66f5d6e",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/unidad-4.md",
+      "from": "5b56ae1bc4dfa538ebd0df3509c088f0c99f9eed3eefe59d7c5851dfeaffb238",
+      "to": "ce5fb5dd73e67ba8326329cbaea774319134c1f22a20ef35226a976c67ec072d",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/index.md",
+      "from": "adc5fbcd325b3e156c9872407fbece964d5ef92d583a764ad0945c46594620ea",
+      "to": "da97b6e97b54512877a744a2be2b0ad8664af07f01ca55fbfcfdc9fd7a3218e8",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/index.md",
+      "from": "539f7967c16985779c01e5f648e7dad57726845db21893d704b1cdec51b6d470",
+      "to": "a99b16a58879e465978a8b9fa9ecb3afaee003fcb9ccfc8cd3ef25ff258057c1",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/laboratorio-backup.md",
+      "from": "0bab948907eea0ca29df2916831c4b0ed8cff033edb4e7eb2f8d62fb7bd511a8",
+      "to": "7ecbf5dfd148a390e347c790cec7528c07262b9aa4cb0a29f3a39a03f4f8f967",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion.md",
+      "from": "8d72074e21f107dd5b0b6bfc7a8d583f607866e4881f2d25985b17ab12d6b36f",
+      "to": "6cafb03d8658f10c0a8058db037dce2919fa0b84f3729ce0833655e163a1d5fb",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad.md",
+      "from": "5e313de12476afeeae2d51b4bc775fc2fdbbe05382717995d8d44e93ff671c25",
+      "to": "81aafae0b6802344bcac2ea1b98bf07e1806c56222391c8cdaf28a4ce748466f",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad.md",
+      "from": "a4c9a96b0d16162679429af983ce46d8a70dce1fed87a5c412822b38c5db8400",
+      "to": "6a9dadea1e1e5e5ecf93e4e62dc952eebb35405ba8540b67148953f4716af72d",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/backup-restauracion.md",
+      "from": "fab5aa3878248e8e2092e130b7f7ff88e805bfbf767f5c4bbfb58f3817f695d4",
+      "to": "f28c0777c8b79ed89fcd1cb5f9cb807ff97d31d9ead4a8ef1a60dee70fab7fdc",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/cifrado.md",
+      "from": "87dc13decbf59d6f55bf443c29676ff5f0627b540b448549ba87dc3833e099e3",
+      "to": "03f9a39826ca4ea2de1daac7b33f91afa9be2d385bc521e22e906ef290471355",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/guia-parcial.md",
+      "from": "e27c6046c7c7b53504f89374a089f07390bd8b37b771623b64bc4235486e9258",
+      "to": "5839e5a2b4f5e0a832a0add441f73524b17db5872de89be58a7cd321901714ea",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/inyeccion-sql.md",
+      "from": "3c2dfdeb911a1c089e0ff5a51b6c21e2fb4dc22a26ef6b267efdece9eee541f0",
+      "to": "fdde56105a4d31160c1bf0a7627e7c2c454c643cee9b8f805dd8d0515c7a53e3",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/log-recuperacion.md",
+      "from": "d64208ad94aa727b8ea6d3ab6884daf07ee40a758fad682f03078e20a548e534",
+      "to": "93324d03dbac1758087588365f307b534a9e8a2a1da0c4d2e995ff27ccc9b542",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/seguridad-permisos.md",
+      "from": "4a774047be645ea4ad5653eab9f16b964b2c0be9ac2997f169cc3c6f9625fb2e",
+      "to": "d6c775ed2959df14df8a35eab6e7eac9d71b836008e7c14043fc048b6a78e71b",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/unidad-5.md",
+      "from": "233a6c5f63a1cb246bc5e224d30445b9ec6a52aa338a3d112099fc36405b64e6",
+      "to": "ddaf252fb1b14fc47f8563df34406b2e928205e98018ed3bc16d99d38c30f8fc",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/index.md",
+      "from": "4e30b24a0f1a83695ececdf55a2c08c2452c5003272a849ae0453479ca5be450",
+      "to": "17adfd66733dc4d02dd8a8a8c9966d691ec29fd101c6023b98906a4a40e1533e",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/index.md",
+      "from": "0b39539c2e7bf4e528399e08bc7e2d9842ac816c0438f2ee0dd636bcc9192e13",
+      "to": "85a28ed0194b4d3cdd45675964710691971b37e72cb5128e93be95e8c325e22a",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/casos-integradores.md",
+      "from": "114efc3a024a6952b24ad3f7b193cfc3a4026e3e2483fab9d1d520a98c7d5ee4",
+      "to": "166ce853141fe1aec9ad8a789cf1b6e9cc30296120f30830ef935e0aa371e1da",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/laboratorio-calidad.md",
+      "from": "e466563e2b40db15347f9a86854bbb89478ba73f7a55a60e50304fbb117ec3ae",
+      "to": "b568b53d3bc1033b9649363ecb1f19334fce4281de6ec6ef684ea40c9e2df235",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/laboratorio-privacidad.md",
+      "from": "a5afe7cc52e41ddda6d782ba22c8d5b1b102e71f5528f807680cc79e2b9d1360",
+      "to": "8f6346eace3cabeddf28df5533888ddbb3b2c615296c09e60c96e15abfd6018d",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/gdpr.md",
+      "from": "b51ee2bbaba3905fbae17f50b8bceb5a5964836a782ab83923a91991402ae5af",
+      "to": "d5b43e37d0a05d9d8183c0a9ed5ab48e1bc341444752c7a16ca8227afcdc110b",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/gobierno-privacidad.md",
+      "from": "e11193266f3b10e29fde7c8b8afcad89d369e688d0430e63c5d75e0445ba17f7",
+      "to": "99d38f09bfd1090d0dd9885abf77af3d0b2dd1585c137b67475c6bbcba056ee0",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/guia-parcial.md",
+      "from": "6336a828696db8b91d4797f934ba0b05a1c0603be4981860a67a5e415047dd8c",
+      "to": "185319e52005a9eb836a4193ac7e8ab5e4c4476ec4c8015176d2bfbc716dc1d0",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/iso-25012.md",
+      "from": "db21fa7f060eac8b460af666a1bfcf5d0ee65881b53054ecbe4373f5f603b9b7",
+      "to": "9fef3cca30dc69e4285f2043ea7e8057d05ad00522f1e1d873edf4262581d635",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/ley-25326.md",
+      "from": "654941322f18e2bc4463b6c4496b1948c404da5e339874e967eda6a07d5a8d1b",
+      "to": "11d96af6b4c8370b6d79ef9487edb62f1198cac9ec3b81cd2023e527d0d1e312",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/medicion-calidad.md",
+      "from": "0f42eb76a7eff041cdb1fc7ea109ff839ba56aa2cf8a0a80623bbca978d26a70",
+      "to": "d71c16f4221d3668284595b4658b1ca3fd20a7e5eae088e87ae4cbdafe821a00",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/unidad-6.md",
+      "from": "6e4b93d4cf3c4f7d762d783cda1509feca82718ac375b3aebc47694d0cef941d",
+      "to": "b46a31120f5d626237d1d3a8e09ffbb496daa793a9e6b33b04a82e96c7eebc58",
+      "date": "2026-11-17",
+      "stage": "E2+E3",
+      "reason": "E2: títulos y evaluación del programa 2024, enlaces de unidad, operadores MongoDB y montos, errores verificados de content-audit §2.2. E3: Unidad 1 corregida y ampliada según content-audit §8-§9, con ejemplos y ejercicios verificados en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/index.md",
+      "from": "cc3114d5220d8faec2e877442b0ae70acadc53ac7eba6b106e5b419bbbd3c261",
+      "to": "19afefe85fa739c5dce3202e48efa5929edad576ebd060eec86ebcbf6e6b28b9",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/index.md",
+      "from": "b7fc1d5f7953f27baabc6541b0dc0b73be620025162a0223b5d0d78060b68633",
+      "to": "5c53c009c5a58dbd3288bc279c5ccb63f2fe16b7600aadb1675c58cabcab5eaf",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/importacion-archivos.md",
+      "from": "4e57e91d591d4ad97ced504765bb1f4a041af8999a8ede02e61d9da045e718c0",
+      "to": "bd185d1cf90a74591b04503f8a6c02aa0a0738ee3dad8ee7494ea9b73b6b7326",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-apis.md",
+      "from": "04a333f90c9fb4d0c66217b9a5add16cfcee169d37890e68604ade319d05bb8b",
+      "to": "0f8fbe09ea659622589e11355fb82f59cbda8bfccafefca2a95f50a6e8743c57",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-bd-en-memoria.md",
+      "from": "7bc5addd4aed402a6c4728bfb646ce65184bea5116c88dec06eebc83b1f10326",
+      "to": "eef1a74adbf2e82d6351678cea1f724883cd5f9acd3629c02330eb8282f61f86",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-json.md",
+      "from": "df817cf3a2e223799a028ee0f98eeb8c8e864920f7e689d8822df4c28f4a4753",
+      "to": "190a60ecd6581df4e9b2774eb46d2aa024de3e8cc893919b6372814b6883d14e",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-xml.md",
+      "from": "f8d989674f14582fe8264926932f3052d1fd71268369c7b5850b34b98e3934b2",
+      "to": "98fbadc47f5edfc02f96904babe90780e3709aea16647d663263a9676e422c5c",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/tp2.md",
+      "from": "1ff704cd8b139e3797297c4d63e2f8a8c13c3b0423d30665bec27803b60ad5b3",
+      "to": "725b3ad61dd60a7f7d331ad03c057e8a49b15328907ef87d114437f1737b3187",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/apis-desde-sql.md",
+      "from": "a14d56ec935e513aecd08aff8cf9887faf4c4c1c69d94ef760228da11d2c7105",
+      "to": "98d06a433c246a66848a5bd9840e76858ed9711247308925d23876980f5dc346",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/bd-en-memoria.md",
+      "from": "10e1954694d8299316c0765842135999417c8fd17403a0d47b41ae0b9db6d62c",
+      "to": "aab3bcd4dcfe7bb3900f7b8cd62b888bb62ed1ae82c6e44adf97ff059dad6713",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/collation.md",
+      "from": "b44eb79cd2e2b619d14571cd71744031732d9d190278500bae1953a525adb7f4",
+      "to": "5d4c02c229abb6a15e931212103848aa47e30750ba8f194f402440be834aa905",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/formatos-conectividad.md",
+      "from": "11031b8007b4e7473a67ff83d7f9d0fa2717b6559a3366b2cf39d6686b68ac0a",
+      "to": "335712843adb013f1370cd68a659fd7f3f006c95641ffc626d91789c6583d8cd",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio.md",
+      "from": "f9b6d31564155bfd5df1b56f5698eca4fa6383c6a56f39dee83375102764a382",
+      "to": "63e4078cd3ac371e3740462916bcdd9315f20c519aa968301b3cffb92efe04f9",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos.md",
+      "from": "179481dd3ee8aed5901f59f8b65849665da01cb6a2f61648a4d5c63e5ccdc7cc",
+      "to": "a091f9c088a8853600f2c63cef22d40110b625d368465da6222ed759b652efd3",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/json-en-sql.md",
+      "from": "2c39e44e3ceba86acbf8635d078b88bd0812ef8a984378ec2a5524aaeba4746f",
+      "to": "d34c29217bd9af624e20992393f8cff75f24412f6c37ef3529e7a9af297a6048",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/unidad-2.md",
+      "from": "eb1948bb4e118d2fb1bfb79cd3e3ffa16dba4fefb65361291ad93a1af8ad2e89",
+      "to": "e708a99a806fa4ffa11893d19077c342a33ce1093fae727d298bde1514433912",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/xml-en-sql.md",
+      "from": "59a33685aaa972b31ef0444789c0860ffe300338b99fd5bb8f3426b677e26e1d",
+      "to": "6b9ef452c6feb1a7384464648dfd0de9e7d0fa55684ef82dd6d0e218164c2a39",
+      "date": "2026-11-17",
+      "stage": "E4",
+      "reason": "Unidad 2: arquitectura e instalación (contenido de u3, u4 y u5 trasladado con puentes), conectividad propia, formatos unificados, JSON/XML/importación corregidos y verificados, APIs como complementario, TP 2 original; según content-audit §8-§9",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/indice-cluster.md",
+      "from": "9c41ec93583fbd120f653c900761a111585f902966202efa843bae82f5d0b043",
+      "to": "7fe63c368e1f01eabc5cf690cde11ecd0f430325604c5bc5b3f224cf337fb9f9",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-transacciones.md",
+      "from": "fec78f634b1e7a6daa3d3848be43ca0e78621d6b0474328daad0400ae17fa087",
+      "to": "e6a6ccc988b1a72f7f3830760215e900350d6b5a0aa80900f7e23d427570151f",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/index.md",
+      "from": "e61c0ec55e1c5e4a7a14f1a1c7ebde79d6a36a6bee4be73cec39c1730fcaaea4",
+      "to": "86276daab3c2a3e490884db193bbbcfee0d8755a9630d365e3e1a974bf186442",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/practica/index.md",
+      "from": "a7b5043bea88143cf01323be6ad61774a74e0858c970be5c59543b2087aa8638",
+      "to": "91c5975a687854e349e7b0e39ac3ac4ca16dc4373d2a487a7803584ee1663d25",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento.md",
+      "from": "9dbb422a3b3f1a8103a83c590e4c2d354456d65de6952786de9c5825aa1f7d06",
+      "to": "3c70348b88db81a547619e37a1c032ffd5db1dca6809d0b64dda13abf8613d90",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl.md",
+      "from": "6a8eae018e42417481763f7cdbb043e1c67e6ce514f69646c07d7c67f6569991",
+      "to": "d09e5fd28997d4a32bc8ecb41f3e39a6a9c6ab645f65bd3fa867ee973bc57da4",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion.md",
+      "from": "fbf875157f8e9d953739df090d8c06afbcdde615592a3dbb6939636b7565e9bd",
+      "to": "5356d38c286c72b25a417c8ce11d6b001429802bec16de6d2cd12a718263c286",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/indices-y-planes.md",
+      "from": "ce19d3923d1245c01b08152b6a5e5b4dd6be5b63da4794954b895cd2344e5e5e",
+      "to": "7d4b2fc57a124d176b2e3e62231583448ae1956e5d69d5e675ea57ffedc0f8d7",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento.md",
+      "from": "01b1eecc498c20b0af9545ee417a21fcc598d2f1e5cb8243eb7a07b43e2d8036",
+      "to": "3ebfb02f45fc99306ac6dfbdf9791c39c34e5bed794214c6e48a88e70d5434f8",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia.md",
+      "from": "a6c03ec53f10a0b8172035ad61e03aa06b778592a07c3bab0447c534914b9715",
+      "to": "bf9567ad80df1037ac8d2a136857a45f3a5d25453c32d246470bf3248c48faac",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/unidad-3.md",
+      "from": "758514d4a3bd17b8d34852387b81b5a2bf8a3e8a73faa729d174cc193520783e",
+      "to": "c7f717d0cdf96a0a07431b0949f2d0c369dd2d14e1bf3e27921bf28168e72906",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/index.md",
+      "from": "db6843c3a934f20b0cc45e794d25b996cc722a68f214b74c37aaaadc45069e0b",
+      "to": "06564985486ff15aa0b99fcc2b3105ecc79c24a1ad0c3ca794e4a37bd61a3d69",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/index.md",
+      "from": "80697f297a190350ba8c36ea5f50a5b1940a110e9a8099342dec52e497493b90",
+      "to": "a1e5306303acc15d94afd9cc6ce1b5f6e73fc2e7741f901440b3c126418e85d1",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/integrador-peliculas.md",
+      "from": "96775cf8f5303d098bd944d609ce8e7ccd6a19e63d5c6eca6505988f39d9dd65",
+      "to": "d603ec30843ccf055794507f8deb05749470d190e72abc364f016e9dd4dc2dc7",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online.md",
+      "from": "65a25e3b249e1b54bfb13ef7dd54655d016c712e581b79d1926513632127df0d",
+      "to": "ae71134efa37d6acf88925ff26af7ee739d38ed7b9b353e7d297cad8e116b46d",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/practica.md",
+      "from": "c957c649fbd51ad44e05cfdf400f341045ed9d22e74f74425184ce408eb47de5",
+      "to": "a3ba903682abb8d646a768ca88daf46392bbb707b795ab310752cb51a715c5fd",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd.md",
+      "from": "a5e7be96f5bb0bc6b39d36f6cc51dc2b4b2363d10aec145acc0888e89936fcde",
+      "to": "9af25c60c77fac78124acba7437d1d4c9bc4dc455347eb7030d368c5b6a78d7e",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/guia-parcial.md",
+      "from": "1efdbc8132e4397b0a9c056478c3e10a38bd9db25982757b64a76303a6fdadf0",
+      "to": "e5ea75ac15e0f9c5fac640be6ac99eeb54cca69a5a7411d39a41b1c46607b4ee",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb.md",
+      "from": "f95ca7e2dad4674ae2d22b0ae67d9d498ab43efb4edb22e8a307c605f8602991",
+      "to": "4fe27180f445e1f00d28e4c9175ca56dad6627d6a268d959fbe1421249c16702",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion.md",
+      "from": "e6fa37c47f5fe41045fffd3766dcabf0b23cc8f4c454059556582712e1e6c019",
+      "to": "e11b16439c57b1c70426708e4be4e52444ba212f97bcfded7e211ce49e5039c5",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-compass.md",
+      "from": "4dcc71a725b5e22614fd4b82e09e36b3c76271e7e264b8adf920908361613a77",
+      "to": "74c179d0a5079c3db28a5a2af91576161884abdbeb37e7f20ca8d599d17f385d",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-crud.md",
+      "from": "9e5ceb2155ca3fa17066229854d00ab7948fc304c6b0762bb61d27d61130cbe0",
+      "to": "fb66cd493346310ace893696e4c9a3b34a17d756e94220130f09c9612c783f3e",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion.md",
+      "from": "f6b741cc8826b5207968458fe089b4babb76f1e14bcf93f40b2b168c62c00bbb",
+      "to": "a0286b7ee4553093102c5cf766882b3a41622e52620bf9bcecf9f920e64623d9",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/nosql-conceptos.md",
+      "from": "ce8f4c05680c3ce352cc6bdde8878249112d07df8c4b6e30753f3670d66f5d6e",
+      "to": "8e915976b3d700024b9796f8c744a5468a7368f9db03a76ecdbb5746bd28b564",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/unidad-4.md",
+      "from": "ce5fb5dd73e67ba8326329cbaea774319134c1f22a20ef35226a976c67ec072d",
+      "to": "9424ed2a6154d73d33ba8cdf93cb219f0c4ad7bd35684379d3d2005192edd3c8",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/index.md",
+      "from": "da97b6e97b54512877a744a2be2b0ad8664af07f01ca55fbfcfdc9fd7a3218e8",
+      "to": "abc2c7b19458e744706d4f07d7363a76783c20f15f583b29e14977347ac541d5",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/index.md",
+      "from": "a99b16a58879e465978a8b9fa9ecb3afaee003fcb9ccfc8cd3ef25ff258057c1",
+      "to": "4a342187c07c426a1d50ffc71053614d15facb310db645c2aaa933918b6479a1",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/laboratorio-backup.md",
+      "from": "7ecbf5dfd148a390e347c790cec7528c07262b9aa4cb0a29f3a39a03f4f8f967",
+      "to": "5b6000aa3f1582d787279188c01743e0b2df4bf824b82bef29da8e453fe81158",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion.md",
+      "from": "6cafb03d8658f10c0a8058db037dce2919fa0b84f3729ce0833655e163a1d5fb",
+      "to": "81a6b3057c2a17fd6fb9d686f940921f3c401d0b6dc26491ffc7707f67656ba6",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad.md",
+      "from": "81aafae0b6802344bcac2ea1b98bf07e1806c56222391c8cdaf28a4ce748466f",
+      "to": "9715eb0089a270daea4f74955e9b0cfee41dcba852d9b4ede70d093709316887",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad.md",
+      "from": "6a9dadea1e1e5e5ecf93e4e62dc952eebb35405ba8540b67148953f4716af72d",
+      "to": "6aa67ca09da6a971119347231767ee5d6c1d58ec308bfe5dd149a5856b6a8b27",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/backup-restauracion.md",
+      "from": "f28c0777c8b79ed89fcd1cb5f9cb807ff97d31d9ead4a8ef1a60dee70fab7fdc",
+      "to": "d67dba5611c5691824d9eb41338c7df84d1eb42f841541b11c89c4f59313648a",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/cifrado.md",
+      "from": "03f9a39826ca4ea2de1daac7b33f91afa9be2d385bc521e22e906ef290471355",
+      "to": "e76740d392b54ecab3afeda167aea470cafa5e2fb8d44fb6fc566b647e20b026",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/guia-parcial.md",
+      "from": "5839e5a2b4f5e0a832a0add441f73524b17db5872de89be58a7cd321901714ea",
+      "to": "639101ce3914156828033626507efc53ad6aeb99dca08a26e5ba8d84ad854f45",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/inyeccion-sql.md",
+      "from": "fdde56105a4d31160c1bf0a7627e7c2c454c643cee9b8f805dd8d0515c7a53e3",
+      "to": "ad22aa8106c3bc1a68246d1c2d4445c56a8f72dddeef2d3ea413eac30bc66fb8",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/log-recuperacion.md",
+      "from": "93324d03dbac1758087588365f307b534a9e8a2a1da0c4d2e995ff27ccc9b542",
+      "to": "1bd429b97102282e976d49ab0025ecb05594848133fc8deb69272a75f634e970",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/seguridad-permisos.md",
+      "from": "d6c775ed2959df14df8a35eab6e7eac9d71b836008e7c14043fc048b6a78e71b",
+      "to": "b2c2407bc4f609e9612bf159f052c01a3a2b17063270e76b7721efe8d902a769",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/unidad-5.md",
+      "from": "ddaf252fb1b14fc47f8563df34406b2e928205e98018ed3bc16d99d38c30f8fc",
+      "to": "c901b7ad1a530dd573ff3ec086b19f7452aee50027f49b2a36b388a6817994d1",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/index.md",
+      "from": "17adfd66733dc4d02dd8a8a8c9966d691ec29fd101c6023b98906a4a40e1533e",
+      "to": "bac4ea7c3963fc2d4b3baf68db85745d1fb4624c3a9216edcd7e48a9eafd351d",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/index.md",
+      "from": "85a28ed0194b4d3cdd45675964710691971b37e72cb5128e93be95e8c325e22a",
+      "to": "a817a456432a7353da7d3d897bc1e880452b81b5261cba6850d7aa162b83821f",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/casos-integradores.md",
+      "from": "166ce853141fe1aec9ad8a789cf1b6e9cc30296120f30830ef935e0aa371e1da",
+      "to": "4278ce5d2e036067d936cabaf3e66d125911371c2cc5dd6eae2ed95198bcef90",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/laboratorio-calidad.md",
+      "from": "b568b53d3bc1033b9649363ecb1f19334fce4281de6ec6ef684ea40c9e2df235",
+      "to": "9cd15c4bb60c33a76503a11d72085717fad5d0cc098c732af199a0e558ef8452",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/laboratorio-privacidad.md",
+      "from": "8f6346eace3cabeddf28df5533888ddbb3b2c615296c09e60c96e15abfd6018d",
+      "to": "4574e3c46298233dc22d787fba1c4881ff7e25c24d857fc3f99f5b2c57ba7117",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/gdpr.md",
+      "from": "d5b43e37d0a05d9d8183c0a9ed5ab48e1bc341444752c7a16ca8227afcdc110b",
+      "to": "47c7695250e107755af870d5e977a4b7324834bd3ae9a9e83256d6b63c7b8a6b",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/gobierno-privacidad.md",
+      "from": "99d38f09bfd1090d0dd9885abf77af3d0b2dd1585c137b67475c6bbcba056ee0",
+      "to": "27c3384bd79fd53010bac486b1c438d77aeec2cacfee72d27223a4c37c424091",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/guia-parcial.md",
+      "from": "185319e52005a9eb836a4193ac7e8ab5e4c4476ec4c8015176d2bfbc716dc1d0",
+      "to": "4353376fb9c7cfce9e08fec8570f89e9aed79a3ceebc3f6843be28d4d830f3d6",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/iso-25012.md",
+      "from": "9fef3cca30dc69e4285f2043ea7e8057d05ad00522f1e1d873edf4262581d635",
+      "to": "2d7e2b01d898dbdf88020b00903b71198aee247e30681959300c6a7717f1cfe5",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/ley-25326.md",
+      "from": "11d96af6b4c8370b6d79ef9487edb62f1198cac9ec3b81cd2023e527d0d1e312",
+      "to": "b6a4874fc7fd9c194353faa1fc1f23f7e335b18366fcf550ea690ff720ee5523",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/medicion-calidad.md",
+      "from": "d71c16f4221d3668284595b4658b1ca3fd20a7e5eae088e87ae4cbdafe821a00",
+      "to": "df210f51a8b2d71b362805863be086123ec3cfbddfc2d7a939c3d6caf2a7b8a2",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/unidad-6.md",
+      "from": "b46a31120f5d626237d1d3a8e09ffbb496daa793a9e6b33b04a82e96c7eebc58",
+      "to": "a0c27d143a668241bab999ac04487276272c494386001fed5f12b91bd6c4c840",
+      "date": "2026-11-18",
+      "stage": "E5-E8",
+      "reason": "Unidades 3 a 6 (y páginas puente de u1/u2): corrección, reorganización y ampliación según content-audit §8-§9; ejemplos y ejercicios verificados en SQL Server 2022 y MongoDB 7; Unidad 6 sobre fuentes primarias (InfoLEG, EUR-Lex)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/pivot.md",
+      "from": "cfae79fb74b908b392b28902eda89aaf7f7e11fb7f0bc0cf53c368b79e20f2a5",
+      "to": "556997275410b4dc7c7b111b875f90d36d88b2db627ab8dde3bbe8641c405396",
+      "date": "2026-11-18",
+      "stage": "E9",
+      "reason": "Integración: se quitan líneas en blanco finales (git diff --check)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/window-functions.md",
+      "from": "f4cdcd95efd78a3975ca09e3883ca4b9991f8d3485ed578d7a5ec8d72a8c1818",
+      "to": "49620b4bea15843ecbbccc67e7d153379fc22027174718b63765ed006f270770",
+      "date": "2026-11-18",
+      "stage": "E9",
+      "reason": "Integración: se quitan líneas en blanco finales (git diff --check)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/integrador-peliculas.md",
+      "from": "d603ec30843ccf055794507f8deb05749470d190e72abc364f016e9dd4dc2dc7",
+      "to": "26e6b759a28a8fd2867e18cbe89596d90ec4af74ae00ba522d1c4bf7f2f4f75c",
+      "date": "2026-11-18",
+      "stage": "E9",
+      "reason": "Integración: se quitan líneas en blanco finales (git diff --check)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/practica.md",
+      "from": "a3ba903682abb8d646a768ca88daf46392bbb707b795ab310752cb51a715c5fd",
+      "to": "dcf3283b6046ba546484a5b3209512d75de90f10fc17b4dc1b304ec88bd3b32b",
+      "date": "2026-11-18",
+      "stage": "E9",
+      "reason": "Integración: se quitan líneas en blanco finales (git diff --check)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/integrador-peliculas.md",
+      "from": "26e6b759a28a8fd2867e18cbe89596d90ec4af74ae00ba522d1c4bf7f2f4f75c",
+      "to": "aa98b182f5937c2ebf3f3e09b13083e1a7c7edac46b14aaa2cc0fe3eee716932",
+      "date": "2026-11-18",
+      "stage": "E9",
+      "reason": "Integración: se reemplaza un párrafo de ayuda duplicado entre prácticas de u4 por una referencia (advertencia parrafo-duplicado de qa)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online.md",
+      "from": "ae71134efa37d6acf88925ff26af7ee739d38ed7b9b353e7d297cad8e116b46d",
+      "to": "0f706f424e484935217d553d584017fc8b847b86a7e5607fe176bd6855308e12",
+      "date": "2026-11-18",
+      "stage": "E9",
+      "reason": "Integración: se reemplaza un párrafo de ayuda duplicado entre prácticas de u4 por una referencia (advertencia parrafo-duplicado de qa)",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    }
+  ]
+}

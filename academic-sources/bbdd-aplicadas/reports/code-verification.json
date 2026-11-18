@@ -1,0 +1,4471 @@
+{
+  "subject": "bbdd-aplicadas",
+  "generated": "2026-11-17T23:21:33-03:00",
+  "engines": {
+    "mssql": {
+      "image": "mcr.microsoft.com/mssql/server@sha256:4525e3efac9f3e241cb003bb2ff2a82818b502f37e12049d788b1a9fa7e13b7f",
+      "version": "Microsoft SQL Server 2022 (RTM-CU28) (KB5125472) - 16.0.4325.4 (X64)"
+    },
+    "mongo": {
+      "image": "mongo@sha256:884c055bff8b7144ca44830d01826facd3083b33c4dea44b94a1476c62de3c32",
+      "version": "7.0.48"
+    }
+  },
+  "checks": [
+    {
+      "id": "U1.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.01.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U1.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.02.sql",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U1.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.03.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U1.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.04.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U1.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.05.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U1.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.06.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U1.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.07.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U1.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.08.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U1.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.09.sql",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U1.10",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.10.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U1.11",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.11.sql",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U1.12",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.12.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.13",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.13.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U1.14",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.14.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U1.15",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.15.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.16",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.16.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.21",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.21.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.22",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.22.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.23",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.23.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.24",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.24.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.25",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.25.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.26",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.26.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.27",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.27.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U1.28",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.28.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.29",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.29.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.30",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.30.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U1.31",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.31.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U1.32",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.32.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.33",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.33.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.34",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.34.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.35",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.35.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.36",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.36.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U1.37",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.37.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.38",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.38.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.39",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.39.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.40",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.40.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.41",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.41.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U1.42",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.42.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U1.43",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.43.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U1.T.CTE.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.CTE.01.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.CTE.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.CTE.02.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U1.T.CTE.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.CTE.03.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U1.T.CTE.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.CTE.04.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.CTE.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.CTE.05.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.CTE.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.CTE.06.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.PV.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.PV.01.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.PV.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.PV.02.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.PV.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.PV.03.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.PV.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.PV.04.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U1.T.PV.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.PV.05.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U1.T.PV.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.PV.06.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.PV.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.PV.07.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.PV.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.PV.08.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.PV.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.PV.09.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U1.T.PV.10",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.PV.10.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.01.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.02.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.03.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.04.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.05.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.06.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.07.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.08.sql",
+      "expected": true,
+      "seconds": 0.58,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.09.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.10",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.10.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.11",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.11.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.12",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.12.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.13",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.13.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.14",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.14.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.15",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.15.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.16",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.16.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.17",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.17.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.18",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.18.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.19",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.19.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.20",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.20.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.21",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.21.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U1.T.RS.22",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.RS.22.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.SD.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.SD.01.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.SD.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.SD.02.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.SD.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.SD.03.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U1.T.SD.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.SD.04.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.SD.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.SD.05.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.SD.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.SD.06.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.SD.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.SD.07.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U1.T.WF.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.WF.01.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.WF.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.WF.02.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U1.T.WF.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.WF.03.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.WF.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.WF.04.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U1.T.WF.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.WF.05.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U1.T.WF.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.WF.06.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.WF.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.WF.07.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.WF.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.WF.08.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U1.T.WF.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.WF.09.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.T.WF.10",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.T.WF.10.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U1.TP1.00",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.TP1.00.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U2.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.01.sql",
+      "expected": true,
+      "seconds": 0.85,
+      "message": ""
+    },
+    {
+      "id": "U2.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.02.sql",
+      "expected": true,
+      "seconds": 0.73,
+      "message": ""
+    },
+    {
+      "id": "U2.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.03.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U2.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.04.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U2.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.05.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U2.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.06.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U2.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.07.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U2.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.08.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U2.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.09.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U2.10",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.10.sql",
+      "expected": true,
+      "seconds": 0.78,
+      "message": ""
+    },
+    {
+      "id": "U2.11",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.11.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U2.12",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.12.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U2.13",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.13.sql",
+      "expected": true,
+      "seconds": 0.79,
+      "message": ""
+    },
+    {
+      "id": "U2.14",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.14.sql",
+      "expected": true,
+      "seconds": 0.78,
+      "message": ""
+    },
+    {
+      "id": "U2.16",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.16.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U2.17",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.17.sql",
+      "expected": true,
+      "seconds": 0.78,
+      "message": ""
+    },
+    {
+      "id": "U2.18",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.18.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U2.19",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.19.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U2.20",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.20.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U2.21",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.21.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U2.22",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.22.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.23",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.23.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.24",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.24.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U2.25",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.25.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.26",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.26.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.27",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.27.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U2.28",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.28.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.29",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.29.sql",
+      "expected": true,
+      "seconds": 0.58,
+      "message": ""
+    },
+    {
+      "id": "U2.30",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.30.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U2.31",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.31.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U2.32",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.32.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U2.33",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.33.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U2.34",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.34.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.35",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.35.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U2.37",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.37.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.38",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.38.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.39",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.39.sql",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U2.41",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.41.sql",
+      "expected": true,
+      "seconds": 4.91,
+      "message": ""
+    },
+    {
+      "id": "U2.42",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.42.sql",
+      "expected": true,
+      "seconds": 4.95,
+      "message": ""
+    },
+    {
+      "id": "U2.43",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.43.sql",
+      "expected": true,
+      "seconds": 2.96,
+      "message": ""
+    },
+    {
+      "id": "U2.44",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.44.sql",
+      "expected": true,
+      "seconds": 5.88,
+      "message": ""
+    },
+    {
+      "id": "U2.45",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.45.sql",
+      "expected": true,
+      "seconds": 3.88,
+      "message": ""
+    },
+    {
+      "id": "U2.46",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.46.sql",
+      "expected": true,
+      "seconds": 4.92,
+      "message": ""
+    },
+    {
+      "id": "U2.47",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.47.sql",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U2.48",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.48.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U2.49",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.49.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U2.50",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.50.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U2.51",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.51.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.52",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.52.sql",
+      "expected": true,
+      "seconds": 0.72,
+      "message": ""
+    },
+    {
+      "id": "U2.54",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.54.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.API.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.API.01.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.T.API.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.API.02.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.ARQ.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.ARQ.01.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.ARQ.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.ARQ.02.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.T.BDS.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.BDS.01.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U2.T.BDS.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.BDS.02.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.BDS.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.BDS.03.sql",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U2.T.BDS.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.BDS.04.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U2.T.COL.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.COL.01.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U2.T.COL.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.COL.02.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.COL.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.COL.03.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.COL.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.COL.04.sql",
+      "expected": true,
+      "seconds": 0.69,
+      "message": ""
+    },
+    {
+      "id": "U2.T.COL.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.COL.05.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U2.T.FMT.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.FMT.01.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.T.FMT.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.FMT.02.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U2.T.FMT.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.FMT.03.sql",
+      "expected": true,
+      "seconds": 0.8,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IM.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IM.01.sql",
+      "expected": true,
+      "seconds": 1.72,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IM.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IM.02.sql",
+      "expected": true,
+      "seconds": 4.95,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IM.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IM.03.sql",
+      "expected": true,
+      "seconds": 7.89,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IM.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IM.04.sql",
+      "expected": true,
+      "seconds": 3.88,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IM.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IM.05.sql",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IM.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IM.06.sql",
+      "expected": true,
+      "seconds": 3.93,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IMP.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IMP.01.sql",
+      "expected": true,
+      "seconds": 0.8,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IMP.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IMP.02.sql",
+      "expected": true,
+      "seconds": 0.8,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IMP.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IMP.03.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IMP.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IMP.04.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IMP.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IMP.05.sql",
+      "expected": true,
+      "seconds": 0.78,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IMP.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IMP.06.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IMP.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IMP.07.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IMP.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IMP.08.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IMP.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IMP.09.sql",
+      "expected": true,
+      "seconds": 0.79,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IMP.10",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IMP.10.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U2.T.IMP.11",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.IMP.11.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U2.T.INS.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.INS.01.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.INS.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.INS.02.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.01.sql",
+      "expected": true,
+      "seconds": 0.58,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.02.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.03.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.04.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.05.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.06.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.07.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.08.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.09.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.10",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.10.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.11",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.11.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.12",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.12.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.13",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.13.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.14",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.14.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.JSON.15",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.JSON.15.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.01.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.02.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.03.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.04.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.05.sql",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.06.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.07.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.08.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.09.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.10",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.10.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.11",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.11.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U2.T.XML.12",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.T.XML.12.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U2.TP2.00",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U2.TP2.00.sql",
+      "expected": true,
+      "seconds": 0.78,
+      "message": ""
+    },
+    {
+      "id": "U3.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.01.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U3.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.02.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U3.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.03.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U3.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.05.sql",
+      "expected": true,
+      "seconds": 0.66,
+      "message": ""
+    },
+    {
+      "id": "U3.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.06.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U3.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.07.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U3.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.08.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U3.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.09.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U3.10",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.10.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U3.13",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.13.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U3.14",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.14.sql",
+      "expected": true,
+      "seconds": 0.73,
+      "message": ""
+    },
+    {
+      "id": "U3.15",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.15.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U3.17",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.17.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U3.18",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.18.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U3.20",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.20.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U3.27",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.27.sql",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U3.28",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.28.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U3.29",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.29.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U3.30",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.30.sql",
+      "expected": true,
+      "seconds": 0.79,
+      "message": ""
+    },
+    {
+      "id": "U3.31",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.31.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U3.33",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.33.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U3.34",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.34.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U3.35",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.35.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U3.36",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.36.sql",
+      "expected": true,
+      "seconds": 0.82,
+      "message": ""
+    },
+    {
+      "id": "U3.37",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.37.sql",
+      "expected": true,
+      "seconds": 0.82,
+      "message": ""
+    },
+    {
+      "id": "U3.38",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.38.sql",
+      "expected": true,
+      "seconds": 0.78,
+      "message": ""
+    },
+    {
+      "id": "U3.39",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.39.sql",
+      "expected": true,
+      "seconds": 1.4,
+      "message": ""
+    },
+    {
+      "id": "U3.40",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.40.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U3.41",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.41.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U3.42",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.42.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U3.43",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.43.sql",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U3.44",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.44.sql",
+      "expected": true,
+      "seconds": 0.79,
+      "message": ""
+    },
+    {
+      "id": "U3.45",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.45.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U3.P.RE.00",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.P.RE.00.sql",
+      "expected": false,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.01.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.02.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.03.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.04.sql",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.05.sql",
+      "expected": true,
+      "seconds": 0.72,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.06.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.07.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.08.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.09.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.18",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.18.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.19",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.19.sql",
+      "expected": true,
+      "seconds": 3.75,
+      "message": ""
+    },
+    {
+      "id": "U3.T.CC.20",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.CC.20.sql",
+      "expected": true,
+      "seconds": 3.79,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.00",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.00.sql",
+      "expected": false,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.01.sql",
+      "expected": true,
+      "seconds": 0.84,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.02.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.03.sql",
+      "expected": true,
+      "seconds": 0.87,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.04.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.05.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.06.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.07.sql",
+      "expected": true,
+      "seconds": 0.88,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.08.sql",
+      "expected": true,
+      "seconds": 0.97,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.09.sql",
+      "expected": true,
+      "seconds": 0.78,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.10",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.10.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.11",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.11.sql",
+      "expected": true,
+      "seconds": 0.73,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.12",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.12.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.13",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.13.sql",
+      "expected": true,
+      "seconds": 0.73,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.14",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.14.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.15",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.15.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.16",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.16.sql",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.17",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.17.sql",
+      "expected": true,
+      "seconds": 0.73,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.18",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.18.sql",
+      "expected": true,
+      "seconds": 1.66,
+      "message": ""
+    },
+    {
+      "id": "U3.T.IX.19",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.IX.19.sql",
+      "expected": true,
+      "seconds": 1.51,
+      "message": ""
+    },
+    {
+      "id": "U3.T.MT.00",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.MT.00.sql",
+      "expected": false,
+      "seconds": 0.69,
+      "message": ""
+    },
+    {
+      "id": "U3.T.MT.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.MT.01.sql",
+      "expected": true,
+      "seconds": 0.8,
+      "message": ""
+    },
+    {
+      "id": "U3.T.MT.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.MT.02.sql",
+      "expected": true,
+      "seconds": 0.79,
+      "message": ""
+    },
+    {
+      "id": "U3.T.MT.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.MT.03.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U3.T.MT.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.MT.04.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U3.T.MT.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.MT.06.sql",
+      "expected": true,
+      "seconds": 0.72,
+      "message": ""
+    },
+    {
+      "id": "U3.T.MT.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.MT.07.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U3.T.MT.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.MT.08.sql",
+      "expected": true,
+      "seconds": 0.71,
+      "message": ""
+    },
+    {
+      "id": "U3.T.PL.00",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.PL.00.sql",
+      "expected": false,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U3.T.PL.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.PL.01.sql",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U3.T.PL.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.PL.02.sql",
+      "expected": true,
+      "seconds": 0.71,
+      "message": ""
+    },
+    {
+      "id": "U3.T.PL.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.PL.03.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U3.T.PL.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.PL.04.sql",
+      "expected": true,
+      "seconds": 0.73,
+      "message": ""
+    },
+    {
+      "id": "U3.T.PL.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.PL.05.sql",
+      "expected": true,
+      "seconds": 0.73,
+      "message": ""
+    },
+    {
+      "id": "U3.T.PL.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.PL.06.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U3.T.ST.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.ST.01.sql",
+      "expected": true,
+      "seconds": 0.76,
+      "message": ""
+    },
+    {
+      "id": "U3.T.ST.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.ST.02.sql",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U3.T.ST.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.ST.03.sql",
+      "expected": true,
+      "seconds": 0.72,
+      "message": ""
+    },
+    {
+      "id": "U3.T.ST.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.ST.04.sql",
+      "expected": true,
+      "seconds": 0.8,
+      "message": ""
+    },
+    {
+      "id": "U3.T.ST.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.ST.05.sql",
+      "expected": true,
+      "seconds": 0.8,
+      "message": ""
+    },
+    {
+      "id": "U3.T.ST.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.ST.06.sql",
+      "expected": true,
+      "seconds": 0.71,
+      "message": ""
+    },
+    {
+      "id": "U3.T.ST.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.ST.07.sql",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U3.T.ST.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.ST.08.sql",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.01.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.02.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.03.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.04.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.05.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.06.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.07.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.08.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.09.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.11",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.11.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.12",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.12.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U3.T.TX.13",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.T.TX.13.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U3.XA.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U3.XA.01.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U4.48",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U4.48.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U4.T.DL.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U4.T.DL.01.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U4.T.DL.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U4.T.DL.02.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U4.T.NC.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U4.T.NC.01.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U4.T.POO.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U4.T.POO.01.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U5.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.02.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U5.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.04.sql",
+      "expected": true,
+      "seconds": 0.66,
+      "message": ""
+    },
+    {
+      "id": "U5.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.05.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U5.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.06.sql",
+      "expected": true,
+      "seconds": 0.66,
+      "message": ""
+    },
+    {
+      "id": "U5.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.07.sql",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U5.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.08.sql",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U5.11",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.11.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U5.12",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.12.sql",
+      "expected": true,
+      "seconds": 1.0,
+      "message": ""
+    },
+    {
+      "id": "U5.13",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.13.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U5.14",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.14.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U5.15",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.15.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U5.23",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.23.sql",
+      "expected": true,
+      "seconds": 0.79,
+      "message": ""
+    },
+    {
+      "id": "U5.25",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.25.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U5.26",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.26.sql",
+      "expected": true,
+      "seconds": 1.08,
+      "message": ""
+    },
+    {
+      "id": "U5.28",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.28.sql",
+      "expected": true,
+      "seconds": 0.72,
+      "message": ""
+    },
+    {
+      "id": "U5.29",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.29.sql",
+      "expected": true,
+      "seconds": 1.07,
+      "message": ""
+    },
+    {
+      "id": "U5.30",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.30.sql",
+      "expected": true,
+      "seconds": 1.3,
+      "message": ""
+    },
+    {
+      "id": "U5.32",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.32.sql",
+      "expected": true,
+      "seconds": 5.04,
+      "message": ""
+    },
+    {
+      "id": "U5.33",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.33.sql",
+      "expected": true,
+      "seconds": 1.03,
+      "message": ""
+    },
+    {
+      "id": "U5.34",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.34.sql",
+      "expected": true,
+      "seconds": 1.21,
+      "message": ""
+    },
+    {
+      "id": "U5.37",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.37.sql",
+      "expected": true,
+      "seconds": 0.69,
+      "message": ""
+    },
+    {
+      "id": "U5.LI.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.LI.01.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U5.LI.P5",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.LI.P5.sql",
+      "expected": true,
+      "seconds": 0.9,
+      "message": ""
+    },
+    {
+      "id": "U5.LS.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.LS.01.sql",
+      "expected": true,
+      "seconds": 0.77,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.01.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.02.sql",
+      "expected": true,
+      "seconds": 1.09,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.03.sql",
+      "expected": true,
+      "seconds": 1.06,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.04.sql",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.05.sql",
+      "expected": true,
+      "seconds": 1.07,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.06.sql",
+      "expected": true,
+      "seconds": 1.07,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.07.sql",
+      "expected": true,
+      "seconds": 1.29,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.08.sql",
+      "expected": true,
+      "seconds": 5.02,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.09",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.09.sql",
+      "expected": true,
+      "seconds": 1.01,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.10",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.10.sql",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.11",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.11.sql",
+      "expected": true,
+      "seconds": 1.17,
+      "message": ""
+    },
+    {
+      "id": "U5.T.BK.13",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.BK.13.sql",
+      "expected": true,
+      "seconds": 1.17,
+      "message": ""
+    },
+    {
+      "id": "U5.T.CIF.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.CIF.01.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U5.T.CIF.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.CIF.02.sql",
+      "expected": true,
+      "seconds": 0.94,
+      "message": ""
+    },
+    {
+      "id": "U5.T.CIF.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.CIF.03.sql",
+      "expected": true,
+      "seconds": 1.43,
+      "message": ""
+    },
+    {
+      "id": "U5.T.HA.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.HA.01.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U5.T.HA.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.HA.02.sql",
+      "expected": true,
+      "seconds": 1.23,
+      "message": ""
+    },
+    {
+      "id": "U5.T.INY.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.INY.01.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U5.T.LOG.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.LOG.01.sql",
+      "expected": true,
+      "seconds": 0.74,
+      "message": ""
+    },
+    {
+      "id": "U5.T.LOG.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.LOG.02.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U5.T.LOG.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.LOG.03.sql",
+      "expected": true,
+      "seconds": 0.69,
+      "message": ""
+    },
+    {
+      "id": "U5.T.LOG.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.LOG.04.sql",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U5.T.LOG.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.LOG.05.sql",
+      "expected": true,
+      "seconds": 0.61,
+      "message": ""
+    },
+    {
+      "id": "U5.T.LOG.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.LOG.06.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U5.T.LOG.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.LOG.07.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U5.T.SEG.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.SEG.01.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U5.T.SEG.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.SEG.02.sql",
+      "expected": true,
+      "seconds": 1.59,
+      "message": ""
+    },
+    {
+      "id": "U5.T.SEG.03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.SEG.03.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U5.T.SEG.04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.SEG.04.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U5.T.SEG.05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.SEG.05.sql",
+      "expected": true,
+      "seconds": 0.68,
+      "message": ""
+    },
+    {
+      "id": "U5.T.SEG.06",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.SEG.06.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U5.T.SEG.07",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.SEG.07.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U5.T.SEG.08",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U5.T.SEG.08.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U6.15",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.15.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U6.16",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.16.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U6.17",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.17.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U6.18",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.18.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U6.19",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.19.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U6.20",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.20.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U6.24",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.24.sql",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U6.25",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.25.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U6.26",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.26.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U6.27",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.27.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U6.28",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.28.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U6.29",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.29.sql",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U6.30",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.30.sql",
+      "expected": true,
+      "seconds": 0.69,
+      "message": ""
+    },
+    {
+      "id": "U6.P.01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.P.01.sql",
+      "expected": true,
+      "seconds": 0.69,
+      "message": ""
+    },
+    {
+      "id": "U6.P.02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.P.02.sql",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U6.P.M01",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.P.M01.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U6.P.M02",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.P.M02.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U6.P.M03",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.P.M03.sql",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U6.P.M04",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.P.M04.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U6.P.M05",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U6.P.M05.sql",
+      "expected": true,
+      "seconds": 0.62,
+      "message": ""
+    },
+    {
+      "id": "U4.01",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.01.js",
+      "expected": true,
+      "seconds": 0.95,
+      "message": ""
+    },
+    {
+      "id": "U4.02",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.02.js",
+      "expected": true,
+      "seconds": 0.75,
+      "message": ""
+    },
+    {
+      "id": "U4.03",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.03.js",
+      "expected": true,
+      "seconds": 0.68,
+      "message": ""
+    },
+    {
+      "id": "U4.04",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.04.js",
+      "expected": true,
+      "seconds": 0.66,
+      "message": ""
+    },
+    {
+      "id": "U4.05",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.05.js",
+      "expected": true,
+      "seconds": 0.66,
+      "message": ""
+    },
+    {
+      "id": "U4.06",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.06.js",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U4.07",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.07.js",
+      "expected": true,
+      "seconds": 0.8,
+      "message": ""
+    },
+    {
+      "id": "U4.08",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.08.js",
+      "expected": true,
+      "seconds": 0.69,
+      "message": ""
+    },
+    {
+      "id": "U4.09",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.09.js",
+      "expected": true,
+      "seconds": 0.68,
+      "message": ""
+    },
+    {
+      "id": "U4.10",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.10.js",
+      "expected": true,
+      "seconds": 0.72,
+      "message": ""
+    },
+    {
+      "id": "U4.11",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.11.js",
+      "expected": true,
+      "seconds": 0.69,
+      "message": ""
+    },
+    {
+      "id": "U4.12",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.12.js",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U4.13",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.13.js",
+      "expected": true,
+      "seconds": 0.7,
+      "message": ""
+    },
+    {
+      "id": "U4.14",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.14.js",
+      "expected": true,
+      "seconds": 0.71,
+      "message": ""
+    },
+    {
+      "id": "U4.15",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.15.js",
+      "expected": true,
+      "seconds": 0.66,
+      "message": ""
+    },
+    {
+      "id": "U4.16",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.16.js",
+      "expected": true,
+      "seconds": 0.66,
+      "message": ""
+    },
+    {
+      "id": "U4.17",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.17.js",
+      "expected": true,
+      "seconds": 0.69,
+      "message": ""
+    },
+    {
+      "id": "U4.18",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.18.js",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U4.19",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.19.js",
+      "expected": true,
+      "seconds": 0.68,
+      "message": ""
+    },
+    {
+      "id": "U4.20",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.20.js",
+      "expected": true,
+      "seconds": 0.69,
+      "message": ""
+    },
+    {
+      "id": "U4.21",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.21.js",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U4.22",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.22.js",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U4.23",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.23.js",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U4.24",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.24.js",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U4.25",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.25.js",
+      "expected": true,
+      "seconds": 0.67,
+      "message": ""
+    },
+    {
+      "id": "U4.26",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.26.js",
+      "expected": true,
+      "seconds": 0.64,
+      "message": ""
+    },
+    {
+      "id": "U4.27",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.27.js",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U4.45",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.45.js",
+      "expected": true,
+      "seconds": 0.56,
+      "message": ""
+    },
+    {
+      "id": "U4.46",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.46.js",
+      "expected": true,
+      "seconds": 0.53,
+      "message": ""
+    },
+    {
+      "id": "U4.49",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.49.js",
+      "expected": true,
+      "seconds": 0.51,
+      "message": ""
+    },
+    {
+      "id": "U4.PR.TIENDA",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.PR.TIENDA.js",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U4.PR.VENTAS",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.PR.VENTAS.js",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U4.PR.VIDEOCLUB",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.PR.VIDEOCLUB.js",
+      "expected": true,
+      "seconds": 0.65,
+      "message": ""
+    },
+    {
+      "id": "U4.T.AGG.01",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.AGG.01.js",
+      "expected": true,
+      "seconds": 0.54,
+      "message": ""
+    },
+    {
+      "id": "U4.T.AGG.02",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.AGG.02.js",
+      "expected": true,
+      "seconds": 0.56,
+      "message": ""
+    },
+    {
+      "id": "U4.T.AGG.03",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.AGG.03.js",
+      "expected": true,
+      "seconds": 0.55,
+      "message": ""
+    },
+    {
+      "id": "U4.T.AGG.04",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.AGG.04.js",
+      "expected": true,
+      "seconds": 0.55,
+      "message": ""
+    },
+    {
+      "id": "U4.T.AGG.05",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.AGG.05.js",
+      "expected": true,
+      "seconds": 0.56,
+      "message": ""
+    },
+    {
+      "id": "U4.T.AGG.06",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.AGG.06.js",
+      "expected": true,
+      "seconds": 0.57,
+      "message": ""
+    },
+    {
+      "id": "U4.T.AGG.07",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.AGG.07.js",
+      "expected": true,
+      "seconds": 0.56,
+      "message": ""
+    },
+    {
+      "id": "U4.T.CRUD.01",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.CRUD.01.js",
+      "expected": true,
+      "seconds": 0.63,
+      "message": ""
+    },
+    {
+      "id": "U4.T.CRUD.02",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.CRUD.02.js",
+      "expected": true,
+      "seconds": 0.57,
+      "message": ""
+    },
+    {
+      "id": "U4.T.CRUD.03",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.CRUD.03.js",
+      "expected": true,
+      "seconds": 0.6,
+      "message": ""
+    },
+    {
+      "id": "U4.T.CRUD.04",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.CRUD.04.js",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U4.T.CRUD.05",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.CRUD.05.js",
+      "expected": true,
+      "seconds": 0.57,
+      "message": ""
+    },
+    {
+      "id": "U4.T.CRUD.06",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.CRUD.06.js",
+      "expected": true,
+      "seconds": 0.54,
+      "message": ""
+    },
+    {
+      "id": "U4.T.CRUD.07",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.CRUD.07.js",
+      "expected": true,
+      "seconds": 0.55,
+      "message": ""
+    },
+    {
+      "id": "U4.T.CRUD.08",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.CRUD.08.js",
+      "expected": true,
+      "seconds": 0.59,
+      "message": ""
+    },
+    {
+      "id": "U4.T.GP.01",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.GP.01.js",
+      "expected": true,
+      "seconds": 0.52,
+      "message": ""
+    },
+    {
+      "id": "U4.T.GP.02",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.GP.02.js",
+      "expected": true,
+      "seconds": 0.51,
+      "message": ""
+    },
+    {
+      "id": "U4.T.IDX.01",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.IDX.01.js",
+      "expected": true,
+      "seconds": 0.55,
+      "message": ""
+    },
+    {
+      "id": "U4.T.IDX.02",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.IDX.02.js",
+      "expected": true,
+      "seconds": 0.58,
+      "message": ""
+    },
+    {
+      "id": "U4.T.IDX.03",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.IDX.03.js",
+      "expected": true,
+      "seconds": 0.55,
+      "message": ""
+    },
+    {
+      "id": "U4.T.IDX.04",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.IDX.04.js",
+      "expected": true,
+      "seconds": 0.57,
+      "message": ""
+    },
+    {
+      "id": "U4.T.IDX.05",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.IDX.05.js",
+      "expected": true,
+      "seconds": 0.56,
+      "message": ""
+    },
+    {
+      "id": "U4.T.MI.01",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.MI.01.js",
+      "expected": true,
+      "seconds": 0.52,
+      "message": ""
+    },
+    {
+      "id": "U4.T.MI.02",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.MI.02.js",
+      "expected": true,
+      "seconds": 0.55,
+      "message": ""
+    },
+    {
+      "id": "U4.T.MI.03",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.MI.03.js",
+      "expected": true,
+      "seconds": 0.54,
+      "message": ""
+    },
+    {
+      "id": "U4.T.NC.02",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.NC.02.js",
+      "expected": true,
+      "seconds": 0.52,
+      "message": ""
+    },
+    {
+      "id": "U4.T.NC.03",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.NC.03.js",
+      "expected": true,
+      "seconds": 0.52,
+      "message": ""
+    },
+    {
+      "id": "U4.T.NC.04",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.NC.04.js",
+      "expected": true,
+      "seconds": 0.52,
+      "message": ""
+    },
+    {
+      "id": "U4.T.POO.02",
+      "engine": "mongo",
+      "status": "aprobado",
+      "script": "checks/mongo/U4.T.POO.02.js",
+      "expected": true,
+      "seconds": 0.52,
+      "message": ""
+    }
+  ],
+  "reviewed": [
+    {
+      "id": "U1.T.RS.R1",
+      "reason": "CREATE DATABASE ... COLLATE y USE: el verificador ejecuta cada script en una base nueva y no admite crear bases ni cambiar de contexto.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-1/teoria/repaso-sql"
+    },
+    {
+      "id": "U2.15",
+      "reason": "Requiere CREATE DATABASE con otra collation y dos sesiones concurrentes (tabla temporal global). Las partes de collation entre bases se ejecutaron a mano en bbdda-mssql y coinciden con la página, pero no forman parte de la verificación automática; la parte de dos sesiones es un guion sin ejecutar.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-2/practica/tp2"
+    },
+    {
+      "id": "U2.T.IMP.R1",
+      "reason": "BULK INSERT ... CODEPAGE = '65001' (UTF-8) no es ejecutable en el entorno de verificación: SQL Server 2022 sobre Linux responde con el error 16202 (\"Keyword or statement option 'CODEPAGE' is not supported on the 'Linux' platform\"), y la documentación de Microsoft indica que la opción no se admite en Linux. Requiere SQL Server para Windows. Las alternativas UTF-16 (DATAFILETYPE='widechar'), SINGLE_NCLOB y SINGLE_BLOB hacia una columna con collation UTF8 sí están verificadas (U2.T.IMP.07, 08, 10).",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos"
+    },
+    {
+      "id": "U2.T.API.R1",
+      "reason": "sp_configure 'Ole Automation Procedures' y 'show advanced options' modifican la configuración de la instancia (compartida entre verificaciones), y Ole Automation depende de COM de Windows. Lo comprobado en el motor es el estado por defecto (valor 0) y el error 15281 de sp_OACreate (U2.T.API.02).",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-2/teoria/apis-desde-sql"
+    },
+    {
+      "id": "U2.T.API.R2",
+      "reason": "Llamadas HTTP (GET y POST) con sp_OACreate/MSXML2.XMLHTTP: requieren red externa, habilitar Ole Automation Procedures y COM de Windows (SQL Server 2022 sobre Linux no los admite). La URL del ejemplo (api.ejemplo.test) es ficticia.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-2/teoria/apis-desde-sql"
+    },
+    {
+      "id": "U2.T.API.R3",
+      "reason": "sp_invoke_external_rest_endpoint existe solo en SQL Server 2025, Azure SQL Database/Managed Instance y Fabric (según la documentación de Microsoft) y requiere red hacia un endpoint HTTPS; el entorno de verificación es SQL Server 2022.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-2/teoria/apis-desde-sql"
+    },
+    {
+      "id": "U2.40",
+      "reason": "Llamada GET real con Ole Automation Procedures: requiere red externa, una instancia de SQL Server para Windows con la opción habilitada (COM) y modifica la configuración del servidor con sp_configure. El procesamiento de la respuesta guardada sí está verificado (U2.38, U2.39).",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-2/practica/practica-apis"
+    },
+    {
+      "id": "U4.T.INST.R1",
+      "reason": "db.createUser() con passwordPrompt() es interactivo y la activación de security.authorization modifica la configuración y requiere reiniciar el servicio mongod del sistema; no es ejecutable en el entorno de verificación (base nueva por script). Los comandos de instalación por sistema operativo (net start, brew, systemctl) y la interfaz de Atlas se muestran como plantillas (<!-- sintaxis -->) y no se verifican.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb"
+    },
+    {
+      "id": "U3.T.CC.10",
+      "reason": "Dirty read / READ COMMITTED bloqueado: requiere dos sesiones concurrentes (una mantiene un UPDATE sin confirmar y otra lee). El verificador usa una sola conexión por script. El motor garantiza (documentación de SQL Server) que READ UNCOMMITTED no pide locks S y que READ COMMITTED espera el X de la otra transacción.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento"
+    },
+    {
+      "id": "U3.T.CC.11",
+      "reason": "Lectura no repetible y REPEATABLE READ: requiere dos sesiones (una lee dos veces, otra modifica entre ambas lecturas). Una sola conexión no puede intercalar las dos transacciones.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento"
+    },
+    {
+      "id": "U3.T.CC.12",
+      "reason": "Fantasma con REPEATABLE READ y bloqueo de rango con SERIALIZABLE: requiere dos sesiones concurrentes (una cuenta dos veces, otra inserta entre ambas). Lo que sí se verificó en una sesión: los locks RangeS-S de SERIALIZABLE (U3.T.CC.02 y U3.17).",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento"
+    },
+    {
+      "id": "U3.T.CC.13",
+      "reason": "SNAPSHOT con un escritor sin confirmar: requiere dos sesiones (A modifica sin confirmar y B lee con SNAPSHOT sin esperar). Lo que sí se verificó en una sesión: habilitación, error 3952 y version store (U3.T.CC.03).",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento"
+    },
+    {
+      "id": "U3.T.CC.14",
+      "reason": "RCSI con un escritor sin confirmar: requiere dos sesiones concurrentes. Lo que sí se verificó en una sesión: activación de la opción y generación de versiones (U3.14).",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento"
+    },
+    {
+      "id": "U3.T.CC.15",
+      "reason": "Bloqueo real y su diagnóstico con sys.dm_exec_requests y sys.dm_tran_locks: requiere tres sesiones (A mantiene un UPDATE abierto, B se bloquea en un SELECT, C consulta las vistas). Con una sola conexión la consulta de bloqueos devuelve 0 filas (U3.T.CC.06).",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia"
+    },
+    {
+      "id": "U3.T.CC.16",
+      "reason": "Deadlock con orden de acceso inverso y error 1205: requiere dos sesiones concurrentes y la intervención del monitor de deadlocks. Lo que sí se verificó en una sesión: DEADLOCK_PRIORITY (U3.T.CC.05), el procedimiento de reintento (U3.T.CC.07) y la consulta a system_health (U3.T.CC.08).",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia"
+    },
+    {
+      "id": "U3.T.CC.17",
+      "reason": "Transacción distribuida con servidor vinculado: requiere una segunda instancia de SQL Server, un servidor vinculado y MS DTC accesible entre ambas. En el entorno de verificación solo hay una instancia; BEGIN DISTRIBUTED TRANSACTION sobre una sola instancia se verificó en U3.20.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia"
+    },
+    {
+      "id": "U3.21",
+      "reason": "Lectura sucia con consecuencias sobre la tarjeta (READ UNCOMMITTED): requiere dos sesiones concurrentes con esperas de 20 s. El estado final (límite -14000) se deduce de la semántica de los locks X y del orden de ejecución.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/practica/laboratorio-tcl"
+    },
+    {
+      "id": "U3.22",
+      "reason": "REPEATABLE READ con tres sesiones sobre la misma fila (B y C esperan al S de A) y variante con deadlock de conversión: requiere tres sesiones concurrentes.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/practica/laboratorio-tcl"
+    },
+    {
+      "id": "U3.23",
+      "reason": "Fantasma con REPEATABLE READ y SERIALIZABLE sobre el historial de una tarjeta: requiere dos sesiones concurrentes.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/practica/laboratorio-tcl"
+    },
+    {
+      "id": "U3.24",
+      "reason": "Conflicto de actualización en SNAPSHOT (error 3960): requiere dos sesiones (B fija su instantánea, A modifica y confirma, B intenta modificar). Una sola conexión no puede intercalarlas.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento"
+    },
+    {
+      "id": "U3.25",
+      "reason": "Deadlock con víctima determinada por DEADLOCK_PRIORITY: requiere dos sesiones concurrentes y la intervención del monitor de deadlocks.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento"
+    },
+    {
+      "id": "U3.T.MT.05",
+      "reason": "BACKUP DATABASE y BACKUP LOG escriben mensajes con tiempos y velocidades (no deterministas) y archivos en el servidor, por lo que la salida no se puede fijar en un .expected. Se ejecutó a mano en bbdda-mssql: la consulta final de msdb.dbo.backupset devuelve D|sí|FULL y L|sí|FULL, como muestra la página.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento"
+    },
+    {
+      "id": "U5.T.BK.12",
+      "reason": "Backup cifrado: requiere CREATE MASTER KEY y CREATE CERTIFICATE en master y BACKUP CERTIFICATE a archivos del host (objetos de servidor compartidos por todos los checks del verificador). Sintaxis de BACKUP ... WITH ENCRYPTION conforme a Microsoft Learn; se revisó sin ejecutar para no alterar master.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-5/teoria/backup-restauracion"
+    },
+    {
+      "id": "U5.T.HA.03",
+      "reason": "Laboratorio guiado de un grupo de disponibilidad (plan §2 #26): requiere dos instancias en red, WSFC o CLUSTER_TYPE = NONE, endpoints y habilitar Always On con reinicio del servicio. Una instancia aislada solo permite verificar que las vistas están vacías (U5.T.HA.01, aprobado). La consulta de control sobre sys.dm_hadr_* depende de un grupo existente.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad"
+    },
+    {
+      "id": "U5.LS.R1",
+      "reason": "CREATE DATABASE LaboratorioU5 y USE: el verificador ejecuta cada script en una base propia y no admite crear bases ni cambiar de contexto. El resto del laboratorio (U5.LS.01) se ejecuta en esa base.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad"
+    },
+    {
+      "id": "U5.T.SEG.R1",
+      "reason": "Logins y usuarios de Windows requieren un dominio (sin Active Directory el motor responde el error 15401, comprobado). Los usuarios contenidos requieren CONTAINMENT = PARTIAL y sp_configure 'contained database authentication' (valor 0 por defecto en la instancia), que modifica la configuración compartida.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-5/teoria/seguridad-permisos"
+    },
+    {
+      "id": "U5.T.CIF.R1",
+      "reason": "ALTER DATABASE ... SET ENCRYPTION ON cifra también tempdb, que según la documentación de Microsoft queda cifrada hasta reiniciar la instancia (estado compartido que no se puede limpiar). Verificado solo hasta CREATE DATABASE ENCRYPTION KEY con estado 1 (U5.T.CIF.03).",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-5/teoria/cifrado"
+    },
+    {
+      "id": "U5.T.CIF.R2",
+      "reason": "BACKUP CERTIFICATE escribe archivos .cer y .pvk en disco (no se pueden eliminar desde T-SQL) y el verificador no tiene rutas de host.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-5/teoria/cifrado"
+    },
+    {
+      "id": "U5.T.CIF.R3",
+      "reason": "BACKUP DATABASE ... WITH ENCRYPTION escribe un .bak; hacia /dev/null el motor termina con el error 3013, de modo que no hay forma de ejecutarlo sin dejar un archivo.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-5/teoria/cifrado"
+    },
+    {
+      "id": "U5.LB.R1",
+      "reason": "Preparación del laboratorio de backup: USE master y CREATE DATABASE LaboratorioBackup con modelo FULL. El verificador ejecuta cada script en una base nueva y no admite crear bases ni cambiar de contexto; los pasos siguientes del laboratorio se ejecutan de forma equivalente en U5.T.BK.13.",
+      "reviewer": "claude (coordinación)",
+      "date": "2026-11-17",
+      "page": "bbdd-aplicadas/unidad-5/practica/laboratorio-backup"
+    }
+  ],
+  "pending": [],
+  "orphan_markers": [],
+  "syntax_templates": [
+    {
+      "page": "unidad-1/teoria/cte.md",
+      "line": 13,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-1/teoria/pivot.md",
+      "line": 15,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-1/teoria/repaso-sql.md",
+      "line": 643,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-1/teoria/window-functions.md",
+      "line": 130,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-2/teoria/collation.md",
+      "line": 78,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-2/teoria/importacion-de-archivos.md",
+      "line": 33,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-3/teoria/indices-optimizacion.md",
+      "line": 952,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-3/teoria/indices-y-planes.md",
+      "line": 174,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-3/teoria/transacciones-y-concurrencia.md",
+      "line": 159,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-3/teoria/transacciones-y-concurrencia.md",
+      "line": 229,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-3/teoria/unidad-3.md",
+      "line": 227,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-3/teoria/unidad-3.md",
+      "line": 302,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-3/teoria/unidad-3.md",
+      "line": 654,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-3/teoria/unidad-3.md",
+      "line": 665,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-4/teoria/instalacion-mongodb.md",
+      "line": 135,
+      "language": "javascript",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-4/teoria/mongodb-agregacion.md",
+      "line": 64,
+      "language": "javascript",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-4/teoria/mongodb-agregacion.md",
+      "line": 267,
+      "language": "javascript",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-4/teoria/mongodb-crud.md",
+      "line": 109,
+      "language": "javascript",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-4/teoria/mongodb-crud.md",
+      "line": 173,
+      "language": "javascript",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-4/teoria/mongodb-crud.md",
+      "line": 328,
+      "language": "javascript",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-4/teoria/nosql-conceptos.md",
+      "line": 217,
+      "language": "javascript",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-5/teoria/alta-disponibilidad.md",
+      "line": 96,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-5/teoria/seguridad-permisos.md",
+      "line": 515,
+      "language": "sql",
+      "suspicious": false
+    },
+    {
+      "page": "unidad-5/teoria/seguridad-permisos.md",
+      "line": 525,
+      "language": "sql",
+      "suspicious": false
+    }
+  ],
+  "summary": {
+    "executed": 454,
+    "passed": 454,
+    "failed": 0,
+    "errors": 0,
+    "reviewed": 30,
+    "pending": 0,
+    "syntax_templates": 24
+  }
+}

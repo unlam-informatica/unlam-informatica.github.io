@@ -22,6 +22,7 @@ from .extract import FORMULA_PLACEHOLDER, load_manifest
 from .ingest import load_catalog, save_catalog
 from .io_utils import atomic_write, fold, read_json, sha256_text, write_json
 from .logging_utils import get_logger
+from .textscan import clean_dollars, strip_inline_code
 
 NORMALIZER_VERSION = 1
 
@@ -42,6 +43,12 @@ KIND_PATTERNS = (
 )
 CID_RE = re.compile(r"\(cid:\d+\)")
 PAGE_NUMBER_RE = re.compile(r"\d+")
+# Mojibake típico de UTF-8 leído como latin-1/cp1252 ("Ã©", "Ã±", "Â¿"): cuenta como un carácter ilegible.
+MOJIBAKE_RE = re.compile("[ÃÂ][\u0080-\u00bf]")
+ILLEGIBLE_THRESHOLD = 0.05
+MIN_PAGE_CHARS = 20
+FLATTENED_CODE_CHARS = 120
+TABLE_SEPARATOR_RE = re.compile(r"^\s*\|[\s:|-]*-{3}[\s:|-]*$")
 
 
 @dataclass
@@ -100,7 +107,7 @@ def repeated_lines(pages: list[tuple[int | None, list[str]]], threshold: float =
 
 
 def _odd_dollars(paragraph: str) -> bool:
-    without_code = re.sub(r"`[^`]*`", "", paragraph)
+    without_code = clean_dollars(strip_inline_code(paragraph))[0]
     return len(re.findall(r"(?<!\\)\$", without_code)) % 2 == 1
 
 
@@ -118,6 +125,63 @@ def detect_flags(text: str) -> list[str]:
     if any(_odd_dollars(p) for p in re.split(r"\n\s*\n", text)):
         flags.append("delimitadores-desbalanceados")
     return flags
+
+
+def illegible_count(text: str) -> tuple[int, int]:
+    """(caracteres ilegibles, caracteres no blancos): U+FFFD y cada secuencia de mojibake cuentan uno."""
+    bad = text.count("\ufffd") + len(MOJIBAKE_RE.findall(text))
+    return bad, sum(1 for c in text if not c.isspace())
+
+
+def illegible_stats(pages: list[tuple[int | None, list[str]]]) -> tuple[list[int | None], float]:
+    """Páginas con ≥ 5 % de caracteres ilegibles (ignorando las de menos de 20) y proporción global."""
+    flagged: list[int | None] = []
+    total_bad = total = 0
+    for number, lines in pages:
+        bad, chars = illegible_count("\n".join(lines))
+        total_bad += bad
+        total += chars
+        if chars >= MIN_PAGE_CHARS and bad / chars >= ILLEGIBLE_THRESHOLD:
+            flagged.append(number)
+    return flagged, round(total_bad / total, 3) if total else 0.0
+
+
+def structure_counts(pages: list[tuple[int | None, list[str]]]) -> dict[str, int]:
+    """Bloques de código cercados, los de una sola línea larga y tablas Markdown fuera de código."""
+    counts = {"code_blocks": 0, "code_blocks_flattened": 0, "tables": 0}
+    in_fence = False
+    block: list[str] = []
+    table: list[str] = []
+
+    def end_table() -> None:
+        if any(TABLE_SEPARATOR_RE.match(row) for row in table):
+            counts["tables"] += 1
+        table.clear()
+
+    def end_block() -> None:
+        counts["code_blocks"] += 1
+        filled = [row for row in block if row.strip()]
+        if len(filled) == 1 and len(filled[0].strip()) > FLATTENED_CODE_CHARS:
+            counts["code_blocks_flattened"] += 1
+        block.clear()
+
+    for _, lines in pages:
+        for line in lines:
+            if FENCE_RE.match(line):
+                end_table()
+                if in_fence:
+                    end_block()
+                in_fence = not in_fence
+            elif in_fence:
+                block.append(line)
+            elif line.lstrip().startswith("|"):
+                table.append(line)
+            else:
+                end_table()
+    end_table()
+    if in_fence:
+        end_block()
+    return counts
 
 
 def classify_title(title: str) -> str:
@@ -143,6 +207,8 @@ def normalize_markdown(markdown: str) -> tuple[str, list[Section], dict[str, Any
         "repeated_paragraphs": 0,
         "empty_sections": [],
     }
+    report["illegible_pages"], report["illegible_ratio"] = illegible_stats(pages)
+    report.update(structure_counts(pages))
 
     # 1) Limpieza por líneas, conservando la página de cada una.
     cleaned: list[tuple[int | None, str]] = []

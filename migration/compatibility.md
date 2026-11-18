@@ -200,7 +200,7 @@ Las rutas anteriores y canónicas se conservan. La navegación usa archivos `ind
 | `/bbdd-aplicadas/unidad-1/images/pivot.png` | `/bbdd-aplicadas/unidad-1/images/pivot.png` | `/bbdd-aplicadas/unidad-1/images/pivot.png` | asset |
 | `/bbdd-aplicadas/unidad-1/images/wf-frame.png` | `/bbdd-aplicadas/unidad-1/images/wf-frame.png` | `/bbdd-aplicadas/unidad-1/images/wf-frame.png` | asset |
 | `/bbdd-aplicadas/unidad-1/images/wf-partition.png` | `/bbdd-aplicadas/unidad-1/images/wf-partition.png` | `/bbdd-aplicadas/unidad-1/images/wf-partition.png` | asset |
-| `/bbdd-aplicadas/unidad-1/practica/window-functions.sql` | `/bbdd-aplicadas/unidad-1/practica/window-functions.sql` | `/bbdd-aplicadas/unidad-1/practica/window-functions.sql` | asset |
+| `/bbdd-aplicadas/unidad-1/practica/window-functions.sql` | `/bbdd-aplicadas/unidad-1/practica/window-functions.sql` | `/bbdd-aplicadas/unidad-1/practica/window-functions.sql` | asset (retirado, ver `withdrawn.json`) |
 | `/bbdd-aplicadas/unidad-2/images/acid-props.png` | `/bbdd-aplicadas/unidad-2/images/acid-props.png` | `/bbdd-aplicadas/unidad-2/images/acid-props.png` | asset |
 | `/bbdd-aplicadas/unidad-2/images/tx-deadlock.png` | `/bbdd-aplicadas/unidad-2/images/tx-deadlock.png` | `/bbdd-aplicadas/unidad-2/images/tx-deadlock.png` | asset |
 | `/bbdd-aplicadas/unidad-2/images/tx-lifecycle.png` | `/bbdd-aplicadas/unidad-2/images/tx-lifecycle.png` | `/bbdd-aplicadas/unidad-2/images/tx-lifecycle.png` | asset |
@@ -209,13 +209,13 @@ Las rutas anteriores y canónicas se conservan. La navegación usa archivos `ind
 | `/bbdd-aplicadas/unidad-2/practica/archivos/SalarioMensualMedio.csv` | `/bbdd-aplicadas/unidad-2/practica/archivos/SalarioMensualMedio.csv` | `/bbdd-aplicadas/unidad-2/practica/archivos/SalarioMensualMedio.csv` | asset |
 | `/bbdd-aplicadas/unidad-2/practica/archivos/starwars.json` | `/bbdd-aplicadas/unidad-2/practica/archivos/starwars.json` | `/bbdd-aplicadas/unidad-2/practica/archivos/starwars.json` | asset |
 | `/bbdd-aplicadas/unidad-2/practica/archivos/viajerosgalicia.csv` | `/bbdd-aplicadas/unidad-2/practica/archivos/viajerosgalicia.csv` | `/bbdd-aplicadas/unidad-2/practica/archivos/viajerosgalicia.csv` | asset |
-| `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Agregaciones-2026.pdf` | `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Agregaciones-2026.pdf` | `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Agregaciones-2026.pdf` | asset |
-| `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Indices.pdf` | `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Indices.pdf` | `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Indices.pdf` | asset |
+| `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Agregaciones-2026.pdf` | `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Agregaciones-2026.pdf` | `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Agregaciones-2026.pdf` | asset (retirado, ver `withdrawn.json`) |
+| `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Indices.pdf` | `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Indices.pdf` | `/bbdd-aplicadas/unidad-4/inputs/MongoDB-Indices.pdf` | asset (retirado, ver `withdrawn.json`) |
 | `/bbdd-aplicadas/unidad-4/inputs/MongoDB-no-oficial/MongoDB no oficial.pdf` | `/bbdd-aplicadas/unidad-4/inputs/MongoDB-no-oficial/MongoDB no oficial.pdf` | `/bbdd-aplicadas/unidad-4/inputs/MongoDB-no-oficial/MongoDB no oficial.pdf` | asset |
-| `/bbdd-aplicadas/unidad-4/practica/archivos/cc_info.csv` | `/bbdd-aplicadas/unidad-4/practica/archivos/cc_info.csv` | `/bbdd-aplicadas/unidad-4/practica/archivos/cc_info.csv` | asset |
-| `/bbdd-aplicadas/unidad-4/practica/archivos/datosventas_1.json` | `/bbdd-aplicadas/unidad-4/practica/archivos/datosventas_1.json` | `/bbdd-aplicadas/unidad-4/practica/archivos/datosventas_1.json` | asset |
+| `/bbdd-aplicadas/unidad-4/practica/archivos/cc_info.csv` | `/bbdd-aplicadas/unidad-4/practica/archivos/cc_info.csv` | `/bbdd-aplicadas/unidad-4/practica/archivos/cc_info.csv` | asset (retirado, ver `withdrawn.json`) |
+| `/bbdd-aplicadas/unidad-4/practica/archivos/datosventas_1.json` | `/bbdd-aplicadas/unidad-4/practica/archivos/datosventas_1.json` | `/bbdd-aplicadas/unidad-4/practica/archivos/datosventas_1.json` | asset (retirado, ver `withdrawn.json`) |
 | `/bbdd-aplicadas/unidad-4/practica/archivos/sample_airbnb.listingsAndReviews.zip` | `/bbdd-aplicadas/unidad-4/practica/archivos/sample_airbnb.listingsAndReviews.zip` | `/bbdd-aplicadas/unidad-4/practica/archivos/sample_airbnb.listingsAndReviews.zip` | asset |
-| `/bbdd-aplicadas/unidad-4/practica/archivos/transactions.csv` | `/bbdd-aplicadas/unidad-4/practica/archivos/transactions.csv` | `/bbdd-aplicadas/unidad-4/practica/archivos/transactions.csv` | asset |
+| `/bbdd-aplicadas/unidad-4/practica/archivos/transactions.csv` | `/bbdd-aplicadas/unidad-4/practica/archivos/transactions.csv` | `/bbdd-aplicadas/unidad-4/practica/archivos/transactions.csv` | asset (retirado, ver `withdrawn.json`) |
 | `/diseno-de-software/diagramas.html` | `/diseno-de-software/diagramas/` | `/diseno-de-software/diagramas/index.html` | page |
 | `/diseno-de-software/index.html` | `/diseno-de-software/` | `/diseno-de-software/index.html` | page |
 | `/diseno-de-software/practicas/index.html` | `/diseno-de-software/practicas/` | `/diseno-de-software/practicas/index.html` | page |

@@ -1,0 +1,5 @@
+0|Compute Scalar|NULL
+1|Stream Aggregate|NULL
+2|Hash Match|NULL
+3|Clustered Index Scan|[PK_Cliente]
+4|Clustered Index Scan|[PK_Pedido]

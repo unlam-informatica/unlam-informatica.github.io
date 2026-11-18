@@ -1,0 +1,93 @@
+[
+  {
+    "numero": 1,
+    "socioCodigo": "S-01",
+    "peliculaCodigo": "PEL-01",
+    "fechaPrestamo": "2026-02-02",
+    "fechaDevolucion": "2026-02-05"
+  },
+  {
+    "numero": 2,
+    "socioCodigo": "S-01",
+    "peliculaCodigo": "PEL-09",
+    "fechaPrestamo": "2026-02-20",
+    "fechaDevolucion": "2026-02-22"
+  },
+  {
+    "numero": 3,
+    "socioCodigo": "S-02",
+    "peliculaCodigo": "PEL-01",
+    "fechaPrestamo": "2026-02-10",
+    "fechaDevolucion": "2026-02-17"
+  },
+  {
+    "numero": 4,
+    "socioCodigo": "S-02",
+    "peliculaCodigo": "PEL-05",
+    "fechaPrestamo": "2026-03-01",
+    "fechaDevolucion": "2026-03-04"
+  },
+  {
+    "numero": 5,
+    "socioCodigo": "S-03",
+    "peliculaCodigo": "PEL-09",
+    "fechaPrestamo": "2026-03-03",
+    "fechaDevolucion": null
+  },
+  {
+    "numero": 6,
+    "socioCodigo": "S-03",
+    "peliculaCodigo": "PEL-02",
+    "fechaPrestamo": "2026-03-10",
+    "fechaDevolucion": "2026-03-12"
+  },
+  {
+    "numero": 7,
+    "socioCodigo": "S-04",
+    "peliculaCodigo": "PEL-07",
+    "fechaPrestamo": "2026-01-15",
+    "fechaDevolucion": "2026-02-01"
+  },
+  {
+    "numero": 8,
+    "socioCodigo": "S-05",
+    "peliculaCodigo": "PEL-05",
+    "fechaPrestamo": "2026-03-05",
+    "fechaDevolucion": null
+  },
+  {
+    "numero": 9,
+    "socioCodigo": "S-05",
+    "peliculaCodigo": "PEL-09",
+    "fechaPrestamo": "2026-03-12",
+    "fechaDevolucion": null
+  },
+  {
+    "numero": 10,
+    "socioCodigo": "S-01",
+    "peliculaCodigo": "PEL-04",
+    "fechaPrestamo": "2026-03-15",
+    "fechaDevolucion": "2026-03-16"
+  },
+  {
+    "numero": 11,
+    "socioCodigo": "S-02",
+    "peliculaCodigo": "PEL-02",
+    "fechaPrestamo": "2026-03-18",
+    "fechaDevolucion": null
+  },
+  {
+    "numero": 12,
+    "socioCodigo": "S-03",
+    "peliculaCodigo": "PEL-05",
+    "fechaPrestamo": "2026-02-25",
+    "fechaDevolucion": "2026-02-27"
+  },
+  {
+    "numero": 13,
+    "socioCodigo": "S-04",
+    "peliculaCodigo": "PEL-99",
+    "fechaPrestamo": "2026-03-19",
+    "fechaDevolucion": null
+  }
+]

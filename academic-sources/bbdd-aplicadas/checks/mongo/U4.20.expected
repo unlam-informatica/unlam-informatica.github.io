@@ -1,0 +1,10 @@
+calificacion: null           -> 2
+calificacion $exists: false  -> 1
+calificacion $type: null     -> 1
+{"codigo":"PEL-01","generos":["drama","misterio"]}
+{"codigo":"PEL-10","generos":["misterio","drama"]}
+{"codigo":"PEL-01","reparto":["Actor 1","Actor 2","Actor 3"]}
+{"codigo":"PEL-05","reparto":["Actor 4","Actor 7","Actor 8"]}
+{"codigo":"PEL-07","reparto":["Actor 2","Actor 9","Actor 10"]}
+{"codigo":"PEL-01","titulo":"La ciudad dormida"}
+{"codigo":"PEL-09","titulo":"Orbita"}

@@ -1,0 +1,27 @@
+--- top 3 pedidos por total, y la pagina siguiente
+{"_id":103,"total":940}
+{"_id":102,"total":300}
+{"_id":107,"total":210}
+{"_id":105,"total":185}
+{"_id":101,"total":110}
+{"_id":104,"total":60}
+--- $count
+{"totalEntregados":5}
+--- $count sin documentos no devuelve nada: 0
+--- $sortByCount
+{"_id":"perifericos","count":3}
+{"_id":"audio","count":2}
+{"_id":"computadoras","count":1}
+{"_id":"impresion","count":1}
+{"_id":"pantallas","count":1}
+--- $bucket
+{"_id":0,"cantidad":2,"productos":["Teclado","Mouse"]}
+{"_id":50,"cantidad":3,"productos":["Auriculares","Parlante","Webcam"]}
+{"_id":100,"cantidad":1,"productos":["Impresora"]}
+{"_id":300,"cantidad":2,"productos":["Monitor","Notebook"]}
+--- $bucketAuto
+{"_id":{"min":20,"max":60},"cantidad":3}
+{"_id":{"min":60,"max":300},"cantidad":3}
+{"_id":{"min":300,"max":900},"cantidad":2}
+--- $facet
+{"porCategoria":[{"_id":"perifericos","cantidad":3},{"_id":"audio","cantidad":2},{"_id":"computadoras","cantidad":1},{"_id":"impresion","cantidad":1},{"_id":"pantallas","cantidad":1}],"masCaros":[{"nombre":"Notebook","precio":900},{"nombre":"Monitor","precio":300}],"resumen":[{"productos":8,"precioPromedio":209.375}]}

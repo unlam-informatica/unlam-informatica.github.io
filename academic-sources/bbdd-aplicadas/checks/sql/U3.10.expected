@@ -1,0 +1,6 @@
+1|llamada suelta: error|547
+2|llamada suelta: saldo de la cuenta 1|5000.00
+3|dentro de la transacción: error|547
+4|XACT_STATE() de la transacción del llamador|1
+5|saldo final de la cuenta 1|5026.00
+6|movimientos registrados|1

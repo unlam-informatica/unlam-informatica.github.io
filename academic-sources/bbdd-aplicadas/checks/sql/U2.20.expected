@@ -1,0 +1,8 @@
+3|fecha invalida
+4|cliente inexistente
+5|importe no positivo
+6|venta duplicada
+7|importe vacio o invalido
+1|2026-03-01|1|1500.00
+2|2026-03-02|2|820.50
+7|2026-03-08|2|1200.25

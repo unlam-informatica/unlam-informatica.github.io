@@ -1,0 +1,2 @@
+Sin índice|Clustered Index Scan|[PK_Orden]|93
+Con índice|Index Seek|[IX_Orden_Patente]|2

@@ -8,6 +8,8 @@ import { navigationPath } from './navigation.mjs';
 const root = process.argv[2];
 if (!root) throw Error('Usage: node scripts/import-sources.mjs /path/to/clones');
 const subjects = ['analisis-matematico-i', 'bbdd-aplicadas', 'diseno-de-software'];
+// Withdrawn assets keep their provenance record but are never copied to public/ again.
+const withdrawn = new Set(JSON.parse(fs.readFileSync('migration/withdrawn.json', 'utf8')).assets.map(w => w.source));
 const titles = ['Análisis Matemático I', 'Bases de Datos Aplicadas', 'Diseño de Software'];
 const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => e.name.startsWith('.') ? [] : e.isDirectory() ? walk(path.join(dir, e.name)) : [path.join(dir, e.name)]);
 const hash = s => crypto.createHash('sha256').update(s).digest('hex');
@@ -99,7 +101,7 @@ for (const [i, subject] of subjects.entries()) {
   for (const p of files.filter(p => !p.endsWith('.md') && !/\.(?:scss|yml|html|js)$/.test(p) && !['Gemfile','Gemfile.lock'].includes(path.basename(p)))) {
     const rel = path.relative(dir,p);
     const output = 'public/'+subject+'/'+rel;
-    save(output, fs.readFileSync(p));
+    if (!withdrawn.has(subject+'/'+rel)) save(output, fs.readFileSync(p));
     assets.push({ source: subject+'/'+rel, output, sha256: hash(fs.readFileSync(p)) });
     matrix.push({ source: subject+'/'+rel, old: '/'+subject+'/'+rel, canonical: '/'+subject+'/'+rel, kind:'asset' });
   }
@@ -108,5 +110,5 @@ for (const [i, subject] of subjects.entries()) {
 save('migration/sources.json', JSON.stringify({ repositories: provenance, pages, assets },null,2)+'\n');
 for (const entry of matrix) if (entry.kind === 'page') entry.navigation = navigationPath(entry.canonical);
 save('migration/compatibility.json', JSON.stringify(matrix,null,2)+'\n');
-save('migration/compatibility.md', '# Matriz de compatibilidad\n\nLas rutas anteriores y canónicas se conservan. La navegación usa archivos `index.html` explícitos para evitar los 404 de directorio retenidos por la caché de GitHub Pages. Las rutas `.html` antiguas redirigen al archivo de navegación conservando query y fragmento durante el build. Las rutas sin barra final siguen dependiendo de la normalización del host.\n\n| Ruta anterior | Ruta canónica | Navegación | Tipo |\n|---|---|---|---|\n'+matrix.map(r => `| \`${r.old}\` | \`${r.canonical}\` | \`${r.navigation || r.canonical}\` | ${r.kind} |`).join('\n')+'\n');
+save('migration/compatibility.md', '# Matriz de compatibilidad\n\nLas rutas anteriores y canónicas se conservan. La navegación usa archivos `index.html` explícitos para evitar los 404 de directorio retenidos por la caché de GitHub Pages. Las rutas `.html` antiguas redirigen al archivo de navegación conservando query y fragmento durante el build. Las rutas sin barra final siguen dependiendo de la normalización del host.\n\n| Ruta anterior | Ruta canónica | Navegación | Tipo |\n|---|---|---|---|\n'+matrix.map(r => `| \`${r.old}\` | \`${r.canonical}\` | \`${r.navigation || r.canonical}\` | ${withdrawn.has(r.source) ? 'asset (retirado, ver `withdrawn.json`)' : r.kind} |`).join('\n')+'\n');
 console.log(provenance);

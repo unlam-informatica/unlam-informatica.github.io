@@ -1,0 +1,3 @@
+1|sin XACT_ABORT: ¿se ejecutó el ROLLBACK TO?|no
+2|sin XACT_ABORT: error y XACT_STATE()|547 / 1
+3|saldo de la cuenta 1 tras la variante corregida|4800.00

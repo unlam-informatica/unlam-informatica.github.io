@@ -1,0 +1,17 @@
+0
+corta-con-politica|error 33062
+sin-complejidad|error 33064
+cumple-y-debe-cambiar|ok
+sin-politica|ok
+vencimiento-sin-politica|error 15122
+cambio-sin-vencimiento|error 15099
+con-vencimiento|ok
+valores-por-defecto|ok
+LoginU5T01Ana|1|1|1
+LoginU5T01Def|1|0|0
+LoginU5T01Libre|0|0|0
+LoginU5T01Venc3|1|1|0
+1|0
+LoginU5T01Def|1
+90
+0

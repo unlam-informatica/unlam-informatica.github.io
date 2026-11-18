@@ -1,0 +1,2 @@
+(FechaIngreso, Estado)|Index Seek|[IX_Orden_Fecha_Estado]|5
+(Estado, FechaIngreso)|Index Seek|[IX_Orden_Estado_Fecha]|3

@@ -1,0 +1,10 @@
+A Primavera|error 33064
+B Pri2026|error 33062
+C Primavera2026|ok
+D primavera_2026|ok
+E Primavera con politica apagada|ok
+F MUST_CHANGE sin vencimiento|error 15099
+LoginU502C|1|0
+LoginU502D|1|0
+LoginU502E|0|0
+0

@@ -1,0 +1,5 @@
+Filas de DBCC SQLPERF para la base|1
+Porcentaje usado entre 0 y 100|si
+Status de la base en SQLPERF|0
+Tamano del log en sys.dm_db_log_space_usage|mayor que cero
+VLF en la base actual (sys.dm_db_log_info)|al menos uno

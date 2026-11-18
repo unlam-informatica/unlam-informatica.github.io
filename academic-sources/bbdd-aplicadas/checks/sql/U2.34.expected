@@ -1,0 +1,1 @@
+<empresa><departamento id="1" nombre="Ingenieria"><empleados><empleado id="1" nombre="Empleado 01" salario="120000.00"/><empleado id="2" nombre="Empleado 02" salario="98000.00"/></empleados></departamento></empresa>

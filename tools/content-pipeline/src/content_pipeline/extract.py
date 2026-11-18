@@ -15,12 +15,15 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import shutil
 import time
+import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Protocol
 
+from . import __version__
 from .config import PipelineError, SubjectPaths
 from .ingest import load_catalog, save_catalog
 from .io_utils import atomic_write, read_json, write_json
@@ -126,6 +129,10 @@ class DoclingEngine:
         pipeline.accelerator_options = AcceleratorOptions(device=self.device)
         if self.artifacts_path:
             pipeline.artifacts_path = self.artifacts_path
+        if pipeline.do_ocr and options.get("force_ocr"):
+            # Capa de texto inservible (fuentes sin mapa Unicode, mojibake): se ignora y se
+            # reconoce cada página como imagen.
+            pipeline.ocr_options.force_full_page_ocr = True
         if pipeline.do_ocr and hasattr(pipeline.ocr_options, "lang"):
             try:
                 # Cada motor de OCR nombra los idiomas a su manera; si rechaza los
@@ -178,7 +185,7 @@ class DoclingEngine:
             return EngineOutput(status="failure", errors=errors or [f"Docling devolvió {status_name}"])
 
         warnings: list[str] = []
-        pages = self._pages(document, warnings)
+        pages = self._pages(document, warnings, bool(options.get("picture_text")))
         output = EngineOutput(
             status="success" if status_name == "SUCCESS" else "partial",
             pages=pages,
@@ -204,12 +211,16 @@ class DoclingEngine:
         return output
 
     @staticmethod
-    def _pages(document: Any, warnings: list[str]) -> list[PageText]:
+    def _pages(document: Any, warnings: list[str], picture_text: bool = False) -> list[PageText]:
+        # ``picture_text`` exporta también el texto reconocido dentro de figuras (capturas de
+        # código, formularios); por defecto Docling solo deja la marca ``<!-- image -->``.
+        extra = {"traverse_pictures": True} if picture_text else {}
         page_numbers = sorted((getattr(document, "pages", None) or {}).keys())
         if not page_numbers:
-            return [PageText(None, document.export_to_markdown())]
+            return [PageText(None, document.export_to_markdown(**extra))]
         try:
-            return [PageText(number, document.export_to_markdown(page_no=number)) for number in page_numbers]
+            return [PageText(number, document.export_to_markdown(page_no=number, **extra))
+                    for number in page_numbers]
         except TypeError:
             warnings.append("Esta versión de Docling no exporta por página; se pierde el número de página.")
             return [PageText(None, document.export_to_markdown())]
@@ -233,6 +244,64 @@ class DoclingEngine:
             except Exception as error:  # una figura rota no invalida el documento
                 warnings.append(f"No se pudo exportar la figura {index}: {error}")
         return images
+
+
+def decode_text(data: bytes) -> tuple[str, str, list[str]]:
+    """Decodifica texto plano: devuelve (texto, codificación, advertencias).
+
+    Con BOM se respeta; sin BOM se prueba UTF-8 estricto y luego cp1252 y latin-1.
+    Normaliza saltos de línea y Unicode (NFC) y quita NUL; no altera nada más.
+    """
+    warnings: list[str] = []
+    if data.startswith(b"\xef\xbb\xbf"):
+        encoding = "utf-8-sig"
+    elif data.startswith((b"\xff\xfe", b"\xfe\xff")):
+        encoding = "utf-16"
+    else:
+        encoding = "utf-8"
+    try:
+        text = data.decode(encoding)
+    except UnicodeDecodeError:
+        text = ""
+        for encoding in ("cp1252", "latin-1"):
+            try:
+                text = data.decode(encoding)
+                break
+            except UnicodeDecodeError:
+                continue
+        warnings.append(f"codificacion-heredada: {encoding}")
+    text = text.replace("\r\n", "\n").replace("\r", "\n").replace("\x00", "")
+    text = unicodedata.normalize("NFC", text)
+    if not text.strip():
+        warnings.append("archivo-vacio")
+    links = len(re.findall(r"https?://", text, flags=re.IGNORECASE))
+    if links:
+        warnings.append(f"enlaces-externos-no-seguidos: {links}")
+    return text, encoding, warnings
+
+
+class PlainTextEngine:
+    """Lee archivos de texto plano sin Docling. No sigue enlaces ni accede a la red."""
+
+    name = "plaintext"
+    version = __version__
+
+    def supports(self, fmt: str) -> bool:
+        return fmt == "plaintext"
+
+    def convert(self, path: Path, fmt: str, options: dict[str, Any]) -> EngineOutput:
+        text, encoding, warnings = decode_text(path.read_bytes())
+        lines = text.splitlines()
+        chars = len(text)
+        return EngineOutput(
+            status="success" if text.strip() else "partial",
+            pages=[PageText(1, text)],
+            document={"format": "plaintext", "encoding": encoding, "lines": len(lines), "chars": chars},
+            warnings=warnings,
+            stats={"pages": 1, "text_items": sum(1 for line in lines if line.strip()), "headings": 0,
+                   "tables": 0, "pictures": 0, "formulas": 0, "formulas_undecoded": 0,
+                   "encoding": encoding, "chars": chars},
+        )
 
 
 def resolve_profile(document: dict[str, Any], override: str | None = None) -> tuple[str, dict[str, Any]]:
@@ -303,14 +372,16 @@ def run_extract(paths: SubjectPaths, engine: Engine, ids: list[str] | None = Non
             counts["missing"] += 1
             log.warning("documento ausente en raw/", extra={"id": doc_id, "path": document["path"]})
             continue
-        if not engine.supports(document["format"]):
+        # El texto plano no necesita Docling: siempre lo lee el motor propio.
+        doc_engine: Engine = PlainTextEngine() if document["format"] == "plaintext" else engine
+        if not doc_engine.supports(document["format"]):
             manifest["documents"][doc_id] = {"status": "failure", "profile": name,
                                              "errors": [f"Formato no compatible: {document['format']}"]}
             document["status"] = "requiere-intervencion"
             counts["failed"] += 1
             continue
         try:
-            key = cache_key(document, engine, name, options)
+            key = cache_key(document, doc_engine, name, options)
         except EngineUnavailable:
             raise
         markdown_path = paths.markdown / f"{doc_id}.md"
@@ -326,7 +397,7 @@ def run_extract(paths: SubjectPaths, engine: Engine, ids: list[str] | None = Non
         started = time.monotonic()
         log.info("extrayendo", extra={"id": doc_id, "path": document["path"], "profile": name})
         try:
-            output = engine.convert(source, document["format"], options)
+            output = doc_engine.convert(source, document["format"], options)
         except EngineUnavailable as error:
             # Falta una dependencia para este tipo de documento; el resto del lote sigue.
             output = EngineOutput(status="failure", errors=[str(error)])
@@ -336,8 +407,8 @@ def run_extract(paths: SubjectPaths, engine: Engine, ids: list[str] | None = Non
 
         record: dict[str, Any] = {
             "sha256": document["sha256"],
-            "engine": engine.name,
-            "engine_version": engine.version,
+            "engine": doc_engine.name,
+            "engine_version": doc_engine.version,
             "profile": name,
             "options": options,
             "status": output.status,
@@ -361,8 +432,8 @@ def run_extract(paths: SubjectPaths, engine: Engine, ids: list[str] | None = Non
                 "id": doc_id,
                 "sha256": document["sha256"],
                 "source_path": document["path"],
-                "engine": engine.name,
-                "engine_version": engine.version,
+                "engine": doc_engine.name,
+                "engine_version": doc_engine.version,
                 "profile": name,
                 "status": output.status,
                 "stats": output.stats,

@@ -1,0 +1,3 @@
+Con HASH JOIN forzado|Hash Match
+Pocas filas|Nested Loops
+Todos los pedidos|Merge Join

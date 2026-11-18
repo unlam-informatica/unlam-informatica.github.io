@@ -6,317 +6,331 @@ sidebar:
   label: JSON en SQL Server
 ---
 
+Siete ejercicios de validación, consulta, modificación y generación de JSON. Presuponen la lección de [JSON en SQL Server](/bbdd-aplicadas/unidad-2/teoria/json-en-sql/). Los datos son propios y no hacen falta archivos externos.
 
-> Ver guía de referencia: [JSON en SQL Server](/bbdd-aplicadas/unidad-2/teoria/json-en-sql/)
+## Conjunto de datos
 
----
+Creá una base de prueba (por ejemplo `CREATE DATABASE PracticaJson;`), cambiá a ella y ejecutá:
 
-## Setup
-
-Todos los ejercicios usan variables y tablas en memoria. No requieren archivos externos.
-
+<!-- check: U2.22 -->
 ```sql
-USE PracticaU2;
+CREATE SCHEMA tienda;
 GO
 
-IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'js')
-    EXEC('CREATE SCHEMA js');
-GO
-
-DROP TABLE IF EXISTS js.Producto;
-DROP TABLE IF EXISTS js.Pedido;
-GO
-
-CREATE TABLE js.Producto (
-    producto_id INT           IDENTITY(1,1) PRIMARY KEY,
-    nombre      VARCHAR(100)  NOT NULL,
-    categoria   VARCHAR(50)   NOT NULL,
-    precio      DECIMAL(10,2) NOT NULL,
-    stock       INT           NOT NULL DEFAULT 0,
-    atributos   NVARCHAR(MAX) NULL       -- columna JSON
+CREATE TABLE tienda.Producto (
+    ProductoId INT IDENTITY(1, 1) NOT NULL,
+    Nombre     VARCHAR(60)        NOT NULL,
+    Categoria  VARCHAR(30)        NOT NULL,
+    Precio     DECIMAL(10,2)      NOT NULL,
+    Stock      INT                NOT NULL,
+    Atributos  NVARCHAR(MAX)      NULL,
+    CONSTRAINT PK_Producto PRIMARY KEY CLUSTERED (ProductoId)
 );
 
-CREATE TABLE js.Pedido (
-    pedido_id   INT           IDENTITY(1,1) PRIMARY KEY,
-    cliente     VARCHAR(100)  NOT NULL,
-    fecha       DATE          NOT NULL DEFAULT GETDATE(),
-    detalle_json NVARCHAR(MAX) NOT NULL  -- array de líneas en JSON
+CREATE TABLE tienda.Pedido (
+    PedidoId INT          NOT NULL,
+    Cliente  VARCHAR(40)  NOT NULL,
+    Fecha    DATE         NOT NULL,
+    Detalle  NVARCHAR(MAX) NOT NULL,
+    CONSTRAINT PK_Pedido PRIMARY KEY CLUSTERED (PedidoId)
 );
 GO
 
-INSERT INTO js.Producto (nombre, categoria, precio, stock, atributos) VALUES
-    ('Notebook Pro 15',  'Electrónica', 1299.99, 12,
-     N'{"marca":"Dell","ram_gb":16,"ssd_gb":512,"color":"Negro"}'),
-    ('Mouse Inalámbrico','Periféricos',   29.99, 85,
-     N'{"marca":"Logitech","dpi":1600,"color":"Gris","bateria":"AA"}'),
-    ('Monitor 27"',      'Electrónica',  349.99, 20,
-     N'{"marca":"LG","resolucion":"2560x1440","panel":"IPS","hz":144}'),
-    ('Teclado Mecánico', 'Periféricos',   89.99, 40,
-     N'{"marca":"Keychron","switch":"Brown","retroiluminado":true}'),
-    ('Auriculares BT',   'Audio',         59.99, 55,
-     N'{"marca":"Sony","autonomia_hs":30,"anc":true,"color":"Negro"}');
+INSERT INTO tienda.Producto (Nombre, Categoria, Precio, Stock, Atributos)
+VALUES ('Notebook 15',    'Computacion', 1299.99, 12, N'{"marca":"Zeta","ramGb":16,"color":"negro"}'),
+       ('Mouse inalambrico', 'Perifericos', 29.99, 85, N'{"marca":"Alfa","dpi":1600,"color":"gris"}'),
+       ('Monitor 27',    'Computacion',  349.99, 20, N'{"marca":"Zeta","panel":"IPS","hz":144}'),
+       ('Teclado mecanico', 'Perifericos', 89.99, 40, N'{"marca":"Alfa","retroiluminado":true,"colores":["rojo","azul"]}');
 
-INSERT INTO js.Pedido (cliente, fecha, detalle_json) VALUES
-    ('Valentina Torres', '2024-03-10',
-     N'[{"producto_id":1,"cantidad":1,"precio_unit":1299.99},{"producto_id":2,"cantidad":2,"precio_unit":29.99}]'),
-    ('Rodrigo Méndez', '2024-03-11',
-     N'[{"producto_id":3,"cantidad":1,"precio_unit":349.99},{"producto_id":5,"cantidad":1,"precio_unit":59.99}]'),
-    ('Sofía Alvarado', '2024-03-12',
-     N'[{"producto_id":4,"cantidad":2,"precio_unit":89.99}]');
+INSERT INTO tienda.Pedido (PedidoId, Cliente, Fecha, Detalle)
+VALUES (1, 'Cliente A', '2026-03-10',
+        N'[{"productoId":1,"cantidad":1,"precio":1299.99},{"productoId":2,"cantidad":2,"precio":29.99}]'),
+       (2, 'Cliente B', '2026-03-11',
+        N'[{"productoId":3,"cantidad":1,"precio":349.99},{"productoId":4,"cantidad":3,"precio":89.99}]'),
+       (3, 'Cliente A', '2026-03-12',
+        N'[{"productoId":4,"cantidad":2,"precio":89.99}]');
 GO
 ```
 
----
-
-## Ejercicio 1 — ISJSON: validar que una columna contiene JSON
-
-Verificar qué filas de `js.Producto` tienen JSON válido en la columna `atributos`.
-
-```sql
-SELECT producto_id, nombre,
-       ISJSON(atributos) AS es_json_valido
-FROM js.Producto;
-```
-
-Agregar una fila intencionalmente inválida y repetir la consulta:
-
-```sql
-INSERT INTO js.Producto (nombre, categoria, precio, stock, atributos)
-VALUES ('Producto roto', 'Test', 0, 0, 'campo: sin apertura, estructura invalida');
-
-SELECT producto_id, nombre, ISJSON(atributos) AS es_json_valido
-FROM js.Producto;
-
--- Limpiar la fila de prueba
-DELETE FROM js.Producto WHERE nombre = 'Producto roto';
-```
+Cada resolución parte de este conjunto de datos recién creado.
 
 ---
 
-## Ejercicio 2 — JSON_VALUE: extraer un valor escalar
+### Ejercicio 1 · Exigir JSON válido en una columna
+<!-- ejercicio: U2.22 | nivel: inicial | tipo: ddl | verificacion: motor -->
 
-Extraer la marca y el color de cada producto desde la columna `atributos`.
+:::note[Enunciado]
+La columna `Atributos` acepta cualquier texto. Agregá una restricción que exija JSON válido (o `NULL`), intentá insertar un producto con el texto `{marca: Zeta` y mostrá el número de error, la cantidad de productos y cuántos tienen JSON válido.
+:::
 
+<details>
+<summary>Resolución</summary>
+
+**Estrategia.** Una restricción `CHECK` con `ISJSON(Atributos) = 1` rechaza el texto inválido con el error 547. Como `ISJSON(NULL)` devuelve `NULL`, la condición admite explícitamente `NULL`. El error se captura con `TRY/CATCH`.
+
+<!-- check: U2.22 -->
 ```sql
-SELECT
-    nombre,
-    JSON_VALUE(atributos, '$.marca')  AS marca,
-    JSON_VALUE(atributos, '$.color')  AS color
-FROM js.Producto;
+DECLARE @Error INT = 0;
+
+ALTER TABLE tienda.Producto
+    ADD CONSTRAINT CK_Producto_Atributos CHECK (Atributos IS NULL OR ISJSON(Atributos) = 1);
+
+BEGIN TRY
+    INSERT INTO tienda.Producto (Nombre, Categoria, Precio, Stock, Atributos)
+    VALUES ('Producto roto', 'Prueba', 1.00, 0, N'{marca: Zeta');
+END TRY
+BEGIN CATCH
+    SET @Error = ERROR_NUMBER();
+END CATCH;
+
+SELECT @Error AS NumeroDeError,
+       COUNT(*) AS Productos,
+       SUM(ISJSON(Atributos)) AS ConJsonValido
+FROM tienda.Producto;
 ```
 
-Ahora filtrar solo los productos de la marca 'Logitech':
+**Resultado esperado.**
 
+| NumeroDeError | Productos | ConJsonValido |
+|---:|---:|---:|
+| 547 | 4 | 4 |
+
+El producto roto no se insertó: quedan los 4 originales, todos con JSON válido.
+</details>
+
+### Ejercicio 2 · Extraer valores y fragmentos
+<!-- ejercicio: U2.23 | nivel: inicial | tipo: consulta | verificacion: motor -->
+
+:::note[Enunciado]
+Listá los productos de la marca `Alfa` con su nombre, marca, color y la lista de colores (un arreglo). Cuando una propiedad no existe, el resultado debe ser `NULL` y no un error. Ordenalos por nombre.
+:::
+
+<details>
+<summary>Resolución</summary>
+
+**Estrategia.** `marca` y `color` son escalares: `JSON_VALUE`. `colores` es un arreglo: `JSON_QUERY` (con `JSON_VALUE` daría `NULL`). Por defecto las rutas son `lax`, así que una propiedad inexistente da `NULL`. El filtro puede usar `JSON_VALUE` en el `WHERE`.
+
+<!-- check: U2.23 -->
 ```sql
-SELECT nombre, precio
-FROM js.Producto
-WHERE JSON_VALUE(atributos, '$.marca') = 'Logitech';
+SELECT Nombre,
+       JSON_VALUE(Atributos, '$.marca')  AS Marca,
+       JSON_VALUE(Atributos, '$.color')  AS Color,
+       JSON_QUERY(Atributos, '$.colores') AS Colores
+FROM tienda.Producto
+WHERE JSON_VALUE(Atributos, '$.marca') = 'Alfa'
+ORDER BY Nombre;
 ```
 
----
+**Resultado esperado.**
 
-## Ejercicio 3 — JSON_QUERY: extraer un fragmento JSON
+| Nombre | Marca | Color | Colores |
+|---|---|---|---|
+| Mouse inalambrico | Alfa | gris | NULL |
+| Teclado mecanico | Alfa | NULL | `["rojo","azul"]` |
 
-`JSON_VALUE` solo funciona para valores escalares. Para extraer un sub-objeto o array completo se usa `JSON_QUERY`.
+El mouse no tiene `colores` y el teclado no tiene `color`: ambos dan `NULL`.
+</details>
 
+### Ejercicio 3 · Total de cada pedido
+<!-- ejercicio: U2.24 | nivel: intermedio | tipo: consulta | verificacion: motor -->
 
+:::note[Enunciado]
+Cada pedido guarda sus líneas en `Detalle`, un arreglo JSON con `productoId`, `cantidad` y `precio`. Calculá el total de cada pedido (suma de cantidad por precio), con el número de pedido y el cliente.
+:::
+
+<details>
+<summary>Resolución</summary>
+
+**Estrategia.** `CROSS APPLY OPENJSON(p.Detalle) WITH (...)` convierte el arreglo de cada pedido en filas con tipos; después se agrupa por pedido y se suma. Los precios se declaran `DECIMAL(10,2)` para evitar errores de redondeo.
+
+<!-- check: U2.24 -->
 ```sql
-DECLARE @json NVARCHAR(MAX) = N'{
-    "cliente": "Valentina Torres",
-    "direccion": {
-        "calle": "Av. Corrientes 1234",
-        "ciudad": "Buenos Aires",
-        "cp": "C1043"
-    },
-    "tags": ["premium", "frecuente"]
-}';
-
--- JSON_VALUE para escalares:
-SELECT JSON_VALUE(@json, '$.cliente')           AS cliente;
-SELECT JSON_VALUE(@json, '$.direccion.ciudad')  AS ciudad;
-
--- JSON_QUERY para el sub-objeto completo (devuelve JSON):
-SELECT JSON_QUERY(@json, '$.direccion')         AS direccion_json;
-
--- JSON_QUERY para el array:
-SELECT JSON_QUERY(@json, '$.tags')              AS tags_json;
-
--- JSON_VALUE sobre un elemento del array (por índice):
-SELECT JSON_VALUE(@json, '$.tags[0]')           AS primer_tag;
-```
-
-
----
-
-## Ejercicio 4 — OPENJSON: convertir JSON en filas
-
-Parsear un JSON de pedido y expandirlo en filas relacionales.
-
-```sql
-DECLARE @pedido NVARCHAR(MAX) = N'[
-    {"producto_id": 1, "cantidad": 2, "precio_unit": 1299.99},
-    {"producto_id": 4, "cantidad": 1, "precio_unit":   89.99},
-    {"producto_id": 5, "cantidad": 3, "precio_unit":   59.99}
-]';
-
--- Sin WITH: devuelve key/value/type genérico
-SELECT * FROM OPENJSON(@pedido);
-
--- Con WITH: tipado explícito — una fila por elemento del array
-SELECT *
-FROM OPENJSON(@pedido)
+SELECT p.PedidoId,
+       p.Cliente,
+       SUM(l.Cantidad * l.Precio) AS Total
+FROM tienda.Pedido AS p
+CROSS APPLY OPENJSON(p.Detalle)
 WITH (
-    producto_id INT           '$.producto_id',
-    cantidad    INT           '$.cantidad',
-    precio_unit DECIMAL(10,2) '$.precio_unit',
-    subtotal    AS JSON       -- columna calculada no soportada en WITH; hacerlo afuera
-);
+    ProductoId INT           '$.productoId',
+    Cantidad   INT           '$.cantidad',
+    Precio     DECIMAL(10,2) '$.precio'
+) AS l
+GROUP BY p.PedidoId, p.Cliente
+ORDER BY p.PedidoId;
 ```
 
-Calcular el subtotal afuera del WITH:
+**Resultado esperado.**
 
+| PedidoId | Cliente | Total |
+|---:|---|---:|
+| 1 | Cliente A | 1359.97 |
+| 2 | Cliente B | 619.96 |
+| 3 | Cliente A | 179.98 |
+</details>
+
+### Ejercicio 4 · Modificar propiedades con JSON_MODIFY
+<!-- ejercicio: U2.25 | nivel: intermedio | tipo: consulta | verificacion: motor -->
+
+:::note[Enunciado]
+En el producto `Notebook 15`: cambiá `ramGb` a 32, agregá `garantiaAnios` con valor 2 y eliminá `color`. En el `Teclado mecanico`: agregá `verde` al arreglo `colores`. Mostrá los `Atributos` resultantes de ambos productos.
+:::
+
+<details>
+<summary>Resolución</summary>
+
+**Estrategia.** `JSON_MODIFY` devuelve un JSON nuevo, así que hay que asignarlo con `UPDATE`. Para varios cambios se anidan las llamadas: la salida de una es la entrada de la siguiente. Asignar `NULL` elimina la propiedad y el prefijo `append` agrega un elemento a un arreglo.
+
+<!-- check: U2.25 -->
 ```sql
-SELECT
-    producto_id,
-    cantidad,
-    precio_unit,
-    cantidad * precio_unit AS subtotal
-FROM OPENJSON(@pedido)
-WITH (
-    producto_id INT           '$.producto_id',
-    cantidad    INT           '$.cantidad',
-    precio_unit DECIMAL(10,2) '$.precio_unit'
-);
+UPDATE tienda.Producto
+SET Atributos = JSON_MODIFY(
+                    JSON_MODIFY(
+                        JSON_MODIFY(Atributos, '$.ramGb', 32),
+                        '$.garantiaAnios', 2),
+                    '$.color', NULL)
+WHERE Nombre = 'Notebook 15';
+
+UPDATE tienda.Producto
+SET Atributos = JSON_MODIFY(Atributos, 'append $.colores', 'verde')
+WHERE Nombre = 'Teclado mecanico';
+
+SELECT Nombre, Atributos
+FROM tienda.Producto
+WHERE Nombre IN ('Notebook 15', 'Teclado mecanico')
+ORDER BY Nombre;
 ```
 
----
+**Resultado esperado.**
 
-## Ejercicio 5 — OPENJSON con JOIN: expandir pedidos reales
+| Nombre | Atributos |
+|---|---|
+| Notebook 15 | `{"marca":"Zeta","ramGb":32,"garantiaAnios":2}` |
+| Teclado mecanico | `{"marca":"Alfa","retroiluminado":true,"colores":["rojo","azul","verde"]}` |
+</details>
 
-Expandir todos los pedidos de `js.Pedido` y cruzarlos con `js.Producto` para obtener el nombre del producto y el total de cada línea.
+### Ejercicio 5 · Catálogo con objetos anidados
+<!-- ejercicio: U2.26 | nivel: intermedio | tipo: consulta | verificacion: motor -->
 
+:::note[Enunciado]
+Generá un JSON con la raíz `catalogo` con los productos de la categoría `Perifericos`. Cada producto debe tener `id`, `nombre`, `precio` y un objeto `detalle` con `marca` (sacada de `Atributos`) y `stock`.
+:::
+
+<details>
+<summary>Resolución</summary>
+
+**Estrategia.** `FOR JSON PATH` usa los alias como rutas: un punto crea un objeto anidado (`detalle.marca`, `detalle.stock`). `ROOT('catalogo')` agrega la raíz. La marca se extrae con `JSON_VALUE` dentro del `SELECT`.
+
+<!-- check: U2.26 -->
 ```sql
-SELECT
-    p.pedido_id,
-    p.cliente,
-    p.fecha,
-    prod.nombre                                 AS producto,
-    linea.cantidad,
-    linea.precio_unit,
-    linea.cantidad * linea.precio_unit          AS subtotal
-FROM js.Pedido p
-CROSS APPLY OPENJSON(p.detalle_json)
-WITH (
-    producto_id INT           '$.producto_id',
-    cantidad    INT           '$.cantidad',
-    precio_unit DECIMAL(10,2) '$.precio_unit'
-) AS linea
-JOIN js.Producto prod ON prod.producto_id = linea.producto_id
-ORDER BY p.pedido_id;
-```
-
-Agregar el total por pedido:
-
-```sql
-SELECT
-    p.pedido_id,
-    p.cliente,
-    SUM(linea.cantidad * linea.precio_unit) AS total_pedido
-FROM js.Pedido p
-CROSS APPLY OPENJSON(p.detalle_json)
-WITH (
-    cantidad    INT           '$.cantidad',
-    precio_unit DECIMAL(10,2) '$.precio_unit'
-) AS linea
-GROUP BY p.pedido_id, p.cliente;
-```
-
----
-
-## Ejercicio 6 — JSON_MODIFY: actualizar un valor dentro de un JSON
-
-Actualizar la RAM del producto "Notebook Pro 15" de 16 GB a 32 GB y agregar un campo nuevo `garantia_anios`.
-
-```sql
--- Ver el JSON actual
-SELECT atributos FROM js.Producto WHERE nombre = 'Notebook Pro 15';
-
--- Modificar un campo existente y agregar uno nuevo
-UPDATE js.Producto
-SET atributos = JSON_MODIFY(
-                    JSON_MODIFY(atributos, '$.ram_gb', 32),
-                    '$.garantia_anios', 2
-                )
-WHERE nombre = 'Notebook Pro 15';
-
--- Verificar
-SELECT
-    nombre,
-    JSON_VALUE(atributos, '$.ram_gb')         AS ram_gb,
-    JSON_VALUE(atributos, '$.garantia_anios') AS garantia_anios
-FROM js.Producto
-WHERE nombre = 'Notebook Pro 15';
-```
-
-Eliminar un campo del JSON:
-
-```sql
-UPDATE js.Producto
-SET atributos = JSON_MODIFY(atributos, '$.color', NULL)
-WHERE nombre = 'Notebook Pro 15';
-```
-
----
-
-## Ejercicio 7 — FOR JSON PATH: exportar tabla como JSON
-
-Exportar la tabla `js.Producto` como un array JSON con estructura personalizada.
-
-```sql
--- Array simple
-SELECT producto_id, nombre, precio, categoria
-FROM js.Producto
-FOR JSON PATH;
-
--- Con elemento raíz
-SELECT producto_id, nombre, precio, categoria
-FROM js.Producto
-FOR JSON PATH, ROOT('productos');
-
--- Anidar la marca dentro de un objeto "detalles"
-SELECT
-    producto_id,
-    nombre,
-    precio,
-    JSON_VALUE(atributos, '$.marca') AS [detalles.marca],
-    stock                            AS [detalles.stock]
-FROM js.Producto
+SELECT ProductoId AS [id],
+       Nombre     AS [nombre],
+       Precio     AS [precio],
+       JSON_VALUE(Atributos, '$.marca') AS [detalle.marca],
+       Stock      AS [detalle.stock]
+FROM tienda.Producto
+WHERE Categoria = 'Perifericos'
+ORDER BY ProductoId
 FOR JSON PATH, ROOT('catalogo');
 ```
 
----
+**Resultado esperado.**
 
-## Ejercicio 8 — FOR JSON AUTO
+```json
+{"catalogo":[{"id":2,"nombre":"Mouse inalambrico","precio":29.99,"detalle":{"marca":"Alfa","stock":85}},{"id":4,"nombre":"Teclado mecanico","precio":89.99,"detalle":{"marca":"Alfa","stock":40}}]}
+```
+</details>
 
-Exportar un JOIN de pedidos con sus líneas usando `FOR JSON AUTO`. Observar cómo infiere la jerarquía.
+### Ejercicio 6 · Subtotal por línea y la línea completa
+<!-- ejercicio: U2.27 | nivel: avanzado | tipo: consulta | verificacion: motor -->
 
+:::note[Enunciado]
+Para el pedido 2, mostrá una fila por línea con el producto, el subtotal (cantidad por precio) y el texto JSON de la línea completa. Un compañero lo intentó agregando al `WITH` una columna `subtotal AS JSON`; explicá por qué eso es inválido y cómo resolverlo.
+:::
+
+<details>
+<summary>Resolución</summary>
+
+**Estrategia.** `AS JSON` solo se admite en una columna `NVARCHAR(MAX)` con una ruta: sirve para **extraer un fragmento JSON** (objeto o arreglo), no para calcular valores. `subtotal AS JSON` carece de tipo y de ruta (y `subtotal` no existe en el documento), por lo que es un error de sintaxis. La solución son dos pasos: la línea completa se obtiene con la ruta `'$'` (el propio elemento) y el cálculo se hace en el `SELECT`, fuera del `WITH`.
+
+<!-- check: U2.27 -->
 ```sql
-SELECT
-    p.pedido_id,
-    p.cliente,
-    p.fecha,
-    prod.nombre  AS producto,
-    linea.cantidad,
-    linea.precio_unit
-FROM js.Pedido p
-CROSS APPLY OPENJSON(p.detalle_json)
+-- Subtotal por línea y la línea completa como JSON
+SELECT p.PedidoId,
+       l.ProductoId,
+       l.Cantidad * l.Precio AS Subtotal,
+       l.Linea
+FROM tienda.Pedido AS p
+CROSS APPLY OPENJSON(p.Detalle)
 WITH (
-    producto_id INT           '$.producto_id',
-    cantidad    INT           '$.cantidad',
-    precio_unit DECIMAL(10,2) '$.precio_unit'
-) AS linea
-JOIN js.Producto prod ON prod.producto_id = linea.producto_id
-FOR JSON AUTO, ROOT('pedidos');
+    ProductoId INT           '$.productoId',
+    Cantidad   INT           '$.cantidad',
+    Precio     DECIMAL(10,2) '$.precio',
+    Linea      NVARCHAR(MAX) '$' AS JSON
+) AS l
+WHERE p.PedidoId = 2
+ORDER BY l.ProductoId;
 ```
 
-**Pregunta**: ¿En qué difiere el resultado de `FOR JSON AUTO` respecto a `FOR JSON PATH`?
+**Resultado esperado.**
+
+| PedidoId | ProductoId | Subtotal | Linea |
+|---:|---:|---:|---|
+| 2 | 3 | 349.99 | `{"productoId":3,"cantidad":1,"precio":349.99}` |
+| 2 | 4 | 269.97 | `{"productoId":4,"cantidad":3,"precio":89.99}` |
+</details>
+
+### Ejercicio 7 · FOR JSON AUTO y FOR JSON PATH
+<!-- ejercicio: U2.28 | nivel: avanzado | tipo: consulta | verificacion: motor -->
+
+:::note[Enunciado]
+Creá la tabla `tienda.Categoria` (`Categoria`, `Rubro`) con las categorías `Computacion` y `Perifericos` (rubro `Tecnologia`). Uní las categorías con sus productos y generá el resultado para `Perifericos` con `FOR JSON AUTO` y con `FOR JSON PATH`. ¿En qué se diferencian los resultados?
+:::
+
+<details>
+<summary>Resolución</summary>
+
+**Estrategia.** Con `AUTO` el motor deduce la estructura a partir de las tablas de la consulta: las columnas de la primera tabla forman el objeto exterior y las de la segunda un arreglo anidado, que lleva por nombre el alias de la tabla (`p`). Con `PATH` y nombres de columna sin puntos, el resultado es una lista **plana** de filas. En `AUTO` el orden de las columnas del `SELECT` importa: las de una tabla deben estar juntas.
+
+<!-- check: U2.28 -->
+```sql
+CREATE TABLE tienda.Categoria (
+    Categoria VARCHAR(30) NOT NULL,
+    Rubro     VARCHAR(30) NOT NULL,
+    CONSTRAINT PK_Categoria PRIMARY KEY CLUSTERED (Categoria)
+);
+
+INSERT INTO tienda.Categoria (Categoria, Rubro)
+VALUES ('Computacion', 'Tecnologia'), ('Perifericos', 'Tecnologia');
+GO
+
+-- 1) FOR JSON AUTO: anida la tabla de la derecha dentro de la de la izquierda
+SELECT c.Categoria, c.Rubro, p.Nombre, p.Precio
+FROM tienda.Categoria AS c
+INNER JOIN tienda.Producto AS p ON p.Categoria = c.Categoria
+WHERE c.Categoria = 'Perifericos'
+ORDER BY c.Categoria, p.Nombre
+FOR JSON AUTO;
+
+-- 2) FOR JSON PATH: devuelve filas planas
+SELECT c.Categoria, c.Rubro, p.Nombre, p.Precio
+FROM tienda.Categoria AS c
+INNER JOIN tienda.Producto AS p ON p.Categoria = c.Categoria
+WHERE c.Categoria = 'Perifericos'
+ORDER BY c.Categoria, p.Nombre
+FOR JSON PATH;
+```
+
+**Resultado esperado.** Con `AUTO`:
+
+```json
+[{"Categoria":"Perifericos","Rubro":"Tecnologia","p":[{"Nombre":"Mouse inalambrico","Precio":29.99},{"Nombre":"Teclado mecanico","Precio":89.99}]}]
+```
+
+Con `PATH`:
+
+```json
+[{"Categoria":"Perifericos","Rubro":"Tecnologia","Nombre":"Mouse inalambrico","Precio":29.99},{"Categoria":"Perifericos","Rubro":"Tecnologia","Nombre":"Teclado mecanico","Precio":89.99}]
+```
+
+`AUTO` evita repetir los datos de la categoría; `PATH` los repite en cada fila pero da control sobre los nombres y la forma.
+</details>

@@ -1,0 +1,2 @@
+Comodín inicial|Index Scan|[IX_Pedido_Codigo]|59
+Prefijo fijo|Index Seek|[IX_Pedido_Codigo]|2

@@ -1,9 +1,11 @@
 {
-  "pages": 258,
-  "reachableFromHomepage": 258,
-  "renderedHtml": 281,
-  "internalLinksAndResources": 149097,
+  "pages": 261,
+  "reachableFromHomepage": 261,
+  "renderedHtml": 284,
+  "internalLinksAndResources": 149113,
   "compatibilityEntries": 251,
-  "assets": 50,
+  "assets": 44,
+  "withdrawnAssets": 6,
+  "revisions": 139,
   "errors": []
 }

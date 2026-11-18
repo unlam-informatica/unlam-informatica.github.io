@@ -118,7 +118,7 @@ def subject(tmp_path: Path):
     copy = (raw / "teoria" / "espacios.md").read_bytes()
     (raw / "otros" / "copias" / "espacios (copia).md").write_bytes(copy)
     (raw / "practicas" / "guia.pdf").write_bytes(minimal_pdf(["Ejercicio 1 base de R3", "Resolucion del ejercicio 1"]))
-    (raw / "practicas" / "notas.txt").write_text("formato no compatible", encoding="utf-8")
+    (raw / "practicas" / "notas.xyz").write_text("formato no compatible", encoding="utf-8")
     (raw / "clase.mp4").write_bytes(b"\x00\x00\x00\x18ftypmp42")
     (raw / ".DS_Store").write_bytes(b"x")
     return subject_paths("demo", tmp_path / "academic-sources")

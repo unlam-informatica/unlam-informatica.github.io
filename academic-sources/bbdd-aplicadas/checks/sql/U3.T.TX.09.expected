@@ -1,0 +1,4 @@
+1|error original|547
+2|XACT_STATE()|-1
+3|COMMIT sobre transacción condenada|3930
+4|movimientos después del ROLLBACK|0

@@ -1,0 +1,6 @@
+[Sueldo]|[Sueldo; DROP TABLE ventas.Venta; --]
+Ana|5000.00
+Dario|4100.00
+Fede|3500.00
+207|Invalid column name 'Sueldo; DROP TABLE ventas.Venta; --'.
+16

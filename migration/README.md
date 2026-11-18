@@ -161,6 +161,45 @@ de materias → verificación pública de rutas/recursos y revisión en navegado
 La configuración anterior está en `pages-before-cutover.json`; el cambio ya
 realizado y su comprobación están en `pages-preparation.json`.
 
+## Recursos retirados
+
+`withdrawn.json` lista los recursos migrados que dejaron de publicarse: dos presentaciones de la
+cátedra de Bases de Datos Aplicada (`unidad-4/inputs/MongoDB-Agregaciones-2026.pdf` y
+`MongoDB-Indices.pdf`), retiradas el 2026-11-17 por no tener autorización de redistribución
+registrada. Su procedencia histórica (origen, salida y SHA-256) se conserva sin cambios en
+`sources.json` y `compatibility.json`.
+
+- `npm run validate` exige que no existan en `public/` ni en `dist/` y que su registro histórico siga presente.
+- `scripts/verify-production.mjs` exige que producción responda 404.
+- `scripts/import-sources.mjs` no los vuelve a copiar.
+
+Tras el despliegue, la caché de GitHub Pages puede seguir sirviéndolos durante un tiempo.
+
+## Revisiones académicas posteriores a la migración
+
+`sources.json` es evidencia histórica y no se modifica: conserva el hash original y el migrado de
+cada página.
+
+Las modificaciones académicas deliberadas se registran en `revisions.json`. Para cada salida, la
+cadena va del hash migrado al hash vigente, y cada entrada lleva `from`, `to`, fecha, etapa, motivo
+y, si corresponde, el plan que la justifica. `npm run validate` controla tres cosas:
+
+- que cada cadena empiece en el hash de `sources.json` y sea continua;
+- que el archivo actual coincida con el final de su cadena;
+- que no haya revisiones de salidas desconocidas o incompletas.
+
+Una edición no registrada sigue fallando como `Migrated page hash mismatch`.
+
+Para registrar una etapa de revisión, de una sola materia por vez:
+
+```sh
+node scripts/register-revisions.mjs --prefix src/content/docs/bbdd-aplicadas/ --stage E3 \
+  --reason "Unidad 1: corrección y ampliación según content-audit" \
+  --plan academic-sources/bbdd-aplicadas/implementation-plan.md
+```
+
+Si una página cambia de ruta, se agrega la redirección y la matriz de compatibilidad conserva la ruta anterior.
+
 ## Riesgos registrados
 
 - La coexistencia con Pages de los repositorios de materias debe resolverse antes

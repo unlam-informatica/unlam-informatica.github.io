@@ -1,0 +1,13 @@
+Filter { categoria: 'audio' }: [5,6]
+Filter + Sort + Limit: [4,3]
+Filter con $or: [5,6]
+{"nombre":"Teclado","precio":45}
+sin collation: [2]
+collation es strength 1: [1,2,3]
+orden textual: ["1","10","2"]
+numericOrdering: ["1","2","10"]
+'Ramos Mejia' sin tilde: 0
+'Ramos Mejía' con tilde: 2
+categoria_indx
+["_id_","categoria_indx"]
+nReturned=2 totalKeysExamined=0 totalDocsExamined=8 stage=COLLSCAN

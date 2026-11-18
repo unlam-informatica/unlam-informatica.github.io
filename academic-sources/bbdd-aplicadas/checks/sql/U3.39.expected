@@ -1,0 +1,7 @@
+Warning: The join order has been enforced because a local join hint is used.
+Warning: The join order has been enforced because a local join hint is used.
+Columnstore|Clustered Index Scan|[CCI_Medicion]
+Heap|Table Scan|[Medicion]
+COMPRESSED|200000
+COMPRESSED|200000
+OPEN|3

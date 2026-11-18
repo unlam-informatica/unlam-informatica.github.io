@@ -5,26 +5,41 @@ sidebar:
   order: 2
 ---
 
+## Para qué sirve
 
-## Modelo de datos y abstracción
+Las unidades siguientes suponen que ya manejás el SQL básico: crear estructuras, cargar y consultar datos, proteger
+la integridad y empaquetar lógica en el servidor. Esta lección lo repasa con un único dominio de ejemplo, un esquema
+`academia` con alumnos, materias e inscripciones, y con datos sintéticos. Cada ejemplo se ejecutó en SQL Server 2022
+y es autocontenido: copiado en una base vacía produce el resultado indicado.
 
-La **abstracción de datos** oculta los detalles físicos de almacenamiento y expone solo las características esenciales para comprender y trabajar con los datos.
+:::note[Convenciones de los ejemplos]
+Los ejemplos propios usan tablas en singular y PascalCase (`Alumno`, `Inscripcion`) y un esquema en minúsculas
+(`academia`). Los ejercicios de cátedra conservan sus identificadores (esquema `ddbba`). Cada sentencia termina en
+`;` y `GO` separa los lotes donde el motor lo exige. Para ver las diferencias entre versiones, consultá la
+[documentación de Transact-SQL](https://learn.microsoft.com/es-es/sql/t-sql/language-reference).
+:::
 
-Un **modelo de datos** es una colección de conceptos que describen la *estructura* de una base de datos: tipos de datos, relaciones entre entidades y restricciones que aplican sobre ellos.
+## Modelo de datos y restricciones
 
-### Tipos de restricciones (constraints)
+La **abstracción de datos** oculta los detalles físicos de almacenamiento y expone solo las características
+esenciales. Un **modelo de datos** es una colección de conceptos que describen la *estructura* de una base de datos:
+los tipos de datos, las relaciones y las restricciones que se aplican sobre ellos. En el modelo relacional, tabla,
+fila y columna corresponden a relación, tupla y atributo.
 
-| Tipo | Descripción | Ejemplo |
+| Tipo de restricción | Descripción | Ejemplo |
 |------|-------------|---------|
-| **Implícitas** | Impuestas por el tipo de dato | Un campo `int` solo acepta números enteros |
-| **Explícitas** | Definidas en el esquema (PK, FK, CHECK…) | "El cliente referenciado debe existir" |
-| **Semánticas** | Reglas de negocio manejadas en la aplicación | "Descuento del 70% no válido en ciertos proveedores" |
+| **Implícitas** | Inherentes al modelo o impuestas por el tipo de dato | Una columna `INT` solo acepta enteros |
+| **Explícitas** | Declaradas en el esquema (PK, FK, `CHECK`, etc.) | "El alumno referenciado debe existir" |
+| **Semánticas** | Reglas de negocio que maneja la aplicación | "Una promoción no vale para ciertos proveedores" |
 
-> Las restricciones **implícitas y explícitas** las hace cumplir el RDBMS. Las **semánticas** quedan a cargo de la lógica de la aplicación.
+Las implícitas y las explícitas las hace cumplir el RDBMS; las semánticas quedan a cargo de la aplicación (o de
+triggers y procedimientos, como veremos).
 
 ## Tipos de datos
 
-Los tipos básicos son estándar ANSI; cada RDBMS puede agregar los propios.
+Hay tipos básicos definidos por el estándar ANSI y otros propios de cada motor. Estos son los de SQL Server.
+
+### Numéricos
 
 | Tipo de dato   |              Tamaño |                 Valor mínimo |                Valor máximo | Uso típico                                   |
 | -------------- | ------------------: | ---------------------------: | --------------------------: | -------------------------------------------- |
@@ -40,485 +55,1161 @@ Los tipos básicos son estándar ANSI; cada RDBMS puede agregar los propios.
 | `REAL`         |             4 bytes |           aprox. `-3.40E+38` |           aprox. `3.40E+38` | Números aproximados                          |
 | `FLOAT`        | 8 bytes por defecto |          aprox. `-1.79E+308` |          aprox. `1.79E+308` | Cálculos científicos o aproximados           |
 
-> Preferir `varchar` sobre `char` cuando la longitud varía mucho. Usar `nvarchar` cuando el sistema debe manejar caracteres de múltiples idiomas.
+### Fecha y hora
 
-## Catálogos y schemas
+| Tipo | Qué guarda |
+|---|---|
+| `DATE` | Solo la fecha |
+| `TIME(n)` | Solo la hora, con `n` decimales de segundo |
+| `DATETIME2(n)` | Fecha y hora con precisión configurable; es el tipo recomendado para código nuevo |
+| `DATETIMEOFFSET(n)` | Fecha y hora con desfase respecto de UTC |
+| `DATETIME`, `SMALLDATETIME` | Tipos más antiguos, de menor rango y precisión |
 
-En SQL Server, el concepto de **catálogo** se corresponde con una **base de datos**.
+### Cadenas de caracteres
+
+| Tipo | Longitud | Unicode | Almacenamiento |
+|---|---|---|---|
+| `CHAR(n)` | Fija: rellena con espacios hasta `n` | No | `n` bytes |
+| `VARCHAR(n)` | Variable hasta `n` | No | Bytes realmente usados (más un pequeño encabezado) |
+| `NCHAR(n)` | Fija | Sí | 2 bytes por carácter |
+| `NVARCHAR(n)` | Variable hasta `n` | Sí | 2 bytes por carácter usado |
+| `VARCHAR(MAX)`, `NVARCHAR(MAX)` | Variable, hasta unos 2 GB | No / Sí | Para textos largos |
+
+`UNIQUEIDENTIFIER` guarda un identificador único global (GUID) de 16 bytes.
+
+<!-- check: U1.T.RS.02 -->
+```sql
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.EjemploTipo (
+    EjemploTipoId INT IDENTITY(1, 1) NOT NULL PRIMARY KEY,
+    Dia           DATE,
+    Hora          TIME(0),
+    Momento       DATETIME2(3),
+    MomentoZona   DATETIMEOFFSET(0),
+    CodigoFijo    CHAR(5),
+    NombreVar     VARCHAR(5),
+    NombreNchar   NCHAR(5),
+    NombreNvar    NVARCHAR(5),
+    Detalle       VARCHAR(MAX)
+);
+
+INSERT INTO academia.EjemploTipo
+    (Dia, Hora, Momento, MomentoZona, CodigoFijo, NombreVar, NombreNchar, NombreNvar, Detalle)
+VALUES
+    ('2026-03-01', '14:30:15', '2026-03-01T14:30:15.1234', '2026-03-01T14:30:15-03:00',
+     'AB', 'AB', N'AB', N'AB', REPLICATE(CAST('x' AS VARCHAR(MAX)), 10000));
+
+SELECT
+    Dia,
+    Hora,
+    Momento,
+    MomentoZona,
+    DATALENGTH(CodigoFijo)  AS BytesChar,
+    DATALENGTH(NombreVar)   AS BytesVarchar,
+    DATALENGTH(NombreNchar) AS BytesNchar,
+    DATALENGTH(NombreNvar)  AS BytesNvarchar,
+    LEN(Detalle)            AS LargoDetalle
+FROM academia.EjemploTipo;
+```
+
+**Resultado esperado.**
+
+| Dia | Hora | Momento | MomentoZona | BytesChar | BytesVarchar | BytesNchar | BytesNvarchar | LargoDetalle |
+|---|---|---|---|---:|---:|---:|---:|---:|
+| 2026-03-01 | 14:30:15 | 2026-03-01 14:30:15.123 | 2026-03-01 14:30:15 -03:00 | 5 | 2 | 10 | 4 | 10000 |
+
+`CHAR(5)` ocupa 5 bytes aunque guarde `AB`; `VARCHAR(5)` ocupa 2; `NCHAR` y `NVARCHAR` duplican por ser
+Unicode. `DATETIME2(3)` descartó el cuarto decimal que le pasamos. Preferí `VARCHAR` sobre `CHAR` cuando la longitud
+varía mucho, y `NVARCHAR` cuando el sistema debe manejar caracteres de varios idiomas.
+
+## Catálogos y esquemas
+
+Un **catálogo** es un conjunto de esquemas dentro de un entorno (típicamente una instancia del RDBMS); en SQL
+Server se corresponde con una **base de datos**. Un **esquema** es un espacio de nombres que agrupa objetos. El
+nombre completo de un objeto es `catálogo.esquema.objeto`, y cada usuario puede tener una base y un esquema
+predeterminados.
 
 ```text
-Catálogo ≈ Database
-Schema   ≈ Esquema dentro de una base de datos
-Tabla    ≈ Objeto dentro de un schema
+Catálogo ≈ Base de datos
+Esquema  ≈ Espacio de nombres dentro de la base
+Tabla    ≈ Objeto dentro de un esquema
 ```
 
 ![db-organization](/bbdd-aplicadas/unidad-1/images/db-organization.png)
 
-### Crear una base de datos
+La cláusula `COLLATE` define las reglas de comparación y orden del texto (mayúsculas, acentos). El detalle está en
+la [guía de Collation](/bbdd-aplicadas/unidad-2/teoria/collation/).
 
+<!-- check: U1.T.RS.R1 -->
 ```sql
-CREATE DATABASE unlam;
-USE unlam;
+CREATE DATABASE Unlam
+COLLATE Latin1_General_CI_AS;   -- CI: no distingue mayúsculas; AS: distingue acentos
+GO
+USE Unlam;
+GO
 ```
 
-La cláusula `COLLATE` define las reglas de comparación y orden de texto (mayúsculas/minúsculas, acentos, etc.). Ver la [guía de Collation](/bbdd-aplicadas/unidad-2/teoria/collation/) para el detalle completo.
+Ese bloque no se ejecuta en el entorno de verificación (crear bases de datos está fuera de su alcance); está
+registrado como revisado. Los demás ejemplos asumen una base vacía y crean el esquema `academia`.
 
+<!-- check: U1.T.RS.01 -->
 ```sql
-CREATE DATABASE unlam
-COLLATE Latin1_General_CI_AS;
--- CI = Case Insensitive, AS = Accent Sensitive
-```
-
-### Crear un schema
-
-```sql
-CREATE SCHEMA bbdda;
-```
-
-### Crear tablas dentro del schema
-
-```sql
-CREATE TABLE bbdda.alumno (
-    id_alumno INT IDENTITY(1,1) PRIMARY KEY,
-    nombre    VARCHAR(100) NOT NULL,
-    apellido  VARCHAR(100) NOT NULL,
-    email     VARCHAR(150) NULL
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Alumno (
+    AlumnoId INT IDENTITY(1, 1) NOT NULL,
+    Nombre   VARCHAR(100)       NOT NULL,
+    Apellido VARCHAR(100)       NOT NULL,
+    Email    VARCHAR(150)       NULL,
+    CONSTRAINT PK_Alumno PRIMARY KEY (AlumnoId)
 );
 
-CREATE TABLE bbdda.materia (
-    id_materia INT IDENTITY(1,1) PRIMARY KEY,
-    nombre     VARCHAR(100) NOT NULL,
-    codigo     VARCHAR(20)  NOT NULL
+CREATE TABLE academia.Materia (
+    MateriaId INT IDENTITY(1, 1) NOT NULL,
+    Nombre    VARCHAR(100)       NOT NULL,
+    Codigo    VARCHAR(20)        NOT NULL,
+    CONSTRAINT PK_Materia PRIMARY KEY (MateriaId)
 );
 
-CREATE TABLE bbdda.inscripcion (
-    id_inscripcion INT IDENTITY(1,1) PRIMARY KEY,
-    id_alumno      INT NOT NULL,
-    id_materia     INT NOT NULL,
-    fecha_inscripcion DATE NOT NULL,
-
-    CONSTRAINT FK_inscripcion_alumno
-        FOREIGN KEY (id_alumno) REFERENCES bbdda.alumno(id_alumno),
-
-    CONSTRAINT FK_inscripcion_materia
-        FOREIGN KEY (id_materia) REFERENCES bbdda.materia(id_materia)
+CREATE TABLE academia.Inscripcion (
+    InscripcionId    INT IDENTITY(1, 1) NOT NULL,
+    AlumnoId         INT                NOT NULL,
+    MateriaId        INT                NOT NULL,
+    FechaInscripcion DATE               NOT NULL,
+    CONSTRAINT PK_Inscripcion PRIMARY KEY (InscripcionId),
+    CONSTRAINT FK_Inscripcion_Alumno FOREIGN KEY (AlumnoId) REFERENCES academia.Alumno (AlumnoId),
+    CONSTRAINT FK_Inscripcion_Materia FOREIGN KEY (MateriaId) REFERENCES academia.Materia (MateriaId)
 );
+
+INSERT INTO academia.Alumno (Nombre, Apellido) VALUES ('Ana', 'Prueba');
+INSERT INTO academia.Materia (Nombre, Codigo) VALUES ('Bases de Datos', 'BD01');
+
+DECLARE @Error INT = 0;
+BEGIN TRY
+    INSERT INTO academia.Inscripcion (AlumnoId, MateriaId, FechaInscripcion)
+    VALUES (99, 1, '2026-03-01');
+END TRY
+BEGIN CATCH
+    SET @Error = ERROR_NUMBER();
+END CATCH;
+
+SELECT
+    (SELECT COUNT(*) FROM sys.tables WHERE schema_id = SCHEMA_ID('academia')) AS Tablas,
+    (SELECT COUNT(*) FROM academia.Inscripcion)                              AS Inscripciones,
+    @Error                                                                   AS ErrorFk;
 ```
 
-### Referenciar tablas con schema
+**Resultado esperado.**
 
-```sql
-SELECT * FROM bbdda.alumno;
-```
+| Tablas | Inscripciones | ErrorFk |
+|---:|---:|---:|
+| 3 | 0 | 547 |
 
-| Concepto | En SQL Server | Para qué sirve                    |
-| -------- | ------------- | --------------------------------- |
-| Catálogo | Base de datos | Contenedor principal de datos     |
-| Schema   | Esquema       | Agrupa objetos dentro de una base |
-| Tabla    | Tabla         | Guarda registros                  |
-| Columna  | Campo         | Define un dato de cada registro   |
-
----
+El error 547 es la violación de la clave foránea: no existe el alumno 99.
 
 ## DDL y DML
 
-### DDL — Data Definition Language
+| Lenguaje | Sentencias | Opera sobre |
+|---|---|---|
+| **DDL** (definición) | `CREATE`, `ALTER`, `DROP`, `TRUNCATE` | La estructura: bases, tablas, vistas, índices, procedimientos, triggers |
+| **DML** (manipulación) | `INSERT`, `UPDATE`, `DELETE`, `MERGE` | Los datos dentro de las estructuras |
 
-Define y modifica la **estructura** de la base de datos.
+`TRUNCATE` vacía la tabla y conserva su estructura. `MERGE` inserta, actualiza o borra según la coincidencia con una
+tabla de origen. Los motores modernos no distinguen de forma estricta entre DDL, DML, DQL (consultas), DCL (control
+de acceso) y TCL (transacciones): todas son sentencias SQL.
 
-| Sentencia | Propósito |
-|-----------|-----------|
-| `CREATE`  | Crear DB, tabla, vista, índice, SP, trigger… |
-| `DROP`    | Eliminar un objeto |
-| `ALTER`   | Modificar la definición de un objeto |
-| `TRUNCATE`| Vaciar el contenido de una tabla (conserva la estructura) |
-
-### DML — Data Manipulation Language
-
-Opera sobre los **datos** dentro de las estructuras.
-
-| Sentencia | Propósito |
-|-----------|-----------|
-| `INSERT`  | Insertar filas |
-| `UPDATE`  | Modificar filas existentes |
-| `DELETE`  | Eliminar filas |
-| `MERGE`   | Insertar / actualizar / borrar según la coincidencia con una fuente |
-
-> Los motores modernos no distinguen estrictamente entre DDL, DML, DQL (consultas), DCL (control de acceso) y TCL (transacciones): todos son sentencias SQL de primera clase.
-
----
-
-## Integridad referencial, PK y FK
-
-### Integridad referencial
-
-Mecanismo por el que el RDBMS garantiza que un valor que aparece en una tabla como referencia a otra **exista efectivamente** en la tabla referenciada.
-
-### Clave primaria (PK)
-
-- Conjunto **mínimo** de atributos que identifican de forma unívoca cada fila.
-- Implícitamente `NOT NULL` y `UNIQUE`.
-- Define el **índice clúster** por defecto (orden físico de almacenamiento).
-- Buenas prácticas: usar valores **crecientes** (p. ej. `IDENTITY`) y **no modificables**.
-
+<!-- check: U1.T.RS.22 -->
 ```sql
--- Forma corta
-CREATE TABLE ddbba.alumno (
-    DNI      INT PRIMARY KEY,
-    Apellido CHAR(50)
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Producto (
+    ProductoId INT NOT NULL CONSTRAINT PK_Producto PRIMARY KEY,
+    Nombre     VARCHAR(30) NOT NULL,
+    Precio     DECIMAL(10,2) NOT NULL
 );
+CREATE TABLE academia.ProductoNovedad (
+    ProductoId INT NOT NULL,
+    Nombre     VARCHAR(30) NOT NULL,
+    Precio     DECIMAL(10,2) NOT NULL
+);
+CREATE TABLE academia.ProductoTemporal (Nombre VARCHAR(30) NOT NULL);
 
--- Forma explícita (permite dar nombre al constraint)
-CREATE TABLE ddbba.alumno (
-    DNI      INT,
-    Apellido CHAR(50),
-    CONSTRAINT pk_alumno PRIMARY KEY CLUSTERED (DNI)
-);
+INSERT INTO academia.Producto (ProductoId, Nombre, Precio) VALUES (1, 'Cuaderno', 100), (2, 'Lapiz', 20), (3, 'Regla', 30);
+INSERT INTO academia.ProductoNovedad (ProductoId, Nombre, Precio) VALUES (2, 'Lapiz', 25), (4, 'Goma', 15);
+INSERT INTO academia.ProductoTemporal VALUES ('a'), ('b');
+
+UPDATE academia.Producto SET Precio = Precio * 1.10 WHERE ProductoId = 1;
+DELETE FROM academia.Producto WHERE ProductoId = 3;
+
+MERGE academia.Producto AS destino
+USING academia.ProductoNovedad AS origen ON origen.ProductoId = destino.ProductoId
+WHEN MATCHED THEN UPDATE SET Precio = origen.Precio
+WHEN NOT MATCHED BY TARGET THEN INSERT (ProductoId, Nombre, Precio) VALUES (origen.ProductoId, origen.Nombre, origen.Precio);
+
+TRUNCATE TABLE academia.ProductoTemporal;
+
+SELECT ProductoId, Nombre, Precio, (SELECT COUNT(*) FROM academia.ProductoTemporal) AS FilasTemporal
+FROM academia.Producto
+ORDER BY ProductoId;
 ```
 
-> Solo puede haber **un único índice clustered por tabla**, porque define el orden físico de almacenamiento. Si se necesita el clustered en una columna distinta a la PK, se declara la PK como `NONCLUSTERED`.
+**Resultado esperado.**
 
+| ProductoId | Nombre | Precio | FilasTemporal |
+|---:|---|---:|---:|
+| 1 | Cuaderno | 110.00 | 0 |
+| 2 | Lapiz | 25.00 | 0 |
+| 4 | Goma | 15.00 | 0 |
+
+## Integridad referencial, claves y restricciones
+
+La **integridad referencial** es el mecanismo por el que el RDBMS asegura que un valor que aparece en una relación
+para ciertos atributos también aparezca en la relación referenciada. Cada inserción, borrado y actualización se
+comprueba para no violar esas reglas.
+
+### Clave primaria
+
+- Es el conjunto **mínimo** de columnas que identifica de forma unívoca una fila.
+- Es implícitamente `NOT NULL` y única.
+- Conviene que sea creciente (por ejemplo, `IDENTITY`) y no modificable.
+- Por defecto crea el **índice clúster**, que define el orden físico de las filas. Hay **un solo** índice clúster
+  por tabla; si lo necesitás en otra columna, declarás la PK como `NONCLUSTERED`. Los índices se estudian en la
+  [Unidad 3](/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/) y el clúster en [Índice Clustered](/bbdd-aplicadas/unidad-1/teoria/indice-cluster/).
+
+<!-- check: U1.T.RS.03 -->
 ```sql
-CREATE TABLE movimientos (
-    ID     INT      CONSTRAINT pk_mov PRIMARY KEY NONCLUSTERED,
-    fecha  DATETIME,
-    monto  DECIMAL(10,2),
-    INDEX ix_fecha CLUSTERED (fecha)  -- el orden físico lo dicta la fecha
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Movimiento (
+    MovimientoId INT           NOT NULL CONSTRAINT PK_Movimiento PRIMARY KEY NONCLUSTERED,
+    Fecha        DATETIME2(0)  NOT NULL,
+    Monto        DECIMAL(10,2) NOT NULL,
+    INDEX CIX_Movimiento_Fecha CLUSTERED (Fecha)
 );
+
+CREATE TABLE academia.Cuota (
+    CuotaId INT NOT NULL CONSTRAINT PK_Cuota PRIMARY KEY,
+    Monto   DECIMAL(10,2) NOT NULL
+);
+
+SELECT
+    OBJECT_NAME(object_id) AS Tabla,
+    name                   AS Indice,
+    type_desc              AS Tipo,
+    is_primary_key         AS EsPk
+FROM sys.indexes
+WHERE object_id IN (OBJECT_ID('academia.Movimiento'), OBJECT_ID('academia.Cuota'))
+ORDER BY Tabla, Indice;
 ```
 
-| Tipo | Cantidad permitida | Almacenamiento |
-|------|-------------------|----------------|
-| `CLUSTERED`    | **1 por tabla** | Los datos de la tabla **son** el índice |
-| `NONCLUSTERED` | Hasta 999       | Estructura separada que apunta a los datos |
+**Resultado esperado.**
 
-### Clave foránea (FK)
+| Tabla | Indice | Tipo | EsPk |
+|---|---|---|---:|
+| Cuota | PK_Cuota | CLUSTERED | 1 |
+| Movimiento | CIX_Movimiento_Fecha | CLUSTERED | 0 |
+| Movimiento | PK_Movimiento | NONCLUSTERED | 1 |
 
-- Referencia a la PK de otra tabla, estableciendo la relación entre ambas.
-- Genera una restricción implícita: no se puede insertar un valor que no exista en la tabla referenciada.
-- **No** crea índices automáticamente → conviene crearlos manualmente.
-- Admite acciones en cascada: `ON UPDATE CASCADE` / `ON DELETE CASCADE`.
+### Clave foránea
 
+- Referencia la clave primaria (o una restricción `UNIQUE`) de otra tabla y registra la relación entre ambas.
+- Genera una restricción implícita: no se puede insertar un valor inexistente en la tabla referenciada.
+- **No** crea un índice automáticamente; conviene crearlo.
+- Las columnas deben tener el mismo tipo de dato que las referenciadas.
+- Si es compuesta, debe referenciar **todas** las columnas de una PK o `UNIQUE` de la tabla padre, en el mismo orden de tipos.
+
+<!-- check: U1.T.RS.04 -->
 ```sql
--- FK de un solo campo en línea
-CREATE TABLE bbdda.comision (
-    id_comision INT IDENTITY(1,1) PRIMARY KEY,
-    id_materia  INT NOT NULL REFERENCES bbdda.materia(id_materia)
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Comision (
+    MateriaId   INT NOT NULL,
+    ComisionNro INT NOT NULL,
+    Turno       VARCHAR(10) NOT NULL,
+    CONSTRAINT PK_Comision PRIMARY KEY (MateriaId, ComisionNro)
 );
 
--- FK compuesta con nombre y acción en cascada
-CREATE TABLE bbdda.examen (
-    id_examen INT IDENTITY(1,1) PRIMARY KEY,
-    dni       INT NOT NULL,
-    id_curso  INT NOT NULL,
-    nota      TINYINT NOT NULL,
-
-    CONSTRAINT FK_examen_curso
-        FOREIGN KEY (id_curso, dni)
-        REFERENCES bbdda.curso(id_curso, dni)
+CREATE TABLE academia.Examen (
+    ExamenId    INT IDENTITY(1, 1) NOT NULL,
+    MateriaId   INT NOT NULL,
+    ComisionNro INT NOT NULL,
+    Nota        TINYINT NOT NULL,
+    CONSTRAINT PK_Examen PRIMARY KEY (ExamenId),
+    CONSTRAINT FK_Examen_Comision
+        FOREIGN KEY (MateriaId, ComisionNro)
+        REFERENCES academia.Comision (MateriaId, ComisionNro)
         ON DELETE CASCADE
 );
+
+INSERT INTO academia.Comision (MateriaId, ComisionNro, Turno)
+VALUES (1, 1, 'Mañana'), (1, 2, 'Noche');
+INSERT INTO academia.Examen (MateriaId, ComisionNro, Nota)
+VALUES (1, 1, 7), (1, 1, 9), (1, 2, 6);
+
+DECLARE @Error INT = 0;
+BEGIN TRY
+    INSERT INTO academia.Examen (MateriaId, ComisionNro, Nota) VALUES (1, 3, 8);
+END TRY
+BEGIN CATCH
+    SET @Error = ERROR_NUMBER();
+END CATCH;
+
+DELETE FROM academia.Comision WHERE MateriaId = 1 AND ComisionNro = 1;
+
+SELECT
+    @Error                                  AS ErrorComisionInexistente,
+    (SELECT COUNT(*) FROM academia.Comision) AS Comisiones,
+    (SELECT COUNT(*) FROM academia.Examen)   AS Examenes;
 ```
 
-> Las columnas de FK deben tener **el mismo tipo de dato** que las columnas referenciadas.
+**Resultado esperado.**
 
----
+| ErrorComisionInexistente | Comisiones | Examenes |
+|---:|---:|---:|
+| 547 | 1 | 1 |
 
-## Restricciones (constraints)
+Al borrar la comisión 1 de la materia 1, `ON DELETE CASCADE` eliminó sus dos exámenes y quedó el de la comisión 2.
 
-| Constraint | Efecto |
-|------------|--------|
-| `UNIQUE`   | Prohíbe duplicados (a diferencia de PK, admite un solo `NULL`) |
-| `CHECK`    | Valida que el valor cumpla una condición |
-| `NOT NULL` | Prohíbe valores nulos |
-| `DEFAULT`  | Asigna un valor por defecto si no se indica ninguno |
+### Acciones referenciales
 
+Qué hace el motor cuando se borra (`ON DELETE`) o modifica (`ON UPDATE`) una fila referenciada:
+
+| Acción | Efecto |
+|---|---|
+| `NO ACTION` (por defecto) | Rechaza la operación si hay filas hijas |
+| `CASCADE` | Propaga el borrado o el cambio a las filas hijas |
+| `SET NULL` | Pone `NULL` en la FK de las hijas (la columna debe admitirlo) |
+| `SET DEFAULT` | Pone el valor `DEFAULT` en la FK de las hijas (ese valor debe existir en el padre) |
+
+<!-- check: U1.T.RS.05 -->
 ```sql
-CREATE TABLE bbdda.alumno (
-    dni     INT CHECK (dni > 0),
-    nombre  CHAR(20) UNIQUE,
-    patente CHAR(7),
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Categoria (
+    CategoriaId INT NOT NULL CONSTRAINT PK_Categoria PRIMARY KEY,
+    Nombre      VARCHAR(30) NOT NULL
+);
 
-    CONSTRAINT ck_alumno_patente CHECK (
-        patente LIKE '[A-Z][A-Z][0-9][0-9][0-9][A-Z][A-Z]'  -- Mercosur
-        OR patente LIKE '[A-Z][A-Z][A-Z][0-9][0-9][0-9]'    -- formato antiguo
+CREATE TABLE academia.ArticuloNoAction (
+    ArticuloId  INT NOT NULL PRIMARY KEY,
+    CategoriaId INT NOT NULL
+        CONSTRAINT FK_ArticuloNoAction_Categoria REFERENCES academia.Categoria (CategoriaId) ON DELETE NO ACTION
+);
+CREATE TABLE academia.ArticuloCascade (
+    ArticuloId  INT NOT NULL PRIMARY KEY,
+    CategoriaId INT NOT NULL
+        CONSTRAINT FK_ArticuloCascade_Categoria REFERENCES academia.Categoria (CategoriaId) ON DELETE CASCADE
+);
+CREATE TABLE academia.ArticuloSetNull (
+    ArticuloId  INT NOT NULL PRIMARY KEY,
+    CategoriaId INT NULL
+        CONSTRAINT FK_ArticuloSetNull_Categoria REFERENCES academia.Categoria (CategoriaId) ON DELETE SET NULL
+);
+CREATE TABLE academia.ArticuloSetDefault (
+    ArticuloId  INT NOT NULL PRIMARY KEY,
+    CategoriaId INT NOT NULL CONSTRAINT DF_ArticuloSetDefault_Categoria DEFAULT (9)
+        CONSTRAINT FK_ArticuloSetDefault_Categoria REFERENCES academia.Categoria (CategoriaId) ON DELETE SET DEFAULT
+);
+
+INSERT INTO academia.Categoria (CategoriaId, Nombre)
+VALUES (1, 'Libros'), (2, 'Cuadernos'), (3, 'Lapices'), (4, 'Mochilas'), (9, 'Sin clasificar');
+INSERT INTO academia.ArticuloNoAction  VALUES (1, 1);
+INSERT INTO academia.ArticuloCascade   VALUES (1, 2);
+INSERT INTO academia.ArticuloSetNull   VALUES (1, 3);
+INSERT INTO academia.ArticuloSetDefault VALUES (1, 4);
+
+DECLARE @ErrorNoAction INT = 0;
+BEGIN TRY
+    DELETE FROM academia.Categoria WHERE CategoriaId = 1;
+END TRY
+BEGIN CATCH
+    SET @ErrorNoAction = ERROR_NUMBER();
+END CATCH;
+DELETE FROM academia.Categoria WHERE CategoriaId IN (2, 3, 4);
+
+SELECT 'NO ACTION' AS Accion,
+       CAST(@ErrorNoAction AS VARCHAR(10)) AS Resultado
+UNION ALL
+SELECT 'CASCADE',     CAST(COUNT(*) AS VARCHAR(10)) + ' filas hijas' FROM academia.ArticuloCascade
+UNION ALL
+SELECT 'SET NULL',    ISNULL(CAST(CategoriaId AS VARCHAR(10)), 'NULL') FROM academia.ArticuloSetNull
+UNION ALL
+SELECT 'SET DEFAULT', CAST(CategoriaId AS VARCHAR(10)) FROM academia.ArticuloSetDefault;
+```
+
+**Resultado esperado.**
+
+| Accion | Resultado |
+|---|---|
+| NO ACTION | 547 |
+| CASCADE | 0 filas hijas |
+| SET NULL | NULL |
+| SET DEFAULT | 9 |
+
+### Otras restricciones
+
+| Restricción | Efecto |
+|---|---|
+| `UNIQUE` | Prohíbe duplicados. En SQL Server admite **un solo** `NULL`; otros motores lo tratan distinto |
+| `CHECK` | Valida que el valor cumpla una condición |
+| `NOT NULL` | Prohíbe nulos |
+| `DEFAULT` | Asigna un valor si no se indica ninguno |
+
+Las restricciones nombradas con `CONSTRAINT` se identifican en el catálogo y se pueden modificar o eliminar después.
+
+<!-- check: U1.T.RS.21 -->
+```sql
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Vehiculo (
+    VehiculoId INT IDENTITY(1, 1) NOT NULL CONSTRAINT PK_Vehiculo PRIMARY KEY,
+    Patente    CHAR(7)     NOT NULL,
+    Anio       INT         NOT NULL CONSTRAINT CK_Vehiculo_Anio CHECK (Anio > 1900),
+    Estado     VARCHAR(10) NOT NULL CONSTRAINT DF_Vehiculo_Estado DEFAULT ('activo'),
+    CONSTRAINT UQ_Vehiculo_Patente UNIQUE (Patente),
+    CONSTRAINT CK_Vehiculo_Patente CHECK (
+        Patente LIKE '[A-Z][A-Z][0-9][0-9][0-9][A-Z][A-Z]'   -- formato Mercosur
+        OR Patente LIKE '[A-Z][A-Z][A-Z][0-9][0-9][0-9]'      -- formato anterior
     )
 );
+
+INSERT INTO academia.Vehiculo (Patente, Anio) VALUES ('AB123CD', 2020), ('ABC123', 2010);
+
+DECLARE @ErrorPatente INT = 0, @ErrorAnio INT = 0, @ErrorDuplicada INT = 0;
+BEGIN TRY INSERT INTO academia.Vehiculo (Patente, Anio) VALUES ('1234567', 2020); END TRY
+BEGIN CATCH SET @ErrorPatente = ERROR_NUMBER(); END CATCH;
+BEGIN TRY INSERT INTO academia.Vehiculo (Patente, Anio) VALUES ('ZZ999YY', 1800); END TRY
+BEGIN CATCH SET @ErrorAnio = ERROR_NUMBER(); END CATCH;
+BEGIN TRY INSERT INTO academia.Vehiculo (Patente, Anio) VALUES ('AB123CD', 2021); END TRY
+BEGIN CATCH SET @ErrorDuplicada = ERROR_NUMBER(); END CATCH;
+
+SELECT
+    (SELECT COUNT(*) FROM academia.Vehiculo)                           AS Filas,
+    (SELECT MIN(Estado) FROM academia.Vehiculo)                        AS EstadoPorDefecto,
+    @ErrorPatente AS ErrorPatente, @ErrorAnio AS ErrorAnio, @ErrorDuplicada AS ErrorDuplicada;
 ```
 
-> Las restricciones nombradas con `CONSTRAINT` se identifican en el catálogo y facilitan su posterior eliminación o modificación.
+**Resultado esperado.**
 
----
+| Filas | EstadoPorDefecto | ErrorPatente | ErrorAnio | ErrorDuplicada |
+|---:|---|---:|---:|---:|
+| 2 | activo | 547 | 547 | 2627 |
 
-## NULL
+El 547 es una violación de `CHECK` y el 2627, de `UNIQUE`.
 
-`NULL` representa un valor **ausente, desconocido o no aplicable**.
+## NULL y lógica de tres valores
+
+`NULL` representa un dato ausente, desconocido o no aplicable. Una comparación con `NULL` no da verdadero ni falso:
+da **`UNKNOWN`**. `NULL = NULL` es `UNKNOWN`, y un `WHERE` solo conserva las filas cuya condición es verdadera.
 
 | Comportamiento | Detalle |
 |----------------|---------|
-| `NULL = NULL` | Siempre es **FALSE** |
-| Comparación | Usar `IS NULL` / `IS NOT NULL` |
-| Reemplazo | `ISNULL(valor, 0)` o `COALESCE(valor, 0)` |
-| `COUNT(columna)` | **No** cuenta NULLs — sí los cuenta `COUNT(*)` |
-| `AVG(columna)` | **Ignora** los NULLs al calcular el promedio |
-| Concatenación | `'Hola' + NULL` → `NULL` |
-| JOIN | Las filas con NULL en el campo de unión **no aparecen** en un INNER JOIN |
+| `NULL = NULL` | `UNKNOWN` (no verdadero). Se compara con `IS NULL` / `IS NOT NULL` |
+| `COUNT(columna)` | No cuenta los `NULL`; `COUNT(*)` sí cuenta las filas |
+| `AVG(columna)` | Ignora los `NULL` |
+| Concatenación | `'Hola ' + NULL` da `NULL` (con `CONCAT` el `NULL` se trata como cadena vacía) |
+| `INNER JOIN` | Las filas con `NULL` en la columna de unión no aparecen |
+| `UNIQUE` | En SQL Server, un solo `NULL` |
 
-### ISNULL vs COALESCE
+<!-- check: U1.T.RS.06 -->
+```sql
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Alumno (
+    AlumnoId INT NOT NULL CONSTRAINT PK_Alumno PRIMARY KEY,
+    Nombre   VARCHAR(50) NOT NULL,
+    Email    VARCHAR(100) NULL CONSTRAINT UQ_Alumno_Email UNIQUE,
+    Nota     INT NULL
+);
+INSERT INTO academia.Alumno (AlumnoId, Nombre, Email, Nota) VALUES
+    (1, 'Ana',  'ana@ejemplo.test', 8),
+    (2, 'Beto', NULL,               NULL),
+    (3, 'Cora', 'cora@ejemplo.test', 6);
+
+DECLARE @A INT = NULL, @B INT = NULL, @ErrorUnique INT = 0;
+BEGIN TRY
+    INSERT INTO academia.Alumno (AlumnoId, Nombre, Email, Nota) VALUES (4, 'Dani', NULL, 5);
+END TRY
+BEGIN CATCH
+    SET @ErrorUnique = ERROR_NUMBER();
+END CATCH;
+
+SELECT
+    CASE WHEN @A = @B THEN 'VERDADERO'
+         WHEN NOT (@A = @B) THEN 'FALSO'
+         ELSE 'UNKNOWN' END                                          AS NullIgualNull,
+    CASE WHEN @A IS NULL AND @B IS NULL THEN 'VERDADERO' ELSE 'FALSO' END AS IsNull,
+    COUNT(*)                                                         AS CuentaFilas,
+    COUNT(Nota)                                                      AS CuentaNota,
+    AVG(Nota)                                                        AS PromedioNota,
+    (SELECT ISNULL('Hola ' + Email, 'NULL') FROM academia.Alumno WHERE AlumnoId = 2) AS ConcatenarNull,
+    @ErrorUnique                                                     AS ErrorSegundoNull
+FROM academia.Alumno;
+```
+
+**Resultado esperado.**
+
+| NullIgualNull | IsNull | CuentaFilas | CuentaNota | PromedioNota | ConcatenarNull | ErrorSegundoNull |
+|---|---|---:|---:|---:|---|---:|
+| UNKNOWN | VERDADERO | 3 | 2 | 7 | NULL | 2627 |
+
+El promedio es 7 porque suma 8 y 6 y divide por 2, no por 3.
+
+### NOT IN con NULL
+
+Si la subconsulta de un `NOT IN` devuelve aunque sea un `NULL`, el resultado es vacío. Para cada fila, `x NOT IN (1, NULL)`
+equivale a `x <> 1 AND x <> NULL`, y la segunda parte es `UNKNOWN`, por lo que la conjunción nunca es verdadera.
+
+<!-- check: U1.T.RS.07 -->
+```sql
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Alumno (
+    AlumnoId INT NOT NULL CONSTRAINT PK_Alumno PRIMARY KEY,
+    Nombre   VARCHAR(50) NOT NULL
+);
+CREATE TABLE academia.Inscripcion (
+    InscripcionId INT NOT NULL CONSTRAINT PK_Inscripcion PRIMARY KEY,
+    AlumnoId      INT NULL,
+    Materia       VARCHAR(30) NOT NULL
+);
+INSERT INTO academia.Alumno (AlumnoId, Nombre) VALUES (1, 'Ana'), (2, 'Beto'), (3, 'Cora');
+INSERT INTO academia.Inscripcion (InscripcionId, AlumnoId, Materia) VALUES
+    (1, 1,    'Bases de Datos'),
+    (2, NULL, 'Redes');
+
+SELECT 'NOT IN' AS Forma, COUNT(*) AS AlumnosSinInscripcion
+FROM academia.Alumno
+WHERE AlumnoId NOT IN (SELECT AlumnoId FROM academia.Inscripcion)
+UNION ALL
+SELECT 'NOT EXISTS', COUNT(*)
+FROM academia.Alumno AS a
+WHERE NOT EXISTS (SELECT 1 FROM academia.Inscripcion AS i WHERE i.AlumnoId = a.AlumnoId)
+UNION ALL
+SELECT 'NOT IN con filtro IS NOT NULL', COUNT(*)
+FROM academia.Alumno
+WHERE AlumnoId NOT IN (SELECT AlumnoId FROM academia.Inscripcion WHERE AlumnoId IS NOT NULL);
+```
+
+**Resultado esperado.**
+
+| Forma | AlumnosSinInscripcion |
+|---|---:|
+| NOT IN | 0 |
+| NOT EXISTS | 2 |
+| NOT IN con filtro IS NOT NULL | 2 |
+
+:::caution[Errores frecuentes]
+Usar `NOT IN` sobre una columna que admite `NULL` devuelve **cero filas** sin dar error, como en la primera fila del
+resultado. Preferí `NOT EXISTS`, o filtrá `IS NOT NULL` dentro de la subconsulta. Y nunca escribas `= NULL`: usá `IS NULL`.
+:::
+
+### ISNULL, COALESCE y NULLIF
 
 | | `ISNULL` | `COALESCE` |
 |---|---|---|
-| Estándar | SQL Server / Sybase | **ANSI SQL** |
+| Estándar | Propio de SQL Server | ANSI SQL |
 | Parámetros | Exactamente 2 | 2 o más |
-| Tipo de retorno | El tipo del **primer** parámetro | El tipo de **mayor precedencia** |
+| Tipo de retorno | El del **primer** parámetro | El de mayor precedencia entre los argumentos |
 
+`NULLIF(a, b)` devuelve `NULL` si `a = b` y `a` en otro caso; sirve para evitar divisiones por cero.
+
+<!-- check: U1.T.RS.08 -->
 ```sql
--- ISNULL: un solo fallback; trunca al tipo del primer argumento
-SELECT ISNULL(telefono, 'Sin teléfono')
+DECLARE @Valor CHAR(3) = NULL;
+DECLARE @Total INT = 10, @Cantidad INT = 0;
 
--- COALESCE: varios fallbacks encadenados
-SELECT COALESCE(telefono_celular, telefono_fijo, telefono_trabajo, 'Sin teléfono')
+SELECT
+    ISNULL(@Valor, 'valor por defecto')                        AS ConIsnull,
+    COALESCE(@Valor, 'valor por defecto')                      AS ConCoalesce,
+    COALESCE(NULL, NULL, 'tercero')                            AS PrimerNoNulo,
+    @Total / NULLIF(@Cantidad, 0)                              AS DivisionSegura,
+    ISNULL(@Total / NULLIF(@Cantidad, 0), -1)                  AS DivisionConDefecto;
 ```
 
+**Resultado esperado.**
+
+| ConIsnull | ConCoalesce | PrimerNoNulo | DivisionSegura | DivisionConDefecto |
+|---|---|---|---|---:|
+| val | valor por defecto | tercero | NULL | -1 |
+
+`ISNULL` truncó el reemplazo al tipo `CHAR(3)` de la variable; `COALESCE` no. Preferí `COALESCE` por ser estándar y
+más predecible con los tipos.
+
+## Consultas básicas, JOIN y UNION
+
+<!-- sintaxis -->
 ```sql
-DECLARE @valor CHAR(3) = NULL;
-
-SELECT ISNULL(@valor, 'valor por defecto')   -- devuelve 'val'  ← trunca a char(3)
-SELECT COALESCE(@valor, 'valor por defecto') -- devuelve 'valor por defecto'
+SELECT Columna1, Columna2
+FROM   esquema.Tabla
+WHERE  Condicion
+ORDER BY Columna1 ASC;
 ```
 
-> Preferir `COALESCE` por ser estándar y más predecible en cuanto a tipos.
-
----
-
-## Consultas básicas
-
-```sql
-SELECT campo1, campo2
-FROM   esquema.tabla
-WHERE  condicion
-ORDER BY campo1 ASC
-```
-
-**Orden de evaluación conceptual:**
-
-```
-FROM → (JOIN) → WHERE → GROUP BY → HAVING → SELECT → ORDER BY
-```
-
-### Subconsultas
-
-```sql
--- En WHERE
-SELECT campo1
-FROM   esquema.tabla1
-WHERE  campo2 IN (
-    SELECT campoX FROM esquema.tabla2 WHERE campoY IS NULL
-);
-
--- En FROM (tabla derivada)
-SELECT t.nombre, t.total
-FROM (
-    SELECT nombre, SUM(monto) AS total
-    FROM   ventas
-    GROUP BY nombre
-) AS t
-WHERE t.total > 1000;
-```
-
----
-
-## JOINs y UNIONs
+Conceptualmente una consulta se evalúa así: `FROM` (con los `JOIN`), `WHERE`, `GROUP BY`, `HAVING`, `SELECT` y
+`ORDER BY`. En realidad el optimizador reordena y paraleliza todo lo posible: SQL es declarativo, indicás *qué*
+querés y el motor decide *cómo*. Los planes de ejecución se ven en la [Unidad 3](/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/).
 
 ![join-types](/bbdd-aplicadas/unidad-1/images/joins.png)
 
+<!-- check: U1.T.RS.09 -->
 ```sql
--- INNER JOIN: solo filas que coinciden en ambas tablas
-SELECT e.nombre, d.nombre AS departamento
-FROM   empleados e
-INNER JOIN departamentos d ON e.id_depto = d.id;
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Alumno (
+    AlumnoId INT NOT NULL CONSTRAINT PK_Alumno PRIMARY KEY,
+    Nombre   VARCHAR(50) NOT NULL
+);
+CREATE TABLE academia.Inscripcion (
+    InscripcionId INT NOT NULL CONSTRAINT PK_Inscripcion PRIMARY KEY,
+    AlumnoId      INT NOT NULL CONSTRAINT FK_Inscripcion_Alumno REFERENCES academia.Alumno (AlumnoId),
+    Materia       VARCHAR(30) NOT NULL
+);
+INSERT INTO academia.Alumno (AlumnoId, Nombre) VALUES (1, 'Ana'), (2, 'Beto'), (3, 'Cora');
+INSERT INTO academia.Inscripcion (InscripcionId, AlumnoId, Materia) VALUES
+    (1, 1, 'Bases de Datos'), (2, 1, 'Redes'), (3, 2, 'Bases de Datos');
 
--- LEFT JOIN: todos los empleados, aunque no tengan departamento
-SELECT e.nombre, d.nombre AS departamento
-FROM   empleados e
-LEFT JOIN departamentos d ON e.id_depto = d.id;
-
--- FULL OUTER JOIN: todos los empleados y todos los departamentos
-SELECT e.nombre, d.nombre AS departamento
-FROM   empleados e
-FULL OUTER JOIN departamentos d ON e.id_depto = d.id;
+SELECT a.Nombre, i.Materia, 'INNER' AS Tipo
+FROM academia.Alumno AS a
+INNER JOIN academia.Inscripcion AS i ON i.AlumnoId = a.AlumnoId
+UNION ALL
+SELECT a.Nombre, ISNULL(i.Materia, '(sin materia)'), 'LEFT'
+FROM academia.Alumno AS a
+LEFT JOIN academia.Inscripcion AS i ON i.AlumnoId = a.AlumnoId
+WHERE a.AlumnoId = 3
+UNION ALL
+SELECT a.Nombre, '(anti-join)', 'ANTI'
+FROM academia.Alumno AS a
+LEFT JOIN academia.Inscripcion AS i ON i.AlumnoId = a.AlumnoId
+WHERE i.AlumnoId IS NULL
+ORDER BY Tipo, Nombre, Materia;
 ```
 
-### UNION
+**Resultado esperado.**
 
-Combina los resultados de dos consultas. Las columnas deben ser compatibles en tipo y cantidad.
+| Nombre | Materia | Tipo |
+|---|---|---|
+| Cora | (anti-join) | ANTI |
+| Ana | Bases de Datos | INNER |
+| Ana | Redes | INNER |
+| Beto | Bases de Datos | INNER |
+| Cora | (sin materia) | LEFT |
 
+`LEFT JOIN ... WHERE columna_derecha IS NULL` es el **anti-join**: las filas de la izquierda sin pareja.
+
+- `CROSS JOIN` es el producto cartesiano: todas las combinaciones.
+- Un `SELF JOIN` une una tabla consigo misma con alias distintos (por ejemplo, empleado y jefe).
+- `UNION` combina resultados y elimina duplicados; `UNION ALL` los conserva y es más rápido.
+
+<!-- check: U1.T.RS.10 -->
 ```sql
-SELECT nombre FROM clientes
-UNION          -- elimina duplicados
-SELECT nombre FROM proveedores;
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Empleado (
+    EmpleadoId INT NOT NULL CONSTRAINT PK_Empleado PRIMARY KEY,
+    Nombre     VARCHAR(30) NOT NULL,
+    JefeId     INT NULL CONSTRAINT FK_Empleado_Jefe REFERENCES academia.Empleado (EmpleadoId)
+);
+CREATE TABLE academia.Turno (Nombre VARCHAR(10) NOT NULL);
+CREATE TABLE academia.Dia   (Nombre VARCHAR(10) NOT NULL);
+INSERT INTO academia.Empleado (EmpleadoId, Nombre, JefeId) VALUES (1, 'Direccion', NULL), (2, 'Ana', 1), (3, 'Beto', 1), (4, 'Cora', 2);
+INSERT INTO academia.Turno (Nombre) VALUES ('Mañana'), ('Noche');
+INSERT INTO academia.Dia (Nombre) VALUES ('Lunes'), ('Martes'), ('Jueves');
 
-SELECT nombre FROM clientes
-UNION ALL      -- mantiene duplicados (más rápido)
-SELECT nombre FROM proveedores;
+SELECT 'CROSS' AS Consulta, CAST(COUNT(*) AS VARCHAR(10)) AS Resultado
+FROM academia.Dia AS d CROSS JOIN academia.Turno AS t
+UNION ALL
+SELECT 'SELF', STRING_AGG(e.Nombre + ' -> ' + j.Nombre, '; ') WITHIN GROUP (ORDER BY e.EmpleadoId)
+FROM academia.Empleado AS e
+INNER JOIN academia.Empleado AS j ON j.EmpleadoId = e.JefeId
+UNION ALL
+SELECT 'UNION', CAST(COUNT(*) AS VARCHAR(10))
+FROM (SELECT Nombre FROM academia.Dia UNION SELECT 'Lunes') AS u
+UNION ALL
+SELECT 'UNION ALL', CAST(COUNT(*) AS VARCHAR(10))
+FROM (SELECT Nombre FROM academia.Dia UNION ALL SELECT 'Lunes') AS u;
 ```
 
----
+**Resultado esperado.**
+
+| Consulta | Resultado |
+|---|---|
+| CROSS | 6 |
+| SELF | Ana -> Direccion; Beto -> Direccion; Cora -> Ana |
+| UNION | 3 |
+| UNION ALL | 4 |
+
+## Subconsultas
+
+Una subconsulta es un `SELECT` anidado en otra sentencia. Puede aparecer en el `WHERE`, en el `FROM` (tabla
+derivada) y en el `SELECT` (debe devolver un único valor), y también en `UPDATE` y `DELETE`. Es **correlacionada**
+si referencia columnas de la consulta externa: se evalúa, conceptualmente, una vez por fila externa.
+
+<!-- check: U1.T.RS.11 -->
+```sql
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Alumno (
+    AlumnoId INT NOT NULL CONSTRAINT PK_Alumno PRIMARY KEY,
+    Nombre   VARCHAR(50) NOT NULL
+);
+CREATE TABLE academia.Examen (
+    ExamenId INT NOT NULL CONSTRAINT PK_Examen PRIMARY KEY,
+    AlumnoId INT NOT NULL CONSTRAINT FK_Examen_Alumno REFERENCES academia.Alumno (AlumnoId),
+    Nota     INT NOT NULL
+);
+INSERT INTO academia.Alumno (AlumnoId, Nombre) VALUES (1, 'Ana'), (2, 'Beto'), (3, 'Cora');
+INSERT INTO academia.Examen (ExamenId, AlumnoId, Nota) VALUES
+    (1, 1, 9), (2, 1, 7), (3, 2, 4), (4, 2, 6);
+
+-- En WHERE (no correlacionada): alumnos con algún examen de nota mayor a 8.
+-- En FROM (tabla derivada): promedio por alumno.
+-- En SELECT (correlacionada): mejor nota de cada alumno.
+SELECT
+    a.Nombre,
+    p.Promedio,
+    (SELECT MAX(e.Nota) FROM academia.Examen AS e WHERE e.AlumnoId = a.AlumnoId) AS MejorNota,
+    CASE WHEN a.AlumnoId IN (SELECT AlumnoId FROM academia.Examen WHERE Nota > 8)
+         THEN 'Si' ELSE 'No' END AS TieneMasDeOcho
+FROM academia.Alumno AS a
+LEFT JOIN (
+    SELECT AlumnoId, CAST(AVG(CAST(Nota AS DECIMAL(4,1))) AS DECIMAL(4,1)) AS Promedio
+    FROM academia.Examen
+    GROUP BY AlumnoId
+) AS p ON p.AlumnoId = a.AlumnoId
+ORDER BY a.Nombre;
+```
+
+**Resultado esperado.**
+
+| Nombre | Promedio | MejorNota | TieneMasDeOcho |
+|---|---:|---:|---|
+| Ana | 8.0 | 9 | Si |
+| Beto | 5.0 | 6 | No |
+| Cora | NULL | NULL | No |
+
+`EXISTS` es verdadero si la subconsulta devuelve al menos una fila (no importa qué selecciona). `x < ANY (...)` es
+verdadero si se cumple para algún valor; `x > ALL (...)` si se cumple para todos.
+
+<!-- check: U1.T.RS.12 -->
+```sql
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Alumno (
+    AlumnoId INT NOT NULL CONSTRAINT PK_Alumno PRIMARY KEY,
+    Nombre   VARCHAR(50) NOT NULL
+);
+CREATE TABLE academia.Examen (
+    ExamenId INT NOT NULL CONSTRAINT PK_Examen PRIMARY KEY,
+    AlumnoId INT NOT NULL CONSTRAINT FK_Examen_Alumno REFERENCES academia.Alumno (AlumnoId),
+    Nota     INT NOT NULL
+);
+INSERT INTO academia.Alumno (AlumnoId, Nombre) VALUES (1, 'Ana'), (2, 'Beto'), (3, 'Cora');
+INSERT INTO academia.Examen (ExamenId, AlumnoId, Nota) VALUES
+    (1, 1, 9), (2, 1, 7), (3, 2, 4), (4, 2, 6);
+
+SELECT 'EXISTS' AS Consulta, a.Nombre
+FROM academia.Alumno AS a
+WHERE EXISTS (SELECT 1 FROM academia.Examen AS e WHERE e.AlumnoId = a.AlumnoId)
+UNION ALL
+SELECT 'NOT EXISTS', a.Nombre
+FROM academia.Alumno AS a
+WHERE NOT EXISTS (SELECT 1 FROM academia.Examen AS e WHERE e.AlumnoId = a.AlumnoId)
+UNION ALL
+SELECT 'ANY (algun examen mayor a 8)', a.Nombre
+FROM academia.Alumno AS a
+WHERE 8 < ANY (SELECT e.Nota FROM academia.Examen AS e WHERE e.AlumnoId = a.AlumnoId)
+UNION ALL
+SELECT 'ALL (todos los examenes menores a 7)', a.Nombre
+FROM academia.Alumno AS a
+WHERE 7 > ALL (SELECT e.Nota FROM academia.Examen AS e WHERE e.AlumnoId = a.AlumnoId)
+ORDER BY Consulta, Nombre;
+```
+
+**Resultado esperado.**
+
+| Consulta | Nombre |
+|---|---|
+| ALL (todos los examenes menores a 7) | Beto |
+| ALL (todos los examenes menores a 7) | Cora |
+| ANY (algun examen mayor a 8) | Ana |
+| EXISTS | Ana |
+| EXISTS | Beto |
+| NOT EXISTS | Cora |
+
+:::caution[Errores frecuentes]
+Cora aparece en el `ALL` aunque no rindió ningún examen: `ALL` sobre un conjunto vacío es verdadero. Si ese no es el
+resultado buscado, agregá `AND EXISTS (...)`.
+:::
 
 ## Funciones de agregado
 
-Resumen grupos de filas en un único valor por grupo.
+Resumen un grupo de filas en un valor: `COUNT`, `SUM`, `AVG`, `MIN` y `MAX`. Se indica el criterio de agrupado con
+`GROUP BY`. `COUNT` devuelve un entero; las demás respetan el tipo de la columna (el `AVG` de un `INT` es entero).
+`WHERE` filtra filas **antes** de agrupar; `HAVING` filtra grupos **después** de agregar. `COUNT(DISTINCT col)`
+cuenta valores distintos.
 
-| Función | Descripción |
-|---------|-------------|
-| `COUNT(*)` / `COUNT(col)` | Cantidad de filas / valores no-NULL |
-| `SUM(col)` | Suma |
-| `AVG(col)` | Promedio (ignora NULLs) |
-| `MIN(col)` / `MAX(col)` | Mínimo / máximo |
-
+<!-- check: U1.T.RS.13 -->
 ```sql
-SELECT  nombreCatedra,
-        COUNT(*)          AS cantidad_comisiones,
-        SUM(inscriptos)   AS total_inscriptos,
-        AVG(inscriptos)   AS promedio
-FROM    ddbba.curso
-GROUP BY nombreCatedra
-HAVING  SUM(inscriptos) > 90
-ORDER BY total_inscriptos DESC;
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Curso (
+    CursoId      INT NOT NULL CONSTRAINT PK_Curso PRIMARY KEY,
+    Catedra      VARCHAR(30) NOT NULL,
+    Turno        VARCHAR(10) NOT NULL,
+    Inscriptos   INT NULL,
+    Puntuacion   INT NOT NULL
+);
+INSERT INTO academia.Curso (CursoId, Catedra, Turno, Inscriptos, Puntuacion) VALUES
+    (1, 'Bases de Datos', 'Mañana', 40, 4),
+    (2, 'Bases de Datos', 'Noche',  60, 5),
+    (3, 'Redes',          'Noche',  30, 2),
+    (4, 'Redes',          'Mañana', NULL, 4),
+    (5, 'Sistemas',       'Mañana', 50, 5);
+
+SELECT
+    Catedra,
+    COUNT(*)                AS Cursos,
+    COUNT(Inscriptos)       AS ConDato,
+    COUNT(DISTINCT Turno)   AS Turnos,
+    SUM(Inscriptos)         AS TotalInscriptos,
+    AVG(Inscriptos)         AS Promedio
+FROM academia.Curso
+WHERE Puntuacion > 3
+GROUP BY Catedra
+HAVING SUM(Inscriptos) > 40
+ORDER BY Catedra;
 ```
 
-> **`WHERE`** filtra filas **antes** del agrupamiento.  
-> **`HAVING`** filtra grupos **después** de las funciones de agregado.  
-> Usar `COUNT(DISTINCT campo)` para contar valores únicos.
+**Resultado esperado.**
 
----
+| Catedra | Cursos | ConDato | Turnos | TotalInscriptos | Promedio |
+|---|---:|---:|---:|---:|---:|
+| Bases de Datos | 2 | 2 | 2 | 100 | 50 |
+| Sistemas | 1 | 1 | 1 | 50 | 50 |
+
+Redes quedó afuera por dos motivos: su curso con 2 puntos no pasó el `WHERE` y el otro tiene `NULL`, con lo que su
+suma es `NULL` y no cumple el `HAVING`.
 
 ## Vistas
 
-Una vista es una **tabla virtual** cuya definición es una consulta almacenada. No guarda datos propios.
+Una vista es una tabla virtual: guarda solo su consulta, no datos. Se usa para simplificar consultas, limitar el
+acceso a columnas o filas y mantener la compatibilidad cuando cambia la estructura de las tablas.
 
+**¿Qué DML admite?** Una vista admite `INSERT`, `UPDATE` y `DELETE` si cada fila de la vista se corresponde con una
+fila de una tabla base. Puede estar definida sobre **varias tablas**, siempre que cada modificación afecte columnas
+de **una sola** tabla base. No admiten DML las vistas con `GROUP BY`, `DISTINCT`, agregados o `UNION`, porque sus filas
+son derivadas.
+
+<!-- check: U1.T.RS.14 -->
 ```sql
-CREATE OR ALTER VIEW bbdda.cursos_copados
-WITH SCHEMABINDING
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Departamento (
+    DepartamentoId INT NOT NULL CONSTRAINT PK_Departamento PRIMARY KEY,
+    Nombre         VARCHAR(30) NOT NULL
+);
+CREATE TABLE academia.Empleado (
+    EmpleadoId     INT NOT NULL CONSTRAINT PK_Empleado PRIMARY KEY,
+    Nombre         VARCHAR(30) NOT NULL,
+    DepartamentoId INT NOT NULL CONSTRAINT FK_Empleado_Departamento REFERENCES academia.Departamento (DepartamentoId),
+    Sueldo         DECIMAL(10,2) NOT NULL
+);
+INSERT INTO academia.Departamento VALUES (1, 'Sistemas'), (2, 'Ventas');
+INSERT INTO academia.Empleado VALUES (1, 'Ana', 1, 1000), (2, 'Beto', 2, 800);
+GO
+CREATE VIEW academia.EmpleadoDetalle
 AS
-    SELECT
-        nombre_catedra,
-        dia_cursada,
-        turno,
-        SUM(inscriptos) AS total_inscriptos
-    FROM bbdda.curso
-    WHERE puntuacion > 3
-    GROUP BY nombre_catedra, dia_cursada, turno;
+    SELECT e.EmpleadoId, e.Nombre, d.Nombre AS Departamento, e.Sueldo
+    FROM academia.Empleado AS e
+    INNER JOIN academia.Departamento AS d ON d.DepartamentoId = e.DepartamentoId;
+GO
+CREATE VIEW academia.SueldoPorDepartamento
+AS
+    SELECT DepartamentoId, SUM(Sueldo) AS Total
+    FROM academia.Empleado
+    GROUP BY DepartamentoId;
+GO
+DECLARE @ErrorDosTablas INT = 0, @ErrorAgregado INT = 0;
+
+-- Actualizar columnas de UNA sola tabla base a traves de una vista de varias tablas: permitido.
+UPDATE academia.EmpleadoDetalle SET Sueldo = 1100 WHERE EmpleadoId = 1;
+
+-- Un UPDATE que toca columnas de dos tablas base a la vez: rechazado.
+BEGIN TRY
+    EXEC (N'UPDATE academia.EmpleadoDetalle SET Sueldo = 900, Departamento = ''Soporte'' WHERE EmpleadoId = 2;');
+END TRY
+BEGIN CATCH
+    SET @ErrorDosTablas = ERROR_NUMBER();
+END CATCH;
+
+-- Vista con GROUP BY: no admite UPDATE.
+BEGIN TRY
+    EXEC (N'UPDATE academia.SueldoPorDepartamento SET Total = 0 WHERE DepartamentoId = 1;');
+END TRY
+BEGIN CATCH
+    SET @ErrorAgregado = ERROR_NUMBER();
+END CATCH;
+
+SELECT
+    (SELECT Sueldo FROM academia.Empleado WHERE EmpleadoId = 1) AS SueldoAna,
+    @ErrorDosTablas AS ErrorDosTablas,
+    @ErrorAgregado  AS ErrorAgregado;
 ```
 
-**Usos frecuentes:**
-- Simplificar consultas complejas reutilizables.
-- Controlar el acceso: exponer solo ciertas columnas o filas.
-- Mantener retrocompatibilidad cuando cambia la estructura de las tablas base.
+**Resultado esperado.**
 
-> Para usar `INSERT`/`UPDATE`/`DELETE` sobre una vista hay restricciones: no puede incluir `GROUP BY`, `DISTINCT`, funciones de agregado, `UNION`, ni más de una tabla base.
+| SueldoAna | ErrorDosTablas | ErrorAgregado |
+|---:|---:|---:|
+| 1100.00 | 4405 | 4406 |
 
----
+:::note[Por qué usamos EXEC]
+Esos dos errores se producen al compilar la sentencia, y `TRY...CATCH` no captura errores de compilación del propio
+lote. Por eso la sentencia se ejecuta como cadena con `EXEC`, solo para poder mostrar el número de error.
+:::
+
+`WITH SCHEMABINDING` vincula la vista a las tablas: el motor impide cambios (quitar una columna, borrar la tabla)
+que la dejarían inválida. Exige nombres de dos partes, y una vista con `GROUP BY` e índice debe incluir `COUNT_BIG(*)`.
+
+<!-- check: U1.T.RS.15 -->
+```sql
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Curso (
+    CursoId    INT NOT NULL CONSTRAINT PK_Curso PRIMARY KEY,
+    Catedra    VARCHAR(30) NOT NULL,
+    Inscriptos INT NOT NULL,
+    Puntuacion INT NOT NULL
+);
+INSERT INTO academia.Curso VALUES (1, 'Bases de Datos', 40, 4), (2, 'Bases de Datos', 60, 5), (3, 'Redes', 30, 2);
+GO
+CREATE OR ALTER VIEW academia.CursoDestacado
+WITH SCHEMABINDING
+AS
+    SELECT Catedra, SUM(Inscriptos) AS TotalInscriptos, COUNT_BIG(*) AS Cursos
+    FROM academia.Curso
+    WHERE Puntuacion > 3
+    GROUP BY Catedra;
+GO
+DECLARE @ErrorAlter INT = 0, @ErrorDrop INT = 0;
+BEGIN TRY
+    ALTER TABLE academia.Curso DROP COLUMN Inscriptos;
+END TRY
+BEGIN CATCH
+    SET @ErrorAlter = ERROR_NUMBER();
+END CATCH;
+BEGIN TRY
+    DROP TABLE academia.Curso;
+END TRY
+BEGIN CATCH
+    SET @ErrorDrop = ERROR_NUMBER();
+END CATCH;
+
+SELECT Catedra, TotalInscriptos, @ErrorAlter AS ErrorAlterColumna, @ErrorDrop AS ErrorDropTabla
+FROM academia.CursoDestacado;
+```
+
+**Resultado esperado.**
+
+| Catedra | TotalInscriptos | ErrorAlterColumna | ErrorDropTabla |
+|---|---:|---:|---:|
+| Bases de Datos | 100 | 4922 | 3729 |
 
 ## Procedimientos almacenados
 
-Rutinas compiladas y almacenadas en el motor. Se ejecutan en el servidor, reduciendo el tráfico de red.
+Un procedimiento es un módulo de programa almacenado en la base y ejecutado por el motor. Normaliza el acceso a
+datos desde distintas aplicaciones, reduce el tráfico cliente-servidor, admite parámetros de entrada y salida
+(`OUTPUT`) y permite dar permiso al procedimiento en lugar de a las tablas. En SQL Server se compila y se guarda su
+plan en caché la primera vez que se ejecuta, no al crearlo.
 
+<!-- check: U1.T.RS.16 -->
 ```sql
-CREATE OR ALTER PROCEDURE bbdda.inscribir_alumno
-    @dni        INT,
-    @id_curso   INT,
-    @resultado  INT = 0 OUTPUT
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Alumno (
+    AlumnoId INT IDENTITY(1, 1) NOT NULL CONSTRAINT PK_Alumno PRIMARY KEY,
+    Nombre   VARCHAR(100) NOT NULL,
+    Apellido VARCHAR(100) NOT NULL
+);
+CREATE TABLE academia.Materia (
+    MateriaId INT IDENTITY(1, 1) NOT NULL CONSTRAINT PK_Materia PRIMARY KEY,
+    Nombre    VARCHAR(100) NOT NULL,
+    Codigo    VARCHAR(20)  NOT NULL
+);
+CREATE TABLE academia.Inscripcion (
+    InscripcionId    INT IDENTITY(1, 1) NOT NULL CONSTRAINT PK_Inscripcion PRIMARY KEY,
+    AlumnoId         INT  NOT NULL CONSTRAINT FK_Inscripcion_Alumno REFERENCES academia.Alumno (AlumnoId),
+    MateriaId        INT  NOT NULL CONSTRAINT FK_Inscripcion_Materia REFERENCES academia.Materia (MateriaId),
+    FechaInscripcion DATE NOT NULL,
+    CONSTRAINT UQ_Inscripcion_Alumno_Materia UNIQUE (AlumnoId, MateriaId)
+);
+INSERT INTO academia.Alumno (Nombre, Apellido) VALUES ('Ana', 'Prueba');
+INSERT INTO academia.Materia (Nombre, Codigo) VALUES ('Bases de Datos', 'BD01');
+GO
+CREATE OR ALTER PROCEDURE academia.InscribirAlumno
+    @AlumnoId  INT,
+    @MateriaId INT,
+    @Resultado INT = 0 OUTPUT
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    IF EXISTS (SELECT 1 FROM bbdda.alumno WHERE dni = @dni)
-    BEGIN
-        INSERT INTO bbdda.inscripcion (dni, id_curso, fecha)
-        VALUES (@dni, @id_curso, GETDATE());
-        SET @resultado = 1;
-    END
+    IF NOT EXISTS (SELECT 1 FROM academia.Alumno WHERE AlumnoId = @AlumnoId)
+        SET @Resultado = -1;          -- el alumno no existe
+    ELSE IF EXISTS (SELECT 1 FROM academia.Inscripcion
+                    WHERE AlumnoId = @AlumnoId AND MateriaId = @MateriaId)
+        SET @Resultado = -2;          -- ya estaba inscripto
     ELSE
-        SET @resultado = -1;
+    BEGIN
+        INSERT INTO academia.Inscripcion (AlumnoId, MateriaId, FechaInscripcion)
+        VALUES (@AlumnoId, @MateriaId, CAST(GETDATE() AS DATE));
+        SET @Resultado = 1;
+    END;
 END;
 GO
+DECLARE @R1 INT, @R2 INT, @R3 INT;
+EXEC academia.InscribirAlumno @AlumnoId = 1,  @MateriaId = 1, @Resultado = @R1 OUTPUT;
+EXEC academia.InscribirAlumno @AlumnoId = 1,  @MateriaId = 1, @Resultado = @R2 OUTPUT;
+EXEC academia.InscribirAlumno @AlumnoId = 99, @MateriaId = 1, @Resultado = @R3 OUTPUT;
+
+SELECT
+    @R1 AS PrimeraVez,
+    @R2 AS Repetida,
+    @R3 AS AlumnoInexistente,
+    (SELECT COUNT(*) FROM academia.Inscripcion) AS Inscripciones;
 ```
 
-**Invocación:**
+**Resultado esperado.**
 
-```sql
-DECLARE @resultado INT;
+| PrimeraVez | Repetida | AlumnoInexistente | Inscripciones |
+|---:|---:|---:|---:|
+| 1 | -2 | -1 | 1 |
 
-EXEC bbdda.inscribir_alumno
-    @dni       = 12345678,
-    @id_curso  = 10,
-    @resultado = @resultado OUTPUT;
-
-SELECT @resultado AS resultado;
-```
-
-| Elemento | Descripción |
-|----------|-------------|
-| `CREATE OR ALTER PROCEDURE` | Crea o reemplaza el SP |
-| `OUTPUT` | Parámetro de salida |
-| `SET NOCOUNT ON` | Suprime mensajes de filas afectadas |
-
-**Ventajas:** reutilización, seguridad (permiso al SP en vez de a las tablas), plan de ejecución cacheado.
-
----
+`SET NOCOUNT ON` suprime los mensajes de filas afectadas. Los códigos de retorno (1, -1, -2) son una convención propia
+de este ejemplo.
 
 ## Triggers
 
-SP especial que se ejecuta **automáticamente** ante eventos DML (`INSERT`, `UPDATE`, `DELETE`) o DDL.
+Un trigger es un procedimiento especial que el motor ejecuta automáticamente ante un evento DML (`INSERT`,
+`UPDATE`, `DELETE`) o DDL. No recibe parámetros: dentro de él existen las pseudotablas `inserted` (filas nuevas) y
+`deleted` (filas viejas). En un `UPDATE`, `deleted` tiene los valores previos e `inserted` los nuevos. SQL Server
+dispara un trigger **por sentencia**, no por fila (no tiene `FOR EACH ROW`), de modo que siempre hay que escribirlo
+para varias filas.
 
 | Momento | Descripción |
 |---------|-------------|
-| `AFTER` (o `FOR`) | Se ejecuta **después** de que la operación se aplica |
-| `INSTEAD OF` | **Reemplaza** la operación original (útil en vistas) |
+| `AFTER` (o `FOR`) | Se ejecuta después de aplicar la operación |
+| `INSTEAD OF` | Reemplaza la operación original; es el único que admiten las vistas |
 
-> No reciben parámetros. Usar las pseudotablas `inserted` y `deleted` para acceder a los datos afectados.
-
-| Objeto | Tipo de trigger | Eventos |
-|--------|----------------|---------|
-| **Tabla** | DML trigger | `INSERT`, `UPDATE`, `DELETE` |
-| **Vista** | DML trigger (`INSTEAD OF`) | `INSERT`, `UPDATE`, `DELETE` |
-| **Base de datos** | DDL trigger | `CREATE`, `ALTER`, `DROP` y otros |
-
-### DML trigger (tabla)
-
+<!-- check: U1.T.RS.17 -->
 ```sql
-CREATE TRIGGER ddbba.tg_auditoria
-ON ddbba.empleados
-AFTER INSERT, UPDATE
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Examen (
+    ExamenId INT NOT NULL CONSTRAINT PK_Examen PRIMARY KEY,
+    Alumno   VARCHAR(30) NOT NULL,
+    Nota     INT NOT NULL
+);
+CREATE TABLE academia.ExamenAuditoria (
+    AuditoriaId  INT IDENTITY(1, 1) NOT NULL CONSTRAINT PK_ExamenAuditoria PRIMARY KEY,
+    ExamenId     INT NOT NULL,
+    NotaAnterior INT NOT NULL,
+    NotaNueva    INT NOT NULL,
+    Fecha        DATETIME2(0) NOT NULL CONSTRAINT DF_ExamenAuditoria_Fecha DEFAULT (SYSDATETIME())
+);
+INSERT INTO academia.Examen (ExamenId, Alumno, Nota) VALUES (1, 'Ana', 6), (2, 'Beto', 4), (3, 'Cora', 8);
+GO
+CREATE OR ALTER TRIGGER academia.TrgExamenAuditoria
+ON academia.Examen
+AFTER UPDATE
 AS
 BEGIN
-    INSERT INTO ddbba.log (fecha, cantidad)
-    SELECT GETDATE(), COUNT(*) FROM inserted;
+    SET NOCOUNT ON;
+
+    INSERT INTO academia.ExamenAuditoria (ExamenId, NotaAnterior, NotaNueva)
+    SELECT i.ExamenId, d.Nota, i.Nota
+    FROM inserted AS i
+    INNER JOIN deleted AS d ON d.ExamenId = i.ExamenId
+    WHERE i.Nota <> d.Nota;
 END;
+GO
+UPDATE academia.Examen SET Nota = Nota + 1 WHERE ExamenId IN (1, 2);
+UPDATE academia.Examen SET Alumno = 'Cora M.' WHERE ExamenId = 3;   -- no cambia la nota
+
+SELECT ExamenId, NotaAnterior, NotaNueva
+FROM academia.ExamenAuditoria
+ORDER BY ExamenId;
 ```
 
-### INSTEAD OF trigger (vista)
+**Resultado esperado.**
 
-Permite hacer `INSERT`/`UPDATE`/`DELETE` sobre vistas que normalmente no lo permiten.
+| ExamenId | NotaAnterior | NotaNueva |
+|---:|---:|---:|
+| 1 | 6 | 7 |
+| 2 | 4 | 5 |
 
+El segundo `UPDATE` cambia una columna distinta de `Nota` y no genera auditoría.
+
+Un trigger `INSTEAD OF` permite hacer DML sobre una vista que no lo admitiría por sí sola:
+
+<!-- check: U1.T.RS.18 -->
 ```sql
-CREATE TRIGGER ddbba.tg_vista_empleados
-ON ddbba.v_empleados
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Departamento (
+    DepartamentoId INT NOT NULL CONSTRAINT PK_Departamento PRIMARY KEY,
+    Nombre         VARCHAR(30) NOT NULL
+);
+CREATE TABLE academia.Empleado (
+    EmpleadoId     INT IDENTITY(1, 1) NOT NULL CONSTRAINT PK_Empleado PRIMARY KEY,
+    Nombre         VARCHAR(30) NOT NULL,
+    DepartamentoId INT NOT NULL CONSTRAINT FK_Empleado_Departamento REFERENCES academia.Departamento (DepartamentoId)
+);
+INSERT INTO academia.Departamento VALUES (1, 'Sistemas'), (2, 'Ventas');
+GO
+CREATE VIEW academia.EmpleadoDetalle
+AS
+    SELECT e.Nombre, d.Nombre AS Departamento
+    FROM academia.Empleado AS e
+    INNER JOIN academia.Departamento AS d ON d.DepartamentoId = e.DepartamentoId;
+GO
+CREATE TRIGGER academia.TrgEmpleadoDetalleInsert
+ON academia.EmpleadoDetalle
 INSTEAD OF INSERT
 AS
 BEGIN
-    INSERT INTO ddbba.empleados (nombre, id_depto)
-    SELECT nombre, id_depto FROM inserted;
+    SET NOCOUNT ON;
+
+    INSERT INTO academia.Empleado (Nombre, DepartamentoId)
+    SELECT i.Nombre, d.DepartamentoId
+    FROM inserted AS i
+    INNER JOIN academia.Departamento AS d ON d.Nombre = i.Departamento;
 END;
+GO
+INSERT INTO academia.EmpleadoDetalle (Nombre, Departamento) VALUES ('Ana', 'Ventas'), ('Beto', 'Sistemas');
+
+SELECT Nombre, Departamento
+FROM academia.EmpleadoDetalle
+ORDER BY Nombre;
 ```
 
-### DDL trigger (base de datos)
+**Resultado esperado.**
 
-Útil para auditar o prevenir modificaciones estructurales.
+| Nombre | Departamento |
+|---|---|
+| Ana | Ventas |
+| Beto | Sistemas |
 
+Un **DDL trigger** actúa sobre la base de datos y sirve para auditar o impedir cambios estructurales:
+
+<!-- check: U1.T.RS.19 -->
 ```sql
-CREATE TRIGGER tg_no_drop
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Alumno (AlumnoId INT NOT NULL CONSTRAINT PK_Alumno PRIMARY KEY);
+GO
+CREATE TRIGGER TrgNoDropTable
 ON DATABASE
 FOR DROP_TABLE
 AS
@@ -526,63 +1217,197 @@ BEGIN
     PRINT 'No se permite eliminar tablas.';
     ROLLBACK;
 END;
+GO
+DECLARE @Error INT = 0;
+BEGIN TRY
+    DROP TABLE academia.Alumno;
+END TRY
+BEGIN CATCH
+    SET @Error = ERROR_NUMBER();
+END CATCH;
+
+SELECT
+    @Error AS Error,
+    CASE WHEN OBJECT_ID('academia.Alumno') IS NOT NULL THEN 'existe' ELSE 'eliminada' END AS Tabla;
+GO
+DROP TRIGGER TrgNoDropTable ON DATABASE;
 ```
 
-> También existe el **logon trigger** a nivel de instancia, que se dispara cuando un usuario inicia sesión. Se usa para restricciones de acceso como limitar conexiones simultáneas, pero es poco frecuente.
+**Resultado esperado.**
 
----
+```text
+No se permite eliminar tablas.
+```
+
+| Error | Tabla |
+|---:|---|
+| 3609 | existe |
+
+El `ROLLBACK` deshizo el `DROP TABLE`; el 3609 indica que la transacción terminó dentro del trigger. También existe el
+**logon trigger**, a nivel de instancia, que se dispara al iniciar sesión (por ejemplo, para limitar conexiones).
 
 ## Funciones de usuario
 
-Similar a un SP pero **retorna un valor** (escalar o tabla) y puede usarse dentro de una consulta.
+Una función retorna un valor, escalar o tabla, y se usa dentro de una consulta (`SELECT`, `FROM`, `WHERE`). Solo
+tiene parámetros de entrada. Hay tres formas:
 
+- **Escalar**: devuelve un único valor.
+- **De tabla *inline***: un único `SELECT` que se comporta como una vista con parámetros. Suele ser la más eficiente.
+- **De tabla *multi-statement***: declara una tabla de retorno y la llena con varias sentencias.
+
+<!-- check: U1.T.RS.20 -->
 ```sql
--- Función escalar: retorna un único valor
-CREATE OR ALTER FUNCTION ddbba.fn_edad(@fechaNacimiento DATE)
+CREATE SCHEMA academia;
+GO
+CREATE TABLE academia.Alumno (
+    AlumnoId        INT NOT NULL CONSTRAINT PK_Alumno PRIMARY KEY,
+    Nombre          VARCHAR(30) NOT NULL,
+    FechaNacimiento DATE NOT NULL
+);
+CREATE TABLE academia.Examen (
+    ExamenId INT NOT NULL CONSTRAINT PK_Examen PRIMARY KEY,
+    AlumnoId INT NOT NULL CONSTRAINT FK_Examen_Alumno REFERENCES academia.Alumno (AlumnoId),
+    Nota     INT NOT NULL
+);
+INSERT INTO academia.Alumno VALUES (1, 'Ana', '2000-05-20'), (2, 'Beto', '1999-12-31');
+INSERT INTO academia.Examen VALUES (1, 1, 9), (2, 1, 7), (3, 2, 4);
+GO
+-- Escalar
+CREATE OR ALTER FUNCTION academia.ObtenerEdad (@FechaNacimiento DATE, @FechaReferencia DATE)
 RETURNS INT
 AS
 BEGIN
-    RETURN DATEDIFF(YEAR, @fechaNacimiento, GETDATE())
-         - CASE WHEN MONTH(@fechaNacimiento) * 100 + DAY(@fechaNacimiento)
-                     > MONTH(GETDATE()) * 100 + DAY(GETDATE())
+    RETURN DATEDIFF(YEAR, @FechaNacimiento, @FechaReferencia)
+         - CASE WHEN MONTH(@FechaNacimiento) * 100 + DAY(@FechaNacimiento)
+                     > MONTH(@FechaReferencia) * 100 + DAY(@FechaReferencia)
                 THEN 1 ELSE 0 END;
 END;
-
--- Uso en consulta
-SELECT nombre, ddbba.fn_edad(fecha_nacimiento) AS edad
-FROM   ddbba.alumno;
+GO
+-- De tabla inline: un único SELECT
+CREATE OR ALTER FUNCTION academia.ExamenPorAlumno (@AlumnoId INT)
+RETURNS TABLE
+AS
+RETURN
+    SELECT ExamenId, Nota
+    FROM academia.Examen
+    WHERE AlumnoId = @AlumnoId;
+GO
+-- De tabla multi-statement: declara la tabla de retorno y la llena con varias sentencias
+CREATE OR ALTER FUNCTION academia.ResumenAlumno (@AlumnoId INT)
+RETURNS @Resumen TABLE (Nombre VARCHAR(30), Examenes INT, Promedio DECIMAL(4,1))
+AS
+BEGIN
+    INSERT INTO @Resumen (Nombre, Examenes, Promedio)
+    SELECT a.Nombre, COUNT(e.ExamenId), CAST(AVG(CAST(e.Nota AS DECIMAL(4,1))) AS DECIMAL(4,1))
+    FROM academia.Alumno AS a
+    LEFT JOIN academia.Examen AS e ON e.AlumnoId = a.AlumnoId
+    WHERE a.AlumnoId = @AlumnoId
+    GROUP BY a.Nombre;
+    RETURN;
+END;
+GO
+SELECT
+    a.Nombre,
+    academia.ObtenerEdad(a.FechaNacimiento, '2026-03-01') AS Edad,
+    r.Examenes,
+    r.Promedio,
+    (SELECT MAX(x.Nota) FROM academia.ExamenPorAlumno(a.AlumnoId) AS x) AS MejorNota
+FROM academia.Alumno AS a
+CROSS APPLY academia.ResumenAlumno(a.AlumnoId) AS r
+ORDER BY a.Nombre;
 ```
+
+**Resultado esperado.**
+
+| Nombre | Edad | Examenes | Promedio | MejorNota |
+|---|---:|---:|---:|---:|
+| Ana | 25 | 2 | 8.0 | 9 |
+| Beto | 26 | 1 | 4.0 | 4 |
+
+La edad recibe la fecha de referencia como parámetro en lugar de usar `GETDATE()`, para que el resultado sea
+reproducible.
 
 | | Función | Procedimiento |
 |---|---------|---------------|
-| Parámetros de salida | Solo retorno | Admite `OUTPUT` |
-| Uso en SELECT/WHERE | ✅ | ❌ |
-| Puede modificar datos | ❌ (generalmente) | ✅ |
+| Salida | Valor de retorno (escalar o tabla) | Parámetros `OUTPUT` y conjuntos de resultados |
+| Se usa en `SELECT`, `FROM` o `WHERE` | Sí | No (se invoca con `EXEC`) |
+| Modifica datos permanentes | No: no puede modificar tablas permanentes | Sí |
 
----
-
-## Resumen de objetos de una BD
+## Resumen de objetos de una base
 
 | Objeto | Para qué sirve |
 |--------|----------------|
 | **Tabla** | Almacena datos persistentes |
-| **Vista** | Consulta reutilizable con nombre (tabla virtual) |
-| **Stored Procedure** | Lógica ejecutable en el servidor, con parámetros |
-| **Función** | Como SP pero retorna valor y se usa dentro de consultas |
-| **Trigger** | Se dispara automáticamente ante eventos DML/DDL |
+| **Vista** | Consulta con nombre (tabla virtual) |
+| **Procedimiento** | Lógica ejecutable en el servidor, con parámetros |
+| **Función** | Retorna un valor o una tabla y se usa dentro de consultas |
+| **Trigger** | Se dispara ante eventos DML o DDL |
 | **Índice** | Acelera búsquedas; el clúster define el orden físico |
-| **Constraint** | Regla de integridad (PK, FK, UNIQUE, CHECK, DEFAULT) |
-
----
+| **Restricción** | Regla de integridad (PK, FK, `UNIQUE`, `CHECK`, `DEFAULT`) |
 
 ## Temas con guía propia
 
-Los siguientes temas tienen una guía dedicada con mayor profundidad y ejemplos:
-
 | Tema | Guía |
 |------|------|
-| Window Functions | [Window Functions](/bbdd-aplicadas/unidad-1/teoria/window-functions/) |
+| Window functions | [Window Functions](/bbdd-aplicadas/unidad-1/teoria/window-functions/) |
 | Common Table Expressions | [CTE](/bbdd-aplicadas/unidad-1/teoria/cte/) |
-| SQL Dinámico | [SQL Dinámico](/bbdd-aplicadas/unidad-1/teoria/sql-dinamico/) |
-| PIVOT / UNPIVOT | [PIVOT](/bbdd-aplicadas/unidad-1/teoria/pivot/) |
-| Índice Clustered | [Índice Clustered](/bbdd-aplicadas/unidad-1/teoria/indice-cluster/) |
+| SQL dinámico | [SQL Dinámico](/bbdd-aplicadas/unidad-1/teoria/sql-dinamico/) |
+| PIVOT y UNPIVOT | [PIVOT](/bbdd-aplicadas/unidad-1/teoria/pivot/) |
+| Índice clúster | [Índice Clustered](/bbdd-aplicadas/unidad-1/teoria/indice-cluster/) |
+
+## Autoevaluación
+
+<details>
+<summary>1. ¿Por qué <code>WHERE x NOT IN (SELECT y FROM t)</code> puede devolver cero filas aunque haya datos que cumplen?</summary>
+
+Porque si `y` contiene un `NULL`, la comparación de `x` con ese `NULL` es `UNKNOWN` y la conjunción de todas las
+comparaciones nunca es verdadera. Se resuelve con `NOT EXISTS` o filtrando `IS NOT NULL` en la subconsulta.
+</details>
+
+<details>
+<summary>2. ¿Qué pasa con las filas hijas al borrar una fila padre con cada acción referencial?</summary>
+
+`NO ACTION` rechaza el borrado; `CASCADE` borra las hijas; `SET NULL` pone `NULL` en la FK; `SET DEFAULT` pone el valor
+por defecto, que debe existir en la tabla padre.
+</details>
+
+<details>
+<summary>3. ¿Se puede hacer <code>UPDATE</code> sobre una vista que une dos tablas?</summary>
+
+Sí, mientras la modificación afecte columnas de una sola tabla base. Si toca columnas de ambas, el motor la rechaza.
+Con `GROUP BY` o agregados, no se puede modificar.
+</details>
+
+<details>
+<summary>4. ¿Qué diferencia hay entre una función de tabla inline y una multi-statement?</summary>
+
+La inline es un único `SELECT` que el optimizador expande como una vista; la multi-statement declara una tabla de
+retorno y la llena con varias sentencias, lo que da menos información al optimizador.
+</details>
+
+## En resumen
+
+:::tip[En resumen]
+- Las restricciones implícitas y explícitas las aplica el motor; las semánticas, la aplicación.
+- Elegí tipos acordes: `DATETIME2` para fecha y hora, `VARCHAR`/`NVARCHAR` según el idioma, `DECIMAL` para dinero.
+- `NULL` introduce lógica de tres valores: `NULL = NULL` es `UNKNOWN`; evitá `NOT IN` con columnas nulas.
+- Las acciones referenciales (`NO ACTION`, `CASCADE`, `SET NULL`, `SET DEFAULT`) definen qué pasa con las hijas.
+- Una subconsulta puede ir en `WHERE`, `FROM` y `SELECT`; `EXISTS` suele ser la forma más segura.
+- Las vistas admiten DML si cada modificación afecta una sola tabla base; los triggers usan `inserted` y `deleted`.
+- Las funciones se usan dentro de consultas; los procedimientos, con `EXEC`.
+:::
+
+## Fuentes
+
+- Presentación de cátedra, Unidad 1, parte 2: Repaso de SQL (v1.1.0, 2025).
+- Microsoft Learn, [Tipos de datos (Transact-SQL)](https://learn.microsoft.com/es-es/sql/t-sql/data-types/data-types-transact-sql).
+- Microsoft Learn, [CREATE TABLE](https://learn.microsoft.com/es-es/sql/t-sql/statements/create-table-transact-sql) y
+  [Restricciones de clave externa](https://learn.microsoft.com/es-es/sql/relational-databases/tables/create-foreign-key-relationships).
+- Microsoft Learn, [NULL y UNKNOWN](https://learn.microsoft.com/es-es/sql/t-sql/language-elements/null-and-unknown-transact-sql),
+  [COALESCE](https://learn.microsoft.com/es-es/sql/t-sql/language-elements/coalesce-transact-sql) y
+  [NULLIF](https://learn.microsoft.com/es-es/sql/t-sql/language-elements/nullif-transact-sql).
+- Microsoft Learn, [Subconsultas](https://learn.microsoft.com/es-es/sql/relational-databases/performance/subqueries),
+  [CREATE VIEW](https://learn.microsoft.com/es-es/sql/t-sql/statements/create-view-transact-sql),
+  [CREATE PROCEDURE](https://learn.microsoft.com/es-es/sql/t-sql/statements/create-procedure-transact-sql),
+  [CREATE TRIGGER](https://learn.microsoft.com/es-es/sql/t-sql/statements/create-trigger-transact-sql) y
+  [CREATE FUNCTION](https://learn.microsoft.com/es-es/sql/t-sql/statements/create-function-transact-sql).

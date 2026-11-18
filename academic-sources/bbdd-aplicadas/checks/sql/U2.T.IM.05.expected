@@ -1,0 +1,5 @@
+Database name 'master' ignored, referencing object in tempdb.
+global (##)|##TemporalGlobalU2|no
+local (#)|#Temporal|no
+Database name 'master' ignored, referencing object in tempdb.
+11|Hola

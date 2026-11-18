@@ -1,0 +1,8 @@
+FOREIGN KEY entre dos tablas en memoria|admitido
+FOREIGN KEY hacia una tabla en disco|error 1750
+PRIMARY KEY CLUSTERED|error 12317
+TRUNCATE TABLE|error 10794
+ALTER TABLE ... ADD|admitido
+Columna VARCHAR(MAX)|admitido
+Columna calculada con una operación aritmética|admitido
+Columna calculada con UPPER|error 10794

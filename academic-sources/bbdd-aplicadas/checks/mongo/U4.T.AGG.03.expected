@@ -1,0 +1,24 @@
+--- acumuladores por estado
+{"_id":"cancelado","cantidad":1,"ingresos":60,"promedio":60,"minimo":60,"maximo":60}
+{"_id":"entregado","cantidad":5,"ingresos":695,"promedio":139,"minimo":40,"maximo":300}
+{"_id":"pendiente","cantidad":2,"ingresos":1150,"promedio":575,"minimo":210,"maximo":940}
+--- $first/$last dependen del orden: se ordena antes
+{"_id":"c1","primerPedido":101,"ultimoPedido":107,"pedidos":[101,103,107],"estados":["entregado","pendiente"]}
+{"_id":"c2","primerPedido":102,"ultimoPedido":105,"pedidos":[102,105],"estados":["entregado"]}
+{"_id":"c3","primerPedido":104,"ultimoPedido":106,"pedidos":[104,106],"estados":["cancelado","entregado"]}
+{"_id":"c9","primerPedido":108,"ultimoPedido":108,"pedidos":[108],"estados":["entregado"]}
+--- _id: null agrupa toda la coleccion
+{"_id":null,"pedidos":8,"total":1905}
+--- $group por mes con operador de fecha
+{"_id":{"mes":3},"total":410}
+{"_id":{"mes":4},"total":1000}
+{"_id":{"mes":5},"total":245}
+{"_id":{"mes":6},"total":250}
+--- $multiply, $cmp y $round son operadores de expresion: se usan DENTRO de un acumulador o de $project
+{"_id":"cancelado","importe":60,"promedioItem":60}
+{"_id":"entregado","importe":695,"promedioItem":86.875}
+{"_id":"pendiente","importe":1150,"promedioItem":383.3333333333333}
+{"_id":1,"nombre":"Teclado","frenteA100":-1}
+{"_id":2,"nombre":"Mouse","frenteA100":-1}
+{"_id":3,"nombre":"Monitor","frenteA100":1}
+{"_id":4,"nombre":"Notebook","frenteA100":1}

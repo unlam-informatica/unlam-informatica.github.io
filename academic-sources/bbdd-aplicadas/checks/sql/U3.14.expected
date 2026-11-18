@@ -1,0 +1,4 @@
+1|is_read_committed_snapshot_on|1
+2|snapshot_isolation_state_desc|OFF
+3|versiones de fila tras un UPDATE (>= 1)|sí
+4|is_read_committed_snapshot_on tras desactivarla|0

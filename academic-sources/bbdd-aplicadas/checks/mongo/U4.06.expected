@@ -1,0 +1,11 @@
+primera vez: 5 encontradas, 5 modificadas
+segunda vez: 5 encontradas, 0 modificadas
+sin descuento de 5: 3 modificadas
+articulo 0 de la venta 1: 1 modificada
+{"idVenta":5,"etiquetas":["revisada"]}
+{"idVenta":11,"etiquetas":["revisada"]}
+{"idVenta":14,"etiquetas":["web","revisada"]}
+{"idVenta":17,"etiquetas":["revisada"]}
+{"idVenta":23,"etiquetas":["revisada"]}
+{"idVenta":1,"articulos":[{"codigo":"PIN-04","cantidad":3},{"codigo":"CAN-08","cantidad":4}]}
+descuentoAplicado: 3

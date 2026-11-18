@@ -1,0 +1,4 @@
+1|dentro de la transacción|1|4500.00
+1|dentro de la transacción|2|3700.00
+2|después del COMMIT|1|4500.00
+2|después del COMMIT|2|3700.00

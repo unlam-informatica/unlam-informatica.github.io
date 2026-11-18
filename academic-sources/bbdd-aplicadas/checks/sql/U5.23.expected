@@ -1,0 +1,3 @@
+FULL sin ningun backup completo|FULL|NOTHING
+Tras el full y un cambio|FULL|LOG_BACKUP
+Tras el backup de log|FULL|NOTHING

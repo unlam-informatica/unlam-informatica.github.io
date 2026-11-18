@@ -1,0 +1,3 @@
+Sin INCLUDE|Index Seek|[IX_Pedido_ClienteId]|104
+Sin INCLUDE|Key Lookup|[PK_Pedido]|104
+Con INCLUDE (Importe)|Index Seek|[IX_Pedido_ClienteId]|2

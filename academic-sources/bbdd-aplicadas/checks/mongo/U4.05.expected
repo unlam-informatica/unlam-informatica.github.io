@@ -1,0 +1,28 @@
+A) electricidad con cantidad >= 3 en el mismo articulo
+{"idVenta":2}
+{"idVenta":4}
+{"idVenta":15}
+{"idVenta":17}
+{"idVenta":22}
+B) las dos condiciones pueden cumplirlas articulos distintos
+{"idVenta":2}
+{"idVenta":4}
+{"idVenta":5}
+{"idVenta":7}
+{"idVenta":14}
+{"idVenta":15}
+{"idVenta":17}
+{"idVenta":22}
+C) etiquetas con promo y web
+{"idVenta":3,"etiquetas":["promo","web"]}
+{"idVenta":9,"etiquetas":["promo","web"]}
+{"idVenta":15,"etiquetas":["promo","web"]}
+D) ventas con exactamente tres articulos
+{"idVenta":2}
+{"idVenta":5}
+{"idVenta":8}
+{"idVenta":11}
+{"idVenta":14}
+{"idVenta":17}
+{"idVenta":20}
+{"idVenta":23}

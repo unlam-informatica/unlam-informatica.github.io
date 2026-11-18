@@ -1,0 +1,5 @@
+Warning: The join order has been enforced because a local join hint is used.
+Warning: The join order has been enforced because a local join hint is used.
+0|COMPRESSED|300000
+0|COMPRESSED|300000
+1|OPEN|3

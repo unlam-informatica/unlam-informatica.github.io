@@ -1,0 +1,11 @@
+edad 15 -> codigo 121: Document failed validation
+sin edad -> codigo 121: Document failed validation
+edad texto -> codigo 121
+empleados: 2
+solo_int 30.5 -> 121
+{"edad":30,"t":"int"}
+{"edad":31,"t":"int"}
+["empleados","nueva","solo_int"]
+drop existente: true
+drop inexistente: true
+["empleados","solo_int"]

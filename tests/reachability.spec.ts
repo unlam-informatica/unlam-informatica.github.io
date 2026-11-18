@@ -87,13 +87,18 @@ test.describe('navegación con 404 de directorio en caché', () => {
     await expect(page.locator('#uml-vs-mermaid')).toBeVisible();
   });
 
-  test('los enlaces a descargas conservan rutas y bytes originales', async ({ page, request }) => {
-    await page.goto('/bbdd-aplicadas/unidad-1/practica/window-functions/index.html');
-    const link = page.locator('a[href$="window-functions.sql"]').first();
-    await expect(link).toBeVisible();
-    const href = await link.getAttribute('href');
-    const response = await request.get(href!);
+  test('las descargas migradas conservan rutas y bytes originales', async ({ request }) => {
+    const response = await request.get('/bbdd-aplicadas/unidad-2/practica/archivos/starwars.json');
     expect(response.status()).toBe(200);
-    expect(await response.body()).toEqual(readFileSync('public/bbdd-aplicadas/unidad-1/practica/window-functions.sql'));
+    expect(await response.body()).toEqual(readFileSync('public/bbdd-aplicadas/unidad-2/practica/archivos/starwars.json'));
+  });
+
+  test('los recursos retirados ya no se publican', async ({ request }) => {
+    // migration/withdrawn.json registra su procedencia; npm run validate exige que no estén en public/ ni dist/.
+    const withdrawn = JSON.parse(readFileSync('migration/withdrawn.json', 'utf8')).assets;
+    for (const asset of withdrawn) {
+      const response = await request.get('/' + asset.output.slice('public/'.length));
+      expect(response.status(), asset.output).toBe(404);
+    }
   });
 });

@@ -1,0 +1,9 @@
+Sin indice:
+  etapas: COLLSCAN | nReturned=20 keysExamined=0 docsExamined=1000
+Con indice simple en cliente:
+  etapas: FETCH > IXSCAN | nReturned=20 keysExamined=20 docsExamined=20
+Filtro estado (igualdad) + total (rango), ordenado por fecha:
+  etapas: FETCH > SORT > IXSCAN | nReturned=100 keysExamined=100 docsExamined=100
+Con el orden E-S-R (igualdad, sort, rango):
+  etapas: FETCH > IXSCAN | nReturned=100 keysExamined=501 docsExamined=100
+aggregate: IXSCAN | docsExamined=20

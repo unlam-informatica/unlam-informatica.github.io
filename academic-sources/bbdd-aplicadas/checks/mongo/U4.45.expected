@@ -1,0 +1,6 @@
+{"_id":"BD1","docente":"Marta Ríos","inscriptos":3,"promedio":7.666666666666667}
+{"_id":"RED","docente":"Hugo Paz","inscriptos":1,"promedio":7}
+{"_id":"SO","docente":"Marta Ríos","inscriptos":0,"promedio":null}
+--
+{"_id":"BD1","docente":"Marta Ríos Vega"}
+{"_id":"SO","docente":"Marta Ríos Vega"}

@@ -1,0 +1,2 @@
+<Empresa><d DepartamentoId="1" Departamento="Ingenieria"><e EmpleadoId="1" Empleado="Empleado 01"/><e EmpleadoId="2" Empleado="Empleado 02"/></d></Empresa>
+<Empresa><e EmpleadoId="1" Empleado="Empleado 01"><d DepartamentoId="1" Departamento="Ingenieria"/></e><e EmpleadoId="2" Empleado="Empleado 02"><d DepartamentoId="1" Departamento="Ingenieria"/></e></Empresa>

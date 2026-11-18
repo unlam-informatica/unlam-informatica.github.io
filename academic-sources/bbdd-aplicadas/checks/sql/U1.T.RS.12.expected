@@ -1,0 +1,6 @@
+ALL (todos los examenes menores a 7)|Beto
+ALL (todos los examenes menores a 7)|Cora
+ANY (algun examen mayor a 8)|Ana
+EXISTS|Ana
+EXISTS|Beto
+NOT EXISTS|Cora

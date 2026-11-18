@@ -1,0 +1,32 @@
+bulkadmin
+dbcreator
+diskadmin
+processadmin
+securityadmin
+serveradmin
+setupadmin
+sysadmin
+##MS_DatabaseConnector##
+##MS_DatabaseManager##
+##MS_DefinitionReader##
+##MS_LoginManager##
+##MS_PerformanceDefinitionReader##
+##MS_SecurityDefinitionReader##
+##MS_ServerPerformanceStateReader##
+##MS_ServerSecurityStateReader##
+##MS_ServerStateManager##
+##MS_ServerStateReader##
+db_accessadmin
+db_backupoperator
+db_datareader
+db_datawriter
+db_ddladmin
+db_denydatareader
+db_denydatawriter
+db_owner
+db_securityadmin
+RolServidorU5T07|VIEW SERVER STATE|GRANT
+0
+usr_ana hereda de rol_lectura por rol_analistas|SI
+usr_lector en db_datareader|SI
+usr_lector tambien en db_denydatareader|NO

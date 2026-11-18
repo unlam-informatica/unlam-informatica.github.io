@@ -1,0 +1,5 @@
+1|SNAPSHOT con la opción en OFF: error|3952
+2|snapshot_isolation_state_desc|ON
+3|transacciones SNAPSHOT activas de esta sesión|1
+4|versiones de fila en el version store (>= 1)|sí
+5|saldo leído al empezar la transacción|5000.00

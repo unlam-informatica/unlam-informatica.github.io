@@ -1,0 +1,9 @@
+SELECT Nombre, Sueldo FROM ventas.Vendedor WHERE Region = 'Sur' ORDER BY VendedorId
+Dario|4100.00
+Eva|2800.00
+Fede|3500.00
+Gina|2800.00
+Dario|4100.00
+Eva|2800.00
+Fede|3500.00
+Gina|2800.00

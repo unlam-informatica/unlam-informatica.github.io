@@ -1,0 +1,1 @@
+[{"id":1,"nombre":"Ferretería Norte","pedidos":[{"pedido":1001,"total":3000.00},{"pedido":1002,"total":1250.50}]},{"id":2,"nombre":"Kiosco Central","pedidos":[{"pedido":1003,"total":480.25}]}]
