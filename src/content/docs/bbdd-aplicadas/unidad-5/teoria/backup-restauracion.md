@@ -2,7 +2,7 @@
 title: Backups, restauración, RPO y RTO
 slug: bbdd-aplicadas/unidad-5/teoria/backup-restauracion
 sidebar:
-  order: 4
+  order: 5
 ---
 
 [← Unidad 5](/bbdd-aplicadas/unidad-5/teoria/)
@@ -507,6 +507,10 @@ Depende del sentido. En SQL Server es acumulativo desde el último completo; "in
 - Completo es la base; el diferencial es acumulativo; los logs forman una cadena sin huecos.
 - `NORECOVERY` en cada pieza salvo la última; `STOPAT` o marcas para el punto exacto.
 - `COPY_ONLY` no altera la cadena; `REPLACE` y la pérdida del certificado son los grandes riesgos.
+:::
+
+:::tip[Para seguir]
+- Con las copias claras, seguí con [Alta disponibilidad, replicación y recuperación ante desastres](/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad/): una réplica no reemplaza al backup.
 :::
 
 ## Fuentes

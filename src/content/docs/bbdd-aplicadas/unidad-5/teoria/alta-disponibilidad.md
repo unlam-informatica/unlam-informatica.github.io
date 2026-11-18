@@ -2,7 +2,7 @@
 title: Alta disponibilidad, replicación y recuperación ante desastres
 slug: bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad
 sidebar:
-  order: 5
+  order: 6
 ---
 
 [← Unidad 5](/bbdd-aplicadas/unidad-5/teoria/)
@@ -347,6 +347,10 @@ Del orden de 15 minutos en el mejor caso (lo que puede estar sin respaldar en la
 - Los grupos de disponibilidad envían el log a réplicas con su propio almacenamiento; solo entre réplicas síncronas hay *failover* automático.
 - Replicación (snapshot, transaccional, merge) distribuye objetos; log shipping envía backups de log y se maneja de forma manual.
 - La herramienta depende del RPO, el RTO y el alcance de lo que se protege.
+:::
+
+:::tip[Para seguir]
+- Practicá con los ejercicios 24, 25, 34 y 35 del [laboratorio de backup](/bbdd-aplicadas/unidad-5/practica/laboratorio-backup/).
 :::
 
 ## Fuentes

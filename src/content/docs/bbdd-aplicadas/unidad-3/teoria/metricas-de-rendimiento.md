@@ -417,6 +417,10 @@ Que la solicitud está esperando a la sesión con ese identificador, que mantien
 - El Monitor de actividad es el panel en vivo de las mismas DMV; el historial se arma con trabajos programados o herramientas de terceros.
 :::
 
+:::tip[Para seguir]
+Practicá con los ejercicios 5 y 19 de la [Práctica de rendimiento](/bbdd-aplicadas/unidad-3/practica/rendimiento/).
+:::
+
 ## Fuentes
 
 - Presentación de cátedra, Unidad 3, parte 2 (v1.0, 2023): monitoreo y métricas de performance.

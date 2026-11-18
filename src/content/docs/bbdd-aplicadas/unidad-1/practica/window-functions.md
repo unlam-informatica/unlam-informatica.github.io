@@ -2,8 +2,8 @@
 title: Práctica — Window Functions
 slug: bbdd-aplicadas/unidad-1/practica/window-functions
 sidebar:
-  order: 2
   label: Window Functions
+  order: 2
 ---
 
 Doce ejercicios originales sobre funciones de ventana, con datos propios: una carrera por etapas. Presuponen la lección de [window functions](/bbdd-aplicadas/unidad-1/teoria/window-functions/) y, para el ejercicio 4 y el 10, de [CTE](/bbdd-aplicadas/unidad-1/teoria/cte/). Objetivos: ranking, particiones, `LAG`/`LEAD`, marcos, acumulados, valores de borde y percentiles.

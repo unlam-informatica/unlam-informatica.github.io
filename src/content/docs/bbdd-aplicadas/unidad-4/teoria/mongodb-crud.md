@@ -543,6 +543,10 @@ Solo los documentos cuyo `fecha` es un `Date`, porque los operadores de comparac
 - `deleteOne()` y `deleteMany()` reemplazan al obsoleto `remove()`.
 :::
 
+:::tip[Para seguir]
+- Practicá con los ejercicios 1 a 7 de la [Práctica — Unidad 4 NoSQL / MongoDB](/bbdd-aplicadas/unidad-4/practica/ejercicios/) y después seguí con [Aggregation Pipeline, índices y vistas](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/).
+:::
+
 ## Fuentes
 
 - Presentación de cátedra, Unidad 4, parte 1 (MQL, CRUD) y guía de trabajos prácticos de MongoDB.

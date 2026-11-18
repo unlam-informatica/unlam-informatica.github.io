@@ -911,6 +911,10 @@ Que los campos del filtro y los de la proyección estén todos en el índice, y 
 - En un índice compuesto, el orden de los campos sigue la regla ESR como punto de partida y se confirma midiendo.
 :::
 
+:::tip[Para seguir]
+- Practicá con los ejercicios 8 a 13 de la [Práctica — Unidad 4 NoSQL / MongoDB](/bbdd-aplicadas/unidad-4/practica/ejercicios/) y con el [laboratorio de la tienda online](/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online/). Después seguí con [MongoDB Compass](/bbdd-aplicadas/unidad-4/teoria/mongodb-compass/).
+:::
+
 ## Fuentes
 
 - Presentación de cátedra, Unidad 4: agregaciones (pipeline) e índices y estadísticas de ejecución.

@@ -2,7 +2,7 @@
 title: Medición y mejora de la calidad
 slug: bbdd-aplicadas/unidad-6/teoria/medicion-calidad
 sidebar:
-  order: 5
+  order: 4
   badge:
     text: Complementario
     variant: note
@@ -228,6 +228,10 @@ Porque cuenta los valores no nulos y no distingue la cadena vacía ni los espaci
 - SQL prueba que los datos cumplen reglas expresadas en SQL, no que sean verdaderos: mide sobre todo completitud, conformidad y consistencia.
 - Los controles se activan después de perfilar, aislar excepciones y corregir con evidencia.
 - Los umbrales y los indicadores de esta página son propuestas, no requisitos de la norma.
+:::
+
+:::tip[Para seguir]
+- Practicá con el [Laboratorio — Perfilado, reglas y métricas](/bbdd-aplicadas/unidad-6/practica/laboratorio-calidad/) y después seguí con [Gobierno, privacidad y calidad desde el diseño](/bbdd-aplicadas/unidad-6/teoria/gobierno-privacidad/) (complementario).
 :::
 
 ## Fuentes

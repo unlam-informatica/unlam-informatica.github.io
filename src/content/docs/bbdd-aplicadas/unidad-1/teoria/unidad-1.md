@@ -211,6 +211,10 @@ límites) o una edición paga como Standard o Enterprise.
 - El DBA cuida el servicio y los datos; el programador diseña y construye la base y su lógica.
 :::
 
+:::tip[Para seguir]
+Seguí con el [Repaso de SQL](/bbdd-aplicadas/unidad-1/teoria/repaso-sql/).
+:::
+
 ## Fuentes
 
 - Presentación de cátedra, Unidad 1, parte 1: Conceptos básicos (v1.1.0, marzo 2025).

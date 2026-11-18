@@ -2,7 +2,7 @@
 title: JSON en SQL Server
 slug: bbdd-aplicadas/unidad-2/teoria/json-en-sql
 sidebar:
-  order: 6
+  order: 7
 ---
 
 [← Unidad 2](/bbdd-aplicadas/unidad-2/teoria/)
@@ -544,6 +544,10 @@ Con `CROSS APPLY OPENJSON(columna) WITH (...)`; si el arreglo está en una propi
 - `JSON_VALUE` extrae escalares, `JSON_QUERY` fragmentos y `JSON_MODIFY` devuelve un JSON modificado.
 - `OPENJSON` convierte JSON en filas (con o sin `WITH`; `AS JSON` y `CROSS APPLY` para anidados).
 - `FOR JSON PATH/AUTO` genera JSON; `JSON_OBJECT` y `JSON_ARRAY` lo construyen en SQL Server 2022.
+:::
+
+:::tip[Para seguir]
+Practicá con la [Práctica — JSON en SQL Server](/bbdd-aplicadas/unidad-2/practica/json/) y después seguí con [XML en SQL Server](/bbdd-aplicadas/unidad-2/teoria/xml-en-sql/).
 :::
 
 ## Fuentes

@@ -10,11 +10,25 @@ sidebar:
 Apuntes, guías de referencia y ejercicios prácticos de la cursada, organizados por unidad según el
 programa analítico 2024 de la asignatura (3641).
 
-:::note[Nota]
-Este sitio usa una estructura de documentación navegable con búsqueda, anclas por encabezado, tabla de contenidos lateral en páginas extensas y soporte para diagramas Mermaid y fórmulas TeX.
+## Por dónde empezar
+
+1. Leé [Cómo estudiar esta materia](/bbdd-aplicadas/como-estudiar/): organización de las unidades,
+   método de estudio, herramientas para las prácticas y evaluación.
+2. Abrí la [presentación de la Unidad 1](/bbdd-aplicadas/unidad-1/teoria/) y seguí su **ruta de
+   aprendizaje**: indica qué lección leer, qué práctica resolver y cómo autoevaluarte en cada etapa.
+3. Al terminar cada unidad, su presentación te indica cómo continuar con la siguiente.
+
+Si estás repasando para un examen, empezá por
+[Repasar para un examen](/bbdd-aplicadas/como-estudiar/#repasar-para-un-examen).
+
+:::note[Contenido complementario]
+Los temas útiles que no figuran en el programa 2024 llevan la marca «Complementario» en el menú y un
+aviso al comienzo. Podés dejarlos para una segunda lectura.
 :::
 
-## Contenido
+## Unidades
+
+Cada enlace lleva a la presentación de la unidad, con sus objetivos, prerrequisitos y ruta de estudio.
 
 ### [Unidad 1 — Conceptos básicos](/bbdd-aplicadas/unidad-1/teoria/)
 Qué es una base de datos, motores y licencias, tareas del DBA, despliegue embebido, on premise y cloud. Repaso de SQL: DDL, DML, integridad referencial, subconsultas, vistas, procedimientos, triggers, funciones, window functions, CTE, PIVOT y el valor NULL.

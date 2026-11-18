@@ -1118,6 +1118,10 @@ Porque la función se aplica a cada valor de la columna y el índice está orden
 - Columnstore para analítica sobre tablas grandes y poco modificadas; rowstore para OLTP.
 :::
 
+:::tip[Para seguir]
+Practicá con la [Práctica de rendimiento](/bbdd-aplicadas/unidad-3/practica/rendimiento/) y seguí con [Plan de ejecución y estadísticas](/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/).
+:::
+
 ## Fuentes
 
 - Presentación de cátedra, Unidad 3, parte 1 (v1.0, agosto 2023): índices, optimización y rowstore/columnstore.

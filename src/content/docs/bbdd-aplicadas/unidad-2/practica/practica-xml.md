@@ -2,8 +2,8 @@
 title: Práctica — XML en SQL Server
 slug: bbdd-aplicadas/unidad-2/practica/xml
 sidebar:
-  order: 5
   label: XML en SQL Server
+  order: 2
 ---
 
 Siete ejercicios para generar XML con `FOR XML`, consultarlo con `.nodes()` y `.value()`, leerlo con `OPENXML` e importarlo desde un archivo. Presuponen la lección de [XML en SQL Server](/bbdd-aplicadas/unidad-2/teoria/xml-en-sql/). Los datos son propios. El ejercicio 7 usa el archivo [empleado.xml](/bbdd-aplicadas/unidad-2/practica/archivos/empleado.xml), que debe estar en una carpeta del servidor (por ejemplo `C:\Importar\`).

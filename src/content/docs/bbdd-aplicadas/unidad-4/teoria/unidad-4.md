@@ -1,13 +1,22 @@
 ---
-title: Unidad 4 — Bases de datos no relacionales
+title: Unidad 4 — Resumen integrador
 slug: bbdd-aplicadas/unidad-4/teoria/apunte-completo
 sidebar:
-  order: 1
+  hidden: true
+  label: Resumen integrador
 ---
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)
 
-Resumen integrador de la unidad. Cada sección condensa un tema y enlaza a la página que lo desarrolla, con sus ejemplos verificados en MongoDB 7.0 y SQL Server 2022. Para estudiar un tema en profundidad, se pasa a la página temática; esta sirve para ver el conjunto y repasar.
+Resumen integrador de la unidad. Cada sección condensa un tema y enlaza a la página que lo desarrolla, con sus ejemplos verificados en MongoDB 7.0 y SQL Server 2022.
+
+:::tip[Cómo usar este resumen]
+- **Antes de estudiar:** leelo de corrido para tener el mapa de la unidad (de NoSQL a MongoDB, POO y KDD).
+- **Después de estudiar:** usalo para repasar y conectar los temas.
+- **Antes del parcial (unidades 1 a 4):** identificá los temas principales, volvé a la lección de cada uno y completá el repaso con la [guía para el parcial](/bbdd-aplicadas/unidad-4/teoria/guia-parcial/).
+
+No reemplaza a las lecciones: cada sección enlaza a la página donde el tema se desarrolla en profundidad.
+:::
 
 ## Mapa de la unidad
 
@@ -141,13 +150,16 @@ Desarrollo y ejemplos en [Datos, Data Lake y KDD](/bbdd-aplicadas/unidad-4/teori
 
 ## Ruta de estudio recomendada
 
+La ruta completa, con las prácticas de cada etapa, está en la [presentación de la unidad](/bbdd-aplicadas/unidad-4/teoria/). En orden:
+
 1. [NoSQL — Conceptos y modelos](/bbdd-aplicadas/unidad-4/teoria/nosql-conceptos/).
 2. [MongoDB — Introducción](/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion/).
-3. [CRUD y consultas](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/).
-4. [Aggregation Pipeline, índices y vistas](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/).
-5. [MongoDB Compass](/bbdd-aplicadas/unidad-4/teoria/mongodb-compass/) y [Instalación y conexión](/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb/), cuando se vaya a practicar.
-6. [POO y bases de datos](/bbdd-aplicadas/unidad-4/teoria/poo-y-bases/) y [Datos, Data Lake y KDD](/bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd/).
-7. [Guía para el parcial](/bbdd-aplicadas/unidad-4/teoria/guia-parcial/) y la [práctica de la unidad](/bbdd-aplicadas/unidad-4/practica/).
+3. [Instalación y conexión](/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb/), cuando se vaya a ejecutar código.
+4. [CRUD y consultas](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/).
+5. [Aggregation Pipeline, índices y vistas](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/).
+6. [MongoDB Compass](/bbdd-aplicadas/unidad-4/teoria/mongodb-compass/) como herramienta de apoyo, y la [práctica de la unidad](/bbdd-aplicadas/unidad-4/practica/).
+7. [POO y bases de datos](/bbdd-aplicadas/unidad-4/teoria/poo-y-bases/) y [Datos, Data Lake y KDD](/bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd/).
+8. [Guía para el parcial](/bbdd-aplicadas/unidad-4/teoria/guia-parcial/).
 
 :::tip[En resumen]
 - NoSQL ofrece modelos de almacenamiento (clave-valor, documentos, grafos, columnas) optimizados para cargas concretas; se elige por el patrón de acceso.

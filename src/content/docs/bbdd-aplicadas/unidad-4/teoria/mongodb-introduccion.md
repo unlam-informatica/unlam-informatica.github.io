@@ -2,7 +2,7 @@
 title: MongoDB — Introducción
 slug: bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion
 sidebar:
-  order: 3
+  order: 2
 ---
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)

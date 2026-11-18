@@ -1401,6 +1401,10 @@ retorno y la llena con varias sentencias, lo que da menos información al optimi
 - Las funciones se usan dentro de consultas; los procedimientos, con `EXEC`.
 :::
 
+:::tip[Para seguir]
+Practicá con el [Trabajo Práctico 1 — Repaso de SQL](/bbdd-aplicadas/unidad-1/practica/tp1/) y después seguí con [Window Functions](/bbdd-aplicadas/unidad-1/teoria/window-functions/).
+:::
+
 ## Fuentes
 
 - Presentación de cátedra, Unidad 1, parte 2: Repaso de SQL (v1.1.0, 2025).

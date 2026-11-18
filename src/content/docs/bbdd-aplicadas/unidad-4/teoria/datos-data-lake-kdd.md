@@ -2,7 +2,7 @@
 title: Datos, Data Lake y KDD
 slug: bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd
 sidebar:
-  order: 7
+  order: 8
 ---
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)

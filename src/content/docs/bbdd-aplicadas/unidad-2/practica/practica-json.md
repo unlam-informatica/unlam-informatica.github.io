@@ -2,8 +2,8 @@
 title: Práctica — JSON en SQL Server
 slug: bbdd-aplicadas/unidad-2/practica/json
 sidebar:
-  order: 4
   label: JSON en SQL Server
+  order: 1
 ---
 
 Siete ejercicios de validación, consulta, modificación y generación de JSON. Presuponen la lección de [JSON en SQL Server](/bbdd-aplicadas/unidad-2/teoria/json-en-sql/). Los datos son propios y no hacen falta archivos externos.

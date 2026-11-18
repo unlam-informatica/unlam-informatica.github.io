@@ -1,13 +1,22 @@
 ---
-title: Unidad 5 — Protección de los datos
+title: Unidad 5 — Resumen integrador
 slug: bbdd-aplicadas/unidad-5/teoria/apunte-completo
 sidebar:
-  order: 1
+  hidden: true
+  label: Resumen integrador
 ---
 
 [← Unidad 5](/bbdd-aplicadas/unidad-5/teoria/)
 
 Esta página es un **resumen integrador**: ubica cada tema de la unidad, dice qué problema resuelve y lleva a la página que lo desarrolla. No repite el desarrollo; para el detalle, los ejemplos con resultados y los ejercicios, seguí los enlaces.
+
+:::tip[Cómo usar este resumen]
+- **Antes de estudiar:** leelo de corrido para tener el mapa de la unidad (seguridad, recuperación y disponibilidad).
+- **Después de estudiar:** usalo para repasar y conectar los temas.
+- **Antes del trabajo práctico integrador o del final:** identificá los temas principales, volvé a la lección de cada uno y completá el repaso con la [guía de repaso](/bbdd-aplicadas/unidad-5/teoria/guia-parcial/).
+
+No reemplaza a las lecciones: cada sección enlaza a la página donde el tema se desarrolla en profundidad.
+:::
 
 La protección de los datos no se logra con una única herramienta: requiere controles preventivos, detectivos y correctivos que cubran identidades, permisos, programación, cifrado, respaldo, recuperación y continuidad.
 
@@ -82,4 +91,4 @@ La defensa principal contra la inyección SQL es **parametrizar**, complementada
 - HA reduce caída, DR recupera de un desastre y el backup recupera estados históricos.
 - TDE protege archivos en reposo, TLS protege conexiones, y ninguno reemplaza al mínimo privilegio.
 
-Para repasar, seguí con la [Guía de repaso](/bbdd-aplicadas/unidad-5/teoria/guia-parcial/).
+Para repasar, seguí con la [Guía de repaso](/bbdd-aplicadas/unidad-5/teoria/guia-parcial/). La ruta de estudio con las prácticas de cada bloque está en la [presentación de la unidad](/bbdd-aplicadas/unidad-5/teoria/).

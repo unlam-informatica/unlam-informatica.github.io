@@ -2,9 +2,9 @@
 title: APIs desde SQL Server
 slug: bbdd-aplicadas/unidad-2/teoria/apis-desde-sql
 sidebar:
-  order: 9
+  order: 10
   badge:
-    text: Complementario
+    text: Parte complementaria
     variant: note
 ---
 
@@ -304,6 +304,10 @@ Porque amplía la superficie de ataque: permite crear objetos COM desde T-SQL a 
 - Una API REST expone recursos con URL, se usa con verbos HTTP, responde con un código de estado y un cuerpo (JSON); Postman sirve para explorarla.
 - Desde SQL Server la respuesta es un texto JSON que se procesa con `ISJSON`, `JSON_VALUE` y `OPENJSON`.
 - Llamar a una API con Ole Automation es posible pero desaconsejado por seguridad; la alternativa recomendada es llamar desde la aplicación.
+:::
+
+:::tip[Para seguir]
+Practicá con la [Práctica — APIs desde SQL Server](/bbdd-aplicadas/unidad-2/practica/apis/): el ejercicio 1 es del programa y los ejercicios 2 a 5 son complementarios.
 :::
 
 ## Fuentes

@@ -2,7 +2,10 @@
 title: BD en memoria
 slug: bbdd-aplicadas/unidad-2/teoria/bd-en-memoria
 sidebar:
-  order: 3.5
+  order: 4
+  badge:
+    text: Parte complementaria
+    variant: note
 ---
 
 [← Unidad 2](/bbdd-aplicadas/unidad-2/teoria/)
@@ -428,6 +431,10 @@ La variable vive en el módulo en ejecución; la temporal, en la sesión (la glo
 - No hay que confundir variable de tabla, tabla temporal (en `tempdb`) y tabla en memoria.
 - In-Memory OLTP (complementario) requiere un filegroup `MEMORY_OPTIMIZED_DATA`, una `PRIMARY KEY` no agrupada y elegir `SCHEMA_AND_DATA` o `SCHEMA_ONLY`.
 - Desde 2016/2017 se admiten claves foráneas entre tablas en memoria, columnas `NULL`, `ALTER TABLE` y columnas calculadas.
+:::
+
+:::tip[Para seguir]
+Practicá In-Memory OLTP (complementario) con la [Práctica — BD en memoria](/bbdd-aplicadas/unidad-2/practica/bd-en-memoria/); las tablas temporales y variables de tabla se usan en los ejercicios 5 y 13 del [Trabajo práctico 2](/bbdd-aplicadas/unidad-2/practica/tp2/).
 :::
 
 ## Fuentes

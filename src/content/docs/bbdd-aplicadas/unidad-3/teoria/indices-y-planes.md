@@ -821,6 +821,10 @@ En la sincrónica la consulta espera la actualización y se compila con estadís
 - Las estadísticas (encabezado, densidad e histograma de hasta 200 pasos) permiten estimar la cardinalidad. Se actualizan solas por umbrales, de forma sincrónica o asincrónica, y se pueden crear a mano (varias columnas, filtradas).
 :::
 
+:::tip[Para seguir]
+Los ejercicios 4, 6, 7 y 15 de la [Práctica de rendimiento](/bbdd-aplicadas/unidad-3/practica/rendimiento/) usan esta lección. Después seguí con [Métricas de rendimiento](/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento/).
+:::
+
 ## Fuentes
 
 - Presentación de cátedra, Unidad 3, parte 1 (v1.0, agosto 2023): plan de ejecución y estadísticas.

@@ -15,7 +15,7 @@ Es una práctica elaborada por este portal, no de la cátedra. Reemplaza a la ve
 
 ## Antes de empezar
 
-Presupone las lecciones de [CRUD](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/) y de [agregación](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/).
+Presupone las lecciones de [CRUD](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/) y de [agregación](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/) (con la sección de índices), y un servidor MongoDB con `mongosh` ([instalación](/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb/)).
 
 ## Conjunto de datos
 

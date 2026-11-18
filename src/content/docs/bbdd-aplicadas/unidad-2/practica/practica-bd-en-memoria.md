@@ -2,8 +2,11 @@
 title: Práctica — BD en memoria (In-Memory OLTP)
 slug: bbdd-aplicadas/unidad-2/practica/bd-en-memoria
 sidebar:
-  order: 6
   label: BD en memoria (In-Memory OLTP)
+  order: 5
+  badge:
+    text: Complementario
+    variant: note
 ---
 
 Presupone la lección [BD en memoria](/bbdd-aplicadas/unidad-2/teoria/bd-en-memoria/). In-Memory OLTP es contenido complementario (no forma parte del programa 2024); los ejercicios se ejecutan sobre SQL Server 2022.

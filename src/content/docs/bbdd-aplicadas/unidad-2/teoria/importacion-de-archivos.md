@@ -2,7 +2,7 @@
 title: Importación de archivos
 slug: bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos
 sidebar:
-  order: 8
+  order: 9
 ---
 
 [← Unidad 2](/bbdd-aplicadas/unidad-2/teoria/)
@@ -636,6 +636,10 @@ Leyendo los bytes con `SINGLE_BLOB` hacia una columna `VARCHAR(MAX)` con _collat
 - `OPENROWSET(BULK ...)` lee archivos JSON y XML como un único valor para procesarlos con `OPENJSON` y `.nodes()`.
 - Cargá con staging, validá con `TRY_CONVERT` y conservá las filas rechazadas con su motivo.
 - La codificación del archivo (UTF-8, UTF-16) importa tanto como el formato.
+:::
+
+:::tip[Para seguir]
+Practicá con la [Práctica — Importación de archivos](/bbdd-aplicadas/unidad-2/practica/importacion-archivos/) y después integrá todo en el [Trabajo práctico 2](/bbdd-aplicadas/unidad-2/practica/tp2/).
 :::
 
 ## Fuentes

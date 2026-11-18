@@ -2,7 +2,7 @@
 title: Control de transacciones (TCL)
 slug: bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia
 sidebar:
-  order: 2
+  order: 1
 ---
 
 Una **transacción** es una unidad lógica de trabajo: un conjunto de operaciones que el motor trata como una sola, de modo que o se aplican todas o no se aplica ninguna. Sirve para que una operación de negocio que toca varias filas o tablas (una transferencia, una venta con su stock y su asiento contable) nunca quede a medio hacer, ni siquiera si el servidor se cae. El lenguaje que la controla es **TCL** (*Transaction Control Language*): `BEGIN TRANSACTION`, `COMMIT`, `ROLLBACK` y `SAVE TRANSACTION`.
@@ -679,6 +679,10 @@ Una validación previa evita abrir una transacción que se sabe que va a fallar.
 - `SAVE TRANSACTION` permite revertir parcialmente sin cerrar la transacción.
 - En `CATCH`, `XACT_STATE()` indica si hay transacción y si se puede confirmar. Con `XACT_ABORT ON` los errores condenan la transacción.
 - Procedimiento transaccional: `XACT_ABORT ON`, validar antes, `TRY/CATCH`, `ROLLBACK` condicionado y `THROW;`.
+:::
+
+:::tip[Para seguir]
+Practicá con la parte 1 del [Laboratorio TCL](/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/) y después seguí con [Concurrencia, bloqueos y transacciones distribuidas](/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/).
 :::
 
 ## Fuentes

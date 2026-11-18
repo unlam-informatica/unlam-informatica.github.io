@@ -2,7 +2,7 @@
 title: Registro de transacciones y modelos de recuperación
 slug: bbdd-aplicadas/unidad-5/teoria/log-recuperacion
 sidebar:
-  order: 3
+  order: 4
 ---
 
 [← Unidad 5](/bbdd-aplicadas/unidad-5/teoria/)
@@ -354,6 +354,10 @@ Hacer backups de log periódicos (con una frecuencia acorde al RPO). Achicar el 
 - Truncar libera espacio lógico; achicar reduce el archivo. No son lo mismo.
 - `log_reuse_wait_desc` dice por qué no se reutiliza el log.
 - `SIMPLE` no admite backup de log; `FULL` lo exige y permite recuperar a un instante; `BULK_LOGGED` es una variante para ventanas masivas.
+:::
+
+:::tip[Para seguir]
+- Seguí con [Backups, restauración, RPO y RTO](/bbdd-aplicadas/unidad-5/teoria/backup-restauracion/); los ejercicios 21, 23 y 37 del [laboratorio de backup](/bbdd-aplicadas/unidad-5/practica/laboratorio-backup/) trabajan el log.
 :::
 
 ## Fuentes

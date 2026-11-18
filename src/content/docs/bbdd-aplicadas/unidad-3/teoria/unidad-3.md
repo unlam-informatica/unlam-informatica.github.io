@@ -2,7 +2,7 @@
 title: Concurrencia, bloqueos y transacciones distribuidas
 slug: bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia
 sidebar:
-  order: 1
+  order: 2
 ---
 
 Un servidor de base de datos atiende muchas sesiones a la vez. Si cada una trabajara sobre sus propios datos no habría problema, pero casi siempre varias leen y modifican las mismas filas. El **control de concurrencia** es el conjunto de reglas con que el motor decide quién espera y qué ve cada transacción, para que el resultado siga siendo correcto. Esta página trata ese control, los **bloqueos y esperas** que produce y las **transacciones distribuidas**, que abarcan más de un servidor.
@@ -742,6 +742,10 @@ El coordinador ordena el `ROLLBACK` a todos los participantes: la transacción s
 - Un `SET TRANSACTION ISOLATION LEVEL` dentro de un procedimiento se restablece al volver.
 - Bloqueos: `sys.dm_tran_locks`, `sys.dm_exec_requests` y los tipos de espera `LCK_M_*`. `LOCK_TIMEOUT` produce el error 1222. Deadlock: error 1205, la víctima la define la prioridad y luego el costo de reversión.
 - Transacciones distribuidas: commit en dos fases con MS DTC, `BEGIN DISTRIBUTED TRANSACTION` y servidores vinculados. `SNAPSHOT` no las admite.
+:::
+
+:::tip[Para seguir]
+Practicá con el [Laboratorio de niveles de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/) y la parte 2 del [Laboratorio TCL](/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/). Después seguí con [Índices y optimización](/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/).
 :::
 
 ## Fuentes

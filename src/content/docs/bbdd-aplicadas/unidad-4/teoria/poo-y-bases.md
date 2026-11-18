@@ -2,7 +2,7 @@
 title: POO y bases de datos
 slug: bbdd-aplicadas/unidad-4/teoria/poo-y-bases
 sidebar:
-  order: 6.5
+  order: 7
 ---
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)

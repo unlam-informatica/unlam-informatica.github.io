@@ -2,7 +2,7 @@
 title: Common Table Expressions
 slug: bbdd-aplicadas/unidad-1/teoria/cte
 sidebar:
-  order: 5
+  order: 4
 ---
 
 Una **common table expression (CTE)** es un resultado con nombre que existe solo durante **una** sentencia. Se declara con `WITH` antes del `SELECT`, `INSERT`, `UPDATE`, `DELETE` o `MERGE` que la usa. Sirve para dar nombre a un paso intermedio, para filtrar por el resultado de una [función de ventana](/bbdd-aplicadas/unidad-1/teoria/window-functions/) y para recorrer jerarquías.
@@ -329,6 +329,10 @@ No: existe solo para la sentencia que la sigue. La segunda da el error 208.
 - La recursiva tiene ancla, `UNION ALL` y miembro recursivo; el límite por defecto es 100 niveles.
 - `DELETE`, `UPDATE` e `INSERT` pueden usar una CTE; es el patrón para eliminar duplicados.
 - La sentencia previa a `WITH` termina en `;`.
+:::
+
+:::tip[Para seguir]
+Los ejercicios 4, 15 y 16 del [Trabajo Práctico 1](/bbdd-aplicadas/unidad-1/practica/tp1/) usan CTE. Después seguí con [PIVOT](/bbdd-aplicadas/unidad-1/teoria/pivot/).
 :::
 
 ## Fuentes

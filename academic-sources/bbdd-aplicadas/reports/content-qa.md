@@ -1,6 +1,6 @@
 # Control de calidad — bbdd-aplicadas
 
-- Páginas: 82 · Ejercicios: 235 (SymPy: 0, razonamiento: 43, motor: 185, revisado: 7; completos: 235)
+- Páginas: 83 · Ejercicios: 235 (SymPy: 0, razonamiento: 43, motor: 185, revisado: 7; completos: 235)
 - Errores: **0** · Advertencias: 0
 
 | Unidad | Ejercicios | Inicial | Intermedio | Avanzado | SymPy | Razonamiento | Motor | Revisado | Completos |

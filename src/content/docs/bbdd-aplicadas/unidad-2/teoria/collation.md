@@ -430,6 +430,10 @@ La comparación es insensible a mayúsculas (`CI`) y devuelve las dos filas de �
 - Desde SQL Server 2019 hay intercalaciones UTF-8.
 :::
 
+:::tip[Para seguir]
+Las collations se aplican en el [Trabajo práctico 2](/bbdd-aplicadas/unidad-2/practica/tp2/) (ejercicios 1, 2, 3, 9, 11, 12 y 15), que conviene resolver después de ver la importación de archivos. Seguí con [BD en memoria](/bbdd-aplicadas/unidad-2/teoria/bd-en-memoria/).
+:::
+
 ## Fuentes
 
 - Presentación de cátedra, Unidad 2, parte 1: intercalación (patrón de bits, sensibilidades, comparación entre bases con `COLLATE`).

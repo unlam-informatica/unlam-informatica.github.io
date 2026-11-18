@@ -1,13 +1,22 @@
 ---
-title: Unidad 6 — Calidad y protección de los datos
+title: Unidad 6 — Resumen integrador
 slug: bbdd-aplicadas/unidad-6/teoria/apunte-completo
 sidebar:
-  order: 1
+  hidden: true
+  label: Resumen integrador
 ---
 
 [← Unidad 6](/bbdd-aplicadas/unidad-6/teoria/)
 
 Esta página es el **resumen integrador** de la unidad: ubica cada tema, da las ideas centrales y remite al apunte que lo desarrolla. No repite el detalle de las páginas temáticas.
+
+:::tip[Cómo usar este resumen]
+- **Antes de estudiar:** leelo de corrido para tener el mapa de la unidad (de la Ley 25.326 y el RGPD a ISO/IEC 25012).
+- **Después de estudiar:** usalo para repasar y conectar los temas.
+- **Antes del trabajo práctico integrador o del final:** identificá los temas principales, volvé a la lección de cada uno y completá el repaso con la [guía de repaso](/bbdd-aplicadas/unidad-6/teoria/guia-parcial/).
+
+No reemplaza a las lecciones: cada sección enlaza a la página donde el tema se desarrolla en profundidad.
+:::
 
 :::note[Fuentes de la unidad]
 No hay material de cátedra para esta unidad. Se sustenta en fuentes primarias: la Ley 25.326 y el Decreto 1558/2001 (InfoLEG), el Reglamento (UE) 2016/679 (EUR-Lex) y el resumen público de ISO/IEC 25012. Cada página temática cita artículos y enlaces. Material académico; no sustituye asesoramiento jurídico.
@@ -86,7 +95,7 @@ Cumplir la ley no certifica alta calidad, e ISO/IEC 25012 no prueba licitud: un 
 5. **Medición:** numerador, denominador, alcance, frecuencia y umbral.
 6. **Cierre:** derechos, destinatarios, conservación y evidencia.
 
-Para practicar: [Guía de repaso](/bbdd-aplicadas/unidad-6/teoria/guia-parcial/) y [práctica de la unidad](/bbdd-aplicadas/unidad-6/practica/).
+Para practicar: [Guía de repaso](/bbdd-aplicadas/unidad-6/teoria/guia-parcial/) y [práctica de la unidad](/bbdd-aplicadas/unidad-6/practica/). La ruta de estudio está en la [presentación de la unidad](/bbdd-aplicadas/unidad-6/teoria/).
 
 ## En resumen
 

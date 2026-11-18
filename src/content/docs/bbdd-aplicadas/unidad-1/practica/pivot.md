@@ -2,8 +2,8 @@
 title: Práctica — PIVOT
 slug: bbdd-aplicadas/unidad-1/practica/pivot
 sidebar:
-  order: 3
   label: PIVOT
+  order: 3
 ---
 
 Nueve ejercicios sobre `PIVOT`, `UNPIVOT` y PIVOT dinámico. Presuponen la lección de [PIVOT](/bbdd-aplicadas/unidad-1/teoria/pivot/) y, para el ejercicio 5, [SQL dinámico](/bbdd-aplicadas/unidad-1/teoria/sql-dinamico/). Los datos son propios. El ejercicio 8 es una adaptación con datos propios de un enunciado de estilo parcial.

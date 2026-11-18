@@ -2,7 +2,7 @@
 title: Instalación y conexión de MongoDB
 slug: bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb
 sidebar:
-  order: 8
+  order: 3
 ---
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)
@@ -202,6 +202,10 @@ Porque contiene el usuario y la contraseña de la base de datos; con ellos cualq
 - Una instalación local nueva no exige autenticación: se activa el control de acceso fuera de un equipo de práctica.
 - Atlas requiere usuario de base de datos, IP autorizada y la cadena `mongodb+srv://<usuario>:<contraseña>@<cluster>/`.
 - Las credenciales no se publican; si se expusieron, se rotan.
+:::
+
+:::tip[Para seguir]
+- Con el entorno listo, seguí con [CRUD y consultas](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/) y practicá con la [Práctica — Unidad 4 NoSQL / MongoDB](/bbdd-aplicadas/unidad-4/practica/ejercicios/).
 :::
 
 ## Fuentes

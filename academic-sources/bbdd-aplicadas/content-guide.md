@@ -72,6 +72,12 @@ etapas están en `implementation-plan.md`.
   - se mantiene la ruta anterior (redirección) y se actualiza la matriz de `migration/`, según `migration/README.md`;
   - `npm run validate` tiene que pasar.
 - Cada unidad mantiene `teoria/` y `practica/`, con un `index.md` que presenta la unidad.
+  El `index.md` de `teoria/` es la **presentación y ruta** de la unidad (objetivos, antes de comenzar,
+  ruta de aprendizaje con «Leé / Practicá / Comprobá» por etapa, ejercicios y laboratorios,
+  autoevaluación y repaso, continuar) y el de `practica/` es el índice de prácticas con lo que cada una
+  requiere. El `sidebar.order` de lecciones y prácticas sigue el orden de la ruta. Una lección nueva se
+  agrega también a la ruta de su unidad (`tests/sidebar.spec.ts` lo comprueba). La guía general está en
+  `como-estudiar.md`.
 - Una página trata un tema del programa. Las páginas integradoras ("apunte completo") resumen
   temas y enlazan a ellos; no duplican su desarrollo.
 - **Reubicación (D5).** El contenido fuera de su unidad se traslada a la página de la unidad que
