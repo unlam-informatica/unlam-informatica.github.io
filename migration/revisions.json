@@ -1259,6 +1259,627 @@
       "date": "2026-11-18",
       "stage": "E9",
       "reason": "Presentación: en la tabla de tipos numéricos, «Uso típico» pasa a la tercera columna, antes de los valores mínimo y máximo, y se le da más ancho; el contenido no cambia"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/index.md",
+      "from": "bfa1ac116dea2aa37788098067887972bf192da6e63e182b9330381002cd88c8",
+      "to": "4ebdfe0a51aefcbec0fba7ed13f4431a19ba80c6b335c236b07c1f7c91f2c103",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/index.md",
+      "from": "0cc45fdf68690e62258d010b42b00e8cfe09817830d7f251fd2868ce04d15984",
+      "to": "9f6546b724581b9dd7f23cac0d571079edb281d7a4090d312234c87034f2534b",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/index.md",
+      "from": "9dc6fbce1dfaedb4129d7032771ef5aee985a272d6910ee8b89ea6fff570a506",
+      "to": "3dacea23d6627550d235a45947e3b7fd78e5a4aa177d7b900181a4bb79024f6d",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/pivot.md",
+      "from": "556997275410b4dc7c7b111b875f90d36d88b2db627ab8dde3bbe8641c405396",
+      "to": "7f1431b0455e654ddec1948a61224753ca37d754cf39e5fe41aeb4f0c30369cb",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/window-functions.md",
+      "from": "49620b4bea15843ecbbccc67e7d153379fc22027174718b63765ed006f270770",
+      "to": "9e324d24a95c74dd139aa5999f4b5dcc6020bd765cb9d1c305c23fd8be88c3b1",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/cte.md",
+      "from": "7b9e415585c8e605028aca2c0e5ba411603de18b68451a677b1fb2e0554d23e7",
+      "to": "ce1530dd8335b84cc68fc013861f7dbd2591201efee6773c4dfefc53534271c1",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/indice-cluster.md",
+      "from": "7fe63c368e1f01eabc5cf690cde11ecd0f430325604c5bc5b3f224cf337fb9f9",
+      "to": "d50e72a71aa27e693a2030acbbb6cd9ed90d05893b4d7224bb313c0f3030d093",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/pivot.md",
+      "from": "11347c678f4d756e447b9b1a5d71c6894637cc87c16f699caed8ef81affe80fc",
+      "to": "e3b608d54d9ae3297032b427f2b4d6434448cb7428145c7ab0a28846e8149f63",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/repaso-sql.md",
+      "from": "fd12049bb3b7fea2714347a5e5cb3a2d9e9ed350536d2c3a5188bf96407cad55",
+      "to": "5c5627003c7899097c15138e4e8c9d178af566d04965024a03ea758bceb9feb6",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/sql-dinamico.md",
+      "from": "748b733b4bacca0cb9ec140458bd8bb8ff8a00d5d5aa388fcc543a5a97450d9a",
+      "to": "441b73577baefb781399cf381a48d12ebd7e24c38fd8630fcdb6b97c25ce1ae1",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/unidad-1.md",
+      "from": "0390490905f7fb2d3dce5b29f7b180d52ff63cc8402a6fe8faa4c715640c57d8",
+      "to": "7c8468365b54dc711a952671d0ba4da996fce59905e187645692d048e8ee3b8c",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/window-functions.md",
+      "from": "f30194ca2abb9d84aa3a7aadec387cba99e523d3ac7561b1c4cc933e962f2f11",
+      "to": "2cc421ea656f5fd63aed66312da90028ba0065074d173c8424c71e8718a2ae31",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/index.md",
+      "from": "19afefe85fa739c5dce3202e48efa5929edad576ebd060eec86ebcbf6e6b28b9",
+      "to": "3ad32c7f65f52cb9972185d7c861d550056d5b7d774db4f657cfaa96f7909771",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/index.md",
+      "from": "5c53c009c5a58dbd3288bc279c5ccb63f2fe16b7600aadb1675c58cabcab5eaf",
+      "to": "e1381d57c1caa0e7db6cc798f7e3ac436cf522087ee697236eec27dbccba68ec",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/importacion-archivos.md",
+      "from": "bd185d1cf90a74591b04503f8a6c02aa0a0738ee3dad8ee7494ea9b73b6b7326",
+      "to": "d3eafd264a17487a214adad196e86b65fe53be212b967958c1f842f6c8ef0adb",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-apis.md",
+      "from": "0f8fbe09ea659622589e11355fb82f59cbda8bfccafefca2a95f50a6e8743c57",
+      "to": "f7594c269eea3f78b08b6398a112795146c37f2380b23bc9e15fb2bb8c0a764f",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-bd-en-memoria.md",
+      "from": "eef1a74adbf2e82d6351678cea1f724883cd5f9acd3629c02330eb8282f61f86",
+      "to": "c9f567efc2bc783e118653e6e5750de3d0cfdd73619b0dc85f8da7ff301a3a7c",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-json.md",
+      "from": "190a60ecd6581df4e9b2774eb46d2aa024de3e8cc893919b6372814b6883d14e",
+      "to": "96ae4d25f5a723d3ecba57a6460c508c152b29652d87694b894b645f35cb19e2",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-transacciones.md",
+      "from": "e6a6ccc988b1a72f7f3830760215e900350d6b5a0aa80900f7e23d427570151f",
+      "to": "2553144b31a5f2ecb5a2f2446df8dd3a3357bb1079065d709de365727807efd6",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-xml.md",
+      "from": "98fbadc47f5edfc02f96904babe90780e3709aea16647d663263a9676e422c5c",
+      "to": "e16e0d1e76c51f76873473108542f05017581d863069e289350d474b2d82512c",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/tp2.md",
+      "from": "725b3ad61dd60a7f7d331ad03c057e8a49b15328907ef87d114437f1737b3187",
+      "to": "d3b6aa7e3b03862633912411d03ab99757fe4441db53079e75b6f8a2871a0980",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/apis-desde-sql.md",
+      "from": "98d06a433c246a66848a5bd9840e76858ed9711247308925d23876980f5dc346",
+      "to": "5c073fb409185faf1a9a1f50143ca4ef529797a022feacb56a80b7a685f1ecc3",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/bd-en-memoria.md",
+      "from": "aab3bcd4dcfe7bb3900f7b8cd62b888bb62ed1ae82c6e44adf97ff059dad6713",
+      "to": "1655a69cfc423f81351c58f7ab2bd4d39d428f3ec4d9c5044c2f9c4f1833b2e9",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/collation.md",
+      "from": "5d4c02c229abb6a15e931212103848aa47e30750ba8f194f402440be834aa905",
+      "to": "981a60ca72136df20458e145dc500efbde3f9247a078494b1618a91d5464aef3",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/formatos-conectividad.md",
+      "from": "335712843adb013f1370cd68a659fd7f3f006c95641ffc626d91789c6583d8cd",
+      "to": "f8771c70ccd2db77c02f5ab8e494187ba72a334c25bccfd898fd7addf56b8a5a",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio.md",
+      "from": "63e4078cd3ac371e3740462916bcdd9315f20c519aa968301b3cffb92efe04f9",
+      "to": "f1b6daffd53ba8e92e3400a6ae5913ea06975e2150d6f5fd93c12c2a6245f98e",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos.md",
+      "from": "a091f9c088a8853600f2c63cef22d40110b625d368465da6222ed759b652efd3",
+      "to": "a11ef97b45333b4a96f72e830616433b5c726175e3dbcebfa5a5104932ea8b96",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/json-en-sql.md",
+      "from": "d34c29217bd9af624e20992393f8cff75f24412f6c37ef3529e7a9af297a6048",
+      "to": "376b12b289739c6a172894c649befebd47a4e26f1736930808f87c094a2be7e7",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/xml-en-sql.md",
+      "from": "6b9ef452c6feb1a7384464648dfd0de9e7d0fa55684ef82dd6d0e218164c2a39",
+      "to": "f803318007540af756e40f63bd33bc700c23e639f60e3aae547a748ed5caa106",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/index.md",
+      "from": "86276daab3c2a3e490884db193bbbcfee0d8755a9630d365e3e1a974bf186442",
+      "to": "66bd05dbfc67d715b7139155f179823e863e3c60bc7511495232400d88ce33db",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/practica/index.md",
+      "from": "91c5975a687854e349e7b0e39ac3ac4ca16dc4373d2a487a7803584ee1663d25",
+      "to": "bf2b31eacc857644d9b0a2d37d7a94c5c76fcecc7db13bad11dd6d6e3dbedd52",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion.md",
+      "from": "5356d38c286c72b25a417c8ce11d6b001429802bec16de6d2cd12a718263c286",
+      "to": "d8d09bf4fa4374e8b217ab7a3edc3570e9cc830ae8d7cfa2f29e28551789d945",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/indices-y-planes.md",
+      "from": "7d4b2fc57a124d176b2e3e62231583448ae1956e5d69d5e675ea57ffedc0f8d7",
+      "to": "f4b9262c943e50b2921b91663ff01118c01fba1e2f23f1e6258a7298d8b08c27",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento.md",
+      "from": "3ebfb02f45fc99306ac6dfbdf9791c39c34e5bed794214c6e48a88e70d5434f8",
+      "to": "876316c5dbdbedcb7bd0604306645b2e1593fd578eb8f4f5e9fa60b164eb3771",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia.md",
+      "from": "bf9567ad80df1037ac8d2a136857a45f3a5d25453c32d246470bf3248c48faac",
+      "to": "7a07aaa68c12ac1b414811c0191d8198b006d00ea606311d3d096e3e6846b6db",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/unidad-3.md",
+      "from": "c7f717d0cdf96a0a07431b0949f2d0c369dd2d14e1bf3e27921bf28168e72906",
+      "to": "f066762ec677b1b8b204a54c65161273e7c86d2ee7c33fbf085dc92f0613ae59",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/index.md",
+      "from": "06564985486ff15aa0b99fcc2b3105ecc79c24a1ad0c3ca794e4a37bd61a3d69",
+      "to": "d670f0712f66273960fa2ec650eee9c8c6783fbe46658262799f275ea6aea4d6",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/index.md",
+      "from": "a1e5306303acc15d94afd9cc6ce1b5f6e73fc2e7741f901440b3c126418e85d1",
+      "to": "cb8896e793180ad1d39c511d17b174a12f40d1d1d34eb93a3b3365c59fd5246b",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/integrador-peliculas.md",
+      "from": "aa98b182f5937c2ebf3f3e09b13083e1a7c7edac46b14aaa2cc0fe3eee716932",
+      "to": "dcb083802c370d874019e1b68364c7ef0716b8acd36801f56db7b59b9d7e7d8f",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online.md",
+      "from": "0f706f424e484935217d553d584017fc8b847b86a7e5607fe176bd6855308e12",
+      "to": "893d5cde0432a495c06c54109408bb25da8b5464651720a41e56b06858171db0",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd.md",
+      "from": "9af25c60c77fac78124acba7437d1d4c9bc4dc455347eb7030d368c5b6a78d7e",
+      "to": "6a175a19131546392d98d83d585e87b5b6b349ff770bb17313266b242f04085b",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/guia-parcial.md",
+      "from": "e5ea75ac15e0f9c5fac640be6ac99eeb54cca69a5a7411d39a41b1c46607b4ee",
+      "to": "20226ba66d19c61a15fd2592dfac9c5ee4c2f89197c69dba7640896037107eec",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb.md",
+      "from": "4fe27180f445e1f00d28e4c9175ca56dad6627d6a268d959fbe1421249c16702",
+      "to": "fef7fb8960dc9fe9c92f0c9cedd10d445ba615a44ef5ed7ef622a67dc29746c1",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion.md",
+      "from": "e11b16439c57b1c70426708e4be4e52444ba212f97bcfded7e211ce49e5039c5",
+      "to": "8150950fb50c7699366b0aee5a16f8b70a5925aa846589782e0c319d4b2c8f05",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-crud.md",
+      "from": "fb66cd493346310ace893696e4c9a3b34a17d756e94220130f09c9612c783f3e",
+      "to": "b4e3afd4959dbc478d7f0ca669224768054878cd43bbe4d8a76e0c2cbffc54a3",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion.md",
+      "from": "a0286b7ee4553093102c5cf766882b3a41622e52620bf9bcecf9f920e64623d9",
+      "to": "97b34d70ba818aec2ee36d1b393a95ec40b6d2ea74a093947e3d89806fac3775",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/nosql-conceptos.md",
+      "from": "8e915976b3d700024b9796f8c744a5468a7368f9db03a76ecdbb5746bd28b564",
+      "to": "a45054a96917c8c4a1a5e08682aa8c25f9926b93950924a8a42df0c15947ed27",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/unidad-4.md",
+      "from": "9424ed2a6154d73d33ba8cdf93cb219f0c4ad7bd35684379d3d2005192edd3c8",
+      "to": "a74595c981cfc9a45b02047775d56df6246775666f9f06ad5d3e34b911eadb36",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/index.md",
+      "from": "abc2c7b19458e744706d4f07d7363a76783c20f15f583b29e14977347ac541d5",
+      "to": "c9c51f6722a66ccdd069a7307a300104a4b506bd762d87f4f6f3b6d6c63bd142",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/index.md",
+      "from": "4a342187c07c426a1d50ffc71053614d15facb310db645c2aaa933918b6479a1",
+      "to": "fa9690fa47f80c0c226329ac9281c7a88c7ca8dc000673e8b6972f0d54d1838b",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/laboratorio-backup.md",
+      "from": "5b6000aa3f1582d787279188c01743e0b2df4bf824b82bef29da8e453fe81158",
+      "to": "800af55675c9207b19b83058ece1c77c8fd06a647196489c9dbd048fcb98fe6e",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion.md",
+      "from": "81a6b3057c2a17fd6fb9d686f940921f3c401d0b6dc26491ffc7707f67656ba6",
+      "to": "bf42850387381b49d025de52d2962a4156f707f23ef81b9d40ba9082028b8d61",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad.md",
+      "from": "6aa67ca09da6a971119347231767ee5d6c1d58ec308bfe5dd149a5856b6a8b27",
+      "to": "dbd347946f87e3dba7ada79c3985b795338732ce74b9ec73a6bc3aa500dfb5d1",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/backup-restauracion.md",
+      "from": "d67dba5611c5691824d9eb41338c7df84d1eb42f841541b11c89c4f59313648a",
+      "to": "0e564bd71cfe34d0118606d28978630dc90e9b6b8e7e15c404bed8395ee03dbb",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/cifrado.md",
+      "from": "e76740d392b54ecab3afeda167aea470cafa5e2fb8d44fb6fc566b647e20b026",
+      "to": "df1957bcaec8dcceb7069aa3ce34b2794dd65558f380249bfa5aec4e73b4ce80",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/guia-parcial.md",
+      "from": "639101ce3914156828033626507efc53ad6aeb99dca08a26e5ba8d84ad854f45",
+      "to": "0afd6c126248e269366fe00c776a9a5e7e004e2c1d00351b3a4b901357704f35",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/inyeccion-sql.md",
+      "from": "ad22aa8106c3bc1a68246d1c2d4445c56a8f72dddeef2d3ea413eac30bc66fb8",
+      "to": "5b6d4866aea56af53756e119fe5edf78ae0e8f48b9ee94befb0c866a66a3376f",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/log-recuperacion.md",
+      "from": "1bd429b97102282e976d49ab0025ecb05594848133fc8deb69272a75f634e970",
+      "to": "3d7692c7aa65d1221921539b15d46683085347f3c58a3532a96fce77464b342e",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/seguridad-permisos.md",
+      "from": "b2c2407bc4f609e9612bf159f052c01a3a2b17063270e76b7721efe8d902a769",
+      "to": "154abc6ffdbad85f6351c582ad387e5164849d4545cae5f0b94f12209ac04733",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/unidad-5.md",
+      "from": "c901b7ad1a530dd573ff3ec086b19f7452aee50027f49b2a36b388a6817994d1",
+      "to": "1502a1830c174bb4989e2387356355b0756cda52b14d3e2974a2cc405e09e5d6",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/index.md",
+      "from": "bac4ea7c3963fc2d4b3baf68db85745d1fb4624c3a9216edcd7e48a9eafd351d",
+      "to": "037a93f3b82141bfb4e3b85df885ff3eba0b172d8cb9916d04f33432f7f65b1d",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/index.md",
+      "from": "a817a456432a7353da7d3d897bc1e880452b81b5261cba6850d7aa162b83821f",
+      "to": "d14a93c19e9c1bf72b01476b1790ab3394592d1412d5ffd04783c3741c51957b",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/gdpr.md",
+      "from": "47c7695250e107755af870d5e977a4b7324834bd3ae9a9e83256d6b63c7b8a6b",
+      "to": "6a2f097b8a917875985953c8a4a0f1c8646020735b7808a24eea53f9a503782d",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/gobierno-privacidad.md",
+      "from": "27c3384bd79fd53010bac486b1c438d77aeec2cacfee72d27223a4c37c424091",
+      "to": "ec38b5ce8af0cc47850c453dffac0e4262b64332ae870adeb21d109c254c4669",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/guia-parcial.md",
+      "from": "4353376fb9c7cfce9e08fec8570f89e9aed79a3ceebc3f6843be28d4d830f3d6",
+      "to": "d73ba1b3ab935822a41c061b69ec8ec9e10eba0d91bd3c531301fb1ad896a060",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/iso-25012.md",
+      "from": "2d7e2b01d898dbdf88020b00903b71198aee247e30681959300c6a7717f1cfe5",
+      "to": "1f638bc9c7a4c2a85acd61fec2049c5343944a50486576d4d033890b4696d7b1",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/ley-25326.md",
+      "from": "b6a4874fc7fd9c194353faa1fc1f23f7e335b18366fcf550ea690ff720ee5523",
+      "to": "f8cec0ebfa0addecbe3d81986a41c9754282a8db5865d20dcfe9523a6e3085f9",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/medicion-calidad.md",
+      "from": "df210f51a8b2d71b362805863be086123ec3cfbddfc2d7a939c3d6caf2a7b8a2",
+      "to": "e1098851db98ddbb0193ef833033898478dcfeab4ec567d19fbedffe5afec484",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/unidad-6.md",
+      "from": "a0c27d143a668241bab999ac04487276272c494386001fed5f12b91bd6c4c840",
+      "to": "2372d51a7b0d3b68e2ed1355b36e13a5c05e3d2c1c90c158748e75898abf6de9",
+      "date": "2026-11-18",
+      "stage": "E10",
+      "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
     }
   ]
 }

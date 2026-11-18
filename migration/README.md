@@ -133,6 +133,17 @@ páginas de contenido; las seis páginas de unidad redundantes son ahora
 redirecciones de compatibilidad hacia su presentación de Teoría. Los enlaces a
 ejercicios y laboratorios se encuentran también en la presentación de Práctica.
 
+Desde la etapa E10 (experiencia de estudio, 2026-11-18), el `index.md` de `teoria/`
+es la **presentación y ruta** de la unidad: objetivos, prerrequisitos, una ruta de
+aprendizaje que intercala lecciones y prácticas, repaso y cómo continuar. En el
+menú aparece a nivel de unidad («Presentación y ruta») y se oculta del autogenerado
+de Teoría con `sidebar.hidden`; lo mismo ocurre con los resúmenes integradores y las
+guías de repaso de u4–u6, que se enlazan al final de su unidad, y con las páginas
+puente `unidad-1/teoria/indice-cluster` y `unidad-2/practica/transacciones`, que
+conservan su URL y se enlazan desde una nota «Páginas trasladadas». El `sidebar.order`
+de las lecciones sigue el orden de la ruta, de modo que la paginación de Starlight
+recorre la unidad en ese orden. Ninguna URL cambia.
+
 La matriz conserva tanto `/bbdd-aplicadas/unidad-N/` como su `index.html`. Astro
 genera las redirecciones y la integración de navegación conserva consulta y ancla
 en el HTML publicado. `previousOutput`, `previousCanonical` y `additionalOutputs`
