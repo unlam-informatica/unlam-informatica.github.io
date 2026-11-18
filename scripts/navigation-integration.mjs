@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { load } from 'cheerio';
 import * as pagefind from 'pagefind';
 import { navigationHref, navigationPath } from './navigation.mjs';
+import { plainSearchMath } from './search-math.mjs';
 
 export default function navigationIntegration() {
   let config;
@@ -57,7 +58,9 @@ export default function navigationIntegration() {
           }
           if (changed) await fs.writeFile(location, $.html());
           if (file.endsWith('index.html') && $('[data-pagefind-body]').length) {
-            searchPages.push({ url: '/' + file, content: changed ? $.html() : html });
+            // The page is already written; the copy indexed gets plain-text formulas.
+            plainSearchMath($);
+            searchPages.push({ url: '/' + file, content: $.html() });
           }
         }
         // Starlight's search UI is retained. Its built-in indexer does not expose
