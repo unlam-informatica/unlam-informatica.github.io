@@ -2,7 +2,7 @@
 title: Conexión, drivers, ODBC y JDBC
 slug: bbdd-aplicadas/unidad-2/teoria/formatos-conectividad
 sidebar:
-  order: 4
+  order: 5
 ---
 
 [← Unidad 2](/bbdd-aplicadas/unidad-2/teoria/)
@@ -158,6 +158,10 @@ La conexión usa TCP, el protocolo de T-SQL (TDS) y autenticación de SQL Server
 - ODBC usa un administrador de controladores y DSN; JDBC (parte de Java SE) usa un `.jar`; OLE DB es la API de Microsoft basada en COM (proveedor `MSOLEDBSQL`).
 - La cadena de conexión indica servidor, base, autenticación, cifrado y certificado, y no lleva credenciales reales en el código.
 - SQL Server habla TDS sobre memoria compartida, canalizaciones o TCP/IP (puerto 1433 en la instancia predeterminada).
+:::
+
+:::tip[Para seguir]
+Seguí con [Formatos de intercambio](/bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio/).
 :::
 
 ## Fuentes

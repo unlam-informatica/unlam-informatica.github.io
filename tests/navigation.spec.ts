@@ -22,7 +22,7 @@ test('portada por año y navegación contextual', async ({ page, isMobile }, tes
 });
 
 test('fórmulas, diagramas y desborde móvil', async ({ page }) => {
-  for (const route of ['/', '/analisis-matematico-i/unidad-1/practica/ejercicio-1/', '/bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/', '/diseno-de-software/unidad-3/teoria/']) {
+  for (const route of ['/', '/analisis-matematico-i/unidad-1/practica/ejercicio-1/', '/bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/', '/bbdd-aplicadas/como-estudiar/', '/bbdd-aplicadas/unidad-3/teoria/', '/bbdd-aplicadas/unidad-6/teoria/', '/diseno-de-software/unidad-3/teoria/']) {
     await page.goto(route);
     if (route.includes('ejercicio-1')) await expect(page.locator('.katex').first()).toBeVisible();
     if (route.includes('diseno-de-software')) await expect(page.locator('.mermaid svg').first()).toBeVisible({ timeout: 30000 });

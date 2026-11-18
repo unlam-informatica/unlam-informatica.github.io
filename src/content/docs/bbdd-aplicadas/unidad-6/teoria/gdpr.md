@@ -2,7 +2,7 @@
 title: GDPR — Reglamento General de Protección de Datos
 slug: bbdd-aplicadas/unidad-6/teoria/gdpr
 sidebar:
-  order: 3
+  order: 2
 ---
 
 [← Unidad 6](/bbdd-aplicadas/unidad-6/teoria/)
@@ -291,6 +291,10 @@ Una plataforma argentina vende tests genéticos con sitio en español e inglés,
 - (c) Falta el contrato con el encargado (art. 28.3), y la transferencia a un tercer país exige adecuación o garantías del art. 46 (cap. V). Conservar sin plazo infringe la limitación de conservación (art. 5.1.e).
 - (d) Infracción del art. 5: escalón del art. 83.5, el mayor entre 20 M EUR y el 4 % de la facturación. Con 600 M EUR: 4 % = 24 M EUR, mayor que 20 M, por lo que el máximo teórico es 24 M EUR. Con 100 M EUR: 4 % = 4 M EUR; el mayor es 20 M EUR. Es un tope; la multa efectiva se gradúa con los criterios del art. 83.2.
 </details>
+
+:::tip[Para seguir]
+- Seguí con [ISO/IEC 25012](/bbdd-aplicadas/unidad-6/teoria/iso-25012/). Los derechos y la minimización se practican en el [laboratorio de privacidad](/bbdd-aplicadas/unidad-6/practica/laboratorio-privacidad/).
+:::
 
 ## Fuentes
 

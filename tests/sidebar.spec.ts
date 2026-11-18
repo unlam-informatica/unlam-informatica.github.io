@@ -18,7 +18,24 @@ function subjectGroup(page: Page, name: string) {
   });
 }
 
-test('las seis unidades de BBDD solo contienen Teoría y Práctica', async ({ page }) => {
+const bbddUnits = [
+  'Conceptos básicos y SQL',
+  'Relacionales: aspectos básicos',
+  'Relacionales: aspectos avanzados',
+  'No relacionales',
+  'Protección de los datos',
+  'Calidad en bases de datos',
+];
+const bbddTitles = [
+  'Conceptos básicos',
+  'Bases de datos relacionales: aspectos básicos',
+  'Bases de datos relacionales: aspectos avanzados',
+  'Bases de datos no relacionales',
+  'Protección de los datos',
+  'Calidad en bases de datos',
+];
+
+test('BBDD: presentación, cómo estudiar y seis unidades con ruta, teoría, práctica y repaso', async ({ page }) => {
   for (let number = 1; number <= 6; number++) {
     const entries = readdirSync(`src/content/docs/bbdd-aplicadas/unidad-${number}`, { withFileTypes: true });
     expect(entries.every(entry => entry.isDirectory())).toBeTruthy();
@@ -26,23 +43,78 @@ test('las seis unidades de BBDD solo contienen Teoría y Práctica', async ({ pa
   }
   await page.goto('/bbdd-aplicadas/index.html');
   const subject = subjectGroup(page, 'Bases de Datos Aplicadas');
+  await expect(subject.locator(':scope > .container-group-link > a')).toHaveText(['Presentación', 'Cómo estudiar']);
   const units = subject.locator(':scope > .container-group-link > details');
   await expect(units).toHaveCount(6);
   for (let index = 0; index < 6; index++) {
+    const number = index + 1;
     const unit = units.nth(index);
-    await expect(unit.locator(':scope > summary')).toHaveText(`Unidad ${index + 1}`);
-    await expect(unit.locator(':scope > .container-group-link > a')).toHaveCount(0);
-    const sections = unit.locator(':scope > .container-group-link > details > summary');
-    await expect(sections).toHaveText(['Teoría', 'Práctica']);
+    await expect(unit.locator(':scope > summary')).toHaveText(`Unidad ${number} · ${bbddUnits[index]}`);
+    const links = unit.locator(':scope > .container-group-link > a');
+    // Las unidades con resumen integrador y guía (4 a 6) los muestran al final, fuera de Teoría.
+    await expect(links).toHaveText(number >= 4
+      ? ['Presentación y ruta', 'Resumen integrador', number === 4 ? 'Guía para el parcial' : 'Guía de repaso']
+      : ['Presentación y ruta']);
+    await expect(links.first()).toHaveAttribute('href', `/bbdd-aplicadas/unidad-${number}/teoria/index.html`);
+    await expect(unit.locator(':scope > .container-group-link > details > summary')).toHaveText(['Teoría', 'Práctica']);
+    // La presentación no se repite dentro de Teoría.
+    await expect(unit.locator(`details a[href="/bbdd-aplicadas/unidad-${number}/teoria/index.html"]`)).toHaveCount(0);
   }
+  // Las páginas puente históricas no son lecciones del recorrido.
+  for (const legacy of ['unidad-1/teoria/indice-cluster', 'unidad-2/practica/transacciones']) {
+    await expect(subject.locator(`a[href="/bbdd-aplicadas/${legacy}/index.html"]`)).toHaveCount(0);
+  }
+  const hrefs = await subject.locator('a').evaluateAll(links => links.map(link => link.getAttribute('href')));
+  expect(new Set(hrefs).size).toBe(hrefs.length);
   const labels = await page.locator('.sidebar summary').allTextContents();
   expect(labels.some(label => /^(?:unidad-\d+|teoria|practica|geogebra)$/.test(label.trim()))).toBeFalsy();
 });
 
-test('cada unidad de BBDD permite abrir Teoría y Práctica desde el menú', async ({ page, isMobile }) => {
+test('BBDD: la teoría de cada unidad sigue el orden de su ruta de aprendizaje', async ({ page }) => {
+  for (let number = 1; number <= 6; number++) {
+    await page.goto(`/bbdd-aplicadas/unidad-${number}/teoria/index.html`);
+    // Enlaces de la sección «Ruta de aprendizaje», en orden de documento, hasta el h2 siguiente.
+    const route = await page.locator('.sl-markdown-content').evaluate(content => {
+      const paths: string[] = [];
+      let inside = false;
+      for (const node of content.querySelectorAll('h2, a[href]')) {
+        if (node.tagName === 'H2') { inside = node.id === 'ruta-de-aprendizaje'; continue; }
+        // Los enlaces a una sección (con ancla) pueden adelantar una parte de otra lección; la
+        // posición de cada lección en la ruta la da su primer enlace a la página completa.
+        const url = new URL(node.getAttribute('href')!, location.href);
+        if (inside && !url.hash) paths.push(url.pathname);
+      }
+      return paths;
+    });
+    const subject = subjectGroup(page, 'Bases de Datos Aplicadas');
+    const theory = subject.locator(':scope > .container-group-link > details').nth(number - 1)
+      .locator(':scope > .container-group-link > details').first();
+    const menu = await theory.locator('a').evaluateAll(links => links.map(link => link.getAttribute('href')));
+    expect(menu.length).toBeGreaterThan(0);
+    // Primera aparición de cada lección del menú en la ruta: deben venir en el mismo orden.
+    const positions = menu.map(href => route.indexOf(href!));
+    expect(positions.every(position => position >= 0), `Lecciones fuera de la ruta: ${menu.filter((_, i) => positions[i] < 0)}`).toBeTruthy();
+    expect(positions).toEqual([...positions].sort((a, b) => a - b));
+  }
+});
+
+test('BBDD: la portada lleva a Cómo estudiar y a la ruta de la Unidad 1', async ({ page }) => {
+  await page.goto('/bbdd-aplicadas/index.html');
+  await page.locator('.sl-markdown-content a[href="/bbdd-aplicadas/como-estudiar/index.html"]').first().click();
+  await expect(page.locator('h1').first()).toHaveText('Cómo estudiar esta materia');
+  for (const id of ['método-de-estudio', 'herramientas', 'evaluación', 'aprender-desde-cero', 'repasar-para-un-examen']) {
+    await expect(page.locator(`[id="${id}"]`)).toHaveCount(1);
+  }
+  // «Siguiente» sigue el orden del menú: de Cómo estudiar a la presentación de la Unidad 1.
+  await page.locator('.pagination-links a[rel="next"]').click();
+  await expect(page).toHaveURL('/bbdd-aplicadas/unidad-1/teoria/index.html');
+  await expect(page.locator('h1').first()).toHaveText('Unidad 1 — Conceptos básicos');
+});
+
+test('cada unidad de BBDD permite abrir su ruta y su práctica desde el menú', async ({ page, isMobile }) => {
   await page.goto('/');
   for (let number = 1; number <= 6; number++) {
-    for (const [section, label] of [['teoria', 'Teoría'], ['practica', 'Práctica']]) {
+    for (const [section, title] of [['teoria', `Unidad ${number} — ${bbddTitles[number - 1]}`], ['practica', `Unidad ${number} — Práctica`]]) {
       if (isMobile) await page.getByRole('button', { name: 'Menú de materias', exact: true }).click();
       // Start on the homepage to exercise the mobile drawer even on splash pages.
       if (!isMobile && number === 1 && section === 'teoria') await page.goto('/bbdd-aplicadas/index.html');
@@ -51,7 +123,7 @@ test('cada unidad de BBDD permite abrir Teoría y Práctica desde el menú', asy
       await openParents(menu, page, href);
       await menu.locator(`a[href="${href}"]`).click();
       await expect(page).toHaveURL(href);
-      await expect(page.locator('h1').first()).toHaveText(`Unidad ${number} — ${label}`);
+      await expect(page.locator('h1').first()).toHaveText(title);
       await expect(page.locator('meta[name="generator"][content^="Starlight"]')).toHaveCount(1);
     }
   }
@@ -67,9 +139,9 @@ test('las rutas anteriores de las unidades redirigen conservando consulta y ancl
   });
   for (let number = 1; number <= 6; number++) {
     for (const suffix of ['', 'index.html']) {
-      await page.goto(`/bbdd-aplicadas/unidad-${number}/${suffix}?origen=legacy#teoría`);
-      await expect(page).toHaveURL(`/bbdd-aplicadas/unidad-${number}/teoria/index.html?origen=legacy#teor%C3%ADa`);
-      await expect(page.locator('#teoría')).toBeVisible();
+      await page.goto(`/bbdd-aplicadas/unidad-${number}/${suffix}?origen=legacy#ruta-de-aprendizaje`);
+      await expect(page).toHaveURL(`/bbdd-aplicadas/unidad-${number}/teoria/index.html?origen=legacy#ruta-de-aprendizaje`);
+      await expect(page.locator('#ruta-de-aprendizaje')).toBeVisible();
     }
   }
 });

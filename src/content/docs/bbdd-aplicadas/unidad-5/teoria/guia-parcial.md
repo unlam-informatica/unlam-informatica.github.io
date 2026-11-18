@@ -2,7 +2,8 @@
 title: Guía de repaso — Unidad 5
 slug: bbdd-aplicadas/unidad-5/teoria/guia-parcial
 sidebar:
-  order: 8
+  hidden: true
+  label: Guía de repaso
 ---
 
 [← Unidad 5](/bbdd-aplicadas/unidad-5/teoria/)

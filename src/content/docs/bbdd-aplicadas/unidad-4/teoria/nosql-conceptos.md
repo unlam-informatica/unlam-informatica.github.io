@@ -2,7 +2,7 @@
 title: NoSQL — Conceptos y modelos
 slug: bbdd-aplicadas/unidad-4/teoria/nosql-conceptos
 sidebar:
-  order: 2
+  order: 1
 ---
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)

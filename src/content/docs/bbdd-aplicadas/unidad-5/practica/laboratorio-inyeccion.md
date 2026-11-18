@@ -2,7 +2,7 @@
 title: Laboratorio defensivo — Inyección SQL
 slug: bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion
 sidebar:
-  order: 3
+  order: 2
   badge:
     text: Complementario
     variant: note

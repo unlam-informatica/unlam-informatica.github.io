@@ -259,6 +259,10 @@ Con `QUOTENAME` y, de preferencia, validándolo contra el catálogo.
 - El código dinámico no ve las variables del llamador y todo el armado va en un único lote, sin `GO`.
 :::
 
+:::tip[Para seguir]
+Resolvé el ejercicio 5 de la [Práctica — PIVOT](/bbdd-aplicadas/unidad-1/practica/pivot/) (PIVOT dinámico).
+:::
+
 ## Fuentes
 
 - Presentación de cátedra, Unidad 1, SQL dinámico (2024).

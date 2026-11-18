@@ -2,7 +2,7 @@
 title: Inyección SQL y programación segura
 slug: bbdd-aplicadas/unidad-5/teoria/inyeccion-sql
 sidebar:
-  order: 7
+  order: 3
   badge:
     text: Complementario
     variant: note
@@ -243,6 +243,10 @@ Porque una consulta alterada se ejecuta con los permisos de la cuenta: con `db_o
 - Se previene separando código y datos: parámetros (`sp_executesql`, procedimientos estáticos), lista permitida para identificadores y validación como capa adicional.
 - Los permisos limitan el daño: mínimo privilegio, y firma de módulos cuando el SQL dinámico rompe el encadenamiento de propiedad.
 - ORM y procedimientos no son seguros por sí solos; el segundo orden obliga a parametrizar en cada ejecución.
+:::
+
+:::tip[Para seguir]
+- Practicá con el [Laboratorio defensivo — Inyección SQL](/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion/) (complementario) y después seguí con [Registro de transacciones y modelos de recuperación](/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/).
 :::
 
 ## Fuentes

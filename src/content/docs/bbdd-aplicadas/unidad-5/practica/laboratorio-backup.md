@@ -2,12 +2,12 @@
 title: Laboratorio — Cadena de backup y restauración
 slug: bbdd-aplicadas/unidad-5/practica/laboratorio-backup
 sidebar:
-  order: 2
+  order: 3
 ---
 
 [← Unidad 5](/bbdd-aplicadas/unidad-5/teoria/)
 
-Este laboratorio produce una cadena completo, log, diferencial y log, y recupera otra base hasta un punto anterior a un error. Presupone [el registro de transacciones y los modelos de recuperación](/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/), [backups y restauración](/bbdd-aplicadas/unidad-5/teoria/backup-restauracion/) y [alta disponibilidad](/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad/). Después del laboratorio hay 17 ejercicios resueltos.
+Este laboratorio produce una cadena completo, log, diferencial y log, y recupera otra base hasta un punto anterior a un error. Presupone [el registro de transacciones y los modelos de recuperación](/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/), [backups y restauración](/bbdd-aplicadas/unidad-5/teoria/backup-restauracion/) y [alta disponibilidad](/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad/) (esta última solo para los ejercicios 24, 25, 34 y 35). Después del laboratorio hay 17 ejercicios resueltos.
 
 :::caution[No usar sobre una base real]
 No uses `WITH REPLACE` sobre una base real. Trabajá con `LaboratorioBackup` (la base de origen) y restaurá como `LaboratorioBackup_Restore`.

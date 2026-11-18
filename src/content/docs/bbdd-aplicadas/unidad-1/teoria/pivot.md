@@ -2,7 +2,7 @@
 title: PIVOT
 slug: bbdd-aplicadas/unidad-1/teoria/pivot
 sidebar:
-  order: 4
+  order: 5
 ---
 
 `PIVOT` convierte **valores de una columna en columnas**: pasamos de una tabla "larga" (una fila por hecho) a una tabla "ancha" (un valor por columna), útil para reportes y comparaciones. `UNPIVOT` hace el camino inverso.
@@ -370,6 +370,10 @@ Con `CROSS APPLY (VALUES ...)`, porque `UNPIVOT` los elimina.
 - `PIVOT` rota valores en columnas con un único agregado; `UNPIVOT` rota columnas en filas y descarta `NULL`.
 - Siempre con una subconsulta de origen con solo las columnas necesarias.
 - La lista de `IN` es fija; para listas variables se usa SQL dinámico en un solo lote.
+:::
+
+:::tip[Para seguir]
+Practicá con la [Práctica — PIVOT](/bbdd-aplicadas/unidad-1/practica/pivot/) y después seguí con [SQL Dinámico](/bbdd-aplicadas/unidad-1/teoria/sql-dinamico/), que completa el PIVOT dinámico.
 :::
 
 ## Fuentes

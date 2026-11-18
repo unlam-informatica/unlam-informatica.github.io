@@ -2,7 +2,7 @@
 title: Gobierno, privacidad y calidad desde el diseño
 slug: bbdd-aplicadas/unidad-6/teoria/gobierno-privacidad
 sidebar:
-  order: 6
+  order: 5
   badge:
     text: Complementario
     variant: note
@@ -137,6 +137,10 @@ Porque la supresión es una decisión de negocio y legal (Ley art. 16; RGPD art.
 - Gobernar es asignar decisiones (significado, finalidad, calidad, acceso, retención) con un responsable claro por cada una.
 - Inventario, clasificación, catálogo y linaje permiten ubicar los datos para aplicar las normas.
 - Los roles, niveles y plazos de esta página son propuestas; las obligaciones están en los artículos citados.
+:::
+
+:::tip[Para seguir]
+- Practicá con el [Laboratorio — Inventario, minimización y derechos](/bbdd-aplicadas/unidad-6/practica/laboratorio-privacidad/) y cerrá con los [casos integradores](/bbdd-aplicadas/unidad-6/practica/casos-integradores/).
 :::
 
 ## Fuentes

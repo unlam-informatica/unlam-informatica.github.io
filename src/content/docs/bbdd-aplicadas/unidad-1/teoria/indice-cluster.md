@@ -2,7 +2,7 @@
 title: Índice Clustered
 slug: bbdd-aplicadas/unidad-1/teoria/indice-cluster
 sidebar:
-  order: 7
+  hidden: true
 ---
 
 En SQL Server, la `PRIMARY KEY` de una tabla crea por defecto un **índice clúster**: la tabla queda almacenada como un árbol B+ ordenado por esa clave, y las filas completas están en las hojas. Para `INT IDENTITY` esto significa que las inserciones entran casi siempre al final del índice.

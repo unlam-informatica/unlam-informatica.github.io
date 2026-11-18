@@ -2,8 +2,8 @@
 title: Práctica — Importación de archivos
 slug: bbdd-aplicadas/unidad-2/practica/importacion-archivos
 sidebar:
-  order: 2
   label: Importación de archivos
+  order: 3
 ---
 
 Seis ejercicios de importación de archivos CSV y JSON con `BULK INSERT` y `OPENROWSET`. Presuponen la lección de [Importación de archivos](/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos/) y, para los formatos, [Formatos de intercambio](/bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio/).

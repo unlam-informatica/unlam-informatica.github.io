@@ -2,7 +2,8 @@
 title: Guía para el parcial — Unidad 4
 slug: bbdd-aplicadas/unidad-4/teoria/guia-parcial
 sidebar:
-  order: 9
+  hidden: true
+  label: Guía para el parcial
 ---
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)

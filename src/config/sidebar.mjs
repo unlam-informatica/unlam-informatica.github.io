@@ -12,6 +12,19 @@ const notes = (label, directory) => ({
   items: [{ autogenerate: { directory } }],
 });
 
+// Bases de Datos Aplicadas: cada unidad abre con su presentación (la ruta de estudio, que vive en
+// `teoria/index.md` y se oculta del autogenerado para no duplicarla), sigue con Teoría y Práctica en
+// orden pedagógico (`sidebar.order` de cada página) y cierra, cuando existen, con el resumen
+// integrador y la guía de repaso. La paginación de Starlight recorre ese mismo orden.
+const bbddUnits = [
+  { title: 'Conceptos básicos y SQL' },
+  { title: 'Relacionales: aspectos básicos' },
+  { title: 'Relacionales: aspectos avanzados' },
+  { title: 'No relacionales', review: [['apunte-completo', 'Resumen integrador'], ['guia-parcial', 'Guía para el parcial']] },
+  { title: 'Protección de los datos', review: [['apunte-completo', 'Resumen integrador'], ['guia-parcial', 'Guía de repaso']] },
+  { title: 'Calidad en bases de datos', review: [['apunte-completo', 'Resumen integrador'], ['guia-parcial', 'Guía de repaso']] },
+];
+
 export const subjects = [
   {
     year: 1,
@@ -37,14 +50,20 @@ export const subjects = [
     href: '/bbdd-aplicadas/',
     items: [
       { slug: 'bbdd-aplicadas', label: 'Presentación' },
-      ...unitNumbers(6).map(number => ({
-        label: `Unidad ${number}`,
-        collapsed: true,
-        items: [
-          notes('Teoría', `bbdd-aplicadas/unidad-${number}/teoria`),
-          notes('Práctica', `bbdd-aplicadas/unidad-${number}/practica`),
-        ],
-      })),
+      { slug: 'bbdd-aplicadas/como-estudiar', label: 'Cómo estudiar' },
+      ...bbddUnits.map(({ title, review = [] }, index) => {
+        const unit = `bbdd-aplicadas/unidad-${index + 1}`;
+        return {
+          label: `Unidad ${index + 1} · ${title}`,
+          collapsed: true,
+          items: [
+            { slug: `${unit}/teoria`, label: 'Presentación y ruta' },
+            notes('Teoría', `${unit}/teoria`),
+            notes('Práctica', `${unit}/practica`),
+            ...review.map(([page, label]) => ({ slug: `${unit}/teoria/${page}`, label })),
+          ],
+        };
+      }),
     ],
   },
   {

@@ -16,7 +16,7 @@ Este laboratorio es una elaboración de este portal, no de la cátedra. Reemplaz
 
 ## Antes de empezar
 
-Presupone las lecciones de [CRUD](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/) y de [agregación](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/). Conviene haber hecho antes la [práctica de ventas](/bbdd-aplicadas/unidad-4/practica/ejercicios/).
+Presupone las lecciones de [CRUD](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/) y de [agregación](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/) (con la sección de índices), y un servidor MongoDB con `mongosh` ([instalación](/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb/)). Conviene haber hecho antes la [práctica de ventas](/bbdd-aplicadas/unidad-4/practica/ejercicios/).
 
 ## Conjunto de datos
 

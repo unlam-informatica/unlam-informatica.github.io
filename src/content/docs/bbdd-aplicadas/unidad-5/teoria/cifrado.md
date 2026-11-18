@@ -2,7 +2,7 @@
 title: Cifrado en reposo y en tránsito
 slug: bbdd-aplicadas/unidad-5/teoria/cifrado
 sidebar:
-  order: 6
+  order: 2
 ---
 
 [← Unidad 5](/bbdd-aplicadas/unidad-5/teoria/)
@@ -466,6 +466,10 @@ Protege los datos mientras viajan entre el cliente y el servidor, y autentica al
 - La jerarquía clave maestra, certificado y clave simétrica evita guardar la frase en el código.
 - TDE protege archivos y respaldos en reposo, no las consultas. Se respalda el certificado antes de activarlo.
 - TLS protege el tránsito; hay que validar el certificado y el nombre.
+:::
+
+:::tip[Para seguir]
+- Las secciones de TDE y de cifrado de respaldo se complementan con [Backups, restauración, RPO y RTO](/bbdd-aplicadas/unidad-5/teoria/backup-restauracion/#backup-cifrado): respaldar el certificado es parte de la estrategia de copias.
 :::
 
 ## Fuentes

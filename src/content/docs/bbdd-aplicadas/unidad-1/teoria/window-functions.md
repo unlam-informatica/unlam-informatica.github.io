@@ -436,6 +436,10 @@ No: falta `ORDER BY` (error 10756). Es innecesario: `SUM(Monto) OVER (PARTITION 
 - `CUME_DIST` es la proporción de filas con valor menor o igual; `PERCENT_RANK` es `(RANK - 1) / (n - 1)`.
 :::
 
+:::tip[Para seguir]
+Practicá con la [Práctica — Window Functions](/bbdd-aplicadas/unidad-1/practica/window-functions/) y después seguí con [Common Table Expressions](/bbdd-aplicadas/unidad-1/teoria/cte/).
+:::
+
 ## Fuentes
 
 - Presentación de cátedra, Unidad 1, funciones de ventana (v1.0, 2024).

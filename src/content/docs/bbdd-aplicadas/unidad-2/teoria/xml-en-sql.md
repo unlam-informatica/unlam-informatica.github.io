@@ -2,7 +2,7 @@
 title: XML en SQL Server
 slug: bbdd-aplicadas/unidad-2/teoria/xml-en-sql
 sidebar:
-  order: 7
+  order: 8
 ---
 
 [← Unidad 2](/bbdd-aplicadas/unidad-2/teoria/)
@@ -410,6 +410,10 @@ Cuando se la incrusta en la consulta externa como una columna: sin `TYPE` el res
 - `OPENXML` necesita `sp_xml_preparedocument` y siempre `sp_xml_removedocument`.
 - `FOR XML RAW`, `AUTO` y `PATH` generan XML; `ELEMENTS`, `ROOT`, `XSINIL` y `TYPE` ajustan el resultado.
 - Los namespaces se declaran con `WITH XMLNAMESPACES` y la validación se hace con una colección de esquemas XSD.
+:::
+
+:::tip[Para seguir]
+Practicá con la [Práctica — XML en SQL Server](/bbdd-aplicadas/unidad-2/practica/xml/) y después seguí con [Importación de archivos](/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos/).
 :::
 
 ## Fuentes

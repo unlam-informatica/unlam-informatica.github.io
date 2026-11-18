@@ -2,7 +2,7 @@
 title: Formatos de intercambio
 slug: bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio
 sidebar:
-  order: 5
+  order: 6
 ---
 
 [← Unidad 2](/bbdd-aplicadas/unidad-2/teoria/)
@@ -336,6 +336,10 @@ Se convierte primero a JSON con una herramienta externa y luego se lee con `OPEN
 - Un formato de intercambio es un estándar de texto con sintaxis propia; adherir a uno evita acuerdos particulares entre sistemas.
 - CSV y ancho fijo son tabulares; XML, JSON y YAML son jerárquicos. EDI está orientado a documentos comerciales entre empresas.
 - En SQL Server, XML y JSON tienen soporte propio (tipo `xml`, `OPENJSON`, `FOR JSON`, `FOR XML`); CSV y ancho fijo se cargan con `BULK INSERT`; YAML requiere convertirlo a JSON.
+:::
+
+:::tip[Para seguir]
+Seguí con [JSON en SQL Server](/bbdd-aplicadas/unidad-2/teoria/json-en-sql/) y [XML en SQL Server](/bbdd-aplicadas/unidad-2/teoria/xml-en-sql/).
 :::
 
 ## Fuentes

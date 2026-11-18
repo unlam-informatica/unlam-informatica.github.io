@@ -2,7 +2,7 @@
 title: Práctica — Transacciones
 slug: bbdd-aplicadas/unidad-2/practica/transacciones
 sidebar:
-  order: 3
+  hidden: true
   label: Transacciones
 ---
 

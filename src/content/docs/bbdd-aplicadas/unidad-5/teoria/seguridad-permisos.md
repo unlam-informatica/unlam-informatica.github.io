@@ -2,7 +2,7 @@
 title: Seguridad, usuarios y permisos
 slug: bbdd-aplicadas/unidad-5/teoria/seguridad-permisos
 sidebar:
-  order: 2
+  order: 1
 ---
 
 [← Unidad 5](/bbdd-aplicadas/unidad-5/teoria/)
@@ -588,6 +588,10 @@ Con `EXECUTE AS USER` y `HAS_PERMS_BY_NAME` o `fn_my_permissions`, y con una con
 - `DENY` gana sobre `GRANT`; `REVOKE` solo quita una fila. Los permisos bajan por la jerarquía servidor, base, esquema, objeto.
 - Los roles y los esquemas simplifican la administración; los propietarios tienen permisos irrevocables.
 - El encadenamiento de propiedad se corta con propietarios distintos o con SQL dinámico.
+:::
+
+:::tip[Para seguir]
+- Practicá con el [Laboratorio — Seguridad, roles y permisos](/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/) y después seguí con [Cifrado en reposo y en tránsito](/bbdd-aplicadas/unidad-5/teoria/cifrado/).
 :::
 
 ## Fuentes

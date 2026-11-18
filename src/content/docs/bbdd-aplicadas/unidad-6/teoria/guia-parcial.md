@@ -2,7 +2,8 @@
 title: Guía de repaso — Unidad 6
 slug: bbdd-aplicadas/unidad-6/teoria/guia-parcial
 sidebar:
-  order: 7
+  hidden: true
+  label: Guía de repaso
 ---
 
 [← Unidad 6](/bbdd-aplicadas/unidad-6/teoria/)

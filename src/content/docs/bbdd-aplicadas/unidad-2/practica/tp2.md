@@ -1,9 +1,9 @@
 ---
-title: Práctica — Conceptos básicos de SQL
+title: Trabajo Práctico 2 — Collation, importación de CSV y tablas temporales
 slug: bbdd-aplicadas/unidad-2/practica/tp2
 sidebar:
-  order: 1
-  label: Conceptos básicos de SQL
+  label: TP 2 — Collation, importación y temporales
+  order: 4
 ---
 
 [← Unidad 2](/bbdd-aplicadas/unidad-2/teoria/)
