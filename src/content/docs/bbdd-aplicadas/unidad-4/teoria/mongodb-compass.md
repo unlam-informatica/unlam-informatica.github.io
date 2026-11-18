@@ -5,87 +5,76 @@ sidebar:
   order: 6
 ---
 
-[← Unidad 4](/bbdd-aplicadas/unidad-4/)
+[← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)
 
+Guía de uso de la interfaz gráfica oficial de MongoDB. Cada operación de la interfaz tiene su equivalente en el shell, que se explica en [CRUD y consultas](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/) y en [Aggregation Pipeline, índices y vistas](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/). La instalación y la conexión a Atlas están en [Instalación y conexión](/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb/).
 
-Guía de uso de la interfaz gráfica oficial de MongoDB.
+:::note[Sobre las descripciones de pantalla]
+Esta página describe la interfaz con **texto**, sin capturas. Los nombres de botones y pestañas (en inglés) corresponden a las versiones recientes de Compass y pueden cambiar entre versiones. Lo que se ejecuta en el motor (los filtros, las proyecciones, el índice y el plan) se comprobó con los equivalentes en `mongosh` sobre MongoDB 7.0; la interfaz gráfica en sí no se automatiza y no forma parte de esa verificación.
+:::
 
----
+## Para qué sirve
+
+Compass permite explorar una base, probar una consulta, armar un pipeline etapa por etapa con vista previa y ver el plan de ejecución, sin escribir los comandos completos. Sirve para **aprender y diagnosticar**; el trabajo repetible se escribe como script de `mongosh`.
 
 ## ¿Qué es MongoDB Compass?
 
-**MongoDB Compass** es la GUI (Graphical User Interface) oficial de MongoDB. Es gratuito, de código abierto, y disponible para macOS, Windows y Linux.
-
-Permite consultar, agregar, analizar y gestionar datos en un entorno visual sin necesidad de escribir comandos en el shell.
+**MongoDB Compass** es el cliente gráfico (GUI) oficial de MongoDB, disponible para Windows, macOS y Linux. Es gratuito. Su código fuente es público en el repositorio oficial de MongoDB, con la licencia *Server Side Public License* (SSPL), que no está aprobada como de código abierto por la *Open Source Initiative*: se lo describe como de código disponible y no sin más "de código abierto". La licencia vigente figura en el repositorio.
 
 **Funciones principales:**
-- Conectar a instancias locales o remotas (Atlas).
-- Crear y eliminar bases de datos y colecciones.
+
+- Conectarse a instancias locales o remotas (Atlas).
+- Crear y eliminar bases y colecciones.
 - Insertar, importar, modificar y eliminar documentos.
 - Filtrar documentos con la sintaxis de `find()`.
-- Construir pipelines de agregación visualmente.
-- Gestionar índices.
-- Ver el plan de ejecución (Explain).
-- MongoDB Assistant: IA integrada para generar consultas.
-
----
+- Construir pipelines de agregación de forma visual.
+- Administrar índices y ver el plan de ejecución (*Explain*).
+- Un shell integrado (`mongosh`) para ejecutar comandos.
 
 ## Conexión
 
-### Conectar a instancia local
+Compass pide una **cadena de conexión** (URI) en **New Connection**. Para un servidor local, con los valores por defecto:
 
-Al abrir Compass, conectar con la URI por defecto:
-```
-mongodb://localhost:27017
-```
-
-### Conectar a MongoDB Atlas
-
-```
-mongodb+srv://<usuario>:<password>@<cluster>/<base>
+```text
+mongodb://localhost:27017/
 ```
 
-Usar la cadena generada por el clúster y mantener usuario y contraseña fuera del repositorio.
+Para un clúster de Atlas, se pega la cadena que genera Atlas (**Connect → Compass**), con marcadores en lugar de credenciales:
 
-Pestaña **My Queries** guarda las consultas guardadas.  
-Panel lateral izquierdo muestra todas las bases de datos y sus colecciones.
+<!-- sintaxis -->
+```text
+mongodb+srv://<usuario>:<contraseña>@<cluster>/
+```
 
----
+El panel izquierdo muestra las bases y colecciones de la conexión; la pestaña de **My Queries** guarda consultas y pipelines para reutilizarlos. El paso a paso para Atlas (clúster, usuario de base de datos, lista de acceso de red) está en [Instalación y conexión](/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb/#conexión-a-atlas). Los usuarios y las contraseñas no se guardan en capturas ni en apuntes.
 
 ## Vistas de datos
 
-Dentro de una colección, el panel de documentos ofrece tres vistas:
+Dentro de una colección, la pestaña **Documents** ofrece tres formas de ver los documentos:
 
 | Vista | Descripción |
-|-------|-------------|
-| **Lista** (≡) | Vista compacta, muestra un documento por línea |
-| **JSON** ({}) | Muestra los documentos en formato JSON completo |
-| **Tabla** (⊞) | Muestra los documentos como hoja de cálculo; útil para comparar campos |
+|---|---|
+| **Lista** | Un documento por bloque, con los campos y su tipo |
+| **JSON** | Los documentos como JSON completo |
+| **Tabla** | Una fila por documento y una columna por campo; útil para comparar valores |
 
----
+## Crear una base y una colección
 
-## Crear base de datos y colección
-
-1. Hacer clic en el botón **+** (junto a "Databases") en el panel izquierdo.
+1. En el panel izquierdo, botón **+** junto a **Databases** (o **Create database**).
 2. Completar **Database Name** y **Collection Name**.
-3. Hacer clic en **Create Database**.
+3. Confirmar con **Create Database**.
 
-La base de datos y la colección aparecen inmediatamente en el panel izquierdo.
-
----
+A diferencia del shell, Compass **sí crea** la base y la colección vacías de inmediato.
 
 ## Insertar documentos
 
-### Insertar un único documento
-
-1. Seleccionar la colección en el panel izquierdo.
-2. Hacer clic en **ADD DATA** → **Insert document**.
-3. Escribir el documento en formato JSON y hacer clic en **Insert**.
+1. Seleccionar la colección.
+2. **ADD DATA → Insert document**.
+3. Escribir el documento en JSON (o en la vista de campos) y confirmar con **Insert**.
 
 ```json
 {
   "nombre": "Pedro Gómez",
-  "dni": 98765432,
   "activo": true,
   "saldo": { "$numberDecimal": "2500.50" },
   "direccion": { "calle": "Avenida Siempre Viva", "numero": 742 },
@@ -93,225 +82,180 @@ La base de datos y la colección aparecen inmediatamente en el panel izquierdo.
 }
 ```
 
-También se puede hacer desde el shell integrado en Compass:
-```javascript
-db.personas.insertOne({
-  nombre: "Pedro Gómez",
-  dni: 98765432,
-  activo: true
-})
-```
-
-**Respuesta exitosa:**
-- `acknowledged: true`: la operación fue reconocida.
-- `insertedId: ObjectId('...')`: el `_id` asignado.
-
-### Insertar múltiples documentos
-
-Pegar un array JSON en el cuadro "Insert Document":
-```json
-[
-  { "nombre": "Juan", "edad": 28 },
-  { "nombre": "María", "edad": 34 }
-]
-```
-
----
+El cuadro acepta Extended JSON, así que `"$numberDecimal"` se guarda como `Decimal128`. Para insertar **varios** documentos, se pega un array JSON (`[ {...}, {...} ]`). El equivalente en el shell es `insertOne()` o `insertMany()`.
 
 ## Importar documentos
 
-Compass soporta importación de archivos **JSON** y **CSV**.
+**ADD DATA → Import JSON or CSV file** abre el asistente de importación.
 
-### Importar JSON
+- **JSON**: acepta un array de documentos o un documento por línea (NDJSON). Los tipos que JSON no tiene (`Date`, `ObjectId`) se importan correctamente solo si están escritos en Extended JSON; de lo contrario quedan como texto.
+- **CSV**: se elige el delimitador y **se indica el tipo de cada columna** (`String`, `Int32`, `Double`, `Date`, `Boolean`...).
 
-1. Seleccionar la colección.
-2. **ADD DATA** → **Import JSON or CSV file**.
-3. Seleccionar el archivo `.json`.
-4. Hacer clic en **Import**.
+:::caution[Los tipos de una importación CSV]
+Si no se cambia el tipo de una columna de fechas a `Date`, queda como `String` y las consultas por rango de fechas no encuentran esos documentos (ver [type bracketing](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/#fechas-y-type-bracketing)). Se verifica con un filtro `{ fecha: { $type: "string" } }` luego de importar. Un número con decimales quedaría como `Double` y un entero como `Int32`.
+:::
 
-Equivalente en línea de comandos:
+La alternativa de línea de comandos es `mongoimport`, que es una herramienta externa y no un comando de `mongosh`:
+
+<!-- sintaxis -->
+```text
+mongoimport --db=<base> --collection=<coleccion> --file=<archivo>.json --jsonArray
+mongoimport --db=<base> --collection=<coleccion> --type=csv --headerline --file=<archivo>.csv
 ```
-mongoimport --db=ejemplos --collection=empleados --file=empleado.json --jsonArray
-```
-
-### Importar CSV
-
-1. Seleccionar la colección.
-2. **ADD DATA** → **Import JSON or CSV file**.
-3. Seleccionar el archivo `.csv`.
-4. Configurar el delimitador (por defecto: coma).
-5. Especificar el tipo de dato para cada columna (String, Int32, Double, etc.).
-6. Hacer clic en **Import**.
-
-Equivalente en línea de comandos:
-```
-mongoimport --db=ejemplos --collection=departamentos --type=csv --headerline --file=dptos.csv
-```
-
----
 
 ## Filtrar documentos
 
-La barra de filtros acepta la misma sintaxis que `find()`. Las consultas siempre van entre llaves `{}`.
+La barra **Filter** acepta el documento de filtro de `find()`; las otras opciones del panel corresponden al resto de la consulta:
 
-**Filtros básicos:**
-```javascript
-{ sexo: "femenino" }                           // campo igual a valor
-{ sexo: "femenino", edad: 25 }                 // AND implícito
-{ sexo: "masculino", edad: { $gt: 30, $lt: 40 } }  // rango
+| Campo de Compass | Equivalente en el shell |
+|---|---|
+| **Filter** | primer argumento de `find()` |
+| **Project** | segundo argumento (proyección) |
+| **Sort** | `.sort()` |
+| **Skip**, **Limit** | `.skip()`, `.limit()` |
+| **Collation** | `.collation()` |
+
+Los filtros se escriben tal cual en la barra. Sobre la colección `productos` de [CRUD](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/#datos-de-los-ejemplos):
+
+```text
+{ categoria: "audio" }
+{ precio: { $gt: 40 } }
+{ $or: [ { categoria: "audio", precio: { $gt: 70 } }, { stock: 0 } ] }
 ```
 
-**Filtros con operadores lógicos:**
+<!-- check: U4.T.CRUD.08 -->
 ```javascript
-{ $or: [
-  { sexo: "masculino", edad: { $gt: 30, $lt: 40 } },
-  { sexo: "femenino", edad: { $gt: 30, $lt: 40 } }
-]}
+db.productos.find({ categoria: "audio" })                                               // _id 5, 6
+db.productos.find({ precio: { $gt: 40 } }).sort({ precio: -1 }).limit(2)                // Notebook, Monitor (_id 4, 3)
+db.productos.find({ $or: [{ categoria: "audio", precio: { $gt: 70 } }, { stock: 0 }] })  // _id 5, 6
+db.productos.find({ categoria: "perifericos" }, { _id: 0, nombre: 1, precio: 1 }).sort({ nombre: 1 }).skip(1).limit(1)
+// { nombre: 'Teclado', precio: 45 }  (el segundo por nombre: Mouse, Teclado, Webcam)
 ```
 
-**Búsqueda por regex (case-insensitive):**
-```javascript
-{ apellidos: { $regex: "López", $options: "i" } }
-```
+Los valores de texto **distinguen mayúsculas y tildes**: `{ localidad: "Ramos Mejia" }` (sin tilde) no devuelve los documentos que tienen `"Ramos Mejía"`, y no se informa ningún error. En `U4.T.CRUD.08`, la consulta sin tilde cuenta 0 y la correcta cuenta 2.
 
-**Filtro con campo anidado:**
-```javascript
-{ "cliente.localidad": "Ramos Mejia" }
-```
+### Collation
 
-### Opciones adicionales en Compass
-
-Además del filtro, se pueden configurar:
-
-- **Project**: campos a incluir/excluir (`{ _id:0, nombre:1 }`).
-- **Sort**: orden de resultados (`{ nombre: 1 }`).
-- **Skip**: cantidad de documentos a omitir.
-- **Limit**: máximo de documentos a devolver.
-- **Collation**: opciones de comparación de texto (locale, strength, etc.).
-
-Una collation puede indicar:
+La **collation** define cómo se comparan y ordenan los textos. Se escribe como un documento (`{ locale: "es", strength: 1 }`):
 
 | Opción | Función |
-|--------|---------|
-| `locale` | Reglas lingüísticas, por ejemplo `es`, `en` o `fr` |
-| `strength` | Nivel de diferencias consideradas; niveles bajos pueden ignorar acentos o mayúsculas |
-| `caseLevel` | Agrega comparación de mayúsculas/minúsculas cuando corresponde |
-| `caseFirst` | Ordena mayúsculas primero, minúsculas primero o usa el valor predeterminado |
+|---|---|
+| `locale` | Reglas del idioma, por ejemplo `es`, `en`, `fr` |
+| `strength` | Nivel de diferencias que se consideran. `1` ignora mayúsculas y acentos; `2` ignora solo mayúsculas |
+| `caseLevel` | Agrega la comparación de mayúsculas cuando corresponde |
+| `caseFirst` | Mayúsculas primero, minúsculas primero o valor predeterminado |
 | `numericOrdering` | Ordena cadenas numéricas por valor (`"2"` antes que `"10"`) |
 
-La collation cambia comparación y ordenamiento; para aprovechar un índice, su collation debe ser compatible con la consulta.
+<!-- check: U4.T.CRUD.08 -->
+```javascript
+db.localidades.find({ nombre: "moron" })                                               // solo "moron" (_id 2)
+db.localidades.find({ nombre: "moron" }).collation({ locale: "es", strength: 1 })      // Morón, moron y MORON (_id 1, 2, 3)
+db.codigos.find().sort({ c: 1 })                                                       // "1", "10", "2" (orden textual)
+db.codigos.find().sort({ c: 1 }).collation({ locale: "es", numericOrdering: true })   // "1", "2", "10"
+```
 
----
+La collation cambia comparación y orden; para que un índice sirva a una consulta con collation, el índice debe haberse creado con la misma collation.
 
 ## Modificar documentos
 
-**Con el ícono de lápiz:**
-1. Pasar el cursor sobre el documento.
-2. Hacer clic en el ícono de **lápiz** (Edit document), o hacer doble clic en el documento.
-3. Editar el valor del campo directamente.
-4. Hacer clic en **UPDATE**.
+1. Pasar el cursor sobre el documento y hacer clic en el ícono de **lápiz** (*Edit document*), o hacer doble clic en un campo.
+2. Cambiar el valor. A la derecha de cada campo se ve su **tipo BSON** (String, Int32, Date...), que se puede cambiar.
+3. Confirmar con **Update**.
 
-En la vista de edición, cada campo muestra su tipo BSON a la derecha (String, Int32, Boolean, Date, etc.).
+Esta edición actualiza **un documento**. Para modificar muchos a la vez, se usa `updateMany()` en el shell integrado.
 
----
+## Eliminar y clonar documentos
 
-## Eliminar documentos
+- **Eliminar**: ícono de **papelera**; el documento se marca como *flagged for deletion* (en rojo) y se confirma con **Delete**.
+- **Clonar**: ícono de **clonar**; abre el cuadro *Insert Document* con los mismos campos, que se editan antes de confirmar con **Insert**. Si el `_id` se deja igual, la inserción falla con `E11000`: hay que cambiarlo o quitarlo.
 
-1. Pasar el cursor sobre el documento.
-2. Hacer clic en el ícono de **papelera** (Remove document).
-3. El documento queda marcado en rojo con el mensaje "Document flagged for deletion".
-4. Hacer clic en **DELETE** para confirmar.
-
----
-
-## Clonar documentos
-
-1. Hacer clic en el ícono de **clonar** (el segundo ícono después del lápiz).
-2. Compass abre el cuadro "Insert Document" con los mismos campos y valores del documento original.
-3. Modificar los valores que se deseen.
-4. Hacer clic en **Insert**.
-
----
-
-## Aggregation Pipeline (visual)
+## Aggregation Pipeline visual
 
 1. Seleccionar la colección y abrir la pestaña **Aggregations**.
-2. Hacer clic en **Add Stage**.
-3. Seleccionar la etapa en el menú desplegable: `$match`, `$group`, `$project`, `$lookup`, `$unwind`, `$sort`, `$limit`, etc.
-4. Completar los parámetros de la etapa en el editor.
-5. El panel derecho muestra un **preview** de los documentos de salida de esa etapa.
-6. Agregar más stages con **+ Add Stage**.
+2. **Add Stage** y elegir una etapa en el menú (`$match`, `$group`, `$project`, `$lookup`, `$unwind`, `$sort`, `$limit`, `$skip`, `$replaceRoot`, `$out`...).
+3. Completar el cuerpo de la etapa. A la derecha, una **vista previa** muestra los primeros documentos que salen de esa etapa (con un muestreo de la colección).
+4. Agregar más etapas con **Add Stage**, reordenarlas o activarlas y desactivarlas.
 
-**Stages disponibles:**
+La vista previa de cada etapa ayuda a depurar un pipeline paso a paso. Se puede exportar el pipeline a un lenguaje de programación, y **Save → Create view** crea una [vista](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/#vistas); el panel izquierdo la muestra con la marca de solo lectura.
 
-| Stage | Descripción |
-|-------|-------------|
-| `$match` | Filtra documentos (equivale a find()) |
-| `$group` | Agrupa y calcula acumulaciones |
-| `$project` | Selecciona y transforma campos |
-| `$lookup` | Une dos colecciones (join) |
-| `$unwind` | Descompone arrays en documentos |
-| `$sort` | Ordena los resultados |
-| `$limit` | Limita la cantidad de resultados |
-| `$skip` | Omite los primeros N documentos |
-| `$out` | Escribe el resultado en una nueva colección |
-| `$replaceRoot` | Reemplaza el documento con un subdocumento |
-| `$sample` | Selecciona aleatoriamente N documentos |
+## Índices
 
-**Guardar como vista:**
-1. Hacer clic en **Save** → **Create View**.
-2. Ingresar el nombre de la vista.
-3. Hacer clic en **Create**.
+La pestaña **Indexes** lista los índices de la colección con su nombre, definición, tipo, tamaño y la cantidad de usos. **Create Index** permite elegir los campos y el orden (`1` ascendente, `-1` descendente), y las opciones (único, parcial, TTL, collation, nombre).
 
-La vista aparece en el panel izquierdo junto a las colecciones (marcada como READ-ONLY).
+El equivalente en el shell, con un nombre propio:
 
----
-
-## Gestión de índices
-
-1. Seleccionar la colección y abrir la pestaña **Indexes**.
-2. Ver los índices existentes (nombre, campos, tipo, tamaño, uso).
-
-### Crear índice por GUI
-
-1. Hacer clic en **Create Index**.
-2. Seleccionar el campo y el tipo (`1 (asc)` o `-1 (desc)`).
-3. Opciones:
-   - **Create unique index**: garantiza que no haya valores duplicados.
-   - **Index name**: nombre personalizado (o dejar en blanco para nombre automático).
-   - **Create TTL**: índice especial para expirar documentos automáticamente después de un tiempo.
-4. Hacer clic en **Create Index**.
-
-### Crear índice por shell
-
+<!-- check: U4.T.CRUD.08 -->
 ```javascript
-db.cc_info.createIndex({ city: 1 }, { name: "city_indx" })
-db.cc_info.getIndexes()
-db.cc_info.dropIndex("city_indx")
+db.productos.createIndex({ categoria: 1 }, { name: "categoria_indx" })   // devuelve 'categoria_indx'
+db.productos.getIndexes()                                                // _id_ y categoria_indx
+db.productos.dropIndex("categoria_indx")
 ```
 
----
+Los tipos de índice y su efecto están en [Índices y estadísticas de ejecución](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/#índices-y-estadísticas-de-ejecución).
 
 ## Explain Plan
 
-El botón **Explain** muestra métricas de ejecución de una consulta:
+El botón **Explain** (junto a **Find**, con un filtro cargado) ejecuta `explain("executionStats")` y lo presenta en forma gráfica. Los campos del panel de resumen son:
 
-- **Documentos devueltos** y **documentos examinados**.
-- **Tiempo de ejecución** en milisegundos.
-- **COLLSCAN**: la consulta recorrió toda la colección (sin índice).
-- **IXSCAN**: la consulta usó un índice.
-- **No index available for this query**: advertencia de falta de índice.
+| Campo mostrado | Significado |
+|---|---|
+| **Documents Returned** | `nReturned` |
+| **Documents Examined** | `totalDocsExamined` |
+| **Index Keys Examined** | `totalKeysExamined` |
+| **Actual Query Execution Time** | `executionTimeMillis` |
+| **Query used the following index** / **No index available for this query** | Se usó un índice, o la consulta es un `COLLSCAN` |
+| **Sorted in memory** | El orden se hizo en memoria (`SORT`) y no con un índice |
 
-Útil para detectar consultas lentas y decidir qué índices crear.
+Debajo del resumen se ven las etapas del plan (`COLLSCAN`, `IXSCAN`, `FETCH`, `SORT`) y hay una vista **Raw JSON** con la salida completa de `explain()`. Los mismos números se obtienen en el shell:
 
----
+<!-- check: U4.T.CRUD.08 -->
+```javascript
+db.productos.find({ categoria: "audio" }).explain("executionStats")
+// nReturned: 2, totalKeysExamined: 0, totalDocsExamined: 8, etapa: COLLSCAN
+```
 
-## MongoDB Assistant
+La consulta devuelve 2 documentos y examina los 8 de la colección: no hay índice sobre `categoria`. Con `createIndex({ categoria: 1 })`, `Documents Examined` baja a 2.
 
-MongoDB Assistant es una IA integrada en Compass que ayuda a generar consultas y comandos.
+## Asistente de IA
 
-Se activa haciendo clic en el botón **MongoDB Assistant** en la barra inferior.
+Las versiones recientes de Compass incorporan un asistente que genera consultas y pipelines a partir de una descripción en lenguaje natural (por ejemplo, "productos de la categoría audio con precio mayor a 70"). Es una herramienta de ayuda y su disponibilidad depende de la versión y de la configuración. Toda consulta generada se revisa antes de usarla: el asistente puede equivocarse en nombres de campos o en el operador. Esta función no forma parte del programa de la materia.
 
-Ejemplo de uso:
-- Entrada: "dame la sintaxis de como obtengo los datos de la tabla Empleado que pertenezcan al Departamento Recursos Humanos"
-- Respuesta: la consulta `db.Empleado.find({ Departamento: "Recursos Humanos" })` y su versión con proyección.
+## Errores frecuentes
+
+:::caution[Errores frecuentes]
+- Importar un CSV sin cambiar el tipo de las columnas de fecha: quedan como `String`.
+- Filtrar `"Ramos Mejia"` sin tilde: no devuelve nada y no da error.
+- Usar el ícono de lápiz esperando modificar muchos documentos: edita uno solo.
+- Confiar en la vista previa de una etapa como resultado final: es una muestra de la colección.
+- Dejar usuario y contraseña en una captura o en un apunte compartido.
+:::
+
+## Autoevaluación
+
+<details>
+<summary>1. Importé un CSV con una columna fecha sin cambiar el tipo y una consulta de rango con límite Date no devuelve nada. ¿Por qué?</summary>
+
+La consulta es `{ fecha: { $gte: ISODate("2026-01-01") } }`.
+
+La columna quedó como `String` y los operadores de comparación solo comparan valores del mismo tipo. Se vuelve a importar con el tipo `Date`, o se convierte con `$toDate` en un pipeline.
+
+</details>
+
+<details>
+<summary>2. ¿Qué campo de Compass equivale a `.skip()` del shell? ¿Y a `explain("executionStats")`?</summary>
+
+El campo **Skip** del panel de consulta, y el botón **Explain**.
+
+</details>
+
+:::tip[En resumen]
+- Compass es la interfaz gráfica; cada acción tiene su comando de `mongosh`.
+- Filter, Project, Sort, Skip, Limit y Collation corresponden a las partes de `find()`.
+- Al importar un CSV se eligen los tipos de las columnas; las fechas deben ser `Date`.
+- Explain muestra `nReturned`, claves y documentos examinados, y si hubo `COLLSCAN` o `IXSCAN`.
+:::
+
+## Fuentes
+
+- Presentación de cátedra, Unidad 4, parte 1 (MongoDB Compass) y agregaciones.
+- MongoDB Compass Documentation: https://www.mongodb.com/docs/compass/.

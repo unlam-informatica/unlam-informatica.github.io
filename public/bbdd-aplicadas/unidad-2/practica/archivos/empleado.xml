@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Empresa>
+  <Departamento nombre="Ingeniería">
+    <Empleado legajo="E001" cargo="Desarrollo"><Salario>120000</Salario></Empleado>
+    <Empleado legajo="E002" cargo="Operaciones"><Salario>98000</Salario></Empleado>
+  </Departamento>
+  <Departamento nombre="Administración">
+    <Empleado legajo="E003" cargo="Contaduría"><Salario>82000</Salario><Email>e003@ejemplo.test</Email></Empleado>
+  </Departamento>
+</Empresa>

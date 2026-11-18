@@ -1,0 +1,8 @@
+[
+  { "clienteId": 1, "nombre": "Ferretería Peña", "localidad": "Córdoba",
+    "contactos": ["compras@ejemplo.test", "pagos@ejemplo.test"] },
+  { "clienteId": 2, "nombre": "Almacén Ñandú", "localidad": "Rosario",
+    "contactos": ["ventas@ejemplo.test"] },
+  { "clienteId": 3, "nombre": "Kiosco Sol", "localidad": "Salta",
+    "contactos": [] }
+]

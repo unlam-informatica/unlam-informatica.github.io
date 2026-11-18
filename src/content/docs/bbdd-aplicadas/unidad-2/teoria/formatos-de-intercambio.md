@@ -5,404 +5,342 @@ sidebar:
   order: 5
 ---
 
-[← Unidad 2](/bbdd-aplicadas/unidad-2/)
+[← Unidad 2](/bbdd-aplicadas/unidad-2/teoria/)
 
----
+Esta es la única página de la unidad que describe los **formatos** de intercambio de datos: EDI, CSV, ancho fijo, XML, JSON y YAML. Cómo leer y generar XML y JSON desde T-SQL está en [JSON en SQL Server](/bbdd-aplicadas/unidad-2/teoria/json-en-sql/) y [XML en SQL Server](/bbdd-aplicadas/unidad-2/teoria/xml-en-sql/); cómo cargar archivos en una tabla, en [Importación de archivos](/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos/).
 
-Los formatos de intercambio son estándares de texto para almacenar y compartir datos entre sistemas distintos. Al adherirse a un estándar, cualquier sistema que lo implemente puede consumir o producir los datos sin necesidad de acuerdos ad-hoc.
+## Para qué sirve
 
----
+Dos sistemas que no comparten base de datos necesitan acordar cómo se escribe un dato en un archivo o en un mensaje. Un **formato de intercambio** es ese acuerdo: un estándar de texto con reglas de sintaxis. Al adherir a un estándar no hace falta conocer de antemano quién va a usar los datos, y casi siempre existen bibliotecas que los generan o los interpretan.
 
-## EDI — Electronic Data Interchange
+:::note[Definición]
+Un **formato de intercambio** es una convención de texto con estructura y sintaxis propias para almacenar y compartir información entre sistemas. En la materia se estudian EDI, CSV (y TSV), ancho fijo, XML, JSON y YAML.
+:::
 
-EDI es un estándar de intercambio electrónico _computer-to-computer_ pensado para reemplazar documentos en papel (facturas, órdenes de compra, avisos de embarque) en intercambios B2B.
+Un mismo dato puede viajar en cualquiera de ellos. Los datos de ejemplo de esta página son siempre los mismos, tres productos de una librería ficticia:
 
-**Características**:
-- Texto simple (ASCII / Unicode).
-- Múltiples estándares en uso simultáneo: **ANSI X12**, **EANCOM**, **HIPAA** (salud), **ODETTE** (automotriz), **SWIFT** (banca), entre otros.
-- En cada intercambio debe indicarse el estándar y la versión usada.
-- Define cómo interpretar números, fechas y códigos específicos del negocio.
+| Código | Nombre | Precio | Stock |
+|---|---|---:|---:|
+| P001 | Cuaderno rayado | 1250,50 | 40 |
+| P002 | Lapicera azul | 300,00 | 120 |
+| P003 | Resaltador amarillo | 480,25 | 0 |
 
-**Ejemplo — factura ANSI X12 (simplificada)**:
+## EDI (Electronic Data Interchange)
 
-```
+EDI es un formato de texto pensado para el intercambio entre computadoras (_computer-to-computer_) de documentos comerciales como facturas u órdenes de compra. No existe un único EDI: hay varios estándares, cada uno con múltiples versiones, por ejemplo ANSI X12, EANCOM, HIPAA, ODETTE y SWIFT. En cada intercambio se informa a qué estándar y versión se adhiere, y el estándar detalla cómo interpretar números, fechas y códigos.
+
+Una factura ANSI X12 simplificada, con datos ficticios, se ve así:
+
+```text
 ST*810*0001~
-BIG*20000513*SG427254*20000506*508517*1001~
-N1*ST*ABC AEROSPACE CORPORATION*9*123456789-0101~
-N3*1000 BOARDWALK DRIVE~
-N4*SOMEWHERE*CA*98898~
+BIG*20260310*FAC0001*20260301*OC0001*1001~
+N1*ST*EMPRESA EJEMPLO SA*9*123456789~
+N3*CALLE FICTICIA 100~
+N4*ROSARIO*SF*S2000~
 TDS*14400~
-SE*10*0001~
+SE*6*0001~
 ```
 
 | Segmento | Significado |
-|----------|-------------|
-| `ST*810*0001~` | Inicio de transacción tipo 810 (factura), número de control 0001 |
-| `BIG*...` | Datos generales: fecha emisión, número de factura, fecha y número de orden de compra |
-| `N1*ST*...` | Identificación del destinatario (Ship-To) con nombre y ID fiscal |
-| `N3*...` | Dirección de entrega (calle y número) |
-| `N4*...` | Ciudad, estado y código postal |
-| `TDS*14400~` | Total del documento (144.00 en centavos) |
-| `SE*10*0001~` | Fin de transacción; 10 segmentos, control 0001 |
+|---|---|
+| `ST*810*0001~` | Inicio de la transacción tipo 810 (factura), con número de control 0001 |
+| `BIG*...` | Datos generales: fecha de la factura, número de factura, fecha y número de la orden de compra |
+| `N1*ST*...` | Identificación del destinatario (_ship to_) |
+| `N3*...` / `N4*...` | Dirección; ciudad, provincia y código postal |
+| `TDS*14400~` | Total del documento. Por la convención del segmento `TDS`, el importe se escribe sin separador decimal y con dos decimales implícitos: 14400 equivale a 144,00 |
+| `SE*6*0001~` | Fin de la transacción: cantidad de segmentos y número de control |
 
-**Casos de uso**: facturas electrónicas, órdenes de compra, notificaciones de embarque, estados de cuenta bancarios.
+SQL Server no lee EDI directamente. En la práctica se usa un traductor que convierte el EDI a otro formato (por ejemplo XML) antes de cargarlo.
 
----
+## CSV y TSV
 
-## CSV / TSV
+**CSV** (_Comma-Separated Values_) es un formato de texto tabular: cada línea es un registro y las columnas se separan con un delimitador, en general la coma o el punto y coma. **TSV** es lo mismo con el carácter tabulador como delimitador.
 
-**CSV** (_Comma-Separated Values_): formato tabular donde cada fila es un registro y las columnas se separan por un delimitador.
+Reglas habituales (RFC 4180 describe la variante más difundida):
 
-**Reglas**:
-- Primera fila: opcional, puede contener los nombres de las columnas.
-- Delimitador: generalmente `,` (Europa usa `;` porque la coma es separador decimal).
-- Campo vacío: dos delimitadores contiguos → `valor1,,valor3`.
-- Si el delimitador forma parte de un valor, el valor va entre comillas dobles: `"Gómez, Juan"`.
-- **TSV**: usa el carácter tabulador como delimitador.
+- La primera línea puede tener los nombres de las columnas.
+- Todos los registros tienen la misma cantidad de campos.
+- Un campo vacío se escribe con dos delimitadores contiguos: `P003,Resaltador amarillo,480.25,`.
+- Si el delimitador forma parte del dato, el campo se entrecomilla con comillas dobles: `"Cuaderno, rayado"`. Dentro de un campo entrecomillado, una comilla se duplica: `"Lapicera ""Trazo"" azul"`.
+- En países que usan la coma como separador decimal se usa `;` como delimitador.
 
-**Ejemplo CSV**:
-
-```
-anio,mes,municipio_nombre,delegacion,genero,cantidad
-2019,1,La Matanza,San Justo,masculino,74
-2019,2,La Matanza,San Justo,masculino,73
-2019,3,La Matanza,San Justo,femenino,66
-2019,4,La Matanza,,masculino,59
+```text
+codigo,nombre,precio,stock
+P001,"Cuaderno, rayado",1250.50,40
+P002,"Lapicera ""Trazo"" azul",300.00,120
+P003,Resaltador amarillo,480.25,
 ```
 
-(La cuarta fila tiene el campo `delegacion` vacío.)
-
-### Importar CSV en SQL Server
-
-#### BULK INSERT
-
-```sql
--- Importar CSV con encabezado en la primera fila
-BULK INSERT ventas
-FROM 'C:\datos\ventas.csv'
-WITH (
-    FIELDTERMINATOR = ',',     -- delimitador de columnas
-    ROWTERMINATOR   = '\n',    -- delimitador de filas
-    FIRSTROW        = 2,       -- saltar fila de encabezado
-    CODEPAGE        = '65001'  -- UTF-8
-);
-```
-
-#### OPENROWSET (lectura ad-hoc)
-
-```sql
-SELECT *
-FROM OPENROWSET(
-    BULK 'C:\datos\ventas.csv',
-    FORMATFILE = 'C:\datos\ventas.fmt',
-    FIRSTROW = 2
-) AS datos;
-```
-
-#### Exportar a CSV
-
-```sql
--- Desde SSMS: Results to File
--- Desde BCP:
-bcp "SELECT * FROM ventas" queryout "C:\datos\export.csv" -c -t"," -r"\n" -S servidor -T
-```
-
----
+Para cargar un CSV en una tabla (`BULK INSERT` con `FORMAT = 'CSV'`) mirá [Importación de archivos](/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos/).
 
 ## Ancho fijo
 
-En el formato de **ancho fijo** no hay delimitador: cada campo ocupa siempre la misma cantidad de caracteres.
+En el formato de **ancho fijo** no hay delimitadores: cada campo ocupa siempre la misma cantidad de caracteres y cada registro tiene la misma longitud total. Hay que definir el carácter de relleno, típicamente espacios para el texto y ceros a la izquierda para los números. Es habitual en sistemas heredados, archivos bancarios y organismos públicos.
 
-**Reglas**:
-- La especificación del formato define la posición inicial y longitud de cada campo.
-- Valores más cortos: relleno con espacios (texto) o ceros a la izquierda (números).
-- Todos los registros tienen exactamente la misma longitud total.
+Especificación del ejemplo: código (4), nombre (22), precio (10) y stock (4), 40 caracteres por línea.
 
-**Ejemplo** — especificación: año[4], mes[2], nombre[20], cantidad[6]:
-
-```
-201901La Matanza            000074
-201902La Matanza            000073
-201903La Matanza            000066
+```text
+P001Cuaderno rayado       0001250.500040
+P002Lapicera azul         0000300.000120
+P003Resaltador amarillo   0000480.250000
 ```
 
-Para leer este formato en SQL Server se puede usar `BULK INSERT` con un archivo de formato (`.fmt`) o parsear con `SUBSTRING`:
+Hay dos formas de leerlo en SQL Server. La primera es cargar cada línea completa en una sola columna y cortarla con `SUBSTRING`. El archivo del ejemplo tiene fin de línea LF, por eso se usa `ROWTERMINATOR = '0x0a'`. En una ruta de Windows se reemplaza el ejemplo `C:\datos\producto_fijo.txt` por la ruta propia.
 
+<!-- check: U2.T.FMT.02 -->
 ```sql
--- Leer archivo ancho fijo como una sola columna y parsear con SUBSTRING
-CREATE TABLE tmp_ancho_fijo (linea CHAR(32));
+CREATE SCHEMA staging;
+GO
 
-BULK INSERT tmp_ancho_fijo
-FROM 'C:\datos\archivo.txt'
-WITH (ROWTERMINATOR = '\n');
+-- Cada línea del archivo mide 40 caracteres
+CREATE TABLE staging.LineaProducto (
+    Linea CHAR(40) NOT NULL
+);
+GO
 
-SELECT
-    CAST(SUBSTRING(linea, 1, 4)  AS INT)          AS anio,
-    CAST(SUBSTRING(linea, 5, 2)  AS INT)          AS mes,
-    RTRIM(SUBSTRING(linea, 7, 20))                AS municipio,
-    CAST(SUBSTRING(linea, 27, 6) AS INT)          AS cantidad
-FROM tmp_ancho_fijo;
+BULK INSERT staging.LineaProducto
+FROM 'C:\datos\producto_fijo.txt'
+WITH (ROWTERMINATOR = '0x0a');
+
+SELECT SUBSTRING(Linea, 1, 4)                              AS Codigo,
+       RTRIM(SUBSTRING(Linea, 5, 22))                      AS Nombre,
+       CAST(SUBSTRING(Linea, 27, 10) AS DECIMAL(10,2))     AS Precio,
+       CAST(SUBSTRING(Linea, 37, 4)  AS INT)               AS Stock
+FROM staging.LineaProducto
+ORDER BY Codigo;
 ```
 
-**Casos de uso**: archivos bancarios (acreditaciones, cobranzas), sistemas legados (mainframes), AFIP, intercambios con organismos gubernamentales.
+**Resultado esperado.**
 
----
+| Codigo | Nombre | Precio | Stock |
+|---|---|---:|---:|
+| P001 | Cuaderno rayado | 1250.50 | 40 |
+| P002 | Lapicera azul | 300.00 | 120 |
+| P003 | Resaltador amarillo | 480.25 | 0 |
 
-## XML — eXtended Markup Language
+La segunda forma es un **archivo de formato** (`.fmt`) que describe cada campo, su longitud y sus terminadores. Con él, `BULK INSERT` carga cada campo en su columna.
 
-XML es un lenguaje de marcado autodescriptivo: cada dato está delimitado por etiquetas.
+```text
+14.0
+4
+1  SQLCHAR  0  4   ""    1  Codigo  ""
+2  SQLCHAR  0  22  ""    2  Nombre  ""
+3  SQLCHAR  0  10  ""    3  Precio  ""
+4  SQLCHAR  0  4   "\n"  4  Stock   ""
+```
 
-**Características**:
-- Evolución de SGML, similar a HTML pero sin etiquetas predefinidas.
-- Estructura jerárquica (árbol de nodos).
-- Admite atributos dentro de las etiquetas: `<fila id="1">`.
-- Se puede validar contra un esquema (DTD o XSD).
-- Verboso pero muy expresivo y ampliamente soportado.
+La primera línea es la versión del formato (14.0 corresponde a SQL Server 2017; las versiones posteriores lo leen), la segunda la cantidad de campos. Cada línea siguiente indica, en orden: número de campo en el archivo, tipo de dato en el archivo, prefijo (0 = sin prefijo), longitud, terminador, número de columna de la tabla, nombre de la columna y _collation_. Los campos de ancho fijo llevan terminador vacío (`""`); el último lleva el fin de línea.
 
-**Ejemplo**:
+<!-- check: U2.T.FMT.03 -->
+```sql
+CREATE SCHEMA ventas;
+GO
+
+CREATE TABLE ventas.Producto (
+    Codigo CHAR(4)       NOT NULL,
+    Nombre VARCHAR(22)   NOT NULL,
+    Precio DECIMAL(10,2) NOT NULL,
+    Stock  INT           NOT NULL
+);
+GO
+
+BULK INSERT ventas.Producto
+FROM 'C:\datos\producto_fijo.txt'
+WITH (FORMATFILE = 'C:\datos\producto_fijo.fmt');
+
+SELECT Codigo, RTRIM(Nombre) AS Nombre, Precio, Stock
+FROM ventas.Producto
+ORDER BY Codigo;
+```
+
+**Resultado esperado.**
+
+| Codigo | Nombre | Precio | Stock |
+|---|---|---:|---:|
+| P001 | Cuaderno rayado | 1250.50 | 40 |
+| P002 | Lapicera azul | 300.00 | 120 |
+| P003 | Resaltador amarillo | 480.25 | 0 |
+
+:::caution[Fin de línea en el archivo de formato]
+El terminador `"\n"` del archivo de formato y el `ROWTERMINATOR = '0x0a'` suponen líneas terminadas en LF. Los archivos generados en Windows suelen terminar en CRLF: en ese caso el terminador es `"\r\n"` (o `0x0d0a`). Si no coincide, la última columna incluye el retorno de carro y la conversión falla.
+:::
+
+## XML (Extensible Markup Language)
+
+XML es un lenguaje de marcado, similar a HTML pero sin etiquetas predefinidas. Es **autodescriptivo**: cada dato se delimita con etiquetas (`<etiqueta>dato</etiqueta>`), la estructura es un árbol de elementos anidados y los elementos pueden tener atributos. Se puede validar contra un esquema (DTD o XSD) y es muy usado en formatos de archivo y en servicios SOAP. Es verboso, pero expresivo.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<response>
-    <row _id="row-v4f5~xz3v-vr86">
-        <brth_yr>2011</brth_yr>
-        <gndr>FEMALE</gndr>
-        <ethcty>HISPANIC</ethcty>
-        <nm>GERALDINE</nm>
-        <cnt>13</cnt>
-        <rnk>75</rnk>
-    </row>
-    <row _id="row-gdep~mr7x-dj3u">
-        <brth_yr>2011</brth_yr>
-        <gndr>FEMALE</gndr>
-        <ethcty>HISPANIC</ethcty>
-        <nm>GIA</nm>
-        <cnt>21</cnt>
-        <rnk>67</rnk>
-    </row>
-</response>
+<productos>
+  <producto codigo="P001">
+    <nombre>Cuaderno rayado</nombre>
+    <precio>1250.50</precio>
+    <stock>40</stock>
+  </producto>
+  <producto codigo="P002">
+    <nombre>Lapicera azul</nombre>
+    <precio>300.00</precio>
+    <stock>120</stock>
+  </producto>
+</productos>
 ```
 
-### XML en SQL Server
+Los caracteres `<`, `>`, `&`, `'` y `"` no pueden aparecer tal cual en el contenido o en un valor de atributo: se escriben como `&lt;`, `&gt;`, `&amp;`, `&apos;` y `&quot;`. Un documento con estructura mal cerrada o con un carácter sin escapar está **mal formado** y el motor lo rechaza.
 
-SQL Server tiene el tipo de dato `XML` y un conjunto de métodos para manipularlo.
+SQL Server tiene un tipo de dato `xml` y métodos para consultarlo y generarlo; todo eso está en [XML en SQL Server](/bbdd-aplicadas/unidad-2/teoria/xml-en-sql/).
 
-#### Generar XML desde una consulta
+## JSON (JavaScript Object Notation)
 
-```sql
--- FOR XML AUTO: genera nodos con el nombre de la tabla/alias
-SELECT nombre, apellido FROM clientes FOR XML AUTO;
-
--- FOR XML PATH: estructura personalizada
-SELECT
-    id        AS '@id',           -- atributo XML
-    nombre    AS 'nombre',        -- elemento hijo
-    apellido  AS 'apellido'
-FROM clientes
-FOR XML PATH('cliente'), ROOT('clientes');
-```
-
-Resultado de `FOR XML PATH`:
-
-```xml
-<clientes>
-    <cliente id="1"><nombre>Juan</nombre><apellido>García</apellido></cliente>
-    <cliente id="2"><nombre>Ana</nombre><apellido>López</apellido></cliente>
-</clientes>
-```
-
-#### Leer y consultar XML
-
-```sql
-DECLARE @xml XML = '
-<clientes>
-    <cliente id="1"><nombre>Juan</nombre><monto>1500.00</monto></cliente>
-    <cliente id="2"><nombre>Ana</nombre><monto>2300.50</monto></cliente>
-</clientes>';
-
--- .nodes(): shred XML en filas
--- .value(): extraer un valor escalar
-SELECT
-    c.value('@id',       'INT')           AS id,
-    c.value('nombre[1]', 'VARCHAR(50)')   AS nombre,
-    c.value('monto[1]',  'DECIMAL(10,2)') AS monto
-FROM @xml.nodes('/clientes/cliente') AS t(c);
-```
-
-#### Cargar XML desde archivo
-
-```sql
--- Leer el archivo completo en una variable XML
-DECLARE @xml XML;
-SELECT @xml = BulkColumn
-FROM OPENROWSET(BULK 'C:\datos\clientes.xml', SINGLE_BLOB) AS x;
-
--- Luego procesar con .nodes() y .value()
-```
-
----
-
-## JSON — JavaScript Object Notation
-
-JSON es un formato de texto ligero basado en pares clave/valor.
-
-**Sintaxis**:
+JSON es un formato de texto liviano basado en pares clave-valor, muy usado por las API web. Sus construcciones son:
 
 | Construcción | Sintaxis | Ejemplo |
-|-------------|----------|---------|
-| Objeto | `{ "clave": valor, ... }` | `{"nombre": "Juan", "edad": 30}` |
-| Array | `[ valor, valor, ... ]` | `[1, 2, 3]` o `[{...}, {...}]` |
-| String | `"texto"` | `"Poema del Cid"` |
-| Número | sin comillas | `42`, `3.14` |
+|---|---|---|
+| Objeto | `{ "clave": valor, ... }` | `{"codigo": "P001", "stock": 40}` |
+| Arreglo | `[ valor, valor, ... ]` | `[1, 2, 3]` o `[{...}, {...}]` |
+| Cadena | entre comillas dobles | `"Cuaderno rayado"` |
+| Número | sin comillas | `42`, `1250.50` |
 | Booleano | sin comillas | `true`, `false` |
 | Nulo | sin comillas | `null` |
 
-**Ejemplo**:
-
 ```json
 [
-    {
-        "Posición": 1,
-        "Obra": "Poema del Cid.",
-        "Enlace_BDH": "http://bdh.bne.es/bnesearch/detalle/bdh0000036451"
-    },
-    {
-        "Posición": 2,
-        "Obra": "Beato de Liébana: códice de Fernando I y Dña. Sancha.",
-        "Enlace_BDH": "http://bdh.bne.es/bnesearch/detalle/bdh0000051522"
-    }
+  { "codigo": "P001", "nombre": "Cuaderno rayado", "precio": 1250.50, "stock": 40 },
+  { "codigo": "P002", "nombre": "Lapicera azul",   "precio": 300.00,  "stock": 120 }
 ]
 ```
 
-### JSON en SQL Server
+Las claves y las cadenas van siempre entre comillas dobles; no se admiten comentarios ni comas finales. SQL Server no tiene un tipo `json` propio en SQL Server 2022: guarda JSON en columnas de texto (`NVARCHAR`) y lo procesa con funciones. Mirá [JSON en SQL Server](/bbdd-aplicadas/unidad-2/teoria/json-en-sql/).
 
-#### Generar JSON desde una consulta
+## El mismo dato en XML y en JSON
 
+Para ver que el formato cambia pero el dato no, el siguiente ejemplo lee dos productos escritos en JSON y los mismos dos escritos en XML, y los devuelve con las mismas columnas. Los métodos usados se explican en las dos páginas de T-SQL.
+
+<!-- check: U2.T.FMT.01 -->
 ```sql
--- FOR JSON AUTO
-SELECT nombre, apellido FROM clientes FOR JSON AUTO;
-
--- FOR JSON PATH: estructura personalizada
-SELECT
-    id       AS 'cliente.id',
-    nombre   AS 'cliente.nombre',
-    apellido AS 'cliente.apellido'
-FROM clientes
-FOR JSON PATH, ROOT('clientes');
--- → {"clientes":[{"cliente":{"id":1,"nombre":"Juan","apellido":"García"}},…]}
-```
-
-#### Leer y shredear JSON con OPENJSON
-
-```sql
-DECLARE @json NVARCHAR(MAX) = N'
-[
-    {"nombre": "Juan",  "edad": 30, "ciudad": "Buenos Aires"},
-    {"nombre": "Ana",   "edad": 25, "ciudad": "Córdoba"},
-    {"nombre": "Pedro", "edad": 35, "ciudad": null}
+DECLARE @Json NVARCHAR(MAX) = N'[
+  {"codigo": "P001", "nombre": "Cuaderno rayado", "precio": 1250.50, "stock": 40},
+  {"codigo": "P002", "nombre": "Lapicera azul",   "precio": 300.00,  "stock": 120}
 ]';
 
--- Con esquema explícito (WITH)
-SELECT nombre, edad, ciudad
-FROM OPENJSON(@json)
+DECLARE @Xml XML = N'
+<productos>
+  <producto codigo="P001">
+    <nombre>Cuaderno rayado</nombre>
+    <precio>1250.50</precio>
+    <stock>40</stock>
+  </producto>
+  <producto codigo="P002">
+    <nombre>Lapicera azul</nombre>
+    <precio>300.00</precio>
+    <stock>120</stock>
+  </producto>
+</productos>';
+
+SELECT 'JSON' AS Origen, Codigo, Nombre, Precio, Stock
+FROM OPENJSON(@Json)
 WITH (
-    nombre  VARCHAR(50)  '$.nombre',
-    edad    INT          '$.edad',
-    ciudad  VARCHAR(100) '$.ciudad'
-);
+    Codigo CHAR(4)       '$.codigo',
+    Nombre VARCHAR(40)   '$.nombre',
+    Precio DECIMAL(10,2) '$.precio',
+    Stock  INT           '$.stock'
+)
+UNION ALL
+SELECT 'XML',
+       n.value('@codigo', 'CHAR(4)'),
+       n.value('(nombre)[1]', 'VARCHAR(40)'),
+       n.value('(precio)[1]', 'DECIMAL(10,2)'),
+       n.value('(stock)[1]', 'INT')
+FROM @Xml.nodes('/productos/producto') AS t(n)
+ORDER BY Codigo, Origen;
 ```
 
-#### Inserción masiva desde JSON
+**Resultado esperado.**
 
-```sql
-INSERT INTO clientes (nombre, edad, ciudad)
-SELECT nombre, edad, ciudad
-FROM OPENJSON(@json)
-WITH (
-    nombre  VARCHAR(50),
-    edad    INT,
-    ciudad  VARCHAR(100)
-);
-```
+| Origen | Codigo | Nombre | Precio | Stock |
+|---|---|---|---:|---:|
+| JSON | P001 | Cuaderno rayado | 1250.50 | 40 |
+| XML | P001 | Cuaderno rayado | 1250.50 | 40 |
+| JSON | P002 | Lapicera azul | 300.00 | 120 |
+| XML | P002 | Lapicera azul | 300.00 | 120 |
 
-#### Funciones JSON útiles
+## YAML (YAML Ain't Markup Language)
 
-```sql
--- Verificar si una cadena es JSON válido
-SELECT ISJSON('{"a":1}');  -- → 1 (sí es JSON)
+YAML es un formato de serialización pensado para que lo lean y escriban personas. Se lo considera, en la práctica, un superconjunto de JSON. Sus reglas básicas:
 
--- Extraer un valor escalar
-SELECT JSON_VALUE('{"nombre":"Juan","edad":30}', '$.nombre');  -- → Juan
-
--- Extraer un fragmento JSON
-SELECT JSON_QUERY('{"usuario":{"nombre":"Juan"}}', '$.usuario');
--- → {"nombre":"Juan"}
-
--- Modificar un JSON
-SELECT JSON_MODIFY('{"nombre":"Juan"}', '$.nombre', 'Pedro');
--- → {"nombre":"Pedro"}
-```
-
----
-
-## YAML — YAML Ain't a Markup Language
-
-YAML es un formato de serialización de datos diseñado para ser fácil de leer y escribir por humanos. Se considera un superconjunto de JSON.
-
-**Características**:
-- Usa sangría con **espacios** (nunca tabuladores) para definir la jerarquía.
-- Pares clave-valor separados por `:` sin comillas (excepto cuando el valor contiene caracteres especiales).
-- Elementos de lista precedidos por `-`.
-- Un documento comienza con `---`.
-- Los comentarios usan `#`.
-
-**Ejemplo — configuración de MongoDB**:
+- La jerarquía se marca con sangría de **espacios** (nunca tabuladores).
+- Los pares clave-valor se escriben `clave: valor`, sin comillas salvo que el valor tenga caracteres especiales.
+- Los elementos de una lista empiezan con `- `.
+- Un documento puede comenzar con `---`.
+- Los comentarios empiezan con `#`.
 
 ```yaml
-# mongod.conf
-
-storage:
-  dbPath: C:\Program Files\MongoDB\Server\4.4\data
-  journal:
-    enabled: true
-
-systemLog:
-  destination: file
-  logAppend: true
-  path: C:\Program Files\MongoDB\Server\4.4\log\mongod.log
-
-net:
-  port: 27017
-  bindIp: 127.0.0.1
+# Los mismos productos, en YAML
+productos:
+  - codigo: P001
+    nombre: Cuaderno rayado
+    precio: 1250.50
+    stock: 40
+  - codigo: P002
+    nombre: Lapicera azul
+    precio: 300.00
+    stock: 120
 ```
 
-**Ejemplo con lista**:
+Es muy común en archivos de configuración; por ejemplo, el archivo `mongod.conf` de MongoDB está escrito en YAML. SQL Server no tiene soporte nativo para YAML. El camino habitual es convertir el archivo a JSON con una herramienta externa (hay conversores en línea y utilidades de línea de comandos) y luego usar `OPENJSON`.
 
-```yaml
----
-clientes:
-  - nombre: Juan García
-    edad: 30
-    ciudades:
-      - Buenos Aires
-      - Córdoba
-  - nombre: Ana López
-    edad: 25
-    ciudades:
-      - Rosario
-```
-
-YAML no tiene soporte nativo en SQL Server. Para importar datos YAML a una BD, el enfoque habitual es convertirlos primero a JSON (herramientas como `json2yaml`, `yq`, etc.) y luego usar `OPENJSON`.
-
----
-
-## Comparativa rápida
+## Comparación
 
 | Formato | Estructura | Verbosidad | Legibilidad | Uso típico |
-|---------|-----------|------------|-------------|------------|
-| EDI | Segmentos con delimitadores | Alta | Baja | Intercambio B2B (facturas, órdenes) |
-| CSV | Tabular plana | Baja | Alta | Datasets, importación masiva |
-| Ancho fijo | Tabular plana | Nula | Muy baja | Sistemas bancarios/legados |
-| XML | Árbol de nodos | Muy alta | Media | Documentos, configs, APIs SOAP |
-| JSON | Clave/valor jerárquico | Media | Alta | APIs REST, NoSQL, configs |
-| YAML | Clave/valor jerárquico | Baja | Muy alta | Configuración de herramientas, DevOps |
+|---|---|---|---|---|
+| EDI | Segmentos con delimitadores | Alta | Baja | Intercambio entre empresas (facturas, órdenes de compra) |
+| CSV / TSV | Tabular plana | Baja | Alta | Conjuntos de datos abiertos, carga masiva |
+| Ancho fijo | Tabular plana, por posición | Nula | Muy baja | Sistemas bancarios y heredados |
+| XML | Árbol de elementos | Muy alta | Media | Documentos, configuración, servicios SOAP |
+| JSON | Clave-valor jerárquico | Media | Alta | API REST, bases de datos documentales |
+| YAML | Clave-valor jerárquico | Baja | Muy alta | Configuración de herramientas |
+
+Los formatos con estructura jerárquica (XML, JSON, YAML) representan anidamiento natural, como un pedido con sus líneas. Los tabulares (CSV, ancho fijo) son planos: para representar relaciones hay que usar varios archivos.
+
+## Errores frecuentes
+
+:::caution[Errores frecuentes]
+- **Suponer que un CSV no tiene comillas.** Un nombre con coma parte la fila en más columnas de las esperadas. Hay que leerlo con un lector de CSV real (`FORMAT = 'CSV'`).
+- **Confundir el fin de línea.** LF y CRLF son distintos; el archivo de ancho fijo con CRLF tiene 41 caracteres por línea y no 40.
+- **Olvidar la codificación.** Un archivo con tildes en UTF-8 leído como página de códigos de Windows muestra caracteres corruptos. Ver [Importación de archivos](/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos/).
+- **Escribir JSON con comillas simples o comas finales.** No es JSON válido: `ISJSON` devuelve 0.
+:::
+
+## Autoevaluación
+
+<details>
+<summary>1. ¿Qué diferencia hay entre CSV y ancho fijo al momento de leer un registro?</summary>
+
+En CSV las columnas se separan con un delimitador y cada campo puede tener un largo distinto; en ancho fijo no hay delimitadores y cada campo se ubica por su posición y su largo, que están definidos de antemano.
+</details>
+
+<details>
+<summary>2. ¿Por qué XML y JSON se prestan mejor que CSV para representar un pedido con varias líneas?</summary>
+
+Porque admiten anidamiento: las líneas del pedido pueden ir dentro del pedido. En CSV hay que repetir los datos del pedido en cada línea o usar dos archivos y relacionarlos por un código.
+</details>
+
+<details>
+<summary>3. Un archivo YAML con una lista de clientes, ¿cómo se carga en SQL Server?</summary>
+
+Se convierte primero a JSON con una herramienta externa y luego se lee con `OPENJSON`, porque SQL Server no interpreta YAML.
+</details>
+
+## En resumen
+
+:::tip[En resumen]
+- Un formato de intercambio es un estándar de texto con sintaxis propia; adherir a uno evita acuerdos particulares entre sistemas.
+- CSV y ancho fijo son tabulares; XML, JSON y YAML son jerárquicos. EDI está orientado a documentos comerciales entre empresas.
+- En SQL Server, XML y JSON tienen soporte propio (tipo `xml`, `OPENJSON`, `FOR JSON`, `FOR XML`); CSV y ancho fijo se cargan con `BULK INSERT`; YAML requiere convertirlo a JSON.
+:::
+
+## Fuentes
+
+- Presentación de cátedra, Unidad 2, parte 2 (Formatos de intercambio), diapositivas 4 a 22.
+- Microsoft Learn, [Create a format file with bcp](https://learn.microsoft.com/en-us/sql/relational-databases/import-export/create-a-format-file-sql-server), [BULK INSERT](https://learn.microsoft.com/en-us/sql/t-sql/statements/bulk-insert-transact-sql).
+- IETF, [RFC 4180: formato CSV](https://www.rfc-editor.org/rfc/rfc4180); [RFC 8259: JSON](https://www.rfc-editor.org/rfc/rfc8259).
+- W3C, [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml/); YAML, [especificación](https://yaml.org/spec/).
