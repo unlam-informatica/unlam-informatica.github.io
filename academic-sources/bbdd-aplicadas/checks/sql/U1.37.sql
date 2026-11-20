@@ -88,12 +88,18 @@ FROM (
     SELECT
         Mes,
         CASE Mes
-            WHEN 'Enero'   THEN 1
-            WHEN 'Febrero' THEN 2
-            WHEN 'Marzo'   THEN 3
-            WHEN 'Abril'   THEN 4
-            WHEN 'Mayo'    THEN 5
-            WHEN 'Junio'   THEN 6
+            WHEN 'Enero'      THEN 1
+            WHEN 'Febrero'    THEN 2
+            WHEN 'Marzo'      THEN 3
+            WHEN 'Abril'      THEN 4
+            WHEN 'Mayo'       THEN 5
+            WHEN 'Junio'      THEN 6
+            WHEN 'Julio'      THEN 7
+            WHEN 'Agosto'     THEN 8
+            WHEN 'Septiembre' THEN 9
+            WHEN 'Octubre'    THEN 10
+            WHEN 'Noviembre'  THEN 11
+            WHEN 'Diciembre'  THEN 12
         END AS Orden
     FROM practica.Venta
     GROUP BY Mes

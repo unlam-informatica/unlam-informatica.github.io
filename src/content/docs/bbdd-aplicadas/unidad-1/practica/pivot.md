@@ -10,7 +10,7 @@ Nueve ejercicios sobre `PIVOT`, `UNPIVOT` y PIVOT dinámico. Presuponen la lecci
 
 ## Conjunto de datos
 
-Creá una base de prueba (por ejemplo `CREATE DATABASE PracticaPivot;`), cambiá a ella y ejecutá:
+Creá una base de práctica (por ejemplo `CREATE DATABASE PracticaPivot;`; necesitás el permiso `CREATE DATABASE` o una base que te hayan dado, ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)), cambiá a ella con `USE PracticaPivot;` y ejecutá este script una sola vez:
 
 <!-- check: U1.43 -->
 ```sql
@@ -302,12 +302,18 @@ FROM (
     SELECT
         Mes,
         CASE Mes
-            WHEN 'Enero'   THEN 1
-            WHEN 'Febrero' THEN 2
-            WHEN 'Marzo'   THEN 3
-            WHEN 'Abril'   THEN 4
-            WHEN 'Mayo'    THEN 5
-            WHEN 'Junio'   THEN 6
+            WHEN 'Enero'      THEN 1
+            WHEN 'Febrero'    THEN 2
+            WHEN 'Marzo'      THEN 3
+            WHEN 'Abril'      THEN 4
+            WHEN 'Mayo'       THEN 5
+            WHEN 'Junio'      THEN 6
+            WHEN 'Julio'      THEN 7
+            WHEN 'Agosto'     THEN 8
+            WHEN 'Septiembre' THEN 9
+            WHEN 'Octubre'    THEN 10
+            WHEN 'Noviembre'  THEN 11
+            WHEN 'Diciembre'  THEN 12
         END AS Orden
     FROM practica.Venta
     GROUP BY Mes
@@ -337,7 +343,30 @@ EXEC sys.sp_executesql @Consulta;
 | Luis | 900.00 | 1100.00 | 800.00 | `NULL` | 1200.00 | 1400.00 |
 | Marta | 2100.00 | 1700.00 | 2300.00 | 1900.00 | 2100.00 | 2800.00 |
 
-**Dos correcciones frente a la versión anterior del ejercicio.** (1) Un `GO` entre armar `@Columnas` y armar `@Consulta` terminaba el lote y las variables dejaban de existir (error 137). (2) `ORDER BY` fuera del `STRING_AGG` es inválido: el orden dentro de la lista se pide con `WITHIN GROUP (ORDER BY ...)`. El orden cronológico viene de un `CASE` que asigna un número a cada mes, porque alfabéticamente `Abril` precede a `Enero`. Para meses nuevos hay que ampliar el `CASE`.
+**Por qué el `CASE` cubre los doce meses.** Los meses salen de los datos, pero el orden alfabético no sirve (`Abril` precede a `Enero`): el `CASE` asigna a cada mes su número y `WITHIN GROUP (ORDER BY Orden)` ordena la lista con ese número. Tiene que contemplar los doce meses aunque hoy solo haya ventas de enero a junio: un mes que el `CASE` no conoce recibe `NULL`, y como `NULL` va primero en un orden ascendente, su columna aparecería antes de `Enero`. Los meses sin ventas no generan columnas, porque la lista se arma solo con los que existen en la tabla.
+
+**Comprobación: llegan ventas de julio.** Cargá estas dos ventas y volvé a ejecutar el bloque anterior **sin cambiarlo**:
+
+<!-- check: U1.37.JUL -->
+```sql
+INSERT INTO practica.Venta (Vendedor, Mes, Producto, Monto)
+VALUES
+    ('Ana', 'Julio', 'Laptop', 3100.00),
+    ('Marta', 'Julio', 'Monitor', 2600.00);
+```
+
+La consulta incorpora la columna `Julio` y la ubica después de `Junio`:
+
+| Vendedor | Enero | Febrero | Marzo | Abril | Mayo | Junio | Julio |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Ana | 1800.00 | 2000.00 | 1800.00 | 2200.00 | 1600.00 | 2500.00 | 3100.00 |
+| Carlos | `NULL` | `NULL` | 500.00 | 700.00 | 600.00 | `NULL` | `NULL` |
+| Luis | 900.00 | 1100.00 | 800.00 | `NULL` | 1200.00 | 1400.00 | `NULL` |
+| Marta | 2100.00 | 1700.00 | 2300.00 | 1900.00 | 2100.00 | 2800.00 | 2600.00 |
+
+Antes de seguir con los demás ejercicios, que usan la misma tabla, borrá esas dos filas (`DELETE FROM practica.Venta WHERE Mes = 'Julio';`) para recuperar los datos de enero a junio.
+
+**Dos errores frecuentes en este ejercicio.** (1) Poner un `GO` entre armar `@Columnas` y armar `@Consulta` termina el lote y las variables dejan de existir (error 137). (2) Escribir `ORDER BY` fuera del `STRING_AGG` es inválido: el orden dentro de la lista se pide con `WITHIN GROUP (ORDER BY ...)`.
 
 </details>
 

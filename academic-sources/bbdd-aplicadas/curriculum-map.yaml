@@ -858,7 +858,7 @@ units:
       confidence: alta
       action: corregir
     stage: E3
-    verified_checks: 27
+    verified_checks: 28
   - id: u1-null
     title: El valor NULL
     program_text: El valor null.

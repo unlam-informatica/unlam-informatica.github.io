@@ -1,6 +1,6 @@
 {
   "subject": "bbdd-aplicadas",
-  "generated": "2026-11-17T23:21:33-03:00",
+  "generated": "2026-11-20T00:56:24-03:00",
   "engines": {
     "mssql": {
       "image": "mcr.microsoft.com/mssql/server@sha256:4525e3efac9f3e241cb003bb2ff2a82818b502f37e12049d788b1a9fa7e13b7f",
@@ -18,7 +18,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.01.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.71,
       "message": ""
     },
     {
@@ -27,7 +27,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.02.sql",
       "expected": true,
-      "seconds": 0.67,
+      "seconds": 0.71,
       "message": ""
     },
     {
@@ -45,7 +45,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.04.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -63,7 +63,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.06.sql",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -81,7 +81,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.08.sql",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -90,7 +90,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.09.sql",
       "expected": true,
-      "seconds": 0.7,
+      "seconds": 0.64,
       "message": ""
     },
     {
@@ -108,7 +108,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.11.sql",
       "expected": true,
-      "seconds": 0.67,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -117,7 +117,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.12.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -144,7 +144,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.15.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -153,7 +153,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.16.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -162,7 +162,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.21.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -171,7 +171,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.22.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -180,7 +180,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.23.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.72,
       "message": ""
     },
     {
@@ -189,7 +189,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.24.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -198,7 +198,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.25.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -207,7 +207,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.26.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -216,7 +216,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.27.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -225,7 +225,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.28.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -234,7 +234,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.29.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -243,7 +243,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.30.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -252,7 +252,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.31.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -261,7 +261,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.32.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -270,7 +270,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.33.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -279,7 +279,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.34.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -288,7 +288,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.35.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -296,6 +296,15 @@
       "engine": "mssql",
       "status": "aprobado",
       "script": "checks/sql/U1.36.sql",
+      "expected": true,
+      "seconds": 0.57,
+      "message": ""
+    },
+    {
+      "id": "U1.37.JUL",
+      "engine": "mssql",
+      "status": "aprobado",
+      "script": "checks/sql/U1.37.JUL.sql",
       "expected": true,
       "seconds": 0.63,
       "message": ""
@@ -306,7 +315,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.37.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -324,7 +333,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.39.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -333,7 +342,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.40.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -351,7 +360,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.42.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -360,7 +369,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.43.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -369,7 +378,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.CTE.01.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -378,7 +387,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.CTE.02.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -387,7 +396,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.CTE.03.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -396,7 +405,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.CTE.04.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -405,7 +414,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.CTE.05.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -414,7 +423,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.CTE.06.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -423,7 +432,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.PV.01.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -450,7 +459,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.PV.04.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -459,7 +468,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.PV.05.sql",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -468,7 +477,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.PV.06.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -486,7 +495,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.PV.08.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -513,7 +522,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.01.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.64,
       "message": ""
     },
     {
@@ -522,7 +531,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.02.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -531,7 +540,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.03.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -540,7 +549,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.04.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -549,7 +558,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.05.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -558,7 +567,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.06.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -576,7 +585,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.08.sql",
       "expected": true,
-      "seconds": 0.58,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -585,7 +594,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.09.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -594,7 +603,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.10.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.64,
       "message": ""
     },
     {
@@ -603,7 +612,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.11.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -612,7 +621,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.12.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -621,7 +630,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.13.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -630,7 +639,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.14.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -648,7 +657,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.16.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -657,7 +666,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.17.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.68,
       "message": ""
     },
     {
@@ -666,7 +675,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.18.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.64,
       "message": ""
     },
     {
@@ -675,7 +684,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.19.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -684,7 +693,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.20.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -693,7 +702,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.21.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -702,7 +711,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.RS.22.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -729,7 +738,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.SD.03.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -738,7 +747,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.SD.04.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -756,7 +765,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.SD.06.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -765,7 +774,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.SD.07.sql",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -774,7 +783,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.WF.01.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -783,7 +792,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.WF.02.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -792,7 +801,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.WF.03.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -801,7 +810,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.WF.04.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -810,7 +819,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.WF.05.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -819,7 +828,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.WF.06.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -828,7 +837,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.WF.07.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -837,7 +846,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.WF.08.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -846,7 +855,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.WF.09.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -855,7 +864,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.T.WF.10.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -864,7 +873,7 @@
       "status": "aprobado",
       "script": "checks/sql/U1.TP1.00.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -882,7 +891,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.02.sql",
       "expected": true,
-      "seconds": 0.73,
+      "seconds": 0.75,
       "message": ""
     },
     {
@@ -891,7 +900,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.03.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -900,7 +909,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.04.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.78,
       "message": ""
     },
     {
@@ -909,7 +918,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.05.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.78,
       "message": ""
     },
     {
@@ -918,7 +927,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.06.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.81,
       "message": ""
     },
     {
@@ -927,7 +936,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.07.sql",
       "expected": true,
-      "seconds": 0.74,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -936,7 +945,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.08.sql",
       "expected": true,
-      "seconds": 0.76,
+      "seconds": 0.79,
       "message": ""
     },
     {
@@ -945,7 +954,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.09.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -954,7 +963,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.10.sql",
       "expected": true,
-      "seconds": 0.78,
+      "seconds": 0.81,
       "message": ""
     },
     {
@@ -963,7 +972,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.11.sql",
       "expected": true,
-      "seconds": 0.76,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -972,7 +981,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.12.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.76,
       "message": ""
     },
     {
@@ -990,7 +999,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.14.sql",
       "expected": true,
-      "seconds": 0.78,
+      "seconds": 0.8,
       "message": ""
     },
     {
@@ -999,7 +1008,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.16.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.79,
       "message": ""
     },
     {
@@ -1008,7 +1017,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.17.sql",
       "expected": true,
-      "seconds": 0.78,
+      "seconds": 0.81,
       "message": ""
     },
     {
@@ -1026,7 +1035,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.19.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -1035,7 +1044,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.20.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.79,
       "message": ""
     },
     {
@@ -1044,7 +1053,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.21.sql",
       "expected": true,
-      "seconds": 0.76,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -1053,7 +1062,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.22.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -1062,7 +1071,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.23.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -1071,7 +1080,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.24.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -1080,7 +1089,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.25.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -1089,7 +1098,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.26.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -1098,7 +1107,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.27.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -1116,7 +1125,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.29.sql",
       "expected": true,
-      "seconds": 0.58,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -1125,7 +1134,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.30.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -1134,7 +1143,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.31.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -1143,7 +1152,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.32.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -1152,7 +1161,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.33.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.67,
       "message": ""
     },
     {
@@ -1161,7 +1170,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.34.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -1170,7 +1179,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.35.sql",
       "expected": true,
-      "seconds": 0.76,
+      "seconds": 0.85,
       "message": ""
     },
     {
@@ -1179,7 +1188,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.37.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.67,
       "message": ""
     },
     {
@@ -1188,7 +1197,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.38.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -1197,7 +1206,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.39.sql",
       "expected": true,
-      "seconds": 0.7,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -1206,7 +1215,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.41.sql",
       "expected": true,
-      "seconds": 4.91,
+      "seconds": 4.95,
       "message": ""
     },
     {
@@ -1215,7 +1224,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.42.sql",
       "expected": true,
-      "seconds": 4.95,
+      "seconds": 3.9,
       "message": ""
     },
     {
@@ -1224,7 +1233,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.43.sql",
       "expected": true,
-      "seconds": 2.96,
+      "seconds": 2.85,
       "message": ""
     },
     {
@@ -1233,7 +1242,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.44.sql",
       "expected": true,
-      "seconds": 5.88,
+      "seconds": 5.86,
       "message": ""
     },
     {
@@ -1242,7 +1251,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.45.sql",
       "expected": true,
-      "seconds": 3.88,
+      "seconds": 3.89,
       "message": ""
     },
     {
@@ -1251,7 +1260,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.46.sql",
       "expected": true,
-      "seconds": 4.92,
+      "seconds": 3.88,
       "message": ""
     },
     {
@@ -1260,7 +1269,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.47.sql",
       "expected": true,
-      "seconds": 0.67,
+      "seconds": 0.68,
       "message": ""
     },
     {
@@ -1269,7 +1278,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.48.sql",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.68,
       "message": ""
     },
     {
@@ -1278,7 +1287,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.49.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.68,
       "message": ""
     },
     {
@@ -1287,7 +1296,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.50.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -1296,7 +1305,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.51.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -1305,7 +1314,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.52.sql",
       "expected": true,
-      "seconds": 0.72,
+      "seconds": 0.75,
       "message": ""
     },
     {
@@ -1314,7 +1323,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.54.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -1323,7 +1332,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.API.01.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -1341,7 +1350,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.ARQ.01.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -1350,7 +1359,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.ARQ.02.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -1359,7 +1368,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.BDS.01.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -1368,7 +1377,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.BDS.02.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -1377,7 +1386,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.BDS.03.sql",
       "expected": true,
-      "seconds": 0.67,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -1386,7 +1395,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.BDS.04.sql",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.67,
       "message": ""
     },
     {
@@ -1395,7 +1404,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.COL.01.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -1404,7 +1413,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.COL.02.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.68,
       "message": ""
     },
     {
@@ -1413,7 +1422,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.COL.03.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -1422,7 +1431,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.COL.04.sql",
       "expected": true,
-      "seconds": 0.69,
+      "seconds": 0.71,
       "message": ""
     },
     {
@@ -1431,7 +1440,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.COL.05.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -1449,7 +1458,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.FMT.02.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.76,
       "message": ""
     },
     {
@@ -1458,7 +1467,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.FMT.03.sql",
       "expected": true,
-      "seconds": 0.8,
+      "seconds": 0.79,
       "message": ""
     },
     {
@@ -1467,7 +1476,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IM.01.sql",
       "expected": true,
-      "seconds": 1.72,
+      "seconds": 1.71,
       "message": ""
     },
     {
@@ -1476,7 +1485,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IM.02.sql",
       "expected": true,
-      "seconds": 4.95,
+      "seconds": 3.91,
       "message": ""
     },
     {
@@ -1485,7 +1494,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IM.03.sql",
       "expected": true,
-      "seconds": 7.89,
+      "seconds": 7.96,
       "message": ""
     },
     {
@@ -1494,7 +1503,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IM.04.sql",
       "expected": true,
-      "seconds": 3.88,
+      "seconds": 4.0,
       "message": ""
     },
     {
@@ -1503,7 +1512,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IM.05.sql",
       "expected": true,
-      "seconds": 0.7,
+      "seconds": 0.78,
       "message": ""
     },
     {
@@ -1512,7 +1521,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IM.06.sql",
       "expected": true,
-      "seconds": 3.93,
+      "seconds": 4.0,
       "message": ""
     },
     {
@@ -1521,7 +1530,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IMP.01.sql",
       "expected": true,
-      "seconds": 0.8,
+      "seconds": 0.91,
       "message": ""
     },
     {
@@ -1539,7 +1548,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IMP.03.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.95,
       "message": ""
     },
     {
@@ -1548,7 +1557,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IMP.04.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.8,
       "message": ""
     },
     {
@@ -1557,7 +1566,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IMP.05.sql",
       "expected": true,
-      "seconds": 0.78,
+      "seconds": 1.93,
       "message": ""
     },
     {
@@ -1566,7 +1575,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IMP.06.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 1.55,
       "message": ""
     },
     {
@@ -1575,7 +1584,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IMP.07.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.79,
       "message": ""
     },
     {
@@ -1584,7 +1593,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IMP.08.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.88,
       "message": ""
     },
     {
@@ -1593,7 +1602,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IMP.09.sql",
       "expected": true,
-      "seconds": 0.79,
+      "seconds": 1.55,
       "message": ""
     },
     {
@@ -1602,7 +1611,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IMP.10.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.94,
       "message": ""
     },
     {
@@ -1611,7 +1620,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.IMP.11.sql",
       "expected": true,
-      "seconds": 0.76,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -1629,7 +1638,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.INS.02.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -1638,7 +1647,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.01.sql",
       "expected": true,
-      "seconds": 0.58,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -1647,7 +1656,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.02.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -1656,7 +1665,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.03.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -1665,7 +1674,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.04.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.59,
       "message": ""
     },
     {
@@ -1674,7 +1683,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.05.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -1683,7 +1692,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.06.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -1692,7 +1701,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.07.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -1701,7 +1710,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.08.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.71,
       "message": ""
     },
     {
@@ -1710,7 +1719,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.09.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.68,
       "message": ""
     },
     {
@@ -1719,7 +1728,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.10.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -1737,7 +1746,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.12.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -1746,7 +1755,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.13.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -1755,7 +1764,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.14.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.59,
       "message": ""
     },
     {
@@ -1764,7 +1773,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.JSON.15.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -1782,7 +1791,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.XML.02.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.59,
       "message": ""
     },
     {
@@ -1791,7 +1800,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.XML.03.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -1800,7 +1809,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.XML.04.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.68,
       "message": ""
     },
     {
@@ -1809,7 +1818,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.XML.05.sql",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.75,
       "message": ""
     },
     {
@@ -1818,7 +1827,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.XML.06.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -1827,7 +1836,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.XML.07.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.64,
       "message": ""
     },
     {
@@ -1845,7 +1854,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.XML.09.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -1854,7 +1863,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.XML.10.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.67,
       "message": ""
     },
     {
@@ -1863,7 +1872,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.XML.11.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -1872,7 +1881,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.T.XML.12.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -1881,7 +1890,7 @@
       "status": "aprobado",
       "script": "checks/sql/U2.TP2.00.sql",
       "expected": true,
-      "seconds": 0.78,
+      "seconds": 0.83,
       "message": ""
     },
     {
@@ -1899,7 +1908,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.02.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -1917,7 +1926,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.05.sql",
       "expected": true,
-      "seconds": 0.66,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -1926,7 +1935,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.06.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -1935,7 +1944,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.07.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -1953,7 +1962,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.09.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.83,
       "message": ""
     },
     {
@@ -1962,7 +1971,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.10.sql",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.86,
       "message": ""
     },
     {
@@ -1971,7 +1980,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.13.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -1980,7 +1989,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.14.sql",
       "expected": true,
-      "seconds": 0.73,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -1989,7 +1998,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.15.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -1998,7 +2007,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.17.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -2016,7 +2025,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.20.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 2.04,
       "message": ""
     },
     {
@@ -2025,7 +2034,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.27.sql",
       "expected": true,
-      "seconds": 0.7,
+      "seconds": 0.73,
       "message": ""
     },
     {
@@ -2034,7 +2043,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.28.sql",
       "expected": true,
-      "seconds": 0.74,
+      "seconds": 0.76,
       "message": ""
     },
     {
@@ -2043,7 +2052,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.29.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.76,
       "message": ""
     },
     {
@@ -2052,7 +2061,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.30.sql",
       "expected": true,
-      "seconds": 0.79,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -2061,7 +2070,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.31.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.74,
       "message": ""
     },
     {
@@ -2070,7 +2079,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.33.sql",
       "expected": true,
-      "seconds": 0.76,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -2079,7 +2088,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.34.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.73,
       "message": ""
     },
     {
@@ -2088,7 +2097,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.35.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.72,
       "message": ""
     },
     {
@@ -2097,7 +2106,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.36.sql",
       "expected": true,
-      "seconds": 0.82,
+      "seconds": 0.8,
       "message": ""
     },
     {
@@ -2106,7 +2115,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.37.sql",
       "expected": true,
-      "seconds": 0.82,
+      "seconds": 0.8,
       "message": ""
     },
     {
@@ -2115,7 +2124,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.38.sql",
       "expected": true,
-      "seconds": 0.78,
+      "seconds": 0.77,
       "message": ""
     },
     {
@@ -2124,7 +2133,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.39.sql",
       "expected": true,
-      "seconds": 1.4,
+      "seconds": 1.46,
       "message": ""
     },
     {
@@ -2151,7 +2160,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.42.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.73,
       "message": ""
     },
     {
@@ -2160,7 +2169,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.43.sql",
       "expected": true,
-      "seconds": 0.7,
+      "seconds": 0.67,
       "message": ""
     },
     {
@@ -2169,7 +2178,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.44.sql",
       "expected": true,
-      "seconds": 0.79,
+      "seconds": 0.76,
       "message": ""
     },
     {
@@ -2178,7 +2187,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.45.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.75,
       "message": ""
     },
     {
@@ -2196,7 +2205,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.CC.01.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -2205,7 +2214,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.CC.02.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -2214,7 +2223,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.CC.03.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.7,
       "message": ""
     },
     {
@@ -2223,7 +2232,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.CC.04.sql",
       "expected": true,
-      "seconds": 0.67,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -2232,7 +2241,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.CC.05.sql",
       "expected": true,
-      "seconds": 0.72,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -2241,7 +2250,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.CC.06.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -2259,7 +2268,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.CC.08.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.8,
       "message": ""
     },
     {
@@ -2268,7 +2277,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.CC.09.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -2277,7 +2286,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.CC.18.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -2286,7 +2295,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.CC.19.sql",
       "expected": true,
-      "seconds": 3.75,
+      "seconds": 3.68,
       "message": ""
     },
     {
@@ -2295,7 +2304,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.CC.20.sql",
       "expected": true,
-      "seconds": 3.79,
+      "seconds": 3.77,
       "message": ""
     },
     {
@@ -2304,7 +2313,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.00.sql",
       "expected": false,
-      "seconds": 0.7,
+      "seconds": 0.68,
       "message": ""
     },
     {
@@ -2313,7 +2322,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.01.sql",
       "expected": true,
-      "seconds": 0.84,
+      "seconds": 0.8,
       "message": ""
     },
     {
@@ -2322,7 +2331,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.02.sql",
       "expected": true,
-      "seconds": 0.74,
+      "seconds": 0.72,
       "message": ""
     },
     {
@@ -2331,7 +2340,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.03.sql",
       "expected": true,
-      "seconds": 0.87,
+      "seconds": 0.83,
       "message": ""
     },
     {
@@ -2340,7 +2349,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.04.sql",
       "expected": true,
-      "seconds": 0.76,
+      "seconds": 0.75,
       "message": ""
     },
     {
@@ -2358,7 +2367,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.06.sql",
       "expected": true,
-      "seconds": 0.76,
+      "seconds": 0.74,
       "message": ""
     },
     {
@@ -2367,7 +2376,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.07.sql",
       "expected": true,
-      "seconds": 0.88,
+      "seconds": 0.87,
       "message": ""
     },
     {
@@ -2376,7 +2385,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.08.sql",
       "expected": true,
-      "seconds": 0.97,
+      "seconds": 1.0,
       "message": ""
     },
     {
@@ -2385,7 +2394,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.09.sql",
       "expected": true,
-      "seconds": 0.78,
+      "seconds": 0.75,
       "message": ""
     },
     {
@@ -2403,7 +2412,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.11.sql",
       "expected": true,
-      "seconds": 0.73,
+      "seconds": 0.74,
       "message": ""
     },
     {
@@ -2412,7 +2421,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.12.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.72,
       "message": ""
     },
     {
@@ -2430,7 +2439,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.14.sql",
       "expected": true,
-      "seconds": 0.74,
+      "seconds": 0.72,
       "message": ""
     },
     {
@@ -2439,7 +2448,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.15.sql",
       "expected": true,
-      "seconds": 0.74,
+      "seconds": 0.73,
       "message": ""
     },
     {
@@ -2448,7 +2457,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.16.sql",
       "expected": true,
-      "seconds": 0.7,
+      "seconds": 0.69,
       "message": ""
     },
     {
@@ -2466,7 +2475,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.18.sql",
       "expected": true,
-      "seconds": 1.66,
+      "seconds": 1.62,
       "message": ""
     },
     {
@@ -2475,7 +2484,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.IX.19.sql",
       "expected": true,
-      "seconds": 1.51,
+      "seconds": 1.66,
       "message": ""
     },
     {
@@ -2484,7 +2493,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.MT.00.sql",
       "expected": false,
-      "seconds": 0.69,
+      "seconds": 0.79,
       "message": ""
     },
     {
@@ -2493,7 +2502,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.MT.01.sql",
       "expected": true,
-      "seconds": 0.8,
+      "seconds": 0.79,
       "message": ""
     },
     {
@@ -2502,7 +2511,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.MT.02.sql",
       "expected": true,
-      "seconds": 0.79,
+      "seconds": 0.75,
       "message": ""
     },
     {
@@ -2511,7 +2520,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.MT.03.sql",
       "expected": true,
-      "seconds": 0.74,
+      "seconds": 0.73,
       "message": ""
     },
     {
@@ -2520,7 +2529,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.MT.04.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.74,
       "message": ""
     },
     {
@@ -2538,7 +2547,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.MT.07.sql",
       "expected": true,
-      "seconds": 0.76,
+      "seconds": 0.7,
       "message": ""
     },
     {
@@ -2547,7 +2556,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.MT.08.sql",
       "expected": true,
-      "seconds": 0.71,
+      "seconds": 0.7,
       "message": ""
     },
     {
@@ -2565,7 +2574,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.PL.01.sql",
       "expected": true,
-      "seconds": 0.7,
+      "seconds": 0.69,
       "message": ""
     },
     {
@@ -2574,7 +2583,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.PL.02.sql",
       "expected": true,
-      "seconds": 0.71,
+      "seconds": 0.7,
       "message": ""
     },
     {
@@ -2592,7 +2601,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.PL.04.sql",
       "expected": true,
-      "seconds": 0.73,
+      "seconds": 0.72,
       "message": ""
     },
     {
@@ -2601,7 +2610,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.PL.05.sql",
       "expected": true,
-      "seconds": 0.73,
+      "seconds": 0.7,
       "message": ""
     },
     {
@@ -2610,7 +2619,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.PL.06.sql",
       "expected": true,
-      "seconds": 0.74,
+      "seconds": 0.72,
       "message": ""
     },
     {
@@ -2619,7 +2628,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.ST.01.sql",
       "expected": true,
-      "seconds": 0.76,
+      "seconds": 0.74,
       "message": ""
     },
     {
@@ -2637,7 +2646,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.ST.03.sql",
       "expected": true,
-      "seconds": 0.72,
+      "seconds": 0.71,
       "message": ""
     },
     {
@@ -2646,7 +2655,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.ST.04.sql",
       "expected": true,
-      "seconds": 0.8,
+      "seconds": 0.76,
       "message": ""
     },
     {
@@ -2655,7 +2664,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.ST.05.sql",
       "expected": true,
-      "seconds": 0.8,
+      "seconds": 0.78,
       "message": ""
     },
     {
@@ -2664,7 +2673,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.ST.06.sql",
       "expected": true,
-      "seconds": 0.71,
+      "seconds": 0.7,
       "message": ""
     },
     {
@@ -2691,7 +2700,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.TX.01.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -2700,7 +2709,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.TX.02.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -2727,7 +2736,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.TX.05.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -2736,7 +2745,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.TX.06.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -2754,7 +2763,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.TX.08.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -2763,7 +2772,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.TX.09.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -2772,7 +2781,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.TX.11.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -2781,7 +2790,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.T.TX.12.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -2799,7 +2808,7 @@
       "status": "aprobado",
       "script": "checks/sql/U3.XA.01.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -2853,7 +2862,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.02.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -2871,7 +2880,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.05.sql",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -2880,7 +2889,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.06.sql",
       "expected": true,
-      "seconds": 0.66,
+      "seconds": 0.64,
       "message": ""
     },
     {
@@ -2889,7 +2898,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.07.sql",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -2898,7 +2907,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.08.sql",
       "expected": true,
-      "seconds": 0.7,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -2916,7 +2925,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.12.sql",
       "expected": true,
-      "seconds": 1.0,
+      "seconds": 0.89,
       "message": ""
     },
     {
@@ -2925,7 +2934,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.13.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -2934,7 +2943,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.14.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -2943,7 +2952,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.15.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -2952,7 +2961,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.23.sql",
       "expected": true,
-      "seconds": 0.79,
+      "seconds": 0.99,
       "message": ""
     },
     {
@@ -2961,7 +2970,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.25.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -2970,7 +2979,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.26.sql",
       "expected": true,
-      "seconds": 1.08,
+      "seconds": 1.09,
       "message": ""
     },
     {
@@ -2979,7 +2988,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.28.sql",
       "expected": true,
-      "seconds": 0.72,
+      "seconds": 0.71,
       "message": ""
     },
     {
@@ -2988,7 +2997,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.29.sql",
       "expected": true,
-      "seconds": 1.07,
+      "seconds": 1.06,
       "message": ""
     },
     {
@@ -2997,7 +3006,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.30.sql",
       "expected": true,
-      "seconds": 1.3,
+      "seconds": 1.21,
       "message": ""
     },
     {
@@ -3006,7 +3015,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.32.sql",
       "expected": true,
-      "seconds": 5.04,
+      "seconds": 4.95,
       "message": ""
     },
     {
@@ -3015,7 +3024,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.33.sql",
       "expected": true,
-      "seconds": 1.03,
+      "seconds": 1.01,
       "message": ""
     },
     {
@@ -3024,7 +3033,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.34.sql",
       "expected": true,
-      "seconds": 1.21,
+      "seconds": 1.19,
       "message": ""
     },
     {
@@ -3033,7 +3042,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.37.sql",
       "expected": true,
-      "seconds": 0.69,
+      "seconds": 0.67,
       "message": ""
     },
     {
@@ -3042,7 +3051,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.LI.01.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -3051,7 +3060,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.LI.P5.sql",
       "expected": true,
-      "seconds": 0.9,
+      "seconds": 1.04,
       "message": ""
     },
     {
@@ -3060,7 +3069,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.LS.01.sql",
       "expected": true,
-      "seconds": 0.77,
+      "seconds": 0.75,
       "message": ""
     },
     {
@@ -3069,7 +3078,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.BK.01.sql",
       "expected": true,
-      "seconds": 0.74,
+      "seconds": 0.71,
       "message": ""
     },
     {
@@ -3078,7 +3087,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.BK.02.sql",
       "expected": true,
-      "seconds": 1.09,
+      "seconds": 1.05,
       "message": ""
     },
     {
@@ -3087,7 +3096,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.BK.03.sql",
       "expected": true,
-      "seconds": 1.06,
+      "seconds": 1.03,
       "message": ""
     },
     {
@@ -3096,7 +3105,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.BK.04.sql",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.71,
       "message": ""
     },
     {
@@ -3105,7 +3114,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.BK.05.sql",
       "expected": true,
-      "seconds": 1.07,
+      "seconds": 1.01,
       "message": ""
     },
     {
@@ -3123,7 +3132,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.BK.07.sql",
       "expected": true,
-      "seconds": 1.29,
+      "seconds": 1.21,
       "message": ""
     },
     {
@@ -3132,7 +3141,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.BK.08.sql",
       "expected": true,
-      "seconds": 5.02,
+      "seconds": 4.98,
       "message": ""
     },
     {
@@ -3141,7 +3150,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.BK.09.sql",
       "expected": true,
-      "seconds": 1.01,
+      "seconds": 0.99,
       "message": ""
     },
     {
@@ -3159,7 +3168,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.BK.11.sql",
       "expected": true,
-      "seconds": 1.17,
+      "seconds": 1.16,
       "message": ""
     },
     {
@@ -3168,7 +3177,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.BK.13.sql",
       "expected": true,
-      "seconds": 1.17,
+      "seconds": 1.13,
       "message": ""
     },
     {
@@ -3177,7 +3186,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.CIF.01.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.59,
       "message": ""
     },
     {
@@ -3186,7 +3195,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.CIF.02.sql",
       "expected": true,
-      "seconds": 0.94,
+      "seconds": 1.05,
       "message": ""
     },
     {
@@ -3195,7 +3204,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.CIF.03.sql",
       "expected": true,
-      "seconds": 1.43,
+      "seconds": 1.36,
       "message": ""
     },
     {
@@ -3213,7 +3222,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.HA.02.sql",
       "expected": true,
-      "seconds": 1.23,
+      "seconds": 1.21,
       "message": ""
     },
     {
@@ -3240,7 +3249,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.LOG.02.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3267,7 +3276,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.LOG.05.sql",
       "expected": true,
-      "seconds": 0.61,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -3276,7 +3285,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.LOG.06.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -3285,7 +3294,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.LOG.07.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3294,7 +3303,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.SEG.01.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -3303,7 +3312,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.SEG.02.sql",
       "expected": true,
-      "seconds": 1.59,
+      "seconds": 2.21,
       "message": ""
     },
     {
@@ -3312,7 +3321,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.SEG.03.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -3321,7 +3330,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.SEG.04.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -3330,7 +3339,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.SEG.05.sql",
       "expected": true,
-      "seconds": 0.68,
+      "seconds": 0.66,
       "message": ""
     },
     {
@@ -3348,7 +3357,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.SEG.07.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -3357,7 +3366,7 @@
       "status": "aprobado",
       "script": "checks/sql/U5.T.SEG.08.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -3375,7 +3384,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.16.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3384,7 +3393,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.17.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3393,7 +3402,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.18.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3411,7 +3420,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.20.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -3420,7 +3429,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.24.sql",
       "expected": true,
-      "seconds": 0.67,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3429,7 +3438,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.25.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.65,
       "message": ""
     },
     {
@@ -3447,7 +3456,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.27.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -3465,7 +3474,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.29.sql",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3474,7 +3483,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.30.sql",
       "expected": true,
-      "seconds": 0.69,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -3483,7 +3492,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.P.01.sql",
       "expected": true,
-      "seconds": 0.69,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3492,7 +3501,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.P.02.sql",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.62,
       "message": ""
     },
     {
@@ -3510,7 +3519,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.P.M02.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3519,7 +3528,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.P.M03.sql",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3528,7 +3537,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.P.M04.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3537,7 +3546,7 @@
       "status": "aprobado",
       "script": "checks/sql/U6.P.M05.sql",
       "expected": true,
-      "seconds": 0.62,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3546,7 +3555,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.01.js",
       "expected": true,
-      "seconds": 0.95,
+      "seconds": 0.67,
       "message": ""
     },
     {
@@ -3555,7 +3564,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.02.js",
       "expected": true,
-      "seconds": 0.75,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3564,7 +3573,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.03.js",
       "expected": true,
-      "seconds": 0.68,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3573,7 +3582,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.04.js",
       "expected": true,
-      "seconds": 0.66,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3582,7 +3591,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.05.js",
       "expected": true,
-      "seconds": 0.66,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3591,7 +3600,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.06.js",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3600,7 +3609,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.07.js",
       "expected": true,
-      "seconds": 0.8,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3609,7 +3618,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.08.js",
       "expected": true,
-      "seconds": 0.69,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3618,7 +3627,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.09.js",
       "expected": true,
-      "seconds": 0.68,
+      "seconds": 0.59,
       "message": ""
     },
     {
@@ -3627,7 +3636,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.10.js",
       "expected": true,
-      "seconds": 0.72,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3636,7 +3645,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.11.js",
       "expected": true,
-      "seconds": 0.69,
+      "seconds": 0.59,
       "message": ""
     },
     {
@@ -3645,7 +3654,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.12.js",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.59,
       "message": ""
     },
     {
@@ -3654,7 +3663,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.13.js",
       "expected": true,
-      "seconds": 0.7,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3663,7 +3672,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.14.js",
       "expected": true,
-      "seconds": 0.71,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3672,7 +3681,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.15.js",
       "expected": true,
-      "seconds": 0.66,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3681,7 +3690,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.16.js",
       "expected": true,
-      "seconds": 0.66,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3690,7 +3699,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.17.js",
       "expected": true,
-      "seconds": 0.69,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3699,7 +3708,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.18.js",
       "expected": true,
-      "seconds": 0.67,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3708,7 +3717,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.19.js",
       "expected": true,
-      "seconds": 0.68,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -3717,7 +3726,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.20.js",
       "expected": true,
-      "seconds": 0.69,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3726,7 +3735,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.21.js",
       "expected": true,
-      "seconds": 0.67,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3735,7 +3744,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.22.js",
       "expected": true,
-      "seconds": 0.67,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3744,7 +3753,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.23.js",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.61,
       "message": ""
     },
     {
@@ -3753,7 +3762,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.24.js",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3771,7 +3780,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.26.js",
       "expected": true,
-      "seconds": 0.64,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -3780,7 +3789,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.27.js",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3789,7 +3798,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.45.js",
       "expected": true,
-      "seconds": 0.56,
+      "seconds": 0.48,
       "message": ""
     },
     {
@@ -3798,7 +3807,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.46.js",
       "expected": true,
-      "seconds": 0.53,
+      "seconds": 0.48,
       "message": ""
     },
     {
@@ -3807,7 +3816,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.49.js",
       "expected": true,
-      "seconds": 0.51,
+      "seconds": 0.47,
       "message": ""
     },
     {
@@ -3816,7 +3825,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.PR.TIENDA.js",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3825,7 +3834,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.PR.VENTAS.js",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.59,
       "message": ""
     },
     {
@@ -3834,7 +3843,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.PR.VIDEOCLUB.js",
       "expected": true,
-      "seconds": 0.65,
+      "seconds": 0.6,
       "message": ""
     },
     {
@@ -3843,7 +3852,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.AGG.01.js",
       "expected": true,
-      "seconds": 0.54,
+      "seconds": 0.49,
       "message": ""
     },
     {
@@ -3852,7 +3861,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.AGG.02.js",
       "expected": true,
-      "seconds": 0.56,
+      "seconds": 0.46,
       "message": ""
     },
     {
@@ -3861,7 +3870,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.AGG.03.js",
       "expected": true,
-      "seconds": 0.55,
+      "seconds": 0.64,
       "message": ""
     },
     {
@@ -3870,7 +3879,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.AGG.04.js",
       "expected": true,
-      "seconds": 0.55,
+      "seconds": 0.63,
       "message": ""
     },
     {
@@ -3879,7 +3888,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.AGG.05.js",
       "expected": true,
-      "seconds": 0.56,
+      "seconds": 0.59,
       "message": ""
     },
     {
@@ -3888,7 +3897,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.AGG.06.js",
       "expected": true,
-      "seconds": 0.57,
+      "seconds": 0.49,
       "message": ""
     },
     {
@@ -3897,7 +3906,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.AGG.07.js",
       "expected": true,
-      "seconds": 0.56,
+      "seconds": 0.55,
       "message": ""
     },
     {
@@ -3906,7 +3915,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.CRUD.01.js",
       "expected": true,
-      "seconds": 0.63,
+      "seconds": 0.51,
       "message": ""
     },
     {
@@ -3915,7 +3924,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.CRUD.02.js",
       "expected": true,
-      "seconds": 0.57,
+      "seconds": 0.53,
       "message": ""
     },
     {
@@ -3924,7 +3933,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.CRUD.03.js",
       "expected": true,
-      "seconds": 0.6,
+      "seconds": 0.49,
       "message": ""
     },
     {
@@ -3933,7 +3942,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.CRUD.04.js",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.5,
       "message": ""
     },
     {
@@ -3942,7 +3951,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.CRUD.05.js",
       "expected": true,
-      "seconds": 0.57,
+      "seconds": 0.55,
       "message": ""
     },
     {
@@ -3951,7 +3960,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.CRUD.06.js",
       "expected": true,
-      "seconds": 0.54,
+      "seconds": 0.52,
       "message": ""
     },
     {
@@ -3960,7 +3969,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.CRUD.07.js",
       "expected": true,
-      "seconds": 0.55,
+      "seconds": 0.53,
       "message": ""
     },
     {
@@ -3969,7 +3978,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.CRUD.08.js",
       "expected": true,
-      "seconds": 0.59,
+      "seconds": 0.56,
       "message": ""
     },
     {
@@ -3978,7 +3987,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.GP.01.js",
       "expected": true,
-      "seconds": 0.52,
+      "seconds": 0.47,
       "message": ""
     },
     {
@@ -3987,7 +3996,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.GP.02.js",
       "expected": true,
-      "seconds": 0.51,
+      "seconds": 0.47,
       "message": ""
     },
     {
@@ -3996,7 +4005,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.IDX.01.js",
       "expected": true,
-      "seconds": 0.55,
+      "seconds": 0.52,
       "message": ""
     },
     {
@@ -4005,7 +4014,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.IDX.02.js",
       "expected": true,
-      "seconds": 0.58,
+      "seconds": 0.51,
       "message": ""
     },
     {
@@ -4014,7 +4023,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.IDX.03.js",
       "expected": true,
-      "seconds": 0.55,
+      "seconds": 0.52,
       "message": ""
     },
     {
@@ -4023,7 +4032,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.IDX.04.js",
       "expected": true,
-      "seconds": 0.57,
+      "seconds": 0.51,
       "message": ""
     },
     {
@@ -4032,7 +4041,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.IDX.05.js",
       "expected": true,
-      "seconds": 0.56,
+      "seconds": 0.49,
       "message": ""
     },
     {
@@ -4041,7 +4050,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.MI.01.js",
       "expected": true,
-      "seconds": 0.52,
+      "seconds": 0.48,
       "message": ""
     },
     {
@@ -4050,7 +4059,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.MI.02.js",
       "expected": true,
-      "seconds": 0.55,
+      "seconds": 0.53,
       "message": ""
     },
     {
@@ -4059,7 +4068,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.MI.03.js",
       "expected": true,
-      "seconds": 0.54,
+      "seconds": 0.49,
       "message": ""
     },
     {
@@ -4068,7 +4077,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.NC.02.js",
       "expected": true,
-      "seconds": 0.52,
+      "seconds": 0.49,
       "message": ""
     },
     {
@@ -4077,7 +4086,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.NC.03.js",
       "expected": true,
-      "seconds": 0.52,
+      "seconds": 0.48,
       "message": ""
     },
     {
@@ -4086,7 +4095,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.NC.04.js",
       "expected": true,
-      "seconds": 0.52,
+      "seconds": 0.49,
       "message": ""
     },
     {
@@ -4095,7 +4104,7 @@
       "status": "aprobado",
       "script": "checks/mongo/U4.T.POO.02.js",
       "expected": true,
-      "seconds": 0.52,
+      "seconds": 0.53,
       "message": ""
     }
   ],
@@ -4328,7 +4337,7 @@
     },
     {
       "page": "unidad-1/teoria/repaso-sql.md",
-      "line": 643,
+      "line": 666,
       "language": "sql",
       "suspicious": false
     },
@@ -4460,8 +4469,8 @@
     }
   ],
   "summary": {
-    "executed": 454,
-    "passed": 454,
+    "executed": 455,
+    "passed": 455,
     "failed": 0,
     "errors": 0,
     "reviewed": 30,
