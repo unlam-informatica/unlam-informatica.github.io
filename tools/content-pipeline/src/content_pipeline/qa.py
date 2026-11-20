@@ -47,6 +47,41 @@ CODE_FENCE_RE = re.compile(r"^(```|~~~)[^\n]*\n(.*?)^\1[ \t]*$", re.S | re.M)
 EXPECTED_RESULT_RE = re.compile(r"resultado\s+esperado", re.I)
 _PLACEHOLDER_CODE_LINE_RE = re.compile(r"^(?:…|\.\.\.|#.*|//.*|--.*|/\*.*|\*.*|<!--.*|%%.*)$")
 
+# Texto dirigido a quien mantiene el sitio que quedó a la vista del estudiante: vocabulario del
+# sistema de verificación, rutas del repositorio e identificadores de comprobación en la prosa.
+# Es contextual: no se buscan palabras sueltas ("verificar", "pipeline" de MongoDB, "contenedor"
+# de un filegroup o de Docker son legítimos), sino frases que solo describen el proceso interno.
+# Se ignoran los bloques de código y los comentarios HTML (los marcadores <!-- check --> son
+# metadatos). Una materia puede declarar excepciones en subject.yaml → qa.internal_text_allow
+# (lista de {pattern, reason}); un hallazgo se omite si el fragmento coincide con alguna.
+INTERNAL_TEXT_RULES = (
+    (re.compile(r"\bentorno de verificaci[oó]n\b", re.I), "entorno de verificación"),
+    (re.compile(r"\b(?:el|del|al|un|los)\s+verificador(?:es)?\b", re.I), "el verificador"),
+    (re.compile(r"\bverificaci[oó]n autom[aá]tica\b|\bverificador autom[aá]tico\b", re.I), "verificación automática"),
+    (re.compile(r"\bpendientes? de verificaci[oó]n espec[ií]fica\b", re.I), "pendiente de verificación específica"),
+    (re.compile(r"\bregistrad[oa]s? como revisad[oa]s?\b", re.I), "registrado como revisado"),
+    (re.compile(r"\bacademic-sources/|\bchecks/(?:sql|mongo)/|\breviewed\.yaml\b|\bcontent-pipeline\b|\bcode-verification\.(?:md|json)\b"),
+     "ruta o herramienta interna del repositorio"),
+    (re.compile(r"\b[A-Z]\d+\.T\.[A-Z]{2,}\.[A-Z]?\d+\b"), "identificador de comprobación"),
+)
+
+
+def internal_text_findings(body: str, allow: list[dict[str, Any]] | None = None) -> list[str]:
+    """Fragmentos de texto interno en la prosa publicada (sin código ni comentarios HTML)."""
+    text = _strip_code(body)
+    text = re.sub(r"<!--.*?-->", "", text, flags=re.S)
+    allowed = [re.compile(rule["pattern"]) for rule in (allow or [])]
+    found: list[str] = []
+    for line in text.splitlines():
+        for rule, label in INTERNAL_TEXT_RULES:
+            for match in rule.finditer(line):
+                start, end = max(0, match.start() - 40), min(len(line), match.end() + 40)
+                snippet = line[start:end].strip()
+                if any(a.search(line) for a in allowed):
+                    continue
+                found.append(f"{label}: «…{snippet}…»")
+    return found
+
 
 def _strip_code(text: str) -> str:
     return re.sub(r"^(```|~~~).*?^\1", "", text, flags=re.S | re.M)
@@ -177,8 +212,11 @@ def run_qa(docs_root: Path, subject: str, curriculum_path: Path | None = None, m
     example_checks: list[tuple[str, str]] = []
     paragraphs: dict[str, list[str]] = defaultdict(list)
     forbidden = []
+    internal_allow: list[dict[str, Any]] = []
     if subject_config and subject_config.exists():
-        forbidden = ((read_yaml(subject_config) or {}).get("qa") or {}).get("forbidden") or []
+        qa_config = (read_yaml(subject_config) or {}).get("qa") or {}
+        forbidden = qa_config.get("forbidden") or []
+        internal_allow = qa_config.get("internal_text_allow") or []
 
     for page in pages:
         where = str(page["path"].relative_to(docs_root))
@@ -208,6 +246,9 @@ def run_qa(docs_root: Path, subject: str, curriculum_path: Path | None = None, m
                 "Montos con '$' fuera de código: " + ", ".join(amounts), where)
         for issue in math_syntax_issues(body):
             add("error", "formula-mal-delimitada", issue, where)
+        for snippet in internal_text_findings(body, internal_allow):
+            add("warning", "texto-interno", "Texto sobre el proceso de verificación o el repositorio a la vista "
+                "del estudiante (reformular desde la actividad): " + snippet, where)
         for rule in forbidden:
             if re.search(rule["pattern"], body):
                 add("warning", "notacion", rule.get("message", rule["pattern"]), where)
