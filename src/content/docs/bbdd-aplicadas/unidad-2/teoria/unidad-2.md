@@ -9,7 +9,7 @@ sidebar:
 
 Esta página reúne tres temas del programa 2024 que se apoyan entre sí: qué es una base de datos transaccional, cómo está armado por dentro un motor relacional (instancia, servicios, archivos) y qué decisiones hay que tomar al instalarlo. Los temas vecinos tienen su propia página: [bases de datos de sistema y de usuario](/bbdd-aplicadas/unidad-2/teoria/bases-de-sistema/), [collation](/bbdd-aplicadas/unidad-2/teoria/collation/), [bases de datos en memoria](/bbdd-aplicadas/unidad-2/teoria/bd-en-memoria/) y [conexión, drivers, ODBC y JDBC](/bbdd-aplicadas/unidad-2/teoria/formatos-conectividad/).
 
-Los ejemplos se ejecutan sobre SQL Server 2022 en una base nueva y vacía.
+Los resultados se obtuvieron con SQL Server 2022. Los ejemplos que crean objetos se ejecutan en una base de práctica (ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)).
 
 ## Bases de datos transaccionales (OLTP)
 
@@ -213,6 +213,8 @@ WHERE name = N'max server memory (MB)';
 | Opcion | ValorEnUso |
 |---|---:|
 | max server memory (MB) | 2147483647 |
+
+El valor corresponde a una instancia con la configuración por defecto; si en tu instalación alguien ya fijó un tope, verás ese valor. La consulta solo lee: no cambia la configuración.
 
 :::tip[Cuánta memoria dejarle al motor]
 Si el servidor comparte tareas con otros servicios, o hay varias instancias, se fija un tope menor a la memoria física para reservar lo que necesitan el sistema operativo y los demás procesos. El valor exacto depende de la carga: no hay una cifra universal, y la documentación oficial de SQL Server describe cómo estimarlo.

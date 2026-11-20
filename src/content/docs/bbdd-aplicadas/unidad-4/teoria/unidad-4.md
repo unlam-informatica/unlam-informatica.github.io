@@ -8,7 +8,7 @@ sidebar:
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)
 
-Resumen integrador de la unidad. Cada sección condensa un tema y enlaza a la página que lo desarrolla, con sus ejemplos verificados en MongoDB 7.0 y SQL Server 2022.
+Resumen integrador de la unidad. Cada sección condensa un tema y enlaza a la página que lo desarrolla, cuyos ejemplos tienen resultados obtenidos con MongoDB 7.0 y SQL Server 2022.
 
 :::tip[Cómo usar este resumen]
 - **Antes de estudiar:** leelo de corrido para tener el mapa de la unidad (de NoSQL a MongoDB, POO y KDD).

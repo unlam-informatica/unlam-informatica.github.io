@@ -8,10 +8,10 @@ sidebar:
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)
 
-Laboratorio sobre una tienda en línea ficticia. Combina CRUD con tipos exactos (`Decimal128`), consultas sobre arrays y documentos embebidos, uniones con `$lookup`, resúmenes con `$facet` y `$bucket`, e índices único, compuesto y TTL. Los datos y las resoluciones son propios y están verificados con MongoDB 7.0.
+Laboratorio sobre una tienda en línea ficticia. Combina CRUD con tipos exactos (`Decimal128`), consultas sobre arrays y documentos embebidos, uniones con `$lookup`, resúmenes con `$facet` y `$bucket`, e índices único, compuesto y TTL. Los datos y las resoluciones son propios, y los resultados esperados se obtuvieron con MongoDB 7.0.
 
 :::note[Material propio]
-Este laboratorio es una elaboración de este portal, no de la cátedra. Reemplaza al laboratorio anterior, que dependía de scripts que no estaban publicados y de una API externa.
+Este laboratorio es material propio de estos apuntes, no de la cátedra: los datos están publicados en este sitio y el laboratorio no depende de scripts externos ni de servicios en línea.
 :::
 
 ## Antes de empezar
@@ -38,7 +38,7 @@ Las relaciones se guardan por código (`clienteCodigo`, `sku`), no por `_id`, pa
 
 ### Preparación
 
-Cargá una base vacía (por ejemplo, `use tienda`) con este script, cambiando `dir` por tu carpeta. Cada ejercicio parte de una carga limpia: antes de uno que modifique datos, ejecutá `db.dropDatabase()` y volvé a cargar.
+Trabajá en una base de práctica vacía (por ejemplo, `use tienda` en `mongosh`; se crea al insertar). El script carga los cuatro archivos JSON que descargaste: cambiá `dir` por la carpeta donde los guardaste (en macOS o Linux, algo como `/home/usuario/datos/tienda`; en Windows se escribe con barras normales, como `C:/datos/tienda`). Si usás el shell integrado de Compass, que puede no permitir leer archivos del disco, importá en su lugar cada JSON con **ADD DATA → Import JSON or CSV file** en una colección con el mismo nombre del archivo. Cada ejercicio parte de una carga limpia: antes de uno que modifique datos, ejecutá `db.dropDatabase()` y volvé a cargar.
 
 <!-- check: U4.PR.TIENDA -->
 ```javascript
@@ -412,7 +412,7 @@ Solo `P-001` y `P-007` tienen dos o más reseñas, ambos con promedio de 4.5, y 
 
 ## Fuera del alcance: consumo de una API externa
 
-El laboratorio anterior incluía un ejercicio que importaba libros desde una API pública con un script de Node. No se incorporó a esta versión porque requiere acceso a la red y el servicio externo puede cambiar, así que no es reproducible. Si querés practicar el consumo de una API, usá la [práctica de APIs desde SQL](/bbdd-aplicadas/unidad-2/practica/apis/) de la Unidad 2, que queda pendiente de verificación específica por el mismo motivo.
+Consumir una API pública (por ejemplo, importar libros desde un servicio en línea con un script de Node) queda fuera de este laboratorio, porque requiere acceso a internet y depende de un servicio externo que puede cambiar. Si querés practicar el consumo de una API, usá la [práctica de APIs desde SQL](/bbdd-aplicadas/unidad-2/practica/apis/) de la Unidad 2, que también necesita acceso a internet.
 
 ## Tipos de índices vistos
 

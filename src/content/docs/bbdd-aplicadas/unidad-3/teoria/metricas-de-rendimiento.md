@@ -10,7 +10,7 @@ sidebar:
 Un servidor "anda lento" cuando algo cambió respecto de cómo anda normalmente. Para saberlo hace falta medir antes: las **métricas de performance** describen cuánto se usa la base de datos y cuántos recursos consume, y sirven para dimensionar el servidor, resolver problemas, detectar *bugs* y anticipar el crecimiento. Esta página reúne las que propone la cátedra (recuento de filas, entrada/salida de archivos, tamaño del backup del log, esperas y bloqueos) y las vistas del sistema para obtenerlas. Cómo interpretar un plan está en [Plan de ejecución y estadísticas](/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/) y cómo actuar sobre los índices en [Índices y optimización](/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/).
 
 :::note[Qué presupone esta lección]
-Consultas `SELECT` con `JOIN` ([Unidad 1](/bbdd-aplicadas/unidad-1/teoria/repaso-sql/)) y la noción de archivos de datos y de log de [Unidad 2](/bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/). Los ejemplos se ejecutaron en SQL Server 2022.
+Consultas `SELECT` con `JOIN` ([Unidad 1](/bbdd-aplicadas/unidad-1/teoria/repaso-sql/)) y la noción de archivos de datos y de log de [Unidad 2](/bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/). Los resultados se obtuvieron con SQL Server 2022.
 :::
 
 ## La línea de base
@@ -34,6 +34,8 @@ Los datos se obtienen de las **vistas de administración dinámica** (DMV): `sys
 | **Hardware y deadlocks** | `sys.dm_os_sys_info`, `sys.dm_os_performance_counters` | CPU, memoria, lecturas y escrituras; el contador de interbloqueos revela conflictos de diseño | Describen el servidor, no una consulta |
 
 ## Datos de ejemplo
+
+El script siguiente crea las tablas de ventas y las de historial de monitoreo. Ejecutalo en una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) vacía y usá esa misma base para todos los ejemplos de la página; los siguientes parten de estos datos. Algunos requieren permisos de administrador sobre la instancia (lo indica cada ejemplo).
 
 <!-- check: U3.T.MT.00 -->
 ```sql
@@ -200,7 +202,7 @@ El **modelo de recuperación** es una propiedad de la base de datos que controla
 | **No admite** | AlwaysOn, *mirroring*, *log shipping*, restauración a un punto en el tiempo | | |
 | **Uso típico** | Desarrollo, bases no críticas | Producción | Cargas masivas temporales dentro de una base `FULL` |
 
-`BULK_LOGGED` reduce el volumen de log en cargas masivas a cambio de perder la restauración a un punto en el tiempo dentro del intervalo afectado. El detalle de cómo funcionan el log, los checkpoints y los backups está en [Registro de transacciones y modelos de recuperación](/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/) y en [Backups y restauración](/bbdd-aplicadas/unidad-5/teoria/backup-restauracion/) (Unidad 5). Para esta página importa el modelo porque determina qué métricas existen: sin backups de log no hay tamaño de backup de log que medir. Una base nueva hereda el modelo de `model` (en esta instancia, `FULL`), y se cambia con `ALTER DATABASE`:
+`BULK_LOGGED` reduce el volumen de log en cargas masivas a cambio de perder la restauración a un punto en el tiempo dentro del intervalo afectado. El detalle de cómo funcionan el log, los checkpoints y los backups está en [Registro de transacciones y modelos de recuperación](/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/) y en [Backups y restauración](/bbdd-aplicadas/unidad-5/teoria/backup-restauracion/) (Unidad 5). Para esta página importa el modelo porque determina qué métricas existen: sin backups de log no hay tamaño de backup de log que medir. Una base nueva hereda el modelo de `model` (en la instancia con la que se obtuvieron estos resultados, `FULL`; la tuya puede ser distinta, y se consulta en `sys.databases`), y se cambia con `ALTER DATABASE`:
 
 <!-- check: U3.T.MT.04 -->
 ```sql
@@ -226,7 +228,7 @@ FROM sys.databases WHERE name = DB_NAME();
 
 ### Tamaño del backup del log
 
-En `FULL` o `BULK_LOGGED`, los cambios en la base se reflejan en el tamaño de los backups del log. Si se toman cada hora y tienen un tamaño habitual, un crecimiento anormal indica una situación a investigar. La ventaja es que se determina **sin acceder a la base**, solo con los backups. `msdb` guarda el historial de cada backup en `dbo.backupset` (tipo `D` = completo, `L` = log) con su tamaño y duración. La retención del historial depende del mantenimiento de `msdb` (`sp_delete_backuphistory`). La ruta de los archivos del ejemplo es del servidor de la instancia: reemplazala por una propia.
+En `FULL` o `BULK_LOGGED`, los cambios en la base se reflejan en el tamaño de los backups del log. Si se toman cada hora y tienen un tamaño habitual, un crecimiento anormal indica una situación a investigar. La ventaja es que se determina **sin acceder a la base**, solo con los backups. `msdb` guarda el historial de cada backup en `dbo.backupset` (tipo `D` = completo, `L` = log) con su tamaño y duración. La retención del historial depende del mantenimiento de `msdb` (`sp_delete_backuphistory`). Para ejecutar el ejemplo, la base tiene que estar en `FULL`: el ejemplo anterior la dejó en `SIMPLE`, así que antes ejecutá `ALTER DATABASE CURRENT SET RECOVERY FULL;`. Las rutas de los archivos de backup son del servidor, no de tu equipo, y deben existir y ser escribibles por el servicio de SQL Server. Las del ejemplo (`/var/opt/mssql/data/`) corresponden a SQL Server para Linux o en un contenedor; en Windows reemplazalas por una carpeta propia, como `C:\Backups\u3_metricas.bak`. Los dos `BACKUP` requieren el permiso correspondiente sobre la base (rol `db_backupoperator` o superior).
 
 <!-- check: U3.T.MT.05 -->
 ```sql

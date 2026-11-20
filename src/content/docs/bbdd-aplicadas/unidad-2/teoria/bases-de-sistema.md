@@ -88,7 +88,7 @@ De `tempdb` no listamos los archivos de datos porque su cantidad depende de la i
 
 ## `model` es la plantilla
 
-Al ejecutar `CREATE DATABASE`, el motor copia `model` y le cambia el nombre. Por eso la base nueva hereda sus propiedades: intercalación, modelo de recuperación, nivel de compatibilidad, tamaño y crecimiento inicial de los archivos, y los objetos que `model` tuviera. El script siguiente se ejecuta en una base recién creada y la compara con `model`:
+Al ejecutar `CREATE DATABASE`, el motor copia `model` y le cambia el nombre. Por eso la base nueva hereda sus propiedades: intercalación, modelo de recuperación, nivel de compatibilidad, tamaño y crecimiento inicial de los archivos, y los objetos que `model` tuviera. El script siguiente se ejecuta en una base de práctica recién creada y la compara con `model`:
 
 <!-- check: U2.T.BDS.03 -->
 ```sql
@@ -230,7 +230,7 @@ ORDER BY database_id;
 <!-- ejercicio: U2.49 | nivel: intermedio | tipo: consulta | verificacion: motor -->
 
 :::note[Enunciado]
-Comprobá, para el archivo de datos y el de log, si la base actual (recién creada) tiene el mismo tamaño y el mismo crecimiento que los archivos de `model`.
+Comprobá, para el archivo de datos y el de log, si la base actual (tu base de práctica, recién creada) tiene el mismo tamaño y el mismo crecimiento que los archivos de `model`.
 :::
 
 <details>

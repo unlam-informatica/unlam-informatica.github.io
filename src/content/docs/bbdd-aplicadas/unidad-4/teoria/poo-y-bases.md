@@ -9,7 +9,7 @@ sidebar:
 
 El programa 2024 incluye en la unidad el tema «Relación con POO». La cátedra no desarrolla material propio sobre él, así que esta página se apoya en la documentación oficial de los productos y en la bibliografía. Se limita a tres cosas: la **correspondencia objeto-relacional** (el desajuste de impedancia), la **correspondencia objeto-documental** (documentos embebidos y referencias) y las capas de mapeo **ORM** y **ODM**. No trata patrones de diseño, frameworks en profundidad ni bases de datos orientadas a objetos.
 
-Los ejemplos se comprobaron en SQL Server 2022 (`U4.T.POO.01`) y MongoDB 7.0 (`U4.T.POO.02`). El código de aplicación es una plantilla de sintaxis: no se ejecuta en el portal.
+Los resultados de los ejemplos se obtuvieron con SQL Server 2022 (el de la correspondencia objeto-relacional, que se reproduce en una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)) y con MongoDB 7.0 en `mongosh` (el de la correspondencia objeto-documental). El código de aplicación en Java es solo una plantilla de sintaxis para mostrar la forma de las clases: no es un programa completo ni hace falta ejecutarlo.
 
 ## Para qué sirve
 

@@ -7,7 +7,7 @@ sidebar:
 
 El **SQL dinámico** arma una sentencia como cadena de texto y la ejecuta en tiempo de ejecución. Se usa cuando no se conoce de antemano un nombre de columna o de tabla, o la lista de valores de un [PIVOT](/bbdd-aplicadas/unidad-1/teoria/pivot/). Es potente y peligroso: una cadena armada con datos externos es una puerta para la inyección.
 
-Los ejemplos usan el esquema `ventas` de la página de [window functions](/bbdd-aplicadas/unidad-1/teoria/window-functions/#esquema-de-ejemplo).
+Los ejemplos usan el esquema `ventas` de la página de [window functions](/bbdd-aplicadas/unidad-1/teoria/window-functions/#esquema-de-ejemplo): ejecutá antes el bloque que lo crea y carga los datos, en una base de práctica.
 
 ## `EXEC` frente a `sp_executesql`
 
@@ -222,6 +222,8 @@ WHERE s.name = N'ventas';
 SET @Consulta = N'SELECT Tabla, Filas FROM (' + @Consulta + N') AS Conteo ORDER BY Tabla;';
 EXEC sys.sp_executesql @Consulta;
 ```
+
+El resultado supone que el esquema `ventas` solo tiene las tablas del esquema de ejemplo; si ejecutaste antes ejemplos que crean otras (como `VentaCarga` o `ResumenMensual`), aparecerán también en la lista.
 
 | Tabla | Filas |
 |---|---:|

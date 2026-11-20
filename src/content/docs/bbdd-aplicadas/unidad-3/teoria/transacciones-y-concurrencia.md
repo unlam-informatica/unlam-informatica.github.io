@@ -64,7 +64,7 @@ En **autocommit** cada sentencia es atómica por sí sola, pero dos sentencias s
 
 En el modo **implícito** el motor abre una transacción cuando se ejecuta una sentencia como `INSERT`, `UPDATE`, `DELETE`, `SELECT` sobre una tabla, `CREATE`, `DROP`, `OPEN` o `FETCH`, y no la cierra hasta que lo pidamos. La opción activa se puede consultar con `@@OPTIONS`: el bit 2 indica `IMPLICIT_TRANSACTIONS`.
 
-Los ejemplos de esta página usan estas dos tablas. Ejecutalos en una base de pruebas propia, no en una de producción.
+Los ejemplos de esta página usan estas dos tablas. Ejecutalos en una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) propia, nunca en una con datos reales; el primer bloque crea las tablas con sus datos iniciales y los siguientes parten de ese estado. Los resultados se obtuvieron con SQL Server 2022.
 
 <!-- check: U3.T.TX.01 -->
 ```sql
@@ -150,7 +150,7 @@ Dejar `IMPLICIT_TRANSACTIONS ON` en una conexión es una fuente clásica de bloq
 :::
 
 :::note[Cuidado al leer variables de sesión]
-`@@TRANCOUNT`, `XACT_STATE()` y `@@OPTIONS` se evalúan **dentro** de la sentencia que los usa. Si los pasás directo a un `INSERT`, esa sentencia ya corre en su propia transacción de autocommit y el valor puede distorsionarse (`XACT_STATE()` devolvió 1 sin ninguna transacción abierta en una prueba). Por eso en los ejemplos se copian primero a una variable.
+`@@TRANCOUNT`, `XACT_STATE()` y `@@OPTIONS` se evalúan **dentro** de la sentencia que los usa. Si los pasás directo a un `INSERT`, esa sentencia ya corre en su propia transacción de autocommit y el valor puede distorsionarse (en SQL Server 2022, `XACT_STATE()` devolvió 1 sin ninguna transacción abierta). Por eso en los ejemplos se copian primero a una variable.
 :::
 
 ## BEGIN, COMMIT y ROLLBACK
@@ -634,12 +634,12 @@ Movimientos registrados (dos, los de la transferencia que salió bien):
 
 ### Un procedimiento llamado dentro de otra transacción
 
-Si el procedimiento puede llamarse desde otro que ya abrió una transacción, un `ROLLBACK` incondicional adentro revertiría también el trabajo del llamador. La alternativa es ver el `@@TRANCOUNT` de entrada: abrir una transacción propia si es 0 y, si no, usar un savepoint. Se resuelve en el ejercicio [U3.10](/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/).
+Si el procedimiento puede llamarse desde otro que ya abrió una transacción, un `ROLLBACK` incondicional adentro revertiría también el trabajo del llamador. La alternativa es ver el `@@TRANCOUNT` de entrada: abrir una transacción propia si es 0 y, si no, usar un savepoint. Se resuelve en el [ejercicio 10 del laboratorio TCL](/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/).
 
 ## Errores frecuentes
 
 :::caution[Errores frecuentes]
-- **`ROLLBACK` sin comprobar si hay transacción.** Si el error ocurrió antes del `BEGIN TRANSACTION`, el `ROLLBACK` falla con el error 3903 y tapa el error original. Se resuelve con `IF XACT_STATE() <> 0` antes del `ROLLBACK`. Se muestra ejecutado en el ejercicio [U3.08](/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/).
+- **`ROLLBACK` sin comprobar si hay transacción.** Si el error ocurrió antes del `BEGIN TRANSACTION`, el `ROLLBACK` falla con el error 3903 y tapa el error original. Se resuelve con `IF XACT_STATE() <> 0` antes del `ROLLBACK`. Se muestra ejecutado en el [ejercicio 8 del laboratorio TCL](/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/).
 - **Creer que el `COMMIT` interno confirma.** Solo baja `@@TRANCOUNT`; confirma el último.
 - **Usar el nombre de una transacción interna en `ROLLBACK`.** Da el error 6401.
 - **`ROLLBACK TO` después de un error que condenó la transacción.** Con `XACT_STATE() = -1` no hay vuelta atrás parcial.

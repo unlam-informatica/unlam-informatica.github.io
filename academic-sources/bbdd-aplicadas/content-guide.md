@@ -321,6 +321,26 @@ Cada ejercicio usa el marcador que lee `qa`:
 Sigue el esquema de evaluación **2024**: un parcial sobre u1–u4, más el TP integrador y el final.
 No se rotula ninguna unidad como "2do parcial". Las guías de u5 y u6 se orientan al TP y al final.
 
+### Redacción dirigida al estudiante
+
+La evidencia de verificación (marcadores `<!-- check -->`, `checks/`, `reviewed.yaml`, reportes) vive en el
+repositorio; el texto publicado le habla al estudiante. En la prosa no aparecen «el verificador», «entorno de
+verificación», «verificación automática», «pendiente de verificación específica», rutas del repositorio ni
+identificadores de comprobación (`qa` los informa como `texto-interno`).
+
+- **Ejemplo ejecutado:** basta, cuando aporta, una mención por página de la versión y la plataforma con que se
+  obtuvieron los resultados.
+- **Ejemplo no ejecutado** (en `reviewed.yaml`): se dice que **no se probó en un motor**, qué necesita el estudiante
+  para ejecutarlo (permisos, dos ventanas de consulta, dos instancias en red, Windows, una versión concreta, red
+  externa) y que el resultado descripto es el que indica la documentación oficial. Si la incertidumbre es material,
+  va en un `:::caution[No probado en un motor]`. La clasificación interna no cambia.
+- **Limitaciones:** se distingue la del motor o la plataforma (por ejemplo, una opción que SQL Server para Linux
+  rechaza) de un requisito de permisos o infraestructura. No se atribuye al motor lo que es solo del sistema de pruebas.
+- **Resultados resumidos o reunidos:** se explica qué se muestra («solo las columnas relevantes», «reunido en una
+  tabla temporal para verlo de una vez»), sin ocultar diferencias entre el bloque y la salida.
+- Términos operativos («base de práctica», «dos sesiones», «preparación») se explican o enlazan a
+  [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos).
+
 ## 9. Formato
 
 - Callouts nativos con título en español: `:::note[…]`, `:::tip[…]`, `:::caution[…]`, `:::danger[…]`.

@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-Trabajo práctico propio de repaso de SQL sobre una **biblioteca comunal**: esquema, restricciones, carga de datos, consultas, vistas, funciones, procedimientos, triggers, CTE y `PIVOT`. Es un material original con dominio, tablas y datos sintéticos propios; cubre los mismos objetivos de aprendizaje que un repaso de la unidad. Se resuelve en SQL Server 2019 o 2022, en una base de datos vacía.
+Trabajo práctico propio de repaso de SQL sobre una **biblioteca comunal**: esquema, restricciones, carga de datos, consultas, vistas, funciones, procedimientos, triggers, CTE y `PIVOT`. Es un material original con dominio, tablas y datos sintéticos propios; cubre los mismos objetivos de aprendizaje que un repaso de la unidad. Se resuelve en SQL Server 2019 o 2022, en una base de práctica creada para el trabajo (ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)).
 
 :::note[Qué lecciones presupone]
 - [Repaso de SQL](/bbdd-aplicadas/unidad-1/teoria/repaso-sql/): DDL, DML, restricciones, vistas, procedimientos, funciones y triggers.
@@ -15,7 +15,7 @@ Trabajo práctico propio de repaso de SQL sobre una **biblioteca comunal**: esqu
 :::
 
 :::note[Cómo usar esta práctica]
-Los ejercicios 1 y 2 construyen el modelo; el ejercicio 3 lo prueba. El **script de preparación** reúne esas soluciones más los datos de prueba: ejecutalo para saltear los ejercicios 1 a 3. Cada resolución es autocontenida salvo donde se indica (el ejercicio 13 reutiliza la bitácora del 12). El esquema `biblioteca` va en minúsculas, las tablas en singular y PascalCase, como en el resto del curso. Los datos son ficticios.
+Los ejercicios 1 y 2 construyen el modelo; el ejercicio 3 lo prueba. El **script de preparación** reúne esas soluciones más los datos de prueba: ejecutalo para saltear los ejercicios 1 a 3. Cada resolución muestra solo lo que agrega el ejercicio y parte del estado que deja el script de preparación, así que ese script tiene que haberse ejecutado antes. Los resultados esperados suponen esos datos tal como quedan al terminar la preparación: los ejercicios que modifican filas (por ejemplo el 5, que borra préstamos, o el 13, que descuenta un ejemplar) alteran ese estado. Para reproducir los resultados de los ejercicios siguientes, volvé a empezar con una base de práctica nueva y la preparación. Las resoluciones también se apoyan unas en otras donde se indica (el ejercicio 13 reutiliza la bitácora del 12). El esquema `biblioteca` va en minúsculas, las tablas en singular y PascalCase, como en el resto del curso. Los datos son ficticios.
 :::
 
 ## Modelo de datos

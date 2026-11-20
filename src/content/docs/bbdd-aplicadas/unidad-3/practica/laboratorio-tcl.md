@@ -7,11 +7,11 @@ sidebar:
 
 [← Unidad 3](/bbdd-aplicadas/unidad-3/teoria/)
 
-Esta práctica tiene dos partes. La **parte 1** son diez ejercicios de **una sola sesión** sobre el control de transacciones (`BEGIN`, `COMMIT`, `ROLLBACK`, `SAVE TRANSACTION`, `@@TRANCOUNT`, `TRY/CATCH`, `XACT_STATE`, `XACT_ABORT`); todos se ejecutaron en SQL Server 2022 y los resultados esperados son los reales. La **parte 2** es un laboratorio guiado de **dos o tres sesiones** con una tarjeta de crédito: muestra qué ve y qué espera cada sesión según el nivel de aislamiento.
+Esta práctica tiene dos partes. La **parte 1** son diez ejercicios de **una sola sesión** sobre el control de transacciones (`BEGIN`, `COMMIT`, `ROLLBACK`, `SAVE TRANSACTION`, `@@TRANCOUNT`, `TRY/CATCH`, `XACT_STATE`, `XACT_ABORT`); los resultados esperados se obtuvieron con SQL Server 2022. La **parte 2** es un laboratorio guiado de **dos o tres sesiones** con una tarjeta de crédito: muestra qué ve y qué espera cada sesión según el nivel de aislamiento.
 
 **Teoría previa**: [Control de transacciones (TCL)](/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/) para la parte 1 y [Concurrencia, bloqueos y transacciones distribuidas](/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/) para la parte 2.
 
-Los scripts se ejecutan en una **base de pruebas propia** (por ejemplo, una base nueva llamada `LabTransacciones`). Cada ejercicio parte del estado que deja el script de preparación: volvé a ejecutarlo antes de cada uno.
+Los scripts se ejecutan en una **base de práctica propia**, nunca con datos reales: por ejemplo, creá `CREATE DATABASE LabTransacciones;` y ejecutá `USE LabTransacciones;` en cada ventana de consulta (si no tenés el permiso `CREATE DATABASE`, pedí una base y usala con `USE`; ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)). Ejecutá primero el script de la [Preparación](#preparación) de la parte 1; cada ejercicio parte del estado que deja ese script, así que volvé a ejecutarlo antes de cada uno. La parte 2 tiene su propio script de preparación (sección *Entorno* de esa parte).
 
 ---
 
@@ -336,7 +336,7 @@ SELECT Orden, Variante, Detalle FROM @Observacion ORDER BY Orden;
 | 2 | sin XACT_ABORT: error y XACT_STATE() | 547 / 1 |
 | 3 | saldo de la cuenta 1 tras la variante corregida | 4800.00 |
 
-El `ROLLBACK TRANSACTION AntesDeB` del `IF` no se ejecutó (fila 1), el error fue 547 con `XACT_STATE()` = 1 (fila 2), y tras volver al savepoint y confirmar, el saldo es 5000 − 200 = 4800: se conservó el primer débito y se descartó el segundo. El error de un enunciado anterior de esta práctica era justamente este: el resultado coincidía por casualidad, pero la demostración del savepoint no era correcta.
+El `ROLLBACK TRANSACTION AntesDeB` del `IF` no se ejecutó (fila 1), el error fue 547 con `XACT_STATE()` = 1 (fila 2), y tras volver al savepoint y confirmar, el saldo es 5000 − 200 = 4800: se conservó el primer débito y se descartó el segundo.
 </details>
 
 #### Ejercicio 7 · XACT_ABORT con una clave foránea
@@ -669,12 +669,12 @@ Llamado solo, el error 547 revirtió su propia transacción (saldo sin cambios e
 Escenario: una tabla de tarjetas con su límite de crédito disponible y una tabla de transacciones (ventas `V` y reversiones `R`). Cada venta descuenta el límite; cada reversión lo repone. Los experimentos muestran qué ve y qué espera cada sesión según el nivel de aislamiento.
 
 :::note[Cómo leer los experimentos]
-El **experimento 0** usa una sola sesión y se ejecutó en el motor. Los experimentos 1 a 3 necesitan **dos o tres ventanas de consulta** (cada una es una sesión independiente) y no se ejecutan en la verificación automática: el "resultado esperado" es lo que garantiza el motor según la documentación de SQL Server, y quedan registrados como pendientes de verificación específica. Se ejecuta la sesión A y, **dentro de la espera de la sesión A**, la B (y la C). Las esperas con `WAITFOR DELAY` están calculadas para darte tiempo.
+El **experimento 0** usa una sola sesión y sus resultados se obtuvieron con SQL Server 2022. Los experimentos 1 a 3 necesitan **dos o tres ventanas de consulta** (pestañas en SSMS o en VS Code, conectadas al mismo servidor, con `USE LabTransacciones;` ejecutado en cada una; cada una es una sesión independiente) y **no se probaron en un motor**: el «resultado esperado» es el comportamiento que describe la documentación de SQL Server; comprobalo en tu instalación. Primero ejecutá el script del *Entorno* en cualquier ventana. Después ejecutá el bloque de la sesión A y, **dentro de la espera de la sesión A** (`WAITFOR DELAY`), el de la B (y el de la C): conviene dejar los bloques ya escritos en sus ventanas para ejecutarlos apenas arranca A. Las esperas están calculadas para darte tiempo.
 :::
 
 ### Entorno
 
-Crea las tablas `banco.TarjetaCredito` y `banco.TransaccionTarjeta` con cuatro tarjetas de ejemplo. El índice sobre `NroTarjeta` hace que los bloqueos de rango del experimento 3 queden acotados a esa tarjeta. Es también el script de **reinicio**: se lo vuelve a ejecutar antes de cada experimento.
+Se ejecuta en la misma base de práctica. Crea las tablas `banco.TarjetaCredito` y `banco.TransaccionTarjeta` con cuatro tarjetas de ejemplo. El índice sobre `NroTarjeta` hace que los bloqueos de rango del experimento 3 queden acotados a esa tarjeta. Es también el script de **reinicio**: se lo vuelve a ejecutar antes de cada experimento.
 
 <!-- check: U3.T.TX.11 -->
 ```sql
@@ -822,7 +822,7 @@ SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 SELECT NroTarjeta, LimiteCredito FROM banco.TarjetaCredito WHERE NroTarjeta = 1000000000000001;
 ```
 
-**Resultado esperado** (según la documentación; no verificado en esta edición):
+**Resultado esperado** (según la documentación; no se probó en un motor):
 
 | Momento | Qué ocurre |
 |---|---|
@@ -891,7 +891,7 @@ SET Ciudad = 'Ciudad X'
 WHERE NroTarjeta = 1000000000000001;
 ```
 
-**Resultado esperado** (según la documentación; no verificado en esta edición):
+**Resultado esperado** (según la documentación; no se probó en un motor):
 
 | Sesión | Resultado |
 |---|---|
@@ -946,7 +946,7 @@ INSERT INTO banco.TransaccionTarjeta (TransaccionId, NroTarjeta, Fecha, Monto, T
 VALUES (1004, 1000000000000001, '2026-03-01T11:00:00', 100.00, NULL, 'V');
 ```
 
-**Resultado esperado** (según la documentación; no verificado en esta edición):
+**Resultado esperado** (según la documentación; no se probó en un motor):
 
 | Nivel de A | `PrimeraCuenta` | `SegundaCuenta` | Sesión B |
 |---|---:|---:|---|

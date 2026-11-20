@@ -9,7 +9,7 @@ sidebar:
 
 Esta página presenta el modelo de datos de MongoDB: documentos BSON, tipos, la clave `_id` y su `ObjectId`, la correspondencia con el modelo relacional, la gestión de bases y colecciones y el shell `mongosh`. Las operaciones de lectura y escritura siguen en [CRUD y consultas](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/) y la agregación en [Aggregation Pipeline, índices y vistas](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/).
 
-Todos los ejemplos se ejecutaron en MongoDB 7.0 con `mongosh` 2.x. Los nombres siguen la convención habitual: colecciones en minúsculas y plural, campos en camelCase.
+Los resultados se obtuvieron con MongoDB 7.0 y `mongosh` 2.x; para reproducirlos alcanza con `mongosh` conectado a un servidor y una base de práctica (se crea al insertar; ver [Bases de datos y colecciones](#bases-de-datos-y-colecciones)). Cada ejemplo crea la colección que usa. Los nombres siguen la convención habitual: colecciones en minúsculas y plural, campos en camelCase.
 
 ## Para qué sirve
 
@@ -84,7 +84,7 @@ db.personas.aggregate([{ $project: {
 } }])
 ```
 
-**Resultado esperado** (parcial de la salida del check):
+**Resultado esperado** (resumido: solo los campos relevantes de la salida):
 
 | Campo | `$type` |
 |---|---|
@@ -220,7 +220,7 @@ db.empleados.insertOne({ nombre: "Diego" });              // rechaza: falta edad
 
 **Resultado esperado.** Las dos últimas instrucciones fallan con el código `121` y el mensaje `Document failed validation`. Un `edad: "treinta"` (texto) también se rechaza. Quedan 2 empleados.
 
-El mensaje no dice qué regla se incumplió. El detalle está en `e.errInfo.details`: para `edad: 15` con `minimum: 18`, `details.schemaRulesNotSatisfied[0].propertiesNotSatisfied[0]` informa `propertyName: "edad"` y `operatorName: "minimum"` (comprobado en `U4.T.MI.03`).
+El mensaje no dice qué regla se incumplió. El detalle está en `e.errInfo.details`: para `edad: 15` con `minimum: 18`, `details.schemaRulesNotSatisfied[0].propertiesNotSatisfied[0]` informa `propertyName: "edad"` y `operatorName: "minimum"`.
 
 :::note[`int` frente a `double`]
 Con `bsonType: "int"` a secas, `30.5` se rechaza y `30` se acepta, porque es `Int32`. Si los datos llegan de una importación, el tipo `double` o `long` también debe estar permitido o hay que convertir antes. Con `["int", "long", "double"]` más `minimum` y `maximum` se controla el rango sin depender del tipo numérico.
@@ -289,7 +289,7 @@ db.nueva.drop();                               // true
 db["nueva"].drop();                            // notación de corchetes, útil si el nombre tiene caracteres especiales
 ```
 
-`drop()` devuelve `true` cuando la colección se elimina. En MongoDB 7.0 también devuelve `true` si la colección no existía (se comprobó en el motor), así que no sirve para saber si existía.
+`drop()` devuelve `true` cuando la colección se elimina. En MongoDB 7.0 también devuelve `true` si la colección no existía, así que no sirve para saber si existía.
 
 ## Documento de ejemplo completo
 

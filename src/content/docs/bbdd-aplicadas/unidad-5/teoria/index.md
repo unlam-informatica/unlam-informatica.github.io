@@ -88,7 +88,7 @@ Grupos de disponibilidad, replicación, log shipping y FCI (complementario); qu�
 - **Comprobá:** [autoevaluación](/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad/#autoevaluación)
 
 :::caution[Lo que requiere un clúster]
-El [laboratorio guiado de un grupo de disponibilidad de dos nodos](/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad/#laboratorio-guiado-grupo-de-disponibilidad-de-dos-nodos) necesita dos instancias que se vean entre sí: queda como pendiente de verificación específica del portal: está revisado, no verificado. Lo que sí se comprobó es lo que la lección indica en cada ejemplo.
+El [laboratorio guiado de un grupo de disponibilidad de dos nodos](/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad/#laboratorio-guiado-grupo-de-disponibilidad-de-dos-nodos) necesita dos instancias que se vean entre sí: no se probó en un motor, porque requiere dos instancias conectadas en red. Es un guion paso a paso basado en la documentación de Microsoft; el resto de los ejemplos de la lección sí se ejecutaron y la propia lección indica cuáles no.
 :::
 
 ## Ejercicios y laboratorios

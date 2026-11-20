@@ -36,7 +36,7 @@ Los ejemplos de esta práctica se ejecutaron en SQL Server 2022 sobre Linux. La 
 
 ## Script de preparación
 
-Los ejercicios 1 y 4 a 8 construyen este esquema paso a paso. El script reúne esas soluciones: ejecutalo en una base vacía para saltear los ejercicios 4 a 8 y resolver el resto. Crea las tablas de carga (`EstacionCarga`, `LecturaCarga`, todo texto, con columnas UTF-8), las tablas definitivas y la tabla de rechazos, importa los dos archivos y valida las lecturas.
+Los ejercicios 1 y 4 a 8 construyen este esquema paso a paso. El script reúne esas soluciones: ejecutalo en una base de práctica (ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)) para saltear los ejercicios 4 a 8 y resolver el resto. Crea las tablas de carga (`EstacionCarga`, `LecturaCarga`, todo texto, con columnas UTF-8), las tablas definitivas y la tabla de rechazos, importa los dos archivos y valida las lecturas.
 
 <!-- check: U2.TP2.00 -->
 
@@ -202,7 +202,7 @@ WHERE s.name = 'aire'
 ORDER BY t.name, c.column_id;
 ```
 
-**Resultado esperado** (instancia con la collation por defecto de la imagen de prueba; en otra instalación el servidor y la base pueden mostrar otra, por ejemplo `Modern_Spanish_CI_AS`).
+**Resultado esperado** (instalación de SQL Server 2022 con la collation por defecto `SQL_Latin1_General_CP1_CI_AS`; en otra instalación el servidor y la base pueden mostrar otra, por ejemplo `Modern_Spanish_CI_AS`).
 
 | CollationServidor | CollationBase | CollationCatalogo |
 |---|---|---|
@@ -1040,8 +1040,8 @@ ORDER BY Puesto, e.Codigo;
 (a) Creá dos bases, `AireCsAs` (`Latin1_General_100_CS_AS`) y `AireCiAi` (`Latin1_General_100_CI_AI`), con una tabla `dbo.Barrio` en cada una. Mostrá que un `INTERSECT` entre ellas falla con el error 468 y resolvelo con `COLLATE DATABASE_DEFAULT`. (b) Comprobá qué collation toma una columna de tabla temporal y cómo evitar el conflicto. (c) Verificá con dos sesiones que una tabla temporal global es visible para otras conexiones y que desaparece cuando termina la que la creó.
 :::
 
-:::caution[Pendiente de verificación específica]
-Este ejercicio requiere `CREATE DATABASE` y dos sesiones concurrentes, que el verificador automático no admite (corre en una base nueva y una sola conexión). Los resultados de (a) y (b) se ejecutaron a mano en SQL Server 2022, pero el ejercicio no cuenta como verificado hasta una comprobación específica.
+:::caution[No probado en un motor]
+Este ejercicio necesita el permiso `CREATE DATABASE` (para crear las dos bases) y dos sesiones, es decir, dos ventanas de consulta conectadas a la misma instancia (ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)). Los resultados de (a) y (b) se obtuvieron con SQL Server 2022; el paso (c), que usa las dos sesiones, no se probó en un motor y el resultado es el que describe la documentación de Microsoft: comprobalo en tu instalación.
 :::
 
 <details>
@@ -1110,7 +1110,7 @@ DROP DATABASE AireCiAi;
 GO
 ```
 
-Para (c), abrí dos ventanas de consulta (dos conexiones):
+Para (c), abrí dos ventanas de consulta conectadas a la misma instancia (dos conexiones independientes). Ejecutá cada paso en la ventana que indica el comentario; la sesión A es la ventana donde creás `##Compartida`, y «cerrar la sesión A» significa cerrar esa ventana o desconectarla:
 
 <!-- check: U2.15 -->
 
@@ -1126,7 +1126,7 @@ SELECT Estacion FROM ##Compartida;      -- devuelve una fila
 SELECT Estacion FROM ##Compartida;      -- error 208: el nombre de objeto no es válido
 ```
 
-**Resultado esperado** de (a) y (b), ejecutado a mano (el nombre de la collation de la instancia depende de cómo esté instalada):
+**Resultado esperado** de (a) y (b), obtenido con SQL Server 2022 (el nombre de la collation de la instancia depende de cómo esté instalada):
 
 | name | collation_name |
 |---|---|
@@ -1150,7 +1150,7 @@ SELECT Estacion FROM ##Compartida;      -- error 208: el nombre de objeto no es 
 |---|
 | Latin1_General_100_CI_AI |
 
-**Explicación.** Con `COLLATE DATABASE_DEFAULT` la comparación se hace con la collation de la base activa (`CI_AI` en este caso), y `SAN JOSE` coincide con `San José`. La columna temporal sin `COLLATE` toma la de `tempdb`, distinta de la de la base: al compararla con columnas de la base daría el mismo error 468; con `COLLATE DATABASE_DEFAULT` se evita. La visibilidad de `##` entre sesiones y su eliminación al cerrarse la sesión creadora son comportamiento documentado de SQL Server, pero requieren dos conexiones para observarse.
+**Explicación.** Con `COLLATE DATABASE_DEFAULT` la comparación se hace con la collation de la base activa (`CI_AI` en este caso), y `SAN JOSE` coincide con `San José`. La columna temporal sin `COLLATE` toma la de `tempdb`, distinta de la de la base: al compararla con columnas de la base daría el mismo error 468; con `COLLATE DATABASE_DEFAULT` se evita. La visibilidad de `##` entre sesiones y su eliminación al cerrarse la sesión creadora son comportamiento documentado de SQL Server; para observarlos hacen falta las dos conexiones del paso (c), cuyo resultado es el que indican los comentarios del bloque.
 
 </details>
 

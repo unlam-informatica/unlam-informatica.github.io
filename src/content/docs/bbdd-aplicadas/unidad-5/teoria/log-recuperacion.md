@@ -15,6 +15,8 @@ Cuando una aplicación confirma una venta con `COMMIT`, el motor promete que ese
 El **registro de transacciones** guarda, en orden, la secuencia de cambios que sufrió una base. SQL Server aplica el principio de **registro previo a la escritura** (*write-ahead logging*, WAL): el registro del cambio llega a disco antes que la página de datos modificada.
 :::
 
+Los ejemplos de esta página se ejecutan en una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) llamada `LaboratorioU5` (`CREATE DATABASE LaboratorioU5;` y `USE LaboratorioU5;`) con una tabla `dbo.Pedido (PedidoId INT IDENTITY PRIMARY KEY, Estado VARCHAR(30))`; los comentarios de los bloques lo recuerdan donde hace falta. Los resultados se obtuvieron con SQL Server 2022 sobre Linux.
+
 ## De una modificación al disco
 
 SQL Server no escribe en el `.mdf` en cada `INSERT`. Primero carga la página en el **buffer pool** (memoria), la modifica ahí y queda como **página sucia** (*dirty page*): modificada en memoria y todavía no escrita en el archivo de datos.
@@ -294,7 +296,7 @@ BACKUP LOG LaboratorioU5 TO DISK = 'D:\SQLBackups\c.trn' WITH INIT;   -- correct
 ALTER DATABASE LaboratorioU5 SET RECOVERY BULK_LOGGED;
 ```
 
-**Resultado esperado** (en el verificador cada `BACKUP LOG` está en un `TRY`/`CATCH`).
+**Resultado esperado.** Los tres `BACKUP LOG` fallan o se completan según el caso; para obtener esta tabla se ejecutó cada uno dentro de un `TRY`/`CATCH` y se anotó si el motor lo rechazó o lo permitió. Si ejecutás el bloque tal cual, verás los errores 4208 y 4214 en los mensajes.
 
 | Situación | Resultado |
 |---|---|

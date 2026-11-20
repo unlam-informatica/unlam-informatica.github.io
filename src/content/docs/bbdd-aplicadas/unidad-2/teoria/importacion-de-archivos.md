@@ -14,7 +14,7 @@ Cómo cargar en tablas de SQL Server los datos de archivos CSV, de ancho fijo, J
 Casi todo dato que llega a una base viene de un archivo: un conjunto de datos abiertos en CSV, un listado bancario de ancho fijo, la respuesta guardada de una API en JSON. Importarlo bien significa cargar rápido y, sobre todo, **no perder ni corromper datos**: comillas, codificación y filas inválidas son los problemas de todos los días.
 
 :::note[Rutas en los ejemplos]
-Los ejemplos muestran rutas de Windows como `C:\datos\producto.csv`; reemplazalas por la ruta de tu archivo. La ruta la resuelve **el servidor**, no tu equipo cliente, y la cuenta con la que corre el servicio de SQL Server debe poder leerla. Los ejemplos se verificaron en SQL Server 2022 sobre Linux con archivos de fin de línea LF; ver las notas sobre diferencias.
+Los ejemplos muestran rutas de Windows como `C:\datos\producto.csv`; reemplazalas por la ruta de tu archivo. La ruta la resuelve **el servidor**, no tu equipo cliente, y la cuenta con la que corre el servicio de SQL Server debe poder leerla. Los resultados se obtuvieron con SQL Server 2022 sobre Linux y archivos con fin de línea LF; ver las notas sobre diferencias. El contenido de cada archivo de ejemplo se muestra en la página: para reproducir un ejemplo, guardalo con ese contenido en una carpeta que el servidor pueda leer y ejecutá el código en una base de práctica (ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)).
 :::
 
 ## Herramientas
@@ -194,7 +194,7 @@ ORDER BY Codigo;
 | P002 | `"Lapicera ""Trazo"" azul"` | 300.00 | 120 |
 | P003 | Resaltador amarillo | 480.25 | NULL |
 
-Así se pierde una fila y se ensucia otra sin que el script se detenga en el entorno de prueba (en SSMS aparece el mensaje de error 4864 para la fila descartada). Por eso conviene verificar siempre la cantidad de filas cargadas.
+Así se pierde una fila y se ensucia otra sin que el script se detenga (en SSMS aparece el mensaje de error 4864 para la fila descartada). Por eso conviene verificar siempre la cantidad de filas cargadas.
 
 ## Staging, validación y carga final
 
@@ -348,8 +348,8 @@ Un archivo de texto es una secuencia de bytes; para saber qué letra es cada uno
 |---|---|
 | ASCII (sin tildes ni `ñ`) | No hay problema con ninguna opción |
 | UTF-8, en Windows | `CODEPAGE = '65001'` en `BULK INSERT` |
-| UTF-16 (little endian) | `DATAFILETYPE = 'widechar'` con columnas `NVARCHAR` (verificado) |
-| UTF-8, en cualquier plataforma | Leer los bytes con `SINGLE_BLOB` y guardarlos en una columna `VARCHAR` con _collation_ UTF-8 (SQL Server 2019 o posterior) (verificado para JSON, abajo) |
+| UTF-16 (little endian) | `DATAFILETYPE = 'widechar'` con columnas `NVARCHAR` |
+| UTF-8, en cualquier plataforma | Leer los bytes con `SINGLE_BLOB` y guardarlos en una columna `VARCHAR` con _collation_ UTF-8 (SQL Server 2019 o posterior) (se muestra para JSON, abajo) |
 
 <!-- check: U2.T.IMP.R1 -->
 ```sql
@@ -363,7 +363,7 @@ WITH (
 ```
 
 :::note[CODEPAGE en SQL Server sobre Linux]
-`CODEPAGE = '65001'` es la forma habitual en Windows, pero no se pudo comprobar en el entorno de pruebas de esta materia: SQL Server 2022 sobre Linux rechaza la opción con el error 16202 (`Keyword or statement option 'CODEPAGE' is not supported on the 'Linux' platform`), y la documentación de Microsoft indica que no es una opción soportada en Linux. Este bloque queda registrado como pendiente de verificación específica en Windows.
+`CODEPAGE = '65001'` es la forma habitual en Windows, pero no funciona en SQL Server para Linux: SQL Server 2022 sobre Linux rechaza la opción con el error 16202 (`Keyword or statement option 'CODEPAGE' is not supported on the 'Linux' platform`), y la documentación de Microsoft indica que no es una opción soportada en Linux. Es una limitación de SQL Server para Linux: en esa plataforma, usá la alternativa de la tabla anterior (leer los bytes con `SINGLE_BLOB` y guardarlos en una columna con _collation_ UTF-8). El bloque anterior **no se probó en un motor**: necesita SQL Server para Windows; comprobalo en tu instalación.
 :::
 
 Un CSV en UTF-16 se carga con `DATAFILETYPE = 'widechar'` en columnas `NVARCHAR`. El archivo `acentos16.csv` tiene este contenido, guardado como UTF-16 con marca de orden de bytes:
@@ -485,7 +485,7 @@ ORDER BY Codigo;
 
 ### JSON con tildes: UTF-8 y UTF-16
 
-Con `producto_acentos.json` guardado en UTF-8, `SINGLE_CLOB` lo leería con la página de códigos equivocada y `Lápiz` quedaría como `LÃ¡piz`. Hay dos soluciones verificadas.
+Con `producto_acentos.json` guardado en UTF-8, `SINGLE_CLOB` lo leería con la página de códigos equivocada y `Lápiz` quedaría como `LÃ¡piz`. Hay dos soluciones, ambas probadas con SQL Server 2022.
 
 **UTF-8:** leer los bytes con `SINGLE_BLOB` y guardarlos en una columna `VARCHAR(MAX)` con _collation_ UTF-8, que interpreta los bytes como UTF-8. Después se pasa a `NVARCHAR` al leerlo con `OPENJSON`.
 
@@ -591,7 +591,7 @@ ORDER BY Codigo;
 | P002 | Lápiz de grafito | 300.00 | 120 |
 | P003 | Resaltador amarillo | 480.25 | NULL |
 
-Un elemento ausente (`Stock` del producto P003) da `NULL`. La instrucción `OPENROWSET(BULK ...)` funciona en el entorno de pruebas sin configuración adicional; no se necesitó habilitar ninguna opción del servidor, solo el permiso de operaciones masivas.
+Un elemento ausente (`Stock` del producto P003) da `NULL`. La instrucción `OPENROWSET(BULK ...)` no requiere habilitar ninguna opción del servidor (se probó con SQL Server 2022); solo el permiso de operaciones masivas.
 
 ## YAML
 
@@ -600,7 +600,7 @@ SQL Server no lee YAML. Se convierte el archivo a JSON con una herramienta exter
 ## Errores frecuentes
 
 :::caution[Errores frecuentes]
-- **Cargar un CSV con comas internas sin `FORMAT = 'CSV'`**: se pierden o se ensucian filas (ver el ejemplo `U2.T.IMP.03`).
+- **Cargar un CSV con comas internas sin `FORMAT = 'CSV'`**: se pierden o se ensucian filas (ver la sección «Campos entrecomillados: FORMAT = 'CSV'»).
 - **Terminador de fila incorrecto**: la última columna llega con un carácter de control o la carga falla.
 - **Codificación equivocada**: tildes corruptas. Comprobá con una consulta por una palabra con tilde.
 - **Cargar sin verificar**: comparar siempre la cantidad de filas del archivo con la de la tabla.

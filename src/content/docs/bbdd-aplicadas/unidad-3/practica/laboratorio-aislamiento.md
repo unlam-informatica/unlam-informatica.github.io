@@ -9,20 +9,20 @@ sidebar:
 
 Este laboratorio recorre los fenómenos de concurrencia y los niveles de aislamiento con **dos ventanas de consulta** (cada ventana es una sesión independiente) y termina con ejercicios de **una sola sesión** sobre locks, versiones de fila y transacciones distribuidas. Presupone la teoría de [Concurrencia, bloqueos y transacciones distribuidas](/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/) y de [Control de transacciones (TCL)](/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/). Para un escenario con tarjeta de crédito, ver el [laboratorio TCL](/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/).
 
-:::note[Qué está verificado en motor y qué no]
-El entorno y los ejercicios 13 a 15, 17, 18 y 20 son de una sola sesión y se ejecutaron en SQL Server 2022: su resultado esperado es el real. Los laboratorios 1 a 5 y los ejercicios 24 y 25 requieren **dos sesiones** y no se ejecutan en la verificación automática: lo que se indica como resultado de cada sesión es lo que garantiza la documentación de SQL Server, y quedan registrados como pendientes de verificación específica.
+:::note[Qué ejemplos podés reproducir tal cual]
+El entorno y los ejercicios 13 a 15, 17, 18 y 20 son de una sola sesión: se reproducen en una base de práctica y sus resultados se obtuvieron con SQL Server 2022. Los laboratorios 1 a 5 y los ejercicios 24 y 25 requieren **dos sesiones** y se presentan como guion paso a paso. **No se probaron en un motor**: lo que se indica como resultado de cada sesión es el comportamiento que describe la documentación de SQL Server; comprobalo en tu instalación.
 :::
 
 ## Cómo trabajar
 
-1. Abrí **dos ventanas de consulta** conectadas a la misma base de pruebas (por ejemplo, una base nueva llamada `LabTransacciones`). Una es la sesión A y la otra, la sesión B.
-2. Cada guion indica en qué sesión se ejecuta cada bloque. Cuando la sesión A tiene un `WAITFOR DELAY`, ejecutá la sesión B **durante** esa espera.
-3. Al final de cada laboratorio hay una **limpieza** o el estado se restablece solo. Si dudás del estado, volvé a ejecutar el entorno.
+1. Creá una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) (por ejemplo, `CREATE DATABASE LabTransacciones;`; si no tenés el permiso `CREATE DATABASE`, pedí una). Abrí **dos ventanas de consulta** (pestañas en SSMS o en VS Code) conectadas al mismo servidor y en **ambas** ejecutá `USE LabTransacciones;`. Una ventana es la sesión A y la otra, la sesión B. Son conexiones independientes: lo que una deja sin confirmar lo ve la otra solo a través de los locks.
+2. Ejecutá primero el script de la sección [Entorno](#entorno), en cualquiera de las dos ventanas. Después, cada guion indica en qué sesión se ejecuta cada bloque y cuál va primero. Cuando un bloque tiene un `WAITFOR DELAY`, ejecutá el bloque de la otra sesión **durante** esa espera: conviene dejar el bloque de la otra ventana ya escrito y ejecutarlo apenas arranca el primero.
+3. Al final de cada laboratorio hay una **limpieza** o el estado se restablece solo. Si dudás del estado, volvé a ejecutar el script del Entorno.
 4. Cerrá las transacciones abiertas antes de pasar al siguiente laboratorio: una sesión con una transacción abierta mantiene sus locks.
 
 ## Entorno
 
-Crea el esquema `banco` con las tablas `Cuenta` y `Movimiento` y deja la base sin `SNAPSHOT` ni RCSI. Los dos `ALTER DATABASE` esperan a que no haya otras conexiones con transacciones activas en la base; con `WITH ROLLBACK IMMEDIATE` se desconecta a las demás (por ejemplo, una ventana olvidada con una transacción abierta). Es también el script de **reinicio** de datos.
+Este script se ejecuta en una sola ventana. Crea el esquema `banco` con las tablas `Cuenta` y `Movimiento` y deja la base sin `SNAPSHOT` ni RCSI. Los dos `ALTER DATABASE` esperan a que no haya otras conexiones con transacciones activas en la base; con `WITH ROLLBACK IMMEDIATE` se desconecta a las demás (por ejemplo, una ventana olvidada con una transacción abierta). Es también el script de **reinicio**: volvé a ejecutarlo para restablecer los datos.
 
 <!-- check: U3.T.CC.09 -->
 ```sql
@@ -100,7 +100,7 @@ SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 SELECT CuentaId, Saldo FROM banco.Cuenta WHERE CuentaId = 1;
 ```
 
-**Resultado esperado** (según la documentación; no verificado en esta edición):
+**Resultado esperado** (según la documentación; no se probó en un motor):
 
 | Consulta de B | Resultado |
 |---|---|
@@ -135,7 +135,7 @@ UPDATE banco.Cuenta SET Saldo = 1111 WHERE CuentaId = 1;   -- autocommit
 
 **Sesión B, segunda corrida**: el mismo bloque con `SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;` en la primera línea (antes, restablecé el saldo con `UPDATE banco.Cuenta SET Saldo = 5000 WHERE CuentaId = 1;`). La sesión A ejecuta de nuevo su `UPDATE` durante la espera.
 
-**Resultado esperado** (según la documentación; no verificado en esta edición):
+**Resultado esperado** (según la documentación; no se probó en un motor):
 
 | Corrida de B | `PrimeraLectura` | `SegundaLectura` | Sesión A |
 |---|---:|---:|---|
@@ -175,7 +175,7 @@ INSERT INTO banco.Cuenta (CuentaId, Titular, Saldo) VALUES (4, 'Cliente 04', 250
 DELETE FROM banco.Cuenta WHERE CuentaId = 4;
 ```
 
-**Resultado esperado** (según la documentación; no verificado en esta edición):
+**Resultado esperado** (según la documentación; no se probó en un motor):
 
 | Nivel de B | `PrimeraCuenta` | `SegundaCuenta` | Sesión A |
 |---|---:|---:|---|
@@ -220,7 +220,7 @@ COMMIT TRANSACTION;
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 ```
 
-**Resultado esperado** (según la documentación; no verificado en esta edición):
+**Resultado esperado** (según la documentación; no se probó en un motor):
 
 | Consulta de B | Resultado |
 |---|---|
@@ -270,7 +270,7 @@ SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 UPDATE banco.Cuenta SET Saldo = Saldo + 500 WHERE CuentaId = 2;   -- autocommit: confirma ya
 ```
 
-**Resultado esperado** (según la documentación; no verificado en esta edición):
+**Resultado esperado** (según la documentación; no se probó en un motor):
 
 | Sesión | Resultado |
 |---|---|
@@ -313,7 +313,7 @@ ROLLBACK TRANSACTION;
 SELECT CuentaId, Saldo FROM banco.Cuenta WHERE CuentaId = 3;
 ```
 
-**Resultado esperado** (según la documentación; no verificado en esta edición):
+**Resultado esperado** (según la documentación; no se probó en un motor):
 
 | Consulta de B | Resultado |
 |---|---|
@@ -342,7 +342,7 @@ FROM sys.databases WHERE database_id = DB_ID();
 
 ## Ejercicios
 
-Los ejercicios 11 a 20 se resuelven en **una sola sesión** (o con razonamiento). Ejecutá cada uno sobre el entorno recién creado.
+Los ejercicios 11 a 20 se resuelven en **una sola sesión** (o con razonamiento). Ejecutá cada uno en la base de práctica, con los datos que deja el script del [Entorno](#entorno) recién ejecutado.
 
 ### Nivel inicial
 
@@ -620,7 +620,7 @@ SELECT Orden, Momento, Valor FROM @Observacion ORDER BY Orden;
 | 1 | @@TRANCOUNT tras BEGIN DISTRIBUTED | 1 |
 | 2 | COMMIT | confirmada |
 
-Esto comprueba la sintaxis y el manejo de `@@TRANCOUNT`, no la **participación remota**: la coordinación con otras instancias exige un servidor vinculado y MS DTC configurado entre equipos, algo que este ejercicio no ejecuta (ver el ejemplo de la teoría, pendiente de verificación específica).
+Esto comprueba la sintaxis y el manejo de `@@TRANCOUNT`, no la **participación remota**: la coordinación con otras instancias exige un servidor vinculado y MS DTC configurado entre equipos, algo que este ejercicio no ejecuta (el ejemplo de la teoría tampoco se probó en un motor: necesita esa infraestructura).
 </details>
 
 ### Nivel avanzado
@@ -779,7 +779,7 @@ COMMIT TRANSACTION;
 SELECT CuentaId, Saldo FROM banco.Cuenta WHERE CuentaId IN (1, 2) ORDER BY CuentaId;
 ```
 
-**Resultado esperado** (según la documentación; no verificado en esta edición):
+**Resultado esperado** (según la documentación; no se probó en un motor):
 
 | Sesión | Resultado |
 |---|---|

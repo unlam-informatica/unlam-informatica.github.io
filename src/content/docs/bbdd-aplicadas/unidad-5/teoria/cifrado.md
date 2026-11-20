@@ -16,8 +16,8 @@ El cifrado reduce el valor de los datos robados, pero desplaza el problema hacia
 
 Se puede cifrar desde un campo de una tabla hasta toda la base de datos.
 
-:::note[Qué se verificó]
-Los ejemplos se ejecutaron en SQL Server 2022 (Developer) sobre Linux. El **cifrado de columnas** y la **jerarquía de claves** están verificados. De TDE se verificó la creación de la clave maestra, el certificado y la clave de cifrado de la base; **activar** el cifrado, respaldar el certificado y cifrar un respaldo quedan como pendientes de verificación específica (ver los motivos en cada caso).
+:::note[Qué ejemplos podés reproducir tal cual]
+Los resultados se obtuvieron con SQL Server 2022 (Developer) sobre Linux. Los ejemplos de **cifrado de columnas** y de **jerarquía de claves** se reproducen en una base de práctica. De TDE se probó la creación de la clave maestra, el certificado y la clave de cifrado de la base. **No se probaron en un motor** tres pasos, porque tienen efectos que conviene asumir solo en una instancia de laboratorio: respaldar el certificado (escribe archivos en disco), **activar** el cifrado (cifra también `tempdb`, que queda cifrada hasta reiniciar el servicio) y cifrar un respaldo (escribe un `.bak` y requiere el certificado en `master`). Para esos pasos, el comportamiento descrito es el que indica la documentación de Microsoft; comprobalo en tu instalación.
 :::
 
 ## Modelo de amenazas
@@ -145,7 +145,7 @@ Con la clave cerrada:
 | 1 | NULL |
 | 2 | NULL |
 
-Hay que **abrir** la clave en la sesión para cifrar y descifrar, y cerrarla al terminar. Quien no tenga permiso sobre el certificado no puede abrirla. Rotar la clave se practica en el [ejercicio U5.12](#ejercicio-12--rotación-de-una-clave-simétrica).
+Hay que **abrir** la clave en la sesión para cifrar y descifrar, y cerrarla al terminar. Quien no tenga permiso sobre el certificado no puede abrirla. Rotar la clave se practica en el [ejercicio 12](#ejercicio-12--rotación-de-una-clave-simétrica).
 
 ## TDE: cifrado transparente de la base
 
@@ -161,7 +161,7 @@ flowchart TB
     DEK --> B[Respaldos de la base]
 ```
 
-La jerarquía hasta la clave de cifrado de la base se verificó (sin activar el cifrado: ver más abajo). Se crea y se elimina todo en el verificador, porque la clave maestra y el certificado viven en `master`:
+La jerarquía hasta la clave de cifrado de la base se probó en un motor (sin activar el cifrado: ver más abajo). La clave maestra y el certificado viven en `master`, por lo que crearlos requiere permisos de administración sobre la instancia; en la base elegida (`Ventas` es la base de práctica del ejemplo) solo se crea la clave de cifrado. Al terminar podés eliminar la clave y el certificado de práctica:
 
 <!-- check: U5.T.CIF.03 -->
 ```sql
@@ -189,7 +189,8 @@ WHERE database_id = DB_ID();
 
 `encryption_state = 1` significa "sin cifrar"; `3` significa "cifrada". El estado 2 es un cifrado en curso.
 
-**Respaldar el certificado y su clave privada es obligatorio** (sin ellos no se puede restaurar la base en otra instancia). Ese paso escribe archivos, por lo que queda pendiente de verificación específica:
+**Respaldar el certificado y su clave privada es obligatorio** (sin ellos no se puede restaurar la base en otra instancia). Ese paso escribe archivos y no se probó en un motor: necesita una carpeta donde la cuenta del servicio pueda escribir (en Linux, por ejemplo `/var/opt/mssql/backup/` en lugar de `E:\Claves\`).
+
 
 <!-- check: U5.T.CIF.R2 -->
 ```sql
@@ -201,7 +202,7 @@ WITH PRIVATE KEY (
 );
 ```
 
-Esos archivos y sus contraseñas se guardan **separados** de los respaldos que protegen. Después de eso se activa el cifrado. Se ejecuta en una instancia de laboratorio: el motor cifra también `tempdb`, y según la documentación de Microsoft esa base queda cifrada hasta reiniciar el servicio, así que no se corrió en el verificador compartido.
+Esos archivos y sus contraseñas se guardan **separados** de los respaldos que protegen. Después de eso se activa el cifrado. Ejecutalo solo en una instancia de laboratorio: el motor cifra también `tempdb`, y según la documentación de Microsoft esa base queda cifrada hasta reiniciar el servicio. Por eso este paso no se probó en un motor.
 
 <!-- check: U5.T.CIF.R1 -->
 ```sql
@@ -222,7 +223,7 @@ TDE está disponible en la edición Standard desde SQL Server 2019 (antes era so
 
 ## Cifrado de respaldo
 
-Aun sin TDE, un respaldo puede cifrarse con un certificado o una clave asimétrica. El certificado debe existir en `master` (por ejemplo `CertificadoBackup`, creado como en el ejemplo de TDE) y **respaldarse** como se mostró arriba. No se ejecutó porque escribe un archivo `.bak`: queda pendiente.
+Aun sin TDE, un respaldo puede cifrarse con un certificado o una clave asimétrica. El certificado debe existir en `master` (por ejemplo `CertificadoBackup`, creado como en el ejemplo de TDE) y **respaldarse** como se mostró arriba. Este ejemplo no se probó en un motor: escribe un archivo `.bak` y necesita permisos de escritura en la carpeta de destino.
 
 <!-- check: U5.T.CIF.R3 -->
 ```sql

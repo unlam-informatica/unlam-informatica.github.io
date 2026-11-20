@@ -9,8 +9,8 @@ sidebar:
 
 Esta lección cubre cuatro temas del programa 2024: el **principio del mínimo privilegio** y la clasificación de usuarios, la **autenticación y las directivas de contraseñas**, la **estructura de permisos y el DCL**, y la **configuración mediante propietarios y roles**. Se practica en el [laboratorio de seguridad](/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/).
 
-:::note[Qué se verificó]
-Todos los ejemplos se ejecutaron en SQL Server 2022 (16.0.4325, edición Developer) sobre **Linux**. Los pasos que requieren un dominio de Windows o permisos de configuración de la instancia se marcan como no ejecutados.
+:::note[Qué ejemplos podés reproducir tal cual]
+Los resultados se obtuvieron con SQL Server 2022 (16.0.4325, edición Developer) sobre **Linux**. Los pasos que requieren un dominio de Windows o permisos de configuración de la instancia no se probaron en un motor, y cada uno lo indica.
 :::
 
 ## Para qué sirve
@@ -61,7 +61,7 @@ El flujo recomendado es **persona o aplicación → login → usuario → rol fu
 
 - **Entidades de seguridad (principals)**: individuos, grupos y procesos que pueden solicitar recursos. Existen a nivel de Windows, de servidor (logins, roles de servidor) y de base de datos (usuarios, roles de base).
 - **Elementos protegibles (securables)**: el servidor, las bases, los esquemas y los objetos que contienen. Cada uno tiene su conjunto de permisos.
-- **`sa`**: el login de administración con rol `sysadmin`. Puede deshabilitarse (`ALTER LOGIN sa DISABLE;`), y se recomienda hacerlo cuando hay otras cuentas administrativas nominales. Esa sentencia no se ejecuta en el verificador porque afectaría a la instancia compartida.
+- **`sa`**: el login de administración con rol `sysadmin`. Puede deshabilitarse (`ALTER LOGIN sa DISABLE;`), y se recomienda hacerlo cuando hay otras cuentas administrativas nominales. Deshabilitar `sa` afecta a toda la instancia (y a cualquier aplicación que lo use), por eso conviene probarlo solo en una instancia propia de laboratorio. Esa sentencia no se probó en un motor.
 
 ## Autenticación
 
@@ -77,7 +77,7 @@ La **autenticación** responde "¿quién sos?" y la **autorización**, "¿qué p
 SELECT SERVERPROPERTY('IsIntegratedSecurityOnly') AS SoloWindows;
 ```
 
-**Resultado esperado.** La instancia de verificación está en modo mixto.
+**Resultado esperado.** En la instancia con que se obtuvo este resultado, configurada en modo mixto, la consulta devuelve `0`. En tu instalación puede devolver `1` si elegiste autenticación de Windows al instalar.
 
 | SoloWindows |
 |---|
@@ -96,7 +96,7 @@ Para los logins de SQL Server, la cátedra enumera estas reglas:
 - Si la autenticación se apoya en el sistema operativo, rigen las directivas de ese sistema.
 - Con ODBC hay que tener cuidado con los caracteres especiales de la contraseña dentro de la cadena de conexión.
 
-Se probaron en el motor (todos los logins de lo que sigue se eliminan al final):
+Estos ejemplos se probaron en un motor. Crean logins de práctica (necesitás el permiso `ALTER ANY LOGIN`, que tiene un `sysadmin`) y conviene eliminarlos al terminar con `DROP LOGIN`:
 
 <!-- check: U5.T.SEG.01 -->
 ```sql
@@ -172,9 +172,9 @@ SELECT name, is_disabled FROM sys.sql_logins WHERE name = 'LoginU5T01Def';
 | LoginU5T01Def | 1 |
 
 :::caution[Qué depende del sistema operativo]
-En la instancia de verificación (Linux) el **largo mínimo y la complejidad los aplica el propio motor**: los errores 33062 y 33064 se obtuvieron sin dominio. `LOGINPROPERTY(..., 'DaysUntilExpiration')` devolvió **90** para un login con vencimiento.
+En SQL Server 2022 sobre Linux, sin dominio de Windows, el **largo mínimo y la complejidad los aplica el propio motor**: los errores 33062 y 33064 se obtuvieron sin dominio. `LOGINPROPERTY(..., 'DaysUntilExpiration')` devolvió **90** para un login con vencimiento.
 
-No se verificó el **bloqueo por intentos fallidos** ni el historial de contraseñas, que en Windows provienen de la directiva del sistema operativo; en Linux no hay que darlos por supuestos. En un login de Windows las contraseñas las gobierna el dominio, no `CHECK_POLICY`.
+No se probó el **bloqueo por intentos fallidos** ni el historial de contraseñas, que en Windows provienen de la directiva del sistema operativo; en Linux no hay que darlos por supuestos. En un login de Windows las contraseñas las gobierna el dominio, no `CHECK_POLICY`.
 :::
 
 ### Formas de crear usuarios
@@ -223,7 +223,7 @@ ORDER BY name;
 | UsuarioLogin | SQL_USER | INSTANCE |
 | UsuarioSinLogin | SQL_USER | NONE |
 
-Las formas 1, 3 y 4 no se pueden ejecutar en el verificador: la primera necesita un dominio de Windows (sin Active Directory el motor responde el error 15401) y las contenidas requieren `CONTAINMENT = PARTIAL` y activar `contained database authentication` con `sp_configure`, que modifica la instancia compartida. Son pendientes de verificación específica.
+Las formas 1, 3 y 4 no se probaron en un motor porque tienen requisitos de entorno: la primera necesita un dominio de Windows (sin Active Directory el motor responde el error 15401) y las contenidas requieren `CONTAINMENT = PARTIAL` y activar `contained database authentication` con `sp_configure`, que modifica la configuración de toda la instancia (hacelo solo en una instancia de laboratorio). Para esas formas, el comportamiento descrito es el que indica la documentación de Microsoft; comprobalo en tu instalación.
 
 <!-- check: U5.T.SEG.R1 -->
 ```sql
@@ -281,7 +281,7 @@ GRANT CONTROL ON DATABASE::Ventas       TO usr_aza;
 Si los objetos que necesitan los mismos permisos viven en el mismo esquema, un único `GRANT` sobre el esquema los cubre, incluidos los futuros. A cambio, hay que gobernar quién crea objetos dentro de él.
 :::
 
-También se puede conceder sobre **columnas**: `GRANT SELECT (ClienteId, Nombre) ON OBJECT::ventas.Cliente TO ...`. Se trabaja en el [ejercicio U5.04](/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/#ejercicio-4--permisos-de-columna).
+También se puede conceder sobre **columnas**: `GRANT SELECT (ClienteId, Nombre) ON OBJECT::ventas.Cliente TO ...`. Se trabaja en el [ejercicio 4 del laboratorio de seguridad](/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/#ejercicio-4--permisos-de-columna).
 
 ### Precedencia: `DENY`, `GRANT` y `REVOKE`
 
@@ -300,7 +300,7 @@ flowchart LR
     G3 --> E
 ```
 
-Se verificó una secuencia con un rol `rol_ventas` y su miembro `usr_ana`, y tablas `ventas.Cliente` y `ventas.Pedido`:
+Lo probamos con una secuencia que usa un rol `rol_ventas` y su miembro `usr_ana`, y tablas `ventas.Cliente` y `ventas.Pedido`:
 
 <!-- check: U5.T.SEG.04 -->
 ```sql
@@ -408,7 +408,7 @@ Son fijos y no se pueden modificar. Su ámbito es toda la instancia, y los miemb
 | `bulkadmin` | Ejecuta `BULK INSERT` |
 | `public` | Todos los logins; solo permisos mínimos (`VIEW ANY DATABASE`, `CONNECT`) |
 
-Desde SQL Server 2012 se pueden crear **roles de servidor definidos por el usuario**, y SQL Server 2022 agrega roles fijos con nombre `##MS_...##` de privilegios granulares (por ejemplo, para leer el estado del servidor sin ser administrador). Se consultaron en el motor:
+Desde SQL Server 2012 se pueden crear **roles de servidor definidos por el usuario**, y SQL Server 2022 agrega roles fijos con nombre `##MS_...##` de privilegios granulares (por ejemplo, para leer el estado del servidor sin ser administrador). Se consultaron en SQL Server 2022:
 
 <!-- check: U5.T.SEG.07 -->
 ```sql
@@ -433,7 +433,7 @@ ORDER BY name;
 | \#\#MS_ServerStateManager\#\# |
 | \#\#MS_ServerStateReader\#\# |
 
-Un rol de servidor propio con un permiso granular (el `GRANT` de servidor se ejecuta en `master`; el verificador lo borra después):
+Un rol de servidor propio con un permiso granular (el `GRANT` de servidor se ejecuta en `master` y requiere permisos de administración; al terminar, borrá el rol con `DROP SERVER ROLE RolServidorU5T07;`):
 
 <!-- check: U5.T.SEG.07 -->
 ```sql
@@ -482,7 +482,7 @@ Evitá que los propietarios sean cuentas personales que puedan desaparecer.
 
 Cuando una vista o un procedimiento accede a otro objeto con el **mismo propietario**, SQL Server **no vuelve a comprobar** los permisos sobre el objeto subyacente: basta con tener permiso sobre la vista o el procedimiento. Así se evita que los usuarios interactúen directamente con las tablas.
 
-La cadena se rompe si cambia el propietario o si el acceso se hace con **SQL dinámico**. Se verificó con un esquema `tesoreria` de otro propietario:
+La cadena se rompe si cambia el propietario o si el acceso se hace con **SQL dinámico**. Lo probamos con un esquema `tesoreria` de otro propietario:
 
 <!-- check: U5.T.SEG.08 -->
 ```sql

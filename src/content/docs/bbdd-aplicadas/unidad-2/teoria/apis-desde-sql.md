@@ -151,7 +151,7 @@ WHERE name = 'Ole Automation Procedures';
 |---|---:|---:|
 | Ole Automation Procedures | 0 | 15281 |
 
-Habilitar la opción requiere permiso de administrador y deja `show advanced options` activada. Este bloque no se ejecuta en el entorno de pruebas porque modifica la configuración de la instancia:
+Habilitar la opción requiere permiso de administrador y deja `show advanced options` activada. Este bloque no se probó en un motor porque modifica la configuración de la instancia; para ejecutarlo necesitás ser administrador (`sysadmin`) de una instancia propia:
 
 <!-- check: U2.T.API.R1 -->
 ```sql
@@ -245,8 +245,8 @@ EXEC sys.sp_OAMethod @Objeto, 'send', NULL, @Cuerpo;
 Los parámetros de la URL no pueden llevar espacios ni caracteres como `|`, `&` o `?` sin codificar: se escriben en _porcentaje_ (`%20` para el espacio, `%7C` para `|`). T-SQL no tiene una función para codificar URL; una frase con espacios en la URL puede ser rechazada por el objeto HTTP.
 :::
 
-:::note[Estado de la verificación]
-Los bloques de llamadas HTTP con Ole Automation están **pendientes de verificación específica**: requieren red externa, habilitar la opción en una instancia de SQL Server para Windows (los objetos COM no existen en la edición para Linux del entorno de pruebas) y servicios que pueden cambiar o dejar de existir. Lo que sí se verificó en el motor es el procesamiento de la respuesta.
+:::note[Qué ejemplos podés reproducir tal cual]
+Los bloques de llamadas HTTP con Ole Automation **no se probaron en un motor**: requieren acceso a internet, habilitar la opción en una instancia de SQL Server para Windows (los objetos COM no existen en SQL Server para Linux) y servicios externos que pueden cambiar o dejar de existir. El comportamiento que se describe es el que documenta Microsoft; comprobalo en tu instalación. El procesamiento de la respuesta (JSON ya guardado en una variable) sí se ejecutó con SQL Server 2022 y lo podés reproducir sin red.
 :::
 
 ## Alternativas
@@ -266,7 +266,7 @@ EXEC @Codigo = sys.sp_invoke_external_rest_endpoint
 SELECT @Codigo AS Codigo, JSON_VALUE(@Respuesta, '$.response.status.http.code') AS CodigoHttp;
 ```
 
-Este bloque queda pendiente de verificación: requiere SQL Server 2025 o Azure SQL y un servicio externo.
+Este bloque **no se probó en un motor**: necesita SQL Server 2025 o Azure SQL y un servicio externo accesible desde tu instancia. Comprobalo en tu entorno.
 
 ## Errores frecuentes
 

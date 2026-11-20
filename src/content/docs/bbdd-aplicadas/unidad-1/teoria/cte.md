@@ -7,7 +7,7 @@ sidebar:
 
 Una **common table expression (CTE)** es un resultado con nombre que existe solo durante **una** sentencia. Se declara con `WITH` antes del `SELECT`, `INSERT`, `UPDATE`, `DELETE` o `MERGE` que la usa. Sirve para dar nombre a un paso intermedio, para filtrar por el resultado de una [función de ventana](/bbdd-aplicadas/unidad-1/teoria/window-functions/) y para recorrer jerarquías.
 
-Los ejemplos usan el esquema `ventas` de la página de [window functions](/bbdd-aplicadas/unidad-1/teoria/window-functions/#esquema-de-ejemplo). Se ejecutan sobre una base vacía donde ya se creó ese esquema.
+Los ejemplos usan el esquema `ventas` de la página de [window functions](/bbdd-aplicadas/unidad-1/teoria/window-functions/#esquema-de-ejemplo). Para ejecutarlos, primero creá ese esquema y cargá sus datos con el bloque de esa sección, en una base de práctica.
 
 <!-- sintaxis -->
 ```sql
@@ -239,7 +239,7 @@ Primer resultado (`VentaCarga`, quedó una copia por venta):
 | 3 | 3 | 2025-01-15 | 500.00 |
 | 6 | 5 | 2025-01-30 | 200.00 |
 
-Segundo resultado (`Vendedor`, la región Sur con 10 % de aumento):
+Segundo resultado (`Vendedor`, la región Sur con 10 % de aumento). Este bloque **modifica de verdad** los sueldos de la región Sur en `ventas.Vendedor` y crea la tabla `ventas.VentaCarga`: ejecutalo al final, o volvé a crear el esquema `ventas` (eliminá sus tablas y ejecutá de nuevo el bloque de «Esquema de ejemplo») para que los demás ejemplos den los resultados de la página.
 
 | VendedorId | Nombre | Sueldo |
 |---:|---|---:|

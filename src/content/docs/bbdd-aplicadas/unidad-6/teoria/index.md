@@ -12,7 +12,7 @@ Esta unidad estudia dos preguntas sobre los datos: si sirven para el propósito 
 La unidad se apoya en fuentes de distinto carácter:
 
 - **Normas jurídicas (fuentes primarias):** la Ley 25.326 y su Decreto Reglamentario 1558/2001, y el Reglamento (UE) 2016/679 (RGPD).
-- **Estándar técnico:** ISO/IEC 25012, un modelo de calidad de datos. Es una norma paga: el portal usa un resumen público (fuente secundaria) y definiciones propias, y no la presenta como norma jurídica.
+- **Estándar técnico:** ISO/IEC 25012, un modelo de calidad de datos. Es una norma paga: estos apuntes usan un resumen público (fuente secundaria) y definiciones propias, y no la presentan como norma jurídica.
 - **Prácticas recomendadas complementarias:** la medición de la calidad y el gobierno de datos. No figuran en el programa 2024 ni en las fuentes normativas de la unidad.
 
 ## Objetivos de aprendizaje

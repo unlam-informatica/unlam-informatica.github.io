@@ -10,7 +10,7 @@ Seis ejercicios de importación de archivos CSV y JSON con `BULK INSERT` y `OPEN
 
 ## Archivos
 
-Descargá los archivos y copialos en una carpeta del **servidor** de SQL Server (por ejemplo `C:\Importar\`). Los ejemplos usan esa carpeta: si usás otra, reemplazá la ruta. Antes de cada ejercicio, creá una base de prueba (por ejemplo `CREATE DATABASE PracticaImportacion;`) y cambiá a ella.
+Descargá los archivos y copialos en una carpeta del **servidor** de SQL Server (por ejemplo `C:\Importar\`). Los ejemplos usan esa carpeta: si usás otra, reemplazá la ruta. Antes de cada ejercicio, creá una base de práctica (por ejemplo `CREATE DATABASE PracticaImportacion;`; necesitás el permiso `CREATE DATABASE` o una base que te hayan dado, ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)) y cambiá a ella con `USE PracticaImportacion;`. Además, el servicio de SQL Server necesita permiso de lectura sobre la carpeta de los archivos y tu usuario, el permiso de operaciones masivas.
 
 | Archivo | Descripción | Ejercicios |
 |---|---|---|
@@ -21,8 +21,8 @@ Descargá los archivos y copialos en una carpeta del **servidor** de SQL Server 
 | [venta_sucia.csv](/bbdd-aplicadas/unidad-2/practica/archivos/venta_sucia.csv) | Ventas ficticias con errores de datos; fin de línea LF | 5 |
 | [cliente_acentos.json](/bbdd-aplicadas/unidad-2/practica/archivos/cliente_acentos.json) | Clientes ficticios con tildes y un arreglo anidado, en UTF-8 | 6 |
 
-:::note[Verificación]
-Las resoluciones se ejecutaron en SQL Server 2022 sobre Linux, con los archivos en una carpeta del contenedor. La ruta `C:\Importar\...` de los enunciados es un ejemplo: en tu equipo se reemplaza por la propia. Los archivos CRLF se cargan con `ROWTERMINATOR = '0x0d0a'` y los LF con `'0x0a'`.
+:::note[Rutas de los archivos]
+Los resultados se obtuvieron con SQL Server 2022 sobre Linux, con los archivos en una carpeta del servidor. La ruta `C:\Importar\...` de los enunciados es la de Windows: en tu equipo se reemplaza por la carpeta donde copiaste los archivos. En SQL Server para Linux, o en una instancia dentro de un contenedor de Docker, la ruta es la del sistema de archivos de Linux, y los archivos tienen que estar dentro de ese contenedor o ser visibles para él. Los archivos CRLF se cargan con `ROWTERMINATOR = '0x0d0a'` y los LF con `'0x0a'`.
 :::
 
 ---

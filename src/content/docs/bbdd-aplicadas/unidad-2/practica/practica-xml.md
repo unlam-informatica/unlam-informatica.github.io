@@ -10,7 +10,7 @@ Siete ejercicios para generar XML con `FOR XML`, consultarlo con `.nodes()` y `.
 
 ## Conjunto de datos
 
-Creá una base de prueba (por ejemplo `CREATE DATABASE PracticaXml;`), cambiá a ella y ejecutá:
+Creá una base de práctica (por ejemplo `CREATE DATABASE PracticaXml;`; necesitás el permiso `CREATE DATABASE` o una base que te hayan dado, ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)), cambiá a ella con `USE PracticaXml;` y ejecutá este script una sola vez:
 
 <!-- check: U2.29 -->
 ```sql

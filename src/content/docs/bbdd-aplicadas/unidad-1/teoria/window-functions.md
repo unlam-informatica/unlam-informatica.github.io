@@ -79,7 +79,7 @@ SELECT
 |---:|---:|
 | 7 | 16 |
 
-Los ejemplos de esta página se ejecutan en una base vacía, después de crear este esquema. Son para SQL Server 2019 o 2022.
+Ejecutá primero el bloque anterior en una base de práctica (ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)): crea el esquema `ventas` y carga los datos. Los ejemplos que siguen, en esta y en las otras páginas de SQL avanzado, usan esas tablas y no las vuelven a crear. Valen para SQL Server 2019 o 2022; los resultados se obtuvieron con SQL Server 2022.
 
 ## Para qué sirve
 
@@ -359,7 +359,7 @@ ORDER BY Monto, VentaId;
 - **`RANGE` con desplazamiento numérico.** Error 4194.
 :::
 
-Cada caso, ejecutado en una sola corrida con `TRY ... CATCH`:
+Para ver los cinco errores en una sola tabla, el script del recuadro siguiente ejecuta cada consulta defectuosa como texto con `EXEC`, dentro de un `TRY ... CATCH`, y reúne el número y el mensaje de cada error en una tabla temporal. Si ejecutás cada consulta por separado, el error aparece en el panel de mensajes. El idioma de los mensajes depende de la instalación:
 
 | Caso | Número | Mensaje |
 |---:|---:|---|

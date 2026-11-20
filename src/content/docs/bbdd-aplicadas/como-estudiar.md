@@ -65,12 +65,13 @@ Para cada tema de la ruta:
 7. **Avanzá o autoevaluate.** Respondé la autoevaluación de la lección. Si la resolvés sin ayuda,
    pasá al tema siguiente de la ruta; si no, volvé al paso 2 en la sección que falló.
 
-:::tip[Cómo saber qué está comprobado]
-Los ejemplos y resoluciones con código se ejecutaron en SQL Server 2022 o MongoDB 7.0, y el
-resultado esperado que se muestra es el que devolvió el motor. Los experimentos que necesitan dos
-sesiones simultáneas, un clúster o un servidor vinculado se presentan como **guiones paso a paso**
-revisados pero no ejecutados automáticamente: cada página lo aclara. En esos casos, reproducilos
-abriendo las sesiones que indica el guion.
+:::tip[Qué ejemplos podés reproducir tal cual]
+Los resultados esperados de los ejemplos y resoluciones se obtuvieron ejecutándolos en SQL Server
+2022 o MongoDB 7.0. Algunos experimentos necesitan condiciones que no siempre tenés a mano: dos
+sesiones simultáneas, dos instancias conectadas en red, una instancia en Windows o permisos de
+administrador. Esos casos se presentan como **guiones paso a paso** que no se probaron en un motor:
+el resultado que describen es el que indica la documentación oficial, y cada página lo aclara. Al
+reproducirlos, comprobá el comportamiento en tu propia instalación.
 :::
 
 ## Herramientas
@@ -90,6 +91,24 @@ Las diferencias entre ediciones y el proceso de instalación de SQL Server se es
 [Arquitectura e instalación de un motor relacional](/bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/#instalación-de-un-motor).
 La instalación y conexión de MongoDB están en
 [Instalación y conexión de MongoDB](/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb/).
+
+### Antes de ejecutar los ejemplos
+
+- **Base de práctica.** Trabajá siempre en una base creada para practicar, nunca en una con datos
+  reales: `CREATE DATABASE NombreDeLaBase;` la crea y `USE NombreDeLaBase;` hace que las sentencias
+  siguientes se ejecuten en ella. Al terminar podés borrarla con `DROP DATABASE`. Crear una base
+  requiere el permiso `CREATE DATABASE`, que tenés si administrás tu propia instalación (rol
+  `sysadmin`). Si usás una instancia compartida sin ese permiso, pedí una base de práctica y usala con
+  `USE`.
+- **Preparación.** Muchas lecciones y prácticas empiezan con un bloque que crea un esquema, las
+  tablas y los datos que usan los ejemplos siguientes. Ejecutalo primero; cada página indica cuál es
+  y cuándo volver a ejecutarlo.
+- **Dos sesiones.** Los experimentos de concurrencia piden dos sesiones: abrí dos ventanas de
+  consulta (dos pestañas en SSMS o en Visual Studio Code) conectadas a la misma base. Cada ventana es
+  una conexión independiente, y el guion indica en qué ventana va cada paso.
+- **Planes de ejecución.** Para ver cómo resuelve el motor una consulta, usá el plan de ejecución
+  real; la lección [Plan de ejecución y estadísticas](/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/)
+  explica cómo obtenerlo y leerlo.
 
 ### Opcionales
 
@@ -112,8 +131,8 @@ emulación o traducción (Rosetta 2, Prism, QEMU) no están probados ni soportad
 
 Alternativas, sin que ninguna sea obligatoria:
 
-- **Emular la imagen x86-64 con Docker Desktop.** Los ejemplos de este sitio se verificaron así, en
-  un Mac con Apple Silicon. Funciona para estudiar, pero es una configuración sin soporte oficial:
+- **Emular la imagen x86-64 con Docker Desktop.** Los resultados de este sitio se obtuvieron así,
+  en un Mac con Apple Silicon. Funciona para estudiar, pero es una configuración sin soporte oficial:
   puede ser más lenta o comportarse distinto en casos puntuales.
 - **Usar un equipo o una máquina virtual x86-64** (Windows o Linux), propio o del laboratorio de la
   facultad.

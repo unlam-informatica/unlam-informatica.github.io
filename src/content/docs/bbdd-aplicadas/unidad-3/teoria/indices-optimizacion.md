@@ -10,12 +10,12 @@ sidebar:
 Una consulta puede devolver el resultado correcto y aun así leer cien veces más páginas de las necesarias. Los índices y la forma en que escribimos el `WHERE` deciden cuánto trabajo hace el motor para encontrar las filas. Esta página recorre los índices clúster y no clúster, la cobertura, el mantenimiento, la reescritura de consultas y la diferencia entre rowstore y columnstore. Se apoya en [el plan de ejecución y las estadísticas](/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/), que explican cómo decide el optimizador, y en [las métricas de rendimiento](/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento/), que explican cómo medir el efecto.
 
 :::note[Qué presupone esta lección]
-`SELECT`, `JOIN` y restricciones de [Unidad 1](/bbdd-aplicadas/unidad-1/teoria/repaso-sql/), y la arquitectura de páginas de [Unidad 2](/bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/). Todos los ejemplos se ejecutaron en SQL Server 2022.
+`SELECT`, `JOIN` y restricciones de [Unidad 1](/bbdd-aplicadas/unidad-1/teoria/repaso-sql/), y la arquitectura de páginas de [Unidad 2](/bbdd-aplicadas/unidad-2/teoria/bd-transaccionales/). Los resultados que se muestran se obtuvieron con SQL Server 2022, edición Developer; si usás otra versión o edición, las cifras de lecturas y el plan elegido pueden variar un poco.
 :::
 
 ## Datos de ejemplo y cómo medimos
 
-Trabajamos con dos tablas de ventas: 520 clientes y 20.000 pedidos generados con una fórmula fija, de modo que cualquiera obtiene los mismos números. `Estado` tiene tres valores muy desparejos (90 % `Entregado`, 9 % `Pendiente`, 1 % `Anulado`) y `Codigo` es único por pedido.
+Trabajamos con dos tablas de ventas: 520 clientes y 20.000 pedidos generados con una fórmula fija, de modo que cualquiera obtiene los mismos números. `Estado` tiene tres valores muy desparejos (90 % `Entregado`, 9 % `Pendiente`, 1 % `Anulado`) y `Codigo` es único por pedido. Para reproducir los ejemplos, creá una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) vacía (los `CREATE SCHEMA` fallan si ya existen) y ejecutá en ella, en orden, el script siguiente y después la función y la vista auxiliares que lo siguen; después, cada ejemplo parte de esos datos. Los que modifican tablas indican cómo restablecerlas.
 
 <!-- check: U3.T.IX.00 -->
 ```sql
@@ -65,7 +65,7 @@ FROM n;
 GO
 ```
 
-Para comparar planes usamos dos cosas reproducibles: **los operadores físicos** del plan y **las lecturas lógicas** (la cantidad de páginas que la consulta toca en memoria). Los tiempos y los costos dependen del equipo y no los usamos como evidencia. La función siguiente lee el plan que SQL Server dejó en el caché y devuelve cada operador junto con las lecturas lógicas de la última ejecución de la sentencia. Cada consulta que medimos lleva un comentario marcador (`/*A1*/`) para encontrarla y `OPTION (MAXDOP 1)` para que el plan no dependa de la cantidad de núcleos y la sentencia quede en el caché con su texto original. La técnica (`sys.dm_exec_text_query_plan` y `.nodes()` sobre el XML) se explica en [el plan de ejecución](/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/#extraer-los-operadores-con-t-sql).
+Para comparar planes usamos dos cosas reproducibles: **los operadores físicos** del plan y **las lecturas lógicas** (la cantidad de páginas que la consulta toca en memoria). Los tiempos y los costos dependen del equipo y no los usamos como evidencia. La función siguiente lee el plan que SQL Server dejó en el caché y devuelve cada operador junto con las lecturas lógicas de la última ejecución de la sentencia. Cada consulta que medimos lleva un comentario marcador (`/*A1*/`) para encontrarla y `OPTION (MAXDOP 1)` para que el plan no dependa de la cantidad de núcleos y la sentencia quede en el caché con su texto original. Esta función solo presenta como tabla lo que podés ver por tu cuenta: el plan gráfico en SSMS (**Incluir plan de ejecución real**, `Ctrl+M`, y después ejecutar la consulta) muestra los mismos operadores, y `SET STATISTICS IO ON` informa las lecturas lógicas (ver la nota «Otra forma de ver las lecturas», más abajo). Si todavía no viste cómo obtener un plan, leé antes [Plan estimado y plan real](/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/#plan-estimado-y-plan-real). La técnica (`sys.dm_exec_text_query_plan` y `.nodes()` sobre el XML) se explica en [el plan de ejecución](/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/#extraer-los-operadores-con-t-sql).
 
 <!-- check: U3.T.IX.00 -->
 ```sql
@@ -116,7 +116,7 @@ GO
 ```
 
 :::note[Otra forma de ver las lecturas]
-En SSMS o `sqlcmd` podés usar `SET STATISTICS IO ON` antes de la consulta: el motor agrega a los mensajes una línea por tabla, `Table 'Pedido'. Scan count 1, logical reads 134, ...`. El número de **logical reads** es el mismo que devuelve `LecturasLogicas`. Con `SET STATISTICS XML ON` se obtiene el plan real junto con el resultado. En este material usamos la función porque las demás cifras de esa línea (*physical reads*, *read-ahead reads*) cambian según qué páginas ya estaban en memoria, y las salidas dejarían de ser estables.
+En SSMS o `sqlcmd` podés usar `SET STATISTICS IO ON` antes de la consulta (en SSMS, la salida está en la pestaña **Messages**): el motor agrega a los mensajes una línea por tabla, `Table 'Pedido'. Scan count 1, logical reads 134, ...`. El número de **logical reads** es el mismo que devuelve `LecturasLogicas`. Con `SET STATISTICS XML ON` se obtiene el plan real junto con el resultado. En este material usamos la función porque las demás cifras de esa línea (*physical reads*, *read-ahead reads*) cambian según qué páginas ya estaban en memoria, y las salidas dejarían de ser estables.
 :::
 
 ## Cómo se organiza un índice
@@ -534,7 +534,7 @@ WHERE Tabla = 'EventoMant';
 `REORGANIZE` compactó las páginas y bajó la fragmentación casi a cero sin tocar el fill factor. `REBUILD WITH (FILLFACTOR = 90)` reconstruyó el índice dejando el 10 % libre, de ahí las páginas adicionales.
 
 :::caution[ONLINE no está en todas las ediciones]
-`WITH (ONLINE = ON)` requiere la edición **Enterprise** (o Developer, que es la del contenedor de estos ejemplos) y Azure SQL. En Standard no está disponible, y la reconstrucción sin esa opción bloquea la tabla mientras dura. Antes de programar un `REBUILD` hay que saber cuánto tiempo puede estar fuera de línea la tabla y, si la base usa mirroring, tener en cuenta que la operación genera mucho registro de transacciones.
+`WITH (ONLINE = ON)` requiere la edición **Enterprise** (o Developer, la edición con la que se obtuvieron estos resultados) y Azure SQL. En Standard no está disponible, y la reconstrucción sin esa opción bloquea la tabla mientras dura. Antes de programar un `REBUILD` hay que saber cuánto tiempo puede estar fuera de línea la tabla y, si la base usa mirroring, tener en cuenta que la operación genera mucho registro de transacciones.
 :::
 
 ## Índices filtrados, únicos y no usados
@@ -699,7 +699,7 @@ ORDER BY Parametro DESC;
 | VARCHAR contra VARCHAR | Index Seek | [IX_Pedido_Codigo] | 2 |
 | NVARCHAR contra VARCHAR | Index Scan | [IX_Pedido_Codigo] | 59 |
 
-El parámetro `NVARCHAR` obliga a convertir cada `Codigo` y se recorre el índice (59 lecturas); el parámetro del mismo tipo hace una búsqueda (2). La solución es declarar los parámetros con el tipo de la columna. Con una intercalación de Windows el motor a veces puede resolverlo con una búsqueda, pero con una intercalación SQL como `SQL_Latin1_General_CP1_CI_AS` (la de esta instancia) no, y no conviene depender de eso. En el plan XML la conversión aparece como una advertencia `PlanAffectingConvert`.
+El parámetro `NVARCHAR` obliga a convertir cada `Codigo` y se recorre el índice (59 lecturas); el parámetro del mismo tipo hace una búsqueda (2). La solución es declarar los parámetros con el tipo de la columna. Con una intercalación de Windows el motor a veces puede resolverlo con una búsqueda, pero con una intercalación SQL como `SQL_Latin1_General_CP1_CI_AS` (la de la instancia con la que se obtuvieron estos resultados; la tuya se consulta con `SELECT SERVERPROPERTY('Collation')`) no, y no conviene depender de eso. En el plan XML la conversión aparece como una advertencia `PlanAffectingConvert`.
 
 ### LIKE con comodín inicial
 

@@ -13,9 +13,9 @@ Presupone la lección [BD en memoria](/bbdd-aplicadas/unidad-2/teoria/bd-en-memo
 
 ## Preparación
 
-Cada ejercicio parte de una base vacía a la que se le agrega el filegroup `MEMORY_OPTIMIZED_DATA` y su contenedor. Esta preparación se hace una sola vez por base, y el filegroup no se puede quitar sin descartar la base. La ruta del contenedor se arma junto al archivo de datos, para que funcione tanto en Windows como en Linux; en una instalación propia también se puede usar un directorio nuevo como `C:\SQLData\PracticaMem_mem` (no debe existir: SQL Server lo crea).
+Cada ejercicio parte de una base de práctica (ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)) a la que se le agrega el filegroup `MEMORY_OPTIMIZED_DATA` y su contenedor (en SQL Server, el directorio donde se guardan los archivos del filegroup; no es un contenedor de Docker). Esta preparación se hace una sola vez por base, y el filegroup no se puede quitar sin descartar la base. La ruta del contenedor se arma junto al archivo de datos, para que funcione tanto en Windows como en Linux; en una instalación propia también se puede usar un directorio nuevo como `C:\SQLData\PracticaMem_mem` (no debe existir: SQL Server lo crea).
 
-El ejercicio 41 muestra la preparación completa; en los demás se da por hecha (los scripts de verificación la incluyen).
+El ejercicio 41 muestra la preparación completa; en los demás se da por hecha: antes de cada uno, ejecutá en tu base de práctica la parte de preparación del ejercicio 41 (el filegroup y su archivo).
 
 ### Ejercicio 41 · Preparar la base y crear la primera tabla
 <!-- ejercicio: U2.41 | nivel: inicial | tipo: diagnostico | verificacion: motor -->

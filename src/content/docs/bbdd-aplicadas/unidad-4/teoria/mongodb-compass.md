@@ -10,7 +10,7 @@ sidebar:
 Guía de uso de la interfaz gráfica oficial de MongoDB. Cada operación de la interfaz tiene su equivalente en el shell, que se explica en [CRUD y consultas](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/) y en [Aggregation Pipeline, índices y vistas](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/). La instalación y la conexión a Atlas están en [Instalación y conexión](/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb/).
 
 :::note[Sobre las descripciones de pantalla]
-Esta página describe la interfaz con **texto**, sin capturas. Los nombres de botones y pestañas (en inglés) corresponden a las versiones recientes de Compass y pueden cambiar entre versiones. Lo que se ejecuta en el motor (los filtros, las proyecciones, el índice y el plan) se comprobó con los equivalentes en `mongosh` sobre MongoDB 7.0; la interfaz gráfica en sí no se automatiza y no forma parte de esa verificación.
+Esta página describe la interfaz con **texto**, sin capturas. Los nombres de botones y pestañas (en inglés) corresponden a las versiones recientes de Compass y pueden cambiar entre versiones. Los filtros, las proyecciones, el índice y el plan que se muestran tienen su equivalente en `mongosh`, con resultados obtenidos con MongoDB 7.0; los pasos dentro de la interfaz gráfica, en cambio, no se probaron en cada versión de Compass, así que si un botón o una pestaña no coincide con lo que ves, guiate por la documentación de tu versión.
 :::
 
 ## Para qué sirve
@@ -115,7 +115,7 @@ La barra **Filter** acepta el documento de filtro de `find()`; las otras opcione
 | **Skip**, **Limit** | `.skip()`, `.limit()` |
 | **Collation** | `.collation()` |
 
-Los filtros se escriben tal cual en la barra. Sobre la colección `productos` de [CRUD](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/#datos-de-los-ejemplos):
+Los filtros se escriben tal cual en la barra. Sobre la colección `productos` de [CRUD](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/#datos-de-los-ejemplos) (cargala antes en tu base de práctica; el ejemplo de la tilde usa también `clientes`, del script de [Aggregation Pipeline](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/#datos-de-los-ejemplos)):
 
 ```text
 { categoria: "audio" }
@@ -132,7 +132,7 @@ db.productos.find({ categoria: "perifericos" }, { _id: 0, nombre: 1, precio: 1 }
 // { nombre: 'Teclado', precio: 45 }  (el segundo por nombre: Mouse, Teclado, Webcam)
 ```
 
-Los valores de texto **distinguen mayúsculas y tildes**: `{ localidad: "Ramos Mejia" }` (sin tilde) no devuelve los documentos que tienen `"Ramos Mejía"`, y no se informa ningún error. En `U4.T.CRUD.08`, la consulta sin tilde cuenta 0 y la correcta cuenta 2.
+Los valores de texto **distinguen mayúsculas y tildes**: `{ localidad: "Ramos Mejia" }` (sin tilde) no devuelve los documentos que tienen `"Ramos Mejía"`, y no se informa ningún error. Con los datos de ejemplo, la consulta sin tilde cuenta 0 y la correcta cuenta 2.
 
 ### Collation
 

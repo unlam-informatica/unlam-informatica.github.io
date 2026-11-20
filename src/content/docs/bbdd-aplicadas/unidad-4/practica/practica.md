@@ -8,10 +8,10 @@ sidebar:
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)
 
-Ejercicios de práctica sobre las ventas de una cadena ficticia de ferreterías. Se trabajan operaciones CRUD (con `upsert` y `bulkWrite`), filtros con operadores de arrays y de fechas, proyección y orden, índices con `explain`, agregación (`$group`, `$unwind`, `$lookup`, `$facet`, `$bucket`) y vistas. Todos los ejercicios están resueltos y verificados con MongoDB 7.0.
+Ejercicios de práctica sobre las ventas de una cadena ficticia de ferreterías. Se trabajan operaciones CRUD (con `upsert` y `bulkWrite`), filtros con operadores de arrays y de fechas, proyección y orden, índices con `explain`, agregación (`$group`, `$unwind`, `$lookup`, `$facet`, `$bucket`) y vistas. Todos los ejercicios están resueltos y sus resultados esperados se obtuvieron con MongoDB 7.0.
 
-:::note[Qué cambió en esta práctica]
-La versión anterior mezclaba consignas con conjuntos de datos de distinto origen (estrellas, un ejemplo público de alquileres, transacciones con tarjetas y un archivo de ventas coincidente con una guía de cátedra) y con descargas externas. Se reemplazó por ejercicios originales sobre un conjunto de datos propio y publicado, con resolución y resultado esperado. Quedaron resueltos estos defectos: la consulta con `$not` que no filtraba, el ejercicio que reinsertaba documentos ya cargados y la vista creada con un nombre y consultada con otro. Los ejercicios de importación desde Compass, de las colecciones de clima y de tarjetas se retiraron porque dependían de descargas externas o de datos de procedencia no documentada.
+:::note[Material propio]
+Los datos y los ejercicios son propios de estos apuntes, no de la cátedra, y los datos están publicados en este sitio: no hace falta descargar nada de fuentes externas. Cada ejercicio trae su resolución y el resultado esperado.
 :::
 
 ## Antes de empezar
@@ -34,7 +34,7 @@ El campo `total` es el importe bruto de la venta: suma `cantidad * precioUnitari
 
 ### Preparación
 
-Ejecutá este script en `mongosh`, conectado a una base vacía (por ejemplo, `use ferreteria`). Cambiá `dir` por la carpeta donde guardaste los archivos. Cada ejercicio parte de esta carga; si uno modifica datos, volvé a cargar una base vacía antes del siguiente (`db.dropDatabase()` y este script).
+Ejecutá este script en `mongosh`, conectado a una base de práctica vacía (por ejemplo, `use ferreteria`; se crea al insertar). Cambiá `dir` por la carpeta donde guardaste los archivos (en macOS o Linux, algo como `/home/usuario/datos/ventas`; en Windows, con barras normales, como `C:/datos/ventas`). Si usás el shell integrado de Compass, que puede no permitir leer archivos del disco, importá cada JSON con **ADD DATA → Import JSON or CSV file** en una colección con el mismo nombre del archivo. Cada ejercicio parte de esta carga; si uno modifica datos, volvé a cargar una base vacía antes del siguiente (`db.dropDatabase()` y este script).
 
 <!-- check: U4.PR.VENTAS -->
 ```javascript

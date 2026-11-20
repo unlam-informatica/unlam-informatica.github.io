@@ -353,7 +353,7 @@ VALUES (1001, 1, '2026-03-02', 3000.00),
 GO
 ```
 
-Cada bloque de esta sección usa ese juego de datos y se ejecuta justo después de él. Por defecto, las columnas `NULL` se omiten del resultado.
+El bloque anterior crea y carga las tablas: ejecutalo primero, en una base de práctica (ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)). Cada bloque siguiente de esta sección usa esas tablas y no las vuelve a crear. Por defecto, las columnas `NULL` se omiten del resultado.
 
 <!-- check: U2.T.JSON.09 -->
 ```sql

@@ -7,10 +7,10 @@ sidebar:
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)
 
-Práctica integradora sobre un videoclub ficticio: documentos embebidos, arrays, campos ausentes y nulos, conversión de fechas, CRUD, uniones con `$lookup`, controles de integridad, índices y vistas. Los datos y las resoluciones son propios y están verificados con MongoDB 7.0.
+Práctica integradora sobre un videoclub ficticio: documentos embebidos, arrays, campos ausentes y nulos, conversión de fechas, CRUD, uniones con `$lookup`, controles de integridad, índices y vistas. Los datos y las resoluciones son propios, y los resultados esperados se obtuvieron con MongoDB 7.0.
 
 :::note[Material propio]
-Es una práctica elaborada por este portal, no de la cátedra. Reemplaza a la versión anterior, que usaba archivos que no estaban publicados.
+Es una práctica propia de estos apuntes, no de la cátedra: los datos están publicados en este sitio y no hace falta descargar nada de fuentes externas.
 :::
 
 ## Antes de empezar
@@ -35,7 +35,7 @@ Los datos incluyen a propósito tres irregularidades que los ejercicios descubre
 
 ### Preparación
 
-Cargá una base vacía (por ejemplo, `use videoclub`) con este script, cambiando `dir` por tu carpeta. Cada ejercicio parte de una carga limpia: antes de uno que modifique datos, ejecutá `db.dropDatabase()` y volvé a cargar.
+Trabajá en una base de práctica vacía (por ejemplo, `use videoclub` en `mongosh`; se crea al insertar). El script carga los tres archivos JSON que descargaste: cambiá `dir` por tu carpeta (en macOS o Linux, algo como `/home/usuario/datos/videoclub`; en Windows, con barras normales, como `C:/datos/videoclub`). Si usás el shell integrado de Compass, que puede no permitir leer archivos del disco, importá cada JSON con **ADD DATA → Import JSON or CSV file** en una colección con el mismo nombre del archivo. Cada ejercicio parte de una carga limpia: antes de uno que modifique datos, ejecutá `db.dropDatabase()` y volvé a cargar.
 
 <!-- check: U4.PR.VIDEOCLUB -->
 ```javascript

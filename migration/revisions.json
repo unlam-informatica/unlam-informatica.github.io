@@ -1880,6 +1880,564 @@
       "stage": "E10",
       "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
       "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/index.md",
+      "from": "9f6546b724581b9dd7f23cac0d571079edb281d7a4090d312234c87034f2534b",
+      "to": "588032902efa75ad4b544cb6fbf738fe02a458e331ed3f6ebd3a75451986eaa4",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/pivot.md",
+      "from": "7f1431b0455e654ddec1948a61224753ca37d754cf39e5fe41aeb4f0c30369cb",
+      "to": "8ec72a2d388c8b4d251a8bed6aa42869243be56f1b9403466197e336ca4d8ddc",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/tp1.md",
+      "from": "e9d050610f5dd5744a90f5b9d2a15972374816318f39f6d6f317d9d673fd8b72",
+      "to": "a5b1c6e0a80ab3151a627e14c9dc50e20320d24dbc9d63e89690751b7e470b15",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/window-functions.md",
+      "from": "9e324d24a95c74dd139aa5999f4b5dcc6020bd765cb9d1c305c23fd8be88c3b1",
+      "to": "fd244c2a767d336e05d19cedc9ef04c03fc53b8ef5ddbf3c25647e5075117eeb",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/cte.md",
+      "from": "ce1530dd8335b84cc68fc013861f7dbd2591201efee6773c4dfefc53534271c1",
+      "to": "5d5bf9f6b2cfce508e1d6f954cd0fd238674fde4d7cefaf4327e2d9d60fa79d2",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/pivot.md",
+      "from": "e3b608d54d9ae3297032b427f2b4d6434448cb7428145c7ab0a28846e8149f63",
+      "to": "56fcd96c8f07e65e2c6264f18f94e770828c74014a99e0a17b50fd21fdf05732",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/repaso-sql.md",
+      "from": "5c5627003c7899097c15138e4e8c9d178af566d04965024a03ea758bceb9feb6",
+      "to": "b857a1881c5a7b9c70300e6685b2c16c0fc5fbf304df67e4e378f838bf9ba09e",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/sql-dinamico.md",
+      "from": "441b73577baefb781399cf381a48d12ebd7e24c38fd8630fcdb6b97c25ce1ae1",
+      "to": "6a588f181fdd94108efdeed9b6b27c45078703f2e52796935936d6f3b0d54556",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/teoria/window-functions.md",
+      "from": "2cc421ea656f5fd63aed66312da90028ba0065074d173c8424c71e8718a2ae31",
+      "to": "210371ecb038b2aa0f7303afa1b00e1f8531d5e6d2cf644d43dd5bbda137d907",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/index.md",
+      "from": "3ad32c7f65f52cb9972185d7c861d550056d5b7d774db4f657cfaa96f7909771",
+      "to": "09a8f8841cacc9c2bbe740409a17549fdf08553d0d42899479bbc2dc37242a2a",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/importacion-archivos.md",
+      "from": "d3eafd264a17487a214adad196e86b65fe53be212b967958c1f842f6c8ef0adb",
+      "to": "37f3fae8692904ddb6f907156343407166c78d12e6046b600d45ec717386b011",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-apis.md",
+      "from": "f7594c269eea3f78b08b6398a112795146c37f2380b23bc9e15fb2bb8c0a764f",
+      "to": "fb400ff2d31d2db626c28f6b17704e2d8e6ceb7f69aed419e00d328d4ba57b59",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-bd-en-memoria.md",
+      "from": "c9f567efc2bc783e118653e6e5750de3d0cfdd73619b0dc85f8da7ff301a3a7c",
+      "to": "28687a241e76af47b8aaf4908857a36757d2588ab72e58248e92b7259ca5a69d",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-json.md",
+      "from": "96ae4d25f5a723d3ecba57a6460c508c152b29652d87694b894b645f35cb19e2",
+      "to": "85ee70870d94b46fd281464471a3081adfac83466d5d521a322badcfcbdffe05",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/practica-xml.md",
+      "from": "e16e0d1e76c51f76873473108542f05017581d863069e289350d474b2d82512c",
+      "to": "9ee8b9b8c1895be2df4e9f1ff53caf49dd3ceb05178cb0f78d7bda0ec3dcf70e",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/practica/tp2.md",
+      "from": "d3b6aa7e3b03862633912411d03ab99757fe4441db53079e75b6f8a2871a0980",
+      "to": "cbdca233bf881e13c4f2a40786f1047a88fb80c200343434d7a4f6481ab1bc94",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/apis-desde-sql.md",
+      "from": "5c073fb409185faf1a9a1f50143ca4ef529797a022feacb56a80b7a685f1ecc3",
+      "to": "52ffe486e3f664087ec2202bbcf6eaa39fa70242b87a99fac9ad870d6d0e87de",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/bd-en-memoria.md",
+      "from": "1655a69cfc423f81351c58f7ab2bd4d39d428f3ec4d9c5044c2f9c4f1833b2e9",
+      "to": "c87ad1122bb70125c25265f33578861deebce3b1fee7b52a0eefe3bc40d3fed0",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/collation.md",
+      "from": "981a60ca72136df20458e145dc500efbde3f9247a078494b1618a91d5464aef3",
+      "to": "a9501a97396755926bddb336cf824e2ae780052afded0c6fc4fa1ec41f585eb8",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/formatos-de-intercambio.md",
+      "from": "f1b6daffd53ba8e92e3400a6ae5913ea06975e2150d6f5fd93c12c2a6245f98e",
+      "to": "8c09fbf0d3a280df7a1c17750bed6be179a5cde83c67d04e3e0459709e3d17c4",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/importacion-de-archivos.md",
+      "from": "a11ef97b45333b4a96f72e830616433b5c726175e3dbcebfa5a5104932ea8b96",
+      "to": "48ce27fcec2ccc8d53bf94713b6b866983022455728c5d1cd0ae9113e47c22fe",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/json-en-sql.md",
+      "from": "376b12b289739c6a172894c649befebd47a4e26f1736930808f87c094a2be7e7",
+      "to": "4eb3beb0a92053ff8a3523250bb2f930c98ec14e9a02c32df8280bfb8f20ad4d",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/unidad-2.md",
+      "from": "e708a99a806fa4ffa11893d19077c342a33ce1093fae727d298bde1514433912",
+      "to": "f06f57236662d6e05db217986738459390335358172f5bc0efe2d23fcd5c5f15",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-2/teoria/xml-en-sql.md",
+      "from": "f803318007540af756e40f63bd33bc700c23e639f60e3aae547a748ed5caa106",
+      "to": "f87c175c2c1fa09a2826075dc2a62382ac9e181a5382b1f8018061501ae47cf8",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/index.md",
+      "from": "66bd05dbfc67d715b7139155f179823e863e3c60bc7511495232400d88ce33db",
+      "to": "88b40809fe9fcd6d70d89a878c03d6e4adf26b9fea00e66b5efb045e779b1963",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/practica/index.md",
+      "from": "bf2b31eacc857644d9b0a2d37d7a94c5c76fcecc7db13bad11dd6d6e3dbedd52",
+      "to": "86b33f7dd5df4629067fd7f63d92853c5fea81fc93190942897fb2b6352af700",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento.md",
+      "from": "3c70348b88db81a547619e37a1c032ffd5db1dca6809d0b64dda13abf8613d90",
+      "to": "857270c410ee8467872e338408be213a28da1af140b64f52e122830210b727a8",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl.md",
+      "from": "d09e5fd28997d4a32bc8ecb41f3e39a6a9c6ab645f65bd3fa867ee973bc57da4",
+      "to": "21b472bf7c56ea83f8691114c0f78fa3313dd6ea1749459ee586c59380a4b254",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion.md",
+      "from": "d8d09bf4fa4374e8b217ab7a3edc3570e9cc830ae8d7cfa2f29e28551789d945",
+      "to": "bd92ff39c37931fc055c11e5ae4eab7e7e5f07e246cf8f20b405b911e75e4311",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/indices-y-planes.md",
+      "from": "f4b9262c943e50b2921b91663ff01118c01fba1e2f23f1e6258a7298d8b08c27",
+      "to": "96b0e0ef03f6c4c04387447e39ca260db43bbc4817d9862830a74d2a379224a3",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento.md",
+      "from": "876316c5dbdbedcb7bd0604306645b2e1593fd578eb8f4f5e9fa60b164eb3771",
+      "to": "2e2303448b655c996ac205d543c32c4844f3e5953f00021e6996c11e1c4123c4",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia.md",
+      "from": "7a07aaa68c12ac1b414811c0191d8198b006d00ea606311d3d096e3e6846b6db",
+      "to": "6fd3e9691256cb5f9fc1904e4d969c72e1bc0d735b440fe77680116b47dd2be8",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-3/teoria/unidad-3.md",
+      "from": "f066762ec677b1b8b204a54c65161273e7c86d2ee7c33fbf085dc92f0613ae59",
+      "to": "99805d5affc5b370e19200992abbdb03d518c24fe98123edc9d0fe4386ddc09d",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/index.md",
+      "from": "cb8896e793180ad1d39c511d17b174a12f40d1d1d34eb93a3b3365c59fd5246b",
+      "to": "d8932f38003902fe55a67acd6c388dcc10c5f43953d50676f626c0e6b16104c8",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/integrador-peliculas.md",
+      "from": "dcb083802c370d874019e1b68364c7ef0716b8acd36801f56db7b59b9d7e7d8f",
+      "to": "69d910a0257f44c403d53bf5f9981bd4f947b3d7ff60f1d962476fa1aeb730e6",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/laboratorio-tienda-online.md",
+      "from": "893d5cde0432a495c06c54109408bb25da8b5464651720a41e56b06858171db0",
+      "to": "6da1803d64e7b4e56caaaa8acdbcc13515435b86cc2f951bda4e25871e79281b",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/practica/practica.md",
+      "from": "dcf3283b6046ba546484a5b3209512d75de90f10fc17b4dc1b304ec88bd3b32b",
+      "to": "66b81abea0b2f4c2d3f52e80b8def5e3847219eb5154552553f6a0fd98204825",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/datos-data-lake-kdd.md",
+      "from": "6a175a19131546392d98d83d585e87b5b6b349ff770bb17313266b242f04085b",
+      "to": "65c8511d13753db7b61158e4397ee3e68e505616914e36a7e345cfd7be24be66",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/guia-parcial.md",
+      "from": "20226ba66d19c61a15fd2592dfac9c5ee4c2f89197c69dba7640896037107eec",
+      "to": "316a4761ff8d8561ddbbbe8c8da8b105969ed8627704bbef25bc45dea2dff65a",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/instalacion-mongodb.md",
+      "from": "fef7fb8960dc9fe9c92f0c9cedd10d445ba615a44ef5ed7ef622a67dc29746c1",
+      "to": "b7926f2cbb8fdac287a1dbc8d942451a33246b63c55960b775ad271a3407875c",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion.md",
+      "from": "8150950fb50c7699366b0aee5a16f8b70a5925aa846589782e0c319d4b2c8f05",
+      "to": "305421e1e4ee8be2a63a2f4d379829e1c01aba110d2480b34eee950853f09af6",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-compass.md",
+      "from": "74c179d0a5079c3db28a5a2af91576161884abdbeb37e7f20ca8d599d17f385d",
+      "to": "e8ef4143d2c931922b5c742611df5a43be254542b3a29d532b8296e780b0bc32",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-crud.md",
+      "from": "b4e3afd4959dbc478d7f0ca669224768054878cd43bbe4d8a76e0c2cbffc54a3",
+      "to": "81d3e751fdd9344f2e18a0bada7a2456ab5d8a5adfd331f9fe30e270b9eca73e",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion.md",
+      "from": "97b34d70ba818aec2ee36d1b393a95ec40b6d2ea74a093947e3d89806fac3775",
+      "to": "b23e52cc8e68baa5aa83cc5af249fb5aac19fbdfebe32b575a88aaccf89f6030",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/nosql-conceptos.md",
+      "from": "a45054a96917c8c4a1a5e08682aa8c25f9926b93950924a8a42df0c15947ed27",
+      "to": "ab91248aeeb0eb9ae12be19f13214ffeb7b370b7f6adafecc6bd5075c31b7cbb",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-4/teoria/unidad-4.md",
+      "from": "a74595c981cfc9a45b02047775d56df6246775666f9f06ad5d3e34b911eadb36",
+      "to": "76d995f5477a902aa6b88c066006055f042287884e4638616ca02e1088551a5b",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/index.md",
+      "from": "c9c51f6722a66ccdd069a7307a300104a4b506bd762d87f4f6f3b6d6c63bd142",
+      "to": "43d2c188e8c759947f0e73c170f853f762d78ee959afd6f92a98bba4a682a8f5",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/laboratorio-backup.md",
+      "from": "800af55675c9207b19b83058ece1c77c8fd06a647196489c9dbd048fcb98fe6e",
+      "to": "197d08c56996387c80efedbf2ca8c0c6cbd7974fb3d497df17197968989b7aa0",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion.md",
+      "from": "bf42850387381b49d025de52d2962a4156f707f23ef81b9d40ba9082028b8d61",
+      "to": "57faef6e0c2a442393352b84fba7149d2587098dc13a7039ffeb3cae27b3b034",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad.md",
+      "from": "9715eb0089a270daea4f74955e9b0cfee41dcba852d9b4ede70d093709316887",
+      "to": "4eba94508b31f23b2cf2a9921b9ca507067114036790e6d886e0a42321143e95",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/alta-disponibilidad.md",
+      "from": "dbd347946f87e3dba7ada79c3985b795338732ce74b9ec73a6bc3aa500dfb5d1",
+      "to": "83f77b29f755a60f81e1effd80659c3b938bec83e8160b1528fc83c3dba43c93",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/backup-restauracion.md",
+      "from": "0e564bd71cfe34d0118606d28978630dc90e9b6b8e7e15c404bed8395ee03dbb",
+      "to": "cb56f2902c573e4bf830f7413503e21ad66e75858274fe58cd5fb7b3b3b673d7",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/cifrado.md",
+      "from": "df1957bcaec8dcceb7069aa3ce34b2794dd65558f380249bfa5aec4e73b4ce80",
+      "to": "6d679f8f64ca49eedfc7ed0ab0bc68cf5eb65b49ec41728412ea09f510751fcf",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/inyeccion-sql.md",
+      "from": "5b6d4866aea56af53756e119fe5edf78ae0e8f48b9ee94befb0c866a66a3376f",
+      "to": "301c8abced9d54c3c9d368d59b936ca8c04bdcd0d897ccde551cf43b6b7f1f3f",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/log-recuperacion.md",
+      "from": "3d7692c7aa65d1221921539b15d46683085347f3c58a3532a96fce77464b342e",
+      "to": "389d29b5e7ac1a5b35897441bccdcfb2f9d2eb93f4d3295b8bc2602bed13033a",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-5/teoria/seguridad-permisos.md",
+      "from": "154abc6ffdbad85f6351c582ad387e5164849d4545cae5f0b94f12209ac04733",
+      "to": "05020a70ec70cbeb7970ee07aa4598d0cdad1be1b6bf52c00f31d29e069ee8cd",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/index.md",
+      "from": "037a93f3b82141bfb4e3b85df885ff3eba0b172d8cb9916d04f33432f7f65b1d",
+      "to": "1e970cedd01b9975a103f0d1a9f19e4ddd15de7fbcd5bdd48285463cb78e1db8",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/casos-integradores.md",
+      "from": "4278ce5d2e036067d936cabaf3e66d125911371c2cc5dd6eae2ed95198bcef90",
+      "to": "f65f198f4f5bbec16aaf2b3dd5c5310ca15730ecb25b5f2539a05e7064b257e3",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/laboratorio-calidad.md",
+      "from": "9cd15c4bb60c33a76503a11d72085717fad5d0cc098c732af199a0e558ef8452",
+      "to": "ad4186cad5f1eed9c4069cd3693e3024d4024f85834e059774cf096fb91cd7b2",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/practica/laboratorio-privacidad.md",
+      "from": "4574e3c46298233dc22d787fba1c4881ff7e25c24d857fc3f99f5b2c57ba7117",
+      "to": "7accf07a5e9133589f27f014125c50ebfd030582a98c568070f1355cfc30b7c1",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-6/teoria/iso-25012.md",
+      "from": "1f638bc9c7a4c2a85acd61fec2049c5343944a50486576d4d033890b4696d7b1",
+      "to": "5fb748e76d59356c91d3950e562ac81608a07e5243ef01c7973301eddbc3cb1b",
+      "date": "2026-11-20",
+      "stage": "E11",
+      "reason": "Auditoría editorial: redacción dirigida al estudiante (sin vocabulario del sistema de verificación ni rutas del repositorio), preparación de bases y datos explícita, limitaciones explicadas como requisitos del estudiante; sin cambios en bloques de código, marcadores, ejercicios, resultados esperados ni URL",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
+    },
+    {
+      "output": "src/content/docs/bbdd-aplicadas/unidad-1/practica/pivot.md",
+      "from": "8ec72a2d388c8b4d251a8bed6aa42869243be56f1b9403466197e336ca4d8ddc",
+      "to": "f4ea0ed4c673cf700a78fc166e84bbdedb806de0254ab238fcea39f0e65189f8",
+      "date": "2026-11-20",
+      "stage": "E11-U1.37",
+      "reason": "Corrección académica y técnica del ejercicio 5 de la práctica de PIVOT (U1.37): CASE de ordenamiento ampliado a los doce meses, explicación actualizada y bloque de comprobación con ventas de julio enlazado a la regresión U1.37.JUL; verificado en SQL Server 2022",
+      "plan": "academic-sources/bbdd-aplicadas/reports/editorial-audit.md"
     }
   ]
 }

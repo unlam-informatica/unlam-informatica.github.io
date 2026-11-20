@@ -14,8 +14,10 @@ Una estrategia de respaldo se diseña desde la restauración que se necesita, no
 Esta página presupone el [registro de transacciones y los modelos de recuperación](/bbdd-aplicadas/unidad-5/teoria/log-recuperacion/). Los ejemplos se ejecutan en el laboratorio: [Cadena de backup y restauración](/bbdd-aplicadas/unidad-5/practica/laboratorio-backup/).
 
 :::note[Rutas en los ejemplos]
-Los bloques muestran rutas de Windows (`D:\SQLBackups\`). En SQL Server para Linux o en un contenedor se usan rutas del tipo `/var/opt/mssql/backup/` (la cuenta del servicio debe poder escribir ahí). El verificador del portal usa nombres equivalentes en `/tmp/`.
+Los bloques muestran rutas de Windows (`D:\SQLBackups\`). En SQL Server para Linux o en un contenedor se usan rutas del tipo `/var/opt/mssql/backup/` (la cuenta del servicio debe poder escribir ahí). Con cualquiera de las dos plataformas, reemplazá en cada ejemplo la carpeta y el nombre del archivo por los tuyos. Los resultados de esta página se obtuvieron con SQL Server 2022 sobre Linux.
 :::
+
+Los ejemplos usan una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) llamada `LaboratorioU5` (`CREATE DATABASE LaboratorioU5;`), en modelo `FULL` y con una tabla `dbo.Pedido (PedidoId INT IDENTITY PRIMARY KEY, Estado VARCHAR(30))`. Las bases restauradas (`..._Restore`) se pueden borrar al terminar.
 
 ## RPO, RTO y estrategia
 
@@ -94,7 +96,7 @@ RESTORE DATABASE LaboratorioU5_Restore FROM DISK = 'D:\SQLBackups\U5_diff2.bak' 
 SELECT COUNT(*) AS Filas FROM LaboratorioU5_Restore.dbo.Pedido;
 ```
 
-**Resultado esperado** (el verificador agrega la comprobación de la base común).
+**Resultado esperado.** La tabla resume dos comprobaciones: cuántas bases distintas tienen los diferenciales (`SELECT COUNT(DISTINCT differential_base_lsn) FROM msdb.dbo.backupset WHERE type = 'I'`; un `1` confirma que ambos parten del mismo completo) y cuántas filas devuelve el `SELECT` final. Esa primera consulta no figura en el bloque: agregala si querés reproducir la tabla.
 
 | Concepto | Valor |
 |---|---|
@@ -146,7 +148,7 @@ SELECT PedidoId, Estado FROM LaboratorioU5_Restore.dbo.Pedido ORDER BY PedidoId;
 RESTORE DATABASE LaboratorioU5 WITH RECOVERY;
 ```
 
-**Resultado esperado** (estado de la base original tras el tail-log y filas de la base restaurada).
+**Resultado esperado.** La tabla reúne tres comprobaciones que se consultan por separado: el estado de la base original después del `BACKUP LOG ... NORECOVERY` (con `SELECT state_desc FROM sys.databases`) y las filas de la base restaurada (el `SELECT` del bloque).
 
 | Concepto | Valor |
 |---|---|
@@ -226,7 +228,7 @@ RESTORE VERIFYONLY   FROM DISK = 'D:\SQLBackups\LaboratorioU5_full.bak' WITH CHE
 - `FILELISTONLY` devuelve los nombres lógicos y físicos de los archivos de la base (los que se usan en `MOVE`).
 - `VERIFYONLY` comprueba que el backup se puede leer y su estructura, pero no sustituye una restauración real ni `DBCC CHECKDB`.
 
-**Resultado esperado** (resumido: el verificador carga las salidas en tablas temporales para mostrar solo estos datos; `HEADERONLY` tiene unas 60 columnas que dependen de la versión).
+**Resultado esperado** (resumido: solo las columnas relevantes; la salida completa de `HEADERONLY` tiene unas 60 columnas que dependen de la versión, y cada comando devuelve su propio resultado). Las dos últimas filas muestran qué responde `VERIFYONLY` ante un archivo inexistente y ante el archivo del ejemplo.
 
 | Concepto | Valor |
 |---|---|
@@ -323,7 +325,7 @@ RESTORE LOG LaboratorioU5_Restore FROM DISK = 'D:\SQLBackups\U5_log1.trn' WITH N
 RESTORE LOG LaboratorioU5_Restore FROM DISK = 'D:\SQLBackups\U5_log2.trn' WITH RECOVERY;
 ```
 
-**Resultado esperado** (el primer `RESTORE LOG` se ejecuta dentro de un `TRY`/`CATCH`; al final la base tiene las 2 filas).
+**Resultado esperado.** El segundo `RESTORE LOG` (el que salta `U5_log1.trn`) falla con error; la tabla resume qué pasó con cada intento y se armó anotando el resultado de cada uno (si ejecutás el bloque tal cual, solo verás el error y los mensajes de los demás `RESTORE`). Al final, la base tiene las 2 filas.
 
 | Paso | Resultado |
 |---|---|
@@ -432,7 +434,11 @@ WITH PRIVATE KEY (FILE = 'D:\Claves\CertificadoBackup.pvk',
                   ENCRYPTION BY PASSWORD = '<otra-contraseña-larga>');
 ```
 
-Cifrar el backup y perder el certificado equivale a perder el backup. Este ejemplo crea objetos en `master`, por lo que queda en la lista de pendientes de verificación específica del portal y no se ejecuta en el verificador automático.
+Cifrar el backup y perder el certificado equivale a perder el backup.
+
+:::caution[No probado en un motor]
+Este ejemplo crea un certificado en `master` y escribe archivos de clave, por lo que necesita permisos de administración sobre la instancia y una carpeta donde la cuenta del servicio pueda escribir. No se probó en un motor: la sintaxis y el comportamiento son los que indica la documentación de Microsoft. Probalo en una instancia de laboratorio y guardá el certificado y su clave antes de depender del backup cifrado.
+:::
 
 ## 3-2-1 y ransomware
 

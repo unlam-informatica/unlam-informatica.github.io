@@ -31,8 +31,8 @@ Al terminar la unidad deberías poder:
 
 Seguí las etapas en orden. Cada una indica qué leer y, cuando existe, qué practicar antes de pasar a la siguiente.
 
-:::caution[Qué está verificado y qué no]
-Los ejemplos y ejercicios de **una sola sesión** se ejecutaron en SQL Server 2022. Los que necesitan **dos o tres sesiones** (bloqueos entre sesiones, deadlocks, lectura sucia, fantasmas, experimentos de la tarjeta de crédito) y los de **transacciones distribuidas con MS DTC** se presentan como guiones paso a paso, revisados contra la documentación de Microsoft y con verificación específica pendiente. Cuando los reproduzcas, comprobá el comportamiento en tu propio motor.
+:::caution[Qué ejemplos podés reproducir tal cual]
+Los ejemplos y ejercicios de **una sola sesión** se reproducen en una base de práctica y sus resultados se obtuvieron con SQL Server 2022. Los que necesitan **dos o tres sesiones** (bloqueos entre sesiones, deadlocks, lectura sucia, fantasmas, experimentos de la tarjeta de crédito) y los de **transacciones distribuidas con MS DTC** se presentan como guiones paso a paso y **no se probaron en un motor**: el comportamiento que se describe es el que indica la documentación de Microsoft. Cuando los reproduzcas, comprobalo en tu propia instalación; para ejecutarlos necesitás dos o tres ventanas de consulta (en el caso de MS DTC, además, una segunda instancia).
 :::
 
 ### Bloque 1 · Transacciones
@@ -52,21 +52,21 @@ Qué es una transacción, las propiedades ACID y cómo se abre, confirma y desha
 Qué pasa cuando varias transacciones se ejecutan a la vez: planificaciones serializables, locks, fenómenos de concurrencia, niveles de aislamiento y versionado de filas. Es la continuación natural del TCL.
 
 - **Leé:** [Concurrencia, bloqueos y transacciones distribuidas](/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/), desde [Planificaciones: serie y serializable](/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/#planificaciones-serie-y-serializable) hasta [SNAPSHOT y READ_COMMITTED_SNAPSHOT](/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/#snapshot-y-read_committed_snapshot).
-- **Practicá:** [parte 2 del Laboratorio TCL](/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/#parte-2-laboratorio-guiado-tarjeta-de-crédito) (tarjeta de crédito) y el [Laboratorio de niveles de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/): laboratorios 1 a 5 y ejercicios 11 a 15, 18 y 24. Los experimentos con dos o más sesiones figuran como pendientes de verificación específica.
+- **Practicá:** [parte 2 del Laboratorio TCL](/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/#parte-2-laboratorio-guiado-tarjeta-de-crédito) (tarjeta de crédito) y el [Laboratorio de niveles de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/): laboratorios 1 a 5 y ejercicios 11 a 15, 18 y 24. Los experimentos con dos o más sesiones se presentan como guion y no se probaron en un motor (ver el aviso de arriba).
 
 #### 3. Bloqueos, esperas y deadlocks
 
 Cómo diagnosticar un bloqueo, limitar la espera y entender un interbloqueo.
 
 - **Leé:** la sección [Bloqueos y esperas](/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/#bloqueos-y-esperas) de la misma página, que incluye [Deadlock](/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/#deadlock).
-- **Practicá:** ejercicios 16, 17 y 25 del [Laboratorio de niveles de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/). El 25 (deadlock) requiere dos sesiones y está revisado, no verificado en motor.
+- **Practicá:** ejercicios 16, 17 y 25 del [Laboratorio de niveles de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/). El 25 (deadlock) requiere dos sesiones y se presenta como guion, sin probar en un motor.
 
 #### 4. Transacciones distribuidas
 
 Commit en dos fases y `BEGIN DISTRIBUTED TRANSACTION` con MS DTC.
 
 - **Leé:** [Transacciones distribuidas](/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/#transacciones-distribuidas)
-- **Practicá:** ejercicios 19 y 20 del [Laboratorio de niveles de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/). Un ejemplo completo requiere una segunda instancia, un servidor vinculado y MS DTC: la lección lo presenta como pendiente de verificación específica.
+- **Practicá:** ejercicios 19 y 20 del [Laboratorio de niveles de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/). Un ejemplo completo requiere una segunda instancia, un servidor vinculado y MS DTC: la lección lo presenta como guion, sin probar en un motor.
 - **Comprobá:** [autoevaluación de la lección](/bbdd-aplicadas/unidad-3/teoria/transacciones-concurrencia/#autoevaluación), que cierra el bloque de concurrencia.
 
 ### Bloque 3 · Rendimiento

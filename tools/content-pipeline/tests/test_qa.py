@@ -293,3 +293,36 @@ def test_marcador_de_ejemplo_respaldado_por_reporte_de_codigo(tmp_path):
     assert not any(c == "sin-reporte-matematico" for c, _ in codes)
     assert not any(c == "sin-comprobacion" for c, _ in codes)
     assert any(c == "verificacion-fallida" and "E.2" in m for c, m in codes)
+
+
+def test_texto_interno_en_la_prosa(tmp_path):
+    from content_pipeline.qa import internal_text_findings
+    body = ("Ese bloque no se ejecuta en el entorno de verificación; está registrado como revisado.\n\n"
+            "Los scripts están en `academic-sources/demo/checks/mongo/` (`U4.T.CRUD.01`).\n\n"
+            "**Resultado esperado** (el verificador junta las salidas). Queda pendiente de verificación específica.\n")
+    labels = {f.split(":")[0] for f in internal_text_findings(body)}
+    assert labels == {"entorno de verificación", "registrado como revisado", "ruta o herramienta interna del repositorio",
+                      "identificador de comprobación", "el verificador", "pendiente de verificación específica"}
+
+
+def test_texto_interno_ignora_codigo_comentarios_y_usos_legitimos(tmp_path):
+    from content_pipeline.qa import internal_text_findings
+    body = ("<!-- check: U1.T.RS.01 -->\n```sql\n-- el verificador ejecuta esto en el entorno de verificación\n```\n\n"
+            "El pipeline de agregación de MongoDB, el contenedor del filegroup y Docker. "
+            "Verificá el resultado con `SELECT`: comprobá que el plan use el índice.\n")
+    assert internal_text_findings(body) == []
+
+
+def test_texto_interno_es_advertencia_con_excepciones(tmp_path):
+    docs = tmp_path / "src" / "content" / "docs"
+    (docs / "demo").mkdir(parents=True)
+    (docs / "demo" / "a.md").write_text(
+        f"---\ntitle: A\nslug: demo/a\n---\n{LONG}\n\nNo se ejecutó en el verificador.\n", encoding="utf-8")
+    report = run_qa(docs, "demo")
+    found = [f for f in report["findings"] if f["code"] == "texto-interno"]
+    assert len(found) == 1 and found[0]["severity"] == "warning"
+    config = tmp_path / "subject.yaml"
+    config.write_text("qa:\n  internal_text_allow:\n    - pattern: 'No se ejecutó en el verificador'\n"
+                      "      reason: ejemplo documentado\n", encoding="utf-8")
+    report = run_qa(docs, "demo", subject_config=config)
+    assert "texto-interno" not in codes(report)

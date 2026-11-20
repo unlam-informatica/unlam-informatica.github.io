@@ -7,7 +7,7 @@ sidebar:
 
 [← Unidad 2](/bbdd-aplicadas/unidad-2/teoria/)
 
-La **intercalación** (_collation_) decide cómo se guardan, comparan y ordenan los textos. Es una propiedad que se elige al instalar y que, mal configurada, produce comparaciones que no funcionan como se pensó o directamente errores. Los ejemplos se ejecutan sobre SQL Server 2022 en una base nueva.
+La **intercalación** (_collation_) decide cómo se guardan, comparan y ordenan los textos. Es una propiedad que se elige al instalar y que, mal configurada, produce comparaciones que no funcionan como se pensó o directamente errores. Los resultados se obtuvieron con SQL Server 2022; los ejemplos se ejecutan en una base de práctica (ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)).
 
 :::note[Definición]
 La intercalación determina dos cosas: **cómo se representan los caracteres** (qué patrón de bits o página de códigos corresponde a cada uno) y **cómo se comparan y ordenan** (si `'a'` y `'A'` son iguales, si `'a'` y `'á'` son iguales, y en qué orden aparecen con `ORDER BY`).
@@ -160,7 +160,7 @@ Las binarias son las más rápidas y exactas, pero no respetan acentos ni mayús
 
 Cuando una comparación, un `JOIN`, un `UNION`, `INTERSECT` o `EXCEPT` combina columnas con intercalaciones distintas, el motor no sabe cuál aplicar y lanza el **error 468** («Cannot resolve the collation conflict»). El conflicto aparece con frecuencia entre una tabla de la base y una **tabla temporal**: las temporales viven en `tempdb`, que usa la intercalación de la **instancia** y no la de la base de datos de trabajo.
 
-Se reproduce con una base cuya intercalación difiere de la de la instancia. La solución es `COLLATE DATABASE_DEFAULT`, que traduce la expresión a la intercalación de la base actual (`CATALOG_DEFAULT` hace lo mismo con la del catálogo):
+Se reproduce con una base cuya intercalación difiere de la de la instancia. El primer comando del bloque siguiente, `ALTER DATABASE CURRENT COLLATE`, cambia la intercalación de la base actual y necesita acceso exclusivo a ella: ejecutalo solo en una base de práctica. La tabla de resultados que sigue supone una instancia con `SQL_Latin1_General_CP1_CI_AS`; si la tuya usa otra, el segundo renglón y la presencia del conflicto pueden cambiar. La solución es `COLLATE DATABASE_DEFAULT`, que traduce la expresión a la intercalación de la base actual (`CATALOG_DEFAULT` hace lo mismo con la del catálogo):
 
 <!-- check: U2.T.COL.04 -->
 ```sql
@@ -377,7 +377,7 @@ El español moderno trata la `ñ` como una letra propia, posterior a la `n`, as�
 <!-- ejercicio: U2.52 | nivel: avanzado | tipo: diagnostico | verificacion: motor -->
 
 :::note[Enunciado]
-En una base con intercalación `Modern_Spanish_CI_AS` (distinta de la de la instancia), un procedimiento compara una tabla de productos con una tabla temporal de rubros activos y falla con el error 468. Reescribí la creación de la tabla temporal para que la comparación funcione sin tocar el `JOIN`, y comprobá la intercalación resultante.
+En una base de práctica con intercalación `Modern_Spanish_CI_AS` (distinta de la de la instancia, que se supone `SQL_Latin1_General_CP1_CI_AS`; el bloque de la resolución la cambia con `ALTER DATABASE CURRENT`), un procedimiento compara una tabla de productos con una tabla temporal de rubros activos y falla con el error 468. Reescribí la creación de la tabla temporal para que la comparación funcione sin tocar el `JOIN`, y comprobá la intercalación resultante.
 :::
 
 <details>

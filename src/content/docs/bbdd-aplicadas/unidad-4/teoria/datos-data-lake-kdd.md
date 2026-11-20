@@ -7,7 +7,7 @@ sidebar:
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)
 
-Esta página conecta tres ideas: **qué forma tienen los datos**, **dónde se almacenan para analizarlos** (data warehouse y data lake) y **cómo se convierten en conocimiento** (el proceso KDD y la minería de datos). El programa 2024 ubica los *data lakes*, la introducción al *data mining* y KDD en la Unidad 4, y el *data warehousing* entre los contenidos mínimos. Los ejemplos con código se comprobaron en SQL Server 2022 (`U4.T.DL.01` y `U4.T.DL.02`).
+Esta página conecta tres ideas: **qué forma tienen los datos**, **dónde se almacenan para analizarlos** (data warehouse y data lake) y **cómo se convierten en conocimiento** (el proceso KDD y la minería de datos). El programa 2024 ubica los *data lakes*, la introducción al *data mining* y KDD en la Unidad 4, y el *data warehousing* entre los contenidos mínimos. Los ejemplos con código tienen resultados obtenidos con SQL Server 2022; cada uno crea sus propias tablas, así que se reproducen en una base de práctica.
 
 ## Para qué sirve
 
@@ -326,7 +326,7 @@ La carga fue trivial (no se validó nada) y el costo se paga al consumir: cada c
 Similitudes: ambos son repositorios centralizados y pueden almacenar datos estructurados. Diferencias que destaca la cátedra: un data lake guarda datos no estructurados, no los transforma al ingresar y no los organiza de forma óptima para consultar. De ahí que el DWH sirva para almacenar y **analizar** datos estructurados, y el lago para almacenar datos de todo tipo, aunque no tanto para analizarlos directamente. La cátedra agrega que puede haber un DWH sin lago, pero rara vez un lago sin DWH: es habitual que el lago alimente al warehouse con conjuntos ya depurados. No son tecnologías enemigas sino complementarias.
 
 :::note[Contenido complementario: gobierno de un data lake]
-Esta sección no forma parte del programa 2024. Es un aporte del portal sobre la práctica habitual, sin fuente de cátedra.
+Esta sección no forma parte del programa 2024. Es un aporte de estos apuntes sobre la práctica habitual, sin fuente de cátedra.
 
 Un lago sin gestión se vuelve un **pantano de datos** (*data swamp*): un depósito del que no se puede localizar ni confiar en nada. Para evitarlo se suele incorporar:
 

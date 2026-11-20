@@ -133,6 +133,8 @@ WHERE fg.type = 'FX';
 
 El «archivo» del filegroup es en realidad un contenedor (un directorio); por eso su tipo figura como `FILESTREAM`. `sys.filegroups` no tiene columna `database_id`: lista los de la base actual.
 
+Los bloques siguientes de esta parte parten de una base de práctica que ya tiene este filegroup, y cada uno crea su propio esquema `mem` y sus tablas. Para ejecutar varios, usá una base de práctica nueva con el filegroup para cada uno, o eliminá antes el esquema `mem` y sus objetos (el filegroup se conserva). El filegroup, en cambio, solo se agrega una vez por base.
+
 ### Crear las tablas y modos de durabilidad
 
 Se crean con `MEMORY_OPTIMIZED = ON`, una `PRIMARY KEY` obligatoriamente **no agrupada** (no hay índice clúster) y el modo de durabilidad:

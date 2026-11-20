@@ -135,7 +135,7 @@ UNION ALL SELECT 'Replicas en sys.availability_replicas', CAST(COUNT(*) AS VARCH
 ORDER BY Propiedad;
 ```
 
-**Resultado esperado** (en la instancia del verificador, sin Always On configurado).
+**Resultado esperado** (en una instancia sin Always On configurado).
 
 | Propiedad | Valor |
 |---|---|
@@ -247,7 +247,7 @@ SELECT COUNT(*) FROM LaboratorioU5_Sec.dbo.Pedido;       -- la secundaria se pue
 RESTORE DATABASE LaboratorioU5_Sec WITH RECOVERY;
 ```
 
-**Resultado esperado** (el verificador repite el ciclo 2 y consulta `sys.databases` en cada paso).
+**Resultado esperado.** El bloque deja el ciclo 2 como comentario: para obtener esta tabla, repetí el ciclo 1 con otra fila (`'B'`, `LS_log2.trn`) y consultá `sys.databases` (columnas `state_desc` e `is_in_standby`) y el conteo de filas después de cada paso.
 
 | Paso | Estado | EnStandby | Filas |
 |---|---|---|---|
@@ -275,7 +275,11 @@ La cátedra lo resume así: la mejor herramienta **depende** de la necesidad. Pa
 
 ## Laboratorio guiado: grupo de disponibilidad de dos nodos
 
-El programa 2024 prevé configurar alta disponibilidad y réplicas (semana 12). Este recorrido requiere dos instancias en máquinas o contenedores que se vean entre sí, y no se puede ejecutar en una instancia sola: queda como **pendiente de verificación específica** del portal.
+El programa 2024 prevé configurar alta disponibilidad y réplicas (semana 12). Este recorrido requiere dos instancias en máquinas o contenedores que se vean entre sí, y no se puede ejecutar en una instancia sola.
+
+:::caution[No probado en un motor]
+Este laboratorio necesita dos instancias de SQL Server conectadas en red, con Always On habilitado, por lo que no se probó en un motor. Los pasos y las consultas siguen lo que indica la documentación de Microsoft; comprobalos en tu instalación y esperá diferencias según la edición, la versión y la plataforma (Windows con WSFC o Linux con Pacemaker).
+:::
 
 1. Instalar dos instancias de SQL Server (dos máquinas virtuales o dos contenedores en una misma red), con la misma versión y edición.
 2. En ambas, habilitar Always On (`SERVERPROPERTY('IsHadrEnabled')` pasa a 1 tras habilitar la función en el administrador de configuración y reiniciar el servicio). En Linux se requiere además un administrador de clúster (Pacemaker) para HA automática; sin él, el grupo se crea con `CLUSTER_TYPE = NONE`, sin *failover* automático.

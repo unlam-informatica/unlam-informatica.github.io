@@ -226,7 +226,7 @@ VALUES (1001, 1, '2026-03-02', 3000.00),
 GO
 ```
 
-Cada bloque siguiente se ejecuta con ese juego de datos ya cargado.
+El bloque anterior crea y carga las tablas: ejecutalo primero, en una base de práctica (ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)). Cada bloque siguiente de esta sección usa esas tablas y no las vuelve a crear; si lo ejecutás dos veces el bloque de creación, falla porque los objetos ya existen.
 
 ### FOR XML RAW
 
