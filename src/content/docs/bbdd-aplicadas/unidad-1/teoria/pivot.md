@@ -7,7 +7,7 @@ sidebar:
 
 `PIVOT` convierte **valores de una columna en columnas**: pasamos de una tabla "larga" (una fila por hecho) a una tabla "ancha" (un valor por columna), útil para reportes y comparaciones. `UNPIVOT` hace el camino inverso.
 
-Los ejemplos usan el esquema `ventas` de la página de [window functions](/bbdd-aplicadas/unidad-1/teoria/window-functions/#esquema-de-ejemplo), en una base vacía donde ya se creó ese esquema.
+Los ejemplos usan el esquema `ventas` de la página de [window functions](/bbdd-aplicadas/unidad-1/teoria/window-functions/#esquema-de-ejemplo), que tenés que haber creado y cargado antes con el bloque de esa sección, en una base de práctica.
 
 ## PIVOT estático
 
@@ -225,7 +225,7 @@ El orden de las columnas lo fija el `WITHIN GROUP (ORDER BY ...)` de `STRING_AGG
 
 ## UNPIVOT
 
-Para ver `UNPIVOT` armamos una tabla ancha con el resultado de un `PIVOT`: `SELECT ... INTO` guarda las ventas por vendedor y mes.
+Para ver `UNPIVOT` hace falta una tabla ancha. La creamos con el resultado de un `PIVOT` mensual guardado con `SELECT ... INTO`: `SELECT VendedorId, [2025-01] AS Ene, [2025-02] AS Feb, [2025-03] AS Mar, [2025-04] AS Abr INTO ventas.ResumenMensual FROM (SELECT VendedorId, CONVERT(CHAR(7), Fecha, 126) AS Mes, Monto FROM ventas.Venta) AS Origen PIVOT (SUM(Monto) FOR Mes IN ([2025-01], [2025-02], [2025-03], [2025-04])) AS Pv;`. Ejecutá esa sentencia (en un lote propio, después de crear y cargar el esquema `ventas`) antes de los bloques de esta sección, que leen la tabla `ventas.ResumenMensual` sin crearla; el primero la muestra.
 
 <!-- check: U1.T.PV.07 -->
 ```sql

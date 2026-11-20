@@ -118,7 +118,7 @@ Cargar CSV, ancho fijo, JSON y XML en tablas, con tablas de staging, validación
 
 Trabajo integrador sobre una red de estaciones de monitoreo (15 ejercicios): collation y sus conflictos, importación de CSV con UTF-8, validación y limpieza, tablas temporales y variables de tabla, y percentiles. Presupone las etapas 3, 4 y 10 (y los formatos de la etapa 7).
 
-- **Practicá:** [Trabajo Práctico 2 — Collation, importación de CSV y tablas temporales](/bbdd-aplicadas/unidad-2/practica/tp2/). El ejercicio 15 usa dos sesiones y figura como revisado, no como verificado en motor.
+- **Practicá:** [Trabajo Práctico 2 — Collation, importación de CSV y tablas temporales](/bbdd-aplicadas/unidad-2/practica/tp2/). El ejercicio 15 necesita permiso `CREATE DATABASE` y dos sesiones (dos ventanas de consulta), y no se probó en un motor.
 - **Comprobá:** [autoevaluación del TP 2](/bbdd-aplicadas/unidad-2/practica/tp2/#autoevaluación)
 
 ### 12. Invocaciones HTTP desde T-SQL (complementario)

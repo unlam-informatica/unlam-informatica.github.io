@@ -9,11 +9,11 @@ Un servidor de base de datos atiende muchas sesiones a la vez. Si cada una traba
 
 Cómo se abre, se confirma y se deshace una transacción desde una sesión está en [Control de transacciones (TCL)](/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/). Los experimentos con dos sesiones están en el [laboratorio de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/) y en el [laboratorio TCL](/bbdd-aplicadas/unidad-3/practica/laboratorio-tcl/).
 
-:::note[Qué está verificado en motor y qué no]
-Los ejemplos de **una sola sesión** (locks propios, versiones de fila, `SET TRANSACTION ISOLATION LEVEL` dentro de un procedimiento) se ejecutaron en SQL Server 2022 y su resultado esperado es el real. Los que necesitan **dos sesiones** (bloqueos entre sesiones, deadlocks, lectura sucia, fantasmas) o un **servidor vinculado con MS DTC** se presentan como guiones paso a paso: el comportamiento que se describe es el que garantiza la documentación de Microsoft, pero esos guiones no se ejecutan en la verificación automática y figuran como pendientes de verificación específica.
+:::note[Qué ejemplos podés reproducir tal cual]
+Los ejemplos de **una sola sesión** (locks propios, versiones de fila, `SET TRANSACTION ISOLATION LEVEL` dentro de un procedimiento) se reproducen en una base de práctica y sus resultados se obtuvieron con SQL Server 2022. Los que necesitan **dos sesiones** (bloqueos entre sesiones, deadlocks, lectura sucia, fantasmas) se presentan como guiones paso a paso: una **sesión** es una conexión independiente, así que hace falta abrir dos o tres [ventanas de consulta](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) conectadas a la misma base y ejecutar cada bloque en la ventana indicada (A, B o C), en el orden en que aparecen. Esos guiones **no se probaron en un motor**: el comportamiento descrito es el que indica la documentación de Microsoft; comprobalo en tu instalación. Lo mismo vale para el ejemplo con servidor vinculado y MS DTC, que además necesita una segunda instancia.
 :::
 
-Los ejemplos usan las tablas `banco.Cuenta` y `banco.Movimiento` de [TCL](/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/#modos-de-transaccion) (la definición completa está en el [laboratorio de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/#entorno)).
+Los ejemplos usan las tablas `banco.Cuenta` y `banco.Movimiento` de [TCL](/bbdd-aplicadas/unidad-3/teoria/transacciones-y-concurrencia/#modos-de-transaccion). Para reproducirlos, creá una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) y ejecutá el script de la sección [Entorno](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/#entorno) del laboratorio de aislamiento, que deja las tablas con sus datos iniciales.
 
 ## Planificaciones: serie y serializable
 
@@ -53,7 +53,7 @@ Dos cajeros atienden la misma cuenta, con saldo 1000. A retira 700 y B retira 60
 | 5 | Escribe 300 | |
 | 6 | | Escribe 400 (pisa el paso 5) |
 
-El saldo final es 400. En cualquier ejecución en serie habría quedado −300 o, con una validación, uno de los retiros rechazado. Se perdió el retiro de A. A este fenómeno se lo llama **actualización perdida** (*lost update*). No es uno de los tres fenómenos que define el estándar (lectura sucia, no repetible y fantasma), pero es el efecto de una planificación no serializable. Se previene tomando un lock de actualización al leer (`UPDLOCK`), con `REPEATABLE READ` o más, con `SNAPSHOT` (el segundo escritor recibe el error 3960) o con control optimista, como se muestra en el ejercicio [U3.18](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/).
+El saldo final es 400. En cualquier ejecución en serie habría quedado −300 o, con una validación, uno de los retiros rechazado. Se perdió el retiro de A. A este fenómeno se lo llama **actualización perdida** (*lost update*). No es uno de los tres fenómenos que define el estándar (lectura sucia, no repetible y fantasma), pero es el efecto de una planificación no serializable. Se previene tomando un lock de actualización al leer (`UPDLOCK`), con `REPEATABLE READ` o más, con `SNAPSHOT` (el segundo escritor recibe el error 3960) o con control optimista, como se muestra en el [ejercicio 18 del laboratorio de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/).
 
 ## Bloqueos: S y X y su duración
 
@@ -684,7 +684,7 @@ BEGIN DISTRIBUTED TRANSACTION TransferenciaEntreNodos;
 COMMIT TRANSACTION;
 ```
 
-Esta página no puede ejecutar el ejemplo: requiere una segunda instancia, un servidor vinculado y MS DTC configurado y accesible entre los dos equipos. En una instancia sola, sin vínculo, `BEGIN DISTRIBUTED TRANSACTION` abre la transacción igual (ver el ejercicio [U3.20](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/)), lo que verifica la sintaxis y el manejo de `@@TRANCOUNT`, pero no la participación remota.
+Este ejemplo **no se probó en un motor**: requiere una segunda instancia, un servidor vinculado y MS DTC configurado y accesible entre los dos equipos. El resultado que se describe es el que indica la documentación de Microsoft; comprobalo en tu instalación. En una instancia sola, sin vínculo, `BEGIN DISTRIBUTED TRANSACTION` abre la transacción igual (ver el [ejercicio 20 del laboratorio de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/)), lo que verifica la sintaxis y el manejo de `@@TRANCOUNT`, pero no la participación remota.
 
 :::caution[Limitaciones]
 - El aislamiento `SNAPSHOT` **no admite** transacciones distribuidas.
@@ -695,7 +695,7 @@ Esta página no puede ejecutar el ejemplo: requiere una segunda instancia, un se
 ## Errores frecuentes
 
 :::caution[Errores frecuentes]
-- **Creer que `READ UNCOMMITTED` evita los locks de escritura.** El `X` de un `UPDATE` se mantiene hasta el fin de la transacción en cualquier nivel (ejercicio [U3.13](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/)).
+- **Creer que `READ UNCOMMITTED` evita los locks de escritura.** El `X` de un `UPDATE` se mantiene hasta el fin de la transacción en cualquier nivel ([ejercicio 13 del laboratorio de aislamiento](/bbdd-aplicadas/unidad-3/practica/laboratorio-aislamiento/)).
 - **Usar `NOLOCK` para "acelerar".** Es `READ UNCOMMITTED` a nivel de tabla: puede devolver filas dos veces, saltear filas o leer datos que se revirtieron.
 - **Pedir `SNAPSHOT` sin habilitar `ALLOW_SNAPSHOT_ISOLATION`.** Falla con el error 3952 (se muestra en el ejemplo de SNAPSHOT).
 - **Creer que `LOCK_TIMEOUT` revierte la transacción.** Cancela la sentencia (error 1222); el `ROLLBACK` lo decide el código.

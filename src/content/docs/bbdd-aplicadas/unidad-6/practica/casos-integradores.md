@@ -86,7 +86,7 @@ Con la tabla `pulsera.Usuario` (zona, rango de edad y pasos diarios), calculá e
 <details>
 <summary>Resolución</summary>
 
-**Estrategia.** Medir el tamaño de cada grupo del agregado: un grupo con pocos integrantes permite señalar a una persona aunque no figure su nombre. Se agrupa y se publica el promedio solo si `COUNT(*)` alcanza el mínimo.
+**Estrategia.** Medir el tamaño de cada grupo del agregado: un grupo con pocos integrantes permite señalar a una persona aunque no figure su nombre. Se agrupa y se publica el promedio solo si `COUNT(*)` alcanza el mínimo. El bloque crea el esquema `pulsera` y los datos sintéticos, así que ejecutalo completo en una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos).
 
 <!-- check: U6.29 -->
 ```sql
@@ -183,7 +183,7 @@ Tras restaurar una copia antigua, la tabla `comercial.Cliente` contiene clientes
 <details>
 <summary>Resolución</summary>
 
-**Estrategia.** Primero la defensa preventiva (la vista excluye siempre los identificadores del registro); luego el procedimiento correctivo (`DELETE ... OUTPUT` para contar lo reaplicado) y un control detectivo de reaparecidos que debe ser cero.
+**Estrategia.** Primero la defensa preventiva (la vista excluye siempre los identificadores del registro); luego el procedimiento correctivo (`DELETE ... OUTPUT` para contar lo reaplicado) y un control detectivo de reaparecidos que debe ser cero. El bloque crea el esquema `comercial` con los clientes restaurados y el registro de supresiones, así que ejecutalo completo en una base de práctica (puede ser la misma del ejercicio anterior).
 
 <!-- check: U6.30 -->
 ```sql

@@ -10,12 +10,12 @@ sidebar:
 Antes de reescribir una consulta o crear un índice hay que saber **qué hace** el motor con ella. El *plan de ejecución* lo dice: qué tablas e índices toca, en qué orden, con qué algoritmo y con cuántas filas cree que va a trabajar. Esa última cifra sale de las *estadísticas*, y cuando está equivocada el plan también lo está. Esta página explica cómo se genera y reutiliza un plan, cómo leerlo y extraerlo con T-SQL, y cómo se construyen y mantienen las estadísticas. Los índices y las reescrituras están en [Índices y optimización](/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/), y la medición continua en [métricas de rendimiento](/bbdd-aplicadas/unidad-3/teoria/metricas-de-rendimiento/).
 
 :::note[Qué presupone esta lección]
-Conocer qué es un índice clúster y uno no clúster (ver [Índices y optimización](/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/)) y las consultas de [Unidad 1](/bbdd-aplicadas/unidad-1/teoria/repaso-sql/). Los ejemplos se ejecutaron en SQL Server 2022.
+Conocer qué es un índice clúster y uno no clúster (ver [Índices y optimización](/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/)) y las consultas de [Unidad 1](/bbdd-aplicadas/unidad-1/teoria/repaso-sql/). Los resultados se obtuvieron con SQL Server 2022.
 :::
 
 ## Datos de ejemplo
 
-Usamos las mismas tablas de [Índices y optimización](/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/#datos-de-ejemplo-y-cómo-medimos): 520 clientes y 20.000 pedidos generados con una fórmula fija. `Estado` tiene tres valores muy desparejos (90 % `Entregado`, 9 % `Pendiente`, 1 % `Anulado`).
+Usamos las mismas tablas de [Índices y optimización](/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/#datos-de-ejemplo-y-cómo-medimos): 520 clientes y 20.000 pedidos generados con una fórmula fija. `Estado` tiene tres valores muy desparejos (90 % `Entregado`, 9 % `Pendiente`, 1 % `Anulado`). Para reproducir los ejemplos, ejecutá el script siguiente en una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) vacía (crea los esquemas `ventas` y `diag`, así que fallaría si ya cargaste las tablas de la otra página en esa misma base: usá una de las dos o creá otra base). Cada ejemplo posterior parte de esos datos.
 
 <!-- check: U3.T.PL.00 -->
 ```sql
@@ -226,7 +226,7 @@ ORDER BY NodoId;
 
 El plan tiene cinco operadores y se lee de **derecha a izquierda y de arriba hacia abajo**: las hojas (los dos recorridos de índice clúster) son las primeras en ejecutarse y entregan sus filas al operador de la izquierda. Aquí el motor recorre `PK_Cliente` y `PK_Pedido`, los combina con un `Hash Match` (no hay otro índice que ayude), cuenta con un `Stream Aggregate` y un `Compute Scalar` arma el valor de salida. Los operadores que no acceden a un objeto aparecen con `Indice` en `NULL`.
 
-Para no repetir esa consulta, la empaquetamos en una función que, además, devuelve las lecturas lógicas de la última ejecución (el equivalente programático de `SET STATISTICS IO`); es la misma que usamos en [Índices y optimización](/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/#datos-de-ejemplo-y-cómo-medimos). `Key Lookup` se distingue porque su `PhysicalOp` es una búsqueda en el clúster con el atributo `Lookup`:
+Para no repetir esa consulta, la empaquetamos en una función que, además, devuelve las lecturas lógicas de la última ejecución (el equivalente programático de `SET STATISTICS IO`; los operadores son los mismos que ves en el plan gráfico de SSMS); es la misma que usamos en [Índices y optimización](/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/#datos-de-ejemplo-y-cómo-medimos). `Key Lookup` se distingue porque su `PhysicalOp` es una búsqueda en el clúster con el atributo `Lookup`:
 
 <!-- check: U3.T.PL.00 -->
 ```sql

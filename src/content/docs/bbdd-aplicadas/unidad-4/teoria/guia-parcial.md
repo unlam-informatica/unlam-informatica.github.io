@@ -8,12 +8,12 @@ sidebar:
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)
 
-Esta guía organiza lo que conviene poder **explicar, comparar y aplicar** de la Unidad 4. No reemplaza al [resumen integrador](/bbdd-aplicadas/unidad-4/teoria/apunte-completo/) ni a las páginas temáticas: sirve para repasar y para practicar con preguntas propias del portal.
+Esta guía organiza lo que conviene poder **explicar, comparar y aplicar** de la Unidad 4. No reemplaza al [resumen integrador](/bbdd-aplicadas/unidad-4/teoria/apunte-completo/) ni a las páginas temáticas: sirve para repasar y para practicar con preguntas propias de estos apuntes.
 
 :::note[Qué evalúa el parcial 2024 y qué material es esta guía]
 Según el programa 2024, la materia tiene **un único parcial teórico-práctico sobre las unidades 1 a 4**, un TP integrador y el final. La Unidad 4 se evalúa en el mismo parcial que las unidades [1](/bbdd-aplicadas/unidad-1/teoria/), [2](/bbdd-aplicadas/unidad-2/teoria/) y [3](/bbdd-aplicadas/unidad-3/teoria/): conviene repasar también los índices y el plan de ejecución, la concurrencia y las transacciones de la Unidad 3, que se combinan con lo de MongoDB.
 
-Las preguntas y respuestas de esta página son **material de estudio propio del portal, no oficial**: no reproducen enunciados de la cátedra ni de ningún examen.
+Las preguntas y respuestas de esta página son **material de estudio propio de estos apuntes, no oficial**: no reproducen enunciados de la cátedra ni de ningún examen.
 :::
 
 ## Lo que suele pedirse
@@ -291,4 +291,4 @@ Si una respuesta no incluye al menos una **definición, un contraste y un ejempl
 
 - Programa analítico 2024 de la asignatura (régimen de evaluación y contenidos de la Unidad 4).
 - Las páginas temáticas de la unidad enlazadas arriba, con sus fuentes.
-- Las preguntas y respuestas de esta guía son material de estudio elaborado para el portal.
+- Las preguntas y respuestas de esta guía son material de estudio propio de estos apuntes.

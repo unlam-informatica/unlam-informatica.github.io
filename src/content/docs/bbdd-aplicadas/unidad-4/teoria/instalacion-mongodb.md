@@ -9,8 +9,8 @@ sidebar:
 
 Esta página es material de apoyo para el laboratorio: cómo tener un servidor MongoDB, conectarse con `mongosh` y con Compass, y usar un clúster gratuito de MongoDB Atlas. La instalación de un motor no es un tema evaluable del programa; sí lo es lo que se hace después, en [Introducción](/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion/), [CRUD](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/) y [Aggregation Pipeline](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/).
 
-:::note[Qué se verificó y qué no]
-Las instrucciones de instalación de cada sistema operativo y los pasos de la interfaz de Atlas **dependen de la versión del instalador o del sitio web** y no se ejecutan en el entorno de verificación del portal: se toman de la documentación oficial de MongoDB (https://www.mongodb.com/docs/manual/installation/) y quedan registrados como *pendientes de verificación específica*. Lo que sí se comprobó en MongoDB 7.0 es lo que se escribe en `mongosh` una vez conectado.
+:::note[Qué podés reproducir tal cual]
+Las instrucciones de instalación de cada sistema operativo y los pasos de la interfaz de Atlas **dependen de tu sistema operativo y de la versión del instalador o del sitio web**, así que no se probaron para cada combinación: se toman de la documentación oficial de MongoDB (https://www.mongodb.com/docs/manual/installation/). Si algo no coincide con lo que ves, seguí la documentación oficial de tu versión. Lo que se escribe en `mongosh` una vez conectado sí tiene resultados obtenidos con MongoDB 7.0.
 :::
 
 ## Para qué sirve
@@ -144,7 +144,7 @@ db.createUser({
 2. Activar `security.authorization: enabled` en el archivo de configuración de `mongod` y reiniciar el servicio.
 3. Conectarse con usuario y contraseña (`mongosh "mongodb://<usuario>@localhost:27017/?authSource=admin"`).
 
-Este procedimiento modifica la configuración del sistema y **no se ejecutó en el entorno de verificación** (queda como pendiente de verificación específica).
+Este procedimiento **modifica la configuración del servicio** y requiere reiniciarlo, y los pasos exactos (ubicación del archivo de configuración, nombre del servicio) dependen del sistema operativo y de cómo instalaste MongoDB. No se probó en un motor: seguí la guía oficial *Enable Access Control* de tu versión y, si es un equipo compartido, hacelo antes de abrir el puerto a otras máquinas.
 
 ## Conexión a Atlas
 

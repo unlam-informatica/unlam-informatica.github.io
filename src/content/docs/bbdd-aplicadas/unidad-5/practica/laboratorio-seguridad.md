@@ -13,7 +13,7 @@ Presupone la lección [Seguridad, usuarios y permisos](/bbdd-aplicadas/unidad-5/
 Ejecutá esto únicamente en una instancia de laboratorio: crear logins requiere privilegios de servidor. Las contraseñas de ejemplo son didácticas y no deben reutilizarse. Todo se ejecutó en SQL Server 2022 sobre Linux; para repetirlo, usá una base nueva y, al terminar, la limpieza del final.
 :::
 
-Este laboratorio y el de [inyección](/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion/) y el de [backup](/bbdd-aplicadas/unidad-5/practica/laboratorio-backup/) comparten la base `LaboratorioU5`. Si ya la creaste, reutilizala vaciando antes los esquemas `ventas` y `operaciones`.
+Este laboratorio y el de [inyección](/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion/) y el de [backup](/bbdd-aplicadas/unidad-5/practica/laboratorio-backup/) comparten la base `LaboratorioU5`. Si ya la creaste, reutilizala eliminando antes los objetos y los esquemas `ventas` y `operaciones`, o empezá con una base nueva.
 
 ## Escenario
 
@@ -26,7 +26,7 @@ Una empresa necesita:
 
 ## Preparación
 
-La base se crea una sola vez (no se ejecutó en el verificador, que ya trabaja sobre una base propia):
+La base se crea una sola vez. Es una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos): necesitás el permiso `CREATE DATABASE` o, si no lo tenés, pedí una base y usala con `USE`. Este bloque puntual no se probó en un motor; el resto del laboratorio sí se ejecutó sobre esa base.
 
 <!-- check: U5.LS.R1 -->
 ```sql
@@ -249,7 +249,7 @@ REVERT;
 
 ## Parte 5 — `REVOKE` y `DENY`
 
-Se otorga el mismo acceso por dos rutas (rol y esquema) para ver qué hace cada sentencia. **Al final se revierte todo** (la versión anterior de este laboratorio dejaba un `SELECT` de esquema para el auditor, que terminaba leyendo `ventas.Cliente` contra el escenario).
+Se otorga el mismo acceso por dos rutas (rol y esquema) para ver qué hace cada sentencia. **Al final se revierte todo**: si quedara un `SELECT` de esquema para el auditor, terminaría leyendo `ventas.Cliente`, algo que el escenario no le permite.
 
 <!-- check: U5.LS.01 -->
 ```sql
@@ -455,7 +455,7 @@ ORDER BY name;
 | LoginU502D | 1 | 0 |
 | LoginU502E | 0 | 0 |
 
-El intento 1 no tiene dígitos ni símbolos, por eso cuenta solo 2 categorías. El script de verificación elimina los logins al terminar.
+El intento 1 no tiene dígitos ni símbolos, por eso cuenta solo 2 categorías. Al terminar, eliminá los logins de práctica con `DROP LOGIN` si ya no los necesitás.
 </details>
 
 ### Ejercicio 3 · Verdadero o falso sobre DCL, roles y propietarios
@@ -477,8 +477,8 @@ Decidí y justificá:
 **Estrategia.** Para cada punto, recordar qué sentencia actúa sobre qué fila de permiso y desde qué ruta llega el acceso.
 
 1. **Falso.** `REVOKE` solo quita el permiso de ese principal; el `GRANT` del rol sigue vigente (paso 3 y 4 de la tabla de precedencia de la lección). Para impedirlo hay que usar `DENY`.
-2. **Verdadero.** `DENY` gana sobre cualquier `GRANT`, aunque venga de otra ruta (verificado: el `GRANT` directo del paso 3 no levantó el `DENY` del rol).
-3. **Verdadero.** El permiso de esquema incluye los objetos presentes y futuros (cátedra y verificado en la lección).
+2. **Verdadero.** `DENY` gana sobre cualquier `GRANT`, aunque venga de otra ruta (se ve en el paso 3: el `GRANT` directo no levantó el `DENY` del rol).
+3. **Verdadero.** El permiso de esquema incluye los objetos presentes y futuros (lo indica la cátedra y se muestra en la lección).
 4. **Falso.** El motor responde el error 15138; primero hay que reasignar el esquema con `ALTER AUTHORIZATION`.
 5. **Falso.** `DEFAULT_DATABASE` solo indica adónde se conecta; hace falta un usuario en la base y permisos.
 </details>
@@ -565,7 +565,7 @@ Completá con SI o NO si cada usuario puede ejecutar cada consulta **al terminar
 <details>
 <summary>Resolución</summary>
 
-**Estrategia.** Para cada usuario, juntar sus permisos directos y los de su rol, y aplicar: un `DENY` gana sobre cualquier `GRANT`; `REVOKE` solo quita la fila del principal indicado. Después se verificó cada celda ejecutando la consulta con `EXECUTE AS USER` en el motor.
+**Estrategia.** Para cada usuario, juntar sus permisos directos y los de su rol, y aplicar: un `DENY` gana sobre cualquier `GRANT`; `REVOKE` solo quita la fila del principal indicado. Después se comprobó cada celda ejecutando la consulta con `EXECUTE AS USER` en SQL Server; podés repetir la comprobación del mismo modo.
 
 <!-- check: U5.05 -->
 ```sql

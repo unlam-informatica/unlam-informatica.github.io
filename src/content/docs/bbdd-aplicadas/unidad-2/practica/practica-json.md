@@ -10,7 +10,7 @@ Siete ejercicios de validación, consulta, modificación y generación de JSON. 
 
 ## Conjunto de datos
 
-Creá una base de prueba (por ejemplo `CREATE DATABASE PracticaJson;`), cambiá a ella y ejecutá:
+Creá una base de práctica (por ejemplo `CREATE DATABASE PracticaJson;`; necesitás el permiso `CREATE DATABASE` o una base que te hayan dado, ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)), cambiá a ella con `USE PracticaJson;` y ejecutá este script una sola vez:
 
 <!-- check: U2.22 -->
 ```sql

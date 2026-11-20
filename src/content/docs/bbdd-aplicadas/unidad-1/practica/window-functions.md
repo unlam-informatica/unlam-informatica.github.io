@@ -10,7 +10,7 @@ Doce ejercicios originales sobre funciones de ventana, con datos propios: una ca
 
 ## Conjunto de datos
 
-Ocho corredores en dos categorías, cinco etapas y un tiempo en minutos por corredor y etapa. Tito abandona antes de la etapa 4, y hay empates de tiempo a propósito. Creá una base de prueba (por ejemplo `CREATE DATABASE PracticaCarrera;`), cambiá a ella y ejecutá:
+Ocho corredores en dos categorías, cinco etapas y un tiempo en minutos por corredor y etapa. Tito abandona antes de la etapa 4, y hay empates de tiempo a propósito. Creá una base de práctica (por ejemplo `CREATE DATABASE PracticaCarrera;`; necesitás el permiso `CREATE DATABASE` o una base que te hayan dado, ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)), cambiá a ella con `USE PracticaCarrera;` y ejecutá este script una sola vez:
 
 <!-- check: U1.42 -->
 ```sql
@@ -84,7 +84,7 @@ SELECT
 |---:|---:|---:|
 | 8 | 5 | 38 |
 
-Todos los ejercicios siguen sobre este esquema. En cada uno, el script de la resolución se ejecuta después de este.
+Todos los ejercicios siguen sobre este esquema. En cada ejercicio, el script de la resolución se ejecuta después de este, sobre la misma base.
 
 ## Ejercicios
 

@@ -9,8 +9,16 @@ sidebar:
 
 Las unidades siguientes suponen que ya manejás el SQL básico: crear estructuras, cargar y consultar datos, proteger
 la integridad y empaquetar lógica en el servidor. Esta lección lo repasa con un único dominio de ejemplo, un esquema
-`academia` con alumnos, materias e inscripciones, y con datos sintéticos. Cada ejemplo se ejecutó en SQL Server 2022
-y es autocontenido: copiado en una base vacía produce el resultado indicado.
+`academia` con alumnos, materias e inscripciones, y con datos sintéticos. Los resultados se obtuvieron con SQL Server
+2022.
+
+Cada bloque de código que crea objetos empieza por `CREATE SCHEMA academia;` y por las tablas y los datos que necesita,
+de modo que se puede ejecutar solo: no depende de los bloques anteriores. Justamente por eso **no se pueden ejecutar
+dos de esos bloques seguidos en la misma base**: el segundo falla porque el esquema `academia` y sus tablas ya
+existen. Para probar cada ejemplo, usá una base de práctica recién creada o borrá antes los objetos y el esquema
+`academia` de la ejecución previa. El único bloque que no crea nada es el de `ISNULL`, `COALESCE` y `NULLIF`: solo declara variables y se puede
+ejecutar en cualquier base y cuantas veces quieras. Si no sabés qué es una base de práctica, ver
+[Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos).
 
 :::note[Convenciones de los ejemplos]
 Los ejemplos propios usan tablas en singular y PascalCase (`Alumno`, `Inscripcion`) y un esquema en minúsculas
@@ -142,8 +150,17 @@ Tabla    ≈ Objeto dentro de un esquema
 
 ![db-organization](/bbdd-aplicadas/unidad-1/images/db-organization.png)
 
-La cláusula `COLLATE` define las reglas de comparación y orden del texto (mayúsculas, acentos). El detalle está en
-la [guía de Collation](/bbdd-aplicadas/unidad-2/teoria/collation/).
+`CREATE DATABASE` crea una base nueva; `USE` hace que las sentencias siguientes se ejecuten en ella. La cláusula
+`COLLATE` define las reglas de comparación y orden del texto (mayúsculas, acentos). El detalle está en la
+[guía de Collation](/bbdd-aplicadas/unidad-2/teoria/collation/).
+
+Los ejemplos de esta lección trabajan dentro de un esquema propio, `academia`. Usarlo tiene tres ventajas: agrupa los
+objetos del ejemplo en un espacio de nombres separado, evita depender del esquema `dbo` implícito (en este sitio los
+objetos se crean siempre con esquema explícito) y permite eliminar o recrear todo fácilmente. Cada bloque que lo
+necesita lo crea con `CREATE SCHEMA academia;`.
+
+Para crear una base hace falta el permiso `CREATE DATABASE`, que tiene un `sysadmin` (por ejemplo, vos en tu
+instalación local). El siguiente bloque es un ejemplo de esa sentencia:
 
 <!-- check: U1.T.RS.R1 -->
 ```sql
@@ -154,8 +171,10 @@ USE Unlam;
 GO
 ```
 
-Ese bloque no se ejecuta en el entorno de verificación (crear bases de datos está fuera de su alcance); está
-registrado como revisado. Los demás ejemplos asumen una base vacía y crean el esquema `academia`.
+Este bloque `CREATE DATABASE` **no se probó en un motor**: es la única parte de esta lección que no se ejecutó. Se
+comporta como documenta Microsoft; comprobalo en tu instalación. Si ya tenés una base de práctica, no hace falta crear
+otra: cambiá a ella con `USE NombreDeTuBase;`. Los demás ejemplos asumen que estás en una base de práctica donde
+todavía no existe el esquema `academia`, y cada uno lo crea junto con sus tablas.
 
 <!-- check: U1.T.RS.01 -->
 ```sql
@@ -849,7 +868,7 @@ resultado buscado, agregá `AND EXISTS (...)`.
 
 ## Funciones de agregado
 
-Resumen un grupo de filas en un valor: `COUNT`, `SUM`, `AVG`, `MIN` y `MAX`. Se indica el criterio de agrupado con
+Las funciones de agregado resumen un grupo de filas en un valor: `COUNT`, `SUM`, `AVG`, `MIN` y `MAX`. Se indica el criterio de agrupado con
 `GROUP BY`. `COUNT` devuelve un entero; las demás respetan el tipo de la columna (el `AVG` de un `INT` es entero).
 `WHERE` filtra filas **antes** de agrupar; `HAVING` filtra grupos **después** de agregar. `COUNT(DISTINCT col)`
 cuenta valores distintos.
@@ -1247,7 +1266,7 @@ No se permite eliminar tablas.
 |---:|---|
 | 3609 | existe |
 
-El `ROLLBACK` deshizo el `DROP TABLE`; el 3609 indica que la transacción terminó dentro del trigger. También existe el
+El `ROLLBACK` deshizo el `DROP TABLE`; el 3609 indica que la transacción terminó dentro del trigger. El bloque termina eliminando el trigger con `DROP TRIGGER`: si lo interrumpís antes, ejecutá esa última sentencia a mano, porque mientras exista impide borrar tablas en esa base. También existe el
 **logon trigger**, a nivel de instancia, que se dispara al iniciar sesión (por ejemplo, para limitar conexiones).
 
 ## Funciones de usuario

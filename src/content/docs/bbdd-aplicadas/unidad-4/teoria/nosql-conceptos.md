@@ -7,7 +7,7 @@ sidebar:
 
 [← Unidad 4](/bbdd-aplicadas/unidad-4/teoria/)
 
-Esta página reúne los conceptos con los que se estudia el resto de la unidad: por qué surgió NoSQL, qué tipos de datos maneja, los modelos jerárquico, de texto y de grafos, las garantías ACID y BASE, el teorema CAP con sus matices y los cuatro modelos de almacenamiento (clave-valor, documentos, grafos y columnas). Los ejemplos que se ejecutan se comprobaron en SQL Server 2022 y MongoDB 7.0 (`U4.T.NC.01` a `U4.T.NC.04`). Los de Cassandra y Neo4j son plantillas de sintaxis: el portal no tiene esos motores.
+Esta página reúne los conceptos con los que se estudia el resto de la unidad: por qué surgió NoSQL, qué tipos de datos maneja, los modelos jerárquico, de texto y de grafos, las garantías ACID y BASE, el teorema CAP con sus matices y los cuatro modelos de almacenamiento (clave-valor, documentos, grafos y columnas). Los resultados de los ejemplos se obtuvieron con SQL Server 2022 y MongoDB 7.0 (cada ejemplo crea sus propias tablas o colecciones, así que se reproduce en una base de práctica vacía). Los de Cassandra y Neo4j son plantillas de sintaxis que **no se probaron en un motor**: para ejecutarlos necesitás instalar esos productos y seguir su documentación.
 
 ## Para qué sirve
 

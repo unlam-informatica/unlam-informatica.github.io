@@ -7,7 +7,7 @@ sidebar:
 
 [← Unidad 3](/bbdd-aplicadas/unidad-3/practica/)
 
-Veinte ejercicios sobre índices, plan de ejecución, estadísticas, optimización de consultas, columnstore y métricas. Todos son originales, con datos sintéticos generados por fórmula, y las resoluciones se ejecutaron en SQL Server 2022.
+Veinte ejercicios sobre índices, plan de ejecución, estadísticas, optimización de consultas, columnstore y métricas. Todos son originales, con datos sintéticos generados por fórmula, y los resultados esperados se obtuvieron con SQL Server 2022.
 
 ## Qué presupone
 
@@ -17,9 +17,9 @@ Veinte ejercicios sobre índices, plan de ejecución, estadísticas, optimizaci�
 
 ## Conjunto de datos
 
-Un taller mecánico: 300 clientes y 15.000 órdenes de trabajo. `Estado` es muy desparejo (85 % `Cerrada`, 14 % `Abierta`, 1 % `Anulada`) y `Patente` es única por orden. Cada resolución se ejecuta sobre una base vacía que primero crea este conjunto, y cuando el ejercicio necesita más tablas, las trae en el enunciado.
+Un taller mecánico: 300 clientes y 15.000 órdenes de trabajo. `Estado` es muy desparejo (85 % `Cerrada`, 14 % `Abierta`, 1 % `Anulada`) y `Patente` es única por orden. Trabajá en una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) vacía, nunca con datos reales (si no tenés el permiso `CREATE DATABASE`, pedí una). Antes de empezar, ejecutá el script siguiente, que es la **preparación** común: crea los esquemas `taller` y `diag`, las tablas `Cliente` y `Orden` con sus datos y las dos funciones auxiliares. Cada ejercicio parte de ese estado más lo que su enunciado indica que se crea («abajo» o «en el bloque siguiente»). Las resoluciones crean índices y modifican datos; para que lo que ves coincida con el resultado esperado, conviene volver a una base vacía y repetir la preparación antes de cada ejercicio (o, como mínimo, antes de los que cambian datos o índices). Cuando un ejercicio necesita más tablas, las trae en el enunciado.
 
-Para comparar planes usamos dos funciones auxiliares. `diag.OperadoresDe` devuelve los operadores físicos de una sentencia marcada con un comentario (`/*X*/`) y sus lecturas lógicas (equivalente a `SET STATISTICS IO`); `diag.FilasEstimadasYReales` devuelve las filas estimadas y reales de cada operador. Se explican en [Índices y optimización](/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/#datos-de-ejemplo-y-cómo-medimos) y en [Plan de ejecución y estadísticas](/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/#estadísticas-desactualizadas). Los costos y tiempos de ejecución no se usan como evidencia porque cambian de un equipo a otro.
+Para comparar planes usamos dos funciones auxiliares. `diag.OperadoresDe` devuelve los operadores físicos de una sentencia marcada con un comentario (`/*X*/`) y sus lecturas lógicas (equivalente a `SET STATISTICS IO`; los mismos operadores se ven en el plan gráfico de SSMS con `Ctrl+M`); `diag.FilasEstimadasYReales` devuelve las filas estimadas y reales de cada operador. Se explican en [Índices y optimización](/bbdd-aplicadas/unidad-3/teoria/indices-optimizacion/#datos-de-ejemplo-y-cómo-medimos) y en [Plan de ejecución y estadísticas](/bbdd-aplicadas/unidad-3/teoria/indices-y-planes/#estadísticas-desactualizadas). Los costos y tiempos de ejecución no se usan como evidencia porque cambian de un equipo a otro.
 
 <!-- check: U3.P.RE.00 -->
 ```sql

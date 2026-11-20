@@ -21,7 +21,7 @@ Las consultas de perfilado, las métricas y los umbrales de este laboratorio son
 
 ## Preparación
 
-Ejecutá el script en una base de laboratorio vacía (por ejemplo, una creada para la práctica). Los datos son sintéticos: los DNI (`00000001`, `00000002`, …), los nombres y los correos (`@ejemplo.test`) son evidentemente ficticios. El instante de referencia es fijo (`2026-06-30`) para que los resultados sean reproducibles; en un sistema real usarías la fecha del momento de medir.
+Ejecutá el script completo en una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) nueva y sin otros objetos (`CREATE DATABASE CalidadU6;` y `USE CalidadU6;`; si no tenés el permiso `CREATE DATABASE`, pedí una base y usala con `USE`). Los ejercicios 16 a 20 usan las tablas que crea este script; el 20 agrega restricciones, así que, para repetirlo, volvé a crear la base. Los datos son sintéticos: los DNI (`00000001`, `00000002`, …), los nombres y los correos (`@ejemplo.test`) son evidentemente ficticios. El instante de referencia es fijo (`2026-06-30`) para que los resultados sean reproducibles; en un sistema real usarías la fecha del momento de medir.
 
 <!-- check: U6.P.01 -->
 ```sql

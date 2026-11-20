@@ -13,7 +13,7 @@ sidebar:
 Los ejercicios 2 a 5 trabajan con SQL Server y no forman parte del programa 2024; el ejercicio 1 es conceptual y corresponde a "Qué es una API". Se conservan como práctica complementaria.
 :::
 
-Cinco ejercicios sobre API REST y sobre cómo procesar sus respuestas desde T-SQL. Presuponen la lección de [APIs desde SQL Server](/bbdd-aplicadas/unidad-2/teoria/apis-desde-sql/) y [JSON en SQL Server](/bbdd-aplicadas/unidad-2/teoria/json-en-sql/). Las respuestas de las API se trabajan **guardadas como texto**, de modo que los ejercicios se pueden reproducir sin red. Los ejercicios 1 a 4 no modifican la configuración del servidor. Creá una base de prueba (por ejemplo `CREATE DATABASE PracticaApis;`) y cambiá a ella.
+Cinco ejercicios sobre API REST y sobre cómo procesar sus respuestas desde T-SQL. Presuponen la lección de [APIs desde SQL Server](/bbdd-aplicadas/unidad-2/teoria/apis-desde-sql/) y [JSON en SQL Server](/bbdd-aplicadas/unidad-2/teoria/json-en-sql/). Las respuestas de las API se trabajan **guardadas como texto**, de modo que los ejercicios se pueden reproducir sin red. Los ejercicios 1 a 4 no modifican la configuración del servidor. Creá una base de práctica (por ejemplo `CREATE DATABASE PracticaApis;`, ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)) y cambiá a ella con `USE PracticaApis;`.
 
 :::danger[Seguridad]
 El ejercicio 5 usa `Ole Automation Procedures`. No lo habilites en un servidor compartido ni de producción: amplía la superficie de ataque de la instancia. Si lo probás en una instancia local de práctica, volvé a dejar la opción en 0 al terminar.
@@ -293,5 +293,5 @@ GO
 
 **Resultado esperado.** Con una API que responde 200 con JSON, una fila con `EstadoHttp = 200` y el texto de la respuesta; con una URL inexistente o una respuesta 404, una fila con el mensaje `La API no devolvió un JSON con estado 200.` (o el error del objeto HTTP, con su origen y descripción). El resultado exacto depende de la API elegida.
 
-**Verificación.** Este ejercicio queda **pendiente de verificación específica**: requiere red externa, una instancia de SQL Server para Windows con la opción habilitada (el objeto COM no existe en SQL Server para Linux, que es el entorno de pruebas de la materia) y un servicio externo cuyo comportamiento no controlamos. Para procesar la respuesta una vez guardada, ver el ejercicio 4, que sí está verificado.
+**Qué necesitás para ejecutarlo.** Este ejercicio **no se probó en un motor**: requiere acceso a internet, una instancia de SQL Server para Windows con la opción habilitada y permisos de administrador (el objeto COM no existe en SQL Server para Linux) y un servicio externo cuyo comportamiento no controlamos. Para procesar la respuesta una vez guardada, ver el ejercicio 4, que se puede reproducir sin red.
 </details>

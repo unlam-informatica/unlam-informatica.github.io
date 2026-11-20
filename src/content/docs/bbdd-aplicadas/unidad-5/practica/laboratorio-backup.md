@@ -24,13 +24,13 @@ La **cuenta del servicio de SQL Server** debe poder escribir en las carpetas de 
 
 En los bloques se muestran las rutas de Windows; reemplazalas por las de Linux si corresponde (por ejemplo, `'/var/opt/mssql/backup/LB_full.bak'`). `COMPRESSION` no existe en todas las ediciones (por ejemplo, no en Express): si falla, quitala. En Linux, el directorio de backups tiene que existir y pertenecer al usuario `mssql`.
 
-## Cómo se verificó
+## Qué resultados vas a obtener
 
-El portal ejecutó este laboratorio completo en una instancia de prueba (SQL Server 2022). Para que el resultado no dependa del reloj, el error lógico se marca con una transacción `WITH MARK` y la restauración se detiene con `STOPBEFOREMARK`. En el paso 8 también se muestra la alternativa con `STOPAT`.
+Los resultados de este laboratorio se obtuvieron ejecutándolo completo con SQL Server 2022 sobre Linux; salvo las rutas, que cambian según la plataforma (ver la sección anterior), tu salida debería coincidir. Para que el resultado no dependa del reloj, el error lógico se marca con una transacción `WITH MARK` y la restauración se detiene con `STOPBEFOREMARK`. En el paso 8 también se muestra la alternativa con `STOPAT`.
 
 ## 1. Preparar la base y el modelo FULL
 
-La base es autocontenida: no depende de otros laboratorios.
+La base es autocontenida: no depende de otros laboratorios. Crearla requiere el permiso `CREATE DATABASE` (ver [Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)); al terminar podés borrarla con `DROP DATABASE`.
 
 <!-- check: U5.LB.R1 -->
 ```sql
@@ -145,7 +145,7 @@ Registrá:
 - los nombres lógicos de datos y de log (de `FILELISTONLY`; son `LaboratorioBackup` y `LaboratorioBackup_log` si no los cambiaste);
 - la diferencia entre verificar un archivo y demostrar una restauración.
 
-El historial de lo que se respaldó también está en `msdb`. Resultado del verificador al ejecutar el laboratorio completo:
+El historial de lo que se respaldó también está en `msdb`. Si ejecutaste el laboratorio completo en orden, esta consulta devuelve la lista de backups de la base:
 
 <!-- check: U5.T.BK.13 -->
 ```sql
@@ -270,7 +270,7 @@ Proponé cambios para cumplir un RPO de 5 minutos y un RTO de 30 minutos con una
 
 ## Ejercicios
 
-Los ejercicios con código usan una base de prueba en modelo `FULL` con la tabla `dbo.Reserva (ReservaId INT IDENTITY, Concepto VARCHAR(20))`. Las restauraciones se hacen a una base nueva con `MOVE`, sin tocar la original. Las rutas son las de Windows; en Linux se reemplazan como se indicó arriba. El verificador del portal ejecuta cada resolución en una base descartable y con archivos propios del ejercicio.
+Los ejercicios con código usan una base de prueba en modelo `FULL` con la tabla `dbo.Reserva (ReservaId INT IDENTITY, Concepto VARCHAR(20))`. Las restauraciones se hacen a una base nueva con `MOVE`, sin tocar la original. Las rutas son las de Windows; en Linux se reemplazan como se indicó arriba. Para reproducir una resolución, creá antes una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) en modelo `FULL` con esa tabla (`CREATE DATABASE LaboratorioU5;` y `USE LaboratorioU5;`), y usá archivos de backup propios de cada ejercicio para no mezclar cadenas. Al terminar podés borrar las bases restauradas y la de práctica.
 
 ---
 
@@ -629,7 +629,7 @@ SELECT 'STOPATMARK', Concepto FROM LaboratorioU5_Rest2.dbo.Reserva
 ORDER BY Opcion, Concepto;
 ```
 
-**Resultado esperado** (se asume que el completo se restauró antes con `NORECOVERY` en ambas bases).
+**Resultado esperado.** Se asume que el completo se restauró antes con `NORECOVERY` en ambas bases (`LaboratorioU5_Rest1` y `LaboratorioU5_Rest2`, como indican los comentarios; ese `RESTORE DATABASE` no se repite en el bloque).
 
 | Opcion | Concepto |
 |---|---|
@@ -672,7 +672,7 @@ Se insertó una fila buena, pasaron unos segundos, se tomó una hora de referenc
 <details>
 <summary>Resolución</summary>
 
-**Estrategia.** Se guarda la hora del servidor (`GETDATE()`) antes del error, con unos segundos de margen a cada lado para no depender de la precisión del reloj, y se usa en `STOPAT`. Como el valor debe estar en el literal del `RESTORE`, el verificador lo arma con SQL dinámico; a mano se escribe la hora.
+**Estrategia.** Se guarda la hora del servidor (`GETDATE()`) antes del error, con unos segundos de margen a cada lado para no depender de la precisión del reloj, y se usa en `STOPAT`. En el bloque, la hora anotada se escribe como literal en el `RESTORE`: la fecha que figura es un ejemplo y tenés que reemplazarla por la que devolvió `GETDATE()` en tu ejecución. Como el `RESTORE` está en el mismo lote que la declaración, también podés pasar la variable directamente (`STOPAT = @Momento`): la sintaxis de `RESTORE` admite una variable de tipo fecha y hora. Esa variante no se ejecutó en este laboratorio.
 
 <!-- check: U5.32 -->
 ```sql
@@ -735,7 +735,7 @@ RESTORE LOG LaboratorioU5_Rest FROM DISK = 'D:\SQLBackups\U5_33_log2.trn' WITH R
 SELECT COUNT(*) AS FilasRecuperadas FROM LaboratorioU5_Rest.dbo.Reserva;
 ```
 
-**Resultado esperado** (el verificador junta el aviso del `CATCH` y el orden correcto en una tabla; al final hay 2 filas).
+**Resultado esperado.** Si ejecutás el bloque tal cual, el `CATCH` devuelve solo la fila «Restaurar log2 sin log1»; la tabla siguiente reúne además el resultado del orden correcto, que se obtuvo anotando cada paso en una tabla temporal. Al final hay 2 filas recuperadas.
 
 | Paso | Resultado |
 |---|---|
@@ -781,7 +781,7 @@ RESTORE LOG LaboratorioU5_Sec FROM DISK = 'D:\SQLBackups\U5_34_log2.trn'
 RESTORE DATABASE LaboratorioU5_Sec WITH RECOVERY;                -- failover manual
 ```
 
-**Resultado esperado** (el verificador consulta el estado tras cada paso).
+**Resultado esperado.** El bloque muestra la consulta de estado una sola vez; para obtener la tabla completa, ejecutá la misma consulta después de cada restauración (en el paso 4, sobre la base ya recuperada). Cada fila de la tabla corresponde a uno de esos momentos.
 
 | Paso | Estado | EnStandby | Filas |
 |---|---|---|---|

@@ -9,7 +9,7 @@ sidebar:
 
 Operaciones de MongoDB Query Language (MQL) sobre colecciones: insertar, consultar con `find()` y sus operadores, actualizar (incluido `upsert`), reemplazar, eliminar y combinar varias escrituras con `bulkWrite()`. Presupone [MongoDB — Introducción](/bbdd-aplicadas/unidad-4/teoria/mongodb-introduccion/).
 
-Todos los resultados de la página se obtuvieron en MongoDB 7.0 con `mongosh` 2.x, y los scripts completos están en `academic-sources/bbdd-aplicadas/checks/mongo/` (`U4.T.CRUD.01` a `U4.T.CRUD.07`).
+Todos los resultados de la página se obtuvieron con MongoDB 7.0 y `mongosh` 2.x. Para reproducirlos, abrí `mongosh`, elegí una base de práctica (por ejemplo, `use practica`; se crea al insertar el primer documento) y cargá los datos de la sección siguiente.
 
 ## Para qué sirve
 
@@ -25,7 +25,7 @@ Una tienda registra productos y pedidos. Hay que cargarlos, buscar los que cumpl
 
 ## Datos de los ejemplos
 
-Las consultas de lectura usan una colección `productos` con 8 documentos. Cada ejemplo parte de este estado inicial (el check inserta lo mismo en una base nueva):
+Las consultas de lectura y de actualización usan una colección `productos` con 8 documentos. Cargala con el script siguiente en una base vacía. Los ejemplos de inserción (`socios`) y de fechas (`eventos`) crean su propia colección en el bloque. Cada sección parte de este estado inicial; si ya ejecutaste actualizaciones o borrados y querés repetir un ejemplo, ejecutá `db.productos.drop()` y volvé a cargar el script. Dentro de las secciones de `upsert`, `replaceOne()` y `delete`, los bloques son consecutivos (usan el documento `_id: 20` que crea el primer `upsert`), y los dos bloques de `bulkWrite()` también:
 
 <!-- check: U4.T.CRUD.02 -->
 ```javascript
@@ -41,7 +41,7 @@ db.productos.insertMany([
 ]);
 ```
 
-También hay colecciones `clientes` y `pedidos` (con los ítems embebidos); se usan en [Aggregation Pipeline](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/#datos-de-los-ejemplos).
+El ejemplo de `$elemMatch` usa además una colección `pedidos` (con los ítems embebidos) y existe `clientes`: ambas se cargan con el script de [Aggregation Pipeline · Datos de los ejemplos](/bbdd-aplicadas/unidad-4/teoria/mongodb-agregacion/#datos-de-los-ejemplos), que también incluye `productos`; cargá ese script en lugar de este si vas a usar `pedidos`.
 
 ## Create: insertar documentos
 

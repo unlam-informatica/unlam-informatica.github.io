@@ -27,7 +27,7 @@ No uses datos personales reales ni cargues secretos en el repositorio: todos los
 
 ## Preparación
 
-Ejecutá el script en una base de laboratorio vacía. Es el modelo mínimo ya separado en entidades; los nombres, DNI y correos son ficticios, y las fechas de corte son fijas para que los resultados se reproduzcan.
+Ejecutá el script completo en una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) nueva y sin otros objetos (`CREATE DATABASE PrivacidadU6;` y `USE PrivacidadU6;`; si no tenés el permiso `CREATE DATABASE`, pedí una base y usala con `USE`). Los ejercicios 24 a 28 parten de estas tablas; el 26 además necesita haber ejecutado antes el 25, y el 27 modifica los datos, así que, para repetirlos, volvé a crear la base. Es el modelo mínimo ya separado en entidades; los nombres, DNI y correos son ficticios, y las fechas de corte son fijas para que los resultados se reproduzcan.
 
 <!-- check: U6.P.02 -->
 ```sql
@@ -319,7 +319,7 @@ Con el enmascaramiento del ejercicio 25, `AnalistaMascara` conoce el DNI de una 
 <details>
 <summary>Resolución</summary>
 
-**Estrategia.** La máscara se aplica al *resultado* y no al predicado: `WHERE Dni = '00000002'` se evalúa con el valor real, así que el conteo revela si existe. El control correcto es de acceso: denegar `SELECT` sobre la columna sensible a quien no la necesita. Se parte de la configuración del ejercicio 25.
+**Estrategia.** La máscara se aplica al *resultado* y no al predicado: `WHERE Dni = '00000002'` se evalúa con el valor real, así que el conteo revela si existe. El control correcto es de acceso: denegar `SELECT` sobre la columna sensible a quien no la necesita. Se parte de la configuración del ejercicio 25: ejecutá antes ese bloque en la misma base.
 
 <!-- check: U6.26 -->
 ```sql
@@ -508,7 +508,7 @@ ORDER BY Orden, Dato;
 
 ## Actividad integradora (sin resolución única)
 
-Esta actividad cierra el laboratorio como trabajo de diseño; no tiene una resolución verificable en el motor.
+Esta actividad cierra el laboratorio como trabajo de diseño; no tiene una única resolución ni consultas para ejecutar: lo que se evalúa es el razonamiento y la fundamentación.
 
 1. **Matriz normativa por finalidad.** Para turnos, atención clínica, facturación, analítica y marketing, indicá base o habilitación (y la condición adicional para datos de salud), la información que recibe el titular, el dato mínimo, el plazo de conservación y su evento inicial, los controles de seguridad y el contrato con el proveedor. No respondas "consentimiento para todo": analizá cada finalidad por separado (Ley art. 5, 6 y 7; RGPD art. 6 y 9).
 2. **Incidente.** Un bucket del proveedor estuvo público durante 36 horas. Armá la línea de tiempo (detección, contención, evidencia, evaluación de riesgo, comunicación) y señalá qué exige el RGPD (notificación a la autoridad a más tardar 72 horas después de tener constancia, art. 33, y comunicación a los interesados si hay alto riesgo, art. 34). La Ley 25.326 impone el deber de seguridad (art. 9) pero su texto no fija un plazo de notificación. Características de ISO/IEC 25012 afectadas: confidencialidad, conformidad, credibilidad y trazabilidad.

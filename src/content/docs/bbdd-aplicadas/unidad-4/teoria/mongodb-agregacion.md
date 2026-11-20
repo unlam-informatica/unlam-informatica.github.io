@@ -9,7 +9,7 @@ sidebar:
 
 Esta página reúne tres temas del programa: el **Aggregation Pipeline** (agrupar, calcular y combinar documentos), las **vistas** que se definen con un pipeline, y los **índices** con las **estadísticas de ejecución** que permiten saber si una consulta los aprovecha. Presupone [CRUD y consultas](/bbdd-aplicadas/unidad-4/teoria/mongodb-crud/).
 
-Los resultados se obtuvieron en MongoDB 7.0 con `mongosh` 2.x. Los scripts completos están en `academic-sources/bbdd-aplicadas/checks/mongo/` (`U4.T.AGG.01` a `07` y `U4.T.IDX.01` a `05`).
+Los resultados se obtuvieron con MongoDB 7.0 y `mongosh` 2.x. Para reproducirlos, trabajá en una base de práctica (`use practica`, por ejemplo): en MongoDB una base y sus colecciones se crean al insertar el primer documento. Los ejemplos de pipeline y vistas usan las colecciones `productos`, `clientes` y `pedidos` de la sección siguiente, que se cargan una sola vez; los de índices crean sus propias colecciones, como se indica en cada caso.
 
 ## Para qué sirve
 
@@ -17,7 +17,7 @@ Los resultados se obtuvieron en MongoDB 7.0 con `mongosh` 2.x. Los scripts compl
 
 ## Datos de los ejemplos
 
-Una tienda con `productos`, `clientes` y `pedidos`. Cada pedido tiene sus ítems **embebidos** en un array, y el pedido 108 referencia un cliente (`c9`) que no existe, para mostrar qué pasa con un `$lookup` sin coincidencia.
+Una tienda con `productos`, `clientes` y `pedidos`. Ejecutá el script siguiente una vez, en una base vacía; los ejemplos de pipeline y de vistas parten de estos datos (si los modificás, `db.dropDatabase()` y volvé a cargarlos). Cada pedido tiene sus ítems **embebidos** en un array, y el pedido 108 referencia un cliente (`c9`) que no existe, para mostrar qué pasa con un `$lookup` sin coincidencia.
 
 <!-- check: U4.T.AGG.01 -->
 ```javascript
@@ -616,7 +616,7 @@ Un **índice** es una estructura ordenada (un árbol B) sobre uno o más campos 
 | `totalDocsExamined` | `executionStats` | Documentos leídos de la colección |
 | `executionTimeMillis` | `executionStats` | Tiempo (depende del equipo; no se usa para comparar ejemplos) |
 
-La relación que importa es la de `nReturned` frente a lo examinado: una consulta eficiente examina casi lo mismo que devuelve. Una colección de 1000 órdenes (`cliente` entre `c0` y `c49`, 20 órdenes por cliente):
+La relación que importa es la de `nReturned` frente a lo examinado: una consulta eficiente examina casi lo mismo que devuelve. Se usa una colección `ordenes` de 1000 documentos (`cliente` entre `c0` y `c49`, 20 órdenes por cliente). Para crearla, ejecutá en `mongosh`: `const docs = []; for (let i = 1; i <= 1000; i++) docs.push({ _id: i, cliente: "c" + (i % 50), estado: ["pendiente", "entregado", "cancelado", "entregado"][i % 4], total: (i * 7) % 500, fecha: new Date(Date.UTC(2026, 0, 1) + i * 86400000) }); db.ordenes.insertMany(docs);`. Los bloques siguientes sobre `ordenes` (simple y compuesto) se ejecutan en el orden en que aparecen:
 
 <!-- check: U4.T.IDX.01 -->
 ```javascript
@@ -782,6 +782,8 @@ También existen los **hashed** (`{ campo: "hashed" }`, para sharding por hash y
 
 ### Consultas cubiertas (*covered queries*)
 
+Los tres ejemplos que siguen (cubiertas, `hint()` y listado de índices) usan una colección `catalogo` de 500 productos, que se ejecutan en ese orden sobre la misma colección. Para crearla: `const docs = []; for (let i = 1; i <= 500; i++) docs.push({ _id: i, categoria: "cat" + (i % 10), precio: i, nombre: "producto" + i }); db.catalogo.insertMany(docs);`.
+
 Una consulta está **cubierta** cuando el índice contiene todos los campos que filtra y todos los que devuelve: se responde solo con el índice, sin leer los documentos. En `explain()` se ve `PROJECTION_COVERED` sobre `IXSCAN` y `totalDocsExamined: 0`.
 
 <!-- check: U4.T.IDX.04 -->
@@ -823,6 +825,8 @@ db.catalogo.find({ categoria: "cat3" }).hint({ $natural: 1 }).explain("execution
 El índice compuesto examina solo lo que devuelve; el simple lee 400 documentos para quedarse con 40.
 
 ### Estadísticas de colecciones e índices
+
+Este ejemplo usa otra versión de `catalogo`, de 300 documentos y sin el campo `nombre`: eliminá la anterior con `db.catalogo.drop()` y creala con `const docs = []; for (let i = 1; i <= 300; i++) docs.push({ _id: i, categoria: "cat" + (i % 5), precio: i }); db.catalogo.insertMany(docs);`.
 
 - `db.coleccion.stats()` informa la cantidad de documentos (`count`), los índices (`nindexes`) y los tamaños (`totalIndexSize`).
 - `$collStats` (como etapa de `aggregate`) devuelve las estadísticas de almacenamiento y el recuento (`{ $collStats: { count: {} } }`).

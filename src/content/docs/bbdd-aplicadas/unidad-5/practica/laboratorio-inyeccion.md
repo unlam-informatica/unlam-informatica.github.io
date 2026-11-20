@@ -20,7 +20,7 @@ El objetivo es observar, en una base aislada, cómo la concatenación modifica l
 No pruebes entradas de este tipo contra sistemas ajenos o productivos. El laboratorio no requiere permisos de DDL para la cuenta simulada, no ejecuta borrados y la entrada de prueba solo altera un filtro. Todos los datos son sintéticos.
 :::
 
-Todo se ejecutó en SQL Server 2022 sobre Linux. Usá una **base vacía** de laboratorio (por ejemplo, la misma `LaboratorioU5` del [laboratorio de seguridad](/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/)). Los scripts crean el esquema `seguridad`: si los repetís, eliminá antes los objetos o usá una base nueva.
+Los resultados se obtuvieron con SQL Server 2022 sobre Linux. Usá una [base de práctica](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos) sin otros objetos: por ejemplo, creá `LaboratorioU5` (`CREATE DATABASE LaboratorioU5;` y `USE LaboratorioU5;`) o reutilizá la del [laboratorio de seguridad](/bbdd-aplicadas/unidad-5/practica/laboratorio-seguridad/). Los scripts crean el esquema `seguridad`: si los repetís, eliminá antes ese esquema y sus objetos, o usá una base nueva.
 
 ## Preparación
 

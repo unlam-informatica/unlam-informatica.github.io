@@ -197,7 +197,7 @@ sequenceDiagram
     J->>DB: Ejecuta SQL alterado
 ```
 
-Por eso se parametriza **en el punto de ejecución**, aunque el dato provenga de la propia base. Se practica en el [ejercicio U5.15](/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion/#ejercicio-15--segundo-orden).
+Por eso se parametriza **en el punto de ejecución**, aunque el dato provenga de la propia base. Se practica en el [ejercicio 15 del laboratorio defensivo](/bbdd-aplicadas/unidad-5/practica/laboratorio-inyeccion/#ejercicio-15--segundo-orden).
 
 ## Defensa en profundidad
 

@@ -85,7 +85,7 @@ P002Lapicera azul         0000300.000120
 P003Resaltador amarillo   0000480.250000
 ```
 
-Hay dos formas de leerlo en SQL Server. La primera es cargar cada línea completa en una sola columna y cortarla con `SUBSTRING`. El archivo del ejemplo tiene fin de línea LF, por eso se usa `ROWTERMINATOR = '0x0a'`. En una ruta de Windows se reemplaza el ejemplo `C:\datos\producto_fijo.txt` por la ruta propia.
+Hay dos formas de leerlo en SQL Server. La primera es cargar cada línea completa en una sola columna y cortarla con `SUBSTRING`. El archivo del ejemplo tiene fin de línea LF, por eso se usa `ROWTERMINATOR = '0x0a'`. Para reproducirlo, guardá las tres líneas del archivo anterior como `producto_fijo.txt` en una carpeta que el servidor pueda leer y reemplazá la ruta de ejemplo `C:\datos\producto_fijo.txt` por la propia (en SQL Server para Linux, una ruta del sistema de archivos de Linux); ejecutá el bloque en una base de práctica (ver [Cómo estudiar · Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos)).
 
 <!-- check: U2.T.FMT.02 -->
 ```sql

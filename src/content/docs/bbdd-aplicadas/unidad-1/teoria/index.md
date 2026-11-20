@@ -22,7 +22,7 @@ Al terminar la unidad deberías poder:
 ## Antes de comenzar
 
 - **Conviene repasar:** lo visto en Bases de Datos (modelo relacional, claves, `SELECT` y `JOIN`) y los conceptos básicos de programación. La lección [Repaso de SQL](/bbdd-aplicadas/unidad-1/teoria/repaso-sql/) cubre lo que haga falta.
-- **Herramientas:** SQL Server 2019 o 2022 y una base de prueba vacía. Ver [Cómo estudiar · Herramientas](/bbdd-aplicadas/como-estudiar/#herramientas).
+- **Herramientas:** SQL Server 2019 o 2022 y una base de práctica donde puedas crear objetos. Ver [Cómo estudiar · Herramientas](/bbdd-aplicadas/como-estudiar/#herramientas) y [Antes de ejecutar los ejemplos](/bbdd-aplicadas/como-estudiar/#antes-de-ejecutar-los-ejemplos).
 
 ## Ruta de aprendizaje
 
@@ -40,7 +40,7 @@ Fija el vocabulario de toda la materia: qué es una base de datos y un DBMS, có
 Recorre DDL, DML, integridad referencial, NULL, consultas, subconsultas, vistas, procedimientos, triggers y funciones sobre un único dominio de ejemplo.
 
 - **Leé:** [Repaso de SQL](/bbdd-aplicadas/unidad-1/teoria/repaso-sql/)
-- **Practicá:** [Trabajo Práctico 1 — Repaso de SQL](/bbdd-aplicadas/unidad-1/practica/tp1/) (16 ejercicios). Resolvé los ejercicios 1 a 3, 5 a 10 y 12 a 14 ahora. Los ejercicios 4, 11, 15 y 16 usan CTE, PIVOT y window functions (según los presupuestos del propio TP): dejalos para las etapas 3, 4 y 5.
+- **Practicá:** [Trabajo Práctico 1 — Repaso de SQL](/bbdd-aplicadas/unidad-1/practica/tp1/) (16 ejercicios). Resolvé los ejercicios 1 a 3, 5 a 10 y 12 a 14 ahora. Los ejercicios 4, 11, 15 y 16 usan CTE, PIVOT y window functions (según lo que cada enunciado presupone): dejalos para las etapas 3, 4 y 5.
 - **Comprobá:** [autoevaluación de la lección](/bbdd-aplicadas/unidad-1/teoria/repaso-sql/#autoevaluación)
 
 ### 3. Window functions
