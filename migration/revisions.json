@@ -1880,6 +1880,528 @@
       "stage": "E10",
       "reason": "Experiencia de estudio: presentaciones de unidad con ruta de aprendizaje, índices de práctica, orden pedagógico y visibilidad en el menú (sidebar), función de los resúmenes integradores, título descriptivo del TP 2 y enlaces contextuales entre lecciones y prácticas; sin cambios en contenido académico, ejercicios, código ni URL",
       "plan": "academic-sources/bbdd-aplicadas/implementation-plan.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/geogebra/derivada.md",
+      "from": "ea103e574f9b072a16ad462dacd4c0cfca1096dcbaaf6a49e1863acf5a27d198",
+      "to": "05ba8f2025a02db82dff779460fe434101bb934dd1522709783a1c0ff77daf54",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/index.md",
+      "from": "3cc1999db72f6c8c5413c48c9e187de9d7008cc252dd8a657a813dc92abc3349",
+      "to": "2b335c01f2538fbe82f02961af302d4367ce6099a8dea66a296676e0739f5a2e",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-1/index.md",
+      "from": "e0113793a147fe6e3ec1fd33ed6e09d7e728aaa9a7b52076122a5afcc1eca4e9",
+      "to": "69973b283c3757070e0237b99ebb6e37411cd1f3498a5beba38500fd82aa6774",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/adicionales.md",
+      "from": "77754e764cad849aad12ac80b89c30dadc8d68053986e1cf2c8e8f124dba6b16",
+      "to": "a01154f664857d47bf2f043f0435a8c1f147344038cc1c5385d1d4cdefc31540",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-9.md",
+      "from": "c0a0f760cf426975ae313e56b1e3aedfbbfbfd9d48f3b2e9913f4f4f7453d1b6",
+      "to": "36b8fb819faffc8505675788016cd4595fa2754645a5ec18fd9ee57d96dfff81",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/practica-1.md",
+      "from": "9f3a007e4eae93abce64fdae5cc2c8b20e99a3930bb3f40ec600836070f2dd27",
+      "to": "c261b1dec9a8ae38b53e13e508449133f7a692359e4ad9024bcbde95415b0847",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-1/teoria/unidad-1.md",
+      "from": "2817670178a3a0c3021a0235e3bddf41e6b047b0fd3d60ddf8863c39436eca8c",
+      "to": "760eb4611d58e3f75fbfca39f56871c7c9627e23a49ec5a6bcad3239cb40aac2",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/index.md",
+      "from": "5732273cb075b8c8ec5635524dddca71d9e829cd206f911144acbad020ed711d",
+      "to": "fa60a766f639fcb0664ba6f45e2f8be5b68045ed819e732168cbd0ddd3596f6d",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-16.md",
+      "from": "168b11c4a2194b84b341b29d5a84883fd8c36c0d839eb7c427a0a437703e2897",
+      "to": "0553bf2895ed65c6a76de52a38c1578173fbb1a1d032088f2bbc21f13652c4e9",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-25.md",
+      "from": "15349a41415aeeca0b1e53f272f05d78c0ca89c89f75d1ebefc3169fb85a35bf",
+      "to": "45bf0cc2958ddd6264d45b0b127fb44e0af0806d8ba84405714a8cd8e9de77e6",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/practica-2.md",
+      "from": "297bb19f62174749f672aa3b88460993426864cd919e0443a2266f7eab6316cf",
+      "to": "029a0190c7fce2d8a7da6cf529d2640934b815ddf32ef6bc1950d3b18bf26b06",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/teoria/unidad-2.md",
+      "from": "c05c919a13082209f3ffba2b6d7d456267165011b170ed2a47fe1f5a4cc0f432",
+      "to": "5ebcd98981a7c10ffbd4a56ef182f3e4b50c66652eb614dd1497e438aa777685",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-3/index.md",
+      "from": "d3313239a61aaaf7c3e8f69bc790b96776f48f9da65355172fe6a809fac833e4",
+      "to": "f089651097f3bf9f47641e91aed4cf5474b9e8d64b7f3e6e2afbb5fd9390cc35",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-3/practica/practica-3.md",
+      "from": "e24c55a6484490c7549ebf408cb17dd969a2d3dfba23e2028c2c5051b5f2b8a3",
+      "to": "a48f959a6259127277de036be07177b61f475359f5dd4f942f75a73b323cdda8",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-3/teoria/unidad-3.md",
+      "from": "30e6cbb652aaec890b9ee13735a1668ea4acd18ee514a49d9f573cc4fd0c94cd",
+      "to": "33dae9363875683ad48c82a0400a852859a058d91bd7a6d3378417fdde6e599a",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-4/index.md",
+      "from": "65ff9a09cb058bae83db253325423e379db89dfdb20db4eee33a80ba9c006bf8",
+      "to": "1088b978e9d73f3120614fd39ea4460741533263ca9911ff109cced1dd910d67",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-4/practica/practica-4.md",
+      "from": "141c28c3d1a74383ece7432298bd0a84aa311e245a40832c0b4fe0a200e9b006",
+      "to": "5f5c3959f66c775e5b9505f866e1733c53b7497718f92dcfbd3300a83b0403c4",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-4/teoria/unidad-4.md",
+      "from": "2ecb5a268ce65df5f375ebfcb0b33475685ffdff1e4b3079dedd5e8d617daa39",
+      "to": "07b042668b137f12798952844baeae0755706b4411643742a09c3d5d12195c57",
+      "date": "2026-11-21",
+      "stage": "AM1",
+      "reason": "Reconstrucción académica de Análisis Matemático I: presentaciones de unidad con ruta de estudio (tablas de temas conservadas), resúmenes integradores (páginas de teoría originales con enlaces a las lecciones nuevas), atribución de los enunciados de la Guía de TP 2026, retiro de residuos de la migración (TOC de Jekyll), correcciones matemáticas verificadas con SymPy (U1 9l y adicionales 1, U2 16e y 25, U3 ej. 5c, 14 y 42, U4 ej. 3b, 15b y adicional 4) y sección complementaria en GeoGebra",
+      "plan": "academic-sources/analisis-matematico-i/reports/implementation-report.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/geogebra/basico.md",
+      "from": "f6b4c4f328df00a5d81f61e9c771a507bc6d2ef34f4ef2ddaedce0ce1130900a",
+      "to": "db2c6da86f4ce6656739a4cba6301986b13558551c32ea7c3be9a32e2141d3b9",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/geogebra/derivada.md",
+      "from": "05ba8f2025a02db82dff779460fe434101bb934dd1522709783a1c0ff77daf54",
+      "to": "6dcce9854d140c2d0039faf8923d19a14127c8780e52df95e3cf2fd10fd0d7a5",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/geogebra/funciones.md",
+      "from": "ac1ddee9debd020bc65d2af56ad16383a54135895ea52aedb9e93a47b0a36a89",
+      "to": "c76e9344954db34e24e6e673618ef367cc9d48cc5747ba0a803a642dd3539067",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/geogebra/index.md",
+      "from": "bdd66743d6978cb272121d8610e8690c3510ce0af1e295937c2107b611e3d15e",
+      "to": "1a19f039b3a8dff3977e0c8e18368a225ca51f6699a9c94a20725a600280ac15",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/geogebra/limites-continuidad.md",
+      "from": "b344edf7b4f3dc606dade8ac8e3b0e972c6be7ca97980b4768c817ec05118ef8",
+      "to": "cffa9b1b3576220b3568e9bb527edd53d0b7fb0914741880cf752315bd63d139",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/geogebra/taylor.md",
+      "from": "f88ff306a60ba20c90302a7a3d3dc50e0d912017fd8c753439a9e258af8d3bc7",
+      "to": "e90b15e7e70aafa3c51e211adc969c921bd14589b62f54b14f6594867d7b8f9d",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/adicionales.md",
+      "from": "a01154f664857d47bf2f043f0435a8c1f147344038cc1c5385d1d4cdefc31540",
+      "to": "6486e61f9df92a7259f5539c54811f9ed1bcd6fff1e9ee6966c207a7e6e7fa60",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-26.md",
+      "from": "0d434a9fa7bd3d01314535b446211ad55e6b81c063035a139566a751d7b83901",
+      "to": "1c87771b6cbf9152665ea47218eaef596d9bb50fa9a0a0ba16d81b3d9b0fa7ed",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/ejercicio-32.md",
+      "from": "dd143ef9d83695c1162e4babb1df50c587d0d936e461e4e405be9b88c8000cf3",
+      "to": "fd29e0968b9495fa6ab2a2ec93943ab4f3a7db1b11d87125be2bc2ab27d096ae",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-1/teoria/unidad-1.md",
+      "from": "760eb4611d58e3f75fbfca39f56871c7c9627e23a49ec5a6bcad3239cb40aac2",
+      "to": "2eb0f4d68c531ab59ff3d3233422f77f9578a4fe7791212e4b26f33fb85aa1b8",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/index.md",
+      "from": "fa60a766f639fcb0664ba6f45e2f8be5b68045ed819e732168cbd0ddd3596f6d",
+      "to": "7d3aec8628a2641f4e66dfaa52a8d5834a710f26015bec9b6a4032641ac0382c",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/adicionales.md",
+      "from": "2870970135f4f588f88836f9fbe7dbce1ab0d4e48d5e9fa64aa71016c0c1ee7e",
+      "to": "35e75566c4333bd96b1011a7b1e447cd61a0f3b6965b9391ecc7f38ebe703b12",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-1.md",
+      "from": "1cab8f0cfe375807373733690f1409c754ae44a736e18126fe5e94d82715ace3",
+      "to": "14f2bc41b99bd5e421a82149014513396463216008caeace55d39b19acfeb0bc",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-20.md",
+      "from": "33340c152d7f1513e4a79eefcb6d26f9a301c42b41c1e81fbc663e3369b82e19",
+      "to": "d98813ab96f115346e26181649e2ff3ae9fd524a4d07858ba601456ffc7b22ae",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-21.md",
+      "from": "331f40cb4ed01d8e99f064e92569c9c611d2e3e1b16386284259f8fedf681828",
+      "to": "95e9e685c79366a647031bfc51331c7ccc656abc6d80709bc8fe411403308485",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-25.md",
+      "from": "45bf0cc2958ddd6264d45b0b127fb44e0af0806d8ba84405714a8cd8e9de77e6",
+      "to": "176c45aecc7e5d892c0ac1424240763a4cb4e3fe58dc6fab7c15748b8d8ad9bb",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-28.md",
+      "from": "779c3a11c2e2435233ae23bf4a0a61a49b79213c44e3cae5a2546a0d860425ea",
+      "to": "c3e25840ba91bccdcc32df50cd0a388368e603880b6c17b8d41904abbdf7c9b1",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-33.md",
+      "from": "e27c2e30dcc0a34218684486ba9775da4c9e84b08ff9f8c53449753f004c8e92",
+      "to": "65600f0922810f630a5fa7ac197ce76e47c238102c1bcc8196546610965fa170",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-4.md",
+      "from": "f5704927289600073be0d4cebf6aa7ed1f0a780e5fbe308dbed95a93061f9ecb",
+      "to": "bc971866b3358629fb996e3cadc318478e8cac7f564a389e07a18b538854460d",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-8.md",
+      "from": "2e8c5a95a517accdf56d1d88f4f85d27ef50e1362db640bcb81981781fc4f88d",
+      "to": "cb0f125bf6d97caf9defb7ea3cd00afab835ab0f7aade1bb8360563618117387",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/teoria/unidad-2.md",
+      "from": "5ebcd98981a7c10ffbd4a56ef182f3e4b50c66652eb614dd1497e438aa777685",
+      "to": "eb7ccdb70f2a2067af80fa13a966ab6f3ab076244fefa276542094e0929260d7",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-3/index.md",
+      "from": "f089651097f3bf9f47641e91aed4cf5474b9e8d64b7f3e6e2afbb5fd9390cc35",
+      "to": "c7787774cedbdcab702980d343ba12432f96b7ec0d38793be51be86c26366272",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-3/practica/practica-3.md",
+      "from": "a48f959a6259127277de036be07177b61f475359f5dd4f942f75a73b323cdda8",
+      "to": "85acd69b34571c1e2162b3a1ccc95e1b098495f92e11fc4bc28194f1493d210e",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-3/teoria/unidad-3.md",
+      "from": "33dae9363875683ad48c82a0400a852859a058d91bd7a6d3378417fdde6e599a",
+      "to": "d01f2cf5523b145e8e3653b8b721096ba865c6c3e8d93fa54d073ea0d8a8d1fa",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-4/index.md",
+      "from": "1088b978e9d73f3120614fd39ea4460741533263ca9911ff109cced1dd910d67",
+      "to": "461a824d6d486acf27400239cc3d8e7e401041550cc8b6de83157dd5cd4cda55",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-4/practica/practica-4.md",
+      "from": "5f5c3959f66c775e5b9505f866e1733c53b7497718f92dcfbd3300a83b0403c4",
+      "to": "c1f10bbba3e09c3b62c60653979d14d3bb11d946433b97588272f7fd194efe12",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-4/teoria/unidad-4.md",
+      "from": "07b042668b137f12798952844baeae0755706b4411643742a09c3d5d12195c57",
+      "to": "d49567ea464af1e10798965d571f825b076b1146a4d8690f033b2d42269c1c55",
+      "date": "2026-11-21",
+      "stage": "AM2",
+      "reason": "Auditoría pedagógica y de coherencia: hipótesis corregidas, clasificación de discontinuidades alineada con la cátedra, U3.01 y U3.12 rehechos, sintaxis de GeoGebra corregida y notación unificada.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/geogebra/derivada.md",
+      "from": "6dcce9854d140c2d0039faf8923d19a14127c8780e52df95e3cf2fd10fd0d7a5",
+      "to": "a866cd51e62973bf4e84e538e5d754697959b501973311fb94236063469f8512",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/geogebra/index.md",
+      "from": "1a19f039b3a8dff3977e0c8e18368a225ca51f6699a9c94a20725a600280ac15",
+      "to": "339597103058361fb94460aa1d69d02461480fa26d7f0a9cbf0c12763b91008a",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/geogebra/limites-continuidad.md",
+      "from": "cffa9b1b3576220b3568e9bb527edd53d0b7fb0914741880cf752315bd63d139",
+      "to": "4bd120d0652a8eefd8f8888ecd2518ce4c89fd06589e73d1f412c48a397abbff",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-1/practica/adicionales.md",
+      "from": "6486e61f9df92a7259f5539c54811f9ed1bcd6fff1e9ee6966c207a7e6e7fa60",
+      "to": "8f96135224a73a95cd0779071a60eaa3d5ce3fa02fd7a6aabcad8aa30738e6e9",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/index.md",
+      "from": "7d3aec8628a2641f4e66dfaa52a8d5834a710f26015bec9b6a4032641ac0382c",
+      "to": "dee92de2939b9a02f3a5c540b7a8df28030b36261169cfe1204c5418906abfd7",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/adicionales.md",
+      "from": "35e75566c4333bd96b1011a7b1e447cd61a0f3b6965b9391ecc7f38ebe703b12",
+      "to": "50800a722b46c16ce7d69678f522a5dd3d87833e570c1075c1f211cb39846dee",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-22.md",
+      "from": "c9509f32b3e642c9604b7d98efbdebce8f328dd6d9fbd7febc4aebf066a0451a",
+      "to": "44cacc8a96f9e8d4fa0591dd27bebdeb615cca2dac1b6f84c80ae63a27076865",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-25.md",
+      "from": "176c45aecc7e5d892c0ac1424240763a4cb4e3fe58dc6fab7c15748b8d8ad9bb",
+      "to": "62d2bc22a1c751bc344f0d59efa17ccaec0123ad3a42282269a7c6af767111de",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-27.md",
+      "from": "e85c505a61a1479a17b3d375f93a30cf63e62b1e3382dc783c4efa05c3082394",
+      "to": "79f3d5031edcd43ffee6147a42c695a76f8c8fc255781d66630d691b22a9f749",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-2/practica/ejercicio-4.md",
+      "from": "bc971866b3358629fb996e3cadc318478e8cac7f564a389e07a18b538854460d",
+      "to": "a068f1ba3254a102c545d3e629c24cac490b9156732641da20386e765d006764",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-3/practica/practica-3.md",
+      "from": "85acd69b34571c1e2162b3a1ccc95e1b098495f92e11fc4bc28194f1493d210e",
+      "to": "368b327ad56a2de6dd1d1b57c9f50bbf3683d2b68642c3c1a09fd1df1a1ae0fa",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-4/practica/practica-4.md",
+      "from": "c1f10bbba3e09c3b62c60653979d14d3bb11d946433b97588272f7fd194efe12",
+      "to": "d37535ccc187b559432875b959008c4ca8063199d72e8158d93757d1d47cbf6a",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
+    },
+    {
+      "output": "src/content/docs/analisis-matematico-i/unidad-4/teoria/unidad-4.md",
+      "from": "d49567ea464af1e10798965d571f825b076b1146a4d8690f033b2d42269c1c55",
+      "to": "6cc3c86909bef795283ad7f4e1bc8f8c7a2b531a056c7ade43c2169afa63e710",
+      "date": "2026-11-21",
+      "stage": "AM3",
+      "reason": "Seguimiento de la auditoría: gráficos de la Práctica 2 digitalizados desde la guía, adicionales 2, 4, 5 y 7 recuperados, integrador U2.32, niveles de U2.21 y U2.27, anclas de compatibilidad y comandos de GeoGebra comprobados en ejecución.",
+      "plan": "academic-sources/analisis-matematico-i/reports/pedagogical-review.md"
     }
   ]
 }
