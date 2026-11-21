@@ -1,0 +1,3495 @@
+{
+  "sympy_version": "1.14.0",
+  "python_version": "3.12.16",
+  "sources": {
+    "u1_auditoria.py": "3f7601a8115e7dabba9c4500170a4ec9f167e16aba0e2433e9159d46d742fd31",
+    "u1_practica.py": "b7d57ce5d844b3bf7b3231c8db0aee771743a5c7eb80755c1af9cfdcd6e03e5e",
+    "u1_teoria.py": "e40a369dec68129f263fe11102f652d234f1b7c08ae554e47c1d8e0ef9bd2f85",
+    "u2_auditoria.py": "cbea31013a6ec1dc8a9c717675bf16655e9cd72318f64d46284c3aca8672f57b",
+    "u2_practica.py": "1854646476ad39e07fe1cd44cf45e2e8f064244afe0e4e7aa3497c2e6bec87ba",
+    "u2_teoria.py": "2c559d26e070d50d003c0a09ed39e33309462775bf091fc7beba899d0aea22ce",
+    "u3_auditoria.py": "bf6859b225159e45ec0d83e8d0cf84e54b1e0bd4e2e68ce8afdccc6cd93f5d24",
+    "u3_practica.py": "3a0ca9b9189156bb088387e9fab3bd4122be137dca745f6532b5e378f1d281b1",
+    "u3_teoria.py": "340355c8e41eb531351d24a099a0e6af46de04d87230676e81ef536954fef182",
+    "u4_auditoria.py": "0b729c4b5cc8d8011f5ab044c283cb9f53abe116b1afa05376ca3a9d4434936d",
+    "u4_practica.py": "47aca82b77b58ea29c4ccbd3af80cf1a753d30f8cbacb5f7b3dd35fbaf6e3f49",
+    "u4_teoria.py": "f042ff3286aafdd687209276b562585616fba34e79def8bb9cf3dd66de1d2161"
+  },
+  "total": 434,
+  "passed": 434,
+  "failed": 0,
+  "results": [
+    {
+      "id": "U1.01",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Tarifa de alquiler C=150+40h en [0,8]",
+      "detail": null
+    },
+    {
+      "id": "U1.03",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Corral dividido: A=60x-3/2 x^2, máximo 600",
+      "detail": null
+    },
+    {
+      "id": "U1.04",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Usuarios N=C a^t por (2,90),(5,720)",
+      "detail": null
+    },
+    {
+      "id": "U1.05",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Noria h=14-12cos(pi t/15)",
+      "detail": null
+    },
+    {
+      "id": "U1.06",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "x^3-x^2-6x: ceros y signo",
+      "detail": null
+    },
+    {
+      "id": "U1.07",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "(x^3-9x)/(x^2-x-6): dominio, ceros, signo",
+      "detail": null
+    },
+    {
+      "id": "U1.08",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "Paridad de las cuatro funciones del ejercicio 8",
+      "detail": null
+    },
+    {
+      "id": "U1.09",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "2x/(x^2+4): |f|<=1/2, imagen, impar",
+      "detail": null
+    },
+    {
+      "id": "U1.10",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-elementales/",
+      "description": "Parábola de vértice (2,-3) por (0,5)",
+      "detail": null
+    },
+    {
+      "id": "U1.11",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-elementales/",
+      "description": "Por tramos 2^x-3 (x<=1), 4-x^2 (x>1)",
+      "detail": null
+    },
+    {
+      "id": "U1.12",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-elementales/",
+      "description": "log2(x+1)+log2(x-3)=5 -> x=7",
+      "detail": null
+    },
+    {
+      "id": "U1.13",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-elementales/",
+      "description": "Inversas trigonométricas",
+      "detail": null
+    },
+    {
+      "id": "U1.14",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "Dominio de sqrt(2x-6)+1/(x-5)",
+      "detail": null
+    },
+    {
+      "id": "U1.15",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "Igualdad de funciones: tres pares",
+      "detail": null
+    },
+    {
+      "id": "U1.16",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "Composiciones de ln(x-1) y sqrt(9-x^2)",
+      "detail": null
+    },
+    {
+      "id": "U1.17",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "g=2f(3-x)+1 con f=4x-x^2 en [0,4]",
+      "detail": null
+    },
+    {
+      "id": "U1.18",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/inversa/",
+      "description": "Taxi T=450+120d en [0,30]",
+      "detail": null
+    },
+    {
+      "id": "U1.19",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/inversa/",
+      "description": "-x^2+6x-5 restringida a [3,oo)",
+      "detail": null
+    },
+    {
+      "id": "U1.20",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/inversa/",
+      "description": "f=(3x-2)/(x-3) es su propia inversa",
+      "detail": null
+    },
+    {
+      "id": "U1.22",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/integradores/",
+      "description": "Integrador: f=ln(x+3)-2",
+      "detail": null
+    },
+    {
+      "id": "U1.23",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/integradores/",
+      "description": "Integrador: T=20+60*(1/2)^(t/10)",
+      "detail": null
+    },
+    {
+      "id": "U1.24",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/integradores/",
+      "description": "Integrador opción múltiple: inversa de (x-1)/(x+2) y dominio de ln(x-1)/sqrt(5-x)",
+      "detail": null
+    },
+    {
+      "id": "U1.25",
+      "status": "passed",
+      "module": "u1_practica.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/integradores/",
+      "description": "Integrador: |x^2-2x-3|",
+      "detail": null
+    },
+    {
+      "id": "U1.A.ADIC.1",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/adicionales/",
+      "description": "Adicional 1: paridad de 2x/(x^2+5), 3x^2/(x-5), x^3/(16-x^2)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.ADIC.2",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/adicionales/",
+      "description": "Adicional 2: población N(t)=227 e^{0,007 t}",
+      "detail": null
+    },
+    {
+      "id": "U1.A.ADIC.3",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/adicionales/",
+      "description": "Adicional 3: L(d)=-10 log2 d + 120",
+      "detail": null
+    },
+    {
+      "id": "U1.A.ADIC.4",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/adicionales/",
+      "description": "Adicional 4: C(q)=10+3 sqrt q",
+      "detail": null
+    },
+    {
+      "id": "U1.A.ADIC.5",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/adicionales/",
+      "description": "Adicional 5: V(t)=10(1-t/100)^2 en [0,100]",
+      "detail": null
+    },
+    {
+      "id": "U1.A.ADIC.6",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/adicionales/",
+      "description": "Adicional 6: g=x^3/sqrt(16-x^2) impar en (-4,4)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.ADIC.7",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/adicionales/",
+      "description": "Adicional 7: inversa de 3 sen(5x)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.ADIC.8",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/adicionales/",
+      "description": "Adicional 8: inversa de U(t)=1000(1-e^{-0,05t})",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E01.a",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-1/",
+      "description": "Recta por P(-3,4) y Q(2,-3)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E01.b",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-1/",
+      "description": "Recta paralela a 2x-3y+9=0 con raíz -1/2",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E01.c",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-1/",
+      "description": "Parábola de vértice (-1/2,5) por (0,4)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E01.d",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-1/",
+      "description": "Parábola de raíces -1 y 5/7 por (1,8/7)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E01.efg",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-1/",
+      "description": "Dominio e imagen de |x|, sqrt(x), 1/x",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E02",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-2/",
+      "description": "Celsius-Fahrenheit",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E03",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-3/",
+      "description": "Vaciado del tanque: 4000 L en 16 min, 250 L/min, 1000 L a los 12 min",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E04",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-4/",
+      "description": "Resorte f(x)=0,875x en [0,8]",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E05",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-5/",
+      "description": "Canaleta: A=2x(6-x), máximo 18 en x=3, volumen 200x(6-x)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E06",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-6/",
+      "description": "Caja sin tapa: V=4x(12-x)(16-x), máximo en x≈4,53",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E07",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-7/",
+      "description": "Áreas y perímetros del ejercicio 7",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E08",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-8/",
+      "description": "Concentración C(t)=-t^2+6t",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.a",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio natural 9a",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.b",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio natural 9b",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.c",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio natural 9c",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.d",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio natural 9d",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.e",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio natural 9e",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.f",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio natural 9f",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.g",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio natural 9g",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.h",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio natural 9h",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.i",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio natural 9i: el denominador x*cbrt(x^2-1) se anula solo en -1, 0, 1",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.j",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio natural 9j",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.j.oficial",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Respuestas oficiales de 9j y 9k intercambiadas",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.k",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio natural 9k",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.l",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominio de 9l (por tramos, raíz solo en el numerador): [1,5)-{3}, igual a la oficial",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E09.mn",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-9/",
+      "description": "Dominios por tramos 9m, 9n, 9ñ",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E10.a",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-10/",
+      "description": "x^2+2x-8",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E10.b",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-10/",
+      "description": "|x-2|",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E10.c",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-10/",
+      "description": "x/(x-2)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E10.d",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-10/",
+      "description": "(-2x+3)/(x+4)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E10.e",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-10/",
+      "description": "sqrt(x-2)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E10.f",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-10/",
+      "description": "ln(x+1)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E10.g",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-10/",
+      "description": "2^(x+1) (el enunciado de la guía pierde el exponente: 2^{x+1})",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E11.a",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-11/",
+      "description": "Función por tramos 11a",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E11.b",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-11/",
+      "description": "Función por tramos 11b",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E11.c",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-11/",
+      "description": "Función por tramos 11c",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E11.d",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-11/",
+      "description": "Función por tramos 11d",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E12",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-12/",
+      "description": "Beneficio B(t): máximo 12,25 en t=3,5; B=11,25 en 2,5 y 4,5; B=10 desde t=5",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E13.a",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-13/",
+      "description": "Paridad: x^2-4 par; x^2+x-2 ninguna; |x+1|-|x-1| impar; x+1 ninguna",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E13.e",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-13/",
+      "description": "Paridad e) g(x)=cbrt(x) impar; g) x-3x^3 impar",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E13.fij",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-13/",
+      "description": "Paridad f) cbrt-/ i) j): pares, según la guía",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E13.h",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-13/",
+      "description": "Paridad h) (1-x)/(1+x): ninguna (dominio no simétrico)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E16",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-16/",
+      "description": "Transformaciones: dominios, imágenes y ceros",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E17",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-17/",
+      "description": "f(x)=C a^x por (-1,6) y (3,3/8)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E18",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-18/",
+      "description": "p=760 e^{-0,144 h}: mitad de presión a 4,81 km",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E19",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-19/",
+      "description": "Aves: A(t)=50*3^(t/2)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E20",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-20/",
+      "description": "Dominios e imágenes de transformaciones de ln y exp",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E21",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-21/",
+      "description": "Decibeles: 110 dB y 90 dB",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E23",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-23/",
+      "description": "Transformaciones del seno: imágenes y sen(x-pi/2)=-cos x",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E24",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-24/",
+      "description": "Profundidad p(t)=1/2 sen(pi t/2)+3/2",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E25",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-25/",
+      "description": "Presión arterial: período 3/4 s, pulso 80",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E26.a",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-26/",
+      "description": "Inversas 26a-d",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E26.b",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-26/",
+      "description": "Inversas 26e-g",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E27",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-27/",
+      "description": "A(t)=100(1-0,9^t) en [0,10]",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E28",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-28/",
+      "description": "Resorte L(P)=3P/35+43/7",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E29",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-29/",
+      "description": "Gas V=30/P en [1,12]",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E30",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-30/",
+      "description": "Masa M(t)=25*3^t en [0,8]",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E31",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-31/",
+      "description": "Marea h(t)=5+4,9 cos(pi t/6)",
+      "detail": null
+    },
+    {
+      "id": "U1.A.E32",
+      "status": "passed",
+      "module": "u1_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-1/practica/ejercicio-32/",
+      "description": "V/F del ejercicio 32: contraejemplos",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ACO.1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "x/(1+x^2): |f|<=1/2, imagen [-1/2,1/2]",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ACO.2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "x^2+3 acotada inferiormente, no superiormente",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ACO.3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "1/x en (0,1]: sin cota superior; en [1,oo) acotada por 1",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ALG.1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "Igualdad de funciones: dominios y reglas",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ALG.2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "f=sqrt(x+3), g=sqrt(5-x): dominios de f+g, f/g; (f/g)(1)=1",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ALG.3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "f=sqrt(x), g=x^2-4x: f∘g y g∘f",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ALG.4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "f=1/(x-1), g=ln x: dominios de f∘g y g∘f",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ALG.5",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "Tres dominios naturales",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ELE.1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-elementales/",
+      "description": "Parábola 2x^2-12x+10: forma canónica, ceros, signo",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ELE.2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-elementales/",
+      "description": "Homográfica (3x-1)/(x+2) = 3 - 7/(x+2)",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ELE.3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-elementales/",
+      "description": "sqrt(6-2x)+1: dominio (-oo,3], imagen [1,oo), sin ceros",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ELE.4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-elementales/",
+      "description": "|2x-6| por tramos, |2x-6|=4 -> x=1,5",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ELE.5",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-elementales/",
+      "description": "2^(x+1)=20 y ln(x-1)+ln(x+1)=ln 8",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ELE.6",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-elementales/",
+      "description": "2cos(pi x/3)+1: período 6, imagen [-1,3], ceros 2 y 4",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ELE.7",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-elementales/",
+      "description": "Valores de arcsen, arccos, arctan y arcsen(sen(7pi/6))",
+      "detail": null
+    },
+    {
+      "id": "U1.T.FUN.1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Imagen de x^2-4x+7 en [0,5]",
+      "detail": null
+    },
+    {
+      "id": "U1.T.FUN.2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Tabla (0,5),(1,11),(3,23): T=6t+5; sensor hasta 41 grados en t=6",
+      "detail": null
+    },
+    {
+      "id": "U1.T.FUN.3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Pelota h=20t-5t^2: dominio [0,4], imagen [0,20]",
+      "detail": null
+    },
+    {
+      "id": "U1.T.INV.1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/inversa/",
+      "description": "(2x+1)/(x-3) es inyectiva",
+      "detail": null
+    },
+    {
+      "id": "U1.T.INV.2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/inversa/",
+      "description": "x^2-4x restringida a [2,oo): inversa 2+sqrt(x+4)",
+      "detail": null
+    },
+    {
+      "id": "U1.T.INV.3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/inversa/",
+      "description": "2e^(x-1)+3: inversa 1+ln((x-3)/2)",
+      "detail": null
+    },
+    {
+      "id": "U1.T.INV.4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/inversa/",
+      "description": "(2x+1)/(x-3): inversa (3x+1)/(x-2)",
+      "detail": null
+    },
+    {
+      "id": "U1.T.INV.5",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/inversa/",
+      "description": "1-2sen x en [-pi/2,pi/2]: inversa arcsen((1-x)/2)",
+      "detail": null
+    },
+    {
+      "id": "U1.T.INV.6",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/inversa/",
+      "description": "(g∘f)^-1 = f^-1∘g^-1 con f=2x+1, g=x^3",
+      "detail": null
+    },
+    {
+      "id": "U1.T.INV.7",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/inversa/",
+      "description": "f=x^3+x: f(2)=10, f(-1)=-2, creciente",
+      "detail": null
+    },
+    {
+      "id": "U1.T.MOD.1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Tanque V=80+12t, se llena a los 130/3 min; razón media 12",
+      "detail": null
+    },
+    {
+      "id": "U1.T.MOD.2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Corral junto a la pared: A=40x-2x^2, máximo 200 en x=10",
+      "detail": null
+    },
+    {
+      "id": "U1.T.MOD.3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Bacterias: N=200*2^t por (0,200),(4,3200); N=10000 en log2(50)",
+      "detail": null
+    },
+    {
+      "id": "U1.T.MOD.4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Razones medias de N=200*2^t en [0,1],[1,2],[2,3]; cociente N(t+1)/N(t)=2",
+      "detail": null
+    },
+    {
+      "id": "U1.T.MOD.5",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Razón media de h=20t-5t^2 en [1,4], [0,2], [2,4], [1,3]",
+      "detail": null
+    },
+    {
+      "id": "U1.T.MOD.6",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/",
+      "description": "Rueda: h=10-8cos(pi t/12), imagen [2,18]",
+      "detail": null
+    },
+    {
+      "id": "U1.T.PAR.1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "Paridad de x^4-3x^2+1, x^3-4x, x^2+x, 1/(x-1)",
+      "detail": null
+    },
+    {
+      "id": "U1.T.PAR.2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "Paridad de (x^2+1)x^3 y sen(x)/x",
+      "detail": null
+    },
+    {
+      "id": "U1.T.PAR.3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "Descomposición par/impar de x^3+2x^2-x+5",
+      "detail": null
+    },
+    {
+      "id": "U1.T.TRA.1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "g=-2 sqrt(x-3)+1: dominio, imagen, cero 13/4",
+      "detail": null
+    },
+    {
+      "id": "U1.T.TRA.2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "(2x-6)^2 = 4(x-3)^2 y g(x)=f(2x-1)",
+      "detail": null
+    },
+    {
+      "id": "U1.T.TRA.3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "3 sen(2x-pi/2)+1: amplitud 3, período pi, imagen [-2,4]",
+      "detail": null
+    },
+    {
+      "id": "U1.T.TRA.4",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/",
+      "description": "-3*2^(x+1)+5: AH y=5, imagen (-oo,5), g(0)=-1, cero",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ZER.1",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "p=(x+2)(x-1)^2(x-3): ceros y signo",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ZER.2",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "r=(x^2-4)/(x^2-x-6): dominio, ceros y signo",
+      "detail": null
+    },
+    {
+      "id": "U1.T.ZER.3",
+      "status": "passed",
+      "module": "u1_teoria.py",
+      "page": "/analisis-matematico-i/unidad-1/teoria/caracteristicas/",
+      "description": "Función por tramos: ceros {1,4}, signo y salto en x=2",
+      "detail": null
+    },
+    {
+      "id": "U2.01",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/entornos-y-limite/",
+      "description": "Entornos: intervalos, centro y radio, desigualdad con módulo",
+      "detail": null
+    },
+    {
+      "id": "U2.02",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/entornos-y-limite/",
+      "description": "delta = eps/2 para lim (5-2x) = -1 en 3",
+      "detail": null
+    },
+    {
+      "id": "U2.05",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-laterales-y-propiedades/",
+      "description": "Laterales con valor absoluto",
+      "detail": null
+    },
+    {
+      "id": "U2.06",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-laterales-y-propiedades/",
+      "description": "a=3, b=0: existencia de los límites en -1 y 3",
+      "detail": null
+    },
+    {
+      "id": "U2.07",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-laterales-y-propiedades/",
+      "description": "Intercalación: infinitésimo por acotada",
+      "detail": null
+    },
+    {
+      "id": "U2.09",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/infinitesimos/",
+      "description": "Orden respecto de x de varios infinitésimos",
+      "detail": null
+    },
+    {
+      "id": "U2.10",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/infinitesimos/",
+      "description": "Límites con infinitésimos equivalentes",
+      "detail": null
+    },
+    {
+      "id": "U2.11",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/infinitesimos/",
+      "description": "lim (tan 2x - sen 2x)/x^3 = 4 (no 0)",
+      "detail": null
+    },
+    {
+      "id": "U2.12",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-infinitos/",
+      "description": "Límites infinitos con signo",
+      "detail": null
+    },
+    {
+      "id": "U2.13",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-infinitos/",
+      "description": "Límites en +oo y -oo",
+      "detail": null
+    },
+    {
+      "id": "U2.15",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "Indeterminaciones 0/0",
+      "detail": null
+    },
+    {
+      "id": "U2.16",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "∞-∞ con conjugado y cociente de exponenciales",
+      "detail": null
+    },
+    {
+      "id": "U2.17",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "Forma 1^∞",
+      "detail": null
+    },
+    {
+      "id": "U2.18",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "Parámetros: a=1, b=2 y k=2",
+      "detail": null
+    },
+    {
+      "id": "U2.19",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "Asíntotas de (3x^2-2)/(x^2-x-2)",
+      "detail": null
+    },
+    {
+      "id": "U2.20",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "Asíntotas oblicuas",
+      "detail": null
+    },
+    {
+      "id": "U2.21",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "N(t) = 800/(1+15 e^(-0,4 t))",
+      "detail": null
+    },
+    {
+      "id": "U2.22",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "f=(a x^2+3)/(x-b) con AO y=2x+8",
+      "detail": null
+    },
+    {
+      "id": "U2.23",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "Continuidad en 2: evitable, redefinir f(2) = -1",
+      "detail": null
+    },
+    {
+      "id": "U2.24",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "Discontinuidades de (x+3)/(x^2+x-6)",
+      "detail": null
+    },
+    {
+      "id": "U2.25",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "k=2, m=1 por continuidad en 0 y en 1",
+      "detail": null
+    },
+    {
+      "id": "U2.26",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "x^3-3x+1: cambios de signo y bisección",
+      "detail": null
+    },
+    {
+      "id": "U2.29",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/integradores/",
+      "description": "Integrador: a=-5, b=6; evitable en 3, AV x=-2, AH y=1",
+      "detail": null
+    },
+    {
+      "id": "U2.30",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/integradores/",
+      "description": "Integrador con GeoGebra: lim (sqrt(x^2+9)-3)/x^2 = 1/6, AH y=0",
+      "detail": null
+    },
+    {
+      "id": "U2.31",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/integradores/",
+      "description": "Integrador opción múltiple: lim (x+sen 3x)/(x^2+2x) = 2",
+      "detail": null
+    },
+    {
+      "id": "U2.32",
+      "status": "passed",
+      "module": "u2_practica.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/integradores/",
+      "description": "Integrador de continuidad por partes: a=-3/4, b=3/2; salto infinito en -1, salto 2 en 3",
+      "detail": null
+    },
+    {
+      "id": "U2.A.ADI.1",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/adicionales/",
+      "description": "Adicionales 1 y 6",
+      "detail": null
+    },
+    {
+      "id": "U2.A.ADI.2",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/adicionales/",
+      "description": "Adicional 2: AV según b (dos si b>0 y b!=a^2, una si b=a^2, ninguna si b<=0); a=1, b=4",
+      "detail": null
+    },
+    {
+      "id": "U2.A.ADI.3",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/adicionales/",
+      "description": "Adicional 3: |4-x^2|/(x(x-2))",
+      "detail": null
+    },
+    {
+      "id": "U2.A.ADI.4",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/adicionales/",
+      "description": "Adicional 4: a=3/2, b=-9/2 (lectura (x^2+4x-5)/(2x^2-6x+4) para x<1)",
+      "detail": null
+    },
+    {
+      "id": "U2.A.ADI.5",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/adicionales/",
+      "description": "Adicional 5: opción b; contraejemplos de a, c y d",
+      "detail": null
+    },
+    {
+      "id": "U2.A.ADI.7",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/adicionales/",
+      "description": "Adicional 7: opción d (AH c/3 si a=0; AV en 1/3 salvo c=3; hueco en 0)",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E02.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-2/",
+      "description": "Ejercicio 2: límites inmediatos",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E03.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-3/",
+      "description": "Ejercicio 3: funciones por tramos (laterales)",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E05.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-5/",
+      "description": "Ejercicio 5: coeficientes a, b",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E06.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-6/",
+      "description": "Ejercicio 6: f+g=2, f-g=1 => fg=3/4",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E07.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-7/",
+      "description": "Ejercicio 7: límites con módulo (laterales y valores)",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E08.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-8/",
+      "description": "Ejercicio 8: indeterminaciones 0/0",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E09.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-9/",
+      "description": "Ejercicio 9: caída libre, velocidades medias e instantánea",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E10.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-10/",
+      "description": "Ejercicio 10: a=15, límite -1",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E11.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-11/",
+      "description": "Ejercicio 11: valores de a y límites",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E12.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-12/",
+      "description": "Ejercicio 12: costo marginal",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E13.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-13/",
+      "description": "Ejercicio 13: gas (Boyle)",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E14.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-14/",
+      "description": "Ejercicio 14: límites trigonométricos",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E15.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-15/",
+      "description": "Ejercicio 15: límites inmediatos en el infinito",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E16.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-16/",
+      "description": "Ejercicio 16: indeterminados en el infinito (a-d, f, g)",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E16.e",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-16/",
+      "description": "16e es una potencia (base raíz, exponente (1+2x)/(3x-1)): límite 1/4, igual a la oficial",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E17.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-17/",
+      "description": "Ejercicio 17: límites laterales (potencias con base distinta de e reescritas con exp)",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E18.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-18/",
+      "description": "Ejercicio 18: a=-1, b=1",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E19.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-19/",
+      "description": "Ejercicio 19: a=2, b=3, c=0",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E20.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-20/",
+      "description": "Ejercicio 20: repaso de técnicas",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E21.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-21/",
+      "description": "Ejercicio 21: bacterias",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E24.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-24/",
+      "description": "Ejercicio 24: asíntotas (a-j)",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E25.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-25/",
+      "description": "Ejercicio 25a: a=2, b=16, k=-8 (k es el punto excluido -b/a)",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E25.b",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-25/",
+      "description": "Ejercicio 25b: a=-2, b=0, c=-1",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E25.c",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-25/",
+      "description": "Ejercicio 25c: se corrige b=0 (parábola, sin asíntotas) y se registra el caso b=a^2 (una sola AV)",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E26.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-26/",
+      "description": "Ejercicio 26: rumor",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E28.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-28/",
+      "description": "Ejercicio 28: tipo de discontinuidad",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E29.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-29/",
+      "description": "Ejercicio 29: parámetros para continuidad",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E31.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-31/",
+      "description": "Ejercicio 31: salto",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E32.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-32/",
+      "description": "Ejercicio 32: constantes para continuidad en R",
+      "detail": null
+    },
+    {
+      "id": "U2.A.E33.a",
+      "status": "passed",
+      "module": "u2_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-2/practica/ejercicio-33/",
+      "description": "Ejercicio 33: contraejemplos y valores de verdad comprobables",
+      "detail": null
+    },
+    {
+      "id": "U2.T.ASI.1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "(2x+1)/(x-1): AV x=1 y AH y=2",
+      "detail": null
+    },
+    {
+      "id": "U2.T.ASI.2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "(x^2-1)/(x^2-3x+2): hueco en 1, AV x=2, AH y=1",
+      "detail": null
+    },
+    {
+      "id": "U2.T.ASI.3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "(x^3+2x^2-1)/(x^2+1): AO y=x+2",
+      "detail": null
+    },
+    {
+      "id": "U2.T.ASI.4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "sqrt((x+2)^2+1): AO y=x+2 (+oo) e y=-x-2 (-oo)",
+      "detail": null
+    },
+    {
+      "id": "U2.T.ASI.5",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "6e^x/(e^x+2): AH 6 en +oo y 0 en -oo",
+      "detail": null
+    },
+    {
+      "id": "U2.T.ASI.6",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "sen x/x: AH y=0 y se anula en k*pi",
+      "detail": null
+    },
+    {
+      "id": "U2.T.ASI.7",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "x+sen x no tiene AO; x^2 tampoco",
+      "detail": null
+    },
+    {
+      "id": "U2.T.ASI.8",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/asintotas/",
+      "description": "C(t)=12t/(t+3): AH 12, C(3)=6, C<12",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "lim (x^3-27)/(x^2-9) = 9/2 en 3",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.10",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "((x+1)/(x-1))^x -> e^2 en +-oo",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.11",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "(cos x)^(1/x^2) -> e^(-1/2) en 0",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.12",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "(1+1/x)^(x^2) -> +oo",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.13",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "x^(1/x) -> 1 en +oo; x^x -> 1 en 0+",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "lim (sqrt(x+5)-3)/(x-4) = 1/6 en 4",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "sqrt(4x^2+1)/(x+3) -> 2 en +oo y -2 en -oo",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "sqrt(x^2+3x)-x: 3/2 en +oo y +oo en -oo",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.5",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "lim (1/(x-1) - 2/(x^2-1)) = 1/2 en 1",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.6",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "x sen(3/x) -> 3 y x ln x -> 0",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.7",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "(1+1/x)^x -> e",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.8",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "Límites notables: ln(1+u)/u, (e^u-1)/u, (a^u-1)/u",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CAL.9",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/",
+      "description": "(1+3/x)^(2x) -> e^6",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CONT.1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "(x^2-4)/(x-2) con f(2)=k: continua si k=4",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CONT.10",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "cos x = x tiene solución en (0,1)",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CONT.11",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "x^2-4x+1 en [0,3]: imagen [-3,1]",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CONT.2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "sen x/x con g(0)=1 continua; (1-cos x)/x^2 con h(0)=1 no",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CONT.3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "sqrt(4-x^2) continua en [-2,2]",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CONT.4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "Dominio de continuidad de ln(4-x^2)/(x+1)",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CONT.5",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "(x^2-x-2)/(x^2-4): evitable en 2 (3/4), salto infinito en -2",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CONT.6",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "Salto finito en 3: 7 y 9, salto 2",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CONT.7",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "e^(1/(x-1)) en 1: laterales +oo y 0",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CONT.8",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "Parámetros a=3, b=-1 para continuidad",
+      "detail": null
+    },
+    {
+      "id": "U2.T.CONT.9",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/continuidad/",
+      "description": "Bolzano para x^3+x-1 en [0,1] y bisección",
+      "detail": null
+    },
+    {
+      "id": "U2.T.ENT.1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/entornos-y-limite/",
+      "description": "Entornos y desigualdades con módulo",
+      "detail": null
+    },
+    {
+      "id": "U2.T.ENT.2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/entornos-y-limite/",
+      "description": "Centro y radio de intervalos abiertos",
+      "detail": null
+    },
+    {
+      "id": "U2.T.INF.1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/infinitesimos/",
+      "description": "Infinitésimos en puntos concretos",
+      "detail": null
+    },
+    {
+      "id": "U2.T.INF.2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/infinitesimos/",
+      "description": "1-cos x tiene orden 2 y es equivalente a x^2/2",
+      "detail": null
+    },
+    {
+      "id": "U2.T.INF.3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/infinitesimos/",
+      "description": "x^3+2x^2 es del mismo orden que x^2 y equivalente a 2x^2",
+      "detail": null
+    },
+    {
+      "id": "U2.T.INF.4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/infinitesimos/",
+      "description": "Equivalencias fundamentales (u -> 0)",
+      "detail": null
+    },
+    {
+      "id": "U2.T.INF.5",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/infinitesimos/",
+      "description": "lim (1-cos 3x)/(x tan 2x) = 9/4",
+      "detail": null
+    },
+    {
+      "id": "U2.T.INF.6",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/infinitesimos/",
+      "description": "lim (e^{2x}-1)/ln(1+5x) = 2/5",
+      "detail": null
+    },
+    {
+      "id": "U2.T.INF.7",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/infinitesimos/",
+      "description": "lim sen(x^2-4)/(x-2) = 4 en 2",
+      "detail": null
+    },
+    {
+      "id": "U2.T.INF.8",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/infinitesimos/",
+      "description": "lim (tan x - sen x)/x^3 = 1/2 (no 0)",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LAT.1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-laterales-y-propiedades/",
+      "description": "(x^2-4)/|x-2| en 2: laterales 4 y -4",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LAT.2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-laterales-y-propiedades/",
+      "description": "Parámetro k para que exista el límite en 2",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LAT.3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-laterales-y-propiedades/",
+      "description": "lim (3x^2-x)/(sqrt(x)+1) en 4 = 44/3",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LAT.4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-laterales-y-propiedades/",
+      "description": "lim x^2 sen(1/x) = 0 por intercalación",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LAT.5",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-laterales-y-propiedades/",
+      "description": "sen(5x)/x -> 5 y tan(x)/x -> 1",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIM.1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/entornos-y-limite/",
+      "description": "Tabla de (x^2-9)/(x-3) cerca de 3",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIM.2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/entornos-y-limite/",
+      "description": "lim (3x-2)=7 con delta = eps/3",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIM.3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/entornos-y-limite/",
+      "description": "lim x^2 = 4 en 2 con delta = min(1, eps/5)",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIM.4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/entornos-y-limite/",
+      "description": "lim (x^2-9)/(x-3) = 6 con delta = eps",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIM.5",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/entornos-y-limite/",
+      "description": "lim sqrt(x)=2 en 4 con delta = min(4, 2 eps)",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIM.6",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/entornos-y-limite/",
+      "description": "|x|/x no tiene límite en 0",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIN.1",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-infinitos/",
+      "description": "1/(x-1)^2 -> +oo; delta = 1/sqrt(M)",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIN.2",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-infinitos/",
+      "description": "(x+3)/(x+1) en -1: laterales -oo y +oo",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIN.3",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-infinitos/",
+      "description": "lim (2x+1)/(x+3)=2 en el infinito; N = 5/eps",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIN.4",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-infinitos/",
+      "description": "Cocientes de polinomios en +-oo",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIN.5",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-infinitos/",
+      "description": "sqrt(x^2+1)/x -> 1 en +oo y -1 en -oo",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIN.6",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-infinitos/",
+      "description": "(2^x+3)/(3^x-1): 0 en +oo y -3 en -oo",
+      "detail": null
+    },
+    {
+      "id": "U2.T.LIN.7",
+      "status": "passed",
+      "module": "u2_teoria.py",
+      "page": "/analisis-matematico-i/unidad-2/teoria/limites-infinitos/",
+      "description": "Jerarquía: ln x/sqrt(x) -> 0 y x e^{-x} -> 0",
+      "detail": null
+    },
+    {
+      "id": "U3.01",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "Enfriamiento T=300-12t+t^2/10",
+      "detail": null
+    },
+    {
+      "id": "U3.02",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "f=3x^2-x: f'(2)=11, tangente y normal",
+      "detail": null
+    },
+    {
+      "id": "U3.03",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "Tangentes a x^2-6x+10 por (2,-2)",
+      "detail": null
+    },
+    {
+      "id": "U3.04",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "a, b con y=4x-3 tangente a ax^3+bx en x=1",
+      "detail": null
+    },
+    {
+      "id": "U3.05",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/",
+      "description": "f'(x) de x/(x-1) por definición, f'(3) y tangente",
+      "detail": null
+    },
+    {
+      "id": "U3.06",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/",
+      "description": "Derivabilidad de ax^2+1 | bx-3 en x=2",
+      "detail": null
+    },
+    {
+      "id": "U3.07",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/",
+      "description": "Ejemplos numéricos de la paridad: f par => f' impar; f impar => f' par",
+      "detail": null
+    },
+    {
+      "id": "U3.08",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "Derivadas de sumas con potencias",
+      "detail": null
+    },
+    {
+      "id": "U3.09",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "Producto y cociente",
+      "detail": null
+    },
+    {
+      "id": "U3.10",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "tanh x: f'=1-f^2=4/(e^x+e^-x)^2, tangente en 0",
+      "detail": null
+    },
+    {
+      "id": "U3.11",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "Cadena en cuatro funciones",
+      "detail": null
+    },
+    {
+      "id": "U3.12",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "Cadena con tabla (puntos distintos de los del ejemplo 5)",
+      "detail": null
+    },
+    {
+      "id": "U3.13",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "Inversa de 2x^3+3x",
+      "detail": null
+    },
+    {
+      "id": "U3.14",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "f=x arcsen x + sqrt(1-x^2): f'=arcsen x, tangente en 1/2, F'",
+      "detail": null
+    },
+    {
+      "id": "U3.15",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/",
+      "description": "2x^2+3y^2=14 en (1,2)",
+      "detail": null
+    },
+    {
+      "id": "U3.16",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/",
+      "description": "x^2-2xy+2y^2=4: tangentes horizontales y verticales",
+      "detail": null
+    },
+    {
+      "id": "U3.17",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/",
+      "description": "Derivación logarítmica a, b, c",
+      "detail": null
+    },
+    {
+      "id": "U3.18",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/",
+      "description": "f=(x+1)^2 (x-2)^3/(x^2+1)^4: (ln|f|)', tangente en 0, f'(-2)",
+      "detail": null
+    },
+    {
+      "id": "U3.19",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/integradores/",
+      "description": "Función por tramos con logaritmo",
+      "detail": null
+    },
+    {
+      "id": "U3.20",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/integradores/",
+      "description": "Concentración C=20 t e^(-t/2)",
+      "detail": null
+    },
+    {
+      "id": "U3.21",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/integradores/",
+      "description": "Opción múltiple: h=f(g(x))x^2, h'(2)=44; (g^-1)'(5)=1/3",
+      "detail": null
+    },
+    {
+      "id": "U3.22",
+      "status": "passed",
+      "module": "u3_practica.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/integradores/",
+      "description": "f=x e^x: inversa, h=(x e^x)^x",
+      "detail": null
+    },
+    {
+      "id": "U3.A.AD1",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "H(t)=15 ln(t+1): H'(3) y t con H'=2",
+      "detail": null
+    },
+    {
+      "id": "U3.A.AD2",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "x^2y+y^2-4x=0: tangentes verticales",
+      "detail": null
+    },
+    {
+      "id": "U3.A.AD3",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "h(x)=f(x^3-7) x^2/e^(x-2): h'(2)=-96",
+      "detail": null
+    },
+    {
+      "id": "U3.A.AD4",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "(x+1)^(x^2+x): tangente horizontal en x=0",
+      "detail": null
+    },
+    {
+      "id": "U3.A.AD5",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "h=f∘g^-1: h'(3) = -f'(1)/2",
+      "detail": null
+    },
+    {
+      "id": "U3.A.AD6",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "a para tangente vertical en x=-2 de a x^2-3xy-y^2=21",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E01",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Secantes de x^2 en (1,1): tabla, pendiente genérica, límite y tangente",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E02",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Velocidades medias de s=5t^2 en t=2 y velocidad instantánea",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E03",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Derivadas por definición del ejercicio 3 (a a i) y dominios",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E04",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Rectas tangentes del ejercicio 4",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E05",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Continuidad y derivabilidad del ejercicio 5 (a a e) con laterales",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E06",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Derivadas del ejercicio 6 (a a s)",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E06e.discrepancia",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "6e: la respuesta oficial 3*sqrt(5)*x^2 no es la derivada de sqrt(5x^3)",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E07",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Tangente por (4,3) y (0,2): f(4)=3, f'(4)=1/4",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E08",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Tangentes perpendiculares de y=x e y=1/x",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E09",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Tangente horizontal de x+2 sen x",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E10",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Normal a y=x-x^2 en (1,0) y su otra intersección",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E11",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Ángulo de inclinación de la tangente a sen x en pi",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E12",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Puntos con tangente a 45° en x/(1-x^2)",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E13",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Tangentes a 1/x y 1/x^2 y sus intersecciones",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E14",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Normal a 60° en y=(1-x)/(1+x): abscisas y ordenadas (corrige P1 ≈ (-2,861; -2,075))",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E15",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Tangente paralela a 3x-y+6=0 en x*sqrt(x)",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E16",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "a para que y=9x+24 sea tangente a ax/(2x+3) en x=-2",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E17",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "a, b para tangente y=2x-4 en x=1 de ax^3+bx^2+x",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E18",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "x+ln x tiene tangente por el origen en x=e",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E19",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Tangentes a 4x-x^2 por (2,5)",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E20",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Derivadas por regla de la cadena del ejercicio 20 (a a r)",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E20.q.oficial",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "20q: la respuesta oficial coincide con la página (con la fracción interpretada)",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E21",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Tangente a g(x)=f(-x^2+sen(pi x)) en x=1 con f tangente y=-5x+3 en -1",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E22",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "a, b de a x^2 e^(x^3-1) + b con tangente y=-5x+8 en x=1",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E23",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Ejercicio 23: derivadas con datos por tangente (a a d)",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E24",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "x^2 sen(1/x): continua y derivable en 0, f' discontinua en 0",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E25",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "m, b para derivabilidad en R (a, b, c)",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E26",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Tangentes de x|x| paralelas a y=4x-6",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E27",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Movimiento s=t^3-6t^2+9t",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E28",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Dos partículas s1=t^2-4t, s2=3t-t^2",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E29",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Vaciado V(t)=5000(1-t/40)^2",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E30",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Clavadista s=-16t^2+16t+32",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E31",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Enfriamiento C=20+70e^(-0,1t)",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E32",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Derivada de la inversa: tangente a f^-1 y (f^-1)'(-2)",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E33",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Derivadas con trigonométricas inversas",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E34",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Derivación implícita (a a d) y tangentes de 34b",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E35",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Folium de Descartes: normal en (3/2,3/2) pasa por el origen",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E36",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "x^2-xy+y^2=27: tangentes horizontales y verticales",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E37",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "a para tangente horizontal de x^2-xy+y^2=a en x=2",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E38",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "(x-2)^2-y^2=9: tangente en (7,4) paralela a y=5/4 x+9 y otro punto",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E39",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Derivación logarítmica del ejercicio 39",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E40",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Derivadas del ejercicio 40",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E41",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "Tangente a (1-x)^(3/(x+1)) en x=0",
+      "detail": null
+    },
+    {
+      "id": "U3.A.E42",
+      "status": "passed",
+      "module": "u3_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-3/practica/practica-3/",
+      "description": "V/F del ejercicio 42: justificaciones comprobables",
+      "detail": null
+    },
+    {
+      "id": "U3.T.CAD.1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "((5x-2)^7)'",
+      "detail": null
+    },
+    {
+      "id": "U3.T.CAD.2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "(sqrt(x^2+1))'",
+      "detail": null
+    },
+    {
+      "id": "U3.T.CAD.3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "(sen^2(e^(3x)))'",
+      "detail": null
+    },
+    {
+      "id": "U3.T.CAD.4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "(x^2 e^(-x^2))'",
+      "detail": null
+    },
+    {
+      "id": "U3.T.CAD.5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "Cadena y cociente con la tabla de valores",
+      "detail": null
+    },
+    {
+      "id": "U3.T.CAD.6",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "Tangente a h(x)=f(2x^2-6) en x=2 con f tangente y=-x+7 en x=2",
+      "detail": null
+    },
+    {
+      "id": "U3.T.DER.1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "f'(1)=1/4 para sqrt(x+3), con la racionalización publicada",
+      "detail": null
+    },
+    {
+      "id": "U3.T.DER.2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "Tangente y normal a sqrt(x+3) en x=1",
+      "detail": null
+    },
+    {
+      "id": "U3.T.DER.3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "Tangentes de x^3-3x perpendiculares a y=-x/6+1",
+      "detail": null
+    },
+    {
+      "id": "U3.T.DER.4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "Tangentes a x^2 por (1,-3)",
+      "detail": null
+    },
+    {
+      "id": "U3.T.DER.5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "a, b para que y=5x-4 sea tangente a ax^2+bx en x=1",
+      "detail": null
+    },
+    {
+      "id": "U3.T.DER.6",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "sqrt(4,1) ≈ 2,025 por la recta tangente (numérico, aritmética exacta)",
+      "detail": null
+    },
+    {
+      "id": "U3.T.FUN.1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/",
+      "description": "f'(x) por definición para 1/(x+2)",
+      "detail": null
+    },
+    {
+      "id": "U3.T.FUN.2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/",
+      "description": "g'(x)=1/sqrt(2x-1) y comportamiento en x=1/2",
+      "detail": null
+    },
+    {
+      "id": "U3.T.FUN.3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/",
+      "description": "|x| en 0: derivadas laterales -1 y 1",
+      "detail": null
+    },
+    {
+      "id": "U3.T.FUN.4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/",
+      "description": "Función por tramos: continua, laterales 2 y 3 en x=1, derivada por tramos",
+      "detail": null
+    },
+    {
+      "id": "U3.T.FUN.5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/",
+      "description": "a, b para derivabilidad de x^3+1 | ax+b en x=1",
+      "detail": null
+    },
+    {
+      "id": "U3.T.FUN.6",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/",
+      "description": "x^(1/3): tangente vertical; x^(2/3): cúspide (laterales infinitos)",
+      "detail": null
+    },
+    {
+      "id": "U3.T.FUN.7",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/",
+      "description": "x^2 sen(1/x): f'(0)=0, f'(x)=2x sen(1/x)-cos(1/x), f' toma -1 y 1 cerca de 0",
+      "detail": null
+    },
+    {
+      "id": "U3.T.IMP.1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/",
+      "description": "Circunferencia x^2+y^2=25: y'=-x/y, tangente en (3,4)",
+      "detail": null
+    },
+    {
+      "id": "U3.T.IMP.2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/",
+      "description": "x^3+xy+y^3=11 en (1,2): y'=-5/13, tangente y normal",
+      "detail": null
+    },
+    {
+      "id": "U3.T.IMP.3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/",
+      "description": "x^2+xy+y^2=3: tangentes horizontales y verticales",
+      "detail": null
+    },
+    {
+      "id": "U3.T.INV.1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "(f^-1)'(3) para x^5+x^3+x",
+      "detail": null
+    },
+    {
+      "id": "U3.T.INV.2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "Tangente a la inversa de x+e^x en (1,0)",
+      "detail": null
+    },
+    {
+      "id": "U3.T.INV.3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "(arctan 3x)' = 3/(1+9x^2)",
+      "detail": null
+    },
+    {
+      "id": "U3.T.INV.4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "(arcsen sqrt x)' en (0,1)",
+      "detail": null
+    },
+    {
+      "id": "U3.T.INV.5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/",
+      "description": "arctan x + arctan(1/x) tiene derivada nula; valores en 1 y -1",
+      "detail": null
+    },
+    {
+      "id": "U3.T.LOG.1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/",
+      "description": "(x^sen x)'",
+      "detail": null
+    },
+    {
+      "id": "U3.T.LOG.2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/",
+      "description": "(x^α)' = α x^(α-1) para x>0",
+      "detail": null
+    },
+    {
+      "id": "U3.T.LOG.3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/",
+      "description": "Derivación logarítmica de (x^2+1)^3 sqrt(x-2)/(x+5)^4 en x>2",
+      "detail": null
+    },
+    {
+      "id": "U3.T.LOG.4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/",
+      "description": "ln|f| para (x-1)^3(x+2)/(x-3)^2: vale con f<0",
+      "detail": null
+    },
+    {
+      "id": "U3.T.RAZ.1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "Razón media de s=2t^2+t en [1,3] y cociente en [1,1+h]",
+      "detail": null
+    },
+    {
+      "id": "U3.T.RAZ.2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/",
+      "description": "Velocidad instantánea s'(1)=5",
+      "detail": null
+    },
+    {
+      "id": "U3.T.REG.1",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "(x^4)' por el binomio",
+      "detail": null
+    },
+    {
+      "id": "U3.T.REG.2",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "(sqrt x)' por conjugado",
+      "detail": null
+    },
+    {
+      "id": "U3.T.REG.3",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "(sen x)' = cos x con los límites publicados",
+      "detail": null
+    },
+    {
+      "id": "U3.T.REG.4",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "Derivada de 4x^5-7sqrt(x)+3/x^2+pi",
+      "detail": null
+    },
+    {
+      "id": "U3.T.REG.5",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "Derivada de (3x^2-x) ln x",
+      "detail": null
+    },
+    {
+      "id": "U3.T.REG.6",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "Derivada de x^2 e^x sen x",
+      "detail": null
+    },
+    {
+      "id": "U3.T.REG.7",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "Derivada de (2x+1)/(x^2+4)",
+      "detail": null
+    },
+    {
+      "id": "U3.T.REG.8",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "(tan x)' = 1/cos^2 x y (sec x)' = sec x tan x",
+      "detail": null
+    },
+    {
+      "id": "U3.T.REG.9",
+      "status": "passed",
+      "module": "u3_teoria.py",
+      "page": "/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/",
+      "description": "(x^2-4)/(x-2): derivada por cociente y por simplificación",
+      "detail": null
+    },
+    {
+      "id": "U4.01",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/orden-de-contacto/",
+      "description": "Orden de contacto: ln(1+x) con su P3; cos x con 1-x^2/2; e^x con 1+x+x^2",
+      "detail": null
+    },
+    {
+      "id": "U4.02",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/orden-de-contacto/",
+      "description": "sqrt(1+x) con 1+ax+bx^2 (a=1/2, b=-1/8) y con el término cúbico k=1/16",
+      "detail": null
+    },
+    {
+      "id": "U4.03",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/orden-de-contacto/",
+      "description": "Q=2x^4-x^3+3x^2+x-4 en potencias de (x+1)",
+      "detail": null
+    },
+    {
+      "id": "U4.05",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "Mac Laurin de orden 4 de e^(-2x) y cos 3x; e^(-0,2) con P4 en x=0,1",
+      "detail": null
+    },
+    {
+      "id": "U4.06",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "Linealización de sqrt(x) en 36; sqrt(37) y sqrt(35) sobreestimados",
+      "detail": null
+    },
+    {
+      "id": "U4.07",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "sen x = x^2 con Mac Laurin de orden 3",
+      "detail": null
+    },
+    {
+      "id": "U4.08",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "a e^(bx)+c con P2 = 5+6x+6x^2; datos de g en a=2",
+      "detail": null
+    },
+    {
+      "id": "U4.09",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "h = g e^(2x): derivadas, Mac Laurin de orden 3 y producto de polinomios",
+      "detail": null
+    },
+    {
+      "id": "U4.10",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/termino-complementario/",
+      "description": "ln 0,9 con el Mac Laurin de orden 3 de ln(1+x) y cota exacta",
+      "detail": null
+    },
+    {
+      "id": "U4.11",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/termino-complementario/",
+      "description": "Orden para e^(-1/2) con error < 10^-3 y aproximación 233/384",
+      "detail": null
+    },
+    {
+      "id": "U4.12",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/termino-complementario/",
+      "description": "cos x ~ 1-x^2/2: cota x^4/24 y los valores 0,2, 0,22, 0,23",
+      "detail": null
+    },
+    {
+      "id": "U4.14",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/integradores/",
+      "description": "x e^(-x): P4, f(0,2) = 307/1875, cota 1/75000 y órdenes de contacto",
+      "detail": null
+    },
+    {
+      "id": "U4.15",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/integradores/",
+      "description": "x cos x: P5, 337/768, derivadas f^(6), f^(7) y cotas con n=5 y n=6",
+      "detail": null
+    },
+    {
+      "id": "U4.16",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/integradores/",
+      "description": "Opción múltiple con P3 = 3-2(x-1)+6(x-1)^2-4(x-1)^3",
+      "detail": null
+    },
+    {
+      "id": "U4.17",
+      "status": "passed",
+      "module": "u4_practica.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/integradores/",
+      "description": "Presión p(h)=100 e^(-h/8000): linealización, cotas y orden 2",
+      "detail": null
+    },
+    {
+      "id": "U4.A.A1",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Adicional 1: g(x) = 2/f(5x)",
+      "detail": null
+    },
+    {
+      "id": "U4.A.A2",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Adicional 2: sqrt(1+3x)",
+      "detail": null
+    },
+    {
+      "id": "U4.A.A3",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Adicional 3: m = cos(pi-2x) en pi/2",
+      "detail": null
+    },
+    {
+      "id": "U4.A.A4",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Adicional 4: ln(x-1) = -(x-1)^2+3 con P2 en 2 da x = -1 ± sqrt13 (opción e)",
+      "detail": null
+    },
+    {
+      "id": "U4.A.A5",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Adicional 5: P6^(5)(a) = f^(5)(a)",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E01",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Orden de contacto de P, Q, R con e^x en 0",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E02.a",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Taylor de 1/x en 1, orden 3, y valor en 1,3",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E02.b",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Taylor de cos(x-2) en 2, orden 3, y valor en 2,1",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E02.c",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Taylor de sqrt(x+1) en 0, orden 3, y valor en -0,15",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E03",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Aproximaciones del ejercicio 3: e^(1/2), ln 0,4 y sen 31°",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E04",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Tabla de P1 y P2 de ln x en 1",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E05",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Maclaurin de orden 2 de (1-u^2)^(-1/2)",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E06",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Ecuaciones con Maclaurin: a-e",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E07",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "f=1+3x+sen x: P4, f(1/3) y cota de R4",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E08.a",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "sqrt(16,5) con Taylor de orden 2 en 0 y cota",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E08.b",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "ln(1,23) con P3 en 1 y cota",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E09",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "e^(-1/3) con P5: cota 1/524880 estricta",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E10",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "x ln x: P3 en 1, f(1,5) y cota",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E11.a",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "sen(ax+b): a=4, b=pi/4 da P1 = (sqrt2/2)(1+4x)",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E11.b",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "a ln(bx+1): a=5, b=-3",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E12",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "ln(ax+b) con Maclaurin 6x: a=6, b=1; ln(1,06)",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E13",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "(5x+1)f'+f=1, f(0)=2: P3 = 2 - x + 3x^2 - 11x^3",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E14",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "g = 1-3x+sqrt(f) con P2 = 2-x+3x^2: P2 de f = 1+4x+10x^2",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E15",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "Verdadero/falso de la práctica 4",
+      "detail": null
+    },
+    {
+      "id": "U4.A.E15.b",
+      "status": "passed",
+      "module": "u4_auditoria.py",
+      "page": "/analisis-matematico-i/unidad-4/practica/practica-4/",
+      "description": "15b: el coeficiente de x^6 del Mac Laurin de orden 9 es f^(6)(0)/6! (la oficial marca falso: errónea)",
+      "detail": null
+    },
+    {
+      "id": "U4.T.CON.1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/orden-de-contacto/",
+      "description": "sen x y x tienen contacto de orden 2 en 0",
+      "detail": null
+    },
+    {
+      "id": "U4.T.CON.2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/orden-de-contacto/",
+      "description": "cos x y 1-x^2/2+x^4/24: contacto de orden 5 en 0",
+      "detail": null
+    },
+    {
+      "id": "U4.T.CON.3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/orden-de-contacto/",
+      "description": "x^3 y 3x-2: contacto de orden 1 en a=1 y de orden 0 en a=-2",
+      "detail": null
+    },
+    {
+      "id": "U4.T.CON.4",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/orden-de-contacto/",
+      "description": "f=1/(1+2x) y 1+ax+bx^2: a=-2, b=4, orden exacto 2",
+      "detail": null
+    },
+    {
+      "id": "U4.T.CON.5",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/orden-de-contacto/",
+      "description": "Caracterización por límites con sen x - x",
+      "detail": null
+    },
+    {
+      "id": "U4.T.LIN.1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "Linealización de la raíz cuarta en 16 y valor en 16,2",
+      "detail": null
+    },
+    {
+      "id": "U4.T.LIN.2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "Linealizaciones en 0 y 1/sqrt(1,04)",
+      "detail": null
+    },
+    {
+      "id": "U4.T.LIN.3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "Volumen de la esfera: variación lineal frente a exacta",
+      "detail": null
+    },
+    {
+      "id": "U4.T.POL.1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/orden-de-contacto/",
+      "description": "x^4-3x^3+2x-5 en potencias de (x-2)",
+      "detail": null
+    },
+    {
+      "id": "U4.T.POL.2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/orden-de-contacto/",
+      "description": "Polinomio de grado <=3 con P(1)=2, P'(1)=-1, P''(1)=4, P'''(1)=12",
+      "detail": null
+    },
+    {
+      "id": "U4.T.POL.3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/orden-de-contacto/",
+      "description": "Deducción: derivar k veces sum c_j (x-a)^j y evaluar en a da k! c_k",
+      "detail": null
+    },
+    {
+      "id": "U4.T.RES.1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/termino-complementario/",
+      "description": "Derivada de F(t) = f(x) - sum f^(k)(t)(x-t)^k/k! - K(x-t)^(n+1)/(n+1)! se telescopia (n=3)",
+      "detail": null
+    },
+    {
+      "id": "U4.T.RES.2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/termino-complementario/",
+      "description": "e^0,3 con P3 y cota con M=2",
+      "detail": null
+    },
+    {
+      "id": "U4.T.RES.3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/termino-complementario/",
+      "description": "Orden para sen 0,5 con error < 10^-4",
+      "detail": null
+    },
+    {
+      "id": "U4.T.RES.4",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/termino-complementario/",
+      "description": "ln 1,2 con P3 en 1 y cota con M=6 en [1; 1,2]",
+      "detail": null
+    },
+    {
+      "id": "U4.T.RES.5",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/termino-complementario/",
+      "description": "Raíz de 0,9 con P2 en 1 (x < a) y M=1/2",
+      "detail": null
+    },
+    {
+      "id": "U4.T.RES.6",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/termino-complementario/",
+      "description": "sen x ~ x para |x| <= 0,1: cotas con n=1 y n=2",
+      "detail": null
+    },
+    {
+      "id": "U4.T.RES.7",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/termino-complementario/",
+      "description": "El resto es un infinitésimo de orden superior a (x-a)^n",
+      "detail": null
+    },
+    {
+      "id": "U4.T.TAY.1",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "Orden y grado: P4 de sen x en 0 es x - x^3/6 (grado 3)",
+      "detail": null
+    },
+    {
+      "id": "U4.T.TAY.2",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "Polinomios de Mac Laurin de las funciones elementales",
+      "detail": null
+    },
+    {
+      "id": "U4.T.TAY.3",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "Raíz cúbica en a=8, orden 2, y valor aproximado en 8,3",
+      "detail": null
+    },
+    {
+      "id": "U4.T.TAY.4",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "x e^x: Mac Laurin de orden 3",
+      "detail": null
+    },
+    {
+      "id": "U4.T.TAY.5",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "cos(2x): coeficientes c^k f^(k)(0), orden 4",
+      "detail": null
+    },
+    {
+      "id": "U4.T.TAY.6",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "sen x en a=pi/4, orden 3",
+      "detail": null
+    },
+    {
+      "id": "U4.T.TAY.7",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "cos x = x^2 con Mac Laurin de orden 2 y 4",
+      "detail": null
+    },
+    {
+      "id": "U4.T.TAY.8",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "a e^(bx) con P2 = 5 - 10x + 10x^2: a=5, b=-2",
+      "detail": null
+    },
+    {
+      "id": "U4.T.TAY.9",
+      "status": "passed",
+      "module": "u4_teoria.py",
+      "page": "/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/",
+      "description": "Datos de f a partir de P2(x)=4-6(x+1)+5(x+1)^2 en a=-1",
+      "detail": null
+    }
+  ]
+}

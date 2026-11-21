@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 548" role="img" aria-label="Ejercicio 27 c) de la Práctica 2: f₃ cerca de a = 1">
+<title>Ejercicio 27 c) de la Práctica 2: f₃ cerca de a = 1</title>
+<style>
+:root{--bg:#ffffff;--ink:#1f2328;--muted:#6b7280;--grid:#e5e7eb;--axis:#4b5563;--c1:#2563eb;--c2:#dc2626;--c3:#059669;--c4:#9333ea}
+@media (prefers-color-scheme: dark){:root{--bg:#1b1f24;--ink:#e5e7eb;--muted:#9ca3af;--grid:#374151;--axis:#9ca3af;--c1:#60a5fa;--c2:#f87171;--c3:#34d399;--c4:#c084fc}}
+text{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:13px;fill:var(--ink)}
+.tick{font-size:11px;fill:var(--muted)}
+.grid{stroke:var(--grid);stroke-width:1}
+.axis{stroke:var(--axis);stroke-width:1.3}
+.curve{fill:none;stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
+.dash{stroke-dasharray:6 5}
+</style>
+<rect width="560" height="548" rx="8" style="fill:var(--bg)"/>
+<clipPath id="area"><rect x="34" y="34" width="492" height="480"/></clipPath>
+<line class="grid" x1="45.71" y1="514.00" x2="45.71" y2="34.00"/>
+<line class="grid" x1="104.29" y1="514.00" x2="104.29" y2="34.00"/>
+<line class="grid" x1="162.86" y1="514.00" x2="162.86" y2="34.00"/>
+<line class="grid" x1="221.43" y1="514.00" x2="221.43" y2="34.00"/>
+<line class="grid" x1="280.00" y1="514.00" x2="280.00" y2="34.00"/>
+<line class="grid" x1="338.57" y1="514.00" x2="338.57" y2="34.00"/>
+<line class="grid" x1="397.14" y1="514.00" x2="397.14" y2="34.00"/>
+<line class="grid" x1="455.71" y1="514.00" x2="455.71" y2="34.00"/>
+<line class="grid" x1="514.29" y1="514.00" x2="514.29" y2="34.00"/>
+<line class="grid" x1="34.00" y1="461.32" x2="526.00" y2="461.32"/>
+<line class="grid" x1="34.00" y1="402.78" x2="526.00" y2="402.78"/>
+<line class="grid" x1="34.00" y1="344.24" x2="526.00" y2="344.24"/>
+<line class="grid" x1="34.00" y1="285.71" x2="526.00" y2="285.71"/>
+<line class="grid" x1="34.00" y1="227.17" x2="526.00" y2="227.17"/>
+<line class="grid" x1="34.00" y1="168.63" x2="526.00" y2="168.63"/>
+<line class="grid" x1="34.00" y1="110.10" x2="526.00" y2="110.10"/>
+<line class="grid" x1="34.00" y1="51.56" x2="526.00" y2="51.56"/>
+<line class="axis" x1="34.00" y1="168.63" x2="526.00" y2="168.63"/>
+<line class="axis" x1="221.43" y1="514.00" x2="221.43" y2="34.00"/>
+<text class="tick" x="45.71" y="183.63" text-anchor="middle">−3</text>
+<text class="tick" x="104.29" y="183.63" text-anchor="middle">−2</text>
+<text class="tick" x="162.86" y="183.63" text-anchor="middle">−1</text>
+<text class="tick" x="280.00" y="183.63" text-anchor="middle">1</text>
+<text class="tick" x="338.57" y="183.63" text-anchor="middle">2</text>
+<text class="tick" x="397.14" y="183.63" text-anchor="middle">3</text>
+<text class="tick" x="455.71" y="183.63" text-anchor="middle">4</text>
+<text class="tick" x="514.29" y="183.63" text-anchor="middle">5</text>
+<text class="tick" x="215.43" y="465.32" text-anchor="end">−5</text>
+<text class="tick" x="215.43" y="406.78" text-anchor="end">−4</text>
+<text class="tick" x="215.43" y="348.24" text-anchor="end">−3</text>
+<text class="tick" x="215.43" y="289.71" text-anchor="end">−2</text>
+<text class="tick" x="215.43" y="231.17" text-anchor="end">−1</text>
+<text class="tick" x="215.43" y="114.10" text-anchor="end">1</text>
+<text class="tick" x="215.43" y="55.56" text-anchor="end">2</text>
+<text x="522.00" y="162.63" text-anchor="end">x</text>
+<text x="227.43" y="46.00">y</text>
+<g clip-path="url(#area)">
+<path class="curve dash" style="stroke:var(--muted);stroke-width:1.8" d="M280.00,514.00 L280.00,34.00"/>
+<path class="curve" style="stroke:var(--c1)" d="M34.59,171.85 L89.06,173.43 L127.13,176.71 L157.00,181.34 L173.22,185.90 L191.32,194.04 L204.79,204.40 L214.75,216.52 L222.95,232.03 L228.46,245.96 L235.54,274.00 L240.87,303.85 L248.08,377.02 L251.30,428.54 L254.52,509.90"/>
+<path class="curve" style="stroke:var(--c1)" d="M301.09,507.85 L302.55,508.73 L306.06,423.85 L309.58,368.24 L314.03,321.41 L318.60,290.39 L325.51,256.91 L334.30,231.68 L340.56,219.50 L350.64,206.10 L360.95,197.43 L375.12,189.30 L389.12,184.26 L400.66,181.28 L431.70,176.54 L487.34,172.44 L517.21,171.85"/>
+</g>
+<text x="42.00" y="50.00" text-anchor="start">f₃, a = 1</text>
+</svg>

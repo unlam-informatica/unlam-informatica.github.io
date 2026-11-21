@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 484" role="img" aria-label="Ejercicio 4 b) de la Práctica 2: gráfico de y = f(x)">
+<title>Ejercicio 4 b) de la Práctica 2: gráfico de y = f(x)</title>
+<style>
+:root{--bg:#ffffff;--ink:#1f2328;--muted:#6b7280;--grid:#e5e7eb;--axis:#4b5563;--c1:#2563eb;--c2:#dc2626;--c3:#059669;--c4:#9333ea}
+@media (prefers-color-scheme: dark){:root{--bg:#1b1f24;--ink:#e5e7eb;--muted:#9ca3af;--grid:#374151;--axis:#9ca3af;--c1:#60a5fa;--c2:#f87171;--c3:#34d399;--c4:#c084fc}}
+text{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:13px;fill:var(--ink)}
+.tick{font-size:11px;fill:var(--muted)}
+.grid{stroke:var(--grid);stroke-width:1}
+.axis{stroke:var(--axis);stroke-width:1.3}
+.curve{fill:none;stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
+.dash{stroke-dasharray:6 5}
+</style>
+<rect width="560" height="484" rx="8" style="fill:var(--bg)"/>
+<clipPath id="area"><rect x="34" y="34" width="492" height="416"/></clipPath>
+<line class="grid" x1="57.65" y1="450.00" x2="57.65" y2="34.00"/>
+<line class="grid" x1="104.96" y1="450.00" x2="104.96" y2="34.00"/>
+<line class="grid" x1="152.27" y1="450.00" x2="152.27" y2="34.00"/>
+<line class="grid" x1="199.58" y1="450.00" x2="199.58" y2="34.00"/>
+<line class="grid" x1="246.88" y1="450.00" x2="246.88" y2="34.00"/>
+<line class="grid" x1="294.19" y1="450.00" x2="294.19" y2="34.00"/>
+<line class="grid" x1="341.50" y1="450.00" x2="341.50" y2="34.00"/>
+<line class="grid" x1="388.81" y1="450.00" x2="388.81" y2="34.00"/>
+<line class="grid" x1="436.12" y1="450.00" x2="436.12" y2="34.00"/>
+<line class="grid" x1="483.42" y1="450.00" x2="483.42" y2="34.00"/>
+<line class="grid" x1="34.00" y1="450.00" x2="526.00" y2="450.00"/>
+<line class="grid" x1="34.00" y1="402.73" x2="526.00" y2="402.73"/>
+<line class="grid" x1="34.00" y1="355.45" x2="526.00" y2="355.45"/>
+<line class="grid" x1="34.00" y1="308.18" x2="526.00" y2="308.18"/>
+<line class="grid" x1="34.00" y1="260.91" x2="526.00" y2="260.91"/>
+<line class="grid" x1="34.00" y1="213.64" x2="526.00" y2="213.64"/>
+<line class="grid" x1="34.00" y1="166.36" x2="526.00" y2="166.36"/>
+<line class="grid" x1="34.00" y1="119.09" x2="526.00" y2="119.09"/>
+<line class="grid" x1="34.00" y1="71.82" x2="526.00" y2="71.82"/>
+<line class="axis" x1="34.00" y1="260.91" x2="526.00" y2="260.91"/>
+<line class="axis" x1="199.58" y1="450.00" x2="199.58" y2="34.00"/>
+<text class="tick" x="57.65" y="275.91" text-anchor="middle">−3</text>
+<text class="tick" x="104.96" y="275.91" text-anchor="middle">−2</text>
+<text class="tick" x="152.27" y="275.91" text-anchor="middle">−1</text>
+<text class="tick" x="246.88" y="275.91" text-anchor="middle">1</text>
+<text class="tick" x="294.19" y="275.91" text-anchor="middle">2</text>
+<text class="tick" x="341.50" y="275.91" text-anchor="middle">3</text>
+<text class="tick" x="388.81" y="275.91" text-anchor="middle">4</text>
+<text class="tick" x="436.12" y="275.91" text-anchor="middle">5</text>
+<text class="tick" x="483.42" y="275.91" text-anchor="middle">6</text>
+<text class="tick" x="193.58" y="454.00" text-anchor="end">−4</text>
+<text class="tick" x="193.58" y="406.73" text-anchor="end">−3</text>
+<text class="tick" x="193.58" y="359.45" text-anchor="end">−2</text>
+<text class="tick" x="193.58" y="312.18" text-anchor="end">−1</text>
+<text class="tick" x="193.58" y="217.64" text-anchor="end">1</text>
+<text class="tick" x="193.58" y="170.36" text-anchor="end">2</text>
+<text class="tick" x="193.58" y="123.09" text-anchor="end">3</text>
+<text class="tick" x="193.58" y="75.82" text-anchor="end">4</text>
+<text x="522.00" y="254.91" text-anchor="end">x</text>
+<text x="205.58" y="46.00">y</text>
+<g clip-path="url(#area)">
+<path class="curve" style="stroke:var(--c1)" d="M57.65,284.55 L62.81,285.40 L83.72,293.20 L98.29,302.13 L103.73,306.86 L109.74,313.48 L113.62,318.82 L118.59,327.42 L123.03,337.63 L127.20,350.68 L133.01,377.39 L136.94,409.25 L137.65,420.88 L138.60,425.32 L140.25,451.04"/>
+<path class="curve" style="stroke:var(--c1)" d="M152.27,213.64 L153.97,219.12 L155.06,219.17 L161.35,230.37 L168.26,240.44 L178.05,251.12 L183.44,255.33 L186.19,257.08 L187.42,255.90 L189.97,257.79 L192.05,254.86 L193.05,254.76 L205.06,258.88 L208.38,258.59 L212.49,256.84 L218.93,252.31 L223.94,247.53 L229.95,240.53 L236.90,230.56 L243.34,218.69 L243.95,218.60 L243.48,217.75 L246.88,213.64"/>
+<path class="curve" style="stroke:var(--c1)" d="M246.88,166.36 L249.63,161.92 L250.53,161.97 L264.06,148.49 L336.01,76.50 L337.72,75.60 L341.50,71.82"/>
+<path class="curve" style="stroke:var(--c1)" d="M341.50,71.82 L346.66,71.49 L432.71,71.49 L437.16,71.01 L437.35,71.87 L527.99,71.49"/>
+<circle cx="57.65" cy="284.55" r="4.2" style="fill:var(--c1);stroke:var(--c1);stroke-width:1.8"/>
+<circle cx="152.27" cy="213.64" r="4.2" style="fill:var(--bg);stroke:var(--c1);stroke-width:1.8"/>
+<circle cx="246.88" cy="213.64" r="4.2" style="fill:var(--c1);stroke:var(--c1);stroke-width:1.8"/>
+<circle cx="246.88" cy="166.36" r="4.2" style="fill:var(--bg);stroke:var(--c1);stroke-width:1.8"/>
+<circle cx="341.50" cy="71.82" r="4.2" style="fill:var(--bg);stroke:var(--c1);stroke-width:1.8"/>
+</g>
+<text x="42.00" y="50.00" text-anchor="start">y = f(x)</text>
+</svg>
