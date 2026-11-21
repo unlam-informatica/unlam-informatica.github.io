@@ -1,0 +1,210 @@
+# Catálogo de procedencia generado por `content-pipeline inventory`.
+# Una entrada por contenido único (SHA-256). Las rutas son relativas a raw/.
+# Los campos de clasificación pueden corregirse a mano: la ingesta no los pisa.
+schema_version: 1
+subject: analisis-matematico-i
+summary:
+  documents: 9
+  duplicate_files: 1
+  total_bytes: 6667381
+  by_format:
+    pdf: 9
+  by_type:
+    examen-practica: 2
+    guia-estudio: 1
+    guia-practica: 1
+    programa: 1
+    teoria-catedra: 4
+  by_status:
+    normalizado: 9
+  needs_review: 0
+documents:
+- id: analisis-matematico-i-315ad3f8bf01
+  original_name: ACTIVIDAD-DE-AUTOAPRENDIZAJE-TEMA-CONTINUIDAD-(1).pdf
+  path: ACTIVIDAD-DE-AUTOAPRENDIZAJE-TEMA-CONTINUIDAD-(1).pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 891013
+  sha256: 315ad3f8bf01ecabd85ac8ab8739f1af033753c4a614a484335cd0b1ac6781db
+  doc_type: guia-estudio
+  units:
+  - u2
+  topics: []
+  source: Cátedra AM I (DIIT-UNLaM), actividad de autoaprendizaje de Continuidad
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: normalizado
+  needs_review: []
+- id: analisis-matematico-i-5ccac17bb05e
+  original_name: Consideraciones_Generales_AMI_2C2026_1.pdf
+  path: Consideraciones_Generales_AMI_2C2026_1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 69218
+  sha256: 5ccac17bb05e1c4abcefd943f74797961e3a9710b648725eeef5c998daaa3d27
+  doc_type: programa
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AM I (DIIT-UNLaM), Consideraciones generales 2C2026
+  version: 2C2026
+  license: privado-catedra
+  distribution: privado
+  extraction: text
+  notes: 'Programa analítico de las cuatro unidades, metodología, cronograma 2C2026 y régimen de acreditación.
+    Es la versión más reciente acreditada (2026). Sin fórmulas: perfil text.'
+  status: normalizado
+  needs_review: []
+- id: analisis-matematico-i-00eed4030c1f
+  original_name: Ejercicios2doparcialAMI_1.pdf
+  path: Ejercicios2doparcialAMI_1.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 129117
+  sha256: 00eed4030c1f9c62009aa3eee5cffedd4f5a40092272a21fe651c0ff4e853da5
+  doc_type: examen-practica
+  units:
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AM I (DIIT-UNLaM), ejercicios de repaso del segundo parcial
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: normalizado
+  needs_review: []
+- id: analisis-matematico-i-20099881563a
+  original_name: Practica_AMI_UNLAM_2026-(2)_2.pdf
+  path: Practica_AMI_UNLAM_2026-(2)_2.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 943895
+  sha256: 20099881563a3646b09ba6052c99fb758b11339bedf1299aefbf5104b1565db5
+  doc_type: guia-practica
+  units:
+  - u1
+  - u2
+  - u3
+  - u4
+  topics: []
+  source: Cátedra AM I (DIIT-UNLaM), Guía de Trabajos Prácticos 2026
+  version: '2026'
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: normalizado
+  needs_review: []
+- id: analisis-matematico-i-441038ce6982
+  original_name: Practica_Primer_Parcial__AMI_UNLaM-(1).pdf
+  path: Practica_Primer_Parcial__AMI_UNLaM-(1).pdf
+  duplicate_paths:
+  - Practica_Primer_Parcial__AMI_UNLaM-(1)_1.pdf
+  format: pdf
+  size_bytes: 172110
+  sha256: 441038ce698285717ad4d4f331ccf33b9a54590b5593cd8a6ac31ad74eaf3116
+  doc_type: examen-practica
+  units:
+  - u1
+  - u2
+  topics: []
+  source: Cátedra AM I (DIIT-UNLaM), práctica para el primer parcial
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: Los dos archivos «(1)» y «(1)_1» son idénticos (mismo SHA-256); el inventario los agrupa como
+    duplicados.
+  status: normalizado
+  needs_review: []
+- id: analisis-matematico-i-cf66ddbbbcbd
+  original_name: Unidad-1QR-Funciones.pdf
+  path: Unidad-1QR-Funciones.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 1244142
+  sha256: cf66ddbbbcbdd21a43926b9f70483f8b3f52b182a5445fa40a2b7e757db7df5b
+  doc_type: teoria-catedra
+  units:
+  - u1
+  topics: []
+  source: Williner, B. Apuntes de clase AM I, Unidad 1 (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: text
+  notes: 'PDF de Word: la capa de texto conserva las ecuaciones como caracteres matemáticos Unicode. El
+    perfil text da la estructura (Docling deja las fórmulas como formula-not-decoded); el reconocimiento
+    de fórmulas (perfil full) cuesta ~30 s por fórmula en CPU y queda como reproceso opcional.'
+  status: normalizado
+  needs_review: []
+- id: analisis-matematico-i-378ec9f8def6
+  original_name: Unidad-2QRLimite-funcional.pdf
+  path: Unidad-2QRLimite-funcional.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 1483115
+  sha256: 378ec9f8def62ce213989fbe05af10f124a4e7e881ec80dea3d644bedc9371cb
+  doc_type: teoria-catedra
+  units:
+  - u2
+  topics: []
+  source: Williner, B. Apuntes de clase AM I, Unidad 2 (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: text
+  notes: 'PDF de Word: la capa de texto conserva las ecuaciones como caracteres matemáticos Unicode. El
+    perfil text da la estructura (Docling deja las fórmulas como formula-not-decoded); el reconocimiento
+    de fórmulas (perfil full) cuesta ~30 s por fórmula en CPU y queda como reproceso opcional.'
+  status: normalizado
+  needs_review: []
+- id: analisis-matematico-i-54ca5de3f6da
+  original_name: Unidad-3QR-Derivada.pdf
+  path: Unidad-3QR-Derivada.pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 1213747
+  sha256: 54ca5de3f6da07564d041d9ba820f437c11237a8c5e4d3fc88416a61ba7cae5a
+  doc_type: teoria-catedra
+  units:
+  - u3
+  topics: []
+  source: Williner, B. Apuntes de clase AM I, Unidad 3 (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: text
+  notes: 'PDF de Word: la capa de texto conserva las ecuaciones como caracteres matemáticos Unicode. El
+    perfil text da la estructura (Docling deja las fórmulas como formula-not-decoded); el reconocimiento
+    de fórmulas (perfil full) cuesta ~30 s por fórmula en CPU y queda como reproceso opcional.'
+  status: normalizado
+  needs_review: []
+- id: analisis-matematico-i-62bdddb361bc
+  original_name: Unidad-4QR-Polinomios-de-Taylor(definitivo).pdf
+  path: Unidad-4QR-Polinomios-de-Taylor(definitivo).pdf
+  duplicate_paths: []
+  format: pdf
+  size_bytes: 521024
+  sha256: 62bdddb361bc111ef03b0f761e8aaa11e4cceda7e9ceebed5056351af0fa9000
+  doc_type: teoria-catedra
+  units:
+  - u4
+  topics: []
+  source: Williner, B. Apuntes de clase AM I, Unidad 4 (UNLaM)
+  version: null
+  license: privado-catedra
+  distribution: privado
+  extraction: full
+  notes: null
+  status: normalizado
+  needs_review: []
