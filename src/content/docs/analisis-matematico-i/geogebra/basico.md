@@ -23,14 +23,11 @@ Configuración mínima recomendada: abrir simultáneamente **Algebraica + Gráfi
 
 ## Configurar el idioma a español
 
-**Menú** → **Opciones** → **Idioma** → **Español / Argentina**. Esto cambia los nombres de los comandos (por ejemplo `Derivative` pasa a `Derivada`), los textos de los menús y los separadores numéricos.
+**Menú** → **Opciones** → **Idioma** → **Español**. Esto cambia los nombres de los comandos (por ejemplo `Derivative` pasa a `Derivada`) y los textos de los menús. La sintaxis de la barra de entrada **no** cambia con el idioma:
 
-Con español argentino:
-
-- El **separador decimal** es coma: $3{,}14$ en lugar de $3.14$.
-- Como la coma queda ocupada para decimales, el **separador de argumentos** dentro de comandos pasa a ser **punto y coma**: `Derivada(f; x)` en lugar de `Derivada(f, x)`.
-
-**Importante:** todos los ejemplos de esta guía usan punto y coma como separador (`;`), asumiendo que tenés GeoGebra configurado en español argentino. Si tu instalación usa coma (idioma inglés u otra variante), reemplazá los `;` por `,`.
+- El **separador decimal** es siempre el **punto**: `3.14`, no `3,14` (aunque en estos apuntes escribimos $3{,}14$ en el texto matemático).
+- Los **argumentos** de un comando se separan con **coma**: `Derivada(f, x)`.
+- Un punto se escribe `(2, 3)`. Con punto y coma, `(2; 3)` es un punto en **coordenadas polares** (radio $2$ y ángulo $3$), que es otro punto.
 
 ## La barra de entrada
 
@@ -42,7 +39,7 @@ En la parte inferior de la vista Algebraica hay una **barra de entrada** donde s
 | Reasignar | volver a tipear `f(x) = …` reemplaza la definición anterior |
 | Evaluar | `f(3)` devuelve $f(3)$ |
 | Definir un número | `a = 5` |
-| Definir un punto | `A = (2; 3)` (coordenadas separadas con `;`) |
+| Definir un punto | `A = (2, 3)` (coordenadas separadas con coma) |
 | Borrar un objeto | seleccionar en la vista algebraica y `Suprimir` |
 | Buscar comandos | tipear las primeras letras: aparece autocompletado |
 
@@ -56,11 +53,11 @@ En la parte inferior de la vista Algebraica hay una **barra de entrada** donde s
 | División | `/` | `x/2` |
 | Potencia | `^` | `x^2`, `e^x` |
 | Raíz cuadrada | `sqrt(x)` o `√(x)` | `sqrt(x+4)` |
-| Raíz $n$-ésima | `nroot(x, n)` o `surd(x, n)` | `nroot(x; 3)` |
+| Raíz $n$-ésima | `nroot(x, n)` o `surd(x, n)` | `nroot(x, 3)` |
 | Valor absoluto | `abs(x)` o `\|x\|` con barras | `abs(x-2)` |
 | Logaritmo natural | `ln(x)` | `ln(x+1)` |
-| Logaritmo decimal | `lg(x)` o `log(10; x)` | `log(10; 100)` |
-| Logaritmo base $a$ | `log(a; x)` | `log(2; 8)` |
+| Logaritmo decimal | `lg(x)` o `log(10, x)` | `log(10, 100)` |
+| Logaritmo base $a$ | `log(a, x)` | `log(2, 8)` |
 | Exponencial | `exp(x)` o `e^x` | `e^x`, `exp(-x^2)` |
 | Trigonométricas | `sin(x)`, `cos(x)`, `tan(x)` | `sin(x)` |
 | Constantes | `pi`, `e` | `pi`, `e^2` |

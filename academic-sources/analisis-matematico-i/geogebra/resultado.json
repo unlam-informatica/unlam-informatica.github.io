@@ -1,0 +1,994 @@
+{
+ "fecha": "2026-11-21",
+ "version": "5.4.920.0",
+ "resultados": [
+  {
+   "pagina": "geogebra/basico",
+   "cmd": "f(x) = x^2 - 4",
+   "espera": {
+    "tipo": "function",
+    "valor": "f(x) = x² - 4"
+   },
+   "obtenido": [
+    {
+     "l": "f",
+     "type": "function",
+     "val": "f(x) = x² - 4",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/basico",
+   "cmd": "PA = (2, 3)",
+   "espera": {
+    "punto": [
+     2,
+     3
+    ]
+   },
+   "obtenido": [
+    {
+     "l": "PA",
+     "type": "point",
+     "val": "PA = (2, 3)",
+     "num": null,
+     "x": 2,
+     "y": 3
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/basico",
+   "cmd": "PB = (2; 3)",
+   "espera": {
+    "punto": [
+     -1.97998,
+     0.28224
+    ]
+   },
+   "nota": "con ; es coordenada polar (radio 2, ángulo 3 rad)",
+   "obtenido": [
+    {
+     "l": "PB",
+     "type": "point",
+     "val": "PB = (2; 171.887338539247°)",
+     "num": null,
+     "x": -1.9799849932008908,
+     "y": 0.2822400161197344
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/index",
+   "cmd": "Raiz(f)",
+   "espera": {
+    "nada": true
+   },
+   "nota": "sin tilde no se reconoce",
+   "obtenido": [],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "Raíz(f)",
+   "espera": {
+    "puntos": [
+     [
+      -2,
+      0
+     ],
+     [
+      2,
+      0
+     ]
+    ]
+   },
+   "obtenido": [
+    {
+     "l": "A",
+     "type": "point",
+     "val": "A = (-2, 0)",
+     "num": null,
+     "x": -2,
+     "y": 0
+    },
+    {
+     "l": "B",
+     "type": "point",
+     "val": "B = (2, 0)",
+     "num": null,
+     "x": 2,
+     "y": 0
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "Raíz(f, 1.5)",
+   "espera": {
+    "puntos": [
+     [
+      2,
+      0
+     ]
+    ]
+   },
+   "obtenido": [
+    {
+     "l": "C",
+     "type": "point",
+     "val": "C = (2, 0)",
+     "num": null,
+     "x": 2,
+     "y": 0
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "q(x) = Función(-2x^2 + 12x, 0, 6)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "q",
+     "type": "function",
+     "val": "q(x) = If[0 ≤ x ≤ 6, -2 x² + 12x]",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "p(x) = Si(x < 0, x, x^2)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "p",
+     "type": "function",
+     "val": "p(x) = If[x < 0, x, x²]",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "Extremo(q, 0, 6)",
+   "espera": {
+    "puntos": [
+     [
+      3,
+      18
+     ]
+    ]
+   },
+   "obtenido": [
+    {
+     "l": "D",
+     "type": "point",
+     "val": "D = (3, 18)",
+     "num": null,
+     "x": 3,
+     "y": 18
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "Máximo(q, 0, 6)",
+   "espera": {
+    "puntos": [
+     [
+      3,
+      18
+     ]
+    ]
+   },
+   "obtenido": [
+    {
+     "l": "E",
+     "type": "point",
+     "val": "E = (2.99999995047, 18)",
+     "num": null,
+     "x": 2.999999950469979,
+     "y": 17.999999999999996
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "Mínimo(f, -1, 1)",
+   "espera": {
+    "puntos": [
+     [
+      0,
+      -4
+     ]
+    ]
+   },
+   "obtenido": [
+    {
+     "l": "F",
+     "type": "point",
+     "val": "F = (0, -4)",
+     "num": null,
+     "x": -9.71445146547012e-17,
+     "y": -4
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "r(x) = 2x + 1",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "r",
+     "type": "function",
+     "val": "r(x) = 2x + 1",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "Inversa(r)",
+   "espera": {
+    "tipo": "function",
+    "contiene": "(x - 1) / 2"
+   },
+   "obtenido": [
+    {
+     "l": "g",
+     "type": "function",
+     "val": "g(x) = (x - 1) / 2",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "l1 = {(0, 0), (1, 0.875), (2, 1.721), (3, 2.641), (4, 3.531), (5, 4.391), (6, 5.241), (7, 6.12), (8, 6.992)}",
+   "espera": {
+    "tipo": "list"
+   },
+   "obtenido": [
+    {
+     "l": "l1",
+     "type": "list",
+     "val": "l1 = {(0, 0), (1, 0.875), (2, 1.721), (3, 2.641), (4, 3.531), (5, 4.391), (6, 5.241), (7, 6.12), (8, 6.992)}",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "AjusteLineal(l1)",
+   "espera": {
+    "tipo": "line",
+    "contiene": "0.87"
+   },
+   "obtenido": [
+    {
+     "l": "h",
+     "type": "line",
+     "val": "h: y = 0.8748833333333x + 0.0018",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "AjustePolinómico(l1, 2)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "s",
+     "type": "function",
+     "val": "s(x) = -0.001211038961x² + 0.8845716450216x - 0.009503030303",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "l2 = {(1, 2), (2, 4.1), (3, 7.9), (4, 16.2)}",
+   "espera": {
+    "tipo": "list"
+   },
+   "obtenido": [
+    {
+     "l": "l2",
+     "type": "list",
+     "val": "l2 = {(1, 2), (2, 4.1), (3, 7.9), (4, 16.2)}",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "AjusteExp(l2)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "t",
+     "type": "function",
+     "val": "t(x) = 1.0061539042375ℯ^(0.6931467970798x)",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "AjusteBaseExp(l2)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "f_1",
+     "type": "function",
+     "val": "f_1(x) = 1.0061539042375 * 1.9999992330398^x",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "AjustePotencia(l2)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "g_1",
+     "type": "function",
+     "val": "g_1(x) = 1.7843240098268x^1.4599657065511",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "AjusteLog(l2)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "h_1",
+     "type": "function",
+     "val": "h_1(x) = 0.2332259467871 + 9.2091253877997ln(x)",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/funciones",
+   "cmd": "Secuencia((k, k^2), k, 0, 3, 1)",
+   "espera": {
+    "tipo": "list",
+    "contiene": "(3, 9)"
+   },
+   "obtenido": [
+    {
+     "l": "l3",
+     "type": "list",
+     "val": "l3 = {(0, 0), (1, 1), (2, 4), (3, 9)}",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/limites-continuidad",
+   "cmd": "Límite((x^2 - 9)/(x - 3), 3)",
+   "espera": {
+    "numero": 6
+   },
+   "obtenido": [
+    {
+     "l": "a",
+     "type": "numeric",
+     "val": "a = 6",
+     "num": 6,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/limites-continuidad",
+   "cmd": "LímiteDerecha(1/x, 0)",
+   "espera": {
+    "valor_texto": "∞"
+   },
+   "obtenido": [
+    {
+     "l": "b",
+     "type": "numeric",
+     "val": "b = ∞",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/limites-continuidad",
+   "cmd": "LímiteIzquierda(1/x, 0)",
+   "espera": {
+    "valor_texto": "-∞"
+   },
+   "obtenido": [
+    {
+     "l": "c",
+     "type": "numeric",
+     "val": "c = -∞",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/limites-continuidad",
+   "cmd": "gg(x) = (2x + 1)/(x + 3)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "gg",
+     "type": "function",
+     "val": "gg(x) = (2x + 1) / (x + 3)",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/limites-continuidad",
+   "cmd": "Límite(gg, ∞)",
+   "espera": {
+    "numero": 2
+   },
+   "obtenido": [
+    {
+     "l": "d",
+     "type": "numeric",
+     "val": "d = 2",
+     "num": 2,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/limites-continuidad",
+   "cmd": "Límite(gg, -∞)",
+   "espera": {
+    "numero": 2
+   },
+   "obtenido": [
+    {
+     "l": "e",
+     "type": "numeric",
+     "val": "e = 2",
+     "num": 2,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/limites-continuidad",
+   "cmd": "Límite(gg, infinito)",
+   "espera": {
+    "nada": true
+   },
+   "nota": "la palabra infinito no se reconoce",
+   "obtenido": [],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/limites-continuidad",
+   "cmd": "hh(x) = (x^2 + 1)/(x - 1)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "hh",
+     "type": "function",
+     "val": "hh(x) = (x² + 1) / (x - 1)",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/limites-continuidad",
+   "cmd": "Asíntota(hh)",
+   "espera": {
+    "tipo": "list",
+    "contiene": "x = 1"
+   },
+   "obtenido": [
+    {
+     "l": "l4",
+     "type": "list",
+     "val": "l4 = {y = x + 1, x = 1}",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "dv(x) = Derivada(f)",
+   "espera": {
+    "contiene": "2x"
+   },
+   "obtenido": [
+    {
+     "l": "dv",
+     "type": "function",
+     "val": "dv(x) = 2x",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "Derivada(x^3, 2)",
+   "espera": {
+    "contiene": "6x"
+   },
+   "obtenido": [
+    {
+     "l": "p_1",
+     "type": "function",
+     "val": "p_1(x) = 6x",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "Derivada(x^3, x, 2)",
+   "espera": {
+    "contiene": "6x"
+   },
+   "obtenido": [
+    {
+     "l": "q_1",
+     "type": "function",
+     "val": "q_1(x) = 6x",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "tt = Tangente(2, f)",
+   "espera": {
+    "contiene": "y = 4x - 8"
+   },
+   "obtenido": [
+    {
+     "l": "tt",
+     "type": "line",
+     "val": "tt: y = 4x - 8",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "Pendiente(tt)",
+   "espera": {
+    "numero": 4
+   },
+   "obtenido": [
+    {
+     "l": "i",
+     "type": "numeric",
+     "val": "i = 4",
+     "num": 4,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "Perpendicular((2, 0), tt)",
+   "espera": {
+    "tipo": "line"
+   },
+   "obtenido": [
+    {
+     "l": "j",
+     "type": "line",
+     "val": "j: -x - 4y = -2",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "ff(x) = x^3 - 3x",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "ff",
+     "type": "function",
+     "val": "ff(x) = x³ - 3x",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "Extremo(ff)",
+   "espera": {
+    "puntos": [
+     [
+      -1,
+      2
+     ],
+     [
+      1,
+      -2
+     ]
+    ]
+   },
+   "obtenido": [
+    {
+     "l": "G",
+     "type": "point",
+     "val": "G = (-1, 2)",
+     "num": null,
+     "x": -1,
+     "y": 2
+    },
+    {
+     "l": "H",
+     "type": "point",
+     "val": "H = (1, -2)",
+     "num": null,
+     "x": 1,
+     "y": -2
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "PuntoInflexión(x^3 - 3x^2)",
+   "espera": {
+    "puntos": [
+     [
+      1,
+      -2
+     ]
+    ]
+   },
+   "obtenido": [
+    {
+     "l": "I",
+     "type": "point",
+     "val": "I = (1, -2)",
+     "num": null,
+     "x": 1,
+     "y": -2
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "m(x, y) = DerivadaImplícita(x^2 + y^2 - 25)",
+   "espera": {
+    "contiene": "(-x) / y"
+   },
+   "obtenido": [
+    {
+     "l": "m",
+     "type": "multivariablefunction",
+     "val": "m(x, y) = (-x) / y",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "m(3, 4)",
+   "espera": {
+    "numero": -0.75
+   },
+   "obtenido": [
+    {
+     "l": "k",
+     "type": "numeric",
+     "val": "k = -0.75",
+     "num": -0.75,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/derivada",
+   "cmd": "DerivadaImplícita(x^2 + y^2 = 25)",
+   "espera": {
+    "nada": true
+   },
+   "nota": "con la ecuación no funciona",
+   "obtenido": [],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/taylor",
+   "cmd": "ss(x) = PolinomioTaylor(sin(x), 0, 5)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "ss",
+     "type": "function",
+     "val": "ss(x) = x - 1x³ / 3! + x⁵ / 5!",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/taylor",
+   "cmd": "ss(0.5)",
+   "espera": {
+    "numero": 0.479427
+   },
+   "obtenido": [
+    {
+     "l": "l",
+     "type": "numeric",
+     "val": "l = 0.4794270833333",
+     "num": 0.47942708333333334,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "geogebra/taylor",
+   "cmd": "PolinomioTaylor(sen(x), 0, 3)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "r_1",
+     "type": "function",
+     "val": "r_1(x) = x - 1x³ / 3!",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "unidad-1/practica/integradores",
+   "cmd": "T(x) = Función(20 + 60 * 0.5^(x / 10), 0, 60)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "T",
+     "type": "function",
+     "val": "T(x) = If[0 ≤ x ≤ 60, 20 + 60 * 0.5^(x / 10)]",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "unidad-1/practica/integradores",
+   "cmd": "Interseca(T, y = 50)",
+   "espera": {
+    "puntos": [
+     [
+      10,
+      50
+     ]
+    ]
+   },
+   "obtenido": [
+    {
+     "l": "J",
+     "type": "point",
+     "val": "J = (10, 50)",
+     "num": null,
+     "x": 10,
+     "y": 50
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "unidad-1/practica/integradores",
+   "cmd": "Recta((0, 80), (10, 50))",
+   "espera": {
+    "contiene": "3x + y = 80"
+   },
+   "obtenido": [
+    {
+     "l": "n",
+     "type": "line",
+     "val": "n: 3x + y = 80",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "unidad-1/practica/integradores",
+   "cmd": "kk = Deslizador(-1, 6, 0.1)",
+   "espera": {
+    "tipo": "numeric"
+   },
+   "obtenido": [
+    {
+     "l": "kk",
+     "type": "numeric",
+     "val": "kk = 0",
+     "num": 0,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "unidad-4/practica/integradores",
+   "cmd": "u(x) = PolinomioTaylor(exp(x), 0, 5)",
+   "espera": {
+    "tipo": "function"
+   },
+   "obtenido": [
+    {
+     "l": "u",
+     "type": "function",
+     "val": "u(x) = 1 + x + x² / 2! + x³ / 3! + x⁴ / 4! + x⁵ / 5!",
+     "num": null,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  },
+  {
+   "pagina": "unidad-4/practica/integradores",
+   "cmd": "u(0.5)",
+   "espera": {
+    "numero": 1.648698
+   },
+   "obtenido": [
+    {
+     "l": "o",
+     "type": "numeric",
+     "val": "o = 1.6486979166667",
+     "num": 1.6486979166666667,
+     "x": null,
+     "y": null
+    }
+   ],
+   "ok": true
+  }
+ ]
+}
