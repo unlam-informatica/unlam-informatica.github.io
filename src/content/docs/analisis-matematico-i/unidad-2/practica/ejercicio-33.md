@@ -40,7 +40,7 @@ $\ln\operatorname{sen}x-\ln x=\ln\dfrac{\operatorname{sen}x}{x}$, y $\dfrac{\ope
 ## 33g
 Si $x=1$ es AV entonces $1\notin$ dominio — **Falsa**
 
-Hay funciones definidas en $1$ con AV ahí (en general la AV implica que no está definida en sentido finito, pero el enunciado se considera falso porque una AV refiere al comportamiento del límite, no obliga formalmente; siguiendo la respuesta oficial es **Falsa**).
+La AV depende de los límites laterales, no de que $f(1)$ exista. Contraejemplo: $f(x)=\dfrac{1}{\lvert x-1\rvert}$ si $x\neq1$ y $f(1)=0$ está definida en $1$ y $\lim_{x\to1}f(x)=+\infty$, así que $x=1$ es AV con $1\in D_f$.
 
 ## 33h
 Si $y=b$ es asíntota entonces no existe $c$ del dominio con $f(c)=b$ — **Falsa**

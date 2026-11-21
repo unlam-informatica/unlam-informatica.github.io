@@ -6,6 +6,8 @@ sidebar:
 ---
 
 
+Los enunciados se transcriben de la Guía de Trabajos Prácticos 2026, a partir de la página del PDF renderizada. La guía **no publica respuestas** para los ejercicios adicionales: los resultados de esta página se verificaron con SymPy y no se contrastan con una respuesta oficial.
+
 ### Adicional 1 — Verdadero / Falso
 
 **a)** $\lim_{x\to-3}\dfrac{\sqrt{x+7}-2}{\operatorname{sen}(2x+6)}=\dfrac12$.
@@ -56,11 +58,51 @@ El valor es $0\neq\dfrac12$ $\Rightarrow$ **Falsa**. (Resultado correcto: $0$.)
 
 **c)** $\lim_{x\to\infty}\dfrac{\sqrt{x^2+5}}{3x-2}$ no existe.
 
-Para $x\to+\infty$: $\dfrac{\sqrt{x^2+5}}{3x-2}\to\dfrac{\lvert x\rvert}{3x}=\dfrac{x}{3x}=\dfrac13$. Para $x\to-\infty$: $\dfrac{-x}{3x}=-\dfrac13$. Cada límite unilateral existe (son distintos), pero **como límite en el infinito sin especificar signo** los dos valores difieren. La afirmación "no existe" se interpreta como el límite bilateral en $\infty$ (ambos lados): al diferir, **Verdadera** que no existe un único valor. Por rama: $+\tfrac13$ y $-\tfrac13$.
+Dividiendo por $\lvert x\rvert=\sqrt{x^2}$: si $x\to+\infty$, $\lvert x\rvert=x$ y el cociente tiende a $\dfrac{1}{3}$; si $x\to-\infty$, $\lvert x\rvert=-x$ y tiende a $-\dfrac{1}{3}$. **Verdadera**, si «$x\to\infty$» se lee como $x\to\pm\infty$ (sin signo): los límites en $+\infty$ y en $-\infty$ existen pero son distintos, así que no hay un único límite. Si se pidiera solo $x\to+\infty$, el límite existiría y valdría $\dfrac13$.
 
-### Adicional 2 — (GeoGebra) asíntotas de $\dfrac{ax^2+x}{bx^2-1}$
+<div id="adicional-2--geogebra-asíntotas-de-dfracax2xbx2-1" aria-hidden="true"></div>
 
-Mismo análisis que el 25c: AH $y=\dfrac{a}{b}$ (si $b\neq0$); AV en $x=\pm\dfrac{1}{\sqrt b}$ si $b>0$; sin AV si $b<0$; casos de cancelación si numerador y denominador comparten raíz. Discusión por casos según signos de $a,b$.
+### Adicional 2 — Asíntotas de $f(x)=\dfrac{ax^2+x}{bx^2-1}$ con GeoGebra
+
+:::note[Enunciado]
+Estudiar, usando GeoGebra, las asíntotas de $f:D_f\to\mathbb{R}\,/\,f(x)=\dfrac{ax^2+x}{bx^2-1}$, siendo $a\in\mathbb{R}$, $a\neq0$ y $b\in\mathbb{R}$. Luego responder:
+
+a) Analizar, utilizando GeoGebra, las posibles asíntotas de $f$ al variar los valores de $a$ y $b$. Explicar en un breve párrafo los pasos realizados.
+
+b) ¿Para qué valores de $b$ la función tiene dos asíntotas verticales? ¿Existen valores de $b$ para los cuales tiene sólo una asíntota vertical? ¿Y ninguna? Justificar la respuesta.
+
+c) Tomar un valor de $a$ y otro de $b$ para el cual tenga dos asíntotas verticales. Escribir las ecuaciones de todas las asíntotas de la función elegida. Justificar la respuesta utilizando límite.
+:::
+
+Es el mismo planteo que el [ejercicio 25 c)](/analisis-matematico-i/unidad-2/practica/ejercicio-25/).
+
+**a)** En GeoGebra se crean dos deslizadores, `a` y `b`, y se define `f(x) = (a x^2 + x) / (b x^2 - 1)`. Al mover `b` se observa:
+- si $b>0$, aparecen dos rectas verticales y la curva se aplana hacia una altura;
+- si $b<0$, la curva se aplana sin rectas verticales;
+- si $b=0$, la curva es una parábola.
+
+Cada observación se confirma con límites en los incisos siguientes.
+
+**b)** El numerador es $x(ax+1)$ y el denominador se anula si $bx^2=1$.
+
+- **$b\le0$: ninguna AV.** Si $b<0$, $bx^2-1<0$ para todo $x$. Si $b=0$, el denominador vale $-1$ y $f(x)=-ax^2-x$ es una parábola, sin asíntotas.
+- **$b>0$ y $b\neq a^2$: dos AV**, en $x=\pm\frac{1}{\sqrt b}$. El numerador solo se anula en $x=0$ y $x=-\frac1a$. Que $-\frac1a$ coincida con $\pm\frac1{\sqrt b}$ equivale a $b=a^2$, así que en este caso el numerador no se anula en las raíces del denominador y el cociente diverge en las dos.
+- **$b=a^2$: una sola AV.** Con $b=a^2$ el denominador es $(ax-1)(ax+1)$ y
+$$
+f(x)=\frac{x(ax+1)}{(ax-1)(ax+1)}=\frac{x}{ax-1}\qquad(x\neq-\tfrac1a).
+$$
+En $x=-\frac1a$ el límite es finito, $\frac{1}{2a}$: es una discontinuidad evitable, no una asíntota. La única AV es $x=\frac1a$.
+
+:::caution[Diferencia con la respuesta oficial del ejercicio 25]
+La respuesta oficial del ejercicio 25 c) dice que «no existe valor de $b$ para el cual tenga una sola AV». El caso $b=a^2$ muestra que sí existe. Por ejemplo, con $a=1$ y $b=1$, $f(x)=\frac{x}{x-1}$ para $x\neq-1$, con una única AV $x=1$.
+:::
+
+**c)** Con $a=1$ y $b=4$ (vale $b>0$ y $b\neq a^2$): $f(x)=\dfrac{x^2+x}{4x^2-1}$.
+- **AV $x=\frac12$:** el numerador tiende a $\frac34\neq0$ y el denominador a $0$, así que $\lim_{x\to\frac12^{-}}f=-\infty$ y $\lim_{x\to\frac12^{+}}f=+\infty$.
+- **AV $x=-\frac12$:** el numerador tiende a $-\frac14$, así que $\lim_{x\to-\frac12^{-}}f=-\infty$ y $\lim_{x\to-\frac12^{+}}f=+\infty$.
+- **AH $y=\frac14$:** $\lim_{x\to\pm\infty}f=\frac14$, por el cociente de los coeficientes principales.
+- **Sin AO:** hay AH en los dos extremos.
+
 
 ### Adicional 3 — $f(x)=\dfrac{\lvert 4-x^2\rvert}{x(x-2)}$
 
@@ -89,27 +131,63 @@ $$
 
 
 
-✓ Coincide con la respuesta oficial (dominio $\mathbb{R}-\lbrace 0,2\rbrace $).
+Dominio: $\mathbb{R}-\lbrace 0,2\rbrace$.
 
-### Adicional 4 — (opción múltiple) función por tramos continua
+<div id="adicional-4--opción-múltiple-función-por-tramos-continua" aria-hidden="true"></div>
 
-Según la respuesta oficial, los valores que hacen continua la función por tramos son $a=\dfrac{3}{2}$ y $b=-\dfrac{9}{2}$. El método es igualar los límites laterales en cada punto de empalme (como en los ejercicios 5, 19, 29).
+### Adicional 4 — Parámetros para la continuidad (opción múltiple)
 
+:::note[Enunciado]
+Sea $m:D_m\to\mathbb{R}\,/\,m(x)=\begin{cases} e^{\frac{1}{3-x}} & \text{si } x>3\\ ax+b & \text{si } 1\le x\le3\\ \dfrac{x^2+4x-5}{2x^2-6x+4} & \text{si } x<1\end{cases}$. Los valores de $a$ y $b$ que hacen que $m$ sea continua en $\mathbb{R}$ son:
 
+a) $a=\frac32$; $b=-\frac92$. b) $a=\frac32$; $b=\frac92$. c) $a=-\frac32$; $b=-\frac92$. d) Ninguna de las anteriores.
+:::
+
+Cada tramo es continuo en su intervalo abierto. El denominador $2x^2-6x+4=2(x-1)(x-2)$ se anula en $1$ y en $2$, que no son menores que $1$. Falta imponer la continuidad en los empalmes.
+
+- **En $x=3$:** $m(3)=3a+b$. Por derecha, $\frac{1}{3-x}\to-\infty$, así que $e^{\frac{1}{3-x}}\to0$. Por izquierda el tramo lineal da $3a+b$. Condición: $3a+b=0$.
+- **En $x=1$:** $m(1)=a+b$. Por izquierda, $\dfrac{(x+5)(x-1)}{2(x-1)(x-2)}=\dfrac{x+5}{2(x-2)}\to\dfrac{6}{-2}=-3$. Condición: $a+b=-3$.
+
+Restando, $2a=3$, de donde $a=\frac32$ y $b=-\frac92$.
 
 $$
-\boxed{a=\dfrac{3}{2},\quad b=-\dfrac{9}{2}.}
+\boxed{\text{Opción a): } a=\tfrac32,\ b=-\tfrac92.}
 $$
 
 
+<div id="adicional-5--opción-límites-laterales" aria-hidden="true"></div>
 
-✓ Coincide con la respuesta oficial.
+### Adicional 5 — Límites laterales (opción múltiple)
 
-### Adicional 5 — (opción) límites laterales
+:::note[Enunciado]
+Sea $f$ una función tal que $\lim\limits_{x\to x_0^-}f(x)=L\in\mathbb{R}$ y se sabe que existe el límite finito de $f$ para $x$ tendiendo a $x_0$. Entonces:
 
-Se resuelven leyendo el comportamiento por izquierda y por derecha en cada punto, eligiendo la rama de la función definida en cada lado (mismo procedimiento que el ejercicio 17). Sin el enunciado de opciones específico, se aplica el criterio de laterales.
+a) $\dfrac{\lim_{x\to x_0^+}f(x)}{\lim_{x\to x_0^-}f(x)}=1$  b) $\lim\limits_{x\to x_0^+}f(x)+\lim\limits_{x\to x_0^-}f(x)=2L$  c) $f(x_0)+\lim\limits_{x\to x_0}f(x)=2L$  d) $\dfrac{f(x_0)}{\lim_{x\to x_0^-}f(x)}=1$
+:::
 
-### Adicional 6 — $L=\lim_{x\to a}\dfrac{x\sqrt{x}-a\sqrt{a}}{\sqrt{x}-\sqrt{a}}$
+Si el límite existe, los dos laterales existen y valen lo mismo: $\lim_{x\to x_0^+}f=\lim_{x\to x_0^-}f=\lim_{x\to x_0}f=L$.
+
+- **a)** No vale si $L=0$: el cociente no está definido. Contraejemplo: $f(x)=x$, $x_0=0$.
+- **b)** Siempre vale: $L+L=2L$. **Es la correcta.**
+- **c)** Exige $f(x_0)=L$, es decir, continuidad, que no es dato. Contraejemplo: $f(x)=x$ para $x\neq0$ y $f(0)=5$, con $x_0=0$. Da $5+0\neq0$.
+- **d)** Falla por la misma razón, y además si $L=0$ o si $f(x_0)$ no existe.
+
+$$
+\boxed{\text{Opción b).}}
+$$
+
+
+<div id="adicional-6--llim_xto-adfracxsqrtx-asqrtasqrtx-sqrta" aria-hidden="true"></div>
+
+### Adicional 6 — $L=\lim_{x\to a}\dfrac{x\sqrt{x}-a\sqrt{a}}{\sqrt{x}-\sqrt{a}}$ (opción múltiple)
+
+:::note[Enunciado]
+Dado el siguiente límite $L=\lim\limits_{x\to a}\dfrac{x\sqrt{x}-a\sqrt{a}}{\sqrt{x}-\sqrt{a}}$, se verifica:
+
+a) $L=3a\ \ \forall a\in\mathbb{R}$  b) $L\ \ \forall a\ge0$  c) $L=3\sqrt a\ \ \forall a\ge0$  d) $L=3a\ \ \forall a\ge0$  e) No existe $L\ \ \forall a\ge0$
+
+(La opción b) aparece así en la guía, incompleta.)
+:::
 
 Escribimos $x\sqrt{x}=(\sqrt{x})^3$ y $a\sqrt{a}=(\sqrt{a})^3$. Con $u=\sqrt{x}$, $v=\sqrt{a}$ es una diferencia de cubos:
 
@@ -125,20 +203,41 @@ Volviendo a las variables: $u^2+uv+v^2=x+\sqrt{x}\sqrt{a}+a\xrightarrow{x\to a}a
 
 
 
+La expresión solo está definida para $x\ge0$ (y $x\neq a$), así que $a<0$ queda descartado. Para $a=0$ el cociente vale $x$ y el límite, que es lateral por derecha por el dominio, da $0=3\cdot0$.
+
 $$
-\boxed{L=3a,\quad \forall a\ge0.}
+\boxed{L=3a\ \ \forall a\ge0:\ \text{opción d).}}
 $$
 
+<div id="adicional-7--opción-asíntotas-de-gxdfracax3cx2-x3x2-x" aria-hidden="true"></div>
 
+### Adicional 7 — Asíntotas de $g(x)=\dfrac{ax^3+cx^2-x}{3x^2-x}$ (opción múltiple)
 
-✓ Coincide con la respuesta oficial.
+:::note[Enunciado]
+Sea la función $g(x)=\dfrac{ax^3+cx^2-x}{3x^2-x}$ con $a,c\in\mathbb{R}$; entonces:
 
-### Adicional 7 — (opción) asíntotas de $g(x)=\dfrac{ax^3+cx^2-x}{3x^2-x}$
+a) Para todo valor de $a$ y $c$, $f$ tiene una asíntota vertical en $x=\frac13$ y en $x=0$.
 
-Numerador grado $3$, denominador grado $2$ (difieren en uno) $\Rightarrow$ existe **AO** si $a\neq0$. Factor común $x$: $\dfrac{x(ax^2+cx-1)}{x(3x-1)}=\dfrac{ax^2+cx-1}{3x-1}$ (hueco evitable en $x=0$). 
+b) No existe valor de $a$ y $c$ para que $f$ tenga asíntota oblicua.
 
-- **AV:** $3x-1=0\Rightarrow x=\dfrac13$ (si el numerador no se anula allí).
-- **AO** $y=mx+n$: $m=\lim\dfrac{ax^2+cx-1}{x(3x-1)}=\dfrac{a}{3}$; $n$ se obtiene de la división. La discusión depende de $a$ y $c$.
+c) $\forall a$ la función $g(x)$ tiene una asíntota oblicua y tiene asíntota vertical que varía según el valor de $c$.
 
-Sin los valores concretos de la opción, las asíntotas son: AV $x=\tfrac13$ y AO de pendiente $\tfrac{a}{3}$.
+d) Si $a=0$, $f$ tiene una asíntota horizontal para cualquier valor de $c$. En este caso, $f$ tiene una asíntota vertical en $x=\frac13$ siempre que $c\neq3$.
+
+e) Si $a=0$, $f$ tiene una asíntota horizontal para cualquier valor de $c$. En este caso, $f$ tiene una asíntota vertical en $x=\frac13$.
+
+(Las opciones nombran $f$ a la función $g$, como en la guía.)
+:::
+
+Se simplifica el factor $x$: $g(x)=\dfrac{x(ax^2+cx-1)}{x(3x-1)}=\dfrac{ax^2+cx-1}{3x-1}$, con $x\neq0$ y $x\neq\frac13$.
+
+- **a)** Falsa. En $x=0$ el límite es $\frac{-1}{-1}=1$, finito: hay un hueco, no una AV.
+- **b)** Falsa. Si $a\neq0$, el numerador simplificado tiene grado $2$ y el denominador grado $1$, así que hay AO de pendiente $\frac a3$.
+- **c)** Falsa. Si $a=0$ no hay AO, y la única AV posible está siempre en $x=\frac13$: lo que depende de $c$ es si existe, no dónde está.
+- **d)** Verdadera. Con $a=0$, $g(x)=\dfrac{cx-1}{3x-1}$ y $\lim_{x\to\pm\infty}g=\frac c3$: hay AH para todo $c$. En $x=\frac13$ el numerador vale $\frac c3-1$. Si $c\neq3$ es no nulo y hay AV. Si $c=3$, $g(x)=1$ para $x\neq0,\frac13$ y en $\frac13$ hay un hueco.
+- **e)** Falsa por el caso $c=3$.
+
+$$
+\boxed{\text{Opción d).}}
+$$
 

@@ -11,7 +11,7 @@ Recordatorio: para invertir, $f$ debe ser **biyectiva** (inyectiva + sobreyectiv
 
 ## 26a - $f(x)=(x-1)^3+8$
 
-Cúbica trasladada: biyectiva en $\mathbb{R}$. Despejamos:
+Cúbica trasladada: es estrictamente creciente (porque $u\mapsto u^3$ lo es y las traslaciones conservan el orden), por lo tanto inyectiva, y su imagen es $\mathbb{R}$ (como la de $x^3$): es biyectiva de $\mathbb{R}$ en $\mathbb{R}$. Despejamos:
 
 
 
@@ -25,7 +25,7 @@ $$
 
 ## 26b - $f(x)=e^{2x}+1$
 
-Inyectiva; imagen $(1,+\infty)$.
+Inyectiva por ser estrictamente creciente (composición de $2x$ y $e^u$, ambas crecientes, más una traslación); imagen $(1,+\infty)$ porque $e^{2x}$ toma todos los valores positivos.
 
 
 
@@ -39,7 +39,7 @@ $$
 
 ## 26c - $f(x)=3-\sqrt{x+5}$
 
-$D=[-5,+\infty)$; como $\sqrt{x+5}\ge0$, $f(x)\le3$, imagen $(-\infty,3]$. Inyectiva (decreciente).
+$D=[-5,+\infty)$; como $\sqrt{x+5}\ge0$, $f(x)\le3$, imagen $(-\infty,3]$. Inyectiva por ser estrictamente decreciente: si $x_1<x_2$, entonces $\sqrt{x_1+5}<\sqrt{x_2+5}$ y, al restar de $3$, $f(x_1)>f(x_2)$.
 
 
 
@@ -53,7 +53,7 @@ $$
 
 ## 26d - $f(x)=\log_3(2x-4)$
 
-$D:2x-4>0\Rightarrow x>2$, es decir $(2,+\infty)$; imagen $\mathbb{R}$.
+$D:2x-4>0\Rightarrow x>2$, es decir $(2,+\infty)$; imagen $\mathbb{R}$. Inyectiva por ser estrictamente creciente (el logaritmo de base $3>1$ es creciente y $2x-4$ también).
 
 
 
@@ -86,12 +86,12 @@ Se restringe a un intervalo donde $3x\in\left[-\tfrac\pi2,\tfrac\pi2\right]$, es
 
 
 $$
-y=2\operatorname{sen}(3x)\Rightarrow\operatorname{sen}(3x)=\dfrac y2\Rightarrow 3x=\arcsin\!\left(\dfrac y2\right)\Rightarrow x=\dfrac13\arcsin\!\left(\dfrac y2\right)
+y=2\operatorname{sen}(3x)\Rightarrow\operatorname{sen}(3x)=\dfrac y2\Rightarrow 3x=\operatorname{arcsen}\!\left(\dfrac y2\right)\Rightarrow x=\dfrac13\operatorname{arcsen}\!\left(\dfrac y2\right)
 $$
 
 
 
-**Resultado: $f:\left[-\tfrac\pi6,\tfrac\pi6\right]\to[-2,2]$, $f^{-1}(x)=\tfrac13\arcsin\!\left(\tfrac x2\right)$.** ✓ Coincide.
+**Resultado: $f:\left[-\tfrac\pi6,\tfrac\pi6\right]\to[-2,2]$, $f^{-1}(x)=\tfrac13\operatorname{arcsen}\!\left(\tfrac x2\right)$.** ✓ Coincide.
 
 ## 26g - $f(x)=\dfrac{-x+3}{x-1}$
 

@@ -27,7 +27,7 @@ sidebar:
 
 **j) $f(x)=\sqrt{\dfrac{x+3}{2-5x}}$ y $g(x)=\dfrac{\sqrt{x+3}}{\sqrt{2-5x}}$ son iguales.** Estudiemos dominios. Para $f$: $\dfrac{x+3}{2-5x}\ge0\Rightarrow x\in\left[-3,\tfrac25\right)$. Para $g$: $x+3\ge0$ y $2-5x>0\Rightarrow x\ge-3$ y $x<\tfrac25\Rightarrow\left[-3,\tfrac25\right)$. Coinciden los dominios y, donde existen, los valores son iguales (ambos factores no negativos). **Verdadero.** ✓
 
-**k) $f(x)=4+\ln(3-x)$ surge de $\ln x$ por: traslación 3 a la izquierda, reflexión respecto al eje $y$, traslación 4 arriba.** $\ln(3-x)=\ln(-(x-3))$: reflexión en $y$ y traslación; sumar $4$ desplaza arriba. La descripción es válida. **Verdadero.** ✓
+**k) $f(x)=4+\ln(3-x)$ surge de $\ln x$ por: traslación 3 a la izquierda, reflexión respecto al eje $y$, traslación 4 arriba.** Partiendo de $\ln x$: trasladar $3$ a la izquierda da $\ln(x+3)$; reflejar respecto del eje $y$ (cambiar $x$ por $-x$) da $\ln(-x+3)=\ln(3-x)$; sumar $4$ desplaza hacia arriba. La descripción es válida (otra secuencia equivalente: reflejar primero, $\ln(-x)$, y trasladar $3$ a la **derecha**, porque $\ln(3-x)=\ln(-(x-3))$). **Verdadero.** ✓
 
 **l) Toda función inyectiva es sobreyectiva.** Contraejemplo: $f:\mathbb{R}\to\mathbb{R}$, $f(x)=e^x$ es inyectiva pero su imagen es $(0,+\infty)\neq\mathbb{R}$. **Falso.** ✓
 

@@ -339,24 +339,18 @@ Intersecando: la condición más fuerte es $x\geq\dfrac43$ (esta ya implica $x>-
 ## 9l
 
 :::note[Enunciado]
-$f(x)=\begin{cases} \sqrt{\dfrac{x-1}{x-3}} & \text{si } x<4, \\ \ln(5-x) & \text{si } x\geq 4 \end{cases}$
+$f(x)=\begin{cases} \dfrac{\sqrt{x-1}}{x-3} & \text{si } x<4, \\ \ln(5-x) & \text{si } x\geq 4 \end{cases}$
 :::
 
 :::tip[Resolución]
-Calculamos por separado el dominio admisible en cada tramo y luego unimos.
+Calculamos por separado el dominio admisible en cada tramo y luego unimos. La raíz afecta solo al numerador.
 
-**Tramo $x<4$:** $\sqrt{\dfrac{x-1}{x-3}}$ exige $\dfrac{x-1}{x-3}\geq 0$ con $x\neq 3$. Estudiamos el signo:
-
-- $x<1$: ambos factores negativos → cociente positivo.
-- $1\leq x<3$: numerador $\geq 0$ y denominador $<0$ → cociente $\leq 0$ (negativo o cero).
-- $x>3$: ambos positivos → cociente positivo.
-
-El cociente es $\geq 0$ en $(-\infty,1]\cup(3,+\infty)$. Intersecando con $x<4$:
+**Tramo $x<4$:** $\dfrac{\sqrt{x-1}}{x-3}$ exige dos condiciones: que el radicando no sea negativo, $x-1\geq 0\iff x\geq 1$, y que el denominador no se anule, $x\neq 3$. Intersecando con $x<4$:
 
 
 
 $$
-(-\infty,1]\cup(3,4)
+[1,4)-\lbrace 3\rbrace
 $$
 
 
@@ -371,11 +365,13 @@ $$
 
 
 
-**Unión:** $(-\infty,1]\cup(3,4)\cup[4,5)=(-\infty,1]\cup(3,5)$.
+**Unión:** $\big([1,4)-\lbrace 3\rbrace\big)\cup[4,5)=[1,5)-\lbrace 3\rbrace$.
 
-**Resultado:** $D=(-\infty,1]\cup(3,5)$.
+**Resultado:** $D=[1,5)-\lbrace 3\rbrace$. ✓ Coincide con la respuesta oficial.
 
-**Verificación:** ⚠️ Discrepa con el documento de respuestas oficiales, que reporta $D=[1,5)-\lbrace 3\rbrace $. La oficial parece haber estudiado mal el signo del cociente $\dfrac{x-1}{x-3}$: para $x<1$ ambos factores $x-1$ y $x-3$ son negativos, su cociente es positivo y la raíz existe. Por lo tanto todo $(-\infty,1]$ pertenece al dominio. **El dominio correcto es** $(-\infty,1]\cup(3,5)$.
+:::caution[Cuidado con el alcance de la raíz]
+Si la raíz abarcara todo el cociente, $\sqrt{\frac{x-1}{x-3}}$, la condición sería $\frac{x-1}{x-3}\geq 0$ y el primer tramo daría $(-\infty,1]\cup(3,4)$: el dominio cambia por completo. Leé con atención hasta dónde llega cada raíz.
+:::
 :::
 
 ## 9m

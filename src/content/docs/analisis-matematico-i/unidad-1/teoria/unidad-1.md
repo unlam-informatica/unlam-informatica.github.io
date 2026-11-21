@@ -1,9 +1,27 @@
 ---
-title: Unidad 1 — Funciones
+title: Unidad 1 — Resumen integrador
 slug: analisis-matematico-i/unidad-1/teoria/unidad-1
 sidebar:
-  order: 1
+  hidden: true
+  label: Resumen integrador
 ---
+
+:::tip[Cómo usar este resumen]
+- **Antes de estudiar:** leelo de corrido para tener el mapa de la unidad, de la función como modelo a la función inversa.
+- **Después de estudiar:** usalo para repasar y conectar los temas.
+- **Antes del primer parcial:** identificá los temas principales y volvé a la lección de cada uno.
+
+No reemplaza a las lecciones, que desarrollan cada tema con demostraciones, ejemplos resueltos, ejercicios y
+autoevaluación:
+
+1. [Funciones y modelos](/analisis-matematico-i/unidad-1/teoria/funciones-y-modelos/)
+2. [Ceros, signo, paridad y acotación](/analisis-matematico-i/unidad-1/teoria/caracteristicas/)
+3. [Funciones elementales](/analisis-matematico-i/unidad-1/teoria/funciones-elementales/)
+4. [Álgebra de funciones y transformaciones](/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/)
+5. [Funciones biyectivas y función inversa](/analisis-matematico-i/unidad-1/teoria/inversa/)
+
+La ruta completa de la unidad está en la [presentación](/analisis-matematico-i/unidad-1/).
+:::
 
 
 ## 1. Definición de función
@@ -20,9 +38,9 @@ $$
 
 Se lee "$y$ es imagen de $x$ a través de $f$".
 
-- **Dominio** $D_f = \text{Dom}\, f = A$: conjunto de todos los valores de entrada válidos.
+- **Dominio** $D_f = A$: conjunto de todos los valores de entrada válidos.
 - **Codominio** o **conjunto de llegada** $B$: conjunto donde "llegan" las imágenes.
-- **Imagen** $I_f = \text{Im}\, f = \lbrace y \in B \,/\, \exists\, x \in A \text{ con } y = f(x) \rbrace$: subconjunto de $B$ formado por los valores efectivamente alcanzados.
+- **Imagen** $I_f = \operatorname{Im} f = \lbrace y \in B \,/\, \exists\, x \in A \text{ con } y = f(x) \rbrace$: subconjunto de $B$ formado por los valores efectivamente alcanzados.
 
 ### 1.1. La terna que define una función
 
@@ -114,7 +132,7 @@ La razón de cambio media corresponde a la **pendiente de la recta secante** que
 
 Para una función $f: A \to B$:
 
-- **Ceros (o raíces):** $C^0 = \lbrace x \in A \,/\, f(x) = 0\rbrace$. Son los valores donde la gráfica corta al eje $x$.
+- **Ceros (o raíces):** $C_0 = \lbrace x \in A \,/\, f(x) = 0\rbrace$. Son los valores donde la gráfica corta al eje $x$.
 - **Intervalo de positividad:** $I^+ = C^+ = \lbrace x \in A \,/\, f(x) > 0\rbrace$. Donde la gráfica queda **por arriba** del eje $x$.
 - **Intervalo de negatividad:** $I^- = C^- = \lbrace x \in A \,/\, f(x) < 0\rbrace$. Donde la gráfica queda **por debajo** del eje $x$.
 - **Intersección con el eje $y$:** el punto $(0, f(0))$, si $0 \in A$.
@@ -124,7 +142,7 @@ Para una función $f: A \to B$:
 
 
 $$
-C^0 \cup I^+ \cup I^- = A
+C_0 \cup I^+ \cup I^- = A
 $$
 
 
@@ -157,7 +175,7 @@ Para mostrar que una función **no tiene paridad**, basta dar un **contraejemplo
 ### 5.2. Ejemplos paradigmáticos
 
 - **Pares:** $f(x) = x^2$, $g(x) = \lvert x \rvert$, $h(x) = \cos x$.
-- **Impares:** $f(x) = x^3$, $g(x) = x$, $h(x) = \sin x$, $k(x) = \tan x$.
+- **Impares:** $f(x) = x^3$, $g(x) = x$, $h(x) = \operatorname{sen} x$, $k(x) = \tan x$.
 
 ---
 
@@ -296,7 +314,7 @@ Caso $n = 3$: $f(x) = ax^3 + bx^2 + cx + d$, con $a \neq 0$. La más sencilla es
 Para $f(x) = x^3$:
 
 - **Dominio e imagen:** $\mathbb{R}$.
-- $C^0 = \lbrace 0\rbrace$, $I^+ = (0, +\infty)$, $I^- = (-\infty, 0)$.
+- $C_0 = \lbrace 0\rbrace$, $I^+ = (0, +\infty)$, $I^- = (-\infty, 0)$.
 - Es **impar** (simétrica respecto al origen).
 - Estrictamente creciente en todo $\mathbb{R}$.
 
@@ -451,7 +469,7 @@ $$
 
 - **Dominio:** $\mathbb{R}$.
 - **Imagen:** $[0, +\infty)$.
-- $C^0 = \lbrace 0\rbrace$, $I^+ = \mathbb{R} - \lbrace 0\rbrace$, no tiene $I^-$.
+- $C_0 = \lbrace 0\rbrace$, $I^+ = \mathbb{R} - \lbrace 0\rbrace$, no tiene $I^-$.
 - Es **par**: $\lvert -x\rvert = \lvert x\rvert$.
 - Su gráfica tiene forma de "V" con vértice en el origen.
 
@@ -619,7 +637,7 @@ $$
 
 | Función | Dominio | Imagen |
 |---------|---------|--------|
-| $\sin(x)$ | $\mathbb{R}$ | $[-1,\, 1]$ |
+| $\operatorname{sen}(x)$ | $\mathbb{R}$ | $[-1,\, 1]$ |
 | $\cos(x)$ | $\mathbb{R}$ | $[-1,\, 1]$ |
 | $\tan(x)$ | $\mathbb{R} \setminus \lbrace (2k+1)\dfrac{\pi}{2}\rbrace$ | $\mathbb{R}$ |
 | $\cot(x)$ | $\mathbb{R} \setminus \lbrace k\pi\rbrace$ | $\mathbb{R}$ |
@@ -629,13 +647,13 @@ $$
 
 **Propiedades clave:**
 
-- $\sin$ y $\cos$ son **acotadas**: $\lvert \sin x\rvert \leq 1$ y $\lvert\cos x\rvert \leq 1$.
-- $\sin$, $\tan$ y $\cot$ son **impares**; $\cos$ y $\sec$ son **pares**.
-- Son **periódicas**: $\sin$, $\cos$, $\sec$, $\csc$ tienen período $2\pi$; $\tan$ y $\cot$ tienen período $\pi$.
+- $\operatorname{sen}$ y $\cos$ son **acotadas**: $\lvert \operatorname{sen} x\rvert \leq 1$ y $\lvert\cos x\rvert \leq 1$.
+- $\operatorname{sen}$, $\tan$ y $\cot$ son **impares**; $\cos$ y $\sec$ son **pares**.
+- Son **periódicas**: $\operatorname{sen}$, $\cos$, $\sec$, $\csc$ tienen período $2\pi$; $\tan$ y $\cot$ tienen período $\pi$.
 
 **Ceros:**
 
-- $\sin x = 0 \iff x = k\pi$ con $k \in \mathbb{Z}$.
+- $\operatorname{sen} x = 0 \iff x = k\pi$ con $k \in \mathbb{Z}$.
 - $\cos x = 0 \iff x = (2k+1)\dfrac{\pi}{2}$ con $k \in \mathbb{Z}$.
 - $\tan x = 0 \iff x = k\pi$ con $k \in \mathbb{Z}$.
 
@@ -644,7 +662,7 @@ $$
 
 
 $$
-\tan x = \frac{\sin x}{\cos x}, \qquad \cot x = \frac{\cos x}{\sin x}, \qquad \sec x = \frac{1}{\cos x}, \qquad \csc x = \frac{1}{\sin x}
+\tan x = \frac{\operatorname{sen} x}{\cos x}, \qquad \cot x = \frac{\cos x}{\operatorname{sen} x}, \qquad \sec x = \frac{1}{\cos x}, \qquad \csc x = \frac{1}{\operatorname{sen} x}
 $$
 
 
@@ -654,7 +672,7 @@ $$
 
 
 $$
-\sin^2 x + \cos^2 x = 1
+\operatorname{sen}^2 x + \cos^2 x = 1
 $$
 
 
@@ -681,12 +699,12 @@ Por convención, se restringen los dominios de las trigonométricas para que sea
 
 | Función | Dominio | Imagen |
 |---------|---------|--------|
-| $\arcsin(x)$ | $[-1,\, 1]$ | $\left[-\dfrac{\pi}{2},\, \dfrac{\pi}{2}\right]$ |
+| $\operatorname{arcsen}(x)$ | $[-1,\, 1]$ | $\left[-\dfrac{\pi}{2},\, \dfrac{\pi}{2}\right]$ |
 | $\arccos(x)$ | $[-1,\, 1]$ | $[0,\, \pi]$ |
 | $\arctan(x)$ | $\mathbb{R}$ | $\left(-\dfrac{\pi}{2},\, \dfrac{\pi}{2}\right)$ |
 
 
-Dado un número $y$, $\arcsin(y)$ devuelve **el único** ángulo $x$ en el intervalo restringido tal que $\sin x = y$.
+Dado un número $y$, $\operatorname{arcsen}(y)$ devuelve **el único** ángulo $x$ en el intervalo restringido tal que $\operatorname{sen} x = y$.
 
 ---
 
@@ -708,7 +726,7 @@ El menor $P > 0$ que cumple la condición se llama **período fundamental**. La 
 
 La **frecuencia** $\dfrac{1}{P}$ indica cuántos ciclos completos ocurren por unidad de variable independiente.
 
-**Para $y = A \sin(B x)$ o $y = A \cos(Bx)$:**
+**Para $y = A \operatorname{sen}(B x)$ o $y = A \cos(Bx)$:**
 
 - **Amplitud:** $\lvert A\rvert$ — la imagen es $[-\lvert A\rvert, \lvert A\rvert]$.
 - **Período:** $P = \dfrac{2\pi}{\lvert B\rvert}$.
@@ -721,7 +739,7 @@ Una función $f$ está:
 - **Acotada inferiormente** si existe $m \in \mathbb{R}$ tal que $f(x) \geq m$ para todo $x \in D_f$.
 - **Acotada** si está acotada superior e inferiormente, es decir, existe $k > 0$ tal que $\lvert f(x)\rvert \leq k$ para todo $x \in D_f$.
 
-Las funciones $\sin x$ y $\cos x$ son acotadas (por $k = 1$). $\arctan x$ está acotada por $\pi/2$. En cambio, los polinomios no constantes, las exponenciales y las logarítmicas **no** son acotadas.
+Las funciones $\operatorname{sen} x$ y $\cos x$ son acotadas (por $k = 1$). $\arctan x$ está acotada por $\pi/2$. En cambio, los polinomios no constantes, las exponenciales y las logarítmicas **no** son acotadas.
 
 ---
 
@@ -777,7 +795,7 @@ Cuando solo se da la regla de asignación (sin especificar dominio), llamamos **
 | Raíz de índice par | El radicando debe ser $\geq 0$ (y $> 0$ si va en denominador). |
 | Logaritmo | El argumento debe ser $> 0$. |
 | Tangente / Secante | $\cos x \neq 0$, es decir $x \neq (2k+1)\dfrac{\pi}{2}$. |
-| Cotangente / Cosecante | $\sin x \neq 0$, es decir $x \neq k\pi$. |
+| Cotangente / Cosecante | $\operatorname{sen} x \neq 0$, es decir $x \neq k\pi$. |
 | Funciones inversas trig. (arcsen, arccos) | Argumento en $[-1, 1]$. |
 
 
@@ -800,6 +818,8 @@ A partir de $y = f(x)$, modificaciones simples a la regla producen efectos geom�
 | Estiramiento / compresión vertical | $y = c \cdot f(x)$ | estira si $\lvert c\rvert > 1$, comprime si $0 < \lvert c\rvert < 1$ |
 | Estiramiento / compresión horizontal | $y = f(c \cdot x)$ | comprime si $\lvert c\rvert > 1$, estira si $0 < \lvert c\rvert < 1$ |
 
+
+**Forma general.** Las seis filas son casos de $a\,f\big(b(x-c)\big)+d$; el orden de los movimientos y la trampa del desplazamiento oculto (en $f(2x-6)$ el desplazamiento es $3$, no $6$) están en la [lección de transformaciones](/analisis-matematico-i/unidad-1/teoria/algebra-y-transformaciones/#transformaciones-de-gráficos).
 
 **Reglas prácticas:**
 
@@ -853,7 +873,7 @@ $f: A \to B$ es **sobreyectiva** (o suryectiva, o "sobre") si **todo** elemento 
 
 
 $$
-\text{Im}\,f = B
+\operatorname{Im} f = B
 $$
 
 
@@ -864,7 +884,7 @@ Equivalentemente: $\forall y \in B,\ \exists x \in A$ tal que $y = f(x)$.
 
 $f$ es **biyectiva** si es inyectiva **y** sobreyectiva. Esta es la condición necesaria y suficiente para que exista la **función inversa**.
 
-**Cómo "forzar" la biyectividad.** Si una función no es inyectiva, se puede **restringir su dominio** a un intervalo donde sí lo sea. Si no es sobreyectiva, se puede **redefinir el codominio** igualándolo a la imagen. Estas dos acciones son las que se usan, por ejemplo, para definir $\arcsin$, $\arccos$ y $\arctan$ a partir de las trigonométricas.
+**Cómo "forzar" la biyectividad.** Si una función no es inyectiva, se puede **restringir su dominio** a un intervalo donde sí lo sea. Si no es sobreyectiva, se puede **redefinir el codominio** igualándolo a la imagen. Estas dos acciones son las que se usan, por ejemplo, para definir $\operatorname{arcsen}$, $\arccos$ y $\arctan$ a partir de las trigonométricas.
 
 ---
 
@@ -919,7 +939,7 @@ La gráfica de $f^{-1}$ es el **simétrico** de la gráfica de $f$ respecto a la
 | $f(x) = mx + b$ ($m \neq 0$) | $f^{-1}(x) = \dfrac{x - b}{m}$ | sin restricción |
 | $f(x) = a^x$ ($a > 0$, $a \neq 1$) | $f^{-1}(x) = \log_a x$ | codominio $(0, +\infty)$ |
 | $f(x) = x^2$ | $f^{-1}(x) = \sqrt{x}$ | dominio $[0, +\infty)$ |
-| $f(x) = \sin x$ | $f^{-1}(x) = \arcsin x$ | dominio $[-\pi/2, \pi/2]$ |
+| $f(x) = \operatorname{sen} x$ | $f^{-1}(x) = \operatorname{arcsen} x$ | dominio $[-\pi/2, \pi/2]$ |
 | $f(x) = \cos x$ | $f^{-1}(x) = \arccos x$ | dominio $[0, \pi]$ |
 | $f(x) = \tan x$ | $f^{-1}(x) = \arctan x$ | dominio $(-\pi/2, \pi/2)$ |
 

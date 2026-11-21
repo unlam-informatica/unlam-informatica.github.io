@@ -54,21 +54,25 @@ $$
 ✓ Coincide con la respuesta oficial.
 
 ## 16e
-$\lim_{x\to\infty}\left(\sqrt{\dfrac{1-x}{1-64x}}\cdot\dfrac{1+2x}{3x-1}\right)$
+$\lim_{x\to\infty}\left(\sqrt{\dfrac{1-x}{1-64x}}\right)^{\frac{1+2x}{3x-1}}$
 
-Primer factor: dentro de la raíz, cociente de grado $1$ con coeficientes $\dfrac{-1}{-64}=\dfrac{1}{64}$, luego $\sqrt{\tfrac{1}{64}}=\dfrac{1}{8}$. Segundo factor: $\dfrac{1+2x}{3x-1}\to\dfrac{2}{3}$.
+Es una potencia de base y exponente variables. Calculamos por separado el límite de la base y el del exponente. Base: dentro de la raíz hay un cociente de polinomios de grado $1$, cuyo límite es el cociente de los coeficientes principales, $\dfrac{-1}{-64}=\dfrac{1}{64}$; como la raíz es continua, la base tiende a $\sqrt{\tfrac{1}{64}}=\dfrac{1}{8}$. Exponente: $\dfrac{1+2x}{3x-1}\to\dfrac{2}{3}$.
+
+Como la base tiende a un número positivo distinto de $1$ y el exponente a un número finito, no hay indeterminación (no es de la forma $1^{\infty}$) y el límite es la potencia de los límites:
 
 
 
 $$
-\to\dfrac{1}{8}\cdot\dfrac{2}{3}=\dfrac{2}{24}=\dfrac{1}{12}
+\lim_{x\to\infty}\left(\sqrt{\dfrac{1-x}{1-64x}}\right)^{\frac{1+2x}{3x-1}}=\left(\dfrac{1}{8}\right)^{2/3}=\left(\dfrac{1}{2^3}\right)^{2/3}=\dfrac{1}{2^2}=\dfrac{1}{4}.
 $$
 
 
 
-> ⚠️ **Discrepancia:** Resultado calculado: $\dfrac{1}{12}$. Respuesta del documento: $\dfrac{1}{4}$.
->
-> Recalculo cuidadoso: $\sqrt{\tfrac{1-x}{1-64x}}\to\sqrt{\tfrac{1}{64}}=\tfrac18$ y $\tfrac{1+2x}{3x-1}\to\tfrac23$, cuyo producto es $\tfrac{1}{12}$. Para obtener $\tfrac14$ el segundo factor debería tender a $2$ (p. ej. $\tfrac{1+2x}{x-1}$) o el radicando a $\tfrac{1}{16}$. Con el enunciado tal como está escrito, el valor correcto es $\dfrac{1}{12}$. Posible errata en el enunciado/respuesta oficial.
+✓ Coincide con la respuesta oficial.
+
+:::caution[Leé bien la estructura de la expresión]
+El exponente $\frac{1+2x}{3x-1}$ afecta a toda la raíz. Si se lo lee como un factor que multiplica, el resultado sería $\frac18\cdot\frac23=\frac1{12}$, que no es el límite pedido.
+:::
 
 ## 16f
 * $\lim_{x\to\infty}\dfrac{\sqrt{9x^2+6}}{5x-2}$ (lateral $\pm\infty$)

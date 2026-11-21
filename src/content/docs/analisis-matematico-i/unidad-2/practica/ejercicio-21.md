@@ -26,7 +26,7 @@ Razón de cambio media entre día 1 y día 3
 
 
 $$
-P(1)=\dfrac{4}{2+8e^{-2}}=\dfrac{4}{2+8\cdot 0{,}135335}=\dfrac{4}{3{,}082685}\approx 1{,}29761\ \text{millones}
+P(1)=\dfrac{4}{2+8e^{-2}}=\dfrac{4}{2+8\cdot 0{,}135335}=\dfrac{4}{3{,}082685}\approx 1{,}29757\ \text{millones}
 $$
 
 
@@ -42,7 +42,7 @@ $$
 
 
 $$
-\dfrac{P(3)-P(1)}{3-1}=\dfrac{1{,}98036-1{,}29761}{2}\approx \dfrac{0{,}68275}{2}\approx 0{,}3414\ \text{millones/día}
+\dfrac{P(3)-P(1)}{3-1}=\dfrac{1{,}98036-1{,}29757}{2}\approx \dfrac{0{,}68279}{2}\approx 0{,}3414\ \text{millones/día}
 $$
 
 

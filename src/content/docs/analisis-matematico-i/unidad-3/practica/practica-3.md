@@ -10,10 +10,13 @@ sidebar:
 
 Resolución completa y paso a paso de la Práctica 3 de Análisis Matemático I (UNLaM). Cada ejercicio reproduce el enunciado, lo resuelve con notación LaTeX y compara el resultado con la respuesta oficial. Se usan: definición de derivada por límite del cociente incremental, reglas de derivación (suma, producto, cociente, constante), regla de la cadena, derivada de funciones elementales, derivada de la inversa $(f^{-1})'(y)=\dfrac{1}{f'(f^{-1}(y))}$, derivación implícita y derivación logarítmica. Para la recta tangente usamos $y-f(a)=f'(a)(x-a)$ y para la normal la pendiente $-\dfrac{1}{f'(a)}$.
 
-## Tabla de contenidos
+:::note[Fuente de los enunciados]
+Los enunciados son los de la **Práctica 3: Derivada** de la Guía de Trabajos Prácticos 2026 de la cátedra de Análisis Matemático I
+(DIIT-UNLaM, coordinadoras M. Reale, N. Sartor y N. Suelves). Las resoluciones son propias de estos apuntes y se
+contrastaron con las respuestas de la guía; donde la respuesta oficial parece tener un error, la resolución lo
+señala y lo justifica. Los ejercicios marcados con * están resueltos también en el sitio de la cátedra.
+:::
 
-
-1. TOC
 
 
 ---
@@ -360,7 +363,7 @@ $$
 
 ### c) $n(x)=x^{2/3}$
 
-Continua en $\mathbb{R}$. $n'(x)=\dfrac23x^{-1/3}=\dfrac{2}{3\sqrt[3]{x}}$. En $x=0$, $\lim_{x\to0}n'(x)=\pm\infty\Rightarrow$ tangente vertical, no derivable.
+Continua en $\mathbb{R}$. $n'(x)=\dfrac23x^{-1/3}=\dfrac{2}{3\sqrt[3]{x}}$. En $x=0$, $n'(x)\to-\infty$ si $x\to0^-$ y $n'(x)\to+\infty$ si $x\to0^+$: las derivadas laterales son infinitas y de signo opuesto. El gráfico tiene una **cúspide** (punto de retroceso) en el origen, con recta tangente vertical $x=0$: las secantes por el origen tienden a esa recta desde ambos lados. $n$ no es derivable en $0$.
 
 **$n'(x)=\dfrac23x^{-1/3}$, derivable en $\mathbb{R}-\{0\}$.**
 
@@ -779,7 +782,7 @@ Las ordenadas: $y=\dfrac{1-x}{1+x}$. Con $1+x=\pm\sqrt[4]{12}$ y $1-x=2-(1+x)$:
 
 
 $$
-P_1\!\left(-1-\sqrt[4]{12},\ \dfrac{2+\sqrt[4]{12}}{-\sqrt[4]{12}}\right)\approx(-2{,}861,\ 3{,}303),\qquad P_2\!\left(-1+\sqrt[4]{12},\ \dfrac{2-\sqrt[4]{12}}{\sqrt[4]{12}}\right)\approx(0{,}861,\ 0{,}075).
+P_1\!\left(-1-\sqrt[4]{12},\ \dfrac{2+\sqrt[4]{12}}{-\sqrt[4]{12}}\right)\approx(-2{,}861,\ -2{,}075),\qquad P_2\!\left(-1+\sqrt[4]{12},\ \dfrac{2-\sqrt[4]{12}}{\sqrt[4]{12}}\right)\approx(0{,}861,\ 0{,}075).
 $$
 
 
@@ -1294,9 +1297,11 @@ $(f^{-1})'(-2)=\dfrac{1}{f'(0)}=\dfrac11=1$.
 
 ## Ejercicio 33 — Derivadas con funciones trigonométricas inversas
 
-### a) $f(x)=e^{\arcsin(3x)}$
+<div id="a-fxearcsin3x" aria-hidden="true"></div>
 
-$f'(x)=e^{\arcsin(3x)}\cdot\dfrac{3}{\sqrt{1-(3x)^2}}=e^{\arcsin(3x)}\cdot\dfrac{3}{\sqrt{1-9x^2}}$. ✓ Coincide con la respuesta oficial.
+### a) $f(x)=e^{\operatorname{arcsen}(3x)}$
+
+$f'(x)=e^{\operatorname{arcsen}(3x)}\cdot\dfrac{3}{\sqrt{1-(3x)^2}}=e^{\operatorname{arcsen}(3x)}\cdot\dfrac{3}{\sqrt{1-9x^2}}$. ✓ Coincide con la respuesta oficial.
 
 ### b) $f(x)=x\arccos(2x)$
 
@@ -1537,7 +1542,7 @@ Tangente: $y-1=-3(x-0)\Rightarrow y=-3x+1$.
 | a | continua en $a\Rightarrow$ derivable en $a$ | **F** | Contraejemplo: $\lvert x\rvert$ es continua en $0$ pero no derivable |
 | b | tangente a $y=x^2$ en $(-2,4)$ es $y-4=2x(x+2)$ | **F** | La pendiente es $f'(-2)=-4$, no $2x$; la tangente es $y-4=-4(x+2)$ |
 | c | si $f'(r)$ existe entonces $\lim_{x\to r}f=f(r)$ | **V** | Derivable $\Rightarrow$ continua |
-| d | la tangente no puede cortar la curva en otro punto | **F** | Contraejemplo: la tangente a $y=x^3$ en $0$ es $y=0$ y la cruza ahí; muchas tangentes cortan la curva en otros puntos |
+| d | la tangente no puede cortar la curva en otro punto | **F** | Contraejemplo: la tangente a $y=\dfrac{1}{x^2}$ en $(1,1)$ es $y=3-2x$ y corta la curva también en $\left(-\tfrac12,4\right)$ (Ejercicio 13b) |
 | e | $y=x+c\Rightarrow dy=dx$ | **V** | $dy=y'\,dx=1\cdot dx=dx$ |
 | f | $f'=g'\Rightarrow f=g$ | **F** | Difieren en una constante: $f=g+C$ |
 | g | $g(x)=\lvert x^2+x\rvert\Rightarrow g'(x)=\lvert2x+1\rvert$ | **F** | La derivada del valor absoluto no es el valor absoluto de la derivada |
@@ -1548,7 +1553,7 @@ Tangente: $y-1=-3(x-0)\Rightarrow y=-3x+1$.
 | l | $\dfrac{f(x)-f(a)}{x-a}$ es la pendiente de la secante | **V** | Es la definición de pendiente de secante |
 | m | $f$ creciente derivable, $\Delta x>0\Rightarrow\Delta y\ge dy$ | **F** | Depende de la concavidad; si $f$ es cóncava hacia abajo, $\Delta y<dy$ |
 
-**Verdaderas: c, e, h, j, k... ¡revisar!**
+Los ítems e, h y m usan el diferencial $dy = f'(x)\,dx$ y el incremento $\Delta y$; el diferencial se presenta como contenido complementario en [razón de cambio y derivada](/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/#contenido-complementario).
 
 > ⚠️ **Discrepancia:** La respuesta oficial lista **k como Verdadera**, pero el análisis muestra que es **Falsa**.
 >
@@ -1584,7 +1589,7 @@ Tangente vertical: $x^2+2y=0\Rightarrow y=-\dfrac{x^2}{2}$. Sustituyendo en la c
 
 $-x\left(\dfrac{x^3}{4}+4\right)=0\Rightarrow x=0$ o $x^3=-16\Rightarrow x=-\sqrt[3]{16}=-2\sqrt[3]{2}$.
 
-Para $x=0$: $y=0$, pero hay que verificar que el numerador no se anule también: en $(0,0)$ numerador $=4\neq0$, válido $\Rightarrow$ tangente vertical en $(0,0)$. Para $x=-2\sqrt[3]{2}$: $y=-\dfrac{(2\sqrt[3]{2})^2}{2}=-\dfrac{4\sqrt[3]{4}}{2}=-2\sqrt[3]{4}$.
+Para $x=0$: $y=0$, pero hay que verificar que el numerador no se anule también: en $(0,0)$ numerador $=4\neq0$, válido $\Rightarrow$ tangente vertical en $(0,0)$. En el otro punto, $xy=8$ y el numerador vale $4-2xy=-12\neq0$, así que también es válido. Para $x=-2\sqrt[3]{2}$: $y=-\dfrac{(2\sqrt[3]{2})^2}{2}=-\dfrac{4\sqrt[3]{4}}{2}=-2\sqrt[3]{4}$.
 
 **Puntos: $(0,0)$ y $\left(-2\sqrt[3]{2},\,-2\sqrt[3]{4}\right)$.**
 

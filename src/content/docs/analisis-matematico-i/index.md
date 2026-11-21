@@ -7,7 +7,19 @@ sidebar:
 ---
 
 
-Apuntes, guías de referencia y ejercicios prácticos de la cursada, organizados por unidad.
+Apuntes, ejercicios resueltos y guías de estudio de la cursada, organizados por unidad según el programa
+analítico 2026 de la cátedra.
+
+## Por dónde empezar
+
+1. Leé [Cómo estudiar esta materia](/analisis-matematico-i/como-estudiar/): organización de las unidades,
+   método de estudio, uso de GeoGebra y evaluación.
+2. Abrí la [presentación de la Unidad 1](/analisis-matematico-i/unidad-1/) y seguí su **ruta de aprendizaje**:
+   indica qué lección leer, qué ejercicios resolver y cómo autoevaluarte.
+3. Al terminar cada unidad, su presentación te indica cómo seguir.
+
+Si estás repasando para un parcial o el final, empezá por
+[Repasar para un examen](/analisis-matematico-i/como-estudiar/#repasar-para-un-examen).
 
 ---
 
@@ -22,7 +34,9 @@ La asignatura está organizada en **cuatro ejes principales**:
 
 ---
 
-## Contenido
+## Unidades
+
+Cada enlace lleva a la presentación de la unidad, con sus objetivos, prerrequisitos y ruta de estudio.
 
 ### [Unidad 1 — Funciones](/analisis-matematico-i/unidad-1/)
 Definición de función. Dominio e imagen. Ceros y signo. Funciones par e impar. Funciones algebraicas y trascendentes. Álgebra de funciones. Transformaciones. Función inversa.
@@ -37,7 +51,7 @@ Razón de cambio media e instantánea. Derivada en un punto y como función. Rec
 Órdenes de contacto. Polinomio de Taylor y de Maclaurin. Aproximación lineal. Término complementario.
 
 ### [GeoGebra — Guía práctica](/analisis-matematico-i/geogebra/)
-Comandos y técnicas de GeoGebra organizados por unidad: graficar funciones, calcular límites y derivadas, optimizar, polinomios de Taylor. Con ejemplos directos de los ejercicios de las prácticas.
+Comandos y técnicas de GeoGebra organizados por unidad: graficar funciones, calcular límites y derivadas, trazar rectas tangentes y comparar una función con sus polinomios de Taylor. Con ejemplos de los ejercicios de las prácticas.
 
 ---
 
@@ -46,6 +60,9 @@ Comandos y técnicas de GeoGebra organizados por unidad: graficar funciones, cal
 - Williner, B. (2016). *Apuntes de clase. Análisis Matemático I.* UNLaM — plataforma MIEL.
 - Stewart, J. (2008). *Cálculo. Trascendentes tempranas.* 6ta ed. Cengage Learning.
 - Thomas, G., Weir, M., Hass, J. y Giordano, J. (2005). *Cálculo, una variable.* 11va ed. Pearson.
-- Purcell, E., Varberg, D. y Ringdon, S. (2007). *Cálculo diferencial e integral.* 9na ed. Pearson.
+- Purcell, E., Varberg, D. y Rigdon, S. (2007). *Cálculo diferencial e integral.* 9na ed. Pearson.
 - Larson, R., Hostetler, R. y Edwards, B. (2002). *Cálculo I.* 7ma ed. Ediciones Pirámide.
+- Leithold, L. (1992). *El cálculo con geometría analítica.* Harla.
+- Piskunov, N. (1977). *Cálculo diferencial e integral.* 3ra ed. Fondo Editorial Sudamericana.
+- Sadosky, M. y Guber, R. (2004). *Elementos de cálculo diferencial e integral.* 22da ed. Alsina.
 - Apostol, T. (1984). *Calculus. Volumen I.* Editorial Reverté.

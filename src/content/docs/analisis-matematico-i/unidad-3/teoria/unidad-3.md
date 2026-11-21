@@ -1,17 +1,31 @@
 ---
-title: Unidad 3 — Derivada
+title: Unidad 3 — Resumen integrador
 slug: analisis-matematico-i/unidad-3/teoria/unidad-3
 sidebar:
-  order: 1
+  hidden: true
+  label: Resumen integrador
 ---
 
+:::tip[Cómo usar este resumen]
+- **Antes de estudiar:** leelo de corrido para tener el mapa de la unidad, de la razón de cambio a la derivación logarítmica.
+- **Después de estudiar:** usalo para repasar y conectar los temas.
+- **Antes del segundo parcial:** identificá los temas principales y volvé a la lección de cada uno.
+
+No reemplaza a las lecciones, que desarrollan cada tema con demostraciones, ejemplos resueltos, ejercicios y
+autoevaluación:
+
+1. [Razón de cambio y derivada](/analisis-matematico-i/unidad-3/teoria/razon-de-cambio-y-derivada/)
+2. [La derivada como función](/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/)
+3. [Reglas de derivación](/analisis-matematico-i/unidad-3/teoria/reglas-de-derivacion/)
+4. [Regla de la cadena e inversa](/analisis-matematico-i/unidad-3/teoria/regla-de-la-cadena-e-inversa/)
+5. [Derivación implícita y logarítmica](/analisis-matematico-i/unidad-3/teoria/implicita-y-logaritmica/)
+
+La ruta completa de la unidad está en la [presentación](/analisis-matematico-i/unidad-3/).
+:::
 
 
 
-## Tabla de contenidos
 
-
-1. TOC
 
 
 ---
@@ -58,14 +72,14 @@ Si $f(t)$ es la posición de un objeto en el instante $t$, entonces $f'(t_0)$ es
 
 ## 3. La derivada como función
 
-La **función derivada** $f' : \text{Dom}\, f' \to \mathbb{R}$ asigna a cada $x$ el valor $f'(x)$.
+La **función derivada** $f' : D_{f'} \to \mathbb{R}$ asigna a cada $x$ el valor $f'(x)$.
 
 Notaciones equivalentes:
 
 
 
 $$
-f'(x) = \frac{df}{dx} = y' = Df(x) = \frac{d}{dx}\bigl[f(x)\bigr]
+f'(x) = \frac{df}{dx} = y' = \frac{d}{dx}\bigl[f(x)\bigr]
 $$
 
 
@@ -104,8 +118,10 @@ $$
 
 
 $$
-f \text{ es derivable en } x_0 \iff f'_+(x_0) = f'_-(x_0) = f'(x_0)
+f \text{ es derivable en } x_0 \iff f'_+(x_0) \text{ y } f'_-(x_0) \text{ existen, son finitas e iguales}
 $$
+
+En ese caso, $f'(x_0)$ es ese valor común. Si las laterales son infinitas (aunque sean iguales), $f$ no es derivable en $x_0$.
 
 
 
@@ -115,7 +131,7 @@ $$
 
 **Teorema:** Si $f$ es derivable en $x_0$, entonces $f$ es continua en $x_0$.
 
-**El recíproco es falso:** $f$ puede ser continua en $x_0$ sin ser derivable. Ejemplo: $f(x) = \lvert x \rvert$ en $x = 0$.
+**El recíproco es falso:** $f$ puede ser continua en $x_0$ sin ser derivable. Hay tres situaciones típicas: una **punta** (laterales finitas y distintas, como $\lvert x \rvert$ en $0$), una **tangente vertical** (laterales infinitas del mismo signo, como $\sqrt[3]{x}$ en $0$) y una **cúspide** (infinitas de signo opuesto, como $\sqrt[3]{x^2}$ en $0$). Detalle en [La derivada como función](/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/).
 
 ---
 
@@ -130,11 +146,11 @@ $$
 | $a^x$ | $a^x \ln a$ |
 | $\ln x$ | $\dfrac{1}{x}$ |
 | $\log_a x$ | $\dfrac{1}{x \ln a}$ |
-| $\sin x$ | $\cos x$ |
-| $\cos x$ | $-\sin x$ |
+| $\operatorname{sen} x$ | $\cos x$ |
+| $\cos x$ | $-\operatorname{sen} x$ |
 | $\tan x$ | $\sec^2 x = \dfrac{1}{\cos^2 x}$ |
-| $\cot x$ | $-\csc^2 x = -\dfrac{1}{\sin^2 x}$ |
-| $\arcsin x$ | $\dfrac{1}{\sqrt{1-x^2}}$ |
+| $\cot x$ | $-\csc^2 x = -\dfrac{1}{\operatorname{sen}^2 x}$ |
+| $\operatorname{arcsen} x$ | $\dfrac{1}{\sqrt{1-x^2}}$ |
 | $\arccos x$ | $-\dfrac{1}{\sqrt{1-x^2}}$ |
 | $\arctan x$ | $\dfrac{1}{1+x^2}$ |
 
@@ -150,7 +166,7 @@ Sean $f$ y $g$ derivables y $c$ una constante:
 | Suma | $(f + g)' = f' + g'$ |
 | Diferencia | $(f - g)' = f' - g'$ |
 | Producto | $(f \cdot g)' = f' g + f g'$ |
-| Cociente | $\left(\dfrac{f}{g}\right)' = \dfrac{f'g - fg'}{g^2}$ |
+| Cociente (con $g \neq 0$) | $\left(\dfrac{f}{g}\right)' = \dfrac{f'g - fg'}{g^2}$ |
 
 ---
 
@@ -176,13 +192,13 @@ $$
 
 
 
-**Ejemplo:** si $h(x) = \sin(x^2)$, entonces $h'(x) = \cos(x^2) \cdot 2x$.
+**Ejemplo:** si $h(x) = \operatorname{sen}(x^2)$, entonces $h'(x) = \cos(x^2) \cdot 2x$.
 
 ---
 
 ## 10. Derivada de la función inversa
 
-Si $f$ es biyectiva y derivable, y $f^{-1}$ es su inversa:
+Si $f$ es continua y estrictamente monótona en un intervalo, derivable en $x_0$ y $f'(x_0) \neq 0$, entonces su inversa $f^{-1}$ es derivable en $y = f(x_0)$ y vale (con $x_0 = f^{-1}(y)$):
 
 
 
@@ -232,20 +248,12 @@ Técnica útil para funciones del tipo $f(x) = [u(x)]^{v(x)}$ o productos/cocien
 2. Derivar implícitamente: $\dfrac{y'}{y} = \ldots$
 3. Despejar: $y' = y \cdot (\ldots)$
 
-**Ejemplo:** $y = x^{\sin x}$
+**Ejemplo:** $y = x^{\operatorname{sen} x}$
 
 
 
 $$
-\ln y = \sin x \cdot \ln x
-$$
-
-
-
-
-
-$$
-\frac{y'}{y} = \cos x \cdot \ln x + \frac{\sin x}{x}
+\ln y = \operatorname{sen} x \cdot \ln x
 $$
 
 
@@ -253,7 +261,15 @@ $$
 
 
 $$
-y' = x^{\sin x}\!\left(\cos x \cdot \ln x + \frac{\sin x}{x}\right)
+\frac{y'}{y} = \cos x \cdot \ln x + \frac{\operatorname{sen} x}{x}
+$$
+
+
+
+
+
+$$
+y' = x^{\operatorname{sen} x}\!\left(\cos x \cdot \ln x + \frac{\operatorname{sen} x}{x}\right)
 $$
 
 

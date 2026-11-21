@@ -18,7 +18,7 @@ $\lim\limits_{x\to 3}\dfrac{x-3}{x^2-9}$
 :::
 
 :::tip[Resolución]
-Reemplazando: $\dfrac{0}{0}$ (indeterminación).
+Al reemplazar se obtiene la forma $\dfrac{0}{0}$ (indeterminación).
 
 Factorizamos el denominador:
 
@@ -60,7 +60,7 @@ $\lim\limits_{x\to 2}\dfrac{x^2-5x+6}{x^2-9x+14}$
 :::
 
 :::tip[Resolución]
-Reemplazando: $\dfrac{4-10+6}{4-18+14}=\dfrac{0}{0}$ (indeterminación).
+Reemplazando: $\dfrac{4-10+6}{4-18+14}$: se obtiene la forma $\dfrac{0}{0}$ (indeterminación).
 
 Factorizamos ambos polinomios.
 
@@ -98,7 +98,7 @@ $\lim\limits_{h\to 0}\dfrac{(3+h)^{-1}-3^{-1}}{h}$
 :::
 
 :::tip[Resolución]
-Reemplazando $h=0$: $\dfrac{3^{-1}-3^{-1}}{0}=\dfrac{0}{0}$ (indeterminación).
+Reemplazando $h=0$: $\dfrac{3^{-1}-3^{-1}}{0}$: se obtiene la forma $\dfrac{0}{0}$ (indeterminación).
 
 Reescribimos las potencias negativas como inversos:
 
@@ -150,7 +150,7 @@ $\lim\limits_{x\to 2}\dfrac{x-\sqrt{3x-2}}{x^2-4}$
 :::
 
 :::tip[Resolución]
-Reemplazando: $\dfrac{2-\sqrt{4}}{0}=\dfrac{0}{0}$ (indeterminación).
+Reemplazando: $\dfrac{2-\sqrt{4}}{0}$: se obtiene la forma $\dfrac{0}{0}$ (indeterminación).
 
 Racionalizamos el numerador multiplicando por el conjugado $x+\sqrt{3x-2}$:
 
@@ -198,7 +198,7 @@ $\lim\limits_{t\to 2}\dfrac{t^3-8}{t^5-32}$
 :::
 
 :::tip[Resolución]
-Reemplazando: $\dfrac{0}{0}$ (indeterminación). Ambos numerador y denominador se anulan en $t=2$.
+Al reemplazar se obtiene la forma $\dfrac{0}{0}$ (indeterminación). Ambos numerador y denominador se anulan en $t=2$.
 
 Factorizamos usando las identidades $a^n-b^n=(a-b)(a^{n-1}+a^{n-2}b+\cdots+b^{n-1})$.
 
@@ -242,7 +242,7 @@ $\lim\limits_{x\to 8}\dfrac{\sqrt{2x}-4}{64-x^2}$
 :::
 
 :::tip[Resolución]
-Reemplazando: $\dfrac{\sqrt{16}-4}{64-64}=\dfrac{0}{0}$.
+Reemplazando: $\dfrac{\sqrt{16}-4}{64-64}$: se obtiene la forma $\dfrac{0}{0}$.
 
 Racionalizamos el numerador con conjugado $\sqrt{2x}+4$:
 
@@ -286,7 +286,7 @@ $\lim\limits_{x\to 1/2}\dfrac{4x^2-x-1/2}{1-16x^4}$
 :::
 
 :::tip[Resolución]
-Reemplazando: $\dfrac{1-1/2-1/2}{1-1}=\dfrac{0}{0}$.
+Reemplazando: $\dfrac{1-1/2-1/2}{1-1}$: se obtiene la forma $\dfrac{0}{0}$.
 
 Factorizamos el denominador como diferencia de cuadrados:
 
@@ -356,7 +356,7 @@ $\lim\limits_{x\to 1}\dfrac{2x-\sqrt{x+3}}{\sqrt{x}-1}$
 :::
 
 :::tip[Resolución]
-Reemplazando: $\dfrac{2-2}{0}=\dfrac{0}{0}$.
+Reemplazando: $\dfrac{2-2}{0}$: se obtiene la forma $\dfrac{0}{0}$.
 
 Racionalizamos numerador y denominador.
 
