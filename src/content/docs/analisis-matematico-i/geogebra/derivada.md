@@ -12,8 +12,8 @@ Esta página cubre derivadas simbólicas, rectas tangentes, derivación implíci
 
 ```
 Derivada(f)                # devuelve f'(x)
-Derivada(f; n)             # derivada n-ésima
-Derivada(f; x; n)          # alternativa explicitando la variable
+Derivada(f, n)             # derivada n-ésima
+Derivada(f, x, n)          # alternativa explicitando la variable
 ```
 
 **Ejemplo:**
@@ -24,7 +24,7 @@ f(x) = x^3 - 6x^2 + 9x - 2
 Derivada(f)
 # Devuelve: f'(x) = 3x^2 - 12x + 9
 
-Derivada(f; 2)
+Derivada(f, 2)
 # Devuelve: f''(x) = 6x - 12
 ```
 
@@ -35,7 +35,7 @@ Para verlo simbólicamente con todos los pasos, usar la **vista CAS**:
 f(x) := x^3 - 6x^2 + 9x - 2
 
 # Celda 2:
-Derivada(f(x); x)
+Derivada(f(x), x)
 ```
 
 El operador `:=` define una expresión sin evaluarla (útil cuando se trabaja simbólicamente).
@@ -56,24 +56,24 @@ Derivada(f)(2)
 ## Recta tangente
 
 ```
-Tangente(<punto>; <función>)
-Tangente(<x>; <función>)        # tangente en x = <valor>
+Tangente(<punto>, <función>)
+Tangente(<x>, <función>)  # tangente en x = <valor>
 ```
 
 **Ejemplo:**
 
 ```
 f(x) = sin(x)
-t = Tangente(pi/4; f)
+t = Tangente(pi/4, f)
 # Devuelve: y = (sqrt(2)/2) x + sqrt(2)/2 (1 - pi/4)
 ```
 
 GeoGebra grafica automáticamente la recta tangente. Combinado con un deslizador, se puede animar:
 
 ```
-a = 0                          # deslizador con rango (-3; 3)
-P = (a; f(a))                  # punto sobre la curva
-t = Tangente(a; f)             # tangente animada
+a = 0                          # deslizador con rango de -3 a 3
+P = (a, f(a))                  # punto sobre la curva
+t = Tangente(a, f)             # tangente animada
 ```
 
 Al mover el deslizador `a`, el punto $P$ recorre la curva y la tangente se actualiza. **Muy útil para visualizar cómo varía la pendiente** y entender la relación entre la curva y su derivada.
@@ -83,7 +83,7 @@ Al mover el deslizador `a`, el punto $P$ recorre la curva y la tangente se actua
 La normal en un punto es perpendicular a la tangente.
 
 ```
-Perpendicular(<punto>; <tangente>)
+Perpendicular(<punto>, <tangente>)
 ```
 
 O directamente con la pendiente:
@@ -97,15 +97,17 @@ n(x) = -1/f'(a) (x - a) + f(a)
 Para una curva dada por una ecuación implícita $F(x,y)=0$:
 
 ```
-c: x^2 + y^2 = 25              # circunferencia (curva implícita)
-DerivadaImplícita(c)
-# Devuelve: -x/y
+DerivadaImplícita(x^2 + y^2 - 25)    # se escribe F(x, y), no la ecuación
+# Devuelve: (-x) / y
 ```
 
-**Importante:** el resultado se interpreta como $\dfrac{dy}{dx}$. Para evaluar en un punto $(x_0, y_0)$, sustituir manualmente o usar:
+El argumento es la expresión $F(x,y)$, no la ecuación. Si se escribe `DerivadaImplícita(x^2 + y^2 = 25)`, o se aplica el comando a una circunferencia definida como `c: x^2 + y^2 = 25`, GeoGebra no devuelve nada.
+
+**Importante:** el resultado se interpreta como $\dfrac{dy}{dx}$. Para evaluar en un punto $(x_0, y_0)$, conviene guardarlo como función de dos variables y evaluarla:
 
 ```
-DerivadaImplícita(c)(3; 4)     # da -3/4 → pendiente de la tangente en (3,4)
+m(x, y) = DerivadaImplícita(x^2 + y^2 - 25)
+m(3, 4)                              # da -0.75 → pendiente de la tangente en (3, 4)
 ```
 
 ## Derivación logarítmica
@@ -120,36 +122,42 @@ f(x) := x^x
 g(x) := ln(f(x))         # → x ln(x)
 
 # Derivar
-Derivada(g(x); x)         # → ln(x) + 1
+Derivada(g(x), x)        # → ln(x) + 1
 
 # Y multiplicar por f(x)
 f(x) * (ln(x) + 1)
 ```
 
-El resultado $f'(x) = x^x (\ln x + 1)$ coincide con la derivada directa que también GeoGebra calcula: `Derivada(x^x; x)`.
+El resultado $f'(x) = x^x (\ln x + 1)$ coincide con la derivada directa que también GeoGebra calcula: `Derivada(x^x, x)`.
 
 ## Optimización: máximos y mínimos
+
+:::note[Contenido complementario]
+El estudio de máximos, mínimos e inflexiones no figura en el programa 2026 de la materia, que termina la unidad
+de derivada con la derivación logarítmica. Esta sección se conserva como herramienta para otros cursos y para
+problemas de modelado.
+:::
 
 ### Locales
 
 ```
 Extremo(f)                    # todos los extremos relativos
-Extremo(f; a; b)              # extremos relativos en [a,b]
+Extremo(f, a, b)              # extremos relativos en [a,b]
 ```
 
 ### Absolutos en un intervalo
 
 ```
-Máximo(f; a; b)               # devuelve el x donde se alcanza el máximo
-Mínimo(f; a; b)               # devuelve el x donde se alcanza el mínimo
+Máximo(f, a, b)  # devuelve el x donde se alcanza el máximo
+Mínimo(f, a, b)  # devuelve el x donde se alcanza el mínimo
 ```
 
 **Ejemplo: caja sin tapa (Ej. 6 de la práctica)**
 
 ```
 V(x) = x (24 - 2x) (32 - 2x)
-Extremo(V; 0; 12)
-# Devuelve aproximadamente (4.53; 1552.5)
+Extremo(V, 0, 12)
+# Devuelve aproximadamente (4.53, 1552.5)
 # x ≈ 4.53 cm da el volumen máximo
 ```
 
@@ -184,7 +192,7 @@ g(x) = Derivada(f)
 Raíz(g)                       # candidatos a extremo
 
 # Segunda derivada (para concavidad):
-h(x) = Derivada(f; 2)
+h(x) = Derivada(f, 2)
 Raíz(h)                       # candidatos a inflexión
 ```
 
@@ -195,7 +203,7 @@ Estrategia útil para entender la información geométrica de las derivadas:
 ```
 f(x) = x^3 - 3x
 g(x) = Derivada(f)
-h(x) = Derivada(f; 2)
+h(x) = Derivada(f, 2)
 ```
 
 Graficar las tres simultáneamente y observar:
@@ -212,7 +220,7 @@ Si $s(t)$ es la posición en función del tiempo:
 ```
 s(t) = -5t^2 + 10t + 40       # posición (Ej. 24 — caída)
 v(t) = Derivada(s)             # velocidad
-a(t) = Derivada(s; 2)          # aceleración
+a(t) = Derivada(s, 2)         # aceleración
 ```
 
 ## Comandos resumidos
@@ -220,15 +228,15 @@ a(t) = Derivada(s; 2)          # aceleración
 | Comando | Para qué |
 |---------|----------|
 | `Derivada(f)` | $f'(x)$ |
-| `Derivada(f; n)` | $f^{(n)}(x)$ |
+| `Derivada(f, n)` | $f^{(n)}(x)$ |
 | `f'(a)` | Valor de la derivada en $a$ (notación corta) |
-| `Tangente(a; f)` | Recta tangente en $x=a$ |
-| `Tangente(P; f)` | Recta tangente en el punto $P$ |
-| `Perpendicular(P; t)` | Recta perpendicular a $t$ por $P$ (normal) |
-| `DerivadaImplícita(c)` | $dy/dx$ para una curva implícita |
-| `Extremo(f; a; b)` | Extremos relativos en $[a,b]$ |
-| `Máximo(f; a; b)` | Máximo absoluto en $[a,b]$ |
-| `Mínimo(f; a; b)` | Mínimo absoluto en $[a,b]$ |
+| `Tangente(a, f)` | Recta tangente en $x=a$ |
+| `Tangente(P, f)` | Recta tangente en el punto $P$ |
+| `Perpendicular(P, t)` | Recta perpendicular a $t$ por $P$ (normal) |
+| `DerivadaImplícita(F)` | $dy/dx$ para la curva $F(x,y)=0$ (se pasa la expresión $F$, no la ecuación) |
+| `Extremo(f, a, b)` | Extremos relativos en $[a,b]$ |
+| `Máximo(f, a, b)` | Máximo absoluto en $[a,b]$ |
+| `Mínimo(f, a, b)` | Mínimo absoluto en $[a,b]$ |
 | `PuntoInflexión(f)` | Puntos de inflexión |
 | `Raíz(f)` | Raíces (para combinar con $f'$) |
 

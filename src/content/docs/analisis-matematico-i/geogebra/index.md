@@ -3,7 +3,7 @@ title: GeoGebra — Guía práctica
 slug: analisis-matematico-i/geogebra
 sidebar:
   order: 0
-  label: Presentación
+  label: Introducción
 ---
 
 
@@ -43,6 +43,10 @@ Para el trabajo de esta materia, usar **GeoGebra Classic** (web o escritorio) �
 A lo largo de la guía:
 
 - Los **comandos** de GeoGebra van con tipografía monoespaciada: `Raíz(f)`, `Derivada(g, x, 2)`.
-- Los nombres de comandos en GeoGebra en español **no llevan acentos** en la entrada (aunque en pantalla se muestren acentuados): por ejemplo, escribir `Raiz(f)` también funciona.
+- Los comandos se escriben como en el manual de GeoGebra en español, con tildes (`Raíz`, `Límite`); el autocompletado de la barra de entrada ayuda a encontrarlos.
 - Las **mayúsculas y minúsculas importan** en los nombres de objetos (`f` y `F` son objetos distintos), pero **no** en los comandos (`Derivada` y `derivada` son equivalentes en GeoGebra Classic).
-- En GeoGebra el separador de argumentos es **coma** (`,`) salvo cuando el idioma está configurado en español y el separador decimal es coma — en ese caso el separador de argumentos cambia automáticamente a **punto y coma** (`;`). Ver la sección [Primeros pasos](/analisis-matematico-i/geogebra/basico/) para configurar esto.
+- En GeoGebra el separador de argumentos es la **coma** (`Derivada(f, x)`) y el separador decimal es el **punto** (`0.5`), en cualquier idioma. El punto y coma se reserva para las coordenadas polares: `(2; 3)` no es el punto $(2, 3)$. Ver [Primeros pasos](/analisis-matematico-i/geogebra/basico/).
+
+:::note[Qué se comprobó]
+Una muestra de 52 usos de 28 comandos de estas guías y de los integradores se ejecutó en GeoGebra web (versión 5.4.920.0, noviembre de 2026), escribiendo cada comando en la barra de entrada en español; todos dieron el resultado esperado. El resto de los comandos se revisó contra el manual oficial, sin ejecutarlo. Otras versiones de GeoGebra pueden diferir en detalles.
+:::

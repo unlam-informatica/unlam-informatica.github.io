@@ -146,12 +146,65 @@ test('las rutas anteriores de las unidades redirigen conservando consulta y ancl
   }
 });
 
-test('Análisis y Diseño tienen unidades legibles y en orden', async ({ page }) => {
+test('Diseño tiene unidades legibles y en orden', async ({ page }) => {
+  await page.goto('/diseno-de-software/index.html');
+  const subject = subjectGroup(page, 'Diseño de Software');
+  const units = subject.locator(':scope > .container-group-link > details > summary').filter({ hasText: /^Unidad / });
+  await expect(units).toHaveText(Array.from({ length: 6 }, (_, index) => `Unidad ${index + 1}`));
+});
+
+test('Análisis: presentación, cómo estudiar y cuatro unidades con ruta, teoría, práctica y resumen', async ({ page }) => {
   await page.goto('/analisis-matematico-i/index.html');
-  for (const [name, count] of [['Análisis Matemático I', 4], ['Diseño de Software', 6]] as const) {
-    const subject = subjectGroup(page, name);
-    const units = subject.locator(':scope > .container-group-link > details > summary').filter({ hasText: /^Unidad / });
-    await expect(units).toHaveText(Array.from({ length: count }, (_, index) => `Unidad ${index + 1}`));
+  const subject = subjectGroup(page, 'Análisis Matemático I');
+  await expect(subject.locator(':scope > .container-group-link > a')).toHaveText(['Presentación', 'Cómo estudiar']);
+  const units = subject.locator(':scope > .container-group-link > details').filter({
+    has: page.locator(':scope > summary', { hasText: /^\s*Unidad / }),
+  });
+  await expect(units.locator(':scope > summary')).toHaveText([
+    'Unidad 1 · Funciones',
+    'Unidad 2 · Límite funcional y continuidad',
+    'Unidad 3 · Derivada',
+    'Unidad 4 · Polinomios de Taylor',
+  ]);
+  for (let index = 0; index < 4; index++) {
+    const number = index + 1;
+    const unit = units.nth(index);
+    const links = unit.locator(':scope > .container-group-link > a');
+    await expect(links).toHaveText(['Presentación y ruta', 'Resumen integrador']);
+    await expect(links.first()).toHaveAttribute('href', `/analisis-matematico-i/unidad-${number}/index.html`);
+    await expect(links.last()).toHaveAttribute('href', `/analisis-matematico-i/unidad-${number}/teoria/unidad-${number}/index.html`);
+    await expect(unit.locator(':scope > .container-group-link > details > summary')).toHaveText(['Teoría', 'Práctica']);
+    // El resumen integrador no se repite dentro de Teoría.
+    await expect(unit.locator(`details a[href="/analisis-matematico-i/unidad-${number}/teoria/unidad-${number}/index.html"]`)).toHaveCount(0);
+  }
+  await expect(subject.locator(':scope > .container-group-link > details > summary', { hasText: /^\s*GeoGebra\s*$/ })).toHaveCount(1);
+  const hrefs = await subject.locator('a').evaluateAll(links => links.map(link => link.getAttribute('href')));
+  expect(new Set(hrefs).size).toBe(hrefs.length);
+});
+
+test('Análisis: la teoría de cada unidad sigue el orden de su ruta de aprendizaje', async ({ page }) => {
+  for (let number = 1; number <= 4; number++) {
+    await page.goto(`/analisis-matematico-i/unidad-${number}/index.html`);
+    const route = await page.locator('.sl-markdown-content').evaluate(content => {
+      const paths: string[] = [];
+      let inside = false;
+      for (const node of content.querySelectorAll('h2, a[href]')) {
+        if (node.tagName === 'H2') { inside = node.id === 'ruta-de-aprendizaje'; continue; }
+        const url = new URL(node.getAttribute('href')!, location.href);
+        if (inside && !url.hash) paths.push(url.pathname);
+      }
+      return paths;
+    });
+    const subject = subjectGroup(page, 'Análisis Matemático I');
+    const unit = subject.locator(':scope > .container-group-link > details').filter({
+      has: page.locator(':scope > summary', { hasText: new RegExp(`^\\s*Unidad ${number} `) }),
+    });
+    const menu = await unit.locator(':scope > .container-group-link > details').first().locator('a')
+      .evaluateAll(links => links.map(link => link.getAttribute('href')));
+    expect(menu.length).toBeGreaterThan(0);
+    const positions = menu.map(href => route.indexOf(href!));
+    expect(positions.every(position => position >= 0), `Lecciones fuera de la ruta: ${menu.filter((_, i) => positions[i] < 0)}`).toBeTruthy();
+    expect(positions).toEqual([...positions].sort((a, b) => a - b));
   }
 });
 

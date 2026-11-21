@@ -152,7 +152,7 @@ $g(x)=\begin{cases}\dfrac{x^3+4x^2-5x}{x^2+3x-10} & x\le0\\[6pt] \dfrac{2}{e^{1/
 
 **Segundo tramo, en $x>0$:** $e^{1/x}-2=0\Rightarrow e^{1/x}=2\Rightarrow \tfrac1x=\ln2\Rightarrow x=\dfrac{1}{\ln2}$. Allí denominador $\to0$, numerador $=2\neq0\Rightarrow\pm\infty$ $\Rightarrow$ **esencial salto infinito**.
 
-(En $x=0$: lateral izq $\to0$; lateral der: $\tfrac1x\to+\infty$, $e^{1/x}\to\infty$, $f\to0$; el empalme está acotado y no genera salto infinito, queda por analizar como punto regular.)
+(En $x=0$: lateral izq $\to0$; lateral der: $\tfrac1x\to+\infty$, $e^{1/x}\to\infty$, $f\to0$; además $g(0)=\dfrac{0\cdot(0-1)}{0-2}=0$: los tres valores coinciden y $g$ es continua en $0$.)
 
 
 

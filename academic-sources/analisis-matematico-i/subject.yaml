@@ -1,0 +1,82 @@
+# Reglas de clasificación de las fuentes de Análisis Matemático I (código 3622 para Ingeniería en Informática;
+# la asignatura es común a Civil 4122, Electrónica 3681, Industrial 4052).
+# `match` usa comodines sobre la ruta relativa a raw/, sin distinguir mayúsculas ni acentos.
+# Las reglas se aplican en orden: las posteriores pisan a las anteriores.
+#
+# Clasificación por CONTENIDO verificado (portada, encabezados y texto de las primeras páginas) el 2026-11-20.
+#
+# Licencias (ninguna fuente local se redistribuye; el catálogo solo registra procedencia):
+#   privado-catedra       material de la cátedra distribuido por MIeL a los cursantes.
+#   copyright-editorial   obra editada con derechos reservados (no se reproduce: solo portada e índice).
+id: analisis-matematico-i
+id_prefix: analisis-matematico-i
+name: Análisis Matemático I
+code: "3622"
+program: Consideraciones_Generales_AMI_2C2026_1.pdf
+
+defaults:
+  license: privado-catedra
+  distribution: privado
+  # Materia con notación matemática: OCR, tablas y modelo de fórmulas.
+  extraction: full
+
+rules:
+  # Programa analítico, metodología, cronograma 2C2026, régimen de acreditación y bibliografía.
+  - match: "consideraciones_generales_ami_2c2026*"
+    doc_type: programa
+    source: Cátedra AM I (DIIT-UNLaM), Consideraciones generales 2C2026
+    version: "2C2026"
+    units: [u1, u2, u3, u4]
+    extraction: text
+    notes: "Programa analítico de las cuatro unidades, metodología, cronograma 2C2026 y régimen de acreditación. Es la versión más reciente acreditada (2026). Sin fórmulas: perfil text."
+
+  # Apuntes de clase de la cátedra (B. Williner, 2016, citados en la bibliografía recomendada).
+  - match: "unidad-1qr-funciones*"
+    doc_type: teoria-catedra
+    source: Williner, B. Apuntes de clase AM I, Unidad 1 (UNLaM)
+    units: [u1]
+    extraction: text
+    notes: "PDF de Word: la capa de texto conserva las ecuaciones como caracteres matemáticos Unicode. El perfil text da la estructura (Docling deja las fórmulas como formula-not-decoded); el reconocimiento de fórmulas (perfil full) cuesta ~30 s por fórmula en CPU y queda como reproceso opcional."
+  - match: "unidad-2qrlimite-funcional*"
+    doc_type: teoria-catedra
+    source: Williner, B. Apuntes de clase AM I, Unidad 2 (UNLaM)
+    units: [u2]
+    extraction: text
+    notes: "PDF de Word: la capa de texto conserva las ecuaciones como caracteres matemáticos Unicode. El perfil text da la estructura (Docling deja las fórmulas como formula-not-decoded); el reconocimiento de fórmulas (perfil full) cuesta ~30 s por fórmula en CPU y queda como reproceso opcional."
+  - match: "unidad-3qr-derivada*"
+    doc_type: teoria-catedra
+    source: Williner, B. Apuntes de clase AM I, Unidad 3 (UNLaM)
+    units: [u3]
+    extraction: text
+    notes: "PDF de Word: la capa de texto conserva las ecuaciones como caracteres matemáticos Unicode. El perfil text da la estructura (Docling deja las fórmulas como formula-not-decoded); el reconocimiento de fórmulas (perfil full) cuesta ~30 s por fórmula en CPU y queda como reproceso opcional."
+  - match: "unidad-4qr-polinomios-de-taylor*"
+    doc_type: teoria-catedra
+    source: Williner, B. Apuntes de clase AM I, Unidad 4 (UNLaM)
+    units: [u4]
+
+  # Guía de trabajos prácticos oficial 2026 (cuatro unidades).
+  - match: "practica_ami_unlam_2026*"
+    doc_type: guia-practica
+    source: Cátedra AM I (DIIT-UNLaM), Guía de Trabajos Prácticos 2026
+    version: "2026"
+    units: [u1, u2, u3, u4]
+
+  # Guía de autoaprendizaje del tema Continuidad (modalidad virtual 2C2026).
+  - match: "actividad-de-autoaprendizaje-tema-continuidad*"
+    doc_type: guia-estudio
+    source: Cátedra AM I (DIIT-UNLaM), actividad de autoaprendizaje de Continuidad
+    units: [u2]
+
+  # Ejercicios de práctica para parciales (la cátedra indica que algunos se tomaron en parciales anteriores).
+  - match: "practica_primer_parcial__ami_unlam*"
+    doc_type: examen-practica
+    source: Cátedra AM I (DIIT-UNLaM), práctica para el primer parcial
+    units: [u1, u2]
+    notes: "Los dos archivos «(1)» y «(1)_1» son idénticos (mismo SHA-256); el inventario los agrupa como duplicados."
+  - match: "ejercicios2doparcialami*"
+    doc_type: examen-practica
+    source: Cátedra AM I (DIIT-UNLaM), ejercicios de repaso del segundo parcial
+    units: [u2, u3, u4]
+
+# Retirado el 2026-11-21: el Manual del Curso de Ingreso 2024 (UNLaM) no es material de la materia; se quitó de raw/
+# y sus derivados de processed/. No se usa como fuente.

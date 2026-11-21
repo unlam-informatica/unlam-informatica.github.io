@@ -20,9 +20,7 @@ $$
 
 La función es **impar** (sí tiene paridad).
 
-> ⚠️ **Discrepancia:** Resultado calculado: $h$ es **impar** ($h(-x)=-h(x)$). Respuesta del documento: "no tiene paridad".
->
-> **Causa probable:** el enunciado afirma erróneamente que no tiene paridad. Como cumple $h(-x)=-h(x)$, es impar. La afirmación del documento es **falsa**.
+**Respuesta: Falso.** La afirmación dice que $h$ no tiene paridad, pero $h(-x)=-h(x)$ para todo $x$ del dominio $\mathbb{R}$ (que es simétrico): $h$ es impar.
 
 **b) $h(x)=\dfrac{3x^2}{x-5}$ "es par".**
 
@@ -36,9 +34,7 @@ $$
 
 Esto **no** es igual a $h(x)=\dfrac{3x^2}{x-5}$ ni a $-h(x)$. No tiene paridad (ni par ni impar).
 
-> ⚠️ **Discrepancia:** Resultado calculado: $h$ **no es par** (no tiene paridad). Respuesta del documento: "es par".
->
-> **Causa probable:** aunque el numerador $3x^2$ es par, el denominador $x-5$ rompe toda simetría; además el dominio $\mathbb{R}-\lbrace 5\rbrace $ no es simétrico respecto al origen, condición necesaria para tener paridad. La afirmación del documento es **falsa**.
+**Respuesta: Falso.** Además de que $h(-x)\neq h(x)$, el dominio $\mathbb{R}-\lbrace 5\rbrace$ no es simétrico respecto del origen ($-5$ pertenece y $5$ no), así que $h$ no puede ser par ni impar.
 
 **c) $k(x)=\dfrac{x^3}{16-x^2}$ "es impar".**
 
@@ -50,9 +46,9 @@ $$
 
 
 
-Cociente de impar ($x^3$) sobre par ($16-x^2$) = impar; dominio $(-4,4)\setminus$... simétrico. Es **impar**.
+Cociente de impar ($x^3$) sobre par ($16-x^2$) = impar; dominio $\mathbb{R}-\lbrace -4,4\rbrace $, simétrico respecto del origen. Es **impar**.
 
-**Resultado: impar.** ✓ Coincide con la respuesta oficial.
+**Resultado: impar.** (La guía no publica respuestas para los adicionales.)
 
 ### Adicional 2 — $N(t)=227\,e^{0{,}007t}$ (millones, $t$ años post-1980)
 
@@ -181,12 +177,12 @@ Por convención se restringe $5x\in\left[-\tfrac\pi2,\tfrac\pi2\right]\Rightarro
 
 
 $$
-y=3\operatorname{sen}(5x)\Rightarrow\operatorname{sen}(5x)=\dfrac y3\Rightarrow 5x=\arcsin\!\left(\dfrac y3\right)\Rightarrow x=\dfrac15\arcsin\!\left(\dfrac y3\right)
+y=3\operatorname{sen}(5x)\Rightarrow\operatorname{sen}(5x)=\dfrac y3\Rightarrow 5x=\operatorname{arcsen}\!\left(\dfrac y3\right)\Rightarrow x=\dfrac15\operatorname{arcsen}\!\left(\dfrac y3\right)
 $$
 
 
 
-**Resultado: $m^{-1}:[-3,3]\to\left[-\tfrac{\pi}{10},\tfrac{\pi}{10}\right]$, $m^{-1}(x)=\tfrac15\arcsin\!\left(\tfrac x3\right)$.** ✓ Coincide.
+**Resultado: $m^{-1}:[-3,3]\to\left[-\tfrac{\pi}{10},\tfrac{\pi}{10}\right]$, $m^{-1}(x)=\tfrac15\operatorname{arcsen}\!\left(\tfrac x3\right)$.** ✓ Coincide.
 
 ### Adicional 8 — (opción múltiple) $U(t)=1000(1-e^{-0{,}05t})$
 

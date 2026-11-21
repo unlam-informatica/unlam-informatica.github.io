@@ -10,17 +10,15 @@ sidebar:
 ## 20a
 $\lim_{x\to0}\dfrac{3x+4\operatorname{sen}2x}{x^2+5\operatorname{sen}x}$
 
-Infinitésimos: $\operatorname{sen}2x\sim 2x$, $\operatorname{sen}x\sim x$. Dividimos por $x$:
+Es la forma $\dfrac00$. Los términos $3x$ y $x^2$ no se pueden reemplazar por equivalentes dentro de una suma sin cuidado, así que dividimos numerador y denominador por $x$ y recién ahí usamos $\operatorname{sen}u\sim u$ en cada cociente:
 
 
 
 $$
-\dfrac{3x+4\cdot 2x}{x^2+5x}=\dfrac{3+8}{x+5}\cdot\dfrac{x}{x}\to\dfrac{3+8}{0+5}=\dfrac{11}{5}=\mathbf{\dfrac{11}{5}}
+\dfrac{3x+4\operatorname{sen}2x}{x^2+5\operatorname{sen}x}=\dfrac{3+4\cdot 2\cdot\frac{\operatorname{sen}2x}{2x}}{x+5\,\frac{\operatorname{sen}x}{x}}\to\dfrac{3+4\cdot2\cdot1}{0+5\cdot1}=\dfrac{11}{5}=\mathbf{\dfrac{11}{5}}
 $$
 
 
-
-(Más formalmente: numerador $\sim 3x+8x=11x$, denominador $\sim x^2+5x\sim 5x$, cociente $\to \tfrac{11}{5}$.)
 
 ✓ Coincide con la respuesta oficial.
 
@@ -93,19 +91,14 @@ $$
 
 
 
-Numerador: $x^3-x^2-2x+2=x^2(x-1)-2(x-1)=(x-1)(x^2-2)$. En $x=2$: $(x-1)(x^2-2)=1\cdot 2=2\neq0$ y el denominador $x(x-2)\to0$. Por lo tanto el cociente diverge:
+Numerador: $x^3-x^2-2x+2=x^2(x-1)-2(x-1)=(x-1)(x^2-2)$. En $x=2$ el numerador tiende a $(2-1)(4-2)=2\neq0$ y el denominador $x(x-2)$ tiende a $0$: no es una forma indeterminada, el cociente diverge. El signo depende del lado:
 
+- por izquierda, $x(x-2)\to0^{-}$ (porque $x>0$ y $x-2<0$), así que el cociente tiende a $-\infty$;
+- por derecha, $x(x-2)\to0^{+}$, así que tiende a $+\infty$.
 
+Los laterales son distintos: el límite bilateral **no existe**. Lo que sí vale es que el valor absoluto crece sin cota, $\lvert f(x)\rvert\to+\infty$, y que $x=2$ es una asíntota vertical.
 
-$$
-\to\dfrac{2}{0}=\infty=\mathbf{\infty}
-$$
-
-
-
-(Lateralmente: por izquierda $x-2<0\Rightarrow -\infty$, por derecha $+\infty$; el límite global es $\infty$ en valor absoluto / no finito.)
-
-✓ Coincide con la respuesta oficial.
+✓ Coincide con la respuesta oficial «$\infty$», leída como $\lvert f(x)\rvert\to\infty$ (divergencia sin signo determinado).
 
 ## 20e
 $\lim_{x\to0}\left(\dfrac{\operatorname{sen}x}{x}+x\operatorname{sen}\tfrac1x\right)$

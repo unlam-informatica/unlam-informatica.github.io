@@ -32,15 +32,23 @@ export const subjects = [
     href: '/analisis-matematico-i/',
     items: [
       { slug: 'analisis-matematico-i', label: 'Presentación' },
-      ...unitNumbers(4).map(number => ({
-        label: `Unidad ${number}`,
-        collapsed: true,
-        items: [
-          { slug: `analisis-matematico-i/unidad-${number}`, label: 'Presentación' },
-          { slug: `analisis-matematico-i/unidad-${number}/teoria/unidad-${number}`, label: 'Teoría' },
-          notes('Práctica', `analisis-matematico-i/unidad-${number}/practica`),
-        ],
-      })),
+      { slug: 'analisis-matematico-i/como-estudiar', label: 'Cómo estudiar' },
+      // Cada unidad: presentación con la ruta, lecciones (autogeneradas, en orden pedagógico por
+      // `sidebar.order`), prácticas y el resumen integrador, que es la página de teoría original de la
+      // unidad (se oculta del autogenerado para no duplicarla).
+      ...['Funciones', 'Límite funcional y continuidad', 'Derivada', 'Polinomios de Taylor'].map((title, index) => {
+        const unit = `analisis-matematico-i/unidad-${index + 1}`;
+        return {
+          label: `Unidad ${index + 1} · ${title}`,
+          collapsed: true,
+          items: [
+            { slug: unit, label: 'Presentación y ruta' },
+            notes('Teoría', `${unit}/teoria`),
+            notes('Práctica', `${unit}/practica`),
+            { slug: `${unit}/teoria/unidad-${index + 1}`, label: 'Resumen integrador' },
+          ],
+        };
+      }),
       notes('GeoGebra', 'analisis-matematico-i/geogebra'),
     ],
   },

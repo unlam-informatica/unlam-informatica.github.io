@@ -22,7 +22,7 @@ test('portada por año y navegación contextual', async ({ page, isMobile }, tes
 });
 
 test('fórmulas, diagramas y desborde móvil', async ({ page }) => {
-  for (const route of ['/', '/analisis-matematico-i/unidad-1/practica/ejercicio-1/', '/bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/', '/bbdd-aplicadas/como-estudiar/', '/bbdd-aplicadas/unidad-3/teoria/', '/bbdd-aplicadas/unidad-6/teoria/', '/diseno-de-software/unidad-3/teoria/']) {
+  for (const route of ['/', '/analisis-matematico-i/unidad-1/practica/ejercicio-1/', '/bbdd-aplicadas/unidad-1/teoria/conceptos-basicos/', '/bbdd-aplicadas/como-estudiar/', '/analisis-matematico-i/como-estudiar/', '/analisis-matematico-i/unidad-2/', '/bbdd-aplicadas/unidad-3/teoria/', '/bbdd-aplicadas/unidad-6/teoria/', '/diseno-de-software/unidad-3/teoria/']) {
     await page.goto(route);
     if (route.includes('ejercicio-1')) await expect(page.locator('.katex').first()).toBeVisible();
     if (route.includes('diseno-de-software')) await expect(page.locator('.mermaid svg').first()).toBeVisible({ timeout: 30000 });
@@ -115,6 +115,31 @@ test('Álgebra II: fórmulas, figuras, resoluciones plegadas y tema oscuro', asy
   await page.locator('starlight-theme-lucode-select button').click();
   await expect.poll(stroke).not.toBe(before);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBeTruthy();
+});
+
+test('Análisis: lecciones con fórmulas, figuras, ejercicios plegados y sin desborde', async ({ page }) => {
+  for (const route of [
+    '/analisis-matematico-i/unidad-1/teoria/funciones-elementales/',
+    '/analisis-matematico-i/unidad-2/teoria/continuidad/',
+    '/analisis-matematico-i/unidad-3/teoria/derivada-como-funcion/',
+    '/analisis-matematico-i/unidad-4/teoria/polinomio-de-taylor/',
+  ]) {
+    await page.goto(route);
+    await expect(page.locator('.katex').first()).toBeVisible();
+    await expect(page.locator('.katex-error')).toHaveCount(0);
+    // Las figuras son SVG generados desde la fórmula, con texto alternativo y cargados sin error.
+    const figure = page.locator('.sl-markdown-content img[src*="/analisis-matematico-i/figuras/"]').first();
+    await expect(figure).toBeVisible();
+    expect((await figure.getAttribute('alt'))!.length).toBeGreaterThan(10);
+    expect(await figure.evaluate(img => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+    // La resolución del primer ejercicio está plegada hasta que se la abre.
+    const exercise = page.locator('.sl-markdown-content details').filter({ has: page.locator('summary', { hasText: /^Resolución$/ }) }).first();
+    await expect(exercise.locator('summary')).toBeVisible();
+    await expect(exercise.locator('.katex').first()).toBeHidden();
+    await exercise.locator('summary').click();
+    await expect(exercise.locator('.katex').first()).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBeTruthy();
+  }
 });
 
 test('el header tiene un menú por año con sus materias en orden alfabético', async ({ page, isMobile }) => {

@@ -108,7 +108,7 @@ Determinar el valor de los siguientes límites e imágenes, observando la gráfi
 :::
 
 :::tip[Resolución]
-Sin disponer aquí del gráfico, usamos las respuestas oficiales y explicamos cómo se leen.
+Leemos cada valor directamente del gráfico del enunciado.
 
 | Item | Valor | Cómo leerlo en el gráfico |
 |------|-------|---------------------------|

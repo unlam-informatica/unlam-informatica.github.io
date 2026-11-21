@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 567" role="img" aria-label="Ejercicio 22 d) de la Práctica 2">
+<title>Ejercicio 22 d) de la Práctica 2</title>
+<style>
+:root{--bg:#ffffff;--ink:#1f2328;--muted:#6b7280;--grid:#e5e7eb;--axis:#4b5563;--c1:#2563eb;--c2:#dc2626;--c3:#059669;--c4:#9333ea}
+@media (prefers-color-scheme: dark){:root{--bg:#1b1f24;--ink:#e5e7eb;--muted:#9ca3af;--grid:#374151;--axis:#9ca3af;--c1:#60a5fa;--c2:#f87171;--c3:#34d399;--c4:#c084fc}}
+text{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:13px;fill:var(--ink)}
+.tick{font-size:11px;fill:var(--muted)}
+.grid{stroke:var(--grid);stroke-width:1}
+.axis{stroke:var(--axis);stroke-width:1.3}
+.curve{fill:none;stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
+.dash{stroke-dasharray:6 5}
+</style>
+<rect width="560" height="567" rx="8" style="fill:var(--bg)"/>
+<clipPath id="area"><rect x="34" y="34" width="492" height="499"/></clipPath>
+<line class="grid" x1="48.91" y1="533.00" x2="48.91" y2="34.00"/>
+<line class="grid" x1="123.45" y1="533.00" x2="123.45" y2="34.00"/>
+<line class="grid" x1="198.00" y1="533.00" x2="198.00" y2="34.00"/>
+<line class="grid" x1="272.55" y1="533.00" x2="272.55" y2="34.00"/>
+<line class="grid" x1="347.09" y1="533.00" x2="347.09" y2="34.00"/>
+<line class="grid" x1="421.64" y1="533.00" x2="421.64" y2="34.00"/>
+<line class="grid" x1="496.18" y1="533.00" x2="496.18" y2="34.00"/>
+<line class="grid" x1="34.00" y1="510.66" x2="526.00" y2="510.66"/>
+<line class="grid" x1="34.00" y1="436.18" x2="526.00" y2="436.18"/>
+<line class="grid" x1="34.00" y1="361.70" x2="526.00" y2="361.70"/>
+<line class="grid" x1="34.00" y1="287.22" x2="526.00" y2="287.22"/>
+<line class="grid" x1="34.00" y1="212.75" x2="526.00" y2="212.75"/>
+<line class="grid" x1="34.00" y1="138.27" x2="526.00" y2="138.27"/>
+<line class="grid" x1="34.00" y1="63.79" x2="526.00" y2="63.79"/>
+<line class="axis" x1="34.00" y1="287.22" x2="526.00" y2="287.22"/>
+<line class="axis" x1="272.55" y1="533.00" x2="272.55" y2="34.00"/>
+<text class="tick" x="48.91" y="302.22" text-anchor="middle">−6</text>
+<text class="tick" x="123.45" y="302.22" text-anchor="middle">−4</text>
+<text class="tick" x="198.00" y="302.22" text-anchor="middle">−2</text>
+<text class="tick" x="347.09" y="302.22" text-anchor="middle">2</text>
+<text class="tick" x="421.64" y="302.22" text-anchor="middle">4</text>
+<text class="tick" x="496.18" y="302.22" text-anchor="middle">6</text>
+<text class="tick" x="266.55" y="514.66" text-anchor="end">−6</text>
+<text class="tick" x="266.55" y="440.18" text-anchor="end">−4</text>
+<text class="tick" x="266.55" y="365.70" text-anchor="end">−2</text>
+<text class="tick" x="266.55" y="216.75" text-anchor="end">2</text>
+<text class="tick" x="266.55" y="142.27" text-anchor="end">4</text>
+<text class="tick" x="266.55" y="67.79" text-anchor="end">6</text>
+<text x="522.00" y="281.22" text-anchor="end">x</text>
+<text x="278.55" y="46.00">y</text>
+<g clip-path="url(#area)">
+<path class="curve dash" style="stroke:var(--c2);stroke-width:1.8" d="M34.00,212.75 L526.00,212.75"/>
+<path class="curve" style="stroke:var(--c1)" d="M34.00,215.20 L128.11,215.20 L143.32,213.79 L146.00,215.06 L151.97,215.46 L162.78,214.65 L167.66,215.80 L180.67,216.02 L205.08,219.93 L218.84,225.44 L225.92,232.11 L230.91,240.75 L235.53,257.43 L238.66,283.98 L239.15,285.29 L240.83,285.32 L238.93,288.30 L239.63,293.70 L241.12,348.41 L242.21,352.21 L242.13,421.62 L243.55,436.14 L242.58,441.17 L243.03,497.33 L243.88,508.05 L243.10,511.40 L244.11,514.53 L245.71,514.38"/>
+<path class="curve" style="stroke:var(--c1)" d="M246.27,58.73 L248.28,53.85 L249.06,61.41 L248.32,70.64 L249.06,72.99 L249.77,103.67 L251.34,127.47 L254.28,149.14 L257.52,160.72 L261.77,169.44 L270.42,176.55 L271.73,175.14 L273.37,175.40 L274.11,176.21 L282.35,167.50 L286.60,157.00 L289.02,145.34 L292.60,110.71 L294.76,46.81"/>
+<path class="curve" style="stroke:var(--c1)" d="M297.22,511.66 L299.31,512.48 L299.64,417.19 L300.46,410.15 L301.54,328.37 L303.59,289.94 L304.19,288.19 L303.71,285.10 L304.08,283.54 L306.84,259.07 L312.65,239.15 L317.42,231.33 L324.62,225.00 L337.85,219.93 L356.30,216.73 L374.15,215.20 L389.88,215.46 L400.09,213.79 L402.89,215.06 L410.49,215.20 L418.02,213.27 L424.02,214.94 L526.00,214.94"/>
+</g>
+<text x="42.00" y="50.00" text-anchor="start">d)</text>
+</svg>

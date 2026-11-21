@@ -7,9 +7,17 @@ sidebar:
 ---
 
 
-Resolución completa y paso a paso de la **Práctica 2: LIMITE** del PDF oficial (`reference/practica.pdf`).
+Resolución completa y paso a paso de la **Práctica 2: Límite** de la guía de la cátedra.
 
-Cada ejercicio está en su propia subpágina para acelerar la carga. Adentro vas a encontrar el enunciado copiado literal del PDF dentro de un callout, seguido por la resolución paso a paso, el resultado final y la verificación contra la respuesta oficial.
+Cada ejercicio está en su propia subpágina. Adentro vas a encontrar el enunciado, la resolución paso a paso, el resultado final y la comparación con la respuesta oficial.
+
+:::note[Fuente de los enunciados]
+Los enunciados son los de la **Práctica 2: Límite** de la Guía de Trabajos Prácticos 2026 de la cátedra de Análisis Matemático I
+(DIIT-UNLaM, coordinadoras M. Reale, N. Sartor y N. Suelves). Las resoluciones son propias de estos apuntes y se
+contrastaron con las respuestas de la guía; donde la respuesta oficial parece tener un error, la resolución lo
+señala y lo justifica. Los ejercicios marcados con * están resueltos también en el sitio de la cátedra.
+:::
+
 
 ## Recordatorio de herramientas
 

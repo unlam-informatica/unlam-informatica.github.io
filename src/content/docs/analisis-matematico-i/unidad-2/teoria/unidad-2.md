@@ -1,17 +1,33 @@
 ---
-title: Unidad 2 — Límite funcional y Continuidad
+title: Unidad 2 — Resumen integrador
 slug: analisis-matematico-i/unidad-2/teoria/unidad-2
 sidebar:
-  order: 1
+  hidden: true
+  label: Resumen integrador
 ---
 
+:::tip[Cómo usar este resumen]
+- **Antes de estudiar:** leelo de corrido para tener el mapa de la unidad, de la definición de límite a la continuidad.
+- **Después de estudiar:** usalo para repasar y conectar los temas.
+- **Antes del primer parcial:** identificá los temas principales y volvé a la lección de cada uno.
+
+No reemplaza a las lecciones, que desarrollan cada tema con demostraciones, ejemplos resueltos, ejercicios y
+autoevaluación:
+
+1. [Entornos y límite finito](/analisis-matematico-i/unidad-2/teoria/entornos-y-limite/)
+2. [Límites laterales y propiedades](/analisis-matematico-i/unidad-2/teoria/limites-laterales-y-propiedades/)
+3. [Infinitésimos](/analisis-matematico-i/unidad-2/teoria/infinitesimos/)
+4. [Límites infinitos y en el infinito](/analisis-matematico-i/unidad-2/teoria/limites-infinitos/)
+5. [Cálculo de límites e indeterminaciones](/analisis-matematico-i/unidad-2/teoria/calculo-de-limites/)
+6. [Asíntotas](/analisis-matematico-i/unidad-2/teoria/asintotas/)
+7. [Continuidad y discontinuidades](/analisis-matematico-i/unidad-2/teoria/continuidad/)
+
+La ruta completa de la unidad está en la [presentación](/analisis-matematico-i/unidad-2/).
+:::
 
 
 
-## Tabla de contenidos
 
-
-1. TOC
 
 
 ---
@@ -23,22 +39,22 @@ Antes de hablar de límites, necesitamos una forma precisa de decir “cerca de�
 - La **distancia** entre dos números reales $a$ y $b$ es $\lvert a - b \rvert$.
 - Si $\lvert a-b\rvert$ es pequeña, entonces $a$ y $b$ están cerca.
 
-Un **entorno** de centro $a$ y radio $\delta$ reúne todos los números que quedan a menos de $\delta$ de $a$:
+Un **entorno** de centro $a$ y radio $r>0$ reúne todos los números que quedan a menos de $r$ de $a$:
 
 
 
 $$
-V(a, \delta) = (a - \delta,\; a + \delta) = \{x \in \mathbb{R} : \lvert x - a \rvert < \delta\}
+E(a, r) = (a - r,\; a + r) = \{x \in \mathbb{R} : \lvert x - a \rvert < r\}
 $$
 
 
 
-El **entorno reducido** o **perforado** es ese mismo entorno, pero sin el punto central:
+El **entorno reducido** es ese mismo entorno, pero sin el punto central:
 
 
 
 $$
-\dot{V}(a, \delta) = V(a, \delta) \setminus \{a\} = \{x \in \mathbb{R} : 0 < \lvert x - a \rvert < \delta\}
+E^{*}(a, r) = E(a, r) - \{a\} = \{x \in \mathbb{R} : 0 < \lvert x - a \rvert < r\}
 $$
 
 
@@ -171,7 +187,7 @@ $$
 
 
 $$
-\lim_{x \to 0} \frac{\sin(x)}{x} = 1
+\lim_{x \to 0} \frac{\operatorname{sen} x}{x} = 1
 $$
 
 
@@ -213,7 +229,7 @@ Equivalencias fundamentales cuando $x \to 0$:
 
 
 $$
-\sin(x) \sim x \qquad \tan(x) \sim x \qquad 1 - \cos(x) \sim \frac{x^2}{2}
+\operatorname{sen} x \sim x \qquad \tan(x) \sim x \qquad 1 - \cos(x) \sim \frac{x^2}{2}
 $$
 
 
@@ -290,8 +306,8 @@ La idea es la misma que en un límite finito: no buscamos un valor exacto en inf
 
 | Forma | Técnicas habituales |
 |-------|---------------------|
-| $\dfrac{0}{0}$ | Factorizar, racionalizar, infinitésimos equivalentes, L'Hôpital (U3) |
-| $\dfrac{\infty}{\infty}$ | Dividir por la potencia dominante, L'Hôpital |
+| $\dfrac{0}{0}$ | Factorizar, racionalizar, infinitésimos equivalentes |
+| $\dfrac{\infty}{\infty}$ | Dividir por la potencia dominante |
 | $0 \cdot \infty$ | Reescribir como $\dfrac{0}{0}$ o $\dfrac{\infty}{\infty}$ |
 | $\infty - \infty$ | Factorizar, conjugado |
 | $1^\infty$ | Usar $e^{\lim (f-1)\cdot g}$ |
@@ -306,7 +322,6 @@ Una forma indeterminada no significa que el límite “no exista” automáticam
 2. Si aparece una indeterminación, simplificar algebraicamente
 3. Usar factorización, racionalización o equivalencias
 4. Si hace falta, recurrir a límites notables
-5. Más adelante, en la unidad de derivadas, aparecerá L'Hôpital
 
 ### Límites notables
 
@@ -321,7 +336,7 @@ $$
 
 
 $$
-\lim_{x \to 0} \frac{\sin(x)}{x} = 1 \qquad \lim_{x \to 0} \frac{e^x - 1}{x} = 1 \qquad \lim_{x \to 0} \frac{\ln(1+x)}{x} = 1
+\lim_{x \to 0} \frac{\operatorname{sen} x}{x} = 1 \qquad \lim_{x \to 0} \frac{e^x - 1}{x} = 1 \qquad \lim_{x \to 0} \frac{\ln(1+x)}{x} = 1
 $$
 
 
@@ -346,12 +361,12 @@ Sirve para describir el comportamiento final de la gráfica.
 
 ### Asíntota oblicua (AO)
 
-La recta $y = mx + b$ es AO si:
+La recta $y = mx + n$ es AO si:
 
 
 
 $$
-m = \lim_{x \to \pm\infty} \frac{f(x)}{x} \qquad b = \lim_{x \to \pm\infty} \bigl[f(x) - mx\bigr]
+m = \lim_{x \to \pm\infty} \frac{f(x)}{x} \qquad n = \lim_{x \to \pm\infty} \bigl[f(x) - mx\bigr]
 $$
 
 
@@ -372,8 +387,8 @@ La continuidad expresa que la gráfica no tiene cortes, saltos ni huecos en un p
 
 $f$ es **continua en $x = a$** si se cumplen las tres condiciones:
 
-1. $f(a)$ existe $\;(a \in \text{Dom}\, f)$.
-2. $\displaystyle\lim_{x \to a} f(x)$ existe.
+1. $f(a)$ existe $\;(a \in D_f)$.
+2. $\displaystyle\lim_{x \to a} f(x)$ existe y es finito.
 3. $\displaystyle\lim_{x \to a} f(x) = f(a)$.
 
 Si una sola de esas condiciones falla, la función no es continua en ese punto.
@@ -387,15 +402,15 @@ En los extremos de un intervalo cerrado solo se pide continuidad por el lado que
 
 ### Álgebra de funciones continuas
 
-Si $f$ y $g$ son continuas en $a$, entonces $f+g$, $f-g$, $f \cdot g$ y $\dfrac{f}{g}$ (si $g(a) \neq 0$) son continuas en $a$.
+Si $f$ y $g$ son continuas en $a$, entonces $f+g$, $f-g$, $f \cdot g$ y $\dfrac{f}{g}$ (si $g(a) \neq 0$) son continuas en $a$. Además, si $f$ es continua en $a$ y $g$ es continua en $f(a)$, la composición $g \circ f$ es continua en $a$.
 
 Esto permite construir funciones continuas a partir de otras ya conocidas como continuas.
 
 ### Propiedades de funciones continuas en $[a, b]$
 
-- **Teorema de Weierstrass:** $f$ alcanza su máximo y mínimo absolutos.
-- **Teorema del valor intermedio (TVI):** $f$ toma todos los valores entre $f(a)$ y $f(b)$.
-- **Corolario (existencia de raíces):** si $f(a) \cdot f(b) < 0$, existe $c \in (a, b)$ con $f(c) = 0$.
+- **Teorema de Bolzano:** si $f(a) \cdot f(b) < 0$, existe $c \in (a, b)$ con $f(c) = 0$.
+- **Teorema del valor intermedio:** $f$ toma todos los valores entre $f(a)$ y $f(b)$ (se deduce de Bolzano).
+- **Teorema de Weierstrass:** $f$ alcanza su máximo y su mínimo absolutos.
 
 Estas propiedades son muy importantes porque convierten la continuidad en una herramienta de existencia: no solo describen la gráfica, también garantizan que ciertos valores aparecen.
 
@@ -407,14 +422,16 @@ Sea $x = a$ un punto de discontinuidad de $f$:
 
 | Tipo | Condición | Característica |
 |------|-----------|----------------|
-| **Evitable** | $\displaystyle\lim_{x \to a} f(x)$ existe pero $\neq f(a)$ (o $f(a)$ no existe) | Se puede "rellenar" el hueco |
-| **De salto (1ª especie)** | $\displaystyle\lim_{x \to a^+} f(x)$ y $\displaystyle\lim_{x \to a^-} f(x)$ existen pero son distintos | Salto finito en la gráfica |
-| **Esencial (2ª especie)** | Al menos un límite lateral no existe o es $\pm\infty$ | Comportamiento "explosivo" |
+| **Evitable** | $\displaystyle\lim_{x \to a} f(x) = \ell$ existe (finito) pero $f(a)$ no existe o es $\neq \ell$ | Se redefine $f(a) := \ell$ |
+| **Esencial de 1ª especie, de salto finito** | Los dos laterales existen, son finitos y distintos | Salto $S = \lvert L^{+} - L^{-} \rvert$ |
+| **Esencial de 1ª especie, de salto infinito** | Algún lateral es $\pm\infty$ | Asíntota vertical $x = a$ |
+| **Esencial de 2ª especie** | Algún lateral no existe (ni finito ni infinito), p. ej. $\operatorname{sen}\frac{1}{x}$ en $0$ | La función oscila; no hay salto |
 
 ### Cómo reconocerlas
 
-- **Evitable:** el límite existe, pero falta el valor o está mal puesto
-- **De salto:** los dos laterales existen, pero no coinciden
-- **Esencial:** algún lateral no existe o se va al infinito
+- **Evitable:** el límite existe y es finito, pero falta $f(a)$ o tiene otro valor.
+- **Esencial de salto finito:** los dos laterales existen y son finitos, pero no coinciden.
+- **Esencial de salto infinito:** algún lateral se va a $\pm\infty$.
+- **Esencial de 2ª especie:** algún lateral no existe.
 
 Este cuadro ayuda mucho en ejercicios de análisis de gráficas, porque muchas veces basta con mirar el tipo de ruptura para clasificar la discontinuidad.

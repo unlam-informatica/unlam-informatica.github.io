@@ -28,7 +28,7 @@ Aparece automáticamente la gráfica y la función se lista en la vista Algebrai
 Para graficar una función solo en un intervalo, se usa el comando `Función`:
 
 ```
-f(x) = Función(-2x^2 + 12x; 0; 6)
+f(x) = Función(-2x^2 + 12x, 0, 6)
 ```
 
 Esto grafica $-2x^2+12x$ únicamente en $[0,6]$. Útil para los ejercicios con **dominio en contexto** (Ej. 3, 4, 5, 8, 31 de la práctica).
@@ -36,7 +36,7 @@ Esto grafica $-2x^2+12x$ únicamente en $[0,6]$. Útil para los ejercicios con *
 Para condiciones más complejas (por ejemplo, intervalos abiertos o exclusiones puntuales), usar `Si`:
 
 ```
-f(x) = Si(0 < x < 6; -2x^2 + 12x)
+f(x) = Si(0 < x < 6, -2x^2 + 12x)
 ```
 
 ## Funciones definidas por tramos
@@ -46,16 +46,16 @@ Para los ejercicios del tipo Ej. 11 de la práctica, hay dos formas:
 **Forma 1: anidar `Si()`**
 
 ```
-f(x) = Si(x <= -1; x + 2;
-       Si(-1 < x <= 1; -x;
-       Si(1 < x <= 3; 3x - 4;
+f(x) = Si(x <= -1, x + 2
+       Si(-1 < x <= 1, -x
+       Si(1 < x <= 3, 3x - 4
                        2)))
 ```
 
-**Forma 2: comando `Si(<condiciones>; <valores>)`** (más limpia):
+**Forma 2: comando `Si(<condiciones>, <valores>)`** (más limpia):
 
 ```
-f(x) = Si(x <= -1; x + 2; -1 < x <= 1; -x; 1 < x <= 3; 3x - 4; 2)
+f(x) = Si(x <= -1, x + 2, -1 < x <= 1, -x, 1 < x <= 3, 3x - 4, 2)
 ```
 
 El último argumento es el "caso por defecto" (cuando ninguna condición se cumple).
@@ -71,13 +71,13 @@ Raíz(f)
 Devuelve una lista con todas las raíces. Para funciones no polinómicas o si querés raíces en un intervalo:
 
 ```
-Raíz(f; a; b)
+Raíz(f, a, b)
 ```
 
 devuelve las raíces en $[a,b]$. Para una raíz cercana a un valor inicial:
 
 ```
-Raíz(f; 1.5)
+Raíz(f, 1.5)
 ```
 
 usa el método de Newton arrancando en $x=1{,}5$.
@@ -86,19 +86,19 @@ usa el método de Newton arrancando en $x=1{,}5$.
 
 | Qué querés | Comando |
 |------------|---------|
-| Intersecciones de $f$ y $g$ | `Interseca(f; g)` |
-| Intersección con el eje $x$ | `Interseca(f; EjeX)` (equivalente a `Raíz(f)`) |
-| Intersección con el eje $y$ | `Interseca(f; EjeY)` o simplemente evaluar `f(0)` |
-| Intersecciones en un intervalo | `Interseca(f; g; a; b)` |
+| Intersecciones de $f$ y $g$ | `Interseca(f, g)` |
+| Intersección con el eje $x$ | `Interseca(f, EjeX)` (equivalente a `Raíz(f)`) |
+| Intersección con el eje $y$ | `Interseca(f, EjeY)` o simplemente evaluar `f(0)` |
+| Intersecciones en un intervalo | `Interseca(f, g, a, b)` |
 
 
 ## Encontrar extremos
 
 ```
 Extremo(f)              # mínimos y máximos locales (función global)
-Extremo(f; a; b)        # extremos en un intervalo cerrado
-Máximo(f; a; b)         # solo el máximo absoluto en [a,b]
-Mínimo(f; a; b)         # solo el mínimo absoluto en [a,b]
+Extremo(f, a, b)        # extremos en un intervalo cerrado
+Máximo(f, a, b)         # solo el máximo absoluto en [a,b]
+Mínimo(f, a, b)         # solo el mínimo absoluto en [a,b]
 ```
 
 Útil para los ejercicios de **optimización** (Ej. 5, 6, 12, 24) donde hay que encontrar el valor de $x$ que maximiza un área, volumen o beneficio.
@@ -131,16 +131,16 @@ h(x) = f(g(x))
 ## Función inversa
 
 ```
-FunciónInversa(f)
+Inversa(f)
 ```
 
-Devuelve la inversa simbólica. **Importante:** GeoGebra solo encuentra la inversa cuando la función es invertible en una rama clara (por ejemplo $f(x)=2x+1$ o $f(x)=e^x$). Para funciones no inyectivas como $f(x)=x^2$, hay que restringir el dominio primero.
+Devuelve la inversa simbólica de una expresión con una sola aparición de $x$. **Importante:** el comando no tiene en cuenta el dominio ni la imagen, así que no comprueba que la función sea biyectiva. Para una función no inyectiva como $f(x)=x^2$, primero hay que elegir analíticamente la restricción (por ejemplo $[0,+\infty)$) y verificar que el resultado sea la inversa de esa restricción.
 
 **Visualizar la inversa gráficamente:** definir la recta $y=x$ y reflejar la gráfica.
 
 ```
 recta(x) = x
-g(x) = FunciónInversa(f)
+g(x) = Inversa(f)
 ```
 
 La gráfica de $g$ aparece como el simétrico de $f$ respecto a $y=x$.
@@ -150,7 +150,7 @@ La gráfica de $g$ aparece como el simétrico de $f$ respecto a $y=x$.
 Para tabular una función:
 
 ```
-Secuencia((x; f(x)); x; 0; 8; 1)
+Secuencia((x, f(x)), x, 0, 8, 1)
 ```
 
 Genera la lista de puntos $(0,f(0)), (1,f(1)), …, (8,f(8))$.
@@ -177,14 +177,14 @@ Con la selección hecha, clic derecho → **Crear** → **Lista de puntos**. Apa
 
 | Modelo | Comando |
 |--------|---------|
-| Lineal $y=a x+b$ | `RegLineal(l1)` |
-| Polinómica de grado $n$ | `RegPolinómica(l1; n)` |
-| Potencial $y = a\,x^b$ | `RegPotencial(l1)` |
-| Exponencial $y=a\,e^{bx}$ | `RegExponencial(l1)` |
-| Logarítmica $y=a+b\ln x$ | `RegLogarítmica(l1)` |
+| Lineal $y=a x+b$ | `AjusteLineal(l1)` |
+| Polinómica de grado $n$ | `AjustePolinómico(l1, n)` |
+| Potencial $y = a\,x^b$ | `AjustePotencia(l1)` |
+| Exponencial $y=a\,e^{bx}$ | `AjusteExp(l1)` (para la forma $y=a\,b^{x}$, `AjusteBaseExp(l1)`) |
+| Logarítmica $y=a+b\ln x$ | `AjusteLog(l1)` |
 
 
-Para el ejercicio del resorte: `RegLineal(l1)` da la recta $y \approx 0{,}875\,x$ que confirma la proporcionalidad directa.
+Para el ejercicio del resorte: `AjusteLineal(l1)` da la recta $y \approx 0{,}875\,x + 0{,}002$: la ordenada al origen es prácticamente nula, lo que confirma la proporcionalidad directa.
 
 ## Transformaciones con deslizador
 
@@ -201,7 +201,7 @@ n(x) = -f(x)                # reflexión respecto al eje x
 p(x) = f(-x)                # reflexión respecto al eje y
 ```
 
-Activar el deslizador `c` con rango `[-3; 3]` y mover. Cada función se actualiza en tiempo real.
+Activar el deslizador `c` con rango de $-3$ a $3$ y mover. Cada función se actualiza en tiempo real.
 
 ## Verificar paridad
 
@@ -226,7 +226,7 @@ Si la gráfica de $g$ coincide con la de $f$ → par. Si coincide con la de $h$ 
 # Aparece: l1 = {(0,0), (1, 0.875), …, (8, 6.992)}
 
 # Regresión lineal
-f = RegLineal(l1)
+f = AjusteLineal(l1)
 
 # Resultado: f(x) ≈ 0.875 x
 
@@ -242,14 +242,14 @@ f(10)
 A(x) = (12 - 2x) * x
 
 # Restringir el dominio en contexto
-A_ctx(x) = Función(A(x); 0; 6)
+A_ctx(x) = Función(A(x), 0, 6)
 
-# Buscar el máximo en (0; 6)
-Extremo(A; 0; 6)
+# Buscar el máximo en (0, 6)
+Extremo(A, 0, 6)
 # Resultado: (3, 18) → x = 3 cm da área máxima 18 cm²
 
 # Para el volumen total (largo = 100 cm)
 V(x) = 100 * A(x)
-Extremo(V; 0; 6)
+Extremo(V, 0, 6)
 # Resultado: (3, 1800) → volumen máximo 1800 cm³
 ```

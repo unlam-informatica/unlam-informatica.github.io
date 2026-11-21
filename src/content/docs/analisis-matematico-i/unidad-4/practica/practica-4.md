@@ -8,19 +8,23 @@ sidebar:
 
 
 
-Resolución completa y paso a paso de la práctica de polinomios de Taylor y Maclaurin: construcción del polinomio, aproximaciones numéricas, acotación del error mediante el resto de Lagrange y aplicaciones. Recordamos las fórmulas centrales:
+Resolución completa y paso a paso de la Práctica 4 de la guía de la cátedra, sobre polinomios de Taylor y Mac Laurin: construcción del polinomio, aproximaciones numéricas, acotación del error mediante el resto de Lagrange y aplicaciones. Recordamos las fórmulas centrales:
 
 - **Taylor de orden $n$ en $a$:** $\;P_n(x)=\displaystyle\sum_{k=0}^{n}\dfrac{f^{(k)}(a)}{k!}\,(x-a)^k$.
-- **Maclaurin:** caso $a=0$.
+- **Mac Laurin:** caso $a=0$.
 - **Resto de Lagrange:** $\;R_n(x)=\dfrac{f^{(n+1)}(c)}{(n+1)!}\,(x-a)^{n+1}$, con $c$ entre $a$ y $x$; cota $\;\lvert R_n(x)\rvert\le \dfrac{M}{(n+1)!}\,\lvert x-a\rvert^{\,n+1}$, donde $M=\max\lvert f^{(n+1)}\rvert$ en el intervalo.
 
-## Tabla de contenidos
-
-
-1. TOC
 
 
 ---
+
+
+:::note[Fuente de los enunciados]
+Los enunciados son los de la **Práctica 4: Polinomio de Taylor** de la Guía de Trabajos Prácticos 2026 de la cátedra de Análisis Matemático I
+(DIIT-UNLaM, coordinadoras M. Reale, N. Sartor y N. Suelves). Las resoluciones son propias de estos apuntes y se
+contrastaron con las respuestas de la guía; donde la respuesta oficial parece tener un error, la resolución lo
+señala y lo justifica. Los ejercicios marcados con * están resueltos también en el sitio de la cátedra.
+:::
 
 ## Ejercicio 1
 
@@ -44,7 +48,7 @@ Comparamos cada candidato:
 - **$Q(x)=1+x-x^2$:** $Q(0)=1$, $Q'(0)=1=f'(0)$, pero $Q''(x)=-2\Rightarrow Q''(0)=-2\neq 1$. Contacto de **orden 1**.
 - **$R(x)=1+x+\dfrac{x^2}{2}$:** $R(0)=1$, $R'(0)=1$, $R''(0)=1=f''(0)$. Contacto de **orden 2**.
 
-En efecto, $R$ es exactamente el polinomio de Maclaurin de orden 2 de $e^x$: $P_2(x)=1+x+\dfrac{x^2}{2}$.
+En efecto, $R$ es exactamente el polinomio de Mac Laurin de orden 2 de $e^x$: $P_2(x)=1+x+\dfrac{x^2}{2}$.
 
 **El polinomio $R(x)=1+x+\dfrac{x^2}{2}$ tiene el mayor orden de contacto (orden 2) con $f$ en $a=0$.**
 
@@ -196,7 +200,7 @@ $$
 
 ### a) $e^{1/2}$ con $n=4$
 
-Maclaurin de $f(x)=e^x$ ($f^{(k)}(0)=1$ para todo $k$):
+Mac Laurin de $f(x)=e^x$ ($f^{(k)}(0)=1$ para todo $k$):
 
 
 
@@ -222,7 +226,7 @@ $$
 
 ### b) $\ln(0{,}4)$ con $n=3$
 
-> ⚠️ **Discrepancia:** Resultado calculado: el polinomio $P_3$ centrado en $a=1$ de $f(x)=\ln x$ es $P_3(x)=(x-1)-\tfrac12(x-1)^2+\tfrac13(x-1)^3$, y $P_3(0{,}4)\approx -0{,}81467$. Respuesta del documento: la respuesta oficial solo da el polinomio $P_3=(x-1)-\tfrac12(x-1)^2+\tfrac13(x-1)^3$ sin valor numérico, lo cual es correcto, pero **el método elegido no es adecuado** para $\ln(0{,}4)$.
+> **Nota:** la respuesta oficial da únicamente el polinomio $P_3$, sin valor numérico, y coincide con el que obtenemos. Además lo evaluamos en $x=0{,}4$ para mostrar la calidad de la aproximación.
 
 Construyamos el polinomio. Para $f(x)=\ln x$ con $a=1$:
 
@@ -361,7 +365,7 @@ $$
 
 
 
-Calculamos el Maclaurin en $u$. Sea $h(u)=(1-u^2)^{-1/2}$:
+Calculamos el Mac Laurin en $u$. Sea $h(u)=(1-u^2)^{-1/2}$:
 
 
 
@@ -395,7 +399,7 @@ $$
 
 
 
-Maclaurin de orden 2:
+Mac Laurin de orden 2:
 
 
 
@@ -423,11 +427,11 @@ Esto es justamente el primer término correctivo a la energía cinética clásic
 
 ## Ejercicio 6
 
-**Enunciado.** Usar desarrollos de Maclaurin para resolver aproximadamente las ecuaciones.
+**Enunciado.** Usar desarrollos de Mac Laurin para resolver aproximadamente las ecuaciones.
 
 ### a) $\arctan x = x^2$
 
-Maclaurin de $\arctan x$: $\;\arctan x = x-\dfrac{x^3}{3}+\cdots$. A primer orden $\arctan x\approx x$, así que $x\approx x^2\Rightarrow x^2-x=0\Rightarrow x(x-1)=0$. Esto da $x=0$ y un segundo valor cercano a $1$ que afinamos resolviendo numéricamente $\arctan x=x^2$. Con la aproximación cúbica $x-\tfrac{x^3}{3}=x^2$, es decir $x^2+\tfrac{x^3}{3}-x=0$, descartando $x=0$: $\tfrac{x^2}{3}+x-1=0\Rightarrow x^2+3x-3=0\Rightarrow x=\dfrac{-3+\sqrt{21}}{2}\approx 0{,}7913$.
+Mac Laurin de $\arctan x$: $\;\arctan x = x-\dfrac{x^3}{3}+\cdots$. A primer orden $\arctan x\approx x$, así que $x\approx x^2\Rightarrow x^2-x=0\Rightarrow x(x-1)=0$. Esto da $x=0$ y un segundo valor cercano a $1$ que afinamos resolviendo numéricamente $\arctan x=x^2$. Con la aproximación cúbica $x-\tfrac{x^3}{3}=x^2$, es decir $x^2+\tfrac{x^3}{3}-x=0$, descartando $x=0$: $\tfrac{x^2}{3}+x-1=0\Rightarrow x^2+3x-3=0\Rightarrow x=\dfrac{-3+\sqrt{21}}{2}\approx 0{,}7913$.
 
 **Soluciones: $x_1=0$, $x_2\approx 0{,}7913$.**
 
@@ -435,7 +439,7 @@ Maclaurin de $\arctan x$: $\;\arctan x = x-\dfrac{x^3}{3}+\cdots$. A primer orde
 
 ### b) $e^x = x^3+1$
 
-Maclaurin de $e^x$ a orden 3: $1+x+\dfrac{x^2}{2}+\dfrac{x^3}{6}=x^3+1$. Restando $1$:
+Mac Laurin de $e^x$ a orden 3: $1+x+\dfrac{x^2}{2}+\dfrac{x^3}{6}=x^3+1$. Restando $1$:
 
 
 
@@ -463,7 +467,7 @@ $\sqrt{129}\approx 11{,}3578$, de donde $x\approx 1{,}43578$ y $x\approx -0{,}83
 
 ### c) $\ln(x+1)=x+x^2$
 
-Maclaurin: $\ln(x+1)=x-\dfrac{x^2}{2}+\dfrac{x^3}{3}-\cdots$. Igualando:
+Mac Laurin: $\ln(x+1)=x-\dfrac{x^2}{2}+\dfrac{x^3}{3}-\cdots$. Igualando:
 
 
 
@@ -481,7 +485,7 @@ La única solución es $x=0$ (los términos cuadráticos no pueden cancelarse pa
 
 ### d) $\operatorname{sen}x=\dfrac{x}{2}$
 
-Maclaurin de $\operatorname{sen}x=x-\dfrac{x^3}{6}+\cdots$. Igualando:
+Mac Laurin de $\operatorname{sen}x=x-\dfrac{x^3}{6}+\cdots$. Igualando:
 
 
 
@@ -499,7 +503,7 @@ De $\dfrac12=\dfrac{x^2}{6}$ resulta $x^2=3$, $x=\pm\sqrt3$.
 
 ### e) $e^x=1+x+\dfrac{x^2}{2}+x^3$
 
-Maclaurin de $e^x$ a orden 3: $1+x+\dfrac{x^2}{2}+\dfrac{x^3}{6}$. Igualando:
+Mac Laurin de $e^x$ a orden 3: $1+x+\dfrac{x^2}{2}+\dfrac{x^3}{6}$. Igualando:
 
 
 
@@ -655,7 +659,7 @@ $$
 
 ## Ejercicio 9*
 
-**Enunciado.** Usar el Maclaurin de orden 5 de $e^x$ para aproximar $e^{-1/3}$ y probar que el error es menor a $\dfrac{1}{524880}$.
+**Enunciado.** Usar el Mac Laurin de orden 5 de $e^x$ para aproximar $e^{-1/3}$ y probar que el error es menor a $\dfrac{1}{524880}$.
 
 **Resolución.** $P_5(x)=\displaystyle\sum_{k=0}^{5}\dfrac{x^k}{k!}$. En $x=-\tfrac13$:
 
@@ -750,9 +754,11 @@ $$
 
 ## Ejercicio 11*
 
-### a) $f(x)=\operatorname{sen}(ax+b)$; Maclaurin de grado 1 es $P(x)=\dfrac{\sqrt2}{2}(1+4x)$
+<div id="a-fxoperatornamesenaxb-maclaurin-de-grado-1-es-pxdfracsqrt2214x" aria-hidden="true"></div>
 
-El Maclaurin de grado 1 es $P(x)=f(0)+f'(0)x$. Calculamos:
+### a) $f(x)=\operatorname{sen}(ax+b)$; Mac Laurin de grado 1 es $P(x)=\dfrac{\sqrt2}{2}(1+4x)$
+
+El Mac Laurin de grado 1 es $P(x)=f(0)+f'(0)x$. Calculamos:
 
 
 
@@ -788,7 +794,7 @@ $$
 
 ### b) $a\ln(bx+1)\approx -\dfrac{15}{2}(2x+3x^2)$: hallar $a,b$
 
-Maclaurin de $\ln(bx+1)=bx-\dfrac{(bx)^2}{2}+\cdots=bx-\dfrac{b^2}{2}x^2+\cdots$. Multiplicando por $a$:
+Mac Laurin de $\ln(bx+1)=bx-\dfrac{(bx)^2}{2}+\cdots=bx-\dfrac{b^2}{2}x^2+\cdots$. Multiplicando por $a$:
 
 
 
@@ -818,7 +824,7 @@ Dividiendo: $\dfrac{ab^2}{ab}=\dfrac{45}{-15}\Rightarrow b=-3$. Luego $a=\dfrac{
 
 ## Ejercicio 12
 
-**Enunciado.** Hallar $a,b$ para que el Maclaurin de $f(x)=\ln(ax+b)$ sea $P(x)=6x$. Luego aproximar $\ln(1{,}06)$ y acotar el error.
+**Enunciado.** Hallar $a,b$ para que el Mac Laurin de $f(x)=\ln(ax+b)$ sea $P(x)=6x$. Luego aproximar $\ln(1{,}06)$ y acotar el error.
 
 **Resolución.** $P(x)=6x$ significa $f(0)=0$ y $f'(0)=6$ (sin término independiente ni superiores hasta el grado dado).
 
@@ -870,7 +876,7 @@ $$
 
 ## Ejercicio 13*
 
-**Enunciado.** $f$ satisface $(5x+1)f'(x)+f(x)=1$ con $f(0)=2$. Hallar el Maclaurin de orden 3 de $f$.
+**Enunciado.** $f$ satisface $(5x+1)f'(x)+f(x)=1$ con $f(0)=2$. Hallar el Mac Laurin de orden 3 de $f$.
 
 **Resolución.** Necesitamos $f(0),f'(0),f''(0),f'''(0)$.
 
@@ -924,9 +930,9 @@ $$
 
 ## Ejercicio 14
 
-**Enunciado.** $g(x)=1-3x+\sqrt{f(x)}$. Si el Maclaurin de orden 2 de $g$ es $P_2(x)=2-x+3x^2$, hallar el Maclaurin de orden 2 de $f$ ($f$ derivable dos veces en $0$ y positiva).
+**Enunciado.** $g(x)=1-3x+\sqrt{f(x)}$. Si el Mac Laurin de orden 2 de $g$ es $P_2(x)=2-x+3x^2$, hallar el Mac Laurin de orden 2 de $f$ ($f$ derivable dos veces en $0$ y positiva).
 
-**Resolución.** Sea $h(x)=\sqrt{f(x)}$. Entonces $g=1-3x+h$, y como el término $1-3x$ es polinómico, el Maclaurin de $g$ es $\big(1-3x\big)+\big(\text{Maclaurin de }h\big)$. Igualando con $P_2$:
+**Resolución.** Sea $h(x)=\sqrt{f(x)}$. Entonces $g=1-3x+h$, y como el término $1-3x$ es polinómico, el Mac Laurin de $g$ es $\big(1-3x\big)+\big(\text{Mac Laurin de }h\big)$. Igualando con $P_2$:
 
 
 
@@ -986,15 +992,19 @@ $$
 
 **Enunciado.** Indicar Verdadero o Falso justificando.
 
-### a) El Maclaurin de orden 4 de $e^x$ es $1+x+\dfrac{x^2}{2}+\dfrac{x^3}{3}+\dfrac{x^4}{4}$.
+<div id="a-el-maclaurin-de-orden-4-de-ex-es-1xdfracx22dfracx33dfracx44" aria-hidden="true"></div>
+
+### a) El Mac Laurin de orden 4 de $e^x$ es $1+x+\dfrac{x^2}{2}+\dfrac{x^3}{3}+\dfrac{x^4}{4}$.
 
 **Falso.** Los denominadores son factoriales $k!$, no $k$. Lo correcto es $1+x+\dfrac{x^2}{2}+\dfrac{x^3}{6}+\dfrac{x^4}{24}$.
 
-### b) El coeficiente de $x^6$ en el Maclaurin de orden 9 es $\dfrac{f^{(6)}(0)}{6!}$.
+<div id="b-el-coeficiente-de-x6-en-el-maclaurin-de-orden-9-es-dfracf606" aria-hidden="true"></div>
 
-**Falso.** Tal como está escrito el coeficiente $\dfrac{f^{(6)}(0)}{6!}$ es la fórmula correcta del coeficiente de $x^6$. Sin embargo la respuesta oficial marca este ítem como falso: la afirmación del enunciado original contiene un error de transcripción (por ejemplo $\dfrac{f^{(9)}(0)}{6!}$ o $\dfrac{f^{(6)}(0)}{9!}$), que efectivamente sería incorrecto.
+### b) El coeficiente de $x^6$ en el Mac Laurin de orden 9 es $\dfrac{f^{(6)}(0)}{6!}$.
 
-> ⚠️ **Discrepancia:** Resultado calculado: la expresión $\dfrac{f^{(6)}(0)}{6!}$ es, por definición, el coeficiente correcto de $x^6$, así que con esa redacción el ítem sería **verdadero**. Respuesta del documento: **falso**. La marca oficial solo es coherente si el enunciado real usa un orden de derivada o factorial distinto al exponente (error tipográfico al transcribirlo).
+**Verdadero.** El polinomio de Mac Laurin de orden $9$ es $\sum_{k=0}^{9}\dfrac{f^{(k)}(0)}{k!}x^k$, de modo que el coeficiente de $x^6$ es exactamente $\dfrac{f^{(6)}(0)}{6!}$.
+
+> ⚠️ **Discrepancia: respuesta oficial errónea.** El enunciado de la guía impresa dice, textualmente, «el coeficiente de $x^6$ en el polinomio de Mac Laurin de orden 9 es $\frac{f^{(6)}(0)}{6!}$», que es la fórmula correcta; la lista de respuestas oficiales marca este ítem como falso. Con el enunciado tal como está impreso, el ítem es verdadero.
 
 ### c) El resto $R_n$ tiene la forma $\dfrac{f^{(n+1)}(a)\,(x-a)^{n+1}}{(n+1)!}$.
 
@@ -1004,21 +1014,25 @@ $$
 
 **Verdadero.** $f$ es un polinomio de grado 3, sus derivadas de orden $\ge 4$ son nulas, por lo tanto $R_3\equiv 0$ y el Taylor de orden 3 reproduce exactamente $f$ en todo punto.
 
-### e) Si $f$ es impar, su Maclaurin solo tiene potencias impares.
+<div id="e-si-f-es-impar-su-maclaurin-solo-tiene-potencias-impares" aria-hidden="true"></div>
+
+### e) Si $f$ es impar, su Mac Laurin solo tiene potencias impares.
 
 **Verdadero.** Si $f$ es impar, todas sus derivadas de orden par son impares y se anulan en $0$ ($f^{(2k)}(0)=0$), por lo que solo sobreviven los términos $x^{2k+1}$.
 
-### f) Si $P$ es el Maclaurin de orden 2 de $f$, entonces $P(0)=f(0)$, $P'(0)=f'(0)$, $P''(0)=f''(0)$.
+<div id="f-si-p-es-el-maclaurin-de-orden-2-de-f-entonces-p0f0-p0f0-p0f0" aria-hidden="true"></div>
 
-**Verdadero.** Por construcción el polinomio de Maclaurin de orden 2 coincide con $f$ en valor y en sus dos primeras derivadas en $0$.
+### f) Si $P$ es el Mac Laurin de orden 2 de $f$, entonces $P(0)=f(0)$, $P'(0)=f'(0)$, $P''(0)=f''(0)$.
+
+**Verdadero.** Por construcción el polinomio de Mac Laurin de orden 2 coincide con $f$ en valor y en sus dos primeras derivadas en $0$.
 
 ### g) Si $P(x)=-8+3(x-2)^2+3(x-2)^4+(x-2)^5$ es el Taylor de orden 5 en $a=2$, entonces $f^{(4)}(2)=3$.
 
 **Falso.** El coeficiente de $(x-2)^4$ es $\dfrac{f^{(4)}(2)}{4!}=3$, de modo que $f^{(4)}(2)=3\cdot 4!=3\cdot 24=72$, no $3$.
 
-**Resumen:** Verdaderas: **d, e, f**. Falsas: **a, b, c, g**.
+**Resumen:** Verdaderas: **b, d, e, f**. Falsas: **a, c, g**. La respuesta oficial marca falso el ítem b (ver la discrepancia señalada arriba).
 
-✓ Coincide con la respuesta oficial (con la salvedad señalada en el ítem b por probable error de transcripción del enunciado).
+✓ Coincide con la respuesta oficial salvo en el ítem b, donde la oficial es errónea (ver arriba).
 
 ---
 
@@ -1078,7 +1092,7 @@ $$
 
 ### Adicional 2
 
-**Enunciado.** Maclaurin de orden 3 de $g(x)=\sqrt{1+3x}$; aproximar $\sqrt{1{,}3}$ y comparar; ¿sirve para $g(2)$?
+**Enunciado.** Mac Laurin de orden 3 de $g(x)=\sqrt{1+3x}$; aproximar $\sqrt{1{,}3}$ y comparar; ¿sirve para $g(2)$?
 
 **Derivadas.**
 
@@ -1222,7 +1236,7 @@ $$
 
 Esto da $S=\{-1+\sqrt{13},\,-1-\sqrt{13}\}\approx\{2{,}606,\,-4{,}606\}$. Como $\ln(x-1)$ exige $x>1$, solo $x\approx 2{,}606$ es admisible para la función original.
 
-> ⚠️ **Discrepancia:** Resultado calculado: $S=\{-1\pm\sqrt{13}\}$ (con $x=-1+\sqrt{13}\approx 2{,}606$ válido en el dominio). El enunciado anota como pista "$S=\{1\pm\sqrt{13}\}$" y la respuesta oficial marca la opción $e)$. Trabajando con $t=x-2$ el resultado correcto es $x=-1\pm\sqrt{13}$, no $1\pm\sqrt{13}$. La diferencia proviene de qué se considera "solución" (en $t$ daría $t=-3\pm\sqrt{13}$). Sin el listado de opciones $a)$–$e)$ no puede verificarse cuál corresponde a la letra $e)$; se reporta el conjunto solución calculado.
+> **Nota:** el conjunto $S=\{-1\pm\sqrt{13}\}$ corresponde a la opción $e)$ del enunciado. La opción $d)$, $\{1\pm\sqrt{13}\}$, no es solución de la ecuación aproximada. Al trabajar con $t=x-2$ se obtiene $t=-3\pm\sqrt{13}$, que da $x=-1\pm\sqrt{13}$.
 
 ### Adicional 5 (opción)
 
@@ -1242,4 +1256,4 @@ En general $P_n^{(k)}(a)=f^{(k)}(a)$ para todo $0\le k\le n$. Esta es la propied
 
 ---
 
-> **Nota general de verificación.** Todas las aproximaciones numéricas fueron contrastadas con los valores exactos correspondientes y las cotas de error mediante el resto de Lagrange con $M=\max\lvert f^{(n+1)}\rvert$ sobre el intervalo. Salvo las discrepancias señaladas (3b por adecuación del método, 15b por probable error de transcripción y Adicional 4 por la presentación del conjunto solución), los resultados coinciden con las respuestas oficiales.
+> **Nota general de verificación.** Todas las aproximaciones numéricas fueron contrastadas con los valores exactos correspondientes y las cotas de error mediante el resto de Lagrange con $M=\max\lvert f^{(n+1)}\rvert$ sobre el intervalo. Los resultados coinciden con las respuestas oficiales, salvo el ítem 15 b, donde la respuesta oficial es errónea.

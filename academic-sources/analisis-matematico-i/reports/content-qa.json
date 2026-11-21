@@ -1,0 +1,108 @@
+{
+  "subject": "analisis-matematico-i",
+  "pages": 110,
+  "exercises": 96,
+  "exercises_sympy": 85,
+  "exercises_reasoning": 11,
+  "exercises_engine": 0,
+  "exercises_reviewed": 0,
+  "exercises_complete": 96,
+  "example_checks": 170,
+  "units": {
+    "u1": {
+      "exercises": 25,
+      "levels": {
+        "avanzado": 10,
+        "inicial": 6,
+        "intermedio": 9
+      },
+      "sympy": 23,
+      "razonamiento": 2,
+      "motor": 0,
+      "revisado": 0,
+      "complete": 25,
+      "incomplete": 0,
+      "complete_levels": {
+        "avanzado": 10,
+        "inicial": 6,
+        "intermedio": 9
+      },
+      "complete_by_verification": {
+        "sympy": 23,
+        "razonamiento": 2
+      }
+    },
+    "u2": {
+      "exercises": 32,
+      "levels": {
+        "avanzado": 10,
+        "inicial": 9,
+        "intermedio": 13
+      },
+      "sympy": 26,
+      "razonamiento": 6,
+      "motor": 0,
+      "revisado": 0,
+      "complete": 32,
+      "incomplete": 0,
+      "complete_levels": {
+        "avanzado": 10,
+        "inicial": 9,
+        "intermedio": 13
+      },
+      "complete_by_verification": {
+        "sympy": 26,
+        "razonamiento": 6
+      }
+    },
+    "u3": {
+      "exercises": 22,
+      "levels": {
+        "avanzado": 8,
+        "inicial": 6,
+        "intermedio": 8
+      },
+      "sympy": 21,
+      "razonamiento": 1,
+      "motor": 0,
+      "revisado": 0,
+      "complete": 22,
+      "incomplete": 0,
+      "complete_levels": {
+        "avanzado": 8,
+        "inicial": 6,
+        "intermedio": 8
+      },
+      "complete_by_verification": {
+        "sympy": 21,
+        "razonamiento": 1
+      }
+    },
+    "u4": {
+      "exercises": 17,
+      "levels": {
+        "avanzado": 7,
+        "inicial": 4,
+        "intermedio": 6
+      },
+      "sympy": 15,
+      "razonamiento": 2,
+      "motor": 0,
+      "revisado": 0,
+      "complete": 17,
+      "incomplete": 0,
+      "complete_levels": {
+        "avanzado": 7,
+        "inicial": 4,
+        "intermedio": 6
+      },
+      "complete_by_verification": {
+        "sympy": 15,
+        "razonamiento": 2
+      }
+    }
+  },
+  "errors": 0,
+  "warnings": 0,
+  "findings": []
+}
